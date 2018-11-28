@@ -25,3 +25,6 @@
 div.wrapper div {
     display: inline-block;
 }
+
+.target {   padding: 5px;
+    border: 5px dotted red; }

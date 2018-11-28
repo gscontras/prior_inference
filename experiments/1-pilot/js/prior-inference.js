@@ -24,9 +24,7 @@ function make_slides(f) {
 
   slides.multi_slider = slide({
     name : "multi_slider",
-    present : [
-      {ID: "1", target: "121", obj2: "121", obj3: "111", condition: "2/3"}
-    ],
+    present : stimuli, //_.sample(stimuli,10),
     present_handle : function(stim) {
       $(".err").hide();
       this.stim = stim; 
@@ -35,33 +33,52 @@ function make_slides(f) {
 
       var person1 = names_list[0] ;
       var person2 = names_list[1] ;
+      $(".person1").html(person1);
+      $(".person2").html(person2);
 
-      $(".person1").html(person1.name);
-
-      $(".person2").html(person2.name);
-
-      $(".noun").html(stim.Noun);
+      var utterance = _.sample(["targetShape","targetTexture","targetColor"])
+      $(".utterance").html(stim[utterance]);
 
       this.order = _.shuffle(["target","obj2","obj3"])
 
-      var object1 = "<img src='images/" + stim[this.order[0]] + ".png' width='120' ></img>"
-      var object2 = "<img src='images/" + stim[this.order[1]] + ".png' width='120' ></img>"
-      var object3 = "<img src='images/" + stim[this.order[2]] + ".png' width='120' ></img>"
-
-      this.objects = [object1, object2, object3]
+      var object1 = "<img src='images/" + stim[this.order[0]] + ".png' width='120' class= " + this.order[0] + "></img>"
+      var object2 = "<img src='images/" + stim[this.order[1]] + ".png' width='120' class= " + this.order[1] + "></img>"
+      var object3 = "<img src='images/" + stim[this.order[2]] + ".png' width='120' class= " + this.order[2] + "></img>"
 
       $("#object1").html(object1)
       $("#object2").html(object2)
       $("#object3").html(object3)
 
-      this.n_sliders = this.objects.length;
+      var property1 = stim.property1
+      var prop1Labels = []
+      if (property1=="color") {
+        var prop1Labels = ["blue things", "red things", "green things"]
+      } else if (property1=="texture") {
+        var prop1Labels = ['solid things','striped things','polka-dotted things']
+      } else {
+        var prop1Labels = ['clouds','circles','squares']
+      }
+      var property2 = stim.property2
+      var prop2Labels = []
+      if (property2=="color") {
+        var prop2Labels = ["blue things", "red things", "green things"]
+      } else if (property2=="texture") {
+        var prop2Labels = ['solid things','striped things','polka-dotted things']
+      } else {
+        var prop2Labels = ['clouds','circles','squares']
+      }
+
+      this.preferences = ["no preference"].concat(prop1Labels).concat(prop2Labels)
+
+
+      this.n_sliders = this.preferences.length;
       $(".slider_row").remove();
       for (var i=0; i<this.n_sliders; i++) {
-        $("#multi_slider_table").append('<tr class="slider_row"><td class="slider_target" id="object' + i + '">' + this.objects[i] +  '</td><td colspan="2"><div id="slider' + i + '" class="slider">-------[ ]--------</div></td></tr>');
+        $("#multi_slider_table").append('<tr class="slider_row"><td class="slider_target" id="object' + i + '">' + this.preferences[i] +  '</td><td colspan="2"><div id="slider' + i + '" class="slider">-------[ ]--------</div></td></tr>');
         utils.match_row_height("#multi_slider_table", ".slider_target");
       }
 
-      this.init_sliders(this.objects);
+      this.init_sliders(this.preferences);
       exp.sliderPost = [];
 
     },
@@ -76,7 +93,7 @@ function make_slides(f) {
     },
 
     init_sliders : function() {
-      for (var i=0; i<this.objects.length; i++) {
+      for (var i=0; i<this.preferences.length; i++) {
          utils.make_slider("#slider" + i, this.make_slider_callback(i));
       }
     },
@@ -100,18 +117,115 @@ function make_slides(f) {
       // }
       exp.data_trials.push({
         "trial_type" : "multi_slider",
-        "object1" : this.order[0],
+        "pref1" : this.preferences[0],
         "response1" : exp.sliderPost[0],
-        "object2" : this.order[1],
+        "pref2" : this.preferences[1],
         "response2" : exp.sliderPost[1],
-        "object3" : this.order[2],
+        "pref3" : this.preferences[2],
         "response3" : exp.sliderPost[2],
+        "pref4" : this.preferences[3],
+        "response4" : exp.sliderPost[3],
+        "pref5" : this.preferences[4],
+        "response5" : exp.sliderPost[4],
+        "pref6" : this.preferences[5],
+        "response6" : exp.sliderPost[5],
+        "pref7" : this.preferences[6],
+        "response7" : exp.sliderPost[6],
         "slide_number" : exp.phase,
         "item" : this.stim.ID,
         "condition" : this.stim.condition
       });
     },
   });
+
+  // slides.multi_slider = slide({
+  //   name : "multi_slider",
+  //   present : _.sample(stimuli,10),
+  //   present_handle : function(stim) {
+  //     $(".err").hide();
+  //     this.stim = stim; 
+
+  //     var names_list = _.shuffle(names);
+
+  //     var person1 = names_list[0] ;
+  //     var person2 = names_list[1] ;
+
+  //     $(".person1").html(person1.name);
+
+  //     $(".person2").html(person2.name);
+
+  //     $(".noun").html(stim.Noun);
+
+  //     this.order = _.shuffle(["target","obj2","obj3"])
+
+  //     var object1 = "<img src='images/" + stim[this.order[0]] + ".png' width='120' ></img>"
+  //     var object2 = "<img src='images/" + stim[this.order[1]] + ".png' width='120' ></img>"
+  //     var object3 = "<img src='images/" + stim[this.order[2]] + ".png' width='120' ></img>"
+
+  //     this.objects = [object1, object2, object3]
+
+  //     $("#object1").html(object1)
+  //     $("#object2").html(object2)
+  //     $("#object3").html(object3)
+
+  //     this.n_sliders = this.objects.length;
+  //     $(".slider_row").remove();
+  //     for (var i=0; i<this.n_sliders; i++) {
+  //       $("#multi_slider_table").append('<tr class="slider_row"><td class="slider_target" id="object' + i + '">' + this.objects[i] +  '</td><td colspan="2"><div id="slider' + i + '" class="slider">-------[ ]--------</div></td></tr>');
+  //       utils.match_row_height("#multi_slider_table", ".slider_target");
+  //     }
+
+  //     this.init_sliders(this.objects);
+  //     exp.sliderPost = [];
+
+  //   },
+
+  //   button : function() {
+  //     if (exp.sliderPost.length < this.n_sliders) {
+  //       $(".err").show();
+  //     } else {
+  //       this.log_responses();
+  //       _stream.apply(this); //use _stream.apply(this); if and only if there is "present" data.
+  //     }
+  //   },
+
+  //   init_sliders : function() {
+  //     for (var i=0; i<this.objects.length; i++) {
+  //        utils.make_slider("#slider" + i, this.make_slider_callback(i));
+  //     }
+  //   },
+  //   make_slider_callback : function(i) {
+  //     return function(event, ui) {
+  //       exp.sliderPost[i] = ui.value;
+  //     };
+  //   },
+
+  //   log_responses : function() {
+  //     // for (var i=0; i<3; i++) {
+  //     //   var object = this.order[i];
+  //     //   exp.data_trials.push({
+  //     //     "trial_type" : "multi_slider",
+  //     //     "object" : object,
+  //     //     "response" : exp.sliderPost[i],
+  //     //     "slide_number" : exp.phase,
+  //     //     "item" : this.stim.ID,
+  //     //     "condition" : this.stim.condition
+  //     //   });
+  //     // }
+  //     exp.data_trials.push({
+  //       "trial_type" : "multi_slider",
+  //       "object1" : this.order[0],
+  //       "response1" : exp.sliderPost[0],
+  //       "object2" : this.order[1],
+  //       "response2" : exp.sliderPost[1],
+  //       "object3" : this.order[2],
+  //       "response3" : exp.sliderPost[2],
+  //       "slide_number" : exp.phase,
+  //       "item" : this.stim.ID,
+  //       "condition" : this.stim.condition
+  //     });
+  //   },
+  // });
 
   slides.subj_info =  slide({
     name : "subj_info",
