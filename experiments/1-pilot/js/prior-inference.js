@@ -83,13 +83,20 @@ function make_slides(f) {
 
     },
 
+    
     button : function() {
-      if (exp.sliderPost.length < this.n_sliders) {
-        $(".err").show();
-      } else {
-        this.log_responses();
-        _stream.apply(this); //use _stream.apply(this); if and only if there is "present" data.
+      var ok_to_go_on = true
+      for (var i=0; i<this.n_sliders; i++) {
+        if (exp.sliderPost[i]==undefined){
+          ok_to_go_on = false
+        }
       }
+      if (ok_to_go_on) {            
+           this.log_responses();
+           _stream.apply(this);
+          } else {
+           $(".err").show();
+          }
     },
 
     init_sliders : function() {
@@ -104,17 +111,6 @@ function make_slides(f) {
     },
 
     log_responses : function() {
-      // for (var i=0; i<3; i++) {
-      //   var object = this.order[i];
-      //   exp.data_trials.push({
-      //     "trial_type" : "multi_slider",
-      //     "object" : object,
-      //     "response" : exp.sliderPost[i],
-      //     "slide_number" : exp.phase,
-      //     "item" : this.stim.ID,
-      //     "condition" : this.stim.condition
-      //   });
-      // }
       exp.data_trials.push({
         "trial_type" : "multi_slider",
         "pref1" : this.preferences[0],
