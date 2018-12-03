@@ -68,46 +68,32 @@ function make_slides(f) {
         var prop2Labels = ['clouds','circles','squares']
       }
 
-      var labels = _.shuffle([prop1Labels,prop2Labels])
-      this.preferences1 = labels[0]
-      this.preferences2 = labels[1]
-      this.preferences = this.preferences1.concat(this.preferences2)
+      var labels = _.shuffle([].concat(prop1Labels).concat(prop2Labels))
+      this.preferences = ["no preference"].concat(labels)
 
 
-      this.n_sliders_1 = this.preferences1.length;
-      $(".slider_row1").remove();
-      for (var i=0; i<this.n_sliders_1; i++) {
-        $("#multi_slider_table_1").append('<tr class="slider_row1"><td class="slider_target" id="object1' + i + '">' + this.preferences1[i] +  '</td><td colspan="2"><div id="slider1' + i + '" class="slider">-------[ ]--------</div></td></tr>');
-        utils.match_row_height("#multi_slider_table_1", ".slider_target");
+      this.n_sliders = this.preferences.length;
+      $(".row").remove();
+      for (var i=0; i<this.n_sliders; i++) {
+        $("#multi_slider_table").append('<label class="row"><input type="radio"  name="response" value="' + this.preferences[i] + '">' + this.preferences[i] +  '<br /></label>');
+        // utils.match_row_height("#multi_slider_table", ".slider_target");
       }
 
-      this.n_sliders_2 = this.preferences2.length;
-      $(".slider_row2").remove();
-      for (var i=0; i<this.n_sliders_2; i++) {
-        $("#multi_slider_table_2").append('<tr class="slider_row2"><td class="slider_target" id="object2' + i + '">' + this.preferences2[i] +  '</td><td colspan="2"><div id="slider2' + i + '" class="slider">-------[ ]--------</div></td></tr>');
-        utils.match_row_height("#multi_slider_table_2", ".slider_target");
-      }
-
-      // this.init_sliders(this.preferences);
-      this.init_sliders_1(this.preferences1);
-      this.init_sliders_2(this.preferences2);
-      exp.sliderPost1 = [];
-      exp.sliderPost2 = [];
+      this.init_sliders(this.preferences);
+      exp.sliderPost = [];
 
     },
 
     
     button : function() {
       var ok_to_go_on = true
-      for (var i=0; i<this.n_sliders_1; i++) {
-        if (exp.sliderPost1[i]==undefined){
-          ok_to_go_on = false
-        }
-      }
-      for (var i=0; i<this.n_sliders_2; i++) {
-        if (exp.sliderPost2[i]==undefined){
-          ok_to_go_on = false
-        }
+      // for (var i=0; i<this.n_sliders; i++) {
+      //   if (exp.sliderPost[i]==undefined){
+      //     ok_to_go_on = false
+      //   }
+      // }
+      if ($("input[name=response]:checked").val() == undefined) {
+        ok_to_go_on = false;
       }
       if (ok_to_go_on) {            
            this.log_responses();
@@ -117,24 +103,14 @@ function make_slides(f) {
           }
     },
 
-    init_sliders_1 : function() {
-      for (var i=0; i<this.preferences1.length; i++) {
-         utils.make_slider("#slider1" + i, this.make_slider_callback_1(i));
+    init_sliders : function() {
+      for (var i=0; i<this.preferences.length; i++) {
+         utils.make_slider("#slider" + i, this.make_slider_callback(i));
       }
     },
-    init_sliders_2 : function() {
-      for (var i=0; i<this.preferences1.length; i++) {
-         utils.make_slider("#slider2" + i, this.make_slider_callback_2(i));
-      }
-    },
-    make_slider_callback_1 : function(i) {
+    make_slider_callback : function(i) {
       return function(event, ui) {
-        exp.sliderPost1[i] = ui.value;
-      };
-    },
-    make_slider_callback_2 : function(i) {
-      return function(event, ui) {
-        exp.sliderPost2[i] = ui.value;
+        exp.sliderPost[i] = ui.value;
       };
     },
 
@@ -142,18 +118,7 @@ function make_slides(f) {
       exp.data_trials.push({
         "trial_type" : "multi_slider",
         "utterance" : exp.utterance,
-        "pref1" : this.preferences1[0],
-        "response1" : exp.sliderPost1[0],
-        "pref2" : this.preferences1[1],
-        "response2" : exp.sliderPost1[1],
-        "pref3" : this.preferences1[2],
-        "response3" : exp.sliderPost1[2],
-        "pref4" : this.preferences2[0],
-        "response4" : exp.sliderPost2[0],
-        "pref5" : this.preferences2[1],
-        "response5" : exp.sliderPost2[1],
-        "pref6" : this.preferences2[2],
-        "response6" : exp.sliderPost2[2],
+        "response" : $('input[name="response"]:checked').val(),
         "slide_number" : exp.phase,
         "item" : this.stim.ID,
         "condition" : this.stim.condition

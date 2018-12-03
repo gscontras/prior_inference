@@ -62,16 +62,16 @@ var utils = {
 			slide : response_callback,
 						change : response_callback
 		});
-		$(label + ' .ui-slider-handle').hide();
-				$(label).mousedown(function(){
+		// $(label + ' .ui-slider-handle').hide(); \\ uncomment to hide slider post
+		$(label).mousedown(function(){
 			$(label + ' .ui-slider-handle').show();
-				$(label).css({"background":"#99D6EB"});
-				$(label + ' .ui-slider-handle').css({
-					"background":"#667D94",
-					"border-color": "#001F29"
-				});
-				});
-				$(label).css({"background":"#eee"});
+			$(label).css({"background":"#99D6EB"});
+			$(label + ' .ui-slider-handle').css({
+				"background":"#667D94",
+				"border-color": "#001F29"
+			});
+		});
+		$(label).css({"background":"#eee"});
 	}
 }
 /*

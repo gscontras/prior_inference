@@ -24,7 +24,7 @@ function make_slides(f) {
 
   slides.multi_slider = slide({
     name : "multi_slider",
-    present : _.sample(stimuli,10),
+    present : stimuli, //_.sample(stimuli,10),
     present_handle : function(stim) {
       $(".err").hide();
       this.stim = stim; 
@@ -36,8 +36,8 @@ function make_slides(f) {
       $(".person1").html(person1);
       $(".person2").html(person2);
 
-      exp.utterance = stim[_.sample(["targetShape","targetTexture","targetColor"])]
-      $(".utterance").html(exp.utterance);
+      var utterance = _.sample(["targetShape","targetTexture","targetColor"])
+      $(".utterance").html(stim[utterance]);
 
       this.order = _.shuffle(["target","obj2","obj3"])
 
@@ -68,44 +68,26 @@ function make_slides(f) {
         var prop2Labels = ['clouds','circles','squares']
       }
 
-      var labels = _.shuffle([prop1Labels,prop2Labels])
-      this.preferences1 = labels[0]
-      this.preferences2 = labels[1]
-      this.preferences = this.preferences1.concat(this.preferences2)
+      this.preferences = ["no preference"].concat(prop1Labels).concat(prop2Labels)
 
 
-      this.n_sliders_1 = this.preferences1.length;
-      $(".slider_row1").remove();
-      for (var i=0; i<this.n_sliders_1; i++) {
-        $("#multi_slider_table_1").append('<tr class="slider_row1"><td class="slider_target" id="object1' + i + '">' + this.preferences1[i] +  '</td><td colspan="2"><div id="slider1' + i + '" class="slider">-------[ ]--------</div></td></tr>');
-        utils.match_row_height("#multi_slider_table_1", ".slider_target");
+      this.n_sliders = this.preferences.length;
+      $(".slider_row").remove();
+      for (var i=0; i<this.n_sliders; i++) {
+        $("#multi_slider_table").append('<tr class="slider_row"><td class="slider_target" id="object' + i + '">' + this.preferences[i] +  '</td><td colspan="2"><div id="slider' + i + '" class="slider">-------[ ]--------</div></td></tr>');
+        utils.match_row_height("#multi_slider_table", ".slider_target");
       }
 
-      this.n_sliders_2 = this.preferences2.length;
-      $(".slider_row2").remove();
-      for (var i=0; i<this.n_sliders_2; i++) {
-        $("#multi_slider_table_2").append('<tr class="slider_row2"><td class="slider_target" id="object2' + i + '">' + this.preferences2[i] +  '</td><td colspan="2"><div id="slider2' + i + '" class="slider">-------[ ]--------</div></td></tr>');
-        utils.match_row_height("#multi_slider_table_2", ".slider_target");
-      }
-
-      // this.init_sliders(this.preferences);
-      this.init_sliders_1(this.preferences1);
-      this.init_sliders_2(this.preferences2);
-      exp.sliderPost1 = [];
-      exp.sliderPost2 = [];
+      this.init_sliders(this.preferences);
+      exp.sliderPost = [];
 
     },
 
     
     button : function() {
       var ok_to_go_on = true
-      for (var i=0; i<this.n_sliders_1; i++) {
-        if (exp.sliderPost1[i]==undefined){
-          ok_to_go_on = false
-        }
-      }
-      for (var i=0; i<this.n_sliders_2; i++) {
-        if (exp.sliderPost2[i]==undefined){
+      for (var i=0; i<this.n_sliders; i++) {
+        if (exp.sliderPost[i]==undefined){
           ok_to_go_on = false
         }
       }
@@ -117,43 +99,34 @@ function make_slides(f) {
           }
     },
 
-    init_sliders_1 : function() {
-      for (var i=0; i<this.preferences1.length; i++) {
-         utils.make_slider("#slider1" + i, this.make_slider_callback_1(i));
+    init_sliders : function() {
+      for (var i=0; i<this.preferences.length; i++) {
+         utils.make_slider("#slider" + i, this.make_slider_callback(i));
       }
     },
-    init_sliders_2 : function() {
-      for (var i=0; i<this.preferences1.length; i++) {
-         utils.make_slider("#slider2" + i, this.make_slider_callback_2(i));
-      }
-    },
-    make_slider_callback_1 : function(i) {
+    make_slider_callback : function(i) {
       return function(event, ui) {
-        exp.sliderPost1[i] = ui.value;
-      };
-    },
-    make_slider_callback_2 : function(i) {
-      return function(event, ui) {
-        exp.sliderPost2[i] = ui.value;
+        exp.sliderPost[i] = ui.value;
       };
     },
 
     log_responses : function() {
       exp.data_trials.push({
         "trial_type" : "multi_slider",
-        "utterance" : exp.utterance,
-        "pref1" : this.preferences1[0],
-        "response1" : exp.sliderPost1[0],
-        "pref2" : this.preferences1[1],
-        "response2" : exp.sliderPost1[1],
-        "pref3" : this.preferences1[2],
-        "response3" : exp.sliderPost1[2],
-        "pref4" : this.preferences2[0],
-        "response4" : exp.sliderPost2[0],
-        "pref5" : this.preferences2[1],
-        "response5" : exp.sliderPost2[1],
-        "pref6" : this.preferences2[2],
-        "response6" : exp.sliderPost2[2],
+        "pref1" : this.preferences[0],
+        "response1" : exp.sliderPost[0],
+        "pref2" : this.preferences[1],
+        "response2" : exp.sliderPost[1],
+        "pref3" : this.preferences[2],
+        "response3" : exp.sliderPost[2],
+        "pref4" : this.preferences[3],
+        "response4" : exp.sliderPost[3],
+        "pref5" : this.preferences[4],
+        "response5" : exp.sliderPost[4],
+        "pref6" : this.preferences[5],
+        "response6" : exp.sliderPost[5],
+        "pref7" : this.preferences[6],
+        "response7" : exp.sliderPost[6],
         "slide_number" : exp.phase,
         "item" : this.stim.ID,
         "condition" : this.stim.condition

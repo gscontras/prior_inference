@@ -54,7 +54,7 @@
 
   <div class="slide" id="instructions1">
     <h3>Instructions</h3>
-    <p>You will see XXX scenarios. In each scenario, there are two people and three objects. The first person uses a single word to signal one of the objects to the second person. You will observe the object that the second person selects. Your task is to determine what preferences that person might have had in making the selection.</p>
+    <p>XXX put some general instructions here.</p>
     <!-- <p class="instruction_condition">{{}}</p> -->
     <button onclick="_s.button()">Continue</button>
   </div>
@@ -76,19 +76,14 @@
     <label><input type="radio"  name="sense" value="No"/>No</label>
     </br></br>
  -->
-    <p>Based on this choice, do you think <span class="person2"></span> has a preference <br /> for certain types of objects?</p>
+    <p>Based on this choice, do you think <span class="person2"></span> has a preference <br />for certain types of objects?</p>
 
-    <div>
-      <table style="display: inline-block;" id="multi_slider_table_1" class="slider_table">
-        <tr><td></td><td class="left">very unlikely</td><td class="right">very likely</td></tr>
-      </table> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     
-      <table style="display: inline-block;" id="multi_slider_table_2" class="slider_table">
-        <tr><td></td><td class="left">very unlikely</td><td class="right">very likely</td></tr>
-      </table>
-    </div>
+    <table id="multi_slider_table" class="slider_table">
+      <tr><td></td><td class="left">very unlikely</td><td class="right">very likely</td></tr>
+    </table>
 
     <button onclick="_s.button()">Continue</button>
-    <div class="err">Please adjust all the sliders before continuing.</div>
+    <div class="err">Please adjust the sliders before continuing.</div>
   </div>
 
   <div class="slide"  id="subj_info">
