@@ -68,9 +68,9 @@ function make_slides(f) {
         var prop2Labels = ['clouds','circles','squares']
       }
 
-      var labels = _.shuffle([prop1Labels,prop2Labels])
-      this.preferences1 = labels[0]
-      this.preferences2 = labels[1]
+      this.labels = _.shuffle([prop1Labels,prop2Labels])
+      this.preferences1 = this.labels[0]
+      this.preferences2 = this.labels[1]
       this.preferences = this.preferences1.concat(this.preferences2)
 
 
@@ -80,7 +80,6 @@ function make_slides(f) {
         $("#multi_slider_table_1").append('<tr class="slider_row1"><td class="slider_target" id="object1' + i + '">' + this.preferences1[i] +  '</td><td colspan="3" bgcolor="#eee" ><div id="slider1' + i + '" class="slider">-------[ ]--------</div></td></tr>');
         utils.match_row_height("#multi_slider_table_1", ".slider_target");
       }
-      $("#multi_slider_table_1").append('<tr class="slider_row1"><td></td><td class="left"></td><td class="center">|</td><td class="right"></td></tr>')
 
       this.n_sliders_2 = this.preferences2.length;
       $(".slider_row2").remove();
@@ -88,7 +87,6 @@ function make_slides(f) {
         $("#multi_slider_table_2").append('<tr class="slider_row2"><td class="slider_target" id="object2' + i + '">' + this.preferences2[i] +  '</td><td colspan="3" bgcolor="#eee" ><div id="slider2' + i + '" class="slider">-------[ ]--------</div></td></tr>');
         utils.match_row_height("#multi_slider_table_2", ".slider_target");
       }
-      $("#multi_slider_table_2").append('<tr class="slider_row1"><td></td><td class="left"></td><td class="center">|</td><td class="right"></td></tr>')
 
       // this.init_sliders(this.preferences);
       this.init_sliders_1(this.preferences1);
@@ -144,6 +142,8 @@ function make_slides(f) {
       exp.data_trials.push({
         "trial_type" : "multi_slider",
         "utterance" : exp.utterance,
+        "property1" : this.stim.property1,
+        "property2" : this.stim.property2,
         "pref1" : this.preferences1[0],
         "response1" : exp.sliderPost1[0],
         "pref2" : this.preferences1[1],
@@ -291,7 +291,7 @@ function make_slides(f) {
 function init() {
   repeatWorker = false;
   (function(){
-      var ut_id = "spanish-ordering";
+      var ut_id = "prior-inference";
       if (UTWorkerLimitReached(ut_id)) {
         $('.slide').empty();
         repeatWorker = true;
