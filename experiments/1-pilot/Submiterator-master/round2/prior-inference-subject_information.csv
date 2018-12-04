@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,1,Male,39,,Yes,1
+1,English,1,Female,54,,Yes,1
+2,English,1,Male,33,It was confusing because even the example does not do a good job explaining what you mean. You should start the hit with a full example using all of the sliders and not just a text and image example. The example should be exactly like how the actual survey questions will be.,Confused,3
+3,NATIVE AMERICAN,0,Male,30,VERY GOOD,Yes,1
+4,english,1,Male,25,,Yes,2
+5,English,1,Male,37,,Yes,3
+6,english,1,Male,26,,Yes,3
+7,English,1,Male,42,No comments,Yes,3
+8,English,2,Female,44,,Yes,3

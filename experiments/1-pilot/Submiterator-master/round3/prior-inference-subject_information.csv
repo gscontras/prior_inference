@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,ENGLISH,1,Male,50,,Yes,2
+1,English,2,Male,21,,Yes,2
+2,English,1,Female,37,,Yes,2
+3,english,2,Male,31,,No,2
+4,English,2,Male,35,"For a few of them, I was neutral on everything because all of the options were same.",Yes,3
+5,English,2,Female,44,,Yes,2
+6,English,2,Male,44,,Yes,3
+7,English,0,Female,42,pays less than the average HIT,Yes,3
+8,English,2,Male,25,,Yes,3

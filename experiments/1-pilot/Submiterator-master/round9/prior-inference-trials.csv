@@ -1,0 +1,136 @@
+workerid,response6,response4,response5,response2,response3,response1,property1,property2,obj3,obj2,slide_number,condition,trial_type,target,utterance,item,pref1,pref2,pref3,pref4,pref5,pref6
+0,0.8,0.75,0.15,0.9,0.2,0.75,shape,texture,232,232,3,3/3,multi_slider,232,circle,265,clouds,circles,squares,solid things,striped things,polka-dotted things
+0,0.25,0.25,0.2,0.85,0.15,0.3,color,shape,133,132,4,1/3,multi_slider,131,polka-dotted,200,clouds,circles,squares,blue things,red things,green things
+0,0.2,0.75,0.2,0.7,0.2,0.85,shape,texture,113,213,5,2/3,multi_slider,113,cloud,16,clouds,circles,squares,solid things,striped things,polka-dotted things
+0,0.15,0.85,0.2,0.65,0.8,0.65,texture,shape,132,112,6,2/3,multi_slider,112,solid,15,clouds,circles,squares,solid things,striped things,polka-dotted things
+0,0.8,0.7,0.15,0.9,0.2,0.65,texture,shape,223,123,7,1/2,multi_slider,133,polka-dotted,90,clouds,circles,squares,solid things,striped things,polka-dotted things
+0,0.75,0.75,0.75,0.15,0.8,0.1,shape,color,113,113,8,1/3,multi_slider,213,green,194,blue things,red things,green things,clouds,circles,squares
+0,0.1,0.85,0.1,0.1,0.9,0.1,shape,color,311,311,9,3/3,multi_slider,311,blue,300,clouds,circles,squares,blue things,red things,green things
+0,0.15,0.8,0.15,0.8,0.8,0.85,shape,texture,332,232,10,1/3,multi_slider,132,red,157,clouds,circles,squares,solid things,striped things,polka-dotted things
+0,0.15,0.15,0.8,0.2,0.85,0.85,shape,texture,233,233,11,3/3,multi_slider,233,green,275,solid things,striped things,polka-dotted things,clouds,circles,squares
+0,0.1,0.85,0.1,0.9,0.15,0.75,texture,color,221,221,12,3/3,multi_slider,221,blue,274,solid things,striped things,polka-dotted things,blue things,red things,green things
+0,0.9,0.4,0.3,0.85,0.15,0.15,shape,color,132,232,13,1/3,multi_slider,332,polka-dotted,158,blue things,red things,green things,clouds,circles,squares
+0,0.15,0.15,0.8,0.1,0.8,0.75,shape,texture,232,232,14,3/3,multi_slider,232,red,299,solid things,striped things,polka-dotted things,clouds,circles,squares
+0,0.9,0.15,0.25,0.9,0.1,0.1,shape,color,312,112,15,2/3,multi_slider,312,red,14,blue things,red things,green things,clouds,circles,squares
+0,0.2,0.2,0.85,0.15,0.15,0.7,shape,color,213,111,16,2/2,multi_slider,211,circle,133,blue things,red things,green things,clouds,circles,squares
+0,0.25,0.25,0.2,0.2,0.2,0.85,texture,color,121,131,17,1/3,multi_slider,111,solid,180,blue things,red things,green things,solid things,striped things,polka-dotted things
+1,0.85,0.05,0,0.95,0.05,0.75,texture,color,312,332,3,1/1,multi_slider,323,square,226,solid things,striped things,polka-dotted things,blue things,red things,green things
+1,0.7,0.1,0.05,0.05,0.05,0.9,texture,color,221,213,4,2/2,multi_slider,213,solid,131,solid things,striped things,polka-dotted things,blue things,red things,green things
+1,0.05,0.05,0.7,0.8,0.1,0.05,texture,color,133,131,5,1/1,multi_slider,122,striped,246,blue things,red things,green things,solid things,striped things,polka-dotted things
+1,0.1,0.8,0,0.9,0.05,0.05,texture,color,322,331,6,1/2,multi_slider,312,red,100,blue things,red things,green things,solid things,striped things,polka-dotted things
+1,0.1,0.1,0.9,0.1,0.05,0.85,texture,color,131,111,7,1/3,multi_slider,121,cloud,184,blue things,red things,green things,solid things,striped things,polka-dotted things
+1,0.05,0.95,0,0.05,0.05,0.95,shape,texture,323,113,8,2/2,multi_slider,113,solid,135,clouds,circles,squares,solid things,striped things,polka-dotted things
+1,0.75,0.05,0.1,0.85,0.15,0.1,texture,shape,312,312,9,1/3,multi_slider,322,square,162,solid things,striped things,polka-dotted things,clouds,circles,squares
+1,0.85,0,0.05,0,0.85,0.05,shape,texture,331,331,10,3/3,multi_slider,331,blue,272,solid things,striped things,polka-dotted things,clouds,circles,squares
+1,0.85,0.05,0.05,0,0.8,0.05,shape,texture,232,232,11,1/3,multi_slider,332,polka-dotted,167,solid things,striped things,polka-dotted things,clouds,circles,squares
+1,0.7,0.1,0.15,0.05,0.05,0.8,shape,texture,233,133,12,2/3,multi_slider,133,polka-dotted,18,clouds,circles,squares,solid things,striped things,polka-dotted things
+1,0.05,0.8,0.1,0.15,0.05,0.9,shape,color,331,131,13,2/3,multi_slider,131,blue,37,clouds,circles,squares,blue things,red things,green things
+1,0.05,0.8,0.05,0.05,0.05,0.9,shape,color,211,113,14,2/2,multi_slider,111,solid,128,clouds,circles,squares,blue things,red things,green things
+1,0.05,0.8,0.1,0.05,0.1,0.9,shape,texture,113,113,15,3/3,multi_slider,113,cloud,253,solid things,striped things,polka-dotted things,clouds,circles,squares
+1,0.75,0.05,0.05,0.05,0,0.75,shape,color,122,123,16,1/1,multi_slider,321,blue,217,blue things,red things,green things,clouds,circles,squares
+1,0.05,0.05,0.75,0.1,0.7,0.05,shape,color,121,223,17,2/2,multi_slider,223,striped,143,blue things,red things,green things,clouds,circles,squares
+2,0.05,0.15,0,0.2,0,0.55,shape,texture,113,113,3,3/3,multi_slider,113,cloud,253,clouds,circles,squares,solid things,striped things,polka-dotted things
+2,0.5,0.75,0.5,0.5,0.5,0.5,shape,color,111,111,4,3/3,multi_slider,111,cloud,267,blue things,red things,green things,clouds,circles,squares
+2,0,0.55,0,0.6,0,0.6,shape,color,131,131,5,3/3,multi_slider,131,cloud,252,clouds,circles,squares,blue things,red things,green things
+2,0.5,1,0.2,0.1,0.75,0.45,color,texture,112,132,6,1/2,multi_slider,131,cloud,73,solid things,striped things,polka-dotted things,blue things,red things,green things
+2,0.5,0.7,0.3,0.35,0.65,0.5,texture,color,222,223,7,1/2,multi_slider,213,solid,70,blue things,red things,green things,solid things,striped things,polka-dotted things
+2,0.9,0.15,0.5,0.1,1,0.5,color,shape,112,312,8,1/2,multi_slider,313,solid,66,blue things,red things,green things,clouds,circles,squares
+2,0.5,0.5,0.5,0.5,0.5,0.5,shape,texture,312,322,9,1/2,multi_slider,222,circle,94,solid things,striped things,polka-dotted things,clouds,circles,squares
+2,0.5,0.5,0.5,0.2,0.5,0.85,shape,color,211,113,10,2/2,multi_slider,111,blue,128,clouds,circles,squares,blue things,red things,green things
+2,0.5,0.5,0.5,0.5,0.5,0.2,shape,texture,131,231,11,1/1,multi_slider,321,striped,249,clouds,circles,squares,solid things,striped things,polka-dotted things
+2,0.5,0.5,0.5,0.5,0.5,0.5,color,shape,232,331,12,1/2,multi_slider,233,green,85,clouds,circles,squares,blue things,red things,green things
+2,0.5,0.5,0.5,0.5,0.5,0.5,shape,texture,233,233,13,1/1,multi_slider,313,square,205,solid things,striped things,polka-dotted things,clouds,circles,squares
+2,0.85,0.5,0.15,0.5,0.2,1,texture,color,233,232,14,1/2,multi_slider,213,circle,51,solid things,striped things,polka-dotted things,blue things,red things,green things
+2,0.5,0.5,0.5,0.5,0.5,0.5,shape,color,131,131,15,1/3,multi_slider,231,circle,190,blue things,red things,green things,clouds,circles,squares
+2,0.5,0.5,0.5,0.5,0.5,0.5,texture,color,212,212,16,3/3,multi_slider,212,circle,282,solid things,striped things,polka-dotted things,blue things,red things,green things
+2,0.5,0.5,0.5,0.5,0.5,0.5,color,shape,313,312,17,2/3,multi_slider,313,green,9,blue things,red things,green things,clouds,circles,squares
+3,0,0.65,0.7,0.9,0.05,0.9,texture,shape,223,123,3,1/2,multi_slider,133,polka-dotted,90,solid things,striped things,polka-dotted things,clouds,circles,squares
+3,0.4,0.7,0.3,0,0.95,0,texture,shape,333,333,4,1/3,multi_slider,313,green,191,clouds,circles,squares,solid things,striped things,polka-dotted things
+3,0.65,0.6,0.5,0.6,0.5,0.5,shape,texture,221,121,5,1/1,multi_slider,331,blue,237,clouds,circles,squares,solid things,striped things,polka-dotted things
+3,0.4,0.05,0.65,0.7,0.1,0.7,texture,shape,312,232,6,1/2,multi_slider,222,red,96,solid things,striped things,polka-dotted things,clouds,circles,squares
+3,0.1,0.6,0.05,0.5,0.05,0.05,texture,color,212,213,7,1/1,multi_slider,221,striped,241,solid things,striped things,polka-dotted things,blue things,red things,green things
+3,0.05,0.65,0.75,0.1,0.1,0.5,shape,texture,111,111,8,1/1,multi_slider,221,striped,229,clouds,circles,squares,solid things,striped things,polka-dotted things
+3,0.35,0.7,0.6,0.05,0.1,0,texture,color,323,332,9,2/2,multi_slider,322,square,150,blue things,red things,green things,solid things,striped things,polka-dotted things
+3,0.15,0.65,0.4,0.25,0.35,0.6,texture,shape,132,112,10,2/3,multi_slider,112,cloud,15,solid things,striped things,polka-dotted things,clouds,circles,squares
+3,0.1,0.8,0.3,0.15,0.6,0.15,shape,color,121,321,11,2/3,multi_slider,321,blue,17,clouds,circles,squares,blue things,red things,green things
+3,0.1,0.5,0.2,0.4,0.25,0.75,shape,texture,113,213,12,2/3,multi_slider,113,cloud,16,clouds,circles,squares,solid things,striped things,polka-dotted things
+3,0.1,0.5,0.4,0.6,0.35,0.1,shape,color,332,132,13,1/1,multi_slider,231,blue,239,clouds,circles,squares,blue things,red things,green things
+3,0.05,0.3,0.8,0.35,1,0.75,shape,texture,232,232,14,3/3,multi_slider,232,polka-dotted,265,solid things,striped things,polka-dotted things,clouds,circles,squares
+3,0.9,0.4,0.3,0.1,0.1,0.6,texture,color,133,121,15,2/2,multi_slider,131,cloud,105,blue things,red things,green things,solid things,striped things,polka-dotted things
+3,0.6,0.2,0.3,0.75,0.35,0.25,color,shape,231,332,16,1/2,multi_slider,233,polka-dotted,61,clouds,circles,squares,blue things,red things,green things
+3,0.25,0.35,0.9,0.5,0.4,0.8,shape,texture,222,312,17,2/2,multi_slider,212,solid,101,solid things,striped things,polka-dotted things,clouds,circles,squares
+4,0.15,0.85,0.25,0.9,0.15,0.35,texture,shape,222,212,3,2/3,multi_slider,212,solid,5,clouds,circles,squares,solid things,striped things,polka-dotted things
+4,0.15,0.9,0.15,0.25,0.1,0.65,texture,color,311,311,4,3/3,multi_slider,311,solid,290,solid things,striped things,polka-dotted things,blue things,red things,green things
+4,0.2,0.15,0.85,0.9,0.1,0.75,texture,color,222,222,5,3/3,multi_slider,222,circle,254,solid things,striped things,polka-dotted things,blue things,red things,green things
+4,0.05,0.9,0.2,0.15,0.8,0.3,shape,texture,221,321,6,1/1,multi_slider,131,polka-dotted,204,solid things,striped things,polka-dotted things,clouds,circles,squares
+4,0.15,0.85,0.1,0.75,0.15,0.15,texture,shape,213,233,7,2/3,multi_slider,213,green,36,clouds,circles,squares,solid things,striped things,polka-dotted things
+4,0.05,0.8,0.15,0.15,0.85,0.2,shape,texture,113,333,8,2/2,multi_slider,313,square,113,clouds,circles,squares,solid things,striped things,polka-dotted things
+4,0.05,0.85,0.15,0.15,0.1,0.7,color,shape,233,133,9,1/2,multi_slider,131,blue,71,clouds,circles,squares,blue things,red things,green things
+4,0.05,0.85,0.1,0.1,0.9,0.3,color,texture,213,212,10,2/3,multi_slider,213,solid,42,blue things,red things,green things,solid things,striped things,polka-dotted things
+4,0.25,0.9,0,0.25,0.1,0.85,color,shape,222,122,11,1/2,multi_slider,121,blue,91,clouds,circles,squares,blue things,red things,green things
+4,0.75,0.2,0.1,0.1,0.85,0.15,shape,color,133,333,12,2/3,multi_slider,333,green,50,clouds,circles,squares,blue things,red things,green things
+4,0.05,0.85,0.1,0.15,0.05,0.75,texture,color,121,121,13,1/3,multi_slider,111,solid,181,solid things,striped things,polka-dotted things,blue things,red things,green things
+4,0.05,0.25,0.9,0.85,0.2,0.1,texture,color,321,332,14,2/2,multi_slider,322,square,125,blue things,red things,green things,solid things,striped things,polka-dotted things
+4,0.9,0.15,0.3,0.35,0.05,0.85,shape,color,311,313,15,1/2,multi_slider,113,green,56,clouds,circles,squares,blue things,red things,green things
+4,0.2,0.1,0.8,0.15,0.15,0.85,shape,color,131,131,16,1/3,multi_slider,231,blue,161,blue things,red things,green things,clouds,circles,squares
+4,0.1,0.8,0.35,0.1,0.85,0.2,color,texture,131,133,17,2/3,multi_slider,131,blue,21,solid things,striped things,polka-dotted things,blue things,red things,green things
+5,0.25,0.6,0.25,0.3,0.6,0.15,shape,color,122,123,3,1/1,multi_slider,321,blue,217,clouds,circles,squares,blue things,red things,green things
+5,0.45,0.5,0.45,0.3,0.55,0.7,shape,color,211,211,4,1/3,multi_slider,111,solid,173,clouds,circles,squares,blue things,red things,green things
+5,0.2,0.7,0.2,0.6,0.25,0.5,texture,color,133,112,5,1/1,multi_slider,121,blue,250,solid things,striped things,polka-dotted things,blue things,red things,green things
+5,0.3,0.1,0.6,0.2,0.55,0.2,shape,color,122,123,6,1/2,multi_slider,223,striped,68,blue things,red things,green things,clouds,circles,squares
+5,0.6,0.5,0.2,0.3,0.55,0.5,shape,texture,232,232,7,1/3,multi_slider,332,square,167,solid things,striped things,polka-dotted things,clouds,circles,squares
+5,0.2,0.55,0.55,0.25,0.15,0.55,texture,color,231,223,8,2/2,multi_slider,221,circle,138,blue things,red things,green things,solid things,striped things,polka-dotted things
+5,0.65,0.2,0.15,0.3,0.2,0.75,shape,color,213,213,9,1/3,multi_slider,113,solid,198,clouds,circles,squares,blue things,red things,green things
+5,0.55,0.4,0.45,0.3,0.45,0.5,shape,color,221,221,10,1/1,multi_slider,123,green,228,clouds,circles,squares,blue things,red things,green things
+5,0.2,0.55,0.35,0.4,0.6,0.45,shape,texture,233,133,11,2/3,multi_slider,133,cloud,18,solid things,striped things,polka-dotted things,clouds,circles,squares
+5,0.25,0.5,0.25,0.3,0.3,0.5,shape,color,111,111,12,3/3,multi_slider,111,cloud,295,clouds,circles,squares,blue things,red things,green things
+5,0.2,0.65,0.2,0.6,0.25,0.3,shape,color,213,111,13,2/2,multi_slider,211,circle,133,clouds,circles,squares,blue things,red things,green things
+5,0.7,0.15,0.25,0.55,0.25,0.8,shape,texture,122,122,14,1/3,multi_slider,322,striped,195,solid things,striped things,polka-dotted things,clouds,circles,squares
+5,0.6,0.35,0.4,0.4,0.65,0.5,color,texture,332,333,15,2/3,multi_slider,333,square,20,solid things,striped things,polka-dotted things,blue things,red things,green things
+5,0.55,0.3,0.3,0.4,0.4,0.5,shape,color,223,322,16,1/2,multi_slider,123,cloud,60,clouds,circles,squares,blue things,red things,green things
+5,0.5,0.25,0.3,0.25,0.4,0.4,texture,color,123,122,17,1/2,multi_slider,113,green,52,solid things,striped things,polka-dotted things,blue things,red things,green things
+6,0.2,0.5,0.7,0.15,0.2,0.8,texture,color,333,332,3,1/1,multi_slider,321,blue,210,blue things,red things,green things,solid things,striped things,polka-dotted things
+6,0.3,0.15,0.8,0.2,0.7,0.2,shape,color,133,132,4,1/2,multi_slider,332,polka-dotted,76,clouds,circles,squares,blue things,red things,green things
+6,0.3,0.15,0.25,0.65,0.25,0.15,texture,shape,213,133,5,1/2,multi_slider,223,circle,54,solid things,striped things,polka-dotted things,clouds,circles,squares
+6,0.25,0.1,0.75,0.15,0.9,0.15,color,texture,223,221,6,2/3,multi_slider,223,striped,8,blue things,red things,green things,solid things,striped things,polka-dotted things
+6,0.05,0.8,0.1,0.05,0.9,0.05,color,texture,213,212,7,2/3,multi_slider,213,circle,42,blue things,red things,green things,solid things,striped things,polka-dotted things
+6,0.2,0.85,0.1,0.55,0.1,0.1,color,shape,233,133,8,1/2,multi_slider,131,polka-dotted,71,clouds,circles,squares,blue things,red things,green things
+6,0.15,0.1,0.2,0.8,0.3,0.1,shape,texture,122,122,9,3/3,multi_slider,122,striped,286,solid things,striped things,polka-dotted things,clouds,circles,squares
+6,0.2,0.1,0.75,0.15,0.15,0.05,shape,texture,332,332,10,1/1,multi_slider,122,red,214,clouds,circles,squares,solid things,striped things,polka-dotted things
+6,0.15,1,0.1,0.15,0.15,0.1,color,shape,323,321,11,2/3,multi_slider,321,square,25,clouds,circles,squares,blue things,red things,green things
+6,0.8,0.15,0.1,0.1,0.75,0.15,color,texture,133,132,12,2/3,multi_slider,133,cloud,6,blue things,red things,green things,solid things,striped things,polka-dotted things
+6,0.95,0.15,0.1,0.8,0.15,0.1,texture,color,123,123,13,3/3,multi_slider,123,cloud,294,solid things,striped things,polka-dotted things,blue things,red things,green things
+6,1,0.05,0.15,0.2,0.2,0.85,texture,color,131,113,14,2/2,multi_slider,131,blue,102,blue things,red things,green things,solid things,striped things,polka-dotted things
+6,0.15,0.85,0.15,0.85,0.15,0.2,shape,color,312,212,15,1/3,multi_slider,112,red,169,blue things,red things,green things,clouds,circles,squares
+6,1,0.2,0.15,0.05,0.1,0.95,shape,color,111,312,16,2/2,multi_slider,311,square,124,blue things,red things,green things,clouds,circles,squares
+6,0.05,0.1,0.9,0.8,0.2,0.1,texture,color,122,122,17,3/3,multi_slider,122,red,292,blue things,red things,green things,solid things,striped things,polka-dotted things
+7,0.7,0,0,1,0,0,texture,shape,231,231,3,1/3,multi_slider,221,blue,175,solid things,striped things,polka-dotted things,clouds,circles,squares
+7,0,0.5,0,1,0,0,shape,color,131,131,4,1/3,multi_slider,231,polka-dotted,161,clouds,circles,squares,blue things,red things,green things
+7,1,0,0,0,0.75,0,color,texture,221,232,5,1/2,multi_slider,233,circle,58,solid things,striped things,polka-dotted things,blue things,red things,green things
+7,0,0,0.5,0.15,0,0.65,texture,shape,213,233,6,2/3,multi_slider,213,circle,36,solid things,striped things,polka-dotted things,clouds,circles,squares
+7,0.4,0.25,0.5,0,1,0,shape,color,133,132,7,1/2,multi_slider,332,red,76,clouds,circles,squares,blue things,red things,green things
+7,0.2,0.5,0.2,0.3,0.25,0.95,shape,texture,321,211,8,1/2,multi_slider,111,cloud,88,solid things,striped things,polka-dotted things,clouds,circles,squares
+7,0.5,0.5,0.5,0.5,0.5,0.5,shape,color,122,122,9,1/1,multi_slider,321,square,243,blue things,red things,green things,clouds,circles,squares
+7,0,0,1,0.5,0,0,color,shape,213,212,10,2/3,multi_slider,212,circle,28,clouds,circles,squares,blue things,red things,green things
+7,1,0.15,0.65,0,1,0,shape,texture,221,121,11,1/1,multi_slider,331,blue,219,solid things,striped things,polka-dotted things,clouds,circles,squares
+7,0.35,0.5,0.7,0.7,0,0.3,shape,color,121,222,12,2/2,multi_slider,222,red,106,clouds,circles,squares,blue things,red things,green things
+7,0.6,0.5,0.5,0,0,1,texture,color,131,123,13,1/2,multi_slider,113,green,72,solid things,striped things,polka-dotted things,blue things,red things,green things
+7,0.6,0.4,0.35,0,1,0.4,color,texture,133,132,14,2/3,multi_slider,133,polka-dotted,6,blue things,red things,green things,solid things,striped things,polka-dotted things
+7,0.5,0.5,0.5,0.5,0.5,0.5,texture,color,132,123,15,1/1,multi_slider,111,blue,231,blue things,red things,green things,solid things,striped things,polka-dotted things
+7,0.4,0.5,0.4,0.5,0.5,0.5,shape,color,223,223,16,1/3,multi_slider,123,cloud,189,blue things,red things,green things,clouds,circles,squares
+7,0.5,0.65,0.35,0.25,0.25,0.5,shape,color,222,322,17,1/1,multi_slider,121,blue,240,clouds,circles,squares,blue things,red things,green things
+8,0.1,0.8,0.1,0.6,0.05,0.65,shape,color,211,211,3,1/3,multi_slider,111,cloud,173,clouds,circles,squares,blue things,red things,green things
+8,0,0,0.7,0,0,1,shape,color,122,122,4,3/3,multi_slider,122,striped,270,clouds,circles,squares,blue things,red things,green things
+8,0.2,1,0.25,0.25,0.1,0.35,shape,texture,212,222,5,1/2,multi_slider,112,solid,79,solid things,striped things,polka-dotted things,clouds,circles,squares
+8,0,0,0,0,0.85,0,shape,color,111,312,6,2/2,multi_slider,311,blue,124,clouds,circles,squares,blue things,red things,green things
+8,0,0,0,0,0.75,0,shape,color,312,112,7,2/3,multi_slider,312,solid,14,clouds,circles,squares,blue things,red things,green things
+8,0,0,0,0,0,0,texture,color,222,223,8,1/2,multi_slider,213,solid,70,blue things,red things,green things,solid things,striped things,polka-dotted things
+8,0,0,0,0,0,0,color,texture,222,223,9,2/3,multi_slider,223,green,2,blue things,red things,green things,solid things,striped things,polka-dotted things
+8,0,0,0,0,0,0,color,shape,331,231,10,1/2,multi_slider,232,red,53,blue things,red things,green things,clouds,circles,squares
+8,0.05,0.05,0.1,0,0.05,0.05,shape,texture,212,212,11,3/3,multi_slider,212,solid,269,solid things,striped things,polka-dotted things,clouds,circles,squares
+8,0.75,0.05,0.05,0.05,0.7,0.05,shape,texture,222,122,12,1/1,multi_slider,332,red,235,clouds,circles,squares,solid things,striped things,polka-dotted things
+8,0.05,0.05,0.05,0,0.1,0.8,color,shape,212,211,13,2/3,multi_slider,211,circle,43,blue things,red things,green things,clouds,circles,squares
+8,0.05,0.05,0.05,0.05,0.05,0.05,texture,color,123,123,14,3/3,multi_slider,123,striped,294,blue things,red things,green things,solid things,striped things,polka-dotted things
+8,0.05,0,0.95,0,0,0,color,shape,311,311,15,1/3,multi_slider,312,solid,171,clouds,circles,squares,blue things,red things,green things
+8,0.05,0.05,0.95,0.05,0.05,0.05,texture,color,322,333,16,2/2,multi_slider,332,polka-dotted,112,solid things,striped things,polka-dotted things,blue things,red things,green things
+8,0.05,0,0.05,0.05,0.05,0.05,texture,color,313,331,17,1/2,multi_slider,321,striped,65,blue things,red things,green things,solid things,striped things,polka-dotted things

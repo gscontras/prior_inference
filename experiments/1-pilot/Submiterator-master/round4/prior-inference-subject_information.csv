@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,1,Male,28,None,Yes,3
+1,English,1,Female,26,n/a,Yes,1
+2,English,2,Female,56,"I found it really hard to imagine anyone would have a preference for anything on most of the answers, I think the chooser of the subject just chose randomly when faced with similar options.",Yes,2
+3,English,1,Female,30,,Yes,3
+4,english,1,Male,55,,No,3
+5,English,1,Male,25,,No,3
+6,english,2,Male,28,good,Yes,3
+7,english,2,Male,37,Thanks,Yes,1
+8,english,2,Male,52,,Yes,3

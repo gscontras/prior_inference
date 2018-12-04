@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,english,2,Male,28,,Yes,2
+1,english,1,Female,33,,Yes,2
+2,English,2,Male,25,,Yes,2
+3,English,2,Male,22,,Yes,3
+4,English,1,Male,27,"Odd because I felt like the HIT never got into an area where you really got any really opinion data out of it, but maybe I didn&quotechart understand the data you were trying to glean.",Confused,3
+5,,1,Female,32,none,Yes,4
+6,English,1,Male,29,,No,3
+7,English,1,Male,30,,Yes,3
+8,english,2,Female,66,,Yes,2
