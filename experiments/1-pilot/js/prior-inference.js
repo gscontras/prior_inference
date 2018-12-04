@@ -24,7 +24,7 @@ function make_slides(f) {
 
   slides.multi_slider = slide({
     name : "multi_slider",
-    present : _.sample(stimuli,10),
+    present : _.sample(stimuli,15),
     present_handle : function(stim) {
       $(".err").hide();
       this.stim = stim; 
@@ -77,16 +77,18 @@ function make_slides(f) {
       this.n_sliders_1 = this.preferences1.length;
       $(".slider_row1").remove();
       for (var i=0; i<this.n_sliders_1; i++) {
-        $("#multi_slider_table_1").append('<tr class="slider_row1"><td class="slider_target" id="object1' + i + '">' + this.preferences1[i] +  '</td><td colspan="2"><div id="slider1' + i + '" class="slider">-------[ ]--------</div></td></tr>');
+        $("#multi_slider_table_1").append('<tr class="slider_row1"><td class="slider_target" id="object1' + i + '">' + this.preferences1[i] +  '</td><td colspan="3" bgcolor="#eee" ><div id="slider1' + i + '" class="slider">-------[ ]--------</div></td></tr>');
         utils.match_row_height("#multi_slider_table_1", ".slider_target");
       }
+      $("#multi_slider_table_1").append('<tr class="slider_row1"><td></td><td class="left"></td><td class="center">|</td><td class="right"></td></tr>')
 
       this.n_sliders_2 = this.preferences2.length;
       $(".slider_row2").remove();
       for (var i=0; i<this.n_sliders_2; i++) {
-        $("#multi_slider_table_2").append('<tr class="slider_row2"><td class="slider_target" id="object2' + i + '">' + this.preferences2[i] +  '</td><td colspan="2"><div id="slider2' + i + '" class="slider">-------[ ]--------</div></td></tr>');
+        $("#multi_slider_table_2").append('<tr class="slider_row2"><td class="slider_target" id="object2' + i + '">' + this.preferences2[i] +  '</td><td colspan="3" bgcolor="#eee" ><div id="slider2' + i + '" class="slider">-------[ ]--------</div></td></tr>');
         utils.match_row_height("#multi_slider_table_2", ".slider_target");
       }
+      $("#multi_slider_table_2").append('<tr class="slider_row1"><td></td><td class="left"></td><td class="center">|</td><td class="right"></td></tr>')
 
       // this.init_sliders(this.preferences);
       this.init_sliders_1(this.preferences1);

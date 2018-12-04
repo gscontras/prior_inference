@@ -57,10 +57,10 @@ var utils = {
 			range : "min",
 			min : 0,
 			max : 1,
-			step: 0.01,
+			step: 0.05,
 			value : 0.5,
 			slide : response_callback,
-						change : response_callback
+			change : response_callback
 		});
 		// $(label + ' .ui-slider-handle').hide(); \\ uncomment to hide slider post
 		$(label).mousedown(function(){
@@ -71,7 +71,7 @@ var utils = {
 				"border-color": "#001F29"
 			});
 		});
-		$(label).css({"background":"#eee"});
+		$(label).css({"background":"#cecece"});
 	}
 }
 /*

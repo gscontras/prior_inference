@@ -93,6 +93,12 @@ textarea {
 	float: right;
 }
 
+.slider_table .center {
+	display: inline;
+	text-align: center;
+	float: center;
+}
+
 .slider_target {
 	text-align: right;
 }

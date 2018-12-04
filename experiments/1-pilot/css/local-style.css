@@ -14,9 +14,8 @@
 .slide {
     padding-top: 36px;
     /*padding-bottom: 50px;*/
-
+    width: 750px;
 }
-
 
 .long_form {
     padding-top: 20px;
@@ -32,3 +31,24 @@ div.wrapper div {
 .obj2 {   padding: 10px; }
 
 .obj3 {   padding: 10px; }
+
+table {
+  table-layout: fixed ;
+  width: 350px ;
+}
+
+td.slider_target {
+    width: 35%;
+}
+
+td.left {
+  width: 29% ;
+}
+
+td.center {
+  width: 1% ;
+}
+
+td.right {
+  width: 29% ;
+}
