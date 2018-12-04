@@ -291,7 +291,7 @@ function make_slides(f) {
 function init() {
   repeatWorker = false;
   (function(){
-      var ut_id = "prior-inference";
+      var ut_id = "prior_inference";
       if (UTWorkerLimitReached(ut_id)) {
         $('.slide').empty();
         repeatWorker = true;
