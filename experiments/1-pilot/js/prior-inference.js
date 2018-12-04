@@ -158,7 +158,10 @@ function make_slides(f) {
         "response6" : exp.sliderPost2[2],
         "slide_number" : exp.phase,
         "item" : this.stim.ID,
-        "condition" : this.stim.condition
+        "condition" : this.stim.condition,
+        "target" : this.stim.target,
+        "obj2" : this.stim.obj2,
+        "obj3" : this.stim.obj3
       });
     },
   });
