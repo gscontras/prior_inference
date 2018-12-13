@@ -54,7 +54,17 @@
 
   <div class="slide" id="instructions1">
     <h3>Instructions</h3>
-    <p>XXX put some general instructions here.</p>
+    <p>You will see a series of scenarios with two people and three objects. For example, a scenario might feature Mary and John and the three objects below:</p>
+
+    <div class="wrapper">
+      <div id="object1i" class="object"><img src='images/111.png' width='120'></img></div>
+      <div id="object2i" class="object"><img src='images/222.png' width='120'></img></div>
+      <div id="object3i" class="object"><img src='images/333.png' width='120'></img></div>
+    </div>
+
+    <p>Mary has to choose a single word to communicate one of the objects to the John. John then chooses an object that matches the description, and Mary gets to observe his choice. However, John might have a preference for certain colors (blue, red, green), shapes (clouds, circles, squares), or patterns (solid, striped, polka-dotted).</p> 
+
+    <p>Your task is to help Mary choose the utterance to signal one of the objects to John. You should pick the utterance that you think could give you the most information about John's preferences.</p>
     <!-- <p class="instruction_condition">{{}}</p> -->
     <button onclick="_s.button()">Continue</button>
   </div>
@@ -63,7 +73,7 @@
 
   <div class="slide" id="multi_slider">
 
-    <p>Suppose <span class="person1"></span> wants to signal an object in the following scene to <span class="person2"></span>.<br /> <span class="person1"></span> says <b>"<span class="utterance"></span>"</b> and <span class="person2"></span> chooses the outlined object:</p>
+    <p>Suppose <span class="person1"></span> wants learn about <span class="person2"></span>'s preferences in the following scenario:</p>
 
       <div class="wrapper">
         <div id="object1" class="object"></div>
@@ -76,10 +86,10 @@
     <label><input type="radio"  name="sense" value="No"/>No</label>
     </br></br>
  -->
-    <p>Based on this choice, do you think <span class="person2"></span> has a preference <br />for certain types of objects?</p>
+    <p><span class="person1"></span> can choose a single utterance and then watch <span class="person2"></span> select an object. <br /><br />What should <span class="person1"></span> say?</p>
 
     <table id="multi_slider_table" class="slider_table">
-      <tr><td></td><td class="left">very unlikely</td><td class="right">very likely</td></tr>
+      <tr><td></td><td class="left">definitely not</td><td class="right">definitely</td></tr>
     </table>
 
     <button onclick="_s.button()">Continue</button>

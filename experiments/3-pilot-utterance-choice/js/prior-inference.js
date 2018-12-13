@@ -24,7 +24,7 @@ function make_slides(f) {
 
   slides.multi_slider = slide({
     name : "multi_slider",
-    present : stimuli, //_.sample(stimuli,10),
+    present : _.sample(stimuli,10),
     present_handle : function(stim) {
       $(".err").hide();
       this.stim = stim; 
@@ -41,9 +41,9 @@ function make_slides(f) {
 
       this.order = _.shuffle(["target","obj2","obj3"])
 
-      var object1 = "<img src='images/" + stim[this.order[0]] + ".png' width='120' class= " + this.order[0] + "></img>"
-      var object2 = "<img src='images/" + stim[this.order[1]] + ".png' width='120' class= " + this.order[1] + "></img>"
-      var object3 = "<img src='images/" + stim[this.order[2]] + ".png' width='120' class= " + this.order[2] + "></img>"
+      var object1 = "<img src='images/" + stim[this.order[0]] + ".png' width='120'></img>"
+      var object2 = "<img src='images/" + stim[this.order[1]] + ".png' width='120'></img>"
+      var object3 = "<img src='images/" + stim[this.order[2]] + ".png' width='120'></img>"
 
       $("#object1").html(object1)
       $("#object2").html(object2)
@@ -52,29 +52,29 @@ function make_slides(f) {
       var property1 = stim.property1
       var prop1Labels = []
       if (property1=="color") {
-        var prop1Labels = ["blue things", "red things", "green things"]
+        var prop1Labels = ["blue", "red", "green"]
       } else if (property1=="texture") {
-        var prop1Labels = ['solid things','striped things','polka-dotted things']
+        var prop1Labels = ['solid','striped','polka-dotted']
       } else {
-        var prop1Labels = ['clouds','circles','squares']
+        var prop1Labels = ['cloud','circle','square']
       }
       var property2 = stim.property2
       var prop2Labels = []
       if (property2=="color") {
-        var prop2Labels = ["blue things", "red things", "green things"]
+        var prop2Labels = ["blue", "red", "green"]
       } else if (property2=="texture") {
-        var prop2Labels = ['solid things','striped things','polka-dotted things']
+        var prop2Labels = ['solid','striped','polka-dotted']
       } else {
-        var prop2Labels = ['clouds','circles','squares']
+        var prop2Labels = ['cloud','circle','square']
       }
 
-      this.preferences = ["no preference"].concat(prop1Labels).concat(prop2Labels)
+      this.preferences = _.shuffle(["blue", "red", "green",'solid','striped','polka-dotted','cloud','circle','square'])
 
 
       this.n_sliders = this.preferences.length;
       $(".slider_row").remove();
       for (var i=0; i<this.n_sliders; i++) {
-        $("#multi_slider_table").append('<tr class="slider_row"><td class="slider_target" id="object' + i + '">' + this.preferences[i] +  '</td><td colspan="2"><div id="slider' + i + '" class="slider">-------[ ]--------</div></td></tr>');
+        $("#multi_slider_table").append('<tr class="slider_row"><td class="slider_target" id="object' + i + '">' + "\"" + this.preferences[i] + "\"" + '</td><td colspan="2"><div id="slider' + i + '" class="slider">-------[ ]--------</div></td></tr>');
         utils.match_row_height("#multi_slider_table", ".slider_target");
       }
 
@@ -127,9 +127,16 @@ function make_slides(f) {
         "response6" : exp.sliderPost[5],
         "pref7" : this.preferences[6],
         "response7" : exp.sliderPost[6],
+        "pref8" : this.preferences[7],
+        "response8" : exp.sliderPost[7],
+        "pref9" : this.preferences[8],
+        "response9" : exp.sliderPost[8],
         "slide_number" : exp.phase,
         "item" : this.stim.ID,
-        "condition" : this.stim.condition
+        "condition" : this.stim.condition,
+        "obj1" : this.stim.target,
+        "obj2" : this.stim.obj2,
+        "obj3" : this.stim.obj3
       });
     },
   });
@@ -262,7 +269,7 @@ function make_slides(f) {
 function init() {
   repeatWorker = false;
   (function(){
-      var ut_id = "spanish-ordering";
+      var ut_id = "prior_inference";
       if (UTWorkerLimitReached(ut_id)) {
         $('.slide').empty();
         repeatWorker = true;
