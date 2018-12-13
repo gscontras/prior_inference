@@ -1,0 +1,109 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Frank%
+\ \BBA {} Goodman%
+}{%
+Frank%
+\ \BBA {} Goodman%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+frankgoodman2012}
+\APACinsertmetastar {%
+frankgoodman2012}%
+\begin{APACrefauthors}%
+Frank, M\BPBI C.%
+\BCBT {}\ \BBA {} Goodman, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Predicting Pragmatic Reasoning in Language Games}
+  {Predicting pragmatic reasoning in language games}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Science}{336}{}{998-998}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Goodman%
+\ \BBA {} Frank%
+}{%
+Goodman%
+\ \BBA {} Frank%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+goodmanfrank2016}
+\APACinsertmetastar {%
+goodmanfrank2016}%
+\begin{APACrefauthors}%
+Goodman, N\BPBI D.%
+\BCBT {}\ \BBA {} Frank, M\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Pragmatic Language Interpretation as Probabilistic
+  Inference} {Pragmatic language interpretation as probabilistic
+  inference}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Trends in Cognitive Sciences}{20}{11}{818-829}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Piantadosi%
+, Tily%
+\BCBL {}\ \BBA {} Gibson%
+}{%
+Piantadosi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+piantadosietal2012}
+\APACinsertmetastar {%
+piantadosietal2012}%
+\begin{APACrefauthors}%
+Piantadosi, S\BPBI T.%
+, Tily, H.%
+\BCBL {}\ \BBA {} Gibson, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The communicative efficiency of ambiguity in language}
+  {The communicative efficiency of ambiguity in language}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognition}{122}{}{280-291}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wasow%
+}{%
+Wasow%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+wasow2015}
+\APACinsertmetastar {%
+wasow2015}%
+\begin{APACrefauthors}%
+Wasow, T.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Ambiguity Avoidance in Overrated} {Ambiguity avoidance
+  in overrated}.{\BBCQ}
+\newblock
+\BIn{} S.~Winkler\ (\BED), \APACrefbtitle {Ambiguity: Laguage and
+  Communication} {Ambiguity: Laguage and communication}\ (\BPG~29-47).
+\newblock
+\APACaddressPublisher{}{de Gruyter}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

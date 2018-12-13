@@ -1,0 +1,74 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{tikz} % for drawing figures
+\usepackage{amsmath} % for equations
+\usepackage{url} % for URLs
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{varwidth}
+\usepackage{blindtext}
+
+
+\usepackage{linguex} % ** special include in directory: for doing handy example labeling and bracketing
+\renewcommand{\firstrefdash}{} % used for linguex package not to put hyphens in example refs (1a instead of 1-a)
+\usepackage{cogsci}
+\usepackage{pslatex}
+\usepackage{apacite}
+
+\newcommand{\sem}[1]{\mbox{$[\![$#1$]\!]$}}
+\newcommand{\lam}{$\lambda$}
+\newcommand{\gcs}[1]{\textcolor{blue}{[gcs: #1]}} 
+
+
+
+\title{our title}
+\author{\large \textbf{our names}\\
+our emails\\
+our affiliations}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+XXX
+
+
+\textbf{Keywords:} 
+XXX, XXX
+
+\end{abstract}
+
+\section{Introduction}
+
+XXX
+
+\section{Background}
+
+\cite{wasow2015}
+
+\cite{piantadosietal2012}
+
+\cite{frankgoodman2012,goodmanfrank2016}
+
+
+\section{Model}
+
+
+\section{Expt.~1: Inferring preferences}
+
+
+\section{Expt.~2: Choosing utterances}
+
+
+\section{Discussion}
+
+
+
+\bibliographystyle{apacite}
+\setlength{\bibleftmargin}{.125in}
+\setlength{\bibindent}{-\bibleftmargin}
+
+\bibliography{prior-inference}
+
+\end{document}
+
