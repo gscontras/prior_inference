@@ -63,7 +63,8 @@ function make_slides(f) {
       $(".person1").html(person1);
       $(".person2").html(person2);
 
-      exp.utterance = stim[_.sample(["targetShape","targetTexture","targetColor"])]
+      var utteranceType = _.sample(["targetShape","targetTexture","targetColor"])
+      exp.utterance = stim[utteranceType]
       $(".utterance").html(exp.utterance);
 
       this.order = _.shuffle(["target","obj2","obj3"])
@@ -76,23 +77,40 @@ function make_slides(f) {
       $("#object2").html(object2)
       $("#object3").html(object3)
 
-      var property1 = stim.property1
-      var prop1Labels = []
-      if (property1=="color") {
-        var prop1Labels = ["blue things", "red things", "green things"]
-      } else if (property1=="texture") {
+      // var property1 = stim.property1
+      // var prop1Labels = []
+      // if (property1=="color") {
+      //   var prop1Labels = ["blue things", "red things", "green things"]
+      // } else if (property1=="texture") {
+      //   var prop1Labels = ['solid things','striped things','polka-dotted things']
+      // } else {
+      //   var prop1Labels = ['clouds','circles','squares']
+      // }
+      // var property2 = stim.property2
+      // var prop2Labels = []
+      // if (property2=="color") {
+      //   var prop2Labels = ["blue things", "red things", "green things"]
+      // } else if (property2=="texture") {
+      //   var prop2Labels = ['solid things','striped things','polka-dotted things']
+      // } else {
+      //   var prop2Labels = ['clouds','circles','squares']
+      // }
+
+      if (utteranceType == "targetShape") {
+        var property1 = "texture"
         var prop1Labels = ['solid things','striped things','polka-dotted things']
-      } else {
-        var prop1Labels = ['clouds','circles','squares']
-      }
-      var property2 = stim.property2
-      var prop2Labels = []
-      if (property2=="color") {
+        var property2 = "color"
         var prop2Labels = ["blue things", "red things", "green things"]
-      } else if (property2=="texture") {
+      } else if (utteranceType == "targetTexture") {
+        var property1 = "shape"
+        var prop1Labels = ['clouds','circles','squares']
+        var property2 = "color"
+        var prop2Labels = ["blue things", "red things", "green things"]
+      } else if (utteranceType == "targetColor") {
+        var property1 = "shape"
+        var prop1Labels = ['clouds','circles','squares']
+        var property2 = "texture"
         var prop2Labels = ['solid things','striped things','polka-dotted things']
-      } else {
-        var prop2Labels = ['clouds','circles','squares']
       }
 
       this.labels = _.shuffle([prop1Labels,prop2Labels])
