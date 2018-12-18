@@ -51,7 +51,7 @@ function make_slides(f) {
 
   slides.multi_slider = slide({
     name : "multi_slider",
-    present : _.sample(stimuli,15),
+    present : _.shuffle(stimuli),
     present_handle : function(stim) {
       $(".err").hide();
       this.stim = stim; 
@@ -63,8 +63,11 @@ function make_slides(f) {
       $(".person1").html(person1);
       $(".person2").html(person2);
 
-      var utteranceType = _.sample(["targetShape","targetTexture","targetColor"])
-      exp.utterance = stim[utteranceType]
+      // var utteranceType = _.sample(["targetShape","targetTexture","targetColor"])
+      // exp.utterance = stim[utteranceType]
+
+      var utteranceType = stim["utteredtype"]
+      exp.utterance = stim["utterance"]
       $(".utterance").html(exp.utterance);
 
       this.order = _.shuffle(["target","obj2","obj3"])
@@ -96,17 +99,17 @@ function make_slides(f) {
       //   var prop2Labels = ['clouds','circles','squares']
       // }
 
-      if (utteranceType == "targetShape") {
+      if (utteranceType == "shape") {
         var property1 = "texture"
         var prop1Labels = ['solid things','striped things','polka-dotted things']
         var property2 = "color"
         var prop2Labels = ["blue things", "red things", "green things"]
-      } else if (utteranceType == "targetTexture") {
+      } else if (utteranceType == "texture") {
         var property1 = "shape"
         var prop1Labels = ['clouds','circles','squares']
         var property2 = "color"
         var prop2Labels = ["blue things", "red things", "green things"]
-      } else if (utteranceType == "targetColor") {
+      } else if (utteranceType == "color") {
         var property1 = "shape"
         var prop1Labels = ['clouds','circles','squares']
         var property2 = "texture"
@@ -203,10 +206,11 @@ function make_slides(f) {
         "response6" : exp.sliderPost2[2],
         "slide_number" : exp.phase,
         "item" : this.stim.ID,
-        "condition" : this.stim.condition,
+        "itemCode" : this.stim.itemCode,
         "target" : this.stim.target,
         "obj2" : this.stim.obj2,
-        "obj3" : this.stim.obj3
+        "obj3" : this.stim.obj3,
+        "ambiguous" : this.stim.ambiguous
       });
     },
   });

@@ -24,7 +24,7 @@ function make_slides(f) {
 
   slides.multi_slider = slide({
     name : "multi_slider",
-    present : _.sample(stimuli,10),
+    present : _.shuffle(stimuli),
     present_handle : function(stim) {
       $(".err").hide();
       this.stim = stim; 
@@ -36,9 +36,6 @@ function make_slides(f) {
       $(".person1").html(person1);
       $(".person2").html(person2);
 
-      var utterance = _.sample(["targetShape","targetTexture","targetColor"])
-      $(".utterance").html(stim[utterance]);
-
       this.order = _.shuffle(["target","obj2","obj3"])
 
       var object1 = "<img src='images/" + stim[this.order[0]] + ".png' width='120'></img>"
@@ -49,26 +46,9 @@ function make_slides(f) {
       $("#object2").html(object2)
       $("#object3").html(object3)
 
-      var property1 = stim.property1
-      var prop1Labels = []
-      if (property1=="color") {
-        var prop1Labels = ["blue", "red", "green"]
-      } else if (property1=="texture") {
-        var prop1Labels = ['solid','striped','polka-dotted']
-      } else {
-        var prop1Labels = ['cloud','circle','square']
-      }
-      var property2 = stim.property2
-      var prop2Labels = []
-      if (property2=="color") {
-        var prop2Labels = ["blue", "red", "green"]
-      } else if (property2=="texture") {
-        var prop2Labels = ['solid','striped','polka-dotted']
-      } else {
-        var prop2Labels = ['cloud','circle','square']
-      }
+      var numUtterances = stim["numFeatures"]
 
-      this.preferences = _.shuffle(["blue", "red", "green",'solid','striped','polka-dotted','cloud','circle','square'])
+      this.preferences = _.shuffle(stim["featuresPresent"])
 
 
       this.n_sliders = this.preferences.length;
@@ -113,6 +93,7 @@ function make_slides(f) {
     log_responses : function() {
       exp.data_trials.push({
         "trial_type" : "multi_slider",
+        "numFeatures" : this.stim["numFeatures"],
         "pref1" : this.preferences[0],
         "response1" : exp.sliderPost[0],
         "pref2" : this.preferences[1],
@@ -133,10 +114,11 @@ function make_slides(f) {
         "response9" : exp.sliderPost[8],
         "slide_number" : exp.phase,
         "item" : this.stim.ID,
-        "condition" : this.stim.condition,
+        "condition" : this.stim.itemCode,
         "obj1" : this.stim.target,
         "obj2" : this.stim.obj2,
-        "obj3" : this.stim.obj3
+        "obj3" : this.stim.obj3,
+        "ambiguous" : this.stim.ambiguous
       });
     },
   });
