@@ -1,6 +1,57 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Chomsky%
+}{%
+Chomsky%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+chomsky2002minimalism}
+\APACinsertmetastar {%
+chomsky2002minimalism}%
+\begin{APACrefauthors}%
+Chomsky, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An interview on minimalism} {An interview on
+  minimalism}.{\BBCQ}
+\newblock
+\BIn{} A.~Belletti\ \BBA {} L.~Rizzi\ (\BEDS), \APACrefbtitle {On Nature and
+  Language} {On nature and language}\ (\BPG~92-161).
+\newblock
+\APACaddressPublisher{Cambridge}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ferreira%
+}{%
+Ferreira%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+ferreira2008}
+\APACinsertmetastar {%
+ferreira2008}%
+\begin{APACrefauthors}%
+Ferreira, V\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Ambiguity, Accessibility, and a Division of Labor for
+  Communicative Success} {Ambiguity, accessibility, and a division of labor for
+  communicative success}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychology of Learning and Motivation: Advances in
+  Research and Theory}{49}{}{209-246}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Frank%
 \ \BBA {} Goodman%
 }{%
@@ -54,6 +105,56 @@ Goodman, N\BPBI D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Grice%
+}{%
+Grice%
+}{%
+{\protect \APACyear {1975}}%
+}]{%
+grice1975}
+\APACinsertmetastar {%
+grice1975}%
+\begin{APACrefauthors}%
+Grice, H\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1975}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Logic and conversation} {Logic and conversation}.{\BBCQ}
+\newblock
+\BIn{} P.~Cole\ \BBA {} J\BPBI L.~Morgan\ (\BEDS), \APACrefbtitle {Syntax and
+  Semantics 3: Speech Acts} {Syntax and semantics 3: Speech acts}\
+  (\BPG~26-40).
+\newblock
+\APACaddressPublisher{New York}{Academic Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Levinson%
+}{%
+Levinson%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+levinson2000}
+\APACinsertmetastar {%
+levinson2000}%
+\begin{APACrefauthors}%
+Levinson, S\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2000}.
+\newblock
+\APACrefbtitle {Presumptive meanings: The theory of generalized conversational
+  implicature} {Presumptive meanings: The theory of generalized conversational
+  implicature}.
+\newblock
+\APACaddressPublisher{Cambridge, MA}{{MIT} Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Piantadosi%
 , Tily%
 \BCBL {}\ \BBA {} Gibson%
@@ -74,8 +175,8 @@ Piantadosi, S\BPBI T.%
 \newblock
 \APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {The communicative efficiency of ambiguity in language}
-  {The communicative efficiency of ambiguity in language}.{\BBCQ}
+{\BBOQ}\APACrefatitle {The communicative function of ambiguity in language}
+  {The communicative function of ambiguity in language}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Cognition}{122}{}{280-291}.
 \PrintBackRefs{\CurrentBib}
