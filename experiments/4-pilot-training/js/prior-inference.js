@@ -190,8 +190,8 @@ function make_slides(f) {
       exp.data_trials.push({
         "trial_type" : "multi_slider",
         "utterance" : exp.utterance,
-        "property1" : this.stim.property1,
-        "property2" : this.stim.property2,
+        // "property1" : this.stim.property1,
+        // "property2" : this.stim.property2,
         "pref1" : this.preferences1[0],
         "response1" : exp.sliderPost1[0],
         "pref2" : this.preferences1[1],
