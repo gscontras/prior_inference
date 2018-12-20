@@ -3,45 +3,32 @@ library(reshape2)
 library(lme4)
 library(dplyr)
 
-setwd("~/git/spanish_adjectives/experiments/4-faultless-disagreement/Submiterator-master/")
+setwd("~/git/prior_inference/experiments/3-pilot-utterance-choice/Submiterator-master/")
 
 source("../results/helpers.r")
 
-num_round_dirs = 12
+num_round_dirs = 10
 df = do.call(rbind, lapply(1:num_round_dirs, function(i) {
   return (read.csv(paste(
-    'round', i, '/faultless-disagreement.csv', sep=''),stringsAsFactors=FALSE) %>% 
+    'round', i, '/pilot-utterance-choice.csv', sep=''),stringsAsFactors=FALSE) %>% 
       mutate(workerid = (workerid + (i-1)*9)))}))
 
-d = subset(df, select=c("workerid","firstutterance","noun","nounclass","slide_number", "predicate",  "class","response","language","school","age","assess","education","lived","level","family","years","describe","classes"))
+d = subset(df, select=c("workerid","item","slide_number","condition","language", "pref1",  "response1","pref2","response2","pref3","response3","pref4","response4","pref5","response5","pref6","response6","pref7","response7","pref8","response8","pref9","response9","obj1","obj2","obj3","condition","ambiguous","numFeatures"))
 
 # re-factorize
 d[] <- lapply( d, factor) 
 
-t = d[d$describe=="SpanSpan",]
-
-# only look at "both8" for lived
-t = t[t$lived=="both8",]
+unique(d$language)
 
 # only look at "español" as the native language
-t = t[t$language!="English"&t$language!="english"&!is.na(t$language)&t$language!=""&t$language!="gbhj"&t$language!="Ingles"&t$language!="ingles"&t$language!="tamil"&t$language!="TAMIL"&t$language!="yes"&t$language!="N"&t$language!="YES"&t$language!="170"&t$language!="NO",]
+d = d[d$language=="english"|d$language=="English"|d$language=="English "|d$language=="ENGLISH",]
 
-# no self-described L2 speakers
-t = t[t$describe!="L2",]
+length(unique(d$workerid)) ## n=82
 
-# t = d[d$language=="Espanol"|d$language=="espanol"|d$language=="espanol "|
-#         d$language==" Español"|d$language=="Española"|d$language=="spanish"|d$language=="Castellano"|
-#         d$language=="Español, de España"|d$language=="SPANISH"|d$language=="castellano"|
-#         d$language=="Español, Catalan"|d$language=="espanol, vasco"|d$language=="Español e italiano"|
-#         d$language=="ESPAÑOL E ITALIANO",]
+summary(d)
 
-t$response = as.numeric(as.character(t$response))
+#write.csv(d,"../results/3-pilot-utterance-choice.csv")
 
-summary(t) # 21 indicated "spanish" as native language
-
-t$class <- factor(t$class,levels=c("quality","size","age","texture","color","shape","nationality"))
-
-table(t$class,t$nounclass)
 
 ## class plot
 d_s = bootsSummary(data=t, measurevar="response", groupvars=c("class"))

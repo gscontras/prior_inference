@@ -3,17 +3,17 @@ library(reshape2)
 library(lme4)
 library(dplyr)
 
-setwd("~/git/prior_inference/experiments/1-pilot/Submiterator-master/")
+setwd("~/git/prior_inference/experiments/4-pilot-training/Submiterator-master/")
 
 source("../results/helpers.r")
 
 num_round_dirs = 10
 df = do.call(rbind, lapply(1:num_round_dirs, function(i) {
   return (read.csv(paste(
-    'round', i, '/prior-inference.csv', sep=''),stringsAsFactors=FALSE) %>% 
+    'round', i, '/pilot-training.csv', sep=''),stringsAsFactors=FALSE) %>% 
       mutate(workerid = (workerid + (i-1)*9)))}))
 
-d = subset(df, select=c("workerid","item","slide_number","condition","language", "pref1",  "response1","pref2","response2","pref3","response3","pref4","response4","pref5","response5","pref6","response6","property1","property2","target","obj2","obj3","utterance"))
+d = subset(df, select=c("workerid","item","slide_number","language", "pref1",  "response1","pref2","response2","pref3","response3","pref4","response4","pref5","response5","pref6","response6","target","obj2","obj3","utterance","itemCode","ambiguous"))
 
 # re-factorize
 d[] <- lapply( d, factor) 
@@ -23,11 +23,11 @@ unique(d$language)
 # only look at "español" as the native language
 d = d[d$language=="english"|d$language=="English"|d$language=="ENGLISH",]
 
-length(unique(d$workerid)) ## n=86
+length(unique(d$workerid)) ## n=82
 
 summary(d)
 
-#write.csv(d,"../results/pilot.csv")
+#write.csv(d,"../results/4-pilot-training.csv")
 
 
 ## class plot
