@@ -210,7 +210,7 @@ function make_slides(f) {
         "target" : this.stim.target,
         "obj2" : this.stim.obj2,
         "obj3" : this.stim.obj3,
-        "ambiguous" : this.stim.ambiguous
+        "ambiguous" : this.stim.listenerAmbiguous
       });
     },
   });

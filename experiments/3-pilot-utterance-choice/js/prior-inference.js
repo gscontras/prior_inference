@@ -118,7 +118,7 @@ function make_slides(f) {
         "obj1" : this.stim.target,
         "obj2" : this.stim.obj2,
         "obj3" : this.stim.obj3,
-        "ambiguous" : this.stim.ambiguous
+        "ambiguous" : this.stim.speakerAmbiguous
       });
     },
   });
