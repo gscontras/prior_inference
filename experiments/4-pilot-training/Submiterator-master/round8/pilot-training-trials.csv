@@ -1,0 +1,136 @@
+workerid,response6,trial_type,response4,response5,response2,response3,response1,utterance,obj3,item,itemCode,obj2,slide_number,ambiguous,pref1,pref2,pref3,pref4,pref5,pref6,target
+0,0.95,multi_slider,0,0,0.5,1,0,striped,133,1027,212212,122,6,True,clouds,circles,squares,blue things,red things,green things,323
+0,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,solid,131,1316,122122,233,7,False,blue things,red things,green things,clouds,circles,squares,211
+0,0.5,multi_slider,0.5,0.5,0.5,0,1,polka-dotted,213,131,212111,331,8,True,clouds,circles,squares,blue things,red things,green things,131
+0,1,multi_slider,0.5,0,0.5,0.5,1,circle,222,437,321112,232,9,True,solid things,striped things,polka-dotted things,blue things,red things,green things,213
+0,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,green,231,980,121112,131,10,False,clouds,circles,squares,solid things,striped things,polka-dotted things,313
+0,0.5,multi_slider,1,0,0.5,0.5,0.5,polka-dotted,113,1191,212232,233,11,True,blue things,red things,green things,clouds,circles,squares,133
+0,1,multi_slider,0.5,0,0.5,0.5,1,polka-dotted,311,262,212222,233,12,True,blue things,red things,green things,clouds,circles,squares,331
+0,0.5,multi_slider,0.5,0.5,1,0,0.5,square,323,169,323212,323,13,True,blue things,red things,green things,solid things,striped things,polka-dotted things,322
+0,0.5,multi_slider,0.5,0.5,0,0.5,1,striped,113,118,212111,222,14,True,blue things,red things,green things,clouds,circles,squares,221
+0,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,cloud,332,647,112121,211,15,False,solid things,striped things,polka-dotted things,blue things,red things,green things,111
+0,0.5,multi_slider,0.5,0.5,0,0.5,1,solid,222,1739,212112,211,16,True,clouds,circles,squares,blue things,red things,green things,111
+0,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,red,311,536,112132,323,17,False,solid things,striped things,polka-dotted things,clouds,circles,squares,322
+0,1,multi_slider,0.5,0.5,0.5,0.5,0.5,green,132,1151,212232,113,18,True,clouds,circles,squares,solid things,striped things,polka-dotted things,133
+0,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,red,233,1842,122121,123,19,False,clouds,circles,squares,solid things,striped things,polka-dotted things,122
+0,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,red,121,669,212211,232,20,True,clouds,circles,squares,solid things,striped things,polka-dotted things,112
+1,0.85,multi_slider,0.05,0.05,0.65,0.05,0.05,striped,313,345,213211,321,6,True,blue things,red things,green things,clouds,circles,squares,322
+1,0.75,multi_slider,0.1,0.1,0.05,0.75,0.1,cloud,211,2134,111112,312,7,False,blue things,red things,green things,solid things,striped things,polka-dotted things,133
+1,0.05,multi_slider,0,0.65,0.5,0.05,0.6,polka-dotted,322,859,112122,113,8,False,clouds,circles,squares,blue things,red things,green things,132
+1,0.95,multi_slider,0.05,0.05,0.65,0.05,0.7,polka-dotted,113,2338,123232,113,9,False,clouds,circles,squares,blue things,red things,green things,133
+1,0.05,multi_slider,0,0.5,0.05,0.5,0.05,striped,221,2217,323211,222,10,True,blue things,red things,green things,clouds,circles,squares,223
+1,0.6,multi_slider,0.05,0.05,0.6,0.05,0.05,circle,211,1536,322112,213,11,True,solid things,striped things,polka-dotted things,blue things,red things,green things,223
+1,0.05,multi_slider,0.5,0.1,0.05,0.05,0.85,square,111,2292,213232,311,12,False,blue things,red things,green things,solid things,striped things,polka-dotted things,311
+1,0.05,multi_slider,0.05,0.5,0.1,0.05,0.7,cloud,131,2226,323211,111,13,True,blue things,red things,green things,solid things,striped things,polka-dotted things,121
+1,0.1,multi_slider,0.05,0.5,0.05,0.05,0.65,solid,323,51,122111,121,14,False,blue things,red things,green things,clouds,circles,squares,211
+1,0.15,multi_slider,0.15,0.5,0.05,0.65,0.05,square,332,1537,322112,322,15,True,blue things,red things,green things,solid things,striped things,polka-dotted things,323
+1,0.7,multi_slider,0.05,0.05,0.1,0.9,0.05,solid,121,1738,212112,113,16,True,clouds,circles,squares,blue things,red things,green things,313
+1,0.05,multi_slider,0.05,0.05,0.5,0.05,0.05,cloud,223,483,211111,131,17,True,blue things,red things,green things,solid things,striped things,polka-dotted things,112
+1,0.5,multi_slider,0.05,0.05,0.5,0.05,0.5,green,332,656,212211,213,18,True,clouds,circles,squares,solid things,striped things,polka-dotted things,133
+1,0.1,multi_slider,0.05,0.75,0.1,0.5,0.1,striped,212,1008,212212,221,19,True,clouds,circles,squares,blue things,red things,green things,322
+1,0.1,multi_slider,0.05,0.5,0.5,0.05,0.1,solid,321,1623,211112,313,20,True,clouds,circles,squares,blue things,red things,green things,212
+2,0,multi_slider,0.9,0.05,0.35,0.9,0.45,solid,333,313,213211,213,6,True,blue things,red things,green things,clouds,circles,squares,113
+2,0.1,multi_slider,0.95,0.35,0.05,0.95,0.4,solid,332,1244,112112,323,7,False,blue things,red things,green things,clouds,circles,squares,113
+2,0.05,multi_slider,0.1,1,0.1,0.95,0.3,circle,121,1688,121212,121,8,False,solid things,striped things,polka-dotted things,blue things,red things,green things,232
+2,0.15,multi_slider,1,0.2,0.15,0.25,0.9,green,322,832,112111,131,9,False,solid things,striped things,polka-dotted things,clouds,circles,squares,113
+2,0.1,multi_slider,0.95,0.25,0.95,0.3,0.15,red,113,209,212132,122,10,False,solid things,striped things,polka-dotted things,clouds,circles,squares,122
+2,0.5,multi_slider,0.95,0.1,1,0.05,0.4,solid,321,469,211111,213,11,True,blue things,red things,green things,clouds,circles,squares,112
+2,0.5,multi_slider,0.9,0.05,0.05,0.95,0.5,blue,222,791,211212,221,12,True,solid things,striped things,polka-dotted things,clouds,circles,squares,131
+2,0.05,multi_slider,0.95,0.1,0.05,0.95,0.1,cloud,132,2077,321111,121,13,True,blue things,red things,green things,solid things,striped things,polka-dotted things,113
+2,0.3,multi_slider,0.85,0.5,0.15,0.95,0.5,square,323,1544,322112,333,14,True,solid things,striped things,polka-dotted things,blue things,red things,green things,331
+2,0.5,multi_slider,0.95,0.5,0.5,0.95,0.5,solid,222,36,122112,322,15,False,clouds,circles,squares,blue things,red things,green things,311
+2,0.9,multi_slider,0.5,0.1,0.2,0.15,0.95,square,322,1431,322111,333,16,True,blue things,red things,green things,solid things,striped things,polka-dotted things,331
+2,0.95,multi_slider,0.5,0,0.5,0.05,0.95,square,112,1017,212212,332,17,True,solid things,striped things,polka-dotted things,blue things,red things,green things,313
+2,0.95,multi_slider,0.5,0.2,0.6,0.1,0.95,polka-dotted,312,800,211212,332,18,True,clouds,circles,squares,blue things,red things,green things,133
+2,0.5,multi_slider,0.9,0.1,0.95,0.1,0.5,cloud,323,762,211212,123,19,True,blue things,red things,green things,solid things,striped things,polka-dotted things,112
+2,0.95,multi_slider,0.05,0.5,0.05,0.95,0.5,cloud,212,782,211212,112,20,True,blue things,red things,green things,solid things,striped things,polka-dotted things,133
+3,1,multi_slider,0,0,0,1,1,green,212,581,213212,213,6,True,clouds,circles,squares,solid things,striped things,polka-dotted things,233
+3,0,multi_slider,0,1,0,0,1,cloud,121,1141,321212,121,7,True,solid things,striped things,polka-dotted things,blue things,red things,green things,112
+3,0.05,multi_slider,1,0.05,0,0,1,square,333,444,321112,332,8,True,solid things,striped things,polka-dotted things,blue things,red things,green things,311
+3,1,multi_slider,0,0,0,0,1,cloud,113,1982,323232,113,9,False,solid things,striped things,polka-dotted things,blue things,red things,green things,113
+3,0,multi_slider,0,1,0,0,1,polka-dotted,221,102,212111,133,10,True,clouds,circles,squares,blue things,red things,green things,132
+3,0,multi_slider,0,1,0,1,1,cloud,131,2080,321111,113,11,True,solid things,striped things,polka-dotted things,blue things,red things,green things,122
+3,0,multi_slider,0,0,1,0,0,solid,133,519,112132,223,12,False,clouds,circles,squares,blue things,red things,green things,213
+3,0,multi_slider,1,0,0,0,1,cloud,313,681,212211,122,13,True,blue things,red things,green things,solid things,striped things,polka-dotted things,111
+3,0,multi_slider,1,0,1,0,0,blue,313,2116,111112,212,14,False,solid things,striped things,polka-dotted things,clouds,circles,squares,121
+3,1,multi_slider,0,0,0,1,0,green,123,1591,322121,333,15,True,clouds,circles,squares,solid things,striped things,polka-dotted things,333
+3,1,multi_slider,0,0,0,1,0,green,223,2073,321111,113,16,True,solid things,striped things,polka-dotted things,clouds,circles,squares,333
+3,0,multi_slider,0,1,1,0,0,red,313,1684,121212,313,17,False,clouds,circles,squares,solid things,striped things,polka-dotted things,222
+3,0,multi_slider,1,0,0,1,0,solid,222,36,122112,322,18,False,clouds,circles,squares,blue things,red things,green things,311
+3,0,multi_slider,0,1,0,1,0,solid,233,1153,212232,113,19,True,blue things,red things,green things,clouds,circles,squares,213
+3,0,multi_slider,0,1,0,0,1,striped,311,1640,211112,221,20,True,clouds,circles,squares,blue things,red things,green things,122
+4,0,multi_slider,0,1,0.1,1,0.05,circle,212,1800,322132,232,6,True,solid things,striped things,polka-dotted things,blue things,red things,green things,232
+4,0,multi_slider,1,0,0.05,1,0.05,blue,131,1586,322121,311,7,True,clouds,circles,squares,solid things,striped things,polka-dotted things,311
+4,0.05,multi_slider,1,0,0,0.05,0.95,square,333,444,321112,332,8,True,solid things,striped things,polka-dotted things,blue things,red things,green things,311
+4,0,multi_slider,0,1,1,0,0.05,red,112,424,321112,132,9,True,clouds,circles,squares,solid things,striped things,polka-dotted things,222
+4,0,multi_slider,1,0,0.05,1,0,striped,111,730,212122,323,10,True,clouds,circles,squares,blue things,red things,green things,321
+4,0,multi_slider,1,0,0,0,1,blue,131,167,323212,131,11,True,solid things,striped things,polka-dotted things,clouds,circles,squares,111
+4,0,multi_slider,1,0,0.95,0,0.05,square,111,1098,113212,211,12,False,blue things,red things,green things,solid things,striped things,polka-dotted things,312
+4,0,multi_slider,0,1,0,1,0,polka-dotted,123,1944,111212,113,13,False,clouds,circles,squares,blue things,red things,green things,332
+4,0,multi_slider,0.05,1,0,0,0.95,striped,122,1543,322112,121,14,True,blue things,red things,green things,clouds,circles,squares,221
+4,0.95,multi_slider,0.05,0.1,0,0.05,0.05,square,312,161,323212,312,15,True,solid things,striped things,polka-dotted things,blue things,red things,green things,313
+4,0,multi_slider,0,1,0,0,1,polka-dotted,212,1887,123212,212,16,False,blue things,red things,green things,clouds,circles,squares,231
+4,1,multi_slider,0.05,0.05,0.95,0,0,solid,231,666,212211,112,17,True,clouds,circles,squares,blue things,red things,green things,213
+4,0,multi_slider,0,1,1,0,0.1,blue,113,18,122112,213,18,False,solid things,striped things,polka-dotted things,clouds,circles,squares,221
+4,1,multi_slider,0,0.05,0.05,1,0,circle,221,436,321112,222,19,True,blue things,red things,green things,solid things,striped things,polka-dotted things,233
+4,0,multi_slider,0.95,0,0,0.05,0.95,red,221,1287,111111,333,20,False,solid things,striped things,polka-dotted things,clouds,circles,squares,112
+5,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,circle,121,1832,122121,112,6,False,blue things,red things,green things,solid things,striped things,polka-dotted things,212
+5,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,green,212,2282,213232,213,7,False,solid things,striped things,polka-dotted things,clouds,circles,squares,213
+5,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,cloud,332,2304,123232,332,8,False,solid things,striped things,polka-dotted things,blue things,red things,green things,132
+5,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,circle,211,1981,323232,211,9,False,solid things,striped things,polka-dotted things,blue things,red things,green things,211
+5,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,circle,132,2396,113232,332,10,False,blue things,red things,green things,solid things,striped things,polka-dotted things,232
+5,0.5,multi_slider,0.15,0.6,0.7,0.5,0.1,polka-dotted,131,1559,322121,232,11,True,clouds,circles,squares,blue things,red things,green things,232
+5,0.55,multi_slider,0.4,0.4,0.5,0.3,0.6,green,112,697,212211,233,12,True,solid things,striped things,polka-dotted things,clouds,circles,squares,313
+5,0.65,multi_slider,0.35,0.5,0.6,0.5,0.35,solid,232,670,212211,111,13,True,clouds,circles,squares,blue things,red things,green things,213
+5,0.35,multi_slider,0.35,0.6,0.6,0.35,0.4,green,331,474,211111,113,14,True,solid things,striped things,polka-dotted things,clouds,circles,squares,223
+5,0.5,multi_slider,0.5,0.5,0.45,0.35,0.65,polka-dotted,222,341,213211,332,15,True,clouds,circles,squares,blue things,red things,green things,132
+5,0.3,multi_slider,0.65,0.5,0.65,0.5,0.4,circle,111,1045,212212,213,16,True,solid things,striped things,polka-dotted things,blue things,red things,green things,221
+5,0.65,multi_slider,0.3,0.5,0.5,0.3,0.65,green,232,1647,211112,133,17,True,solid things,striped things,polka-dotted things,clouds,circles,squares,313
+5,0.5,multi_slider,0.5,0.5,0.5,0.65,0.35,red,131,713,212122,312,18,True,solid things,striped things,polka-dotted things,clouds,circles,squares,332
+5,0.55,multi_slider,0.5,0.4,0.6,0.4,0.5,cloud,122,2009,322122,133,19,True,blue things,red things,green things,solid things,striped things,polka-dotted things,132
+5,0.6,multi_slider,0.35,0.5,0.6,0.3,0.5,red,133,796,211212,132,20,True,solid things,striped things,polka-dotted things,clouds,circles,squares,322
+6,0.2,multi_slider,0.3,0.8,0.5,0.2,0.3,solid,321,106,212111,213,6,True,blue things,red things,green things,clouds,circles,squares,212
+6,0.9,multi_slider,0,0.65,0.75,0.15,0.25,polka-dotted,211,775,211212,231,7,True,blue things,red things,green things,clouds,circles,squares,332
+6,0.2,multi_slider,0.8,0.8,0.8,0.25,0.15,green,111,780,211212,113,8,True,clouds,circles,squares,solid things,striped things,polka-dotted things,223
+6,0.15,multi_slider,0.2,0.9,0.1,0.7,0.1,polka-dotted,322,1184,212232,132,9,True,clouds,circles,squares,blue things,red things,green things,332
+6,0.75,multi_slider,0.85,0.7,0.2,0.25,0.75,circle,311,874,112122,133,10,False,blue things,red things,green things,solid things,striped things,polka-dotted things,231
+6,0.2,multi_slider,0.8,0.15,0.2,1,0.1,blue,232,489,211111,121,11,True,clouds,circles,squares,solid things,striped things,polka-dotted things,311
+6,0.05,multi_slider,0.7,0.7,0.2,0.2,0.75,circle,133,91,122111,122,12,False,blue things,red things,green things,solid things,striped things,polka-dotted things,221
+6,0.85,multi_slider,0.25,0.25,0.25,0.2,0.65,square,321,1583,322121,313,13,True,solid things,striped things,polka-dotted things,blue things,red things,green things,313
+6,0.85,multi_slider,0.2,0.2,0.8,0.85,0.3,polka-dotted,233,2216,323211,133,14,True,clouds,circles,squares,blue things,red things,green things,333
+6,0.15,multi_slider,0.8,0.15,0.25,0.8,0.25,square,222,944,212121,331,15,False,solid things,striped things,polka-dotted things,blue things,red things,green things,331
+6,0.2,multi_slider,0.75,0.15,0.75,0.3,0.25,square,222,1498,123211,223,16,False,solid things,striped things,polka-dotted things,blue things,red things,green things,321
+6,0.8,multi_slider,0.25,0.25,0.35,0.2,0.75,blue,133,751,211212,131,17,True,solid things,striped things,polka-dotted things,clouds,circles,squares,311
+6,0.2,multi_slider,0.25,0.8,0.2,0.75,0.25,cloud,212,578,213212,112,18,True,solid things,striped things,polka-dotted things,blue things,red things,green things,132
+6,0.8,multi_slider,0.15,0.25,0.7,0.25,0.35,striped,121,1531,322112,221,19,True,clouds,circles,squares,blue things,red things,green things,223
+6,0.25,multi_slider,0.25,0.25,0.15,0.15,0.75,red,123,1821,122121,213,20,False,solid things,striped things,polka-dotted things,clouds,circles,squares,212
+7,0,multi_slider,0.95,0,0,0.5,0,blue,321,1783,322132,311,6,True,clouds,circles,squares,solid things,striped things,polka-dotted things,311
+7,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,red,131,1202,112112,123,7,False,clouds,circles,squares,solid things,striped things,polka-dotted things,222
+7,0,multi_slider,1,0.5,0,0.5,1,circle,223,1120,321212,223,8,True,solid things,striped things,polka-dotted things,blue things,red things,green things,211
+7,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,striped,132,2132,111112,113,9,False,blue things,red things,green things,clouds,circles,squares,221
+7,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,green,111,2133,111112,122,10,False,solid things,striped things,polka-dotted things,clouds,circles,squares,333
+7,0.9,multi_slider,0,0.5,0,0.5,1,green,332,656,212211,213,11,True,clouds,circles,squares,solid things,striped things,polka-dotted things,133
+7,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,cloud,323,1342,122122,312,12,False,solid things,striped things,polka-dotted things,blue things,red things,green things,113
+7,0.5,multi_slider,0,1,0,0.5,1,polka-dotted,223,671,212211,132,13,True,blue things,red things,green things,clouds,circles,squares,231
+7,0.5,multi_slider,0.5,0.5,0,1,0.5,solid,133,150,212111,211,14,True,clouds,circles,squares,blue things,red things,green things,311
+7,0.5,multi_slider,0.5,0.5,0.5,0.5,0.5,striped,131,1655,121212,131,15,False,blue things,red things,green things,clouds,circles,squares,222
+7,1,multi_slider,0,0.5,0.5,0.5,0.5,blue,111,1799,322132,131,16,True,clouds,circles,squares,solid things,striped things,polka-dotted things,131
+7,0.5,multi_slider,0.55,0.5,0,0.5,1,green,323,1761,322132,313,17,True,solid things,striped things,polka-dotted things,clouds,circles,squares,313
+7,0,multi_slider,0.5,1,0.5,0.5,0.5,solid,312,196,323212,312,18,True,blue things,red things,green things,clouds,circles,squares,212
+7,0.5,multi_slider,0.1,1,0.5,0.5,0.5,circle,123,706,212122,211,19,True,blue things,red things,green things,solid things,striped things,polka-dotted things,221
+7,1,multi_slider,0,0,0.5,0,0.7,striped,321,1411,322111,122,20,True,clouds,circles,squares,blue things,red things,green things,123
+8,0,multi_slider,0,0,0,0,0,cloud,112,1997,323232,112,6,False,solid things,striped things,polka-dotted things,blue things,red things,green things,112
+8,0.65,multi_slider,0.05,0,0.1,0.5,0.8,blue,211,1138,321212,211,7,True,clouds,circles,squares,solid things,striped things,polka-dotted things,131
+8,0.1,multi_slider,0.65,0.7,0.85,0.05,0,green,211,682,212211,133,8,True,clouds,circles,squares,solid things,striped things,polka-dotted things,223
+8,1,multi_slider,0,0.1,0,0.5,0,polka-dotted,233,2216,323211,133,9,True,blue things,red things,green things,clouds,circles,squares,333
+8,0,multi_slider,0,0,0,0,0,cloud,321,998,121112,331,10,False,blue things,red things,green things,solid things,striped things,polka-dotted things,112
+8,0.35,multi_slider,0.4,0.45,0.35,0.35,0.65,blue,223,769,211212,221,11,True,clouds,circles,squares,solid things,striped things,polka-dotted things,111
+8,0.35,multi_slider,0.3,0.85,0.55,0.15,0.6,red,112,1430,322111,322,12,True,solid things,striped things,polka-dotted things,clouds,circles,squares,222
+8,0.15,multi_slider,0.1,0.7,0.75,0.2,0.05,solid,331,491,211111,113,13,True,clouds,circles,squares,blue things,red things,green things,212
+8,0.15,multi_slider,0.15,0.15,0.35,0.35,0.35,striped,131,2110,111112,112,14,False,clouds,circles,squares,blue things,red things,green things,223
+8,0.65,multi_slider,0.05,0.1,0.05,0.75,0.6,circle,221,1533,322112,223,15,True,solid things,striped things,polka-dotted things,blue things,red things,green things,233
+8,0.15,multi_slider,0.2,0.2,0.3,0.3,0.3,blue,133,1324,122122,313,16,False,solid things,striped things,polka-dotted things,clouds,circles,squares,331
+8,0.2,multi_slider,0.2,0.2,0.3,0.3,0.3,polka-dotted,123,2283,213232,133,17,False,clouds,circles,squares,blue things,red things,green things,133
+8,0.55,multi_slider,0.6,0.15,0.6,0.25,0.35,red,312,1557,322121,232,18,True,clouds,circles,squares,solid things,striped things,polka-dotted things,232
+8,0.75,multi_slider,0.2,0.2,0.65,0.3,0.6,circle,131,1649,211112,211,19,True,solid things,striped things,polka-dotted things,blue things,red things,green things,223
+8,0,multi_slider,0.9,0,0.8,0.25,0.3,green,333,401,321112,313,20,True,solid things,striped things,polka-dotted things,clouds,circles,squares,123

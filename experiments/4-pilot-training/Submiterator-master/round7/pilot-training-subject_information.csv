@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,2,Male,40,,Yes,3
+1,English,1,Female,34,,Yes,3
+2,English,0,Male,27,,Yes,3
+3,english,1,Female,43,none,Yes,3
+4,English,1,Female,38,,Yes,3
+5,English,2,Male,30,"I feel there&quotechars not enough options to select from. Suppose A says to pick &quotecharred&quotechar, and the only things that are red are (i) a red solid square and (ii) a red striped circle. Now, suppose B chose (ii). What preference does this reveal? Well, in cases like this I responded that B has a preference for &quotecharstripped&quotechar and a preference for &quotecharcircle&quotechar. But it&quotechars also perfectly possible that B only has a prefernece for one, but not a preference for *both*. In other words I wish there were a way to give disjunctive responses (""B has a preference for X OR B has a preference for Y"")",Yes,4
+6,English,2,Female,39,"all good, thank you",Yes,2
+7,Tamil,1,Female,70,none,Yes,4
+8,English,2,Male,22,,Yes,3

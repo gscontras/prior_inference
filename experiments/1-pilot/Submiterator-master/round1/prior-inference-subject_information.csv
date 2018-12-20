@@ -1,10 +1,2 @@
 workerid,language,enjoyment,gender,age,comments,assess,education
-0,english,1,Male,27,,Yes,3
-1,English,2,Male,41,,Yes,2
-2,English,1,Female,26,,Yes,3
-3,English,1,Male,30,,Yes,2
-4,English,1,Male,59,,Yes,2
-5,English,1,Female,35,,Confused,3
-6,English,2,Male,28,"I kept preferences in the middle when I felt the person didn&quotechart have a choice (asked to pick blue object, only one blue object available etc.). I adjusted the likely preference when the person could have chosen another object based on what was asked.",Yes,3
-7,English,1,Male,67,Wasn&quotechart sure where you were going at first,Yes,3
-8,English,1,Female,60,I changed my way of answering partway through the survey because I started to realize I couldn&quotechart judge the person&quotechars interest most of the time. So I started to choose a neutral stance instead of &quotecharunlikely.&quotechar,Confused,3
+0,english,0,Male,12,comment,Yes,0

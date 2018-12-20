@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,1,Female,37,,Yes,3
+1,English,1,Female,54,,Yes,3
+2,English,1,Female,36,Might be useful to have 2 examples - one that shows a prompt from which no preference can be determined and one that shows one in which a clear preference can be determined. ,Yes,4
+3,English,2,Male,35,,No,2
+4,English,2,Male,23,Interesting experiment,Yes,2
+5,english,1,Female,54,no,Yes,3
+6,eng,1,Female,58,,Yes,2
+7,English,2,Male,71,N/A,Yes,4
+8,English,2,Female,24,,Yes,3

@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,1,Male,35,,Yes,2
+1,english,1,Female,28,,Yes,3
+2,ENGLISH,2,Female,29,,Yes,3
+3,English,2,Female,30,thank you.,Yes,-1
+4,english,1,Female,50,,Yes,2
+5,English,2,Female,49,Interesting & enjoyable experiment.,Yes,3
+6,english,1,Male,19,,Yes,1
+7,english,1,Male,44,,Yes,3
+8,English,1,Male,18,,Yes,2

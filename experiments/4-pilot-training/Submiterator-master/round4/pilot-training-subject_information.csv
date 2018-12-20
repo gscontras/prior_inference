@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,2,Male,31,,Yes,1
+1,english,2,Female,32,,Yes,3
+2,English,1,Female,28,,Yes,2
+3,English,2,Male,22,,Yes,3
+4,english,2,Male,23,none,Yes,1
+5,English,1,Female,35,,Yes,3
+6,English,2,Male,25,,Yes,3
+7,United States,2,Female,36,no comments,Yes,3
+8,English,2,Female,60,,Confused,4

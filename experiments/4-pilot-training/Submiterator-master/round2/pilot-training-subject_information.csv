@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,english,0,Female,28,,Yes,3
+1,english,1,Male,34,,Yes,3
+2,English,2,Female,63,"Interesting study, very much about logic.",Yes,2
+3,english,1,Female,45,a bit confusing,Yes,3
+4,English,2,Female,29,N/A,Yes,3
+5,english,1,Male,39,,Yes,3
+6,English,2,Male,39,,Yes,3
+7,english,1,Male,48,,Yes,3
+8,english,1,Female,51,,Yes,3

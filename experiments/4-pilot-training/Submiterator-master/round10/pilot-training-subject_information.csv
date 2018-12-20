@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,english,2,Male,27,none,No,1
+1,English,2,Female,40,,Yes,2
+2,english,1,Male,63,ty,Yes,2
+3,English,2,Male,57,,Yes,3
+4,English,2,Male,25,thanks,Yes,2
+5,English,2,Female,48,"Thank you, it was interesting.",Yes,3
+6,English,2,Male,49,,Yes,2
+7,English,2,Male,28,,Yes,2
+8,English,2,Female,61,How we were supposed to rate the criteria for items not selected was a little unclear. Might have been helpful to have the instructions top of every page - thanks,Yes,2
