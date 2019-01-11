@@ -78,33 +78,6 @@ Frank, M\BPBI C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Goodman%
-\ \BBA {} Frank%
-}{%
-Goodman%
-\ \BBA {} Frank%
-}{%
-{\protect \APACyear {2016}}%
-}]{%
-goodmanfrank2016}
-\APACinsertmetastar {%
-goodmanfrank2016}%
-\begin{APACrefauthors}%
-Goodman, N\BPBI D.%
-\BCBT {}\ \BBA {} Frank, M\BPBI C.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2016}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Pragmatic Language Interpretation as Probabilistic
-  Inference} {Pragmatic language interpretation as probabilistic
-  inference}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Trends in Cognitive Sciences}{20}{11}{818-829}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Grice%
 }{%
 Grice%
