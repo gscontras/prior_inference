@@ -15,7 +15,7 @@ function make_slides(f) {
   slides.instructions1 = slide({
     name : "instructions1",
     start: function() {
-      $(".instruction_condition").html("Between subject intruction manipulation: "+ exp.instruction);
+      // $(".instruction_condition").html("Between subject intruction manipulation: "+ exp.instruction);
     }, 
     button : function() {
       exp.go(); //use exp.go() if and only if there is no "present" data.
@@ -454,17 +454,25 @@ function make_slides(f) {
 function init() {
   repeatWorker = false;
   (function(){
-      var ut_id = "prior_inference_combined";
-      if (UTWorkerLimitReached(ut_id)) {
-        $('.slide').empty();
-        repeatWorker = true;
-        alert("You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.");
-      }
+    var ut_id = "gscontras-prior-inference-20190115";
+    if (UTWorkerLimitReached(ut_id)) {
+      $('.slide').empty();
+      repeatWorker = true;
+      alert("You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.");
+    }
   })();
+
+  // (function(){
+  //   var ut_id = "630dd99cbca25c2b1097304059419a50";
+  //   if (UTWorkerLimitReached(ut_id)) {
+  //       document.getElementById('mturk_form').style.display = 'none';
+  //       document.getElementsByTagName('body')[0].innerHTML = "You have already completed the maximum number of HITs allowed by this requester. Please click 'Return HIT' to avoid any impact on your approval rating.";
+  //   }
+  // })(); 
 
   exp.trials = [];
   exp.catch_trials = [];
-  exp.instruction = _.sample(["instruction1","instruction2"]);
+  // exp.instruction = _.sample(["instruction1","instruction2"]);
   exp.system = {
       Browser : BrowserDetect.browser,
       OS : BrowserDetect.OS,
