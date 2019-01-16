@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,2,Male,30,,Yes,1
+1,English,2,Male,22,,Yes,3
+2,english,1,Male,42,Thank you,Yes,3
+3,English,1,Female,37,,Yes,2
+4,,1,Male,59,,Yes,2
+5,English,0,Male,38,,Yes,3
+6,english,1,Female,43,,Yes,4
+7,English,1,Female,29,"I read the instructions, but I&quotecharm not sure if I did the HIT correctly.",Confused,3
+8,English,2,Female,32,Interesting unique hit. Made me think. ,Yes,3

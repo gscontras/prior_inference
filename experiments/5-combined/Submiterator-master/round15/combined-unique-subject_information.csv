@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,1,Male,41,,Confused,3
+1,English,1,Male,29,"Was a little confused as to whether ""solid"" referred to a color scheme or the object itself, and though I treated it as ""object itself,"" I think I went the wrong way. You should perhaps disregard my answers with regard to ""solid.""",Yes,2
+2,English,2,Male,43,,Yes,4
+3,english,2,Female,44,,Yes,2
+4,English,2,Female,27,This was a fun HIT,Yes,3
+5,English,2,Male,35,Please provide an example for the second portion of the HIT next time to help clarify.,Confused,3
+6,english,1,Male,38,,Yes,2
+7,English,1,Male,33,,Yes,3
+8,English,2,Male,22,I don&quotechart have anything to add.,Yes,2

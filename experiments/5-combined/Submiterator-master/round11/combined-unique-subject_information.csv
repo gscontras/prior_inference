@@ -1,0 +1,11 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,english,1,Male,31,good survey,Yes,4
+1,English,2,Male,27,None.,Yes,2
+2,English,1,Male,32,"Mildly interesting, but slightly underpaid, in my opinion.
+Thanks",Yes,3
+3,English,1,Male,23,"Confusing at first, but seemed to be okay at the end.",Confused,3
+4,Spanish,1,Male,18,,Yes,1
+5,English,2,Male,33,,Yes,0
+6,Englisj,1,Male,39,"The second part should mention if there&quotechars no word that fits to say, should the slider be left in the middle as the fist task.",Yes,0
+7,english,1,Male,25,,Yes,2
+8,English ,1,Male,28,Great Study.,Yes,1

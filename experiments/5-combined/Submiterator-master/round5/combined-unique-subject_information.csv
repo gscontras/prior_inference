@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,1,Male,35,,Yes,3
+1,,-1,,,,NA,-1
+2,english,2,Female,33,none,Yes,2
+3,English,2,Female,28,Interesting concept. I am just not sure if I did it correctly. ,Confused,3
+4,English,2,Male,43,None,Yes,3
+5,English,1,Male,29,,Yes,1
+6,English,1,Male,22,,Yes,1
+7,english,2,Female,36,"no comments, all worked well and hope I did it right.",Yes,3
+8,English,0,Male,30,,Yes,1

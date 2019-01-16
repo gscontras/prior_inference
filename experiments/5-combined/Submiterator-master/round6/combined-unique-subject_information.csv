@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,ENGLISH,2,Male,28,GOOD,Yes,2
+1,English,1,Female,35,,Yes,3
+2,english,1,Female,37,,Yes,3
+3,,1,Female,28,Thanks for the survey,Yes,1
+4,English,0,Male,24,An increase in pay would be nice.,Yes,3
+5,United States,2,Male,25,,Yes,2
+6,English,1,Female,40,,Yes,3
+7,english,1,Male,28,,Yes,2
+8,English,0,Male,45,"I answered the best I could, but it seemed like I was learning as I went and I kept second-guessing my answers. I hope you don&quotechart reject me - I did the best I could!",Confused,3

@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,1,Female,34,it was an interesting hit,Yes,2
+1,English,1,Female,43,,Yes,3
+2,English,1,Female,39,,Yes,2
+3,English,0,Male,31,none,Yes,3
+4,English,1,Female,27,,Yes,2
+5,English,1,Male,40,,Yes,4
+6,English,1,Female,29,,Confused,3
+7,English,2,Male,29,"The activity was different from most HITs.  That was enjoyable.  The first half was easy enough, but lack of probability displays made me unsure whether when picking between 2 of 3 equally likely outcomes if I should move 2 sliders to 66 and one to 0 or leave the 2 at 50.  When we switched rolls halfway through, switching names every time added unnecessary complexity.  Simply dubbing the roles Player A and Player B would have made it feel more consistent.  These names confused me for the first half of the second half of the task.",Confused,3
+8,English,2,Male,27,,Yes,3

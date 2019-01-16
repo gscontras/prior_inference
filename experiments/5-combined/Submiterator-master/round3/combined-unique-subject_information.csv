@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,English,1,Male,29,,No,3
+1,English,1,Female,32,The instructions could be improved about the uniqueness of the colors.,Yes,4
+2,english,1,Male,36,,No,3
+3,English,2,Male,44,Thanks,Yes,3
+4,english,1,Male,20,,Yes,2
+5,english,2,Male,34,no comments,Yes,2
+6,English,1,Female,28,,Yes,3
+7,english,2,Female,34,,Yes,3
+8,United States,2,Female,23,,Yes,1
