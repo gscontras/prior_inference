@@ -155,6 +155,37 @@ Piantadosi, S\BPBI T.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Qing%
+\ \BBA {} Franke%
+}{%
+Qing%
+\ \BBA {} Franke%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+qingfranke2015}
+\APACinsertmetastar {%
+qingfranke2015}%
+\begin{APACrefauthors}%
+Qing, C.%
+\BCBT {}\ \BBA {} Franke, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Variations on a {B}ayesian Theme: Comparing {B}ayesian
+  Models of Referential Reasoning} {Variations on a {B}ayesian theme: Comparing
+  {B}ayesian models of referential reasoning}.{\BBCQ}
+\newblock
+\BIn{} H.~Zeevat\ \BBA {} H\BHBI C.~Schmitz\ (\BEDS), \APACrefbtitle {Bayesian
+  Natural Language Semantics and Pragmatics} {Bayesian natural language
+  semantics and pragmatics}\ (\BPG~201-220).
+\newblock
+\APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Wasow%
 }{%
 Wasow%

@@ -59,8 +59,21 @@ The current paper builds on the foundational, vanilla RSA model of reference gam
 
 \section{Model}
 
-We begin with the vanilla RSA model of \citeA{frankgoodman2012}.
+We begin with the vanilla RSA model of \citeA{frankgoodman2012}. The recursive social reasoning inherent to the RSA modeling framework gets cashed out as various layers of inference. At the base, there is a hypothetical, naive literal listener $L_0$ who hears an utterance $u$ and infers the state of the world $s$ that utterance is meant to describe. $L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}. $L_0$ thus returns a uniform distribution over those states $s$ that can be truthfully described by $u$:
+$$P_{L_{0}}(s|u) \propto \sem{u}(s).$$
+One layer up, the speaker $S_1$ observes some state $s$ and chooses an utterance $u$ to communicate that state to $L_0$. $S_1$ chooses utterances on the basis of their utility for signaling $s$ to $L_0$, $U_{S_1}(u;s)$. The speaker's utility maximizes the probability that $L_0$ would arrive at the correct $s$ on the basis of $u$, $P_{L_{0}}(s|u)$, while minimizing the cost of $u$ itself, $C(u)$:
+$$U_{S_{1}}(u;s) = \textrm{log}(P_{L_{0}}(s|u)) - C(u).$$
+$S_1$ chooses utterances in proportion to their utility:
+$$P_{S_{1}} (u|s) \propto   \textrm{exp}(\alpha \cdot U_{S_{1}} (u;s)).$$
+At the top layer of inference, the \emph{pragmatic} listener $L_1$ infers $s$ on the basis of some observed $u$. The result is a distribution over likely states $s$; however, unlike $L_0$, $L_1$ updates beliefs about the world by reasoning about the process that \emph{generated} $u$, namely $S_1$. In other words, $L_1$ reasons about the $s$ that would have been most likely to lead $S_1$ to choose the  $u$ that was observed:
+$$P_{L_{1}}(s|u) \propto P_{S_{1}}(u|s) \cdot P(s).$$
 
+\citeA{frankgoodman2012} test the predictions of their model against behavioral data from reference games as in Figure \ref{FG-ref-game}. To model production behavior---which utterance should be chosen to communicate a given object---the authors generate predictions from $S_1$. To model interpretation behavior---which object is the speaker trying to communicate on the basis of their utterance---the authors generate predictions from $L_1$. Finding extremely high correlations between model predictions and behavioral data in both cases, \citeauthor{frankgoodman2012} have strong support for their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015}, for a fuller exploration of the modeling choices).
+
+Our model builds on the vanilla version of RSA above by allowing for uncertainty around the listener's state prior, $P(s)$. \ We have in mind a scenario where a speaker chooses an utterance, observes the listener's referent choice, and, on the basis of that choice, infers the preferences the listener might have had when making it. We use the same $L_0$ and $S_1$ from the vanilla model. However, we now parameterize $L_1$ so that it operates with respect to a given state prior $\mathcal{P}$:
+$$P_{L_{1}}(s|u,\mathcal{P}) \propto P_{S_{1}}(u|s) \cdot \mathcal{P}(s).$$
+We then model a pragmatic speaker $S_2$ who updates beliefs about $L_1$'s prior beliefs, $P(\mathcal{P})$. To do so, $S_2$ produces $u$ and observes $L_1$'s choice of $s$, then reasons about the prior beliefs $\mathcal{P}$ that $L_1$ used to make that choice:
+$$P_{S_{2}}(\mathcal{P}|u,s) \propto P_{L_{1}}(s|u,\mathcal{P}) \cdot P(\mathcal{P}).$$
 
 \section{Expt.~1: Inferring preferences}
 
