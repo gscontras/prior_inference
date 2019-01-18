@@ -70,16 +70,57 @@ $$P_{L_{1}}(s|u) \propto P_{S_{1}}(u|s) \cdot P(s).$$
 
 \citeA{frankgoodman2012} test the predictions of their model against behavioral data from reference games as in Figure \ref{FG-ref-game}. To model production behavior---which utterance should be chosen to communicate a given object---the authors generate predictions from $S_1$. To model interpretation behavior---which object is the speaker trying to communicate on the basis of their utterance---the authors generate predictions from $L_1$. Finding extremely high correlations between model predictions and behavioral data in both cases, \citeauthor{frankgoodman2012} have strong support for their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015}, for a fuller exploration of the modeling choices).
 
-Our model builds on the vanilla version of RSA above by allowing for uncertainty around the listener's state prior, $P(s)$. \ We have in mind a scenario where a speaker chooses an utterance, observes the listener's referent choice, and, on the basis of that choice, infers the preferences the listener might have had when making it. We use the same $L_0$ and $S_1$ from the vanilla model. However, we now parameterize $L_1$ so that it operates with respect to a given state prior $\mathcal{P}$:
-$$P_{L_{1}}(s|u,\mathcal{P}) \propto P_{S_{1}}(u|s) \cdot \mathcal{P}(s).$$
-We then model a pragmatic speaker $S_2$ who updates beliefs about $L_1$'s prior beliefs, $P(\mathcal{P})$. To do so, $S_2$ produces $u$ and observes $L_1$'s choice of $s$, then reasons about the prior beliefs $\mathcal{P}$ that $L_1$ used to make that choice:
-$$P_{S_{2}}(\mathcal{P}|u,s) \propto P_{L_{1}}(s|u,\mathcal{P}) \cdot P(\mathcal{P}).$$
+Our model builds on the vanilla version of RSA above by allowing for uncertainty around the listener's state prior, $P(s)$. We have in mind a scenario where a listener might have a preference for a certain object features (e.g., blue things, squares, circles, etc.), and these preference will influence their object choice. With this in mind, speaker produces an utterance, observes the listener's referent choice, and, on the basis of that choice, infers the preferences the listener might have had when making it. We use the same $L_0$ and $S_1$ from the vanilla model. However, we now parameterize $L_1$'s state prior so that it operates with respect to a given feature preference $P(s|f)$:
+$$P_{L_{1}}(s|u,f) \propto P_{S_{1}}(u|s) \cdot P(s|f).$$
+We then model a pragmatic speaker $S_2$ who updates beliefs about $L_1$'s preferences, $P(f)$. To do so, $S_2$ produces $u$ and observes $L_1$'s choice of $s$, then reasons about the feature preference $f$ that $L_1$ used to make that choice:
+$$P_{S_{2}}(f|u,s) \propto P_{L_{1}}(s|u,f) \cdot P(f).$$
+We can also model the reasoning process by which a speaker selects the best utterance to learn about the preferences of the listener. Starting with no knowledge of the listener's preferences, $S_2$ will have a uniform (i.e., flat) feature preference prior $P(f)$; to the extent that the speaker's posterior beliefs about the preferences, $P_{S_{2}}(f|u,s)$, deviate from the uniform prior, the speaker will have learned something about listener preferences. Thus, we can model the reasoning behind strategic utterance selection as an attempt to maximize the KL divergence between speaker's prior and their posterior, summing over the possible feature preferences $f$ and state observations $s$: XXX this isn't quite right -- we need to incorporate utterance cost and pruning to just those observations that are literally compatible with the utterance
+$$P_{b}(u) \propto \sum_{s}\textrm{KL}(P(f),P_{S_{2}}(f|u,s))$$
+
+We now have two sets of predictions from our model to check: first, pragmatic speaker predictions for inferring listener feature preferences on the basis of their object choice; and second, strategic utterance selection predictions for choosing the best utterance to learn about listener preferences. Below, we present two experiments that test these predictions against human behavior.
+
 
 \section{Expt.~1: Inferring preferences}
+
+Our first task is to check the predictions of our $S_2$ layer: having observed that a listener selects some referent $s$ in response to an utterance $u$, what are the most likely preferences the listener had when making their choice? 
+
+\subsection{Participants}
+
+We recruited XX participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service. Participants received \$XXX for their participation. On the basis of a post-test demographics questionnaire, we identified XXX participants as native speakers of English; their data were included in the analyses reported below.
+
+\subsection{Design and methods}
+
+We presented participants with a series of reference game scenarios modeled after Figure \ref{FG-ref-game} from \citeA{frankgoodman2012}. Each scenario featured two people and three objects. One of the people served as the speaker, and the other served as the listener. The speaker asks the listener to choose one of the objects, but in doing so she is allowed to mention only one of the features of the target object. Participants were told that the listener might have a preference for certain object features, and participants were tasked with inferring those preferences after observing the speaker's utterance and listener's object choice.
+
+We followed \citeA{frankgoodman2012} in our stimuli creation. Objects were allowed to vary along three dimensions: color (blue, red, green), shape (cloud, circle, or square), and pattern (solid, striped, polka-dotted). Speaker and listener names were chosen at random on each trial. Participants saw the speaker's utterance in bold (e.g., ``green'' in Figure \ref{exp1-trial}) and the listener's choice appeared with a dotted orange outline (e.g., the leftmost object in Figure \ref{exp1-trial}). Based on the observed choice, participants were instructed to adjust a series of six sliders to indicate how likely it is that the listener had a preference for a given feature. The six features were chosen from the feature dimension that was not mentioned in the speaker's utterance (e.g., pattern and shape in Figure \ref{exp1-trial}). Participants completed a series of XXX trials. Objects and utterances were chosen at random, with the constraint that XXX trials were potentially informative with respect to listener preferences and XXX trials were uninformative with respect to listener preferences (e.g., observing that the listener chose one of three identical objects). 
+
+\begin{figure*}[ht]
+	\centering
+	\includegraphics[width=4.5in]{images/exp1-trial.eps}
+	\caption{A sample trial from \emph{Experiment 1: Inferring preferences}.}\label{exp1-trial}
+\end{figure*}
 
 
 \section{Expt.~2: Choosing utterances}
 
+Our next task is the check the predictions of our strategic utterance selection model: given a set of potential referents, which utterance would be most informative with respect to the listener's preferences?
+
+\subsection{Participants}
+
+We recruited XX participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service. Participants received \$XXX for their participation. On the basis of a post-test demographics questionnaire, we identified XXX participants as native speakers of English; their data were included in the analyses reported below.
+
+\subsection{Design and methods}
+
+Participants encountered a reference game scenario similar to Experiment 1 in which a speaker signals an object to a listener who might have a preference for certain types of objects. However, rather than observing the utterance and referent choice, participants were now tasked with helping the speaker choose an utterance that was ``most likely to reveal the listener's color, shape, or pattern preferences.''
+
+We used the same sets of objects from Experiment 1, which could vary along three dimensions. Each trial featured a set of three objects, as in Figure \ref{exp2-trial}. After observing the objects, participants adjusted sliders to indicate which single-feature utterance the speaker should choose. Potential utterances corresponded to the features of the objects present; depending on the number of unique features, participants adjusted between three and nine sliders. Participants completed a series of XXX trials. As with Experiment 1, objects were chosen at random, with the constraint that XXX trials were potentially informative with respect to listener preferences (as in Figure \ref{exp2-trial}) and XXX trials were uninformative with respect to listener preferences (e.g., observing a set of three identical objects). 
+
+
+\begin{figure*}[ht]
+	\centering
+	\includegraphics[width=4.5in]{images/exp2-trial.eps}
+	\caption{A sample trial from \emph{Experiment 2: Choosing utterances}.}\label{exp2-trial}
+\end{figure*}
 
 \section{Discussion}
 
