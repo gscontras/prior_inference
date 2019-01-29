@@ -62,7 +62,7 @@ The current paper builds on the foundational, vanilla RSA model of reference gam
 \section{Model}
 
 We begin with the vanilla RSA model of \citeA{frankgoodman2012}. The recursive social reasoning inherent to the RSA modeling framework gets cashed out as various layers of inference. At the base, there is a hypothetical, naive literal listener $L_0$ who hears an utterance $u$ and infers the state of the world $s$ that utterance is meant to describe. $L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}. $L_0$ thus returns a uniform distribution over those states $s$ that can be truthfully described by $u$:
-$$P_{L_{0}}(s|u) \propto \sem{u}(s).$$
+$$P_{L_{0}}(s|u) \propto \sem{$u$}(s).$$
 One layer up, the speaker $S_1$ observes some state $s$ and chooses an utterance $u$ to communicate that state to $L_0$. $S_1$ chooses utterances on the basis of their utility for signaling $s$ to $L_0$, $U_{S_1}(u;s)$. The speaker's utility maximizes the probability that $L_0$ would arrive at the correct $s$ on the basis of $u$, $P_{L_{0}}(s|u)$, while minimizing the cost of $u$ itself, $C(u)$:
 $$U_{S_{1}}(u;s) = \textrm{log}(P_{L_{0}}(s|u)) - C(u).$$
 $S_1$ chooses utterances in proportion to their utility:
@@ -76,8 +76,8 @@ Our model builds on the vanilla version of RSA above by allowing for uncertainty
 $$P_{L_{1}}(s|u,f) \propto P_{S_{1}}(u|s) \cdot P(s|f).$$
 We then model a pragmatic speaker $S_2$ who updates beliefs about $L_1$'s preferences, $P(f)$. To do so, $S_2$ produces $u$ and observes $L_1$'s choice of $s$, then reasons about the feature preference $f$ that $L_1$ used to make that choice:
 $$P_{S_{2}}(f|u,s) \propto P_{L_{1}}(s|u,f) \cdot P(f).$$
-We can also model the reasoning process by which a speaker selects the best utterance to learn about the preferences of the listener. Starting with no knowledge of the listener's preferences, $S_2$ will have a uniform (i.e., flat) feature preference prior $P(f)$; to the extent that the speaker's posterior beliefs about the preferences, $P_{S_{2}}(f|u,s)$, deviate from the uniform prior, the speaker will have learned something about listener preferences. Thus, we can model the reasoning behind strategic utterance selection as an attempt to maximize the KL divergence between speaker's prior and their posterior, summing over the possible feature preferences $f$ and state observations $s$: XXX this isn't quite right -- we need to incorporate utterance cost and pruning to just those observations that are literally compatible with the utterance
-$$P_{b}(u) \propto \sum_{s}\textrm{KL}(P(f),P_{S_{2}}(f|u,s))$$
+We can also model the reasoning process by which a speaker selects the best utterance to learn about the preferences of the listener. Starting with no knowledge of the listener's preferences, $S_2$ will have a uniform (i.e., flat) feature preference prior $P(f)$; to the extent that the speaker's posterior beliefs about the preferences, $P_{S_{2}}(f|u,s)$, deviate from the uniform prior, the speaker will have learned something about listener preferences. Thus, we can model the reasoning behind strategic utterance selection as an attempt to maximize the KL divergence between speaker's prior and their posterior, summing over the possible feature preferences $f$ and state observations $s$:
+$$P_{b}(u) \propto \sum_{s:\  [\![u]\!](s)}\textrm{KL}(P(f),P_{S_{2}}(f|u,s))-C(u).$$
 
 We now have two sets of predictions from our model to check: first, pragmatic speaker predictions for inferring listener feature preferences on the basis of their object choice; and second, strategic utterance selection predictions for choosing the best utterance to learn about listener preferences. Below, we present two experiments that test these predictions against human behavior.
 
