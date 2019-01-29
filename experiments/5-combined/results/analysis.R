@@ -13,7 +13,7 @@ df = do.call(rbind, lapply(1:num_round_dirs, function(i) {
     'round', i, '/combined-unique.csv', sep=''),stringsAsFactors=FALSE) %>% 
       mutate(workerid = (workerid + (i-1)*9)))}))
 
-d = subset(df, select=c("workerid","item","slide_number","language", "pref1",  "response1","pref2","response2","pref3","response3","pref4","response4","pref5","response5","pref6","response6","pref7","response7","pref8","response8","pref9","response9","numFeatures","target","obj2","obj3","utterance","itemCode","condition","ambiguous","trial_type"))
+d = subset(df, select=c("workerid","item","slide_number","language", "pref1",  "response1","pref2","response2","pref3","response3","pref4","response4","pref5","response5","pref6","response6","pref7","response7","pref8","response8","pref9","response9","numFeatures","target","obj1","obj2","obj3","utterance","itemCode","condition","ambiguous","trial_type"))
 
 # re-factorize
 d[] <- lapply( d, factor) 
