@@ -13,6 +13,7 @@
 \usepackage{cogsci}
 \usepackage{pslatex}
 \usepackage{apacite}
+\usepackage{placeins}
 
 \newcommand{\sem}[1]{\mbox{$[\![$#1$]\!]$}}
 \newcommand{\lam}{$\lambda$}
@@ -110,11 +111,11 @@ Since not all of the stimuli allowed for inference of preferences in the same wa
 
 The RSA model predicts the preferences for different feature values after seing a listener pick an object following an utterance. The model contains three parameters: the informativity paramter $\alpha$ (how informative speakers choose to be), the obey-instructions parameter $\beta$, and the softness of preferences parameter $\gamma$. The latter characterizes how strong a preference is if a certain feature is indeed preferred. For example, if a $S_2$ observes that following an utterance $blue$ and three objects all three of which are blue, but all differ in shape, the speaker chooses a square, the speaker might conclude that the $L_1$  has a preference for squares. However, the exact value on the slider the $S_2$ picks depends on the $\gamma$ parameter: if it is close to $0$, the speaker will mark that the $L_1$ had a perefernce for squares close to $1$. As the parameter value increases, the softness of preference will increase as well, drawing the preference value towards  uniform (uninformative).
 
-We relied on KL values to assess the goodness of fit of different models weighting the probability of observed feature preferences $f$ against a difference of observed features $f$ and predicted feature preferences $m$.  
+Parametrizing the model based on different combinations of these three parameters revealed that optimizing the model for the softness of preferences $\gamma$ resulted in a significantly better fit compared to a non-fitted base model. We relied on KL values to assess the goodness of fit of different models taking into account the probability of observed feature preferences $f$ and a difference of observed features $f$ and model-predicted feature preferences $m$.  
 $$KL = \sum_{i=1}^{n}\textrm P(f) (\textrm {log} (P(f) - \textrm {log} (P(m)) $$
-Parametrizing the model based on different combinations of these three paramters revealed that optimizing the model for the softness of preferences parameter $\gamma$ resulted in a significantly better fit compared to a uniform base model. Fitting additional parameters did not significantly improve the fit, therefore we kept the $\alpha = 1 $ and the $\beta = 0$ (no additional scaling of the model). 
+Fitting additional parameters did not significantly improve the fit, therefore we kept the $\alpha = 1 $ and the $\beta = 0$ (no additional scaling of the model). 
 
-We observed a strong positive correlation between the mean rates for $L_1$ feature preferences as judged by human subjects and the model predictions ($r^2 = 0.99, p < 0.001$, Figure \ref{exp1-results}).
+We observed a strong positive correlation between the mean rates for $L_1$ feature preferences as judged by human subjects and the model predictions ($r^2 = 0.99, p < 0.001$, Figure \ref{exp1-results}). Mean rates per condition were calculated based on the ambiguity code that we described above. 
 
 \begin{figure}[ht]
 	\centering
@@ -122,6 +123,8 @@ We observed a strong positive correlation between the mean rates for $L_1$ featu
 	\caption{Experiment 1 results; $r^{2}=0.99$, 95\% CI [0.99, 0.99].}\label{exp1-results}
 \end{figure}
 
+%\FloatBarrier 
+% tried to keep figures in relevant sections but it doesn't look too good yet. Maybe when we have final text it will work out
 
 \section{Expt.~2: Choosing utterances}
 
@@ -152,9 +155,9 @@ We used the same sets of objects from Experiment 1, which could vary along three
 \end{figure}
 
 
-XXX something about the data processing
+We used the same ambiguity code that we described for experiment 1 to compute average utterance preference values for different conditions. Means were later normalized.
 
-The model of an ambiguous utterance choice predicts which utterance would maximize information gain about $L_1$ feature preferences. Informative utterances name a shared feature of objects that otherwise differ on one or two other dimensions. The model was optimized with the KL-factor parameter, while other parameters ($\alpha, \beta, \gamma)$ stayed were fixed to default values.
+The model of an ambiguous utterance choice predicts which utterance would maximize information gain about $L_1$ feature preferences. Informative utterances name a shared feature of objects that otherwise differ on one or two other dimensions. The model was optimized with the KL-factor parameter, while other parameters ($\alpha, \beta, \gamma)$ were fixed to default values.
 
 The analysis revealed a strong correlation between the probability of human utterance choices and the model predictions ($r^2 = 0.91, p < 0.001$).
 
