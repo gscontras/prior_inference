@@ -19,6 +19,7 @@
 \newcommand{\gcs}[1]{\textcolor{blue}{[gcs: #1]}} 
 
 
+% Possible title: Higher order pragmatic reasoning in reference games
 
 \title{On the added informativity of ambiguous language}
 \author{\large \textbf{our names}\\
@@ -106,9 +107,13 @@ We followed \citeA{frankgoodman2012} in our stimuli creation. Objects were allow
 
 XXX something about the data processing
 
-XXX something about model fitting
+The RSA model predicts the preferences for different feature values after seing a listener pick an object following an utterance. The model contains three parameters: the informativity paramter $\alpha$ (how informative speakers choose to be), the obey-instructions parameter $\beta$, and the softness of preferences parameter $\gamma$. The latter characterizes how strong a preference is if a certain feature is indeed preferred. For example, if a $S_2$ observes that following an utterance $blue$ and three objects all three of which are blue, but all differ in shape, the speaker chooses a square, the speaker might conclude that the $L_1$  has a preference for squares. However, the exact value on the slider the $S_2$ picks depends on the $\gamma$ parameter: if it is close to $0$, the speaker will mark that the $L_1$ had a perefernce for squares close to $1$. As the parameter value increases, the softness of preference will increase as well, drawing the preference value towards  uniform (uninformative).
 
-XXX something about comparing between human and model
+We relied on KL values to assess the goodness of fit of different models weighting the probability of observed feature preferences $f$ against a difference of observed features $f$ and predicted feature preferences $m$.  
+$$KL = \sum_{i=1}^{n}\textrm P(f) (\textrm {log} (P(f) - \textrm {log} (P(m)) $$
+Parametrizing the model based on different combinations of these three paramters revealed that optimizing the model for the softness of preferences parameter $\gamma$ resulted in a significantly better fit compared to a uniform base model. Fitting additional parameters did not significantly improve the fit, therefore we kept the $\alpha = 1 $ and the $\beta = 0$ (no additional scaling of the model). 
+
+We observed a strong positive correlation between the mean rates for $L_1$ feature preferences as judged by human subjects and the model predictions ($r^2 = 0.99, p < 0.001$, Figure \ref{exp1-results}).
 
 \begin{figure}[ht]
 	\centering
@@ -148,9 +153,9 @@ We used the same sets of objects from Experiment 1, which could vary along three
 
 XXX something about the data processing
 
-XXX something about model fitting
+The model of an ambiguous utterance choice predicts which utterance would maximize information gain about $L_1$ feature preferences. Informative utterances name a shared feature of objects that otherwise differ on one or two other dimensions. The model was optimized with the KL-factor parameter, while other parameters ($\alpha, \beta, \gamma)$ stayed were fixed to default values.
 
-XXX something about comparing between human and model
+The analysis revealed a strong correlation between the probability of human utterance choices and the model predictions ($r^2 = 0.91, p < 0.001$).
 
 \section{Discussion}
 
