@@ -1,6 +1,34 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Butz%
+\ \BBA {} Kutter%
+}{%
+Butz%
+\ \BBA {} Kutter%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+Butz:2017}
+\APACinsertmetastar {%
+Butz:2017}%
+\begin{APACrefauthors}%
+Butz, M\BPBI V.%
+\BCBT {}\ \BBA {} Kutter, E\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2017}.
+\newblock
+\APACrefbtitle {How the Mind Comes Into Being: Introducing Cognitive Science
+  from a Functional and Computational Perspective} {How the mind comes into
+  being: Introducing cognitive science from a functional and computational
+  perspective}.
+\newblock
+\APACaddressPublisher{Oxford, UK}{Oxford University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Chomsky%
 }{%
 Chomsky%
@@ -125,6 +153,32 @@ Levinson, S\BPBI C.%
   implicature}.
 \newblock
 \APACaddressPublisher{Cambridge, MA}{{MIT} Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lewandowsky%
+\ \BBA {} Farrell%
+}{%
+Lewandowsky%
+\ \BBA {} Farrell%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+Lewandowsky:2011}
+\APACinsertmetastar {%
+Lewandowsky:2011}%
+\begin{APACrefauthors}%
+Lewandowsky, S.%
+\BCBT {}\ \BBA {} Farrell, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2011}.
+\newblock
+\APACrefbtitle {Computational modeling in cognition: {P}rinciples and practice}
+  {Computational modeling in cognition: {P}rinciples and practice}.
+\newblock
+\APACaddressPublisher{Thousand Oaks}{Sage Publications}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
