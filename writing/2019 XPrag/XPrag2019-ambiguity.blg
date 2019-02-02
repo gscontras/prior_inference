@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: XPrag2019-ambiguity.aux
+The style file: chicago.bst
+Database file #1: prior-inference.bib
+You've used 7 entries,
+            2861 wiz_defined-function locations,
+            664 strings with 5893 characters,
+and the built_in function-call counts, 4645 in all, are:
+= -- 398
+> -- 263
+< -- 3
++ -- 73
+- -- 93
+* -- 346
+:= -- 845
+add.period$ -- 24
+call.type$ -- 7
+change.case$ -- 44
+chr.to.int$ -- 7
+cite$ -- 7
+duplicate$ -- 157
+empty$ -- 332
+format.name$ -- 101
+if$ -- 899
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 8
+newline$ -- 38
+num.names$ -- 76
+pop$ -- 38
+preamble$ -- 1
+purify$ -- 87
+quote$ -- 0
+skip$ -- 158
+stack$ -- 0
+substring$ -- 270
+swap$ -- 56
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 130
+warning$ -- 0
+while$ -- 78
+width$ -- 0
+write$ -- 102

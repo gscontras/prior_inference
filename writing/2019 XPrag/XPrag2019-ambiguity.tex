@@ -1,0 +1,127 @@
+\documentclass[12pt]{article}
+\usepackage[hmargin={1in},vmargin={1in},foot={.6in}]{geometry}   
+\geometry{letterpaper}              
+\usepackage{color,graphicx}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{varioref}
+\usepackage{textcomp}
+\usepackage{textcomp}
+\usepackage{mflogo}
+\usepackage{wasysym}
+\usepackage[normalem]{ulem}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{linguex}
+\usepackage{qtree}
+
+\qtreecenterfalse
+
+\newcommand{\HRule}{\rule{\linewidth}{0.25mm}}
+
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{plain} % options: empty , plain , fancy
+\lhead{}\chead{}\rhead{}
+\renewcommand{\headrulewidth}{.5pt}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+\newcommand{\txtp}{\textipa}
+\renewcommand{\rm}{\textrm}
+\newcommand{\sem}[1]{\mbox{$[\![$#1$]\!]$}}
+\newcommand{\lam}{$\lambda$}
+\newcommand{\lan}{$\langle$}
+\newcommand{\ran}{$\rangle$}
+\newcommand{\type}[1]{\ensuremath{\left \langle #1 \right \rangle }}
+
+\newcommand{\bex}{\begin{exe}}
+\newcommand{\eex}{\end{exe}}
+\newcommand{\bit}{\begin{itemize}}
+\newcommand{\eit}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}}
+
+\newcommand{\gcs}[1]{\textcolor{blue}{[gcs: #1]}}
+
+
+\thispagestyle{plain}
+
+\begin{document}
+
+\setlength{\abovedisplayskip}{0.5pt}
+\setlength{\belowdisplayskip}{0.5pt}
+
+%\maketitle
+
+\begin{center}
+	\textbf{The added informativity of ambiguous utterances}
+\end{center}
+
+\vspace{-9pt}
+
+\noindent 
+Traditionally, linguists have treated ambiguity as a bug in the communication system, something to be avoided or explained away \citep{grice1975,chomsky2002minimalism}.
+More recent research has begun to take notice of the efficiency ambiguity affords to us: by relying on context to fill in missing information, we can reuse lightweight bits of language rather than fully specifying the intended message \citep{levinson2000,piantadosietal2012,wasow2015}. 
+Viewed in this way, ambiguity serves as a feature---not a bug---of an efficient communication system.
+This reasoning accords with years of psycholinguistic research documenting that speakers readily produce ambiguous utterances (e.g., \citealp{ferreira2008}). The current work identifies an additional benefit in using ambiguous language: the \emph{extra} information we gain from observing how our listeners resolve ambiguity.
+We propose that language users learn about each other's private knowledge by observing how they resolve ambiguity. If language does not do the job of specifying the information necessary for full interpretation, then listeners are left to draw on their opinions, beliefs, and preferences to fill in the gaps; by observing how listeners fill those gaps, speakers learn about the opinions, beliefs, and preferences of the listeners.
+
+Our model of ambiguous language builds on the vanilla Rational Speech Act model of \cite{frankgoodman2012} by allowing for uncertainty around the listener's state prior, $P(s)$. We have in mind a scenario where a listener might have a preference for a certain object feature (e.g., blue things, squares, circles, etc.), and these preference will influence their object choice. With this in mind, the speaker produces an utterance $u$, observes the listener's referent choice $s$, and, on the basis of that choice, infers the preferences $f$ the listener might have had when making the choice.
+We use the same $L_0$ and $S_1$ from the vanilla model. However, we now parameterize $L_1$'s state prior so that it operates with respect to a given feature preference $P(s|f)$:
+$$P_{L_{1}}(s|u,f) \propto P_{S_{1}}(u|s) \cdot P(s|f).$$
+We then model a pragmatic speaker $S_2$ who updates beliefs about $L_1$'s preferences, $P(f)$. To do so, $S_2$ produces $u$, then observes $L_1$'s choice of $s$, and finally reasons about the likely feature preference $f$ that $L_1$ used to make that choice:
+$$P_{S_{2}}(f|u,s) \propto P_{L_{1}}(s|u,f) \cdot P(f).$$
+Moreover, we model the reasoning process by which a speaker selects the best utterance to learn about the preferences of the listener.
+Starting with no knowledge of the listener's preferences, $S_2$ can be assumed to expect a uniform (i.e., flat) feature preference prior $P(f)$. The more the speaker's posterior beliefs about the preferences, $P_{S_{2}}(f|u,s)$, deviate from the uniform prior, the more the speaker will have learned about the listener's preferences. 
+We can thus model this reasoning in the light of expected information gain, which can be equated with the attempt to maximize the KL divergence between the speaker's flat prior and the expected posterior of the listener's feature preferences $f$, integrating over all hypothetically possible state observations $s$:
+$$P_{b}(u) \propto \sum_{s:\  [\![u]\!](s)}\lambda \cdot \textrm{KL}(P(f),P_{S_{2}}(f|u,s))-C(u).$$
+
+
+\noindent \textbf{Expt.~1: Testing $S_2$ predictions.} We presented 82 English-speaking participants recruited via MTurk with a series of reference game scenarios modeled after \cite{frankgoodman2012}. Each scenario featured two people and three objects. One of the people served as the speaker, and the other served as the listener. The speaker asks the listener to choose one of the objects, but in doing so she is allowed to mention only one of the features of the target object. Participants were told that the listener might have a preference for certain object features, and participants were tasked with inferring those preferences after observing the speaker's utterance and listener's object choice. Participants completed a series of $15$ trials. Objects and utterances were chosen at random with the constraint that 10 trials were potentially informative with respect to listener preferences and 5 trials were uninformative (e.g., observing that the listener chose one of three identical objects).
+
+To generate model predictions, we fixed the strength of individual feature preferences $f_i$ with a softness parameter $\gamma$, which determines how strong a preference is if a certain feature value is indeed preferred. We optimized $\gamma$ in the light of the KL divergence between the individual participants' slider values and the corresponding model predictions:
+$$\textrm{KL} = \sum_{i=1}^{n} P(f'_i|u,s) (\textrm {log} (P(f'_i|u,s) - \textrm {log} (P(f_i|u,s)),$$
+where $P(f'_i|u,s)$ specifies a participant's normalized slider value settings for a given stimulus and $P(f_i|u,s)$ specifies the respective model prediction. We observed a strong positive correlation between the human judgments and model predictions ($r^2 = 0.96$, 95\% CI[.94,.97]). Thus, we find strong empirical support for our extended RSA model of preference inference: speakers are able to use listener behavior to arrive at information about their preferences.
+
+\noindent \textbf{Expt.~2: Testing $P_{b}(u)$ predictions.} Participants (n=82) encountered a reference game scenario similar to Expt.~1 in which a speaker signals an object to a listener who might have a preference for certain types of objects. Rather than observing the utterance and referent choice, participants were now tasked with helping the speaker choose an utterance that was ``most likely to reveal the listener's color, shape, or pattern preferences.'' Each trial featured a set of three objects. Participants adjusted sliders to indicate which single-feature utterance the speaker should choose. Potential utterances corresponded to the features present. To generate model predictions, we must also set the $\lambda$ parameter, which factors the importance of choosing the expected most informative utterance with respect to the determined KL divergence values. We used the same optimization procedure from Expt.~1, and we again found a strong positive correlation between human judgments and model predictions ($r^2 = 0.91$, 95\% CI[.84,.95]). Thus, we find evidence in support of the idea that speakers reason pragmatically about the relative informativity of ambiguous language.
+
+The results of Experiment 1 demonstrate that na\"ive speakers are able to reason pragmatically about \emph{why} listeners may take the actions they do, and the success of our computational model in predicting the observed behavior offers an articulated hypothesis about \emph{how} this reasoning proceeds: when speakers are aware of the ambiguity in their utterances, observing how listeners resolve that ambiguity provides clues to the preferences listeners use when doing so.
+The results of Experiment 2 demonstrate that speakers are able to capitalize on this reasoning to strategically select utterances that are most likely to inform their understanding of the preferences of their listeners, and that the most informative utterances are also the most ambiguous ones.
+
+{\scriptsize
+\noindent \textbf{References:} \textbf{Chomsky, N. (2002)}. An interview on minimalism. %In \emph{On Nature and Language}, pp. 92--161.
+\textbf{Ferreira, V.~F. (2008)}. Ambiguity, accessibility, and a division of labor for communicative success. %\emph{Psychology of Learning and Motivation} 49, 209--246.
+\textbf{Frank, M.~F.~and N.~D.~Goodman (2012)}. Predicting pragmatic reasoning in language games. %\emph{Science} 336, 998.
+\textbf{Grice, H.~P.~(1975)}. Logic and conversation. %In \emph{Syntax and Semantics 3: Speech Acts}, pp. 26--40.
+\textbf{Levinson, S.~C.~(2000)}. \emph{Presumptive meanings: The theory of generalized conversational implicature}. %MIT Press.
+\textbf{Piantadosi, S.~T., H.~Tily, and E.~Gibson (2012)}. The communicative function of ambiguity in language. %\emph{Cognition} 122, 280--291.
+\textbf{Wasow, T.~(2015)}. Ambiguity avoidance is overrated. %In  \emph{Ambiguity: Language and Communication}, pp. 29--47.
+}
+
+\newpage 
+
+{\scriptsize
+\bibliographystyle{chicago} 
+\renewcommand{\bibsection}{}
+%\setlength{\bibsep}{0pt plus 0.3ex}
+\setlength{\bibsep}{0pt}
+\bibliography{prior-inference}
+}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
