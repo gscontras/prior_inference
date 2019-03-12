@@ -482,7 +482,8 @@ function init() {
       screenUW: exp.width
     };
   //blocks of the experiment:
-  exp.structure=["i0", "instructions1","training1","training2","training3",'multi_slider', 'instructions_utterance','utterance_choice','subj_info', 'thanks'];
+  // exp.structure=["i0", "instructions1","training1","training2","training3",'multi_slider', 'instructions_utterance','utterance_choice','subj_info', 'thanks'];
+  exp.structure=["i0", 'instructions_utterance','utterance_choice','subj_info', 'thanks'];
   
   exp.data_trials = [];
   //make corresponding slides:
