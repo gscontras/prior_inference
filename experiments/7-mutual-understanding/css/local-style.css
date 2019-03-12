@@ -1,0 +1,59 @@
+.slider {
+  /* default is width 400 and margin 10 */
+	width: 180;
+	margin: 10px;
+}
+
+.progress {
+    position: absolute;
+    top: 10px;
+    right: 50%;
+    margin-right: -133;
+}
+
+.slide {
+    padding-top: 36px;
+    /*padding-bottom: 50px;*/
+    width: 750px;
+}
+
+.long_form {
+    padding-top: 20px;
+}
+
+div.wrapper div {
+    display: inline-block;
+}
+
+.speakerTarget {   padding: 5px;
+    border: 8px dotted purple; }
+
+.listenerTarget {   padding: 5px;
+    border: 8px dotted orange; }
+
+.obj2 {   padding: 10px; }
+
+.obj3 {   padding: 10px; }
+
+.normal {   padding: 10px; }
+
+/*table {
+  table-layout: fixed ;
+  width: 350px ;
+}
+
+td.slider_target {
+    width: 35%;
+}
+
+td.left {
+  width: 29% ;
+}
+
+td.center {
+  width: 1% ;
+}
+
+td.right {
+  width: 29% ;
+}*/
