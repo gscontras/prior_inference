@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  1 FEB 2019 20:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex 2016.5.22)  1 APR 2019 09:33
 entering extended mode
  restricted \write18 enabled.
  Source specials enabled.
@@ -667,17 +667,17 @@ LaTeX Info: Redefining \nameref on input line 49.
 \openout3 = `XPrag2019-ambiguity.out'.
 
 LaTeX Info: Redefining \Ref on input line 49.
-LaTeX Font Info:    Try loading font information for U+msa on input line 69.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 69.
+LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 69.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 58.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
@@ -685,23 +685,23 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 
 ] [2]
 (./XPrag2019-ambiguity.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 116.
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 116.
  (./XPrag2019-ambiguity.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 113.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 116.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 116.
 Package rerunfilecheck Info: File `XPrag2019-ambiguity.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 113.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 116.
  ) 
 Here is how much of TeX's memory you used:
- 8018 strings out of 493015
- 112595 string characters out of 6133377
+ 8024 strings out of 493015
+ 112706 string characters out of 6133377
  210612 words of memory out of 5000000
- 11443 multiletter control sequences out of 15000+600000
- 10347 words of font info for 40 fonts, out of 8000000 for 9000
+ 11450 multiletter control sequences out of 15000+600000
+ 11793 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,5n,43p,1236b,330s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on XPrag2019-ambiguity.dvi (3 pages, 20712 bytes).
+Output written on XPrag2019-ambiguity.dvi (3 pages, 20252 bytes).
