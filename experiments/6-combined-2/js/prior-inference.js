@@ -51,7 +51,7 @@ function make_slides(f) {
 
   slides.multi_slider = slide({
     name : "multi_slider",
-    present : _.shuffle(stimuli_listener),
+    present : _.shuffle(priorInferenceStims),
     present_handle : function(stim) {
       $(".err").hide();
       this.stim = stim; 
@@ -99,17 +99,17 @@ function make_slides(f) {
       //   var prop2Labels = ['clouds','circles','squares']
       // }
 
-      if (utteranceType == "shape") {
+      if (utteranceType == "1") {
         var property1 = "texture"
         var prop1Labels = ['solid things','striped things','polka-dotted things']
         var property2 = "color"
         var prop2Labels = ["blue things", "red things", "green things"]
-      } else if (utteranceType == "texture") {
+      } else if (utteranceType == "2") {
         var property1 = "shape"
         var prop1Labels = ['clouds','circles','squares']
         var property2 = "color"
         var prop2Labels = ["blue things", "red things", "green things"]
-      } else if (utteranceType == "color") {
+      } else if (utteranceType == "3") {
         var property1 = "shape"
         var prop1Labels = ['clouds','circles','squares']
         var property2 = "texture"
@@ -316,7 +316,7 @@ function make_slides(f) {
 
   slides.utterance_choice = slide({
     name : "utterance_choice",
-    present : _.shuffle(stimuli_speaker),
+    present : _.shuffle(utteranceChoiceStims),
     present_handle : function(stim) {
       $(".err").hide();
       this.stim = stim; 
@@ -482,8 +482,8 @@ function init() {
       screenUW: exp.width
     };
   //blocks of the experiment:
-  // exp.structure=["i0", "instructions1","training1","training2","training3",'multi_slider', 'instructions_utterance','utterance_choice','subj_info', 'thanks'];
-  exp.structure=["i0", 'instructions_utterance','utterance_choice','subj_info', 'thanks'];
+  exp.structure=["i0", "instructions1","training1","training2","training3",'multi_slider', 'instructions_utterance','utterance_choice','subj_info', 'thanks'];
+  // exp.structure=["i0", 'instructions_utterance','utterance_choice','subj_info', 'thanks'];
   
   exp.data_trials = [];
   //make corresponding slides:
