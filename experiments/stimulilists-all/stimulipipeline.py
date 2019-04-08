@@ -4,6 +4,18 @@
 #(red / blue / green), a shape (circle / square / cloud), 
 # and a texture (solid / polka-dot / striped)
 
+
+'''
+Script to generate stimuli
+
+Note: for "prior inference", "target" is what the listener picks
+For mutual understanding, "target" is what the speaker wants to point 
+out and "listenerpick" is what the listener picks...
+
+'''
+
+
+
 import random
 from collections import Counter, defaultdict
 import json
@@ -88,6 +100,7 @@ def computeUtteranceChoiceCode(item):
 	obj1 = None
 	obj2 = None
 	si = getsharedinfo(item)
+	#this sorting does not enforce that two "2a"s appear together up front 
 	si = sorted(si, key=lambda x: x["num"], reverse = True)
 	code = ""
 	for i in range(3):
@@ -101,6 +114,8 @@ def computeUtteranceChoiceCode(item):
 					code += "a"
 				else:
 					code += "b"
+	if code == "22b2a":
+		code = "22a2b"
 	return code
 		
 	
@@ -131,21 +146,21 @@ def addUtterances(stimuli):
 	newlist = []
 	for stimulus in stimuli:
 		item = stimulus["item"]
-		for i in range(len(item)):
+		idaddition = 0
+		for i in range(len(item)):#target
 			s = item[i]
-			idaddition = 0
 			for j in range(3):#cycle through features
-				for k in range(3):#cycle through listener picks
-					if item[k][j] == item[i][j]:
-						newstimulus = stimulus.copy()
-						newstimulus["targetind"] = i
-						newstimulus["utterance"] = getFeatureName(j+1,int(s[j]))
-						newstimulus["utteredtype"] = j+1
-						newstimulus["listenerpick"] = k
-						newstimulus["ID"] = int(newstimulus["IDf"] + str(idaddition))
-						newstimulus["IDf"] += "-" + str(idaddition)
-						idaddition += 1
-						newlist.append(newstimulus)
+				# ~ for k in range(3):#cycle through listener picks
+					# ~ if item[k][j] == item[i][j]:
+				newstimulus = stimulus.copy()
+				newstimulus["targetind"] = i
+				newstimulus["utterance"] = getFeatureName(j+1,int(s[j]))
+				newstimulus["utteredtype"] = j+1
+				# ~ newstimulus["listenerpick"] = k
+				newstimulus["ID"] = int(newstimulus["IDf"] + str(idaddition))
+				newstimulus["IDf"] += "-" + str(idaddition)
+				idaddition += 1
+				newlist.append(newstimulus)
 	return newlist
 
 l = addUtterances(l)
@@ -311,10 +326,31 @@ l = addAmbiguityCode(l)
 
 '''
 [{"item":[i1,i2,i3],"utterancecode":utterancecode, "targetind": i, 
-	"utterance":uttr, "utteredtype": numtype, "listenerpick": i,
+	"utterance":uttr, "utteredtype": numtype, 
 	"priorInfCode":code}]
 '''
 
+'''
+add "listenerpick": i,
+before, target was what the listener picked - now, the listener picks
+'''
+
+def addListenerpick(stimuli):
+	newlist = []
+	for stimulus in stimuli:
+		item = stimulus["item"]
+		idaddition = 0
+		for k in range(3):#cycle through listener picks
+			if item[k][stimulus["utteredtype"]-1] == item[stimulus["targetind"]][stimulus["utteredtype"]-1]:
+				newstimulus = stimulus.copy()
+				newstimulus["listenerpick"] = k
+				newstimulus["ID"] = int(str(newstimulus["ID"]) + str(idaddition))
+				newstimulus["IDf"] += "-" + str(idaddition)
+				idaddition += 1
+				newlist.append(newstimulus)
+	return newlist
+
+l = addListenerpick(l)
 
 '''
 Sixth step: compute mutual understanding code
@@ -549,28 +585,28 @@ def createandwriteSamples(stimuli, category, numpcat, collapseutt, trialname):
 	
 	mywrite(trials, trialname)
 	
-# ~ print("writing 50ByUtteranceCode")
-# ~ createandwriteSamples(l, "utterancecode", 50, True, "50ByUtteranceCode")
-# ~ print("writing 50BypriorInfCode")
-# ~ createandwriteSamples(l, "priorInfCode", 50, False, "50BypriorInfCode")
-# ~ print("writing 50ByMUcode")
-# ~ createandwriteSamples(l, "MUcode", 50, False, "50ByMUcode")
+print("writing 50ByUtteranceCode")
+createandwriteSamples(l, "utterancecode", 50, True, "50ByUtteranceCode")
+print("writing 50BypriorInfCode")
+createandwriteSamples(l, "priorInfCode", 50, False, "50BypriorInfCode")
+print("writing 50ByMUcode")
+createandwriteSamples(l, "MUcode", 50, False, "50ByMUcode")
 		
 
 '''
 DEBUG section ; )
 '''
 
-m = set()
-tmp = []
-for s in l:
-	if s["utterancecode"] == "331":
-		if s["IDf"][:4] in m:
-			continue
-		else:
-			m.add(s["IDf"][:4])
-			tmp.append(s["item"])
-with open("debug.txt", "w") as fp:
-	for i in tmp:
-		fp.write(",".join(i))
-		fp.write("\n")
+# ~ m = set()
+# ~ tmp = []
+# ~ for s in l:
+	# ~ if s["utterancecode"] == "331":
+		# ~ if s["IDf"][:4] in m:
+			# ~ continue
+		# ~ else:
+			# ~ m.add(s["IDf"][:4])
+			# ~ tmp.append(s["item"])
+# ~ with open("debug.txt", "w") as fp:
+	# ~ for i in tmp:
+		# ~ fp.write(",".join(i))
+		# ~ fp.write("\n")
