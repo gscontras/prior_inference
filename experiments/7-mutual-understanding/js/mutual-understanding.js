@@ -87,14 +87,17 @@ function make_slides(f) {
       } else if (stim.listenerpick==2) {
         this.listenerTarget = ["normal","normal","listenerTarget"]
       }
+
       
       var object1 = "<div class=" + this.listenerTarget[0] + "><img src='images/" + stim.item[0] + ".png' width='120' class= " + this.speakerTarget[0] + "></img></div>"
       var object2 = "<div class=" + this.listenerTarget[1] + "><img src='images/" + stim.item[1] + ".png' width='120' class= " + this.speakerTarget[1] + "></img></div>"
       var object3 = "<div class=" + this.listenerTarget[2] + "><img src='images/" + stim.item[2] + ".png' width='120' class= " + this.speakerTarget[2] + "></img></div>"
 
-      $("#object1").html(object1)
-      $("#object2").html(object2)
-      $("#object3").html(object3)
+      var order = _.shuffle([object1,object2,object3])
+
+      $("#object1").html(order[0])
+      $("#object2").html(order[1])
+      $("#object3").html(order[2])
 
       this.n_sliders = 1;
 
@@ -119,18 +122,21 @@ function make_slides(f) {
 
     log_responses : function() {
       exp.data_trials.push({
-        "trial_type" : "prior_inference",
+        "trial_type" : "mutual_understanding",
         "utterance" : exp.utterance,
         // "property1" : this.stim.property1,
         // "property2" : this.stim.property2,
         "response": exp.sliderPost,
         "slide_number" : exp.phase,
         "item" : this.stim.ID,
-        "itemCode" : this.stim.itemCode,
+        "itemCode" : this.stim.MUcode,
         "target" : this.stim.target,
         "obj2" : this.stim.obj2,
         "obj3" : this.stim.obj3,
-        "ambiguous" : this.stim.listenerAmbiguous
+        "MUnumchoices" : this.stim.MUnumchoices,
+        "MUalign" : this.stim.MUalign,
+        "MUsharedlistenerpick" : this.stim.MUsharedlistenerpick,
+        "MUsharedother" : this.stim.MUsharedother
       });
     },
   });
