@@ -488,7 +488,7 @@ for (var i=0; i<distinctTypesAlign.length; i++) {
 	var typeList = sameStims.filter(function(itm){
 	  return itm.MUcode == stimType;
 	});
-	MUstimsAlign = MUstimsAlign.concat(_.sample(typeList,2))
+	MUstimsAlign = MUstimsAlign.concat(_.sample(typeList,3))
 }
 
 // for not aligned cases
