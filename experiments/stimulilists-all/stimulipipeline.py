@@ -79,13 +79,13 @@ Third step: add utterance choice code because we dont have utterance yet
 '''
 
 def getsharedinfo(item):
-	s = []
+	s = dict()
+	objnums = {0:0, 1:0, 2:0}
 	for i in range(3):
 		# info needed: num of most shared, which share
 		num = 4 - len(set([x[i] for x in item]))
 		ind = []
 		if num == 2:
-			ind = 0
 			f = item[0][i]
 			if item[1][i] == f:
 				ind = [0,1]
@@ -93,15 +93,29 @@ def getsharedinfo(item):
 				ind = [0,2]
 			else:
 				ind = [1,2]
-		s.append({"ind":i,"num":num,"objects":ind})
-	return s
+		if num == 3: 
+			# useless but good for understanding this mess...
+			ind = [0,1,2]
+		s[i] = {"num":num,"objects":ind}
+		for j in ind:
+			objnums[j] += 1
+	for i in range(3):#weight by whether the 
+		if s[i]["num"] == 3:
+			s[i]["weight"] = 15
+		if s[i]["num"] == 2:
+			s[i]["weight"] = 0
+			for ind in s[i]["objects"]:
+				s[i]["weight"] += objnums[ind]
+			s[i]["weight"] *= 2
+		if s[i]["num"] == 1:
+			s[i]["weight"] = 1
+	return [s[x] for x in s]
 
 def computeUtteranceChoiceCode(item):
 	obj1 = None
 	obj2 = None
 	si = getsharedinfo(item)
-	#this sorting does not enforce that two "2a"s appear together up front 
-	si = sorted(si, key=lambda x: x["num"], reverse = True)
+	si = sorted(si, key=lambda x: x["weight"], reverse = True)
 	code = ""
 	for i in range(3):
 		code += str(si[i]["num"])
@@ -116,6 +130,7 @@ def computeUtteranceChoiceCode(item):
 					code += "b"
 	if code == "22b2a":
 		code = "22a2b"
+		print("why did 22b2a still happen...")
 	return code
 		
 	
@@ -210,18 +225,17 @@ class AmbiguityCodeLong():
 		featuresequence = []
 		k = dict()
 		for f in otherfeatures:
-			k[f] = 0
+			k[f] = 0 #11 is fifth
 			num = numberdict[f]
-			if num == "32":
-				k[f] += 2
-			elif num == "11":
+			if num == "32":#first
+				k[f] += 4
+			elif num == "12":#fourth
 				k[f] += 1
 			elif num.startswith("2"):
-				k[f] += 5 
-				if num == "21":
-					k[f] -= 1
-				elif num == "22":
-					k[f] -= 2
+				if num == "21":#second
+					k[f] += 3
+				elif num == "22":#third
+					k[f] += 2
 		if k[otherfeatures[0]] > k[otherfeatures[1]]:
 			code.append(numberdict[otherfeatures[0]])
 			featuresequence.append(otherfeatures[0])
@@ -550,11 +564,11 @@ Each sample should:
 	how many of each
 	what to include in the output
 '''
-l2 = []
-s = random.sample(range(len(l)), 10)
-for i in s:
-	l2.append(l[i])
-mywrite(l2, "test")
+# ~ l2 = []
+# ~ s = random.sample(range(len(l)), 10)
+# ~ for i in s:
+	# ~ l2.append(l[i])
+# ~ mywrite(l2, "test")
 
 # ~ print("writing all")
 # ~ mywrite(l, "allstimuli")
@@ -610,3 +624,29 @@ DEBUG section ; )
 	# ~ for i in tmp:
 		# ~ fp.write(",".join(i))
 		# ~ fp.write("\n")
+
+# ~ with open("50BypriorInfCode.json") as fn: 
+	# ~ data = json.load(fn)
+
+# ~ def convertitem(i): 
+    # ~ return "-".join([shapes[int(i[0])], textures[int(i[1])], colors[int(i[2])]])
+
+# ~ examples = dict()
+
+# ~ for i in data: 
+	# ~ if i["priorInfCode"] in examples: 
+		# ~ continue 
+	# ~ examples[i["priorInfCode"]] = {
+			# ~ "target":convertitem(i["item"][i["targetind"]]), 
+			# ~ "obj2":convertitem(i["item"][i["obj2ind"]]), 
+			# ~ "obj3":convertitem(i["item"][i["obj3ind"]]),
+			# ~ "utterance":i["utterance"],
+			# ~ "utterancecode":i["utterancecode"]} 
+
+# ~ df = pd.read_csv("bigTablePostListPrefs_20181206.csv") 
+
+# ~ exp = pd.read_csv("AmbiguityCodeGlossary.csv", index_col=0)
+
+# ~ for code, values in examples.items(): 
+	# ~ for k in ["target","obj2","obj3", "utterance", "utterancecode"]: 
+		# ~ exp.loc[int(code),k] = values[k]
