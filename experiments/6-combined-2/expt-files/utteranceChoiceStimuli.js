@@ -474,5 +474,7 @@ for (var i=0; i<distinctTypes.length; i++) {
 	var typeList = stimulidata.filter(function(itm){
 	  return itm.utterancecode == stimType;
 	});
-	utteranceChoiceStims = priorInferenceStims.concat(_.sample(typeList))
+	utteranceChoiceStims = utteranceChoiceStims.concat(_.sample(typeList))
 }
+
+console.log(utteranceChoiceStims)

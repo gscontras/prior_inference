@@ -16,7 +16,7 @@ df = do.call(rbind, lapply(1:num_round_dirs, function(i) {
 d = subset(df, select=c("workerid","item","slide_number","language", "MUsharedother","target","obj2","obj3","itemCode","MUnumchoices","MUsharedlistenerpick","MUalign","utterance","response","gender","age"))
 
 # re-factorize
-d[] <- lapply( d, factor) 
+#d[] <- lapply( d, factor) 
 
 unique(d$language)
 
@@ -27,24 +27,32 @@ length(unique(d$workerid)) ## n=52
 
 summary(d)
 
-#write.csv(d,"../results/5-combined-unique.csv")
+#write.csv(d,"../results/7-mutual-understanding.csv")
 
+## results plot
+d_s = bootsSummary(data=d, measurevar="response", groupvars=c("MUalign","MUnumchoices"))
 
-## class plot
-d_s = bootsSummary(data=t, measurevar="response", groupvars=c("class"))
-# save data for aggregate plot
-#write.csv(d_s,"~/Documents/git/cocolab/adjective_ordering/presentations/DGfS/plots/faultless.csv")
-
-class_plot <- ggplot(d_s, aes(x=reorder(class,-response,mean),y=response)) +
+p <- ggplot(d_s, aes(x=as.factor(MUnumchoices),y=response)) +
   geom_bar(stat="identity",position=position_dodge()) +
-  geom_errorbar(aes(ymin=bootsci_low, ymax=bootsci_high, x=reorder(class,-response,mean), width=0.1),position=position_dodge(width=0.9))+
-  ylab("faultless disagreement\n")+
-  xlab("\nadjective class") +
+  geom_errorbar(aes(ymin=bootsci_low, ymax=bootsci_high, x=as.factor(MUnumchoices), width=0.1),position=position_dodge(width=0.9))+
+  ylab("understanding\n")+
+  xlab("\nnumber of choices") +
   ylim(0,1) +
+  facet_grid(.~MUalign,scales="free_x")+
   theme_bw()
-class_plot
-#ggsave("../results/class_plot.pdf",height=3)
+p
+#ggsave("../results/choices_plot.pdf",width=4)
 
-agr_pred = aggregate(response~predicate*class,data=t,mean)
+## results plot by item code
+i_s = bootsSummary(data=d, measurevar="response", groupvars=c("itemCode","MUalign"))
 
-#write.csv(agr_pred,"../results/pred-subjectivity.csv")
+i_p <- ggplot(i_s, aes(x=itemCode,y=response)) +
+  geom_bar(stat="identity",position=position_dodge()) +
+  geom_errorbar(aes(ymin=bootsci_low, ymax=bootsci_high, x=itemCode, width=0.1),position=position_dodge(width=0.9))+
+  ylab("understanding\n")+
+  xlab("\nitem code") +
+  ylim(0,1) +
+  facet_grid(.~MUalign,scales="free_x")+
+  theme_bw()
+i_p
+#ggsave("../results/item-code_plot.pdf",width=7)

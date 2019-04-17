@@ -125,14 +125,14 @@ function make_slides(f) {
       this.n_sliders_1 = this.preferences1.length;
       $(".slider_row1").remove();
       for (var i=0; i<this.n_sliders_1; i++) {
-        $("#multi_slider_table_1").append('<tr class="slider_row1"><td class="slider_target" id="object1' + i + '">' + this.preferences1[i] +  '</td><td colspan="3" bgcolor="#eee" ><div id="slider1' + i + '" class="slider">-------[ ]--------</div></td></tr>');
+        $("#multi_slider_table_1").append('<tr class="slider_row1"><td class="slider_target" id="object1' + i + '"><b>' + this.preferences1[i] +  '</b></td><td colspan="3" bgcolor="#eee" ><div id="slider1' + i + '" class="slider">-------[ ]--------</div></td></tr>');
         utils.match_row_height("#multi_slider_table_1", ".slider_target");
       }
 
       this.n_sliders_2 = this.preferences2.length;
       $(".slider_row2").remove();
       for (var i=0; i<this.n_sliders_2; i++) {
-        $("#multi_slider_table_2").append('<tr class="slider_row2"><td class="slider_target" id="object2' + i + '">' + this.preferences2[i] +  '</td><td colspan="3" bgcolor="#eee" ><div id="slider2' + i + '" class="slider">-------[ ]--------</div></td></tr>');
+        $("#multi_slider_table_2").append('<tr class="slider_row2"><td class="slider_target" id="object2' + i + '"><b>' + this.preferences2[i] +  '</b></td><td colspan="3" bgcolor="#eee" ><div id="slider2' + i + '" class="slider">-------[ ]--------</div></td></tr>');
         utils.match_row_height("#multi_slider_table_2", ".slider_target");
       }
 
@@ -346,7 +346,7 @@ function make_slides(f) {
       this.n_sliders = this.preferences.length;
       $(".slider_row").remove();
       for (var i=0; i<this.n_sliders; i++) {
-        $("#multi_slider_table").append('<tr class="slider_row"><td class="slider_target" id="object' + i + '">' + "\"" + this.preferences[i] + "\"" + '</td><td colspan="2"><div id="slider' + i + '" class="slider">-------[ ]--------</div></td></tr>');
+        $("#multi_slider_table").append('<tr class="slider_row"><td class="slider_target" id="object' + i + '"><b>' + "\"" + this.preferences[i] + "\"" + '</b></td><td colspan="2"><div id="slider' + i + '" class="slider">-------[ ]--------</div></td></tr>');
         utils.match_row_height("#multi_slider_table", ".slider_target");
       }
 

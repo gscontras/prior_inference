@@ -1850,16 +1850,72 @@ stimulidata=[{item:["212","222","232"],utterancecode:"331",IDf:"0648-7-0",ID:648
 	{item:["321","232","113"],utterancecode:"111",IDf:"0941-0-0",ID:94100,targetind:0,utterance:"square",utteredtype:1,priorInfCode:"111111",obj2:"232",obj3:"113",obj2ind:1,obj3ind:2,listenerpick:0,MUnumchoices:1,MUalign:"same",MUsharedlistenerpick:"NA",MUsharedother:"NA",MUcode:"1sameNANA",numFeatures:9,featuresPresent:["cloud","circle","square","blue","polka-dotted","striped","solid","green","red"],target:"321",targetShape:"square",targetTexture:"striped",targetColor:"blue",listenerAmbiguous:"False",speakerAmbiguous:"False"}
 	];
 
+function findAmbiguous() {
+    var ambiguousStims = []
+    for (var i=0; i<stimulidata.length; i++) {
+        if (stimulidata[i].listenerAmbiguous == "True") {
+            ambiguousStims = ambiguousStims.concat(stimulidata[i])
+        }
+    }
+    return ambiguousStims
+}
 
-var distinctTypes = stimulidata.map(item => item.priorInfCode)
-  .filter((value, index, self) => self.indexOf(value) === index)
+function findUnambiguous() {
+    var unambiguousStims = []
+    for (var i=0; i<stimulidata.length; i++) {
+        if (stimulidata[i].listenerAmbiguous == "False") {
+            unambiguousStims = unambiguousStims.concat(stimulidata[i])
+        }
+    }
+    return unambiguousStims
+}
+
+var amb = findAmbiguous()
+var unAmb = findUnambiguous()
+
+var distinctTypesAmb = _.sample(amb.map(item => item.priorInfCode)
+  .filter((value, index, self) => self.indexOf(value) === index),
+  18)
+
+console.log(distinctTypesAmb)
+
+var distinctTypesUnamb = _.sample(unAmb.map(item => item.priorInfCode)
+  .filter((value, index, self) => self.indexOf(value) === index),
+  2)
+
+console.log(distinctTypesUnamb)
 
 var priorInferenceStims = []
-for (var i=0; i<distinctTypes.length; i++) {	
-	var stimType = distinctTypes[i]
+for (var i=0; i<distinctTypesAmb.length; i++) {	
+	var stimType = distinctTypesAmb[i]
 	var typeList = stimulidata.filter(function(itm){
 	  return itm.priorInfCode == stimType;
 	});
 	priorInferenceStims = priorInferenceStims.concat(_.sample(typeList))
 }
+
+for (var i=0; i<distinctTypesUnamb.length; i++) {	
+	var stimType = distinctTypesUnamb[i]
+	var typeList = stimulidata.filter(function(itm){
+	  return itm.priorInfCode == stimType;
+	});
+	priorInferenceStims = priorInferenceStims.concat(_.sample(typeList))
+}
+
+console.log(priorInferenceStims)
+
+
+// var distinctTypes = stimulidata.map(item => item.priorInfCode)
+//   .filter((value, index, self) => self.indexOf(value) === index)
+
+// console.log(distinctTypes)
+
+// var priorInferenceStims = []
+// for (var i=0; i<distinctTypes.length; i++) {	
+// 	var stimType = distinctTypes[i]
+// 	var typeList = stimulidata.filter(function(itm){
+// 	  return itm.priorInfCode == stimType;
+// 	});
+// 	priorInferenceStims = priorInferenceStims.concat(_.sample(typeList))
+// }
 
