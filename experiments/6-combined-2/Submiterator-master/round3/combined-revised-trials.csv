@@ -1,0 +1,271 @@
+workerid,response6,response7,response4,response5,response2,response3,response1,response8,response9,pref9,obj1,obj3,obj2,ambiguous,itemCode,slide_number,condition,trial_type,target,pref4,pref8,item,numFeatures,pref1,pref2,pref3,utterance,pref5,pref6,pref7
+0,0.65,NA,0.2,0.2,0.75,0.75,0.25,NA,NA,NA,NA,223,323,True,322112,6,NA,prior_inference,322,clouds,NA,201610,NA,blue things,red things,green things,striped,circles,squares,NA
+0,0.15,NA,0.75,0.2,0.15,0.4,0.65,NA,NA,NA,NA,333,211,True,212111,7,NA,prior_inference,111,clouds,NA,260010,NA,blue things,red things,green things,solid,circles,squares,NA
+0,0.1,NA,0.25,0.8,0.8,0.35,0.3,NA,NA,NA,NA,112,211,True,322122,8,NA,prior_inference,212,blue things,NA,15772,NA,clouds,circles,squares,solid,red things,green things,NA
+0,0.65,NA,0.25,0.05,0.9,0.1,0.2,NA,NA,NA,NA,323,222,False,122122,9,NA,prior_inference,233,blue things,NA,256670,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+0,0.15,NA,0.6,0.85,0.2,0.85,0.1,NA,NA,NA,NA,233,133,False,121211,10,NA,prior_inference,321,solid things,NA,258120,NA,clouds,circles,squares,blue,striped things,polka-dotted things,NA
+0,0.05,NA,0.1,0.85,0.1,0.85,0.15,NA,NA,NA,NA,322,232,True,213222,11,NA,prior_inference,332,blue things,NA,81471,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+0,0.8,NA,0.1,0,0.7,0.7,0.15,NA,NA,NA,NA,322,311,True,213211,12,NA,prior_inference,331,solid things,NA,39451,NA,clouds,circles,squares,blue,striped things,polka-dotted things,NA
+0,0.1,NA,0.1,0.75,0.05,0.85,0.05,NA,NA,NA,NA,332,333,True,213212,13,NA,prior_inference,233,clouds,NA,291750,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+0,0.45,NA,0.95,0,0.15,0.1,0.8,NA,NA,NA,NA,333,323,True,211212,14,NA,prior_inference,121,clouds,NA,285610,NA,blue things,red things,green things,striped,circles,squares,NA
+0,0.15,NA,0,0.85,0.05,0.9,0.1,NA,NA,NA,NA,322,312,True,323211,15,NA,prior_inference,332,blue things,NA,78262,NA,solid things,striped things,polka-dotted things,square,red things,green things,NA
+0,0.15,NA,0.05,0.8,0.1,0.9,0,NA,NA,NA,NA,313,322,True,212212,16,NA,prior_inference,223,clouds,NA,174470,NA,blue things,red things,green things,striped,circles,squares,NA
+0,0.85,NA,0.1,0.15,0.15,0.75,0.15,NA,NA,NA,NA,332,223,True,212122,17,NA,prior_inference,233,solid things,NA,254860,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+0,0.65,NA,0.15,0.75,0.2,0.85,0.05,NA,NA,NA,NA,233,121,True,212211,18,NA,prior_inference,331,clouds,NA,233150,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+0,0.15,NA,0.75,0.15,0.1,0.15,0.8,NA,NA,NA,NA,323,213,True,322111,19,NA,prior_inference,113,clouds,NA,196020,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+0,0.1,NA,0.75,0.05,0.9,0.1,0.1,NA,NA,NA,NA,313,311,True,321211,20,NA,prior_inference,112,clouds,NA,117842,NA,blue things,red things,green things,solid,circles,squares,NA
+0,0.1,NA,0.7,0.05,0.85,0.05,0.1,NA,NA,NA,NA,122,333,True,211111,21,NA,prior_inference,231,blue things,NA,267311,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+0,0.75,NA,0.05,0.1,0.2,0.8,0.05,NA,NA,NA,NA,112,313,True,212112,22,NA,prior_inference,333,blue things,NA,279960,NA,solid things,striped things,polka-dotted things,square,red things,green things,NA
+0,0.1,NA,0.1,0.7,0.85,0.2,0.1,NA,NA,NA,NA,222,133,True,212222,23,NA,prior_inference,223,clouds,NA,226850,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+0,0.05,NA,0.05,0.85,0.05,0.05,0.8,NA,NA,NA,NA,323,331,True,321111,24,NA,prior_inference,312,blue things,NA,183430,NA,solid things,striped things,polka-dotted things,square,red things,green things,NA
+0,0.1,NA,0.1,0.95,0.1,0.15,0.85,NA,NA,NA,NA,123,112,True,211211,25,NA,prior_inference,211,clouds,NA,136711,NA,blue things,red things,green things,solid,circles,squares,NA
+0,0.5,0.7,0.75,0.7,0.5,0.35,0.7,NA,NA,NA,231,223,212,True,NA,27,311,utterance_choice,NA,striped,NA,159200,7,polka-dotted,green,blue,NA,circle,solid,red
+0,0.5,0.75,0.35,0.65,0.3,0.35,0.5,0.75,0.7,blue,221,113,332,False,NA,28,111,utterance_choice,NA,striped,cloud,95600,9,polka-dotted,solid,green,NA,square,circle,red
+0,0.25,0.65,0.65,0.25,0.35,0.7,0.5,NA,NA,NA,231,313,223,True,NA,29,22b1,utterance_choice,NA,green,NA,173700,7,polka-dotted,solid,blue,NA,circle,striped,square
+0,0.35,NA,0.65,0.7,0.3,0.3,0.7,NA,NA,NA,111,231,132,True,NA,30,22b2b,utterance_choice,NA,polka-dotted,NA,47600,6,cloud,blue,red,NA,solid,circle,NA
+0,NA,NA,0.7,0.7,0.5,0.65,0.7,NA,NA,NA,211,221,213,True,NA,31,322b,utterance_choice,NA,solid,NA,97600,5,green,circle,blue,NA,striped,NA,NA
+0,0.7,NA,0.75,0.65,0.7,0.35,0.65,NA,NA,NA,122,332,123,True,NA,32,22a2b,utterance_choice,NA,cloud,NA,147800,6,red,green,polka-dotted,NA,striped,square,NA
+0,0.3,0.7,0.4,0.8,0.3,0.7,0.3,0.7,NA,NA,212,133,322,True,NA,33,211,utterance_choice,NA,red,circle,212500,8,solid,polka-dotted,striped,NA,square,green,cloud
+0,0.7,0.5,0.65,0.65,0.3,0.3,0.25,NA,NA,NA,121,312,123,True,NA,34,22a1,utterance_choice,NA,green,NA,138800,7,solid,blue,striped,NA,cloud,red,square
+0,0.9,NA,0.5,0.5,0.5,0.2,0.3,NA,NA,NA,211,131,311,True,NA,35,321,utterance_choice,NA,circle,NA,2200,6,polka-dotted,cloud,solid,NA,square,blue,NA
+0,NA,NA,0.9,0.4,0.5,0.65,0.25,NA,NA,NA,112,312,212,True,NA,36,331,utterance_choice,NA,red,NA,21900,5,cloud,solid,circle,NA,square,NA,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,121,313,True,212222,6,NA,prior_inference,321,solid things,NA,115330,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,223,313,True,213222,7,NA,prior_inference,213,blue things,NA,174911,NA,clouds,circles,squares,solid,red things,green things,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,111,311,True,211212,8,NA,prior_inference,323,solid things,NA,177261,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,331,122,True,212111,9,NA,prior_inference,222,solid things,NA,36081,NA,clouds,circles,squares,red,striped things,polka-dotted things,NA
+1,0.5,NA,0.05,0.5,0.5,0.5,0.05,NA,NA,NA,NA,123,232,True,212211,10,NA,prior_inference,333,blue things,NA,282670,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+1,0.05,NA,0.5,0.5,0.5,0.05,0.5,NA,NA,NA,NA,332,213,True,211111,11,NA,prior_inference,123,solid things,NA,151880,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+1,0,NA,0.95,0.05,0.05,0.05,0.95,NA,NA,NA,NA,121,111,True,323211,12,NA,prior_inference,131,solid things,NA,2381,NA,clouds,circles,squares,blue,striped things,polka-dotted things,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,211,131,True,212212,13,NA,prior_inference,112,blue things,NA,10060,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,321,231,True,322122,14,NA,prior_inference,221,clouds,NA,4921,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,222,111,True,212122,15,NA,prior_inference,112,solid things,NA,32231,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+1,0.95,NA,0,0,0.05,0.95,0.05,NA,NA,NA,NA,222,131,False,111111,16,NA,prior_inference,313,blue things,NA,122470,NA,clouds,circles,squares,solid,red things,green things,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,213,323,True,213211,17,NA,prior_inference,333,blue things,NA,287261,NA,solid things,striped things,polka-dotted things,square,red things,green things,NA
+1,0.5,NA,0.5,0.05,0.5,0.5,0.5,NA,NA,NA,NA,123,111,True,212112,18,NA,prior_inference,311,clouds,NA,133150,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+1,0.05,NA,0.05,0.95,0.05,0.05,0.95,NA,NA,NA,NA,332,122,True,321111,19,NA,prior_inference,212,clouds,NA,75620,NA,solid things,striped things,polka-dotted things,red,circles,squares,NA
+1,0,NA,0.05,1,0.5,0.5,0.95,NA,NA,NA,NA,132,112,False,111212,20,NA,prior_inference,221,clouds,NA,49510,NA,blue things,red things,green things,striped,circles,squares,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,322,331,True,211211,21,NA,prior_inference,211,clouds,NA,39321,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,221,231,True,213212,22,NA,prior_inference,232,clouds,NA,58570,NA,blue things,red things,green things,polka-dotted,circles,squares,NA
+1,0.95,NA,0.95,0.95,0.95,0.95,0.95,NA,NA,NA,NA,211,111,True,321211,23,NA,prior_inference,313,blue things,NA,114071,NA,clouds,circles,squares,solid,red things,green things,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,111,133,True,322111,24,NA,prior_inference,132,solid things,NA,212930,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+1,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,313,311,True,322112,25,NA,prior_inference,331,solid things,NA,117030,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+1,0.5,NA,0.5,0.95,0.5,0.5,0.5,NA,NA,NA,332,133,313,True,NA,27,22b2b,utterance_choice,NA,green,NA,223100,6,red,square,cloud,NA,solid,polka-dotted,NA
+1,0.05,0.05,0.95,0.05,0.05,0.05,0.05,0.05,0.05,blue,211,323,132,False,NA,28,111,utterance_choice,NA,circle,cloud,187700,9,green,striped,square,NA,red,solid,polka-dotted
+1,0.05,0.05,0.05,0.05,0.05,0.05,0.95,0.05,NA,NA,131,213,122,True,NA,29,211,utterance_choice,NA,polka-dotted,circle,104100,8,solid,blue,red,NA,striped,green,cloud
+1,NA,NA,0,0,1,0,0.05,NA,NA,NA,111,211,131,True,NA,30,322b,utterance_choice,NA,cloud,NA,2000,5,solid,polka-dotted,circle,NA,blue,NA,NA
+1,0.05,NA,0.05,0.05,0.05,0.05,0.95,NA,NA,NA,112,323,113,True,NA,31,22a2b,utterance_choice,NA,solid,NA,193300,6,square,cloud,striped,NA,red,green,NA
+1,NA,NA,0.05,0.95,0,0.05,0,NA,NA,NA,311,313,312,True,NA,32,331,utterance_choice,NA,green,NA,119700,5,square,red,solid,NA,blue,NA,NA
+1,0.95,NA,0.05,0.05,0,0,0,NA,NA,NA,311,333,321,True,NA,33,321,utterance_choice,NA,square,NA,261200,6,striped,green,polka-dotted,NA,blue,solid,NA
+1,0.05,0.95,0.05,0.05,0,0,0,NA,NA,NA,111,331,221,True,NA,34,311,utterance_choice,NA,square,NA,6200,7,circle,striped,polka-dotted,NA,solid,blue,cloud
+1,0.05,0.05,0.95,0.05,0,0.05,0.05,NA,NA,NA,212,333,132,True,NA,35,22b1,utterance_choice,NA,green,NA,271500,7,circle,polka-dotted,square,NA,cloud,solid,red
+1,0,0.05,0.05,0.05,0,0.05,0.95,NA,NA,NA,211,122,231,True,NA,36,22a1,utterance_choice,NA,red,NA,24200,7,solid,blue,circle,NA,polka-dotted,striped,cloud
+2,0.4,NA,0.25,0.65,0.35,0.75,0.6,NA,NA,NA,NA,323,131,True,212122,6,NA,prior_inference,133,blue things,NA,228360,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+2,0.45,NA,0.65,0.65,0.25,0.55,0.8,NA,NA,NA,NA,111,212,True,213211,7,NA,prior_inference,312,solid things,NA,21080,NA,clouds,circles,squares,red,striped things,polka-dotted things,NA
+2,0.25,NA,0.7,0.3,0.75,0.3,0.65,NA,NA,NA,NA,233,211,True,322111,8,NA,prior_inference,212,blue things,NA,234631,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+2,0.35,NA,0.6,0.35,0.4,0.75,0.35,NA,NA,NA,NA,131,321,True,213222,9,NA,prior_inference,331,solid things,NA,7660,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+2,0.3,NA,0.35,0.7,0.75,0.3,0.65,NA,NA,NA,NA,323,313,False,111212,10,NA,prior_inference,232,blue things,NA,197710,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+2,0.3,NA,0.6,0.65,0.35,0.3,0.6,NA,NA,NA,NA,313,311,True,321211,11,NA,prior_inference,212,blue things,NA,118741,NA,clouds,circles,squares,solid,red things,green things,NA
+2,0.15,NA,0.7,0.3,0.7,0.3,0.35,NA,NA,NA,NA,132,212,True,211211,12,NA,prior_inference,221,solid things,NA,50400,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+2,0.25,NA,0.25,0.6,0.65,0.8,0.3,NA,NA,NA,NA,321,113,True,212222,13,NA,prior_inference,121,solid things,NA,82900,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+2,0.25,NA,0.7,0.3,0.65,0.4,0.3,NA,NA,NA,NA,223,112,True,212211,14,NA,prior_inference,232,solid things,NA,166950,NA,clouds,circles,squares,red,striped things,polka-dotted things,NA
+2,0.15,NA,0.65,0.3,0.35,0.65,0.7,NA,NA,NA,NA,213,333,True,322122,15,NA,prior_inference,313,clouds,NA,280950,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+2,0.3,NA,0.3,0.6,0.35,0.7,0.7,NA,NA,NA,NA,232,322,True,321111,16,NA,prior_inference,112,clouds,NA,66021,NA,solid things,striped things,polka-dotted things,red,circles,squares,NA
+2,0.25,NA,0.7,0.35,0.25,0.6,0.3,NA,NA,NA,NA,233,232,True,322112,17,NA,prior_inference,332,blue things,NA,245241,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+2,0.25,NA,0.65,0.4,0.4,0.2,0.7,NA,NA,NA,NA,333,313,True,323211,18,NA,prior_inference,323,solid things,NA,287351,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+2,0.3,NA,0.7,0.35,0.65,0.35,0.25,NA,NA,NA,NA,133,132,True,211212,19,NA,prior_inference,312,clouds,NA,214021,NA,solid things,striped things,polka-dotted things,red,circles,squares,NA
+2,0.35,NA,0.3,0.75,0.8,0.4,0.7,NA,NA,NA,NA,111,211,True,213212,20,NA,prior_inference,231,solid things,NA,3561,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+2,0.25,NA,0.65,0.35,0.1,0.75,0.4,NA,NA,NA,NA,231,122,True,211111,21,NA,prior_inference,113,solid things,NA,88961,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+2,0.35,NA,0.35,0.65,0.3,0.65,0.65,NA,NA,NA,NA,222,321,True,212212,22,NA,prior_inference,231,clouds,NA,31251,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+2,0.3,NA,0.35,0.25,0.7,0.7,0.7,NA,NA,NA,NA,232,323,True,212111,23,NA,prior_inference,123,clouds,NA,199740,NA,blue things,red things,green things,striped,circles,squares,NA
+2,0.2,NA,0.75,0.3,0.1,0.65,0.25,NA,NA,NA,NA,212,223,True,212112,24,NA,prior_inference,123,blue things,NA,176040,NA,clouds,circles,squares,striped,red things,green things,NA
+2,0.35,NA,0.65,0.3,0.3,0.8,0.75,NA,NA,NA,NA,331,322,False,112112,25,NA,prior_inference,223,solid things,NA,163980,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+2,0.6,NA,0.2,0.45,0.2,0.7,0.65,NA,NA,NA,121,331,132,True,NA,27,22b2b,utterance_choice,NA,blue,NA,48600,6,polka-dotted,red,square,NA,striped,cloud,NA
+2,0.65,0.65,0.4,0.4,0.6,0.6,0.5,NA,NA,NA,113,333,223,True,NA,28,311,utterance_choice,NA,striped,NA,284900,7,square,polka-dotted,circle,NA,solid,green,cloud
+2,0.4,0.35,0.5,0.35,0.5,0.5,0.4,NA,NA,NA,322,213,123,True,NA,29,22b1,utterance_choice,NA,cloud,NA,151500,7,red,circle,square,NA,solid,green,striped
+2,0.2,0.6,0.8,0.2,0.4,0.35,0.65,NA,NA,NA,231,123,113,True,NA,30,22a1,utterance_choice,NA,striped,NA,149000,7,green,solid,cloud,NA,polka-dotted,circle,blue
+2,0.7,0.25,0.4,0.7,0.75,0.35,0.65,0.7,0.65,square,131,223,312,False,NA,31,111,utterance_choice,NA,circle,blue,160100,9,striped,cloud,red,NA,solid,polka-dotted,green
+2,0.4,NA,0.4,0.35,0.65,0.2,0.35,NA,NA,NA,312,113,332,True,NA,32,22a2b,utterance_choice,NA,green,NA,96300,6,square,red,solid,NA,polka-dotted,cloud,NA
+2,0.7,NA,0.7,0.7,0.4,0.35,0.65,NA,NA,NA,212,313,113,True,NA,33,321,utterance_choice,NA,square,NA,130300,6,red,cloud,solid,NA,circle,green,NA
+2,NA,NA,0.4,0.7,0.65,0.35,0.8,NA,NA,NA,321,323,322,True,NA,34,331,utterance_choice,NA,blue,NA,186700,5,striped,green,red,NA,square,NA,NA
+2,0.3,0.25,0.4,0.3,0.65,0.8,0.65,0.7,NA,NA,321,233,312,True,NA,35,211,utterance_choice,NA,square,solid,236000,8,blue,red,green,NA,circle,polka-dotted,striped
+2,NA,NA,0.65,0.65,0.65,0.35,0.45,NA,NA,NA,112,312,113,True,NA,36,322b,utterance_choice,NA,square,NA,88000,5,solid,green,cloud,NA,red,NA,NA
+3,1,NA,0.5,0,0.95,0,0.5,NA,NA,NA,NA,323,213,True,212212,6,NA,prior_inference,312,clouds,NA,195310,NA,blue things,red things,green things,solid,circles,squares,NA
+3,0.5,NA,1,0,1,0.5,0.1,NA,NA,NA,NA,221,321,True,211212,7,NA,prior_inference,312,solid things,NA,17960,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+3,1,NA,0,0.1,0.2,0.5,0.9,NA,NA,NA,NA,122,112,True,322112,8,NA,prior_inference,312,clouds,NA,28451,NA,solid things,striped things,polka-dotted things,red,circles,squares,NA
+3,0,NA,0,1,1,0,0,NA,NA,NA,NA,313,111,True,321111,9,NA,prior_inference,212,clouds,NA,118540,NA,blue things,red things,green things,solid,circles,squares,NA
+3,0.5,NA,0.1,0,0.95,0,0.15,NA,NA,NA,NA,231,131,True,213212,10,NA,prior_inference,132,solid things,NA,48261,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+3,1,NA,0,0.3,0.5,0.5,0.5,NA,NA,NA,NA,112,121,True,212112,11,NA,prior_inference,321,clouds,NA,9750,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+3,1,NA,0.5,0.1,0,0.5,0.9,NA,NA,NA,NA,133,322,True,212211,12,NA,prior_inference,331,solid things,NA,212301,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+3,0,NA,0.85,0,1,0.1,0,NA,NA,NA,NA,132,221,True,212222,13,NA,prior_inference,122,clouds,NA,52541,NA,blue things,red things,green things,striped,circles,squares,NA
+3,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,121,312,False,112122,14,NA,prior_inference,323,solid things,NA,182980,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+3,1,NA,0.5,0,1,0,0.5,NA,NA,NA,NA,121,313,True,211111,15,NA,prior_inference,332,solid things,NA,127931,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+3,0.5,NA,0,1,0.5,0.5,0.5,NA,NA,NA,NA,323,311,True,213211,16,NA,prior_inference,312,blue things,NA,182841,NA,clouds,circles,squares,solid,red things,green things,NA
+3,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,113,111,False,111212,17,NA,prior_inference,332,solid things,NA,95250,NA,clouds,circles,squares,red,striped things,polka-dotted things,NA
+3,0.5,NA,0,0.55,0,0,1,NA,NA,NA,NA,131,122,True,322111,18,NA,prior_inference,112,blue things,NA,26232,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+3,0.5,NA,1,0,0.15,1,0.5,NA,NA,NA,NA,223,212,True,322122,19,NA,prior_inference,213,solid things,NA,172130,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+3,1,NA,0.5,0,0,0,1,NA,NA,NA,NA,332,322,True,321211,20,NA,prior_inference,313,blue things,NA,129060,NA,solid things,striped things,polka-dotted things,square,red things,green things,NA
+3,0.5,NA,0.7,0,0.5,0.5,0.5,NA,NA,NA,NA,311,222,True,212122,21,NA,prior_inference,221,blue things,NA,29431,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+3,0,NA,0.5,1,0.5,0.5,0.5,NA,NA,NA,NA,321,133,True,212111,22,NA,prior_inference,132,blue things,NA,213431,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+3,1,NA,0.5,0,0.5,0.5,0.5,NA,NA,NA,NA,321,223,True,213222,23,NA,prior_inference,323,clouds,NA,200781,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+3,0.5,NA,0.5,0.5,0,0,1,NA,NA,NA,NA,331,321,True,323211,24,NA,prior_inference,311,blue things,NA,6802,NA,solid things,striped things,polka-dotted things,square,red things,green things,NA
+3,1,NA,0,0.5,0.5,1,0,NA,NA,NA,NA,123,112,True,211211,25,NA,prior_inference,332,clouds,NA,147551,NA,solid things,striped things,polka-dotted things,red,circles,squares,NA
+3,1,0,0,0,0,0,0,NA,NA,NA,231,312,213,True,NA,27,22b1,utterance_choice,NA,red,NA,103100,7,solid,polka-dotted,square,NA,blue,circle,green
+3,1,NA,0,0,1,0,1,NA,NA,NA,112,322,313,True,NA,28,22b2b,utterance_choice,NA,striped,NA,124000,6,square,red,green,NA,cloud,solid,NA
+3,1,0,0,0,0,0,1,NA,NA,NA,121,312,221,True,NA,29,22a1,utterance_choice,NA,circle,NA,17400,7,blue,solid,cloud,NA,red,striped,square
+3,1,NA,0,1,0,0,0,NA,NA,NA,121,222,123,True,NA,30,321,utterance_choice,NA,green,NA,141100,6,circle,blue,red,NA,striped,cloud,NA
+3,0,0,0,0,0,0,0,0,0,blue,111,233,322,False,NA,31,111,utterance_choice,NA,cloud,striped,239100,9,circle,red,square,NA,solid,polka-dotted,green
+3,NA,NA,0,1,1,0,1,NA,NA,NA,321,123,323,True,NA,32,322b,utterance_choice,NA,blue,NA,198600,5,square,green,cloud,NA,striped,NA,NA
+3,NA,NA,1,1,0,0,0,NA,NA,NA,123,323,223,True,NA,33,331,utterance_choice,NA,green,NA,202300,5,square,circle,cloud,NA,striped,NA,NA
+3,1,NA,0,1,0,0,1,NA,NA,NA,332,213,233,True,NA,34,22a2b,utterance_choice,NA,red,NA,248800,6,green,solid,square,NA,polka-dotted,circle,NA
+3,0,0,0,0,0,1,0,0,NA,NA,331,222,133,True,NA,35,211,utterance_choice,NA,green,blue,211000,8,striped,circle,polka-dotted,NA,square,red,cloud
+3,0,0,1,0,0,0,0,NA,NA,NA,221,233,212,True,NA,36,311,utterance_choice,NA,circle,NA,234900,7,solid,green,blue,NA,red,polka-dotted,striped
+4,0,NA,0.5,0.75,0,0,1,NA,NA,NA,NA,233,223,True,323211,6,NA,prior_inference,213,clouds,NA,255022,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+4,0,NA,0.25,1,0.05,0,0.75,NA,NA,NA,NA,213,311,True,213222,7,NA,prior_inference,211,clouds,NA,97121,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+4,1,NA,0,0.5,0.2,0,0.75,NA,NA,NA,NA,233,211,True,322122,8,NA,prior_inference,213,blue things,NA,247232,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+4,0,NA,0.35,1,0.25,1,0,NA,NA,NA,NA,211,133,True,211111,9,NA,prior_inference,323,solid things,NA,227850,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+4,0.5,NA,0,1,0,1,0,NA,NA,NA,NA,213,113,True,321211,10,NA,prior_inference,323,solid things,NA,196081,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+4,0.2,NA,0.5,1,1,0,0.3,NA,NA,NA,NA,231,323,True,212211,11,NA,prior_inference,222,clouds,NA,185641,NA,blue things,red things,green things,striped,circles,squares,NA
+4,0.2,NA,1,0.5,0,0.5,1,NA,NA,NA,NA,212,132,True,212212,12,NA,prior_inference,111,solid things,NA,50001,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+4,0,NA,0.2,1,0.8,0,0.5,NA,NA,NA,NA,332,212,True,322111,13,NA,prior_inference,222,solid things,NA,76852,NA,clouds,circles,squares,red,striped things,polka-dotted things,NA
+4,0.5,NA,1,0,0.7,0.35,0.5,NA,NA,NA,NA,233,222,True,212112,14,NA,prior_inference,122,clouds,NA,239021,NA,solid things,striped things,polka-dotted things,red,circles,squares,NA
+4,0.05,NA,0.85,0.5,0.85,0,0.5,NA,NA,NA,NA,122,333,True,212222,15,NA,prior_inference,132,clouds,NA,271741,NA,blue things,red things,green things,polka-dotted,circles,squares,NA
+4,0,NA,0,1,0.1,0.9,0.1,NA,NA,NA,NA,233,131,True,321111,16,NA,prior_inference,332,blue things,NA,244240,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+4,0.1,NA,0.5,0.9,0.15,0,0.95,NA,NA,NA,NA,213,322,True,212111,17,NA,prior_inference,122,blue things,NA,107211,NA,clouds,circles,squares,striped,red things,green things,NA
+4,1,NA,0,0.5,0.95,0.5,0.2,NA,NA,NA,NA,131,121,True,211212,18,NA,prior_inference,223,blue things,NA,155871,NA,clouds,circles,squares,striped,red things,green things,NA
+4,0,NA,1,0.5,0.5,0.5,0.65,NA,NA,NA,NA,131,331,True,213212,19,NA,prior_inference,311,solid things,NA,7300,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+4,0.5,NA,0.45,0.45,0.5,0.65,0.4,NA,NA,NA,NA,122,311,False,112121,20,NA,prior_inference,313,solid things,NA,120880,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+4,0.5,NA,0.5,0.65,0.5,0.5,0.55,NA,NA,NA,NA,123,122,False,113232,21,NA,prior_inference,121,solid things,NA,139920,NA,clouds,circles,squares,blue,striped things,polka-dotted things,NA
+4,0,NA,1,0,0.5,0.6,0.5,NA,NA,NA,NA,332,231,True,213211,22,NA,prior_inference,131,clouds,NA,70721,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+4,1,NA,0.5,0.05,0.4,0.6,0.5,NA,NA,NA,NA,233,321,True,212122,23,NA,prior_inference,331,solid things,NA,233350,NA,clouds,circles,squares,blue,striped things,polka-dotted things,NA
+4,0,NA,0.95,0.5,0,0.5,1,NA,NA,NA,NA,222,312,True,211211,24,NA,prior_inference,111,clouds,NA,34110,NA,blue things,red things,green things,solid,circles,squares,NA
+4,0.5,NA,0,0.9,0,1,0.5,NA,NA,NA,NA,121,122,True,322112,25,NA,prior_inference,132,blue things,NA,52460,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+4,0,0,1,0,0,0,0,NA,NA,NA,231,333,132,True,NA,27,311,utterance_choice,NA,cloud,NA,271200,7,red,blue,circle,NA,green,polka-dotted,square
+4,0,0,0,0,0,0,1,0,0,solid,211,333,122,False,NA,28,111,utterance_choice,NA,green,striped,266700,9,square,blue,cloud,NA,red,polka-dotted,circle
+4,0,NA,1,0,0,0,0,NA,NA,NA,213,133,313,True,NA,29,321,utterance_choice,NA,green,NA,223300,6,circle,solid,cloud,NA,square,polka-dotted,NA
+4,0,NA,0,1,0,0,0,NA,NA,NA,211,131,112,True,NA,30,22b2b,utterance_choice,NA,polka-dotted,NA,10000,6,red,solid,circle,NA,cloud,blue,NA
+4,NA,NA,0,0,0,1,0,NA,NA,NA,112,132,122,True,NA,31,331,utterance_choice,NA,red,NA,53000,5,polka-dotted,striped,cloud,NA,solid,NA,NA
+4,1,0,0,0,0,0,0,NA,NA,NA,121,212,223,True,NA,32,22b1,utterance_choice,NA,red,NA,158800,7,cloud,circle,blue,NA,solid,striped,green
+4,0,0,0,0,1,0,0,NA,NA,NA,212,323,123,True,NA,33,22a1,utterance_choice,NA,circle,NA,199100,7,solid,striped,red,NA,green,square,cloud
+4,0,0,0,1,0,0,0,0,NA,NA,111,233,323,True,NA,34,211,utterance_choice,NA,striped,square,255300,8,solid,blue,circle,NA,green,polka-dotted,cloud
+4,NA,NA,1,0,0,0,0,NA,NA,NA,321,123,323,True,NA,35,322b,utterance_choice,NA,striped,NA,198600,5,cloud,blue,green,NA,square,NA,NA
+4,0,NA,0,1,0,0,0,NA,NA,NA,222,132,223,True,NA,36,22a2b,utterance_choice,NA,green,NA,165800,6,red,striped,polka-dotted,NA,circle,cloud,NA
+5,0.5,NA,0.5,0.7,0.5,0.7,0.5,NA,NA,NA,NA,123,221,True,321111,6,NA,prior_inference,322,blue things,NA,142541,NA,clouds,circles,squares,striped,red things,green things,NA
+5,0.5,NA,0.9,0.5,0.8,0.5,0.5,NA,NA,NA,NA,321,323,True,211212,7,NA,prior_inference,213,solid things,NA,194751,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+5,0.5,NA,0.5,0.75,0.5,0.75,0.5,NA,NA,NA,NA,232,333,True,322122,8,NA,prior_inference,332,blue things,NA,275241,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+5,0.75,NA,0.5,0.5,0.5,0.5,0.85,NA,NA,NA,NA,333,211,True,212211,9,NA,prior_inference,113,blue things,NA,275440,NA,clouds,circles,squares,solid,red things,green things,NA
+5,0.8,NA,0.5,0.5,0.45,0.5,0.85,NA,NA,NA,NA,221,233,True,212212,10,NA,prior_inference,331,clouds,NA,233241,NA,blue things,red things,green things,polka-dotted,circles,squares,NA
+5,0.45,NA,0.85,0.4,0.7,0.45,0.45,NA,NA,NA,NA,122,222,True,213212,11,NA,prior_inference,212,solid things,NA,36201,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+5,0.5,NA,0.5,0.75,0.5,0.5,0.85,NA,NA,NA,NA,331,332,True,322112,12,NA,prior_inference,312,blue things,NA,74330,NA,solid things,striped things,polka-dotted things,square,red things,green things,NA
+5,0.5,NA,0.5,0.75,0.75,0.5,0.5,NA,NA,NA,NA,111,123,True,322111,13,NA,prior_inference,122,blue things,NA,139631,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+5,0.5,NA,0.5,0.75,0.5,0.5,0.85,NA,NA,NA,NA,313,211,False,121111,14,NA,prior_inference,122,blue things,NA,120740,NA,clouds,circles,squares,striped,red things,green things,NA
+5,0.5,NA,0.8,0.5,0.5,0.8,0.5,NA,NA,NA,NA,133,112,False,122122,15,NA,prior_inference,213,solid things,NA,220430,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+5,0.7,NA,0.5,0.5,0.4,0.5,0.75,NA,NA,NA,NA,123,111,True,212112,16,NA,prior_inference,311,clouds,NA,133150,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+5,0.5,NA,0.5,0.8,0.8,0.5,0.5,NA,NA,NA,NA,222,312,True,213222,17,NA,prior_inference,212,clouds,NA,35110,NA,blue things,red things,green things,solid,circles,squares,NA
+5,0.5,NA,0.5,0.8,0.5,0.5,0.75,NA,NA,NA,NA,331,131,True,321211,18,NA,prior_inference,211,clouds,NA,7222,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+5,0.5,NA,0.5,0.8,0.5,0.5,0.75,NA,NA,NA,NA,213,322,True,212111,19,NA,prior_inference,122,blue things,NA,107211,NA,clouds,circles,squares,striped,red things,green things,NA
+5,0.5,NA,0.5,0.75,0.5,0.75,0.5,NA,NA,NA,NA,331,322,True,211211,20,NA,prior_inference,223,clouds,NA,163970,NA,blue things,red things,green things,striped,circles,squares,NA
+5,0.8,NA,0.5,0.5,0.5,0.75,0.5,NA,NA,NA,NA,211,122,True,211111,21,NA,prior_inference,323,clouds,NA,183870,NA,blue things,red things,green things,striped,circles,squares,NA
+5,0.8,NA,0.5,0.5,0.5,0.75,0.4,NA,NA,NA,NA,332,213,True,212222,22,NA,prior_inference,333,clouds,NA,278881,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+5,0.75,NA,0.5,0.5,0.75,0.5,0.5,NA,NA,NA,NA,211,133,True,212122,23,NA,prior_inference,233,blue things,NA,257771,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+5,0.85,NA,0.5,0.45,0.8,0.5,0.5,NA,NA,NA,NA,323,311,True,213211,24,NA,prior_inference,312,clouds,NA,182841,NA,blue things,red things,green things,solid,circles,squares,NA
+5,0.5,NA,0.5,0.8,0.5,0.5,0.8,NA,NA,NA,NA,323,322,True,323211,25,NA,prior_inference,321,solid things,NA,186700,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+5,0.5,NA,0.5,0.5,0.75,0.5,0.5,NA,NA,NA,121,222,123,True,NA,27,321,utterance_choice,NA,green,NA,141100,6,red,cloud,blue,NA,circle,striped,NA
+5,0.5,0.5,0.5,0.5,0.5,0.8,0.5,NA,NA,NA,211,123,122,True,NA,28,22a1,utterance_choice,NA,circle,NA,139700,7,solid,striped,cloud,NA,green,red,blue
+5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,red,231,123,312,False,NA,29,111,utterance_choice,NA,green,polka-dotted,139200,9,solid,blue,cloud,NA,square,striped,circle
+5,0.85,NA,0.5,0.5,0.5,0.5,0.85,NA,NA,NA,112,322,313,True,NA,30,22b2b,utterance_choice,NA,cloud,NA,124000,6,square,solid,striped,NA,green,red,NA
+5,0.45,0.5,0.9,0.9,0.5,0.5,0.5,NA,NA,NA,211,123,321,True,NA,31,22b1,utterance_choice,NA,blue,NA,134100,7,cloud,circle,square,NA,striped,green,solid
+5,0.9,0.5,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,211,113,312,True,NA,32,311,utterance_choice,NA,green,NA,87200,7,circle,cloud,blue,NA,red,solid,square
+5,NA,NA,0.85,0.5,0.5,0.65,0.5,NA,NA,NA,222,332,232,True,NA,33,322b,utterance_choice,NA,polka-dotted,NA,81300,5,striped,red,circle,NA,square,NA,NA
+5,0.5,NA,0.5,0.5,0.85,0.85,0.85,NA,NA,NA,221,332,232,True,NA,34,22a2b,utterance_choice,NA,blue,NA,80400,6,polka-dotted,red,circle,NA,square,striped,NA
+5,NA,NA,0.9,0.5,0.5,0.9,0.5,NA,NA,NA,231,233,232,True,NA,35,331,utterance_choice,NA,circle,NA,242700,5,blue,green,polka-dotted,NA,red,NA,NA
+5,0.5,0.5,0.5,0.5,0.5,0.5,0.85,0.5,NA,NA,111,233,323,True,NA,36,211,utterance_choice,NA,striped,blue,255300,8,green,cloud,polka-dotted,NA,square,circle,solid
+6,0.8,NA,0.25,0.25,0.5,0.5,0.5,NA,NA,NA,NA,221,211,True,323211,6,NA,prior_inference,231,solid things,NA,4260,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+6,0.5,NA,0.8,0.05,0.85,0.1,0.1,NA,NA,NA,NA,122,323,True,211211,7,NA,prior_inference,213,solid things,NA,195451,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+6,0.1,NA,0.5,0.95,0.9,0.1,0.5,NA,NA,NA,NA,222,331,True,212222,8,NA,prior_inference,221,solid things,NA,31821,NA,clouds,circles,squares,blue,striped things,polka-dotted things,NA
+6,0.7,NA,0.5,0.1,0.05,0.05,0.95,NA,NA,NA,NA,223,332,True,212111,9,NA,prior_inference,331,clouds,NA,168411,NA,blue things,red things,green things,polka-dotted,circles,squares,NA
+6,0.5,NA,0.5,0.5,0,0,1,NA,NA,NA,NA,222,332,True,213211,10,NA,prior_inference,132,blue things,NA,79841,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+6,0.5,NA,0.5,1,0.7,0,0.5,NA,NA,NA,NA,331,231,True,322112,11,NA,prior_inference,232,blue things,NA,59571,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+6,0.75,NA,0.05,0.5,0,0,1,NA,NA,NA,NA,231,223,False,122111,12,NA,prior_inference,113,blue things,NA,170030,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+6,0,NA,0.75,0,0,0,1,NA,NA,NA,NA,232,322,True,321111,13,NA,prior_inference,112,solid things,NA,66021,NA,clouds,circles,squares,red,striped things,polka-dotted things,NA
+6,0.5,NA,0,0.95,0.9,0.5,0.05,NA,NA,NA,NA,133,211,True,211111,14,NA,prior_inference,222,blue things,NA,210330,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+6,0.95,NA,1,0.05,0.5,0.75,0,NA,NA,NA,NA,131,123,True,322111,15,NA,prior_inference,113,solid things,NA,148931,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+6,0.5,NA,0.5,0.5,1,0,0.5,NA,NA,NA,NA,323,312,True,212112,16,NA,prior_inference,212,solid things,NA,183620,NA,clouds,circles,squares,red,striped things,polka-dotted things,NA
+6,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,323,122,False,111211,17,NA,prior_inference,231,blue things,NA,184400,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+6,0.5,NA,0,1,0.5,1,0,NA,NA,NA,NA,122,111,True,212212,18,NA,prior_inference,312,blue things,NA,27540,NA,clouds,circles,squares,solid,red things,green things,NA
+6,1,NA,0,0.5,0.5,0.5,0.9,NA,NA,NA,NA,323,211,True,212122,19,NA,prior_inference,213,blue things,NA,194330,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+6,0.95,NA,0,0,0.9,0.5,0.05,NA,NA,NA,NA,223,313,True,322122,20,NA,prior_inference,323,clouds,NA,202282,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+6,1,NA,0.5,0,1,0.5,0,NA,NA,NA,NA,121,212,True,212211,21,NA,prior_inference,322,clouds,NA,41280,NA,solid things,striped things,polka-dotted things,red,circles,squares,NA
+6,0,NA,0.5,0.95,1,0,0.5,NA,NA,NA,NA,233,333,True,211212,22,NA,prior_inference,322,solid things,NA,291401,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+6,0.5,NA,0.5,0.5,0,1,0.5,NA,NA,NA,NA,333,321,True,213222,23,NA,prior_inference,331,clouds,NA,263351,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+6,0,NA,0,1,0.5,1,0,NA,NA,NA,NA,131,111,True,321211,24,NA,prior_inference,123,solid things,NA,134561,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+6,0.5,NA,0,1,0.5,0.5,0.5,NA,NA,NA,NA,321,221,True,213212,25,NA,prior_inference,222,blue things,NA,30060,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+6,NA,NA,0,0,1,0,0,NA,NA,NA,112,132,122,True,NA,27,331,utterance_choice,NA,polka-dotted,NA,53000,5,cloud,striped,solid,NA,red,NA,NA
+6,0.5,0.5,0.5,0.5,0.5,1,0.5,0.5,0.5,square,331,123,212,False,NA,28,111,utterance_choice,NA,red,cloud,138300,9,circle,striped,solid,NA,blue,green,polka-dotted
+6,0.5,0.15,0.5,0.5,0.5,0.5,1,NA,NA,NA,221,113,112,True,NA,29,22a1,utterance_choice,NA,red,NA,85600,7,cloud,green,blue,NA,circle,striped,solid
+6,0.25,0,0.2,0.15,0.05,0.35,0.5,1,NA,NA,311,223,122,True,NA,30,211,utterance_choice,NA,blue,striped,160800,8,cloud,circle,red,NA,green,solid,square
+6,0.5,NA,0.5,0,0.5,0.5,1,NA,NA,NA,321,333,313,True,NA,31,321,utterance_choice,NA,striped,NA,279500,6,polka-dotted,green,solid,NA,square,blue,NA
+6,0.5,0.5,0.5,1,0.5,0.5,1,NA,NA,NA,321,133,231,True,NA,32,22b1,utterance_choice,NA,cloud,NA,205000,7,polka-dotted,circle,green,NA,blue,square,striped
+6,NA,NA,0.5,0.5,0.5,0.5,1,NA,NA,NA,112,232,212,True,NA,33,322b,utterance_choice,NA,red,NA,61400,5,circle,cloud,solid,NA,polka-dotted,NA,NA
+6,0.45,1,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,111,313,212,True,NA,34,311,utterance_choice,NA,square,NA,118500,7,blue,green,red,NA,circle,cloud,solid
+6,0.5,NA,0.5,0.5,0.5,0.5,1,NA,NA,NA,331,133,313,True,NA,35,22b2b,utterance_choice,NA,cloud,NA,222200,6,polka-dotted,green,square,NA,blue,solid,NA
+6,0.5,NA,1,0.5,0.5,0.5,0.5,NA,NA,NA,311,131,313,True,NA,36,22a2b,utterance_choice,NA,blue,NA,115700,6,solid,square,polka-dotted,NA,cloud,green,NA
+7,0.6,NA,0.5,0.5,0.5,1,0.5,NA,NA,NA,NA,122,123,True,322112,6,NA,prior_inference,323,blue things,NA,199372,NA,clouds,circles,squares,striped,red things,green things,NA
+7,0.5,NA,0.5,0.5,0.5,1,0.5,NA,NA,NA,NA,211,111,True,213212,7,NA,prior_inference,131,blue things,NA,2060,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+7,0.5,NA,0.5,1,0.5,0.5,0.5,NA,NA,NA,NA,213,311,True,213222,8,NA,prior_inference,211,clouds,NA,97121,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+7,0.5,NA,1,0.5,0.5,0.5,0.5,NA,NA,NA,NA,111,232,True,212122,9,NA,prior_inference,212,solid things,NA,60551,NA,clouds,circles,squares,red,striped things,polka-dotted things,NA
+7,0.5,NA,1,0.5,1,0.5,0.5,NA,NA,NA,NA,221,321,True,211212,10,NA,prior_inference,312,solid things,NA,17960,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+7,0.5,NA,1,0.5,0.5,1,0.5,NA,NA,NA,NA,221,233,True,212212,11,NA,prior_inference,331,blue things,NA,233241,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+7,0.5,NA,0.5,1,0.5,0.5,1,NA,NA,NA,NA,212,323,True,212222,12,NA,prior_inference,312,blue things,NA,183631,NA,solid things,striped things,polka-dotted things,square,red things,green things,NA
+7,1,NA,0.5,0.5,1,0.5,0.5,NA,NA,NA,NA,311,322,True,322111,13,NA,prior_inference,332,solid things,NA,77360,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+7,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,333,223,False,111211,14,NA,prior_inference,112,solid things,NA,284000,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+7,1,NA,0.5,0.5,1,0.5,0.5,NA,NA,NA,NA,133,113,True,321211,15,NA,prior_inference,323,clouds,NA,229550,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+7,0.5,NA,0.5,0.5,0.5,0.5,1,NA,NA,NA,NA,233,223,True,323211,16,NA,prior_inference,213,clouds,NA,255022,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+7,0.5,NA,1,0.5,1,0.5,0.5,NA,NA,NA,NA,211,223,True,322122,17,NA,prior_inference,221,blue things,NA,154730,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+7,0.5,NA,1,0.5,1,0.5,0.5,NA,NA,NA,NA,313,112,True,211211,18,NA,prior_inference,121,blue things,NA,117900,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+7,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,333,121,False,111111,19,NA,prior_inference,212,blue things,NA,264830,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+7,0.5,NA,0.5,0.5,0.5,0.5,1,NA,NA,NA,NA,233,332,True,213211,20,NA,prior_inference,331,solid things,NA,244400,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+7,1,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,132,211,True,212111,21,NA,prior_inference,311,clouds,NA,45751,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+7,1,NA,0.5,0.5,1,0.5,0.5,NA,NA,NA,NA,312,231,True,211111,22,NA,prior_inference,223,blue things,NA,160261,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+7,0.5,NA,1,0.5,1,0.5,0.5,NA,NA,NA,NA,131,321,True,321111,23,NA,prior_inference,211,solid things,NA,3120,NA,clouds,circles,squares,blue,striped things,polka-dotted things,NA
+7,1,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,122,223,True,212112,24,NA,prior_inference,233,solid things,NA,254361,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+7,0.5,NA,0.5,0.5,0.5,0.5,1,NA,NA,NA,NA,133,322,True,212211,25,NA,prior_inference,331,solid things,NA,212301,NA,blue things,red things,green things,square,striped things,polka-dotted things,NA
+7,0.75,1,0,0,0,0,0,NA,NA,NA,211,122,312,True,NA,27,22b1,utterance_choice,NA,circle,NA,27600,7,cloud,blue,square,NA,striped,solid,red
+7,NA,NA,0,0,0,1,1,NA,NA,NA,231,233,232,True,NA,28,331,utterance_choice,NA,green,NA,242700,5,polka-dotted,blue,circle,NA,red,NA,NA
+7,0.8,NA,0,0,1,0,0.8,NA,NA,NA,322,132,123,True,NA,29,22b2b,utterance_choice,NA,square,NA,144900,6,cloud,red,green,NA,polka-dotted,striped,NA
+7,NA,NA,1,0,1,0,0,NA,NA,NA,111,312,112,True,NA,30,322b,utterance_choice,NA,red,NA,20100,5,blue,cloud,solid,NA,square,NA,NA
+7,0,0.9,1,0,0,0,0,NA,NA,NA,222,133,322,True,NA,31,22a1,utterance_choice,NA,red,NA,212800,7,cloud,polka-dotted,square,NA,green,circle,striped
+7,0,1,0,0,0,0,0,0,NA,NA,321,133,232,True,NA,32,211,utterance_choice,NA,blue,striped,214900,8,square,green,circle,NA,cloud,red,polka-dotted
+7,1,NA,0,0,0,0,0.75,NA,NA,NA,212,332,222,True,NA,33,321,utterance_choice,NA,square,NA,76800,6,red,striped,polka-dotted,NA,solid,circle,NA
+7,1,NA,0,1,0,0,0.75,NA,NA,NA,331,113,133,True,NA,34,22a2b,utterance_choice,NA,square,NA,218500,6,polka-dotted,blue,solid,NA,green,cloud,NA
+7,0,0,0,0,0,1,0,NA,NA,NA,112,232,322,True,NA,35,311,utterance_choice,NA,striped,NA,66000,7,cloud,polka-dotted,red,NA,solid,square,circle
+7,0,0,0,0,0,0,0,0,0,green,111,323,232,False,NA,36,111,utterance_choice,NA,striped,blue,189100,9,polka-dotted,solid,red,NA,cloud,square,circle
+8,0.5,NA,0.5,0.5,0.75,0.35,0.5,NA,NA,NA,NA,131,231,True,213212,6,NA,prior_inference,221,blue things,NA,5401,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+8,0.75,NA,0.25,0.25,0.25,0.65,0.25,NA,NA,NA,NA,222,211,True,321111,7,NA,prior_inference,233,solid things,NA,237962,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+8,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,321,111,False,121111,8,NA,prior_inference,233,clouds,NA,231080,NA,solid things,striped things,polka-dotted things,green,circles,squares,NA
+8,0.5,NA,0.3,0.7,0.5,0.5,0.5,NA,NA,NA,NA,332,131,True,213211,9,NA,prior_inference,231,clouds,NA,70750,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+8,0.5,NA,0.7,0.35,0.7,0.5,0.3,NA,NA,NA,NA,123,112,True,211211,10,NA,prior_inference,211,blue things,NA,136711,NA,clouds,circles,squares,solid,red things,green things,NA
+8,0.5,NA,0.7,0.25,0.3,0.6,0.5,NA,NA,NA,NA,232,332,True,322112,11,NA,prior_inference,331,blue things,NA,80812,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+8,0.7,NA,0.35,0.5,0.3,0.5,0.7,NA,NA,NA,NA,213,121,True,212222,12,NA,prior_inference,113,blue things,NA,112531,NA,solid things,striped things,polka-dotted things,cloud,red things,green things,NA
+8,0.5,NA,0.75,0.3,0.5,0.7,0.35,NA,NA,NA,NA,132,221,True,212211,13,NA,prior_inference,123,clouds,NA,143970,NA,blue things,red things,green things,striped,circles,squares,NA
+8,0.5,NA,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,NA,211,322,False,112121,14,NA,prior_inference,122,solid things,NA,43130,NA,blue things,red things,green things,cloud,striped things,polka-dotted things,NA
+8,0.5,NA,0.75,0.25,0.5,0.5,0.5,NA,NA,NA,NA,223,212,True,212112,15,NA,prior_inference,112,clouds,NA,159421,NA,solid things,striped things,polka-dotted things,red,circles,squares,NA
+8,0.25,NA,0.75,0.5,0.3,0.5,0.7,NA,NA,NA,NA,332,232,True,211212,16,NA,prior_inference,211,solid things,NA,80100,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+8,0.5,NA,0.5,0.5,0.2,0.2,0.75,NA,NA,NA,NA,331,321,True,323211,17,NA,prior_inference,311,blue things,NA,6800,NA,solid things,striped things,polka-dotted things,square,red things,green things,NA
+8,0.4,NA,0.5,0.7,0.5,0.7,0.3,NA,NA,NA,NA,312,231,True,211111,18,NA,prior_inference,223,solid things,NA,160261,NA,blue things,red things,green things,circle,striped things,polka-dotted things,NA
+8,0.5,NA,0.7,0.25,0.7,0.35,0.5,NA,NA,NA,NA,212,332,True,212212,19,NA,prior_inference,231,blue things,NA,73210,NA,clouds,circles,squares,polka-dotted,red things,green things,NA
+8,0.5,NA,0.5,0.5,0.25,0.5,0.8,NA,NA,NA,NA,312,321,True,213222,20,NA,prior_inference,311,clouds,NA,17721,NA,solid things,striped things,polka-dotted things,blue,circles,squares,NA
+8,0.75,NA,0.25,0.25,0.35,0.75,0.5,NA,NA,NA,NA,213,323,True,322111,21,NA,prior_inference,333,solid things,NA,287281,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+8,0.3,NA,0.7,0.25,0.25,0.7,0.5,NA,NA,NA,NA,223,222,True,321211,22,NA,prior_inference,231,blue things,NA,162500,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+8,0.8,NA,0.25,0.5,0.5,0.2,0.7,NA,NA,NA,NA,233,211,True,322122,23,NA,prior_inference,213,blue things,NA,247232,NA,solid things,striped things,polka-dotted things,circle,red things,green things,NA
+8,0.2,NA,0.5,0.75,0.3,0.65,0.5,NA,NA,NA,NA,331,222,True,212122,24,NA,prior_inference,322,solid things,NA,45080,NA,clouds,circles,squares,red,striped things,polka-dotted things,NA
+8,0.45,NA,0.2,0.75,0.5,0.5,0.5,NA,NA,NA,NA,231,313,True,212111,25,NA,prior_inference,323,solid things,NA,196881,NA,clouds,circles,squares,green,striped things,polka-dotted things,NA
+8,NA,NA,0.75,0.75,0.5,0.6,0.5,NA,NA,NA,113,313,123,True,NA,27,322b,utterance_choice,NA,solid,NA,153800,5,square,striped,green,NA,cloud,NA,NA
+8,0.7,NA,0.5,0.5,0.75,0.5,0.5,NA,NA,NA,311,212,112,True,NA,28,321,utterance_choice,NA,blue,NA,15800,6,circle,solid,square,NA,cloud,red,NA
+8,0.5,0.75,0.5,0.5,0.5,0.5,0.75,NA,NA,NA,112,233,332,True,NA,29,22b1,utterance_choice,NA,circle,NA,244500,7,polka-dotted,cloud,green,NA,solid,square,red
+8,0.75,NA,0.5,0.5,0.5,0.75,0.5,NA,NA,NA,321,131,333,True,NA,30,22b2b,utterance_choice,NA,cloud,NA,262000,6,green,striped,polka-dotted,NA,blue,square,NA
+8,0.85,0.5,0.5,0.5,0.5,0.5,0.5,NA,NA,NA,231,133,332,True,NA,31,311,utterance_choice,NA,blue,NA,216700,7,green,cloud,circle,NA,square,polka-dotted,red
+8,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,red,121,233,312,False,NA,32,111,utterance_choice,NA,polka-dotted,square,235800,9,solid,circle,striped,NA,blue,cloud,green
+8,0.75,NA,0.5,0.5,0.5,0.65,0.75,NA,NA,NA,321,133,331,True,NA,33,22a2b,utterance_choice,NA,green,NA,205700,6,blue,cloud,polka-dotted,NA,striped,square,NA
+8,0.75,0.5,0.8,0.5,0.5,0.5,0.5,NA,NA,NA,131,213,132,True,NA,34,22a1,utterance_choice,NA,cloud,NA,108000,7,circle,blue,green,NA,red,polka-dotted,solid
+8,0.5,0.5,0.5,0.5,0.8,0.5,0.5,0.5,NA,NA,231,312,133,True,NA,35,211,utterance_choice,NA,blue,green,208600,8,red,polka-dotted,circle,NA,cloud,square,solid
+8,NA,NA,0.5,0.75,0.5,0.7,0.5,NA,NA,NA,133,333,233,True,NA,36,331,utterance_choice,NA,square,NA,292400,5,circle,cloud,green,NA,polka-dotted,NA,NA

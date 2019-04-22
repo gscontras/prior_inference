@@ -1,0 +1,10 @@
+workerid,language,enjoyment,gender,age,comments,assess,education
+0,ENGLISH,2,Male,28,,Yes,3
+1,English,2,Male,73,,Yes,4
+2,English,1,Male,26,,Yes,3
+3,English,1,Female,47,It seemed to take longer than 8 minutes.,Yes,2
+4,English,1,Female,39,,Yes,3
+5,English,1,Female,41,,Yes,2
+6,English,2,Female,30,,Yes,3
+7,English,2,Female,36,It&quotechars been a pleasure,Yes,2
+8,English,1,Male,26,I enjoyed taking it.,Yes,4
