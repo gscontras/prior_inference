@@ -3,17 +3,17 @@ library(reshape2)
 library(lme4)
 library(dplyr)
 
-setwd("~/git/prior_inference/experiments/5-combined/Submiterator-master/")
+setwd("~/git/prior_inference/experiments/6-combined-2/Submiterator-master/")
 
 source("../results/helpers.r")
 
-num_round_dirs = 15
+num_round_dirs = 6
 df = do.call(rbind, lapply(1:num_round_dirs, function(i) {
   return (read.csv(paste(
-    'round', i, '/combined-unique.csv', sep=''),stringsAsFactors=FALSE) %>% 
+    'round', i, '/combined-revised.csv', sep=''),stringsAsFactors=FALSE) %>% 
       mutate(workerid = (workerid + (i-1)*9)))}))
 
-d = subset(df, select=c("workerid","item","slide_number","language", "pref1",  "response1","pref2","response2","pref3","response3","pref4","response4","pref5","response5","pref6","response6","pref7","response7","pref8","response8","pref9","response9","numFeatures","target","obj1","obj2","obj3","utterance","itemCode","condition","ambiguous","trial_type"))
+d = subset(df, select=c("workerid","item","slide_number","language", "pref1",  "response1","pref2","response2","pref3","response3","pref4","response4","pref5","response5","pref6","response6","pref7","response7","pref8","response8","pref9","response9","numFeatures","target","obj1","obj2","obj3","utterance","itemCode","condition","ambiguous","trial_type","comments","age","gender"))
 
 # re-factorize
 d[] <- lapply( d, factor) 
@@ -21,13 +21,13 @@ d[] <- lapply( d, factor)
 unique(d$language)
 
 # only look at "español" as the native language
-d = d[d$language=="english"|d$language=="English"|d$language=="ENGLISH"|d$language=="English ",]
+d = d[d$language!="spanish"&d$language!="United States",]
 
-length(unique(d$workerid)) ## n=82
+length(unique(d$workerid)) ## n=52
 
 summary(d)
 
-#write.csv(d,"../results/5-combined-unique.csv")
+#write.csv(d,"../results/6-combined-revised.csv")
 
 
 ## class plot
