@@ -153,6 +153,97 @@ l = addIDs(l)
 
 #[{"ID":id, "item":[i1,i2,i3],"utterancecode":utterancecode}]
 
+
+'''
+Step 3.1: Add a target feature for getting preference information. 
+  The number that represents that feature in the uttchoicecode is added
+  with a hyphen at the end.
+'''
+
+def addPrefTarget(stimuli):
+	newlist = []
+	for i in range(len(stimuli)):
+		item = stimuli[i]["item"]
+		for j in range(3):#targetfeature
+			num = 4 - len(set([x[j] for x in item]))
+			if num < 3:
+				f = features[j+1]
+				stimuli[i]["targetfeature"] = f
+				stimuli[i]["targetfeaturenum"] = j+1
+				if stimuli[i]["utterancecode"] != "22a2b":
+					stimuli[i]["targeteduttcode"] = stimuli[i]["utterancecode"] + "-" + str(4-num)
+				else:
+					v = item[0][j]
+					if item[1][j] != v and item[2][j] != v:
+						v = item[1][j]
+					tmp = [x for x in item if x[j] == v]
+					tmp2 = [x for x in range(3) if x != j]
+					if tmp[0][tmp2[0]] == tmp[1][tmp2[0]] or tmp[0][tmp2[1]] == tmp[1][tmp2[1]]:
+						stimuli[i]["targeteduttcode"] = stimuli[i]["utterancecode"] + "-2a"
+					else:
+						stimuli[i]["targeteduttcode"] = stimuli[i]["utterancecode"] + "-2b"
+				newlist.append(stimuli[i])
+	return newlist
+
+l = addPrefTarget(l)				
+
+#DEBUG: print list with items, unique by targeteduttcode and how much 
+#  inference each utterance will allow
+def computeInferencePossibilities(stimulus):
+	f = featuresback[stimulus["targetfeature"]]
+	choiceslist = []
+	for i in [x for x in range(3) if x != f-1]: #features
+		for j in range(3): # values
+			referenceditems = []
+			for k in range(3): # items
+				if stimulus["item"][k][i] == str(j+1):
+					#the stimulus has, as the currently looked at feature,
+					#  the currently looked at value (utterance), i.e.
+					#  with using that utterance we can reference it.
+					referenceditems.append(k)
+			#now we have to look how many different values for the
+			#  target feature we get in those items
+			# ~ print(stimulus["item"])
+			# ~ print(f,i,j)
+			# ~ print(referenceditems)
+			num = len(set([stimulus["item"][x][f-1] for x in referenceditems]))
+			if num > 0:
+				choiceslist.append(num)
+	return "".join([str(x) for x in sorted(choiceslist,reverse=True)])
+
+def getUniqueListOfTargetedUttCode(stimuli):
+	print("DEBUG: computing unique list of targeted utt codes")
+	s = set()
+	checks = set()
+	uniquelist = []
+	for i in stimuli:
+		choices = computeInferencePossibilities(i)
+		identifier = "--".join([i["targeteduttcode"], choices])
+		if identifier not in s:
+			s.add(identifier)
+			i["choiceslist"] = choices
+			uniquelist.append(i)
+		if i["targeteduttcode"] not in checks:
+			checks.add(i["targeteduttcode"])
+	if len(s) != len(checks):
+		print("ERROR: codes are not unique to choices")
+	filename = "uniquelistofUttCodes.json"
+	with open(filename,"w") as fn:
+		json.dump(uniquelist, fn, indent=2)
+	with open(filename, "r") as fp:
+		t = fp.read()
+		t = re.sub("([^}]{2})(\\n)","\\1",t)
+		t = re.sub('[ ]+', '', t)
+		t = re.sub('\n', '\n\t', t)
+		t = re.sub('''"([\w-]+)":''', "\\1:", t)
+	with open(filename, "w") as fp:
+		fp.write(t)
+
+getUniqueListOfTargetedUttCode(l)
+print("exiting after computing unique list, comment out to change")
+exit()
+
+
 '''
 Fourth step: add utterance and listener choice (This of course makes the list muuuch longer)
 '''

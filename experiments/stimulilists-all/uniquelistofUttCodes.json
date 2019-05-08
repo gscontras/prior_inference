@@ -1,0 +1,17 @@
+[
+	{item:["111","211","311"],utterancecode:"331",IDf:"0000",ID:0,targetfeature:"shape",targetfeaturenum:1,targeteduttcode:"331-3",choiceslist:"33"},
+	{item:["111","211","121"],utterancecode:"322b",IDf:"0001",ID:1,targetfeature:"texture",targetfeaturenum:2,targeteduttcode:"322b-2",choiceslist:"221"},
+	{item:["211","311","121"],utterancecode:"321",IDf:"0003",ID:3,targetfeature:"texture",targetfeaturenum:2,targeteduttcode:"321-2",choiceslist:"2111"},
+	{item:["211","121","131"],utterancecode:"321",IDf:"0024",ID:24,targetfeature:"texture",targetfeaturenum:2,targeteduttcode:"321-3",choiceslist:"321"},
+	{item:["311","221","131"],utterancecode:"311",IDf:"0028",ID:28,targetfeature:"texture",targetfeaturenum:2,targeteduttcode:"311-3",choiceslist:"3111"},
+	{item:["211","121","112"],utterancecode:"22b2b",IDf:"0088",ID:88,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"22b2b-2",choiceslist:"2211"},
+	{item:["111","221","112"],utterancecode:"22a2b",IDf:"0090",ID:90,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"22a2b-2b",choiceslist:"2211"},
+	{item:["211","221","112"],utterancecode:"22a2b",IDf:"0091",ID:91,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"22a2b-2a",choiceslist:"2111"},
+	{item:["311","221","112"],utterancecode:"22b1",IDf:"0092",ID:92,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"22b1-2",choiceslist:"21111"},
+	{item:["221","321","112"],utterancecode:"22a1",IDf:"0098",ID:98,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"22a1-2",choiceslist:"11111"},
+	{item:["321","231","112"],utterancecode:"211",IDf:"0110",ID:110,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"211-2",choiceslist:"111111"},
+	{item:["221","112","113"],utterancecode:"22a1",IDf:"0856",ID:856,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"22a1-3",choiceslist:"2211"},
+	{item:["121","212","113"],utterancecode:"22b1",IDf:"0864",ID:864,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"22b1-3",choiceslist:"2211"},
+	{item:["321","212","113"],utterancecode:"211",IDf:"0866",ID:866,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"211-3",choiceslist:"21111"},
+	{item:["331","222","113"],utterancecode:"111",IDf:"0902",ID:902,targetfeature:"color",targetfeaturenum:3,targeteduttcode:"111-3",choiceslist:"111111"}
+	]
