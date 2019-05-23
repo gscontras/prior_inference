@@ -1,0 +1,652 @@
+[
+  {
+    "item": [
+      "331",
+      "312",
+      "323"
+    ],
+    "utterancecode": "311",
+    "IDf": "1834-0",
+    "ID": 18340,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "331",
+      "312",
+      "323"
+    ],
+    "utterancecode": "311",
+    "IDf": "1834-1",
+    "ID": 18341,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "311",
+      "121",
+      "231"
+    ],
+    "utterancecode": "311",
+    "IDf": "0040-1",
+    "ID": 401,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "311",
+      "121",
+      "231"
+    ],
+    "utterancecode": "311",
+    "IDf": "0040-0",
+    "ID": 400,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "113",
+      "323",
+      "233"
+    ],
+    "utterancecode": "311",
+    "IDf": "2571-1",
+    "ID": 25711,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "113",
+      "323",
+      "233"
+    ],
+    "utterancecode": "311",
+    "IDf": "2571-0",
+    "ID": 25710,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "312",
+      "222",
+      "132"
+    ],
+    "utterancecode": "311",
+    "IDf": "0544-1",
+    "ID": 5441,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "312",
+      "222",
+      "132"
+    ],
+    "utterancecode": "311",
+    "IDf": "0544-0",
+    "ID": 5440,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "231",
+      "132",
+      "333"
+    ],
+    "utterancecode": "311",
+    "IDf": "2712-1",
+    "ID": 27121,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "231",
+      "132",
+      "333"
+    ],
+    "utterancecode": "311",
+    "IDf": "2712-0",
+    "ID": 27120,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "211",
+      "121",
+      "331"
+    ],
+    "utterancecode": "311",
+    "IDf": "0060-1",
+    "ID": 601,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "211",
+      "121",
+      "331"
+    ],
+    "utterancecode": "311",
+    "IDf": "0060-0",
+    "ID": 600,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "121",
+      "322",
+      "223"
+    ],
+    "utterancecode": "311",
+    "IDf": "1634-0",
+    "ID": 16340,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "121",
+      "322",
+      "223"
+    ],
+    "utterancecode": "311",
+    "IDf": "1634-1",
+    "ID": 16341,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "112",
+      "322",
+      "232"
+    ],
+    "utterancecode": "311",
+    "IDf": "0660-1",
+    "ID": 6601,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "112",
+      "322",
+      "232"
+    ],
+    "utterancecode": "311",
+    "IDf": "0660-0",
+    "ID": 6600,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "111",
+      "221",
+      "331"
+    ],
+    "utterancecode": "311",
+    "IDf": "0062-1",
+    "ID": 621,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "111",
+      "221",
+      "331"
+    ],
+    "utterancecode": "311",
+    "IDf": "0062-0",
+    "ID": 620,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "112",
+      "222",
+      "332"
+    ],
+    "utterancecode": "311",
+    "IDf": "0767-1",
+    "ID": 7671,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "112",
+      "222",
+      "332"
+    ],
+    "utterancecode": "311",
+    "IDf": "0767-0",
+    "ID": 7670,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "131",
+      "112",
+      "123"
+    ],
+    "utterancecode": "311",
+    "IDf": "1372-1",
+    "ID": 13721,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "131",
+      "112",
+      "123"
+    ],
+    "utterancecode": "311",
+    "IDf": "1372-0",
+    "ID": 13720,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "221",
+      "212",
+      "233"
+    ],
+    "utterancecode": "311",
+    "IDf": "2349-0",
+    "ID": 23490,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "221",
+      "212",
+      "233"
+    ],
+    "utterancecode": "311",
+    "IDf": "2349-1",
+    "ID": 23491,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "311",
+      "112",
+      "213"
+    ],
+    "utterancecode": "311",
+    "IDf": "1007-1",
+    "ID": 10071,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "311",
+      "112",
+      "213"
+    ],
+    "utterancecode": "311",
+    "IDf": "1007-0",
+    "ID": 10070,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "211",
+      "312",
+      "113"
+    ],
+    "utterancecode": "311",
+    "IDf": "0872-0",
+    "ID": 8720,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "211",
+      "312",
+      "113"
+    ],
+    "utterancecode": "311",
+    "IDf": "0872-1",
+    "ID": 8721,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "212",
+      "122",
+      "332"
+    ],
+    "utterancecode": "311",
+    "IDf": "0756-1",
+    "ID": 7561,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "212",
+      "122",
+      "332"
+    ],
+    "utterancecode": "311",
+    "IDf": "0756-0",
+    "ID": 7560,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "321",
+      "312",
+      "333"
+    ],
+    "utterancecode": "311",
+    "IDf": "2660-0",
+    "ID": 26600,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "321",
+      "312",
+      "333"
+    ],
+    "utterancecode": "311",
+    "IDf": "2660-1",
+    "ID": 26601,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "111",
+      "132",
+      "123"
+    ],
+    "utterancecode": "311",
+    "IDf": "1435-0",
+    "ID": 14350,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "111",
+      "132",
+      "123"
+    ],
+    "utterancecode": "311",
+    "IDf": "1435-1",
+    "ID": 14351,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "221",
+      "122",
+      "323"
+    ],
+    "utterancecode": "311",
+    "IDf": "1841-1",
+    "ID": 18411,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "221",
+      "122",
+      "323"
+    ],
+    "utterancecode": "311",
+    "IDf": "1841-0",
+    "ID": 18410,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "331",
+      "232",
+      "133"
+    ],
+    "utterancecode": "311",
+    "IDf": "2152-1",
+    "ID": 21521,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "331",
+      "232",
+      "133"
+    ],
+    "utterancecode": "311",
+    "IDf": "2152-0",
+    "ID": 21520,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "312",
+      "122",
+      "232"
+    ],
+    "utterancecode": "311",
+    "IDf": "0637-0",
+    "ID": 6370,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "312",
+      "122",
+      "232"
+    ],
+    "utterancecode": "311",
+    "IDf": "0637-1",
+    "ID": 6371,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "221",
+      "212",
+      "233"
+    ],
+    "utterancecode": "311",
+    "IDf": "2349-1",
+    "ID": 23491,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "221",
+      "212",
+      "233"
+    ],
+    "utterancecode": "311",
+    "IDf": "2349-0",
+    "ID": 23490,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "131",
+      "232",
+      "333"
+    ],
+    "utterancecode": "311",
+    "IDf": "2726-0",
+    "ID": 27260,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "131",
+      "232",
+      "333"
+    ],
+    "utterancecode": "311",
+    "IDf": "2726-1",
+    "ID": 27261,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "211",
+      "112",
+      "313"
+    ],
+    "utterancecode": "311",
+    "IDf": "1177-1",
+    "ID": 11771,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "211",
+      "112",
+      "313"
+    ],
+    "utterancecode": "311",
+    "IDf": "1177-0",
+    "ID": 11770,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "121",
+      "322",
+      "223"
+    ],
+    "utterancecode": "311",
+    "IDf": "1634-1",
+    "ID": 16341,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "121",
+      "322",
+      "223"
+    ],
+    "utterancecode": "311",
+    "IDf": "1634-0",
+    "ID": 16340,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "212",
+      "322",
+      "132"
+    ],
+    "utterancecode": "311",
+    "IDf": "0556-0",
+    "ID": 5560,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "311-3"
+  },
+  {
+    "item": [
+      "212",
+      "322",
+      "132"
+    ],
+    "utterancecode": "311",
+    "IDf": "0556-1",
+    "ID": 5561,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "311-3"
+  }
+]
