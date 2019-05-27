@@ -323,6 +323,9 @@ function make_slides(f) {
 
       var names_list = _.shuffle(names);
 
+      var targetFeature = stim.targetfeature
+      $(".targetFeature").html(targetFeature);
+
       var person1 = names_list[0] ;
       var person2 = names_list[1] ;
       $(".person1").html(person1);
