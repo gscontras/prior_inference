@@ -179,6 +179,7 @@ Step 3.1: Add a target feature for getting preference information.
   with a hyphen at the end.
 '''
 
+
 def addPrefTarget(stimuli):
 	newlist = []
 	for s in stimuli:
@@ -209,32 +210,43 @@ def addPrefTarget(stimuli):
 				newlist.append(news)
 	return newlist
 
-l = addPrefTarget(l)				
+l = addPrefTarget(l)		
+
+def computeInferencePossibilities(stimulus):
+	f = featuresback[stimulus["targetfeature"]]
+	choiceslist = dict()
+	for i in [x for x in range(3) if x != f-1]: #features
+		for j in range(3): # values
+			referenceditems = []
+			for k in range(3): # items
+				if stimulus["item"][k][i] == str(j+1):
+					#the stimulus has, as the currently looked at feature,
+					#  the currently looked at value (utterance), i.e.
+					#  with using that utterance we can reference it.
+					referenceditems.append(k)
+			#now we have to look how many different values for the
+			#  target feature we get in those items
+			num = len(set([stimulus["item"][x][f-1] for x in referenceditems]))
+			if num > 0:
+				choiceslist[getFeatureName(i+1, j+1)] = num
+	# ~ return "".join([str(x) for x in sorted(choiceslist,reverse=True)])
+	return choiceslist
+
+# add numFeatures and featuresPresent
+# NOTE: This works for the targeted UttChoice, but the values would 
+#    later be overwritten by the numFeatures overall!!!
+def addTargetedUttPossibleFeatures(stimuli):
+	for i in range(len(stimuli)):
+		choiceslist = computeInferencePossibilities(stimuli[i])
+		stimuli[i]["numFeatures"] = len(choiceslist)
+		stimuli[i]["featuresPresent"] = list(choiceslist.keys())
+	return stimuli
+
+l = addTargetedUttPossibleFeatures(l)
 
 #DEBUG: print list with items, unique by targeteduttcode and how much 
 #  inference each utterance will allow
-# ~ def computeInferencePossibilities(stimulus):
-	# ~ f = featuresback[stimulus["targetfeature"]]
-	# ~ choiceslist = []
-	# ~ for i in [x for x in range(3) if x != f-1]: #features
-		# ~ for j in range(3): # values
-			# ~ referenceditems = []
-			# ~ for k in range(3): # items
-				# ~ if stimulus["item"][k][i] == str(j+1):
-					# ~ #the stimulus has, as the currently looked at feature,
-					# ~ #  the currently looked at value (utterance), i.e.
-					# ~ #  with using that utterance we can reference it.
-					# ~ referenceditems.append(k)
-			# ~ #now we have to look how many different values for the
-			# ~ #  target feature we get in those items
-			# ~ #print(stimulus["item"])
-			# ~ #print(f,i,j)
-			# ~ #print(referenceditems)
-			# ~ num = len(set([stimulus["item"][x][f-1] for x in referenceditems]))
-			# ~ if num > 0:
-				# ~ choiceslist.append(num)
-	# ~ return "".join([str(x) for x in sorted(choiceslist,reverse=True)])
-
+#  This is currently BROKEN!
 # ~ def getUniqueListOfTargetedUttCode(stimuli):
 	# ~ print("DEBUG: computing unique list of targeted utt codes")
 	# ~ s = set()
@@ -288,11 +300,11 @@ def produceTargetedUttBins(stimuli):
 			t.update()
 	t.close()
 	for k in bins:
-		mywrite(bins[k],k)
+		mywrite(bins[k],"targeteduttsstimuli/"+k)
 	fulllist = []
 	for k,v in bins.items():
 		fulllist += v
-	mywrite(fulllist, "50ByTargetedUtt")
+	mywrite(fulllist, "targeteduttsstimuli/50ByTargetedUtt")
 		
 produceTargetedUttBins(l)
 
