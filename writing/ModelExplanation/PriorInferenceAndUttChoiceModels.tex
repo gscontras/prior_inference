@@ -75,7 +75,17 @@ We use the same $L_0$ and $S_1$ from the vanilla model. However, we now paramete
 P_{L_{1}}(s|u,f) \propto P_{S_{1}}(u|s) \cdot P(s|f).
 \end{gather}
 
-We then model a pragmatic speaker $S_2$ who updates beliefs about $L_1$'s preferences, $P(f)$. To do so, $S_2$ produces $u$, then observes $L_1$'s choice of $s$, and finally reasons about the likely feature preference $f$ that $L_1$ used to make that choice:
+We then model a pragmatic speaker $S_2$ who updates beliefs about $L_1$'s preferences, $P(f)$.
+Preferences are encoded as a set of possible preferences $f\in\{f_1,\dots,f_{n_f}\}$, where each 
+preference value encodes the probability that one particular feature value $i$ is preferred over all others.
+A feature value $i$ preference essentially encodes feature value probabilities for all nine possible ones, 
+where the probability of choosing feature $i$ is proportional to $1+\phi$ while for all other features $j\neq i$ it is proportional to $\phi$ only. 
+As a result, $\phi \rightarrow 0$ converges to a `hard' preference, that is, RSA always chooses the preferred feature when possible, while $\phi \rightarrow \infty$ converges towards a uniform distribution, that is, no preference for feature $i$. 
+In a sense, $\phi$ can be interpreted as a `softness' parameter, which tunes the strength or urgency of a particular preference. 
+Below, we denote these values with $P(s|f)$, specifying the probability of choosing an object (with particular feature values) given a preference $f=f_i$ for a particular feature value $i$.
+During the modeling work below, we either keep $\phi$ constant or we optimized it globally or individually for each participant. 
+
+The pragmatic speaker $S_2$ produces $u$, then observes $L_1$'s choice of $s$, and finally reasons about the likely feature preference $f$ that $L_1$ used to make that choice:
 \begin{gather}
 P_{S_{2}}(f|u,s) \propto P_{L_{1}}(s|u,f) \cdot P(f).
 \end{gather}
@@ -93,12 +103,21 @@ where parameter $\kappa$ is a factor that scales the importance of expected info
 \section{Enhanced but Simplified RSA Model}
 Instead of using $L_0$ and $S_1$ to consider rational choices given an utterance -- in that `rational' here refers to the most likely object that is meant given the circumstances (good old explanation: `blue' meaning more likely the `blue square' because the speaker would have said `circle' if the 'blue circle was meant).
 As a result, instead of inferring utterance likelihoods given a particular object is referred to, 
-one simply uses a truth-function dependent prior that determines how the listener $L_1$ interprets an utterance, based on the objects that can be meant by an utterance (truth function) and possibly blended by an obedience factor. 
+one simply uses a truth-function $[[u]]s$ dependent prior that determines how the listener $L_1$ interprets an utterance, based on the objects that can be meant by an utterance (truth function) and possibly blended by an obedience factor, which we denote by $P([[u]]s)$. 
+Essentially, $P([[u]]s)$ is parameterized identically to the feature value preference distribution specified above: 
 \begin{gather}
-P_{L_{1}}(s|u,f) \propto [[u]](s) \cdot P(s|f).
+P([[u]]s) = [[u]]s + \omega,
 \end{gather}
-As a result, this listener considers all objects that can be meant by an utterance, and provides a probability of choosing object $s$ given an utterance. 
-This choice is then combined with the listener's preferences, ignoring possible further interactive dependencies (independent conditional probabilities assumed here, i.e., $P(s|u) \cdot P(s|f) = P(s|u,f)$, where I set $P(s|u)=[[u]](s)$ to make this point clear). 
+where parameter $\omega$ is a softness parameter, which tunes the `obedience' of the listener to a particular utterance.
+That is,  when $\omega\rightarrow 0$ full obedience is modeled, that is, only choose those objects that contain the feature value of the utterance, while $\omega \rightarrow \infty$ models `utterance ignorance', that is, random choice of objects irrespective of the given utterance.
+
+With this denotation, we can now fully specify the rational listener's object choice given an utterance and feature value preference priors.   
+\begin{gather}
+P_{L_{1}}(s|u,f) \propto P([[u]](s)) \cdot P(s|f).
+\end{gather}
+As a result, this listener considers all objects that can be meant by an utterance, using its prior probabilities for each of the possible object choices given an utterance, providing a probability of choosing object $s$ given an utterance $u$. 
+This choice is then combined with the listener's preferences $P(s|f)$, ignoring possible further interactive dependencies (independent conditional probabilities assumed here, i.e., $P(s|u) \cdot P(s|f) = P(s|u,f)$, where I set $P(s|u)=[[u]](s)$ to make this point clear). 
+
 
 The other components of the model, i.e., $P_{S_{2}}(f|u,s)$ and $P_{L_{1}}(s|u,f)$ remain identical. 
 
