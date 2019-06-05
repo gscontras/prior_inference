@@ -1,0 +1,488 @@
+[
+  {
+    "item": [
+      "231",
+      "232",
+      "233"
+    ],
+    "utterancecode": "331",
+    "IDf": "2427-0",
+    "ID": 24270,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "circle",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "313",
+      "323",
+      "333"
+    ],
+    "utterancecode": "331",
+    "IDf": "2873-0",
+    "ID": 28730,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "square",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "121",
+      "221",
+      "321"
+    ],
+    "utterancecode": "331",
+    "IDf": "0019-0",
+    "ID": 190,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "striped",
+      "blue"
+    ]
+  },
+  {
+    "item": [
+      "212",
+      "222",
+      "232"
+    ],
+    "utterancecode": "331",
+    "IDf": "0648-0",
+    "ID": 6480,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "circle",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "123",
+      "223",
+      "323"
+    ],
+    "utterancecode": "331",
+    "IDf": "2023-0",
+    "ID": 20230,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "striped",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "131",
+      "132",
+      "133"
+    ],
+    "utterancecode": "331",
+    "IDf": "2135-0",
+    "ID": 21350,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "cloud",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "113",
+      "213",
+      "313"
+    ],
+    "utterancecode": "331",
+    "IDf": "1329-0",
+    "ID": 13290,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "solid",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "132",
+      "232",
+      "332"
+    ],
+    "utterancecode": "331",
+    "IDf": "0815-0",
+    "ID": 8150,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "polka-dotted",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "113",
+      "123",
+      "133"
+    ],
+    "utterancecode": "331",
+    "IDf": "2252-0",
+    "ID": 22520,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "cloud",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "331",
+      "332",
+      "333"
+    ],
+    "utterancecode": "331",
+    "IDf": "2744-0",
+    "ID": 27440,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "square",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "311",
+      "321",
+      "331"
+    ],
+    "utterancecode": "331",
+    "IDf": "0068-0",
+    "ID": 680,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "square",
+      "blue"
+    ]
+  },
+  {
+    "item": [
+      "312",
+      "322",
+      "332"
+    ],
+    "utterancecode": "331",
+    "IDf": "0782-0",
+    "ID": 7820,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "square",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "111",
+      "112",
+      "113"
+    ],
+    "utterancecode": "331",
+    "IDf": "0852-0",
+    "ID": 8520,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "cloud",
+      "solid"
+    ]
+  },
+  {
+    "item": [
+      "311",
+      "312",
+      "313"
+    ],
+    "utterancecode": "331",
+    "IDf": "1197-0",
+    "ID": 11970,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "square",
+      "solid"
+    ]
+  },
+  {
+    "item": [
+      "111",
+      "121",
+      "131"
+    ],
+    "utterancecode": "331",
+    "IDf": "0023-0",
+    "ID": 230,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "cloud",
+      "blue"
+    ]
+  },
+  {
+    "item": [
+      "211",
+      "212",
+      "213"
+    ],
+    "utterancecode": "331",
+    "IDf": "1015-0",
+    "ID": 10150,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "circle",
+      "solid"
+    ]
+  },
+  {
+    "item": [
+      "112",
+      "122",
+      "132"
+    ],
+    "utterancecode": "331",
+    "IDf": "0530-0",
+    "ID": 5300,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "cloud",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "131",
+      "231",
+      "331"
+    ],
+    "utterancecode": "331",
+    "IDf": "0083-0",
+    "ID": 830,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "polka-dotted",
+      "blue"
+    ]
+  },
+  {
+    "item": [
+      "112",
+      "212",
+      "312"
+    ],
+    "utterancecode": "331",
+    "IDf": "0219-0",
+    "ID": 2190,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "solid",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "122",
+      "222",
+      "322"
+    ],
+    "utterancecode": "331",
+    "IDf": "0454-0",
+    "ID": 4540,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "striped",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "211",
+      "221",
+      "231"
+    ],
+    "utterancecode": "331",
+    "IDf": "0042-0",
+    "ID": 420,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "circle",
+      "blue"
+    ]
+  },
+  {
+    "item": [
+      "121",
+      "122",
+      "123"
+    ],
+    "utterancecode": "331",
+    "IDf": "1399-0",
+    "ID": 13990,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "cloud",
+      "striped"
+    ]
+  },
+  {
+    "item": [
+      "321",
+      "322",
+      "323"
+    ],
+    "utterancecode": "331",
+    "IDf": "1867-0",
+    "ID": 18670,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "square",
+      "striped"
+    ]
+  },
+  {
+    "item": [
+      "133",
+      "233",
+      "333"
+    ],
+    "utterancecode": "331",
+    "IDf": "2924-0",
+    "ID": 29240,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "polka-dotted",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "222",
+      "223"
+    ],
+    "utterancecode": "331",
+    "IDf": "1622-0",
+    "ID": 16220,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "circle",
+      "striped"
+    ]
+  },
+  {
+    "item": [
+      "213",
+      "223",
+      "233"
+    ],
+    "utterancecode": "331",
+    "IDf": "2550-0",
+    "ID": 25500,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "circle",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "111",
+      "211",
+      "311"
+    ],
+    "utterancecode": "331",
+    "IDf": "0000-0",
+    "ID": 0,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "331-3",
+    "numFeatures": 2,
+    "featuresPresent": [
+      "solid",
+      "blue"
+    ]
+  }
+]
