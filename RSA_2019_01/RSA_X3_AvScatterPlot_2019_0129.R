@@ -122,6 +122,8 @@ ggplot(d, aes(x=rsaModel1,y=workerData)) +
 #ggsave("X3-scatter-CogSci.png",width=3,height=2.5)
 
 ### correlation analysis for paper
+require(boot)
+require(zoo)
 require(hydroGOF)
 gof(as.numeric(d$rsaModel1),as.numeric(d$workerData)) ## r2 = 0.91
 results <- boot(data=d, statistic=rsq, R=10000, formula=workerData~rsaModel1)

@@ -1,0 +1,125 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{tikz} % for drawing figures
+\usepackage{amsmath} % for equations
+\usepackage{url} % for URLs
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{varwidth}
+\usepackage{blindtext}
+
+
+\usepackage{linguex} % ** special include in directory: for doing handy example labeling and bracketing
+\renewcommand{\firstrefdash}{} % used for linguex package not to put hyphens in example refs (1a instead of 1-a)
+\usepackage{cogsci}
+\usepackage{pslatex}
+\usepackage{apacite}
+\usepackage{placeins}
+
+\newcommand{\sem}[1]{\mbox{$[\![$#1$]\!]$}}
+\newcommand{\lam}{$\lambda$}
+\newcommand{\gcs}[1]{\textcolor{blue}{[gcs: #1]}} 
+
+
+% Possible title: Higher order pragmatic reasoning in reference games
+
+\title{On the purpose of ambiguous utterances: \\
+	RSA and Other Model Variants Explained :-)}
+%\author{\large \textbf{our names}\\
+%our emails\\
+%our affiliations}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\dots
+\textbf{Keywords:} 
+ambiguity; pragmatics; information gain; predictive priors; Rational Speech Act model
+\end{abstract}
+
+
+
+
+
+%\section{Introduction}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=2in]{images/rsascene.eps}
+	\caption{A simple reference game scenario from \citeA{frankgoodman2012}. In the game, speakers choose a single-word utterance to signal one of the objects to a listener. In this scenario, the speaker chooses between the utterances ``blue,'' ``green,'' ``square,'' and ``circle.''}\label{FG-ref-game}
+\end{figure}
+
+
+
+\section{Vanilla Model as the Basis}
+% text from CogSci paper
+We begin with the vanilla RSA model of \citeA{frankgoodman2012}. The recursive social reasoning inherent to the RSA modeling framework gets cashed out as various layers of inference. At the base, there is a hypothetical, na\"ive literal listener $L_0$ who hears an utterance $u$ and infers the state of the world $s$ that $u$ is meant to describe, that is, the object that may be referred to by the utterance. $L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}. $L_0$ thus returns a uniform distribution over those states $s$ that can be truthfully described by $u$:
+$$P_{L_{0}}(s|u) \propto \sem{$u$}(s).$$
+One layer up, the speaker $S_1$ observes some state $s$ and chooses an utterance $u$ to communicate that state to $L_0$. $S_1$ chooses utterances on the basis of their utility for signaling $s$ to $L_0$, $U_{S_1}(u;s)$. The speaker's utility maximizes the probability that $L_0$ would arrive at the correct $s$ on the basis of $u$, $P_{L_{0}}(s|u)$, while minimizing the cost of $u$ itself, $C(u)$:
+$$U_{S_{1}}(u;s) = \textrm{log}(P_{L_{0}}(s|u)) - C(u).$$
+$S_1$ chooses utterances in proportion to their utility:
+$$P_{S_{1}} (u|s) \propto   \textrm{exp}(\alpha \cdot U_{S_{1}} (u;s)).$$
+At the top layer of inference, the \emph{pragmatic} listener $L_1$ infers $s$ on the basis of some observed $u$. The result is a distribution over likely states $s$; however, unlike $L_0$, $L_1$ updates beliefs about the world by reasoning about the process that \emph{generated} $u$, namely $S_1$. In other words, $L_1$ reasons about the $s$ that would have been most likely to lead $S_1$ to choose the $u$ that was observed:
+$$P_{L_{1}}(s|u) \propto P_{S_{1}}(u|s) \cdot P(s).$$
+
+\citeA{frankgoodman2012} tested the predictions of their model against behavioral data from reference games as in Figure \ref{FG-ref-game}. To model production behavior (i.e., which utterance should be chosen to communicate a given object) the authors generate predictions from $S_1$. To model interpretation behavior (i.e., which object the speaker is trying to communicate on the basis of their utterance) the authors generate predictions from $L_1$. Finding extremely high correlations between model predictions and behavioral data in both cases, \citeauthor{frankgoodman2012} have strong support for their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015}, for a fuller exploration of the modeling choices).
+
+
+\section{Enhanced RSA Model}
+Our model builds on the vanilla version of RSA above by allowing for uncertainty around the listener's state prior, $P(s)$. We have in mind a scenario where a listener might have a preference for a certain object feature (e.g., blue things, squares, circles, etc.), and these preference will influence their object choice.
+With this in mind, the speaker produces an utterance $u$, observes the listener's referent choice $s$, and, on the basis of that choice, infers the preferences $f$ the listener might have had when making the choice.
+We use the same $L_0$ and $S_1$ from the vanilla model. However, we now parameterize $L_1$'s state prior so that it operates with respect to a given feature preference $P(s|f)$:
+\begin{gather}
+P_{L_{1}}(s|u,f) \propto P_{S_{1}}(u|s) \cdot P(s|f).
+\end{gather}
+
+We then model a pragmatic speaker $S_2$ who updates beliefs about $L_1$'s preferences, $P(f)$. To do so, $S_2$ produces $u$, then observes $L_1$'s choice of $s$, and finally reasons about the likely feature preference $f$ that $L_1$ used to make that choice:
+\begin{gather}
+P_{S_{2}}(f|u,s) \propto P_{L_{1}}(s|u,f) \cdot P(f).
+\end{gather}
+
+We also model the reasoning process by which a speaker selects the best utterance to learn about the preferences of the listener.
+Starting with no knowledge of the listener's preferences, $S_2$ can be assumed to expect a uniform (i.e., flat) feature preference prior $P(f)$. The more the speaker's posterior beliefs about the preferences, $P_{S_{2}}(f|u,s)$, deviate from the uniform prior, the more the speaker will have learned about the listener's preferences. 
+We can thus model this reasoning in the light of expected information gain, which can be equated with the attempt to maximize the KL divergence between the speaker's flat prior and the expected posterior of the listener's feature preferences $f$, integrating over all hypothetically possible state observations $s$:
+\begin{eqnarray}
+P_{b}(u) &\propto& \sum_{s} P(s|u) P(u) P(s|f) P(f) \\*
+&& \left( \exp \left( \kappa \cdot \textrm{KL}(P(f),P_{S_{2}}(f|u,s)) \right) - C(u) \right),
+\end{eqnarray}
+where parameter $\kappa$ is a factor that scales the importance of expected information gain. 
+
+
+\section{Enhanced but Simplified RSA Model}
+Instead of using $L_0$ and $S_1$ to consider rational choices given an utterance -- in that `rational' here refers to the most likely object that is meant given the circumstances (good old explanation: `blue' meaning more likely the `blue square' because the speaker would have said `circle' if the 'blue circle was meant).
+As a result, instead of inferring utterance likelihoods given a particular object is referred to, 
+one simply uses a truth-function dependent prior that determines how the listener $L_1$ interprets an utterance, based on the objects that can be meant by an utterance (truth function) and possibly blended by an obedience factor. 
+\begin{gather}
+P_{L_{1}}(s|u,f) \propto [[u]](s) \cdot P(s|f).
+\end{gather}
+As a result, this listener considers all objects that can be meant by an utterance, and provides a probability of choosing object $s$ given an utterance. 
+This choice is then combined with the listener's preferences, ignoring possible further interactive dependencies (independent conditional probabilities assumed here, i.e., $P(s|u) \cdot P(s|f) = P(s|u,f)$, where I set $P(s|u)=[[u]](s)$ to make this point clear). 
+
+The other components of the model, i.e., $P_{S_{2}}(f|u,s)$ and $P_{L_{1}}(s|u,f)$ remain identical. 
+
+
+\section{One/Two Parameter Preference Inference Model}
+This model simply analyses the object choice and the features that this object contains and increases the 
+preference for the chosen feature values according to one or two optimized parameter.
+In the one parameter case, for each feature type, the preferences for the chosen feature value are set to the parameter value $p$ and the other one or two present feature values of each type are set to $1-p$ or the two to $(1-p)/2$, respectively.
+In the two parameter case (say $p$ and $q$), I set the parameter values to $p$ (for the chosen feature value) and $(1-p)$ (for the other one) if there are two features values of a feature type present, and to $q$ and $(1-q)/2$ if there are three feature values present. (if only one is present then it will be set to one by the model and the participant anyways due to the normalization process).
+
+
+
+\section{One/Two Parameter Utterance Choice Model}
+
+
+
+\bibliographystyle{apacite}
+\setlength{\bibleftmargin}{.125in}
+\setlength{\bibindent}{-\bibleftmargin}
+
+\bibliography{prior-inference}
+
+\end{document}
+
