@@ -3,48 +3,22 @@ library(reshape2)
 library(lme4)
 library(dplyr)
 
-setwd("~/git/prior_inference/experiments/6-combined-2/Submiterator-master/")
+setwd("~/git/prior_inference/experiments/8-preference-type/Submiterator-master/")
 
 source("../results/helpers.r")
 
-num_round_dirs = 6
-df = do.call(rbind, lapply(1:num_round_dirs, function(i) {
-  return (read.csv(paste(
-    'round', i, '/combined-revised.csv', sep=''),stringsAsFactors=FALSE) %>% 
-      mutate(workerid = (workerid + (i-1)*9)))}))
+d = read.csv("preference-type-trials.csv",header=T)
+s = read.csv("preference-type-subject_information.csv",header=T)
 
-d = subset(df, select=c("workerid","item","slide_number","language", "pref1",  "response1","pref2","response2","pref3","response3","pref4","response4","pref5","response5","pref6","response6","pref7","response7","pref8","response8","pref9","response9","numFeatures","target","obj1","obj2","obj3","utterance","itemCode","condition","ambiguous","trial_type","comments","age","gender"))
-
-# re-factorize
-d[] <- lapply( d, factor) 
+d$language = s$language[match(d$workerid,s$workerid)]
 
 unique(d$language)
 
-# only look at "español" as the native language
-d = d[d$language!="spanish"&d$language!="United States",]
+# only look at English speakers
+d = d[d$language!="Hindi"&d$language!="United States"&d$language!="Chinese"&d$language!="Emglish"&d$language!="Spanish"&d$language!="England",]
 
-length(unique(d$workerid)) ## n=52
+length(unique(d$workerid)) ## n=50
 
 summary(d)
 
-#write.csv(d,"../results/6-combined-revised.csv")
-
-
-## class plot
-d_s = bootsSummary(data=t, measurevar="response", groupvars=c("class"))
-# save data for aggregate plot
-#write.csv(d_s,"~/Documents/git/cocolab/adjective_ordering/presentations/DGfS/plots/faultless.csv")
-
-class_plot <- ggplot(d_s, aes(x=reorder(class,-response,mean),y=response)) +
-  geom_bar(stat="identity",position=position_dodge()) +
-  geom_errorbar(aes(ymin=bootsci_low, ymax=bootsci_high, x=reorder(class,-response,mean), width=0.1),position=position_dodge(width=0.9))+
-  ylab("faultless disagreement\n")+
-  xlab("\nadjective class") +
-  ylim(0,1) +
-  theme_bw()
-class_plot
-#ggsave("../results/class_plot.pdf",height=3)
-
-agr_pred = aggregate(response~predicate*class,data=t,mean)
-
-#write.csv(agr_pred,"../results/pred-subjectivity.csv")
+#write.csv(d,"../results/8-preference-type.csv")

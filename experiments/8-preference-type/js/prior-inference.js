@@ -410,10 +410,10 @@ function make_slides(f) {
         "slide_number" : exp.phase,
         "item" : this.stim.ID,
         "condition" : this.stim.utterancecode,
-        "obj1" : this.stim.target,
-        "obj2" : this.stim.obj2,
-        "obj3" : this.stim.obj3,
-        "ambiguous" : this.stim.speakerAmbiguous
+        "targetFeature" : this.stim.targetfeature,
+        "obj1" : this.stim.item[0],
+        "obj2" : this.stim.item[1],
+        "obj3" : this.stim.item[2]
       });
     },
   });
@@ -486,7 +486,7 @@ function init() {
     };
   //blocks of the experiment:
   // exp.structure=["i0", "instructions1","training1","training2","training3",'multi_slider', 'instructions_utterance','utterance_choice','subj_info', 'thanks'];
-  exp.structure=['instructions_utterance','utterance_choice','subj_info', 'thanks'];
+  exp.structure=["i0", "instructions1",'utterance_choice','subj_info', 'thanks'];
   
   exp.data_trials = [];
   //make corresponding slides:
