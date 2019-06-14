@@ -15,9 +15,9 @@ d$language = s$language[match(d$workerid,s$workerid)]
 unique(d$language)
 
 # only look at English speakers
-d = d[d$language!="Hindi"&d$language!="United States"&d$language!="Chinese"&d$language!="Emglish"&d$language!="Spanish"&d$language!="England",]
+d = d[d$language!="Hindi"&d$language!="United States"&d$language!="Chinese"&d$language!="Emglish"&d$language!="Spanish"&d$language!="England"&d$language!="Italian"&d$language!="engish , spanish",]
 
-length(unique(d$workerid)) ## n=50
+length(unique(d$workerid)) ## n=82
 
 summary(d)
 
