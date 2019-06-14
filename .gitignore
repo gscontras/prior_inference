@@ -17,3 +17,5 @@ writing/2019 XPrag/XPrag2019-ambiguity.log
 writing/2019 XPrag/XPrag2019-ambiguity.dvi
 experiments/7-mutual-understanding/Submiterator-master/.DS_Store
 .Rproj.user
+experiments/8-preference-type/Submiterator-master/preference-type-workerids.csv
+*.hits
