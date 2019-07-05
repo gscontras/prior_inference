@@ -1,0 +1,192 @@
+source("RSA_StratUttModelSimple_2019_0505.R")
+source("RSA_UttChoiceOptimization_SimpleRSA_FeatureTypeFocus_2019_0619.R")
+
+# loading the raw pilot data (as Greg sent it on 2018/12/21)
+x8pilotData <- read.csv("8-preference-type.csv")
+
+## adding the 1-27 target and object2 & object3 code.
+temp <- x8pilotData$obj1
+temp2 <- (temp - temp %% 10) / 10
+temp3 <- (temp2 - temp2 %% 10) / 10
+obj1OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
+x8pilotData$obj1OC27 <- obj1OC27
+
+temp <- x8pilotData$obj2
+temp2 <- (temp - temp %% 10) / 10
+temp3 <- (temp2 - temp2 %% 10) / 10
+obj2OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
+x8pilotData$obj2OC27 <- obj2OC27
+
+temp <- x8pilotData$obj3
+temp2 <- (temp - temp %% 10) / 10
+temp3 <- (temp2 - temp2 %% 10) / 10
+obj3OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
+x8pilotData$obj3OC27 <- obj3OC27
+
+################
+## now get the preference slider values... 
+sliderUtteranceTypeValues <- matrix(NA, nrow(x8pilotData), 6)
+sliderSetValues <- matrix(NA,  nrow(x8pilotData), 6)
+
+##########################################
+# sets one column (index colIndex) of the sliderUttteranceTypes and sliderSet Values matrices.
+# given the data vectors featureTypes and SliderValues 
+# (i.e. x8pilotData$pref1/pref2../pref6 and x8pilotData$response1/response2/.../response6)
+# @assumes that allUtterancesNew1 include the 9 possible feature type utterances
+# @assumes the existence of the global matrices sliderUtteranceTypeValues and sliderSetValues
+setSliderValues <- function(featureTypes, sliderValues, colIndex) {
+  relRows <- which(!is.na(featureTypes) & !(""==featureTypes))
+  for(j in c(1:length(relRows) ) ) { 
+    sliderUtteranceTypeValues[relRows[j], colIndex] <<- which(allUtterancesNew1==featureTypes[relRows[j]])
+    sliderSetValues[relRows[j], colIndex] <<- sliderValues[relRows[j]]
+#    print(c(which(allUtterancesNew1==featureTypes[relRows[j]]), j, relRows[j], colIndex))
+  }
+}
+
+setSliderValues(x8pilotData$pref1, x8pilotData$response1, 1)
+setSliderValues(x8pilotData$pref2, x8pilotData$response2, 2)
+setSliderValues(x8pilotData$pref3, x8pilotData$response3, 3)
+setSliderValues(x8pilotData$pref4, x8pilotData$response4, 4)
+setSliderValues(x8pilotData$pref5, x8pilotData$response5, 5)
+setSliderValues(x8pilotData$pref6, x8pilotData$response6, 6)
+
+
+### normalizing the turker estimates and setting them into the corresponding matrix.
+bInfGainUttTurkers <- matrix(NA, nrow(x8pilotData), 9)
+for(i in c(1:nrow(x8pilotData)) ) {
+  s <- sum(sliderSetValues[i,c(1:x8pilotData$numFeatures[i])])
+  if(s > 0) {
+    sliderSetValues[i,c(1:x8pilotData$numFeatures[i])] <- sliderSetValues[i,c(1:x8pilotData$numFeatures[i])] / s
+  }else{ ## uniform distribution because all are set to 0
+    sliderSetValues[i,c(1:x8pilotData$numFeatures[i])] <- 1 / (x8pilotData$numFeatures[i])
+  }
+  bInfGainUttTurkers[i, sliderUtteranceTypeValues[i,c(1:(x8pilotData$numFeatures[i]) )] ] <- 
+    sliderSetValues[i,c(1:(x8pilotData$numFeatures[i]) )]
+  for(j in c(1:x8pilotData$numFeatures[i])) {
+    if(is.na(sliderSetValues[i,j])) {
+      print("Error")
+    }
+  }
+}
+
+### encoding the relevant feature type still
+targetFeatureTypes <- rep(0, nrow(x8pilotData))
+for(i in c(1:nrow(x8pilotData)) ) {
+  targetFeatureTypes[i] <- which(allFeatureTypesNew1 == x8pilotData$targetFeature[i])
+}
+
+#################################################
+### STARTING WITH MODEL EVALUATION + OPTIMIZAION
+#################################################
+
+
+## recording KL divergence and parameters (base model, 1 param, 2 params)
+workerIDs <- x8pilotData$workerid
+idMax <- max(workerIDs)
+klDivUttWorkers <- matrix(0,length(unique(workerIDs)), 9)
+paramsUttWorkers <- matrix(0,length(unique(workerIDs)), 13)
+
+#######################################################
+## Starting with simple base model determination:    ##
+#######################################################
+workerIndex <- 1
+for(workerID in c(0:idMax)) {
+  idICases <- which(workerIDs == workerID)
+  if(length(idICases)>0) {
+    klDivUttWorkers[workerIndex,1] <- workerID
+    paramsUttWorkers[workerIndex,1] <- workerID
+    ## based model -> no change in preferences!
+    klDivUttWorkers[workerIndex,2] <- 0
+    for(i in c(1:length(idICases))) {
+      len <- x8pilotData$numFeatures[idICases[i]]
+      for(j in c(1:len) ) {
+        klDivUttWorkers[workerIndex, 2] <- klDivUttWorkers[workerIndex, 2] + 
+                                              sliderSetValues[idICases[i],j] * 
+                                              (log(sliderSetValues[idICases[i],j] + 1e-100) - log(1/len))
+        if(is.na(klDivUttWorkers[workerIndex, 2])) {
+          print("Is NA!???")
+          print(c(sliderSetValues[idICases[i],j], log(1/len), i, j, len))
+          j <- 10
+          i <- length(idICases) +1 
+        }
+      }
+    }
+    ## done with this worker -> proceed
+    workerIndex <- workerIndex + 1
+  }
+}
+
+#######################
+## Optimizing (i.e. minimzing) the KL Divergence values for each worker...
+## starting with 1 parameter RSA model optimizations... 
+# data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:numUttOptions,7-X(max 15):TurkerSliderValues]
+workerIndex <- 1
+for(workerID in c(0:idMax)) {
+  idICases <- which(workerIDs == workerID)
+  if(length(idICases)>0) {
+    ## generating data matrix for the purpose of optimization
+    dataWorker <- matrix(0, length(idICases), 14)
+    dataWorker[,1] <- obj1OC27[idICases]
+    dataWorker[,2] <- obj2OC27[idICases]
+    dataWorker[,3] <- obj3OC27[idICases]
+    dataWorker[,4] <- x8pilotData$numFeatures[idICases]
+    dataWorker[,5] <- targetFeatureTypes[idICases]
+    dataWorker[,6:14] <- bInfGainUttTurkers[idICases,]
+    # print(dataWorker)
+    # now optimize for one parameter... 
+#    optRes1 <- optimize(SimpleRSAModelUttKLDivFTFParamA, c(0,1e+10), dataWorker)
+#    print(optRes1$objective)
+#    optRes2 <- optimize(SimpleRSAModelUttKLDivFTFParamB, c(0,1e+10), dataWorker)   
+#    print(optRes2$objective)
+    optRes3 <- optimize(SimpleRSAModelUttKLDivFTFParamK, c(-10,10), dataWorker)   
+    print(optRes3$objective)
+    
+    ## 1 param RSA Utt model
+#    klDivUttWorkers[workerIndex,3] <- optRes1$objective
+#    klDivUttWorkers[workerIndex,4] <- optRes2$objective
+    klDivUttWorkers[workerIndex,5] <- optRes3$objective
+    ## resulting parameter choice
+#    paramsUttWorkers[workerIndex,2] <- optRes1$minimum
+#    paramsUttWorkers[workerIndex,3] <- optRes2$minimum
+    paramsUttWorkers[workerIndex,4] <- optRes3$minimum
+    ####
+    optRes2n1 <- optim(c(.2, .2), SimpleRSAModelUttKLDivFTFParamBK, method="L-BFGS-B", gr=NULL, dataWorker,
+                       lower = c(0,-10), upper = c(1e+10,10))
+    print(optRes2n1$value)
+    optRes2n2 <- optim(c(.2, .2), SimpleRSAModelUttKLDivFTFParamAK, method="L-BFGS-B", gr=NULL, dataWorker,
+                       lower = c(0,-10), upper = c(1e+10,10))
+    print(optRes2n2$value)
+#    optRes2n3 <- optim(c(.2, .2), SimpleRSAModelUttKLDivFTFParamAB, method="L-BFGS-B", gr=NULL, dataWorker,
+#                       lower = c(0,0), upper = c(1e+10,1e+10))
+#    print(optRes2n3$value)
+    optRes3 <- optim(c(.2, .2, 1), SimpleRSAModelUttKLDivFTFParamABK, method="L-BFGS-B", gr=NULL, dataWorker,
+                     lower = c(0,0,-10), upper = c(1e+10,1e+10,10))
+    print(optRes3$value)
+    ## 2 and 3 param RSA model2
+    ## max likelihood parameter choice
+    klDivUttWorkers[workerIndex,6] <- optRes2n1$value
+    klDivUttWorkers[workerIndex,7] <- optRes2n2$value
+  #  klDivUttWorkers[workerIndex,8] <- optRes2n3$value
+    klDivUttWorkers[workerIndex,9] <- optRes3$value
+    ## max likelihood parameter choice
+    paramsUttWorkers[workerIndex,5] <- optRes2n1$par[1]
+    paramsUttWorkers[workerIndex,6] <- optRes2n1$par[2]
+    paramsUttWorkers[workerIndex,7] <- optRes2n2$par[1]
+    paramsUttWorkers[workerIndex,8] <- optRes2n2$par[2]
+#    paramsUttWorkers[workerIndex,9] <- optRes2n3$par[1]
+#    paramsUttWorkers[workerIndex,10] <- optRes2n3$par[2]
+    paramsUttWorkers[workerIndex,11] <- optRes3$par[1]
+    paramsUttWorkers[workerIndex,12] <- optRes3$par[2]
+    paramsUttWorkers[workerIndex,13] <- optRes3$par[3]
+    ##    
+    print(c("Done with worker ",workerIndex," with worder ID ", workerID))
+    print(c(klDivUttWorkers[workerIndex,], paramsUttWorkers[workerIndex,]))
+    ####
+    workerIndex <- workerIndex + 1
+  }
+}
+
+write.csv(klDivUttWorkers, "KLDivUttWorkers_x8_UttChoiceSimpleRSAFTF_2019_06_17.csv")
+write.csv(paramsUttWorkers, "KLDivUttParamsWorkers_x8_UttChoiceSimpleRSAFTF_2019_06_17.csv")
+
+
