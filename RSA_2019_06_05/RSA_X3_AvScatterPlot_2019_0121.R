@@ -16,8 +16,8 @@ source("RSA_StratUtt_getConstCode_2019_0114.R")
 
 #x3pilotData <- read.csv("x3pilotDataAugmV.2_fixedAndD_052019.csv")
 
-#x3pilotData <- read.csv("x3pilotDataAugmV0_fixedAndD_052019.csv")
-x3pilotData <- read.csv("x3pilotDataAugmV0_ADandBD_052019.csv")
+x3pilotData <- read.csv("x3pilotDataAugmV0_fixedAndD_052019.csv")
+#x3pilotData <- read.csv("x3pilotDataAugmV0_ADandBD_052019.csv")
 #x3pilotData <- read.csv("x3pilotDataAugmV0_ABandABD_052019.csv")
 #x3pilotData <- read.csv("x3pilotDataAugm_fixedAndD_052019.csv")
 
