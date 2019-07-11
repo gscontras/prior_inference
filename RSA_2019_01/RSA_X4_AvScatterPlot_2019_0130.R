@@ -1,3 +1,5 @@
+setwd("~/git/prior_inference/RSA_2019_01/")
+
 source("RSA_StratUttModel_2019_0114.R")
 source("RSA_StratUtt_getConstCode_2019_0114.R")
 
@@ -214,10 +216,11 @@ require(ggplot2)
 ggplot(d, aes(x=rsaModel,y=workerData)) +
   geom_point() +
   geom_smooth(method=lm,color="black") +
-  xlab("\nmodel predictions")+
-  ylab("human data\n")+
+  xlab("model predictions")+
+  ylab("human data")+
   theme_bw()
 #ggsave("X4-scatter-CogSci.png",width=3,height=2.5)
+#ggsave("X4-scatter-fully-pragmatic-CogSci.png",width=2,height=1.875)
 
 ### correlation analysis for paper
 require(hydroGOF)
@@ -231,5 +234,5 @@ rsq <- function(formula, data, indices) {
   return(summary(fit)$r.square)
 } 
 results <- boot(data=d, statistic=rsq, R=10000, formula=workerData~rsaModel)
-boot.ci(results, type="bca") # 95% CI  ( 0.9447,  0.9699 )  
+boot.ci(results, type="bca") # 95% CI  ( 0.9453,  0.9701 )  
 

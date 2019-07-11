@@ -1,3 +1,5 @@
+setwd("~/git/prior_inference/RSA_for_cogsci_poster/")
+
 #source("RSA_StratUttModel_2019_0114.R")
 source("RSA_StratUtt_getConstCode_2019_0114.R")
 
@@ -173,7 +175,7 @@ for(i in c(1:length(x4pilotData$X))) {
 x4pilotData$CCode <- uniqueCCode
 x4pilotData$FeatTypeOrder <- featureOrder
 x4pilotData$FeatValueOrders <- featureValueOrders
-write.csv(x4pilotData, "x4pilotDataModelOptimizedSorted.csv")
+#write.csv(x4pilotData, "x4pilotDataModelOptimizedSorted.csv")
 
 x4pilotData <- x4pilotData[order(x4pilotData$CCode),]
 myCCodes <- unique(x4pilotData$CCode)
@@ -210,6 +212,18 @@ model <- lm(formula = rsaModel~workerData)
 summary(model)
 confint(model)
 
+d = data.frame(rsaModel,workerData)
+require(hydroGOF)
+gof(as.numeric(d$rsaModel),as.numeric(d$workerData)) ## r2 = 0.97
+library(boot)
+rsq <- function(formula, data, indices) {
+  d <- data[indices,] # allows boot to select sample 
+  fit <- lm(formula, data=d)
+  return(summary(fit)$r.square)
+} 
+results <- boot(data=d, statistic=rsq, R=10000, formula=workerData~rsaModel)
+boot.ci(results, type="bca") # 95% CI  ( 0.9868,  0.9925 ) 
+
 ### plot after optimization 2 ###
 ## The optimized model (model2) is individually optimized for both parameters, cross-validated.
 
@@ -221,6 +235,29 @@ model <- lm(formula = rsaModel2~workerData)
 summary(model)
 confint(model)
 
+### paper plot for optimized model
+d = data.frame(rsaModel2,workerData)
+require(ggplot2)
+ggplot(d, aes(x=rsaModel2,y=workerData)) +
+  geom_point() +
+  geom_smooth(method=lm,color="black") +
+  xlab("model predictions")+
+  ylab("human data")+
+  theme_bw()
+#ggsave("X4-scatter-simple-model-CogSci.png",width=3,height=2.5)
+#ggsave("X4-scatter-simple-model-CogSci.png",width=2,height=1.875)
 
 
-
+### correlation analysis for poster
+require(hydroGOF)
+gof(as.numeric(d$rsaModel2),as.numeric(d$workerData)) ## r2 = 0.99
+# Bootstrap 95% CI for R-Squared
+library(boot)
+# function to obtain R-Squared from the data 
+rsq <- function(formula, data, indices) {
+  d <- data[indices,] # allows boot to select sample 
+  fit <- lm(formula, data=d)
+  return(summary(fit)$r.square)
+} 
+results <- boot(data=d, statistic=rsq, R=10000, formula=workerData~rsaModel2)
+boot.ci(results, type="bca") # 95% CI  ( 0.9868,  0.9925 )  

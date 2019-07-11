@@ -72,12 +72,13 @@ ggplot(allStats, aes(x=sliderNumber, y=sliderValue, fill = type)) +
   geom_errorbar(position=position_dodge(.9), width=.25, aes(ymin=sliderValue-ci, ymax=sliderValue+ci)) +
   scale_fill_manual(values = c("gold","ivory3","ivory4"), labels = c("Human data","Optimized model","Non-optimized model"), name = "") +
   theme_bw()+
-  labs(title="Example of class 212212")+
+  #labs(title="Example of class 212212")+
   ylab("Slider value (normalized)")+
-  xlab("Sliders")+
+  xlab("")+
   scale_x_discrete(limits=c("5","4","8","7"),
                    labels=c("circle", "cloud", "dotted","striped"))+
-  theme(legend.position="top")+
-ggsave("examplePlot.pdf")
+  theme(legend.position="bottom")
+#ggsave("examplePlot.pdf")
+#ggsave("X4-example-simple-model-CogSci.png",width=4.3,height=2)
 
 ### The non-optimized model has parameters fixed at 0.1 level (obedience and softness)
