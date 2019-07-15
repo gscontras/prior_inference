@@ -1,3 +1,5 @@
+#setwd("~/git/prior_inference/RSA_2019_01/")
+
 source("RSA_StratUttModel_2019_0114.R")
 source("RSA_StratUtt_getConstCode_2019_0114.R")
 
@@ -116,10 +118,11 @@ require(ggplot2)
 ggplot(d, aes(x=rsaModel1,y=workerData)) +
   geom_point() +
   geom_smooth(method=lm,color="black") +
-  xlab("\nmodel predictions")+
-  ylab("human data\n")+
+  xlab("model predictions")+
+  ylab("human data")+
   theme_bw()
 #ggsave("X3-scatter-CogSci.png",width=3,height=2.5)
+#ggsave("../RSA_for_cogsci_poster/X3-scatter-fully-pragmatic-CogSci.png",width=2,height=1.875)
 
 ### correlation analysis for paper
 require(boot)
