@@ -76,19 +76,21 @@ modelGuessIndex2 <- grep("^MPost2_1", colnames(x3pilotData))
 x3pilotData$CCode <- uniqueCCode
 x3pilotData$featValOrder <- featureValueOrder
 
-modelDataOrdered <- matrix(-1,nrow(x3pilotData),16)
+modelDataOrdered <- matrix(-1,nrow(x3pilotData),34)
 for(i in c(1:length(x3pilotData$X))) {
   for(j in c(1:length(x3pilotData$featValOrder[[i]]))) {
-      modelDataOrdered[i,j] <- x3pilotData[[modelGuessIndex2M1+x3pilotData$featValOrder[[i]][j]]][i] 
+    modelDataOrdered[i,7+j] <- x3pilotData[[subjectGuessIndexM1+x3pilotData$featValOrder[[i]][j]]][i] 
+    modelDataOrdered[i,16+j] <- x3pilotData[[modelGuessIndex1M1+x3pilotData$featValOrder[[i]][j]]][i] 
+    modelDataOrdered[i,25+j] <- x3pilotData[[modelGuessIndex2M1+x3pilotData$featValOrder[[i]][j]]][i] 
   }
 }
-modelDataOrdered[,10] <- uniqueCCode
-modelDataOrdered[,11] <- x3pilotData$obj1
-modelDataOrdered[,12] <- x3pilotData$obj2
-modelDataOrdered[,13] <- x3pilotData$obj3
-modelDataOrdered[,14] <- x3pilotData$obj1OC27
-modelDataOrdered[,15] <- x3pilotData$obj2OC27
-modelDataOrdered[,16] <- x3pilotData$obj3OC27
+modelDataOrdered[,1] <- uniqueCCode
+modelDataOrdered[,2] <- x3pilotData$obj1
+modelDataOrdered[,3] <- x3pilotData$obj2
+modelDataOrdered[,4] <- x3pilotData$obj3
+modelDataOrdered[,5] <- x3pilotData$obj1OC27
+modelDataOrdered[,6] <- x3pilotData$obj2OC27
+modelDataOrdered[,7] <- x3pilotData$obj3OC27
 write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted.csv")
 ################################################################################
 
@@ -108,7 +110,7 @@ for(i in c(1:length(myCCodes))) {
   workerMeans <- 0
   rsaModel1Means <- 0
   rsaModel2Means <- 0
-  for(j in c(i:nrow(allPilotDataCases))) {
+  for(j in c(1:nrow(allPilotDataCases))) {
     workerMeans <-  workerMeans + allPilotDataCases[j,subjectGuessIndexM1+(allPilotDataCases$featValOrder[[j]])]
     rsaModel1Means <- rsaModel1Means + allPilotDataCases[j,modelGuessIndex1M1+(allPilotDataCases$featValOrder[[j]])]
     rsaModel2Means <- rsaModel2Means + allPilotDataCases[j,modelGuessIndex2M1+(allPilotDataCases$featValOrder[[j]])]

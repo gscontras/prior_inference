@@ -90,7 +90,7 @@ for(i in c(1:length(myCCodes))) {
   workerMeans <- 0
   rsaModel1Means <- 0
   rsaModel2Means <- 0
-  for(j in c(i:nrow(allPilotDataCases))) {
+  for(j in c(1:nrow(allPilotDataCases))) {
     workerMeans <-  workerMeans + allPilotDataCases[j,subjectGuessIndexM1+(allPilotDataCases$featValOrder[[j]])]
     rsaModel1Means <- rsaModel1Means + allPilotDataCases[j,modelGuessIndex1M1+(allPilotDataCases$featValOrder[[j]])]
     rsaModel2Means <- rsaModel2Means + allPilotDataCases[j,modelGuessIndex2M1+(allPilotDataCases$featValOrder[[j]])]
