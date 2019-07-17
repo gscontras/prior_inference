@@ -127,6 +127,8 @@ getConstellationCode <- function(objectConstellation, chosenFeature) {
 } 
 
 # an object constellation is a 3-value vector \in {1,...,27]}^3
+# this is the method that determines the utterance choice constellation code as well as the 
+# resulting feature order dependent on the individual feature value ambiguities. 
 getUtteranceChoiceConstellationCode <- function(objectConstellation) {
 #  print(c("START with : ", objectConstellation))
   allFeatures <- c(allObjectsToUtterancesMappings[objectConstellation[1],],
@@ -134,11 +136,13 @@ getUtteranceChoiceConstellationCode <- function(objectConstellation) {
                    allObjectsToUtterancesMappings[objectConstellation[3],])
   allUniqueFeatures <- sort(unique(allFeatures))
   #
-  numShared <- rep(0,3) # maximum number of object carying one feature value type
+  numShared <- rep(0,3) # maximum number of objects carying one feature value type
   for(i in c(1:3)) {
-    numShared[i] = 4-length(which(allUniqueFeatures > (i-1)*3 & allUniqueFeatures < 1+i*3))
+    numShared[i] = 4 - length(which(allUniqueFeatures > (i-1)*3 & allUniqueFeatures < 1+i*3))
   }
-  allFeatNums <- rep(0,9)
+  # numShared specifies now the maximum number of feature values shared by each feature type
+  # i.e. 1 means that all three feature values are present, 2 means that two are present, 3 means that only one value is present (shared by all three)
+  allFeatNums <- rep(0,9) # vector of feature value occurrences for each object's feature values
   for(i in c(1:9)) {
     allFeatNums[i] <- length(which(allFeatures == allFeatures[i]))
   }
@@ -178,7 +182,7 @@ getUtteranceChoiceConstellationCode <- function(objectConstellation) {
       #### length(which(numShared==3))==1
       ## moving shared feature value to the first position
       threeIndex <- which(numShared==3)
-      featureOrder[c(1,threeIndex)] <- featureOrder[c(threeIndex,1)]
+      featureOrder[c(1,threeIndex)] <- featureOrder[c(threeIndex,1)] # swapping the feature order
       numShared[c(1,threeIndex)] <- numShared[c(threeIndex,1)]
       if(max(numShared[c(2,3)])==1) {
         ## done since both other features' feature values are uniqe to all objects
@@ -227,20 +231,26 @@ getUtteranceChoiceConstellationCode <- function(objectConstellation) {
   }else if(max(numShared)==2) {
     # 22a2a / 22a2b / 22b2b / 221 / 211
     # feature values shared by two and or one objects.
-    if(length(which(numShared==1))==2) {
-      #211 case - move the two feature baring object pairs to the front / move the singled-out one to the back
-      if(all(allFeatNums[1:3]==c(1,1,1))) {
+    if(length(which(numShared==1))==2) { ## two objects share one feature value, the other ones are unique.
+      #211 case 
+      ## move the feature type that shares feature values to the front
+      twoIndex <- which(numShared==2)
+      featureOrder[c(1,twoIndex)] <- featureOrder[c(twoIndex,1)] # swapping the feature order moving the shared feature type to the front
+      ## move the object that does not share feature values with the other two to the back (third object)
+      if(all(allFeatNums[1:3]==c(1,1,1))) { ## first object is the one with unique values -> reorder to being the third object
         objectOrder[c(1,3)] <- objectOrder[c(3,1)]
         allFeatNums[c(1,2,3,7,8,9)] <- allFeatNums[c(7,8,9,1,2,3)]
         allFeatures[c(1,2,3,7,8,9)] <- allFeatures[c(7,8,9,1,2,3)]
-      }else if(all(allFeatNums[4:6]==c(1,1,1))) {
+      }else if(all(allFeatNums[4:6]==c(1,1,1))) {## second object is the own with unique feature values -> reorder it to being the third object
         objectOrder[c(2,3)] <- objectOrder[c(3,2)]
         allFeatNums[c(4,5,6,7,8,9)] <- allFeatNums[c(7,8,9,4,5,6)]
         allFeatures[c(4,5,6,7,8,9)] <- allFeatures[c(7,8,9,4,5,6)]
       }
       resultCode <- "211"
     }else if(min(numShared)==1) {
-      # 22a1 / 22b1
+      # 22a1 / 22b1 -> object constellation examples: 147|148|259 / 147|158|249
+      oneSharedIndex <- which(numShared==1)
+      featureOrder[c(3,oneSharedIndex)] <- featureOrder[c(oneSharedIndex,3)] # swapping the feature order moving the un-shared feature type to the back
       if(all(allFeatNums[1:3]==c(1,1,1))) {
         objectOrder[c(1,3)] <- objectOrder[c(3,1)]
         allFeatNums[c(1,2,3,7,8,9)] <- allFeatNums[c(7,8,9,1,2,3)]
@@ -267,7 +277,7 @@ getUtteranceChoiceConstellationCode <- function(objectConstellation) {
         resultCode <- "22b1"
       }
     }else if(length(which(numShared==2))==3) {
-      # 22a2a / 22a2b / 22b2b
+      # 22a2a / 22a2b / 22b2b -> object constellation examples: 147,147,258 / 147,148,257 / 147,158,257
       if(sum(allFeatNums[1:3])==3) {
         objectOrder[c(1,3)] <- objectOrder[c(3,1)]
         allFeatNums[c(1,2,3,7,8,9)] <- allFeatNums[c(7,8,9,1,2,3)]
@@ -305,8 +315,12 @@ getUtteranceChoiceConstellationCode <- function(objectConstellation) {
         }
         if(foundSix) {
           resultCode <- "22a2b"
+          # we are at an allFeatNums constellation of 222,221,112 here!!!
+          featSharedO13Index <- which(allFeatNums[c(7:9)]==2) # determine with feature is shared by the first and third object.
+          featureOrder[c(3,featSharedO13Index)] <- featureOrder[c(featSharedO13Index,3)] # move that feature to the third position 
         }else{
-          ## now move 221 to the front - i.e., the object that shares two values.
+          resultCode <- "22b2b" # ring of feature constellation.
+          # move 221 to the front - i.e., the object that shares two values.
           if(all(allFeatNums[1:3] == c(2,2,1))) {
             ;
           }else if( all(allFeatNums[4:6] == c(2,2,1))) {
@@ -318,14 +332,13 @@ getUtteranceChoiceConstellationCode <- function(objectConstellation) {
             allFeatNums[c(1,2,3,7,8,9)] <- allFeatNums[c(7,8,9,1,2,3)]
             allFeatures[c(1,2,3,7,8,9)] <- allFeatures[c(7,8,9,1,2,3)]
           }
-          # finall, move 212 onto second
+          # finally, move 212 onto second
           if( all(allFeatNums[4:6] == c(2,1,2))) {
           }else if( all(allFeatNums[7:9] == c(2,1,2))) {
             objectOrder[c(2,3)] <- objectOrder[c(3,2)]
             allFeatNums[c(4,5,6,7,8,9)] <- allFeatNums[c(7,8,9,4,5,6)]
             allFeatures[c(4,5,6,7,8,9)] <- allFeatures[c(7,8,9,4,5,6)]
           }
-          resultCode <- "22b2b" # ring of feature constellation.
         }
       }
     }
@@ -357,6 +370,7 @@ getUtteranceChoiceConstellationCode <- function(objectConstellation) {
   featureValueOrder[index] <- (allObjectsToUtterancesMappings[objectConstellation[objectOrder[3]],])[featureOrder[3]]  
   if(length(which(featureValueOrder[1:(index-1)]==featureValueOrder[index])) == 0) {index <- index+1} else {featureValueOrder <- featureValueOrder[c(1:(length(featureValueOrder)-1))]} # new feature value added
   ## done :-)
+#  print(c(numShared, allFeatNums))
   res <- list(resultCode, featureOrder, objectOrder, featureValueOrder)  
   return(res)
 } 
