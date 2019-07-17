@@ -1,12 +1,10 @@
-setwd("~/git/prior_inference/RSA_for_cogsci_poster/")
-
 #source("RSA_StratUttModel_2019_0114.R")
 source("RSA_StratUtt_getConstCode_2019_0114.R")
 
 # loading the augmented pilot data
 #x4pilotData <- read.csv("x4pilot_SimpleRSA_DataCrossValAugmentedfixed_2019_0429.csv")
 #x4pilotData <- read.csv("x4pilot_SimpleRSA_DataCrossValAugmented_2019_0507.csv")
-x4pilotData <- read.csv("x4pilot_SimpleRSA_DataCrossValAugmented2_2019_0507.csv") # Use this file for cogsci poster
+x4pilotData <- read.csv("x4pilot_SimpleRSA_DataCrossValAugmented2_2019_0507.csv")
 
 #x4pilotData <- read.csv("x4pilot_DataCrossValAugmentedfixed_2019_0429.csv")
 #x4pilotData <- read.csv("x4pilot_DataCrossValAugmented_2019_0429.csv")
@@ -98,7 +96,6 @@ for(i in c(1:nrow(x4pilotData))) {
 constellationCode <- matrix(0,length(x4pilotData$X),6)
 uniqueCCode <- rep(0, length(x4pilotData$X))
 featureOrder <- matrix(0, length(x4pilotData$X), 3)
-featureValueOrders <- matrix(0, length(x4pilotData$X), 9)
 objectOrder <- matrix(0, length(x4pilotData$X), 3)
 for(i in c(1:length(x4pilotData$X))) {
   objectConstellation <- c(targetOC27[i],obj2OC27[i],obj3OC27[i])
@@ -169,12 +166,9 @@ for(i in c(1:length(x4pilotData$X))) {
                                x4pilotData[i, modelGuessIndex1 + ((j-1)*3 + featValOrder)]) 
     x4pilotData[i,] <- replace(x4pilotData[i,], c(((j-1)*3 + modelGuessIndex4):(2+((j-1)*3 + modelGuessIndex4))),  
                                x4pilotData[i, modelGuessIndex4 + ((j-1)*3 + featValOrder)]) 
-    featureValueOrders[i,c( ((j-1)*3+1):(j*3))] <- featValOrder 
   }
 }
 x4pilotData$CCode <- uniqueCCode
-x4pilotData$FeatTypeOrder <- featureOrder
-x4pilotData$FeatValueOrders <- featureValueOrders
 #write.csv(x4pilotData, "x4pilotDataModelOptimizedSorted.csv")
 
 x4pilotData <- x4pilotData[order(x4pilotData$CCode),]
@@ -200,9 +194,7 @@ for(i in c(1:length(myCCodes))) {
     }
   }
 }
-### plot with fixed values for parameters (obedience = 0.1, softness = 0.1) ###
-## We can use this graph to illustrate how the parameters work. If parameters are set to 0,
-## the model predictions will be 1 for preference of a certain feature value and 0 for feature values not preferred.
+### plot after optimization 1 ###
 
 plot(rsaModel, workerData)
 abline(lm(formula = rsaModel~workerData), col="red") # regression line (y~x)
@@ -212,20 +204,7 @@ model <- lm(formula = rsaModel~workerData)
 summary(model)
 confint(model)
 
-d = data.frame(rsaModel,workerData)
-require(hydroGOF)
-gof(as.numeric(d$rsaModel),as.numeric(d$workerData)) ## r2 = 0.97
-library(boot)
-rsq <- function(formula, data, indices) {
-  d <- data[indices,] # allows boot to select sample 
-  fit <- lm(formula, data=d)
-  return(summary(fit)$r.square)
-} 
-results <- boot(data=d, statistic=rsq, R=10000, formula=workerData~rsaModel)
-boot.ci(results, type="bca") # 95% CI  ( 0.9868,  0.9925 ) 
-
-### plot after optimization 2 ###
-## The optimized model (model2) is individually optimized for both parameters, cross-validated.
+### plot after optimization 2###
 
 plot(rsaModel2, workerData)
 abline(lm(formula = rsaModel2~workerData), col="red") # regression line (y~x)
@@ -235,29 +214,6 @@ model <- lm(formula = rsaModel2~workerData)
 summary(model)
 confint(model)
 
-### paper plot for optimized model
-d = data.frame(rsaModel2,workerData)
-require(ggplot2)
-ggplot(d, aes(x=rsaModel2,y=workerData)) +
-  geom_point() +
-  geom_smooth(method=lm,color="black") +
-  xlab("model predictions")+
-  ylab("human data")+
-  theme_bw()
-#ggsave("X4-scatter-simple-model-CogSci.png",width=3,height=2.5)
-#ggsave("X4-scatter-simple-model-CogSci.png",width=2,height=1.875)
 
 
-### correlation analysis for poster
-require(hydroGOF)
-gof(as.numeric(d$rsaModel2),as.numeric(d$workerData)) ## r2 = 0.99
-# Bootstrap 95% CI for R-Squared
-library(boot)
-# function to obtain R-Squared from the data 
-rsq <- function(formula, data, indices) {
-  d <- data[indices,] # allows boot to select sample 
-  fit <- lm(formula, data=d)
-  return(summary(fit)$r.square)
-} 
-results <- boot(data=d, statistic=rsq, R=10000, formula=workerData~rsaModel2)
-boot.ci(results, type="bca") # 95% CI  ( 0.9868,  0.9925 )  
+

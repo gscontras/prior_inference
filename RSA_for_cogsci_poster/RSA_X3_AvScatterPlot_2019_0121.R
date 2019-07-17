@@ -1,5 +1,3 @@
-setwd("~/git/prior_inference/RSA_2019_07_05/")
-
 source("RSA_StratUttModel_2019_0114.R")
 source("RSA_StratUtt_getConstCode_2019_0114.R")
 
@@ -18,12 +16,12 @@ source("RSA_StratUtt_getConstCode_2019_0114.R")
 
 #x3pilotData <- read.csv("x3pilotDataAugmV.2_fixedAndD_052019.csv")
 
-x3pilotData <- read.csv("x3pilotDataAugmV0_fixedAndD_052019.csv")
+#x3pilotData <- read.csv("x3pilotDataAugmV0_fixedAndD_052019.csv") # for cogsci poster
 #x3pilotData <- read.csv("x3pilotDataAugmV0_ADandBD_052019.csv")
 #x3pilotData <- read.csv("x3pilotDataAugmV0_ABandABD_052019.csv")
 #x3pilotData <- read.csv("x3pilotDataAugm_fixedAndD_052019.csv")
 
-
+x3pilotData <- read.csv("x3pilotDataAug_052019_dand0011fixed.csv") # for cogsci poster
 
 ## adding the 1-27 target and object2 & object3 code.
 o1 <- x3pilotData$obj1OC27
@@ -35,8 +33,10 @@ o3 <- x3pilotData$obj3OC27
 ## filtering for only the present feature values for each feature.
 ###########
 subjectGuessIndexM1 <- grep("^DPost_1", colnames(x3pilotData)) - 1
-modelGuessIndex1M1 <- grep("^MPost1_1", colnames(x3pilotData)) - 1
-modelGuessIndex2M1 <- grep("^MPost2_1", colnames(x3pilotData)) - 1
+modelGuessIndex1M1 <- grep("^MPost_1", colnames(x3pilotData)) - 1
+modelGuessIndex2M1 <- grep("^MPostNO_1", colnames(x3pilotData)) - 1
+#modelGuessIndex1M1 <- grep("^MPost1_1", colnames(x3pilotData)) - 1
+#modelGuessIndex2M1 <- grep("^MPost2_1", colnames(x3pilotData)) - 1
 for(i in c(1:nrow(x3pilotData))) {
   currentObjects <- c(o1[i], o2[i], o3[i])
   validUtterances <- determineValidUtterances(currentObjects)
@@ -72,8 +72,10 @@ for(i in c(1:length(x3pilotData$X))) {
 # object order specifies reordering of presented object order
 # featureValueOrder specifies how the present feature in an object constellation should be ordered.
 subjectGuessIndex <- grep("^DPost_1", colnames(x3pilotData))
-modelGuessIndex1 <- grep("^MPost1_1", colnames(x3pilotData))
-modelGuessIndex2 <- grep("^MPost2_1", colnames(x3pilotData))
+modelGuessIndex1 <- grep("^MPost_1", colnames(x3pilotData))
+modelGuessIndex2 <- grep("^MPostNO_1", colnames(x3pilotData))
+#modelGuessIndex1 <- grep("^MPost1_1", colnames(x3pilotData))
+#modelGuessIndex2 <- grep("^MPost2_1", colnames(x3pilotData))
 
 x3pilotData$CCode <- uniqueCCode
 x3pilotData$featValOrder <- featureValueOrder
@@ -93,7 +95,7 @@ modelDataOrdered[,4] <- x3pilotData$obj3
 modelDataOrdered[,5] <- x3pilotData$obj1OC27
 modelDataOrdered[,6] <- x3pilotData$obj2OC27
 modelDataOrdered[,7] <- x3pilotData$obj3OC27
-#write.csv(modelDataOrdered, "../RSA_for_cogsci_poster/x3pilotDataModelOptimizedSorted.csv")
+write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted.csv")
 ################################################################################
 
 
@@ -125,7 +127,7 @@ for(i in c(1:length(myCCodes))) {
   }
 }
   
-### plot with default parameters###
+### plot after Optimization ###
 rsaModel1 <- as.array(rsaModel1)
 
 plot(rsaModel1, workerData)
@@ -135,23 +137,8 @@ lines(lowess(rsaModel1,workerData), col="blue") # lowess line (x,y)
 model <- lm(formula = rsaModel1~workerData)
 summary(model)
 confint(model)
-### correlation analysis for paper
-d1 = data.frame(rsaModel1,workerData)
-require(hydroGOF)
-gof(as.numeric(d1$rsaModel1),as.numeric(d1$workerData)) ## r2 = 0.07
-# Bootstrap 95% CI for R-Squared
-library(boot)
-# function to obtain R-Squared from the data 
-rsq <- function(formula, data, indices) {
-  d <- data[indices,] # allows boot to select sample 
-  fit <- lm(formula, data=d)
-  return(summary(fit)$r.square)
-} 
-results <- boot(data=d1, statistic=rsq, R=10000, formula=workerData~rsaModel1)
-boot.ci(results, type="bca") # 95% CI  ( 0.0073,  0.2329 )  
 
-
-### plot after Optimization ###
+### plot with default parameters ###
 rsaModel2 <- as.array(rsaModel2)
 
 plot(rsaModel2, workerData)
@@ -163,28 +150,5 @@ summary(model)
 confint(model)
 
 
-### paper plot for optimized model
-d = data.frame(rsaModel2,workerData)
-require(ggplot2)
-ggplot(d, aes(x=rsaModel2,y=workerData)) +
-  geom_point() +
-  geom_smooth(method=lm,color="black") +
-  xlab("model predictions")+
-  ylab("human data")+
-  theme_bw()
-#ggsave("../RSA_for_cogsci_poster/X3-scatter-simple-CogSci.png",width=2,height=1.875)
 
-### correlation analysis for poster
-require(hydroGOF)
-gof(as.numeric(d$rsaModel2),as.numeric(d$workerData)) ## r2 = 0.93
-# Bootstrap 95% CI for R-Squared
-library(boot)
-# function to obtain R-Squared from the data 
-rsq <- function(formula, data, indices) {
-  d <- data[indices,] # allows boot to select sample 
-  fit <- lm(formula, data=d)
-  return(summary(fit)$r.square)
-} 
-results <- boot(data=d, statistic=rsq, R=10000, formula=workerData~rsaModel2)
-boot.ci(results, type="bca") # 95% CI  ( 0.8759,  0.9585 )  
 

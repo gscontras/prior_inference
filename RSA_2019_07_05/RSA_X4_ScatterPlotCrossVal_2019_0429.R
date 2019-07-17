@@ -2,9 +2,9 @@
 source("RSA_StratUtt_getConstCode_2019_0114.R")
 
 # loading the augmented pilot data
-x4pilotData <- read.csv("x4pilot_SimpleRSA_DataCrossValAugmentedfixed_2019_0429.csv")
+#x4pilotData <- read.csv("x4pilot_SimpleRSA_DataCrossValAugmentedfixed_2019_0429.csv")
 #x4pilotData <- read.csv("x4pilot_SimpleRSA_DataCrossValAugmented_2019_0507.csv")
-#x4pilotData <- read.csv("x4pilot_SimpleRSA_DataCrossValAugmented2_2019_0507.csv")
+x4pilotData <- read.csv("x4pilot_SimpleRSA_DataCrossValAugmented2_2019_0507.csv")
 
 #x4pilotData <- read.csv("x4pilot_DataCrossValAugmentedfixed_2019_0429.csv")
 #x4pilotData <- read.csv("x4pilot_DataCrossValAugmented_2019_0429.csv")

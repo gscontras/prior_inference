@@ -16,12 +16,12 @@ source("RSA_StratUtt_getConstCode_2019_0114.R")
 
 #x3pilotData <- read.csv("x3pilotDataAugmV.2_fixedAndD_052019.csv")
 
-x3pilotData <- read.csv("x3pilotDataAugmV0_fixedAndD_052019.csv")
+#x3pilotData <- read.csv("x3pilotDataAugmV0_fixedAndD_052019.csv") # for cogsci poster
 #x3pilotData <- read.csv("x3pilotDataAugmV0_ADandBD_052019.csv")
 #x3pilotData <- read.csv("x3pilotDataAugmV0_ABandABD_052019.csv")
 #x3pilotData <- read.csv("x3pilotDataAugm_fixedAndD_052019.csv")
 
-
+x3pilotData <- read.csv("x3pilotDataAug_052019_dand0011fixed.csv") # for cogsci poster
 
 ## adding the 1-27 target and object2 & object3 code.
 o1 <- x3pilotData$obj1OC27
@@ -33,8 +33,10 @@ o3 <- x3pilotData$obj3OC27
 ## filtering for only the present feature values for each feature.
 ###########
 subjectGuessIndexM1 <- grep("^DPost_1", colnames(x3pilotData)) - 1
-modelGuessIndex1M1 <- grep("^MPost1_1", colnames(x3pilotData)) - 1
-modelGuessIndex2M1 <- grep("^MPost2_1", colnames(x3pilotData)) - 1
+modelGuessIndex1M1 <- grep("^MPost_1", colnames(x3pilotData)) - 1
+modelGuessIndex2M1 <- grep("^MPostNO_1", colnames(x3pilotData)) - 1
+#modelGuessIndex1M1 <- grep("^MPost1_1", colnames(x3pilotData)) - 1
+#modelGuessIndex2M1 <- grep("^MPost2_1", colnames(x3pilotData)) - 1
 for(i in c(1:nrow(x3pilotData))) {
   currentObjects <- c(o1[i], o2[i], o3[i])
   validUtterances <- determineValidUtterances(currentObjects)
@@ -70,8 +72,10 @@ for(i in c(1:length(x3pilotData$X))) {
 # object order specifies reordering of presented object order
 # featureValueOrder specifies how the present feature in an object constellation should be ordered.
 subjectGuessIndex <- grep("^DPost_1", colnames(x3pilotData))
-modelGuessIndex1 <- grep("^MPost1_1", colnames(x3pilotData))
-modelGuessIndex2 <- grep("^MPost2_1", colnames(x3pilotData))
+modelGuessIndex1 <- grep("^MPost_1", colnames(x3pilotData))
+modelGuessIndex2 <- grep("^MPostNO_1", colnames(x3pilotData))
+#modelGuessIndex1 <- grep("^MPost1_1", colnames(x3pilotData))
+#modelGuessIndex2 <- grep("^MPost2_1", colnames(x3pilotData))
 
 x3pilotData$CCode <- uniqueCCode
 x3pilotData$featValOrder <- featureValueOrder
