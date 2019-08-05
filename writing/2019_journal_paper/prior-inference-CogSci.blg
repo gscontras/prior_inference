@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: prior-inference-CogSci.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: prior-inference.bib
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5062 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5072 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5075 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5076 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5079 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5079 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5079 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5079 of file apacite.bst
+You've used 21 entries,
+            6951 wiz_defined-function locations,
+            1410 strings with 13885 characters,
+and the built_in function-call counts, 39367 in all, are:
+= -- 5139
+> -- 291
+< -- 1673
++ -- 1735
+- -- 42
+* -- 2318
+:= -- 6809
+add.period$ -- 98
+call.type$ -- 21
+change.case$ -- 364
+chr.to.int$ -- 0
+cite$ -- 42
+duplicate$ -- 1023
+empty$ -- 1626
+format.name$ -- 425
+if$ -- 7800
+int.to.chr$ -- 0
+int.to.str$ -- 63
+missing$ -- 0
+newline$ -- 511
+num.names$ -- 180
+pop$ -- 694
+preamble$ -- 1
+purify$ -- 84
+quote$ -- 0
+skip$ -- 2884
+stack$ -- 0
+substring$ -- 2000
+swap$ -- 598
+text.length$ -- 71
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 2128
+warning$ -- 0
+while$ -- 155
+width$ -- 0
+write$ -- 591
+(There were 8 error messages)
