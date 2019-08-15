@@ -524,6 +524,35 @@ Qing, C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Sikos%
+, Venhuizen%
+, Drenhaus%
+\BCBL {}\ \BBA {} Crocker%
+}{%
+Sikos%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+sikos2019}
+\APACinsertmetastar {%
+sikos2019}%
+\begin{APACrefauthors}%
+Sikos, L.%
+, Venhuizen, N.%
+, Drenhaus, H.%
+\BCBL {}\ \BBA {} Crocker, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{04}{}.
+\newblock
+\APACrefbtitle {Reevaluating Pragmatic Reasoning in Web-based Language Games.}
+  {Reevaluating pragmatic reasoning in web-based language games.}
+\newblock
+\begin{APACrefDOI} \doi{10.13140/RG.2.2.30535.14249} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Wasow%
 }{%
 Wasow%

@@ -7478,4 +7478,12 @@
   author    = {Cushing, Steven},
 }
 
+@Misc{sikos2019,
+  author = {Sikos, Les and Venhuizen, Noortje and Drenhaus, Heiner and Crocker, Matthew},
+  title  = {Reevaluating Pragmatic Reasoning in Web-based Language Games},
+  month  = {04},
+  year   = {2019},
+  doi    = {10.13140/RG.2.2.30535.14249},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -53,7 +53,7 @@ It is not surprising in light of the cases mentioned above and many daily less s
 If we look back at the study of ambiguity, we notice that the strategy of ambiguity avoidance is much older than modern linguistics. 
 Greek and {L}atin rhetoricians believed that a skillfully written text allows a perfectly accurate and lossless transmission of meaning to the listener or reader \cite{ossarichardson2019}. Such a text avoids ambiguities.
 
-Yet, despite the teachings of classic philologists, authors continued to  create ambiguous texts and  readers faced the challenge of interpreting them. The Bible is one of the most significant of such texts. In the XVI century, the Catholic church in response to Reformation proposed that the Bible can contain multiple meanings -- \citeA{ossarichardson2019} equates these meanings to multiple paths that lead readers to God. In a sense, this proposal contained one of the first acknowledgments of virtue of ambiguity, though with a  special caveat -- only God could do that, mere mortals could not. The search for an efficient transmission of meaning that lasted over millenia rested on an important assumption: we communicate to transfer knowledge to our conversaiton partner or audience in response to their request. However, information-seeking might be not the only communicative task interlocutors need to accomplish \cite{markova1995preface} and following instructions is not the only one, and probably not even the most common type of communcative acts \cite{foppa1995mutual}. 
+Yet, despite the teachings of classic philologists, authors continued to  create ambiguous texts and  readers faced the challenge of interpreting them. The Bible is one of the most significant of such texts. In the XVI century, the Catholic church in response to Reformation proposed that the Bible can contain multiple meanings -- \citeA{ossarichardson2019} equates these meanings to multiple paths that lead readers to God. In a sense, this proposal contained one of the first acknowledgments of virtue of ambiguity, though with a  special caveat -- only God could do that, humans could not. The search for an efficient transmission of meaning that lasted over millenia rested on an important assumption: we communicate to transfer knowledge to our conversaiton partner or audience in response to their request. However, information-seeking might be not the only communicative task interlocutors need to accomplish \cite{markova1995preface} and following instructions is not the only one, and probably not even the most common type of communcative acts \cite{foppa1995mutual}. 
 
 More recent research has begun to take notice of the efficiency ambiguity affords to us: by relying on context to fill in missing information, we can reuse lightweight bits of language rather than fully specifying the intended message \cite{levinson2000,piantadosietal2012,wasow2015}. 
 Viewed in this way, ambiguity serves as a feature---not a bug---of an efficient communication system.
@@ -121,7 +121,9 @@ We now have two sets of predictions from our model to check: first, the pragmati
 
 \subsection{Simplified pragmatic model}
 
-As an alternative, we also test a model that relies on fewer layers of reasoning: an enhanced literal listener that now inlcudes prior preferences over states, and a speaker who ...
+As an alternative, we also test a model that relies on fewer layers of reasoning. It involves an enhanced literal listener that now inlcudes prior preferences over states:
+$$P_{L_{0}}(s|u,f) \propto \sem{$u$}(s) \cdot P(s|f).$$
+\citeA{sikos2019} demonstrate that simpler reasoning models perform as well or better than more complex models in contexts where the predictions of the simple and full models diverge. In those situations, a literal listener layer enhanced with salience outperformed the full RSA model. And what is particularly striking, salience alone was a better predictor of human performance than the RSA suggesting that participants engaged in shallower reasoning than the original RSA models suggested.  
 
 \section{Experiment 1: Inferring preferences}
 
@@ -151,15 +153,24 @@ We followed \citeA{frankgoodman2012} in our stimuli creation. Objects were allow
 	\caption{Average human data from Experiment 1 plotted against the predictions of the $\gamma$-optimized RSA model; $r^{2}=0.96$, 95\% CI [0.94, 0.97].}\label{exp1-results}
 \end{figure}
 
-
+\subsubsection{Parameter-free models}
 
 % I used the code length(levels(as.factor(uniqueCCode))) to calculate the number of conditions
 
 %Since not all of the stimuli allowed for inference of preferences in the same way, we introduced a new categorization of stimuli. Our base model would then predict the same preferences for the same category of stimuli. The categorization takes into account the distribution of features, the chosen object and which feature was uttered. Each category consists of 3 tuples of 2 digits. Each tuple refers to one feature, where the first tuple always refers to the uttered feature. The first digit in each tuple would then denote how many objects share the value of the picked object for the corresponding feature. In figure \ref{FG-ref-game}, if the utterance was blue and the blue square was picked, the first tuple would reference color and its first digit would be a "2". Note that this does not determine which other object shares the feature value, i.e. "blue". To compensate, the second digit of the tuple denotes which other object shares this value. This depends on the order of the objects -- we stipulated that the picked object would be the first. The further order would be determined by which other object shares this specific value, i.e. the "blue circle" in figure \ref{FG-ref-game} would be the first of the "other objects" and the "green square" the second. The picked object is at position zero in this sense. Thus the first tuple for figure \ref{FG-ref-game} would be (2,1). For the other tuples, the first digits would be "2" for shape and "3" for texture. To streamline the category code we stipulated that we would order the features in descending order of their first digit, so that we would have texture's "3" next in figure \ref{FG-ref-game}. If a tuple starts with "3" or "1", the second digit would simply denote whether the other objects have different values for that feature or the same. Thus we would have (3,2) for texture, with the second digit signaling that the non-picked objects share their texture. The tuple for shape would finally be (2,2), because the value "square" is shared with the second other object (see above). Thus for figure \ref{FG-ref-game} we would end up with [(2,1),(3,2),(2,2)].
 
-The $S_2$ layer of our RSA model returns a posterior distribution over inferred feature preferences $f$ after observing a listener selecting an object in response to an utterance. 
-Model predictions depend on two parameters.
-The first is the soft-max scaling parameter $\alpha$ in the $S_1$ layer of the model, where the default value is typically set to $\alpha=1$. 
+We first present the non-parametrized versions of the model. We hypothesized that participants may either go through all the layers of pragmatic reasoning, and additionally calculate the prefrences that lead to particular object choice. The last layer of this model $S_2$  returns a posterior distribution over inferred feature preferences $f$ after observing a listener selecting an object in response to an utterance. 
+
+In a simpler model, the object choice is driven only by a $L_0$ semantics enhanced with priors over feature preferences. Upon hearing an utterance \textit{blue} a participants assigns equal probabilities to all blue objects in a scene, and the actual choice of object signals a preference of other feature values that object has. For example, picking a blue circle rather than a blue square is driven by a prefrence for circles.
+
+Both, the simple and the full models provide a good fit to the data (simple model: $p$, $r^2$; full model: $p$, $r^2$) suggesting that participants are indeed able to infer the feature preferences that lead to a choice of an object. We can also see that the simple model fits the data just as well as the full more complex model.
+
+* insert Figure comparing simple and full RSA non-parametrized models for exp 3 here *
+
+\subsubsection{Fitted models}
+
+Model fits improves even more if we fit two parameters on individual level, i.e. calculating a parameter estimate for each participant.
+For the full RSA model, the first is the soft-max scaling parameter $\alpha$ in the $S_1$ layer of the model, where the default value is typically set to $\alpha=1$. 
 This parameter controls how likely $S_1$ is to maximize utility when choosing utterances. The second parameter scales the strength of individual feature preferences $f_i$. 
 The softness parameter $\gamma$ determines how strong a preference is if a certain feature value is indeed preferred.
 This parameter controls the shape of each of the possible feature preferences $f_i$ that $S_2$ considers. 
