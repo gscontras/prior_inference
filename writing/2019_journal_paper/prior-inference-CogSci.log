@@ -1,14 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  15 AUG 2019 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.24)  18 AUG 2019 00:52
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
-**prior-inference-CogSci.tex
-(./prior-inference-CogSci.tex
+**./prior-inference-CogSci.tex
+(prior-inference-CogSci.tex
 LaTeX2e <2017-04-15>
-Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -23,52 +21,59 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\t
+ikz.sty"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.
+sty"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrc
+s.sty"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgf
+util-common.tex"
 \pgfutil@everybye=\toks14
 \pgfutil@tempdima=\dimen103
 \pgfutil@tempdimb=\dimen104
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
-sts.tex))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgf
+util-common-lists.tex"))
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgf
+util-latex.def"
 \pgfutil@abb=\box26
-(/usr/local/texlive/2017/texmf-dist/tex/latex/ms/everyshi.sty
+
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgf
+rcs.code.tex"
 Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
 Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgfc
+ore.sty" ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
 File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -76,15 +81,19 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\pgf
+sys.sty"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\p
+gfsys.code.tex"
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgf
+keys.code.tex"
 \pgfkeys@pathtoks=\toks16
 \pgfkeys@temptoks=\toks17
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
-ode.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgf
+keysfiltered.code.tex"
 \pgfkeys@tmptoks=\toks18
 ))
 \pgf@x=\dimen107
@@ -105,32 +114,34 @@ ode.tex
 \t@pgf@tokb=\toks20
 \t@pgf@tokc=\toks21
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\p
+gf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\p
+gfsys-pdftex.def"
 File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\p
+gfsys-common-pdf.def"
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\p
+gfsyssoftpath.code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 \pgfsyssoftpath@smallbuffer@items=\count92
 \pgfsyssoftpath@bigbuffer@items=\count93
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\p
+gfsysprotocol.code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-)) (/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
+))
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -144,12 +155,18 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcore.code.tex"
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.
+code.tex"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathc
+alc.code.tex"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathu
+til.code.tex")
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathp
+arser.code.tex"
 \pgfmath@dimen=\dimen115
 \pgfmath@count=\count94
 \pgfmath@box=\box27
@@ -157,29 +174,30 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 \pgfmath@stack@operand=\toks23
 \pgfmath@stack@operation=\toks24
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
-tex
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
-.code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+unctions.code.tex"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+unctions.basic.code.tex")
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+unctions.trigonometric.code.tex")
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+unctions.random.code.tex")
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+unctions.comparison.code.tex")
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+unctions.base.code.tex")
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+unctions.round.code.tex")
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+unctions.misc.code.tex")
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+unctions.integerarithmetics.code.tex")))
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathf
+loat.code.tex"
 \c@pgfmathroundto@lastzeros=\count95
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcorepoints.code.tex"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen116
 \pgf@picmaxx=\dimen117
@@ -196,121 +214,128 @@ File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@zx=\dimen128
 \pgf@zy=\dimen129
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcorepathconstruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen130
 \pgf@path@lasty=\dimen131
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcorepathusage.code.tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen132
 \pgf@shorten@start@additional=\dimen133
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcorescopes.code.tex"
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box28
 \pgf@hbox=\box29
 \pgf@layerbox@main=\box30
 \pgf@picture@serial@count=\count96
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcoregraphicstate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen134
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcoretransformations.code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen135
 \pgf@pt@y=\dimen136
 \pgf@pt@temp=\dimen137
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcorequick.code.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcoreobjects.code.tex"
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcorepathprocessing.code.tex"
 File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcorearrows.code.tex"
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen138
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcoreshade.code.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen139
 \pgf@sys@shading@range@num=\count97
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcoreimage.code.tex"
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcoreexternal.code.tex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
 \pgfexternal@startupbox=\box31
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcorelayers.code.tex"
 File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcoretransparency.code.tex"
 File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pg
+fcorepatterns.code.tex"
 File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmo
+duleshapes.code.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
 \pgfnodeparttextbox=\box32
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmo
+duleplot.code.tex"
 File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\p
+gfcomp-version-0-65.sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen140
 \pgf@nodesepend=\dimen141
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\p
+gfcomp-version-1-18.sty"
 Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgffo
+r.sty"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfke
+ys.sty"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgf
+keys.code.tex"))
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\math\pgfmath.st
+y"
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.
+code.tex"))
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgf
+for.code.tex"
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.
+code.tex")
 \pgffor@iter=\dimen142
 \pgffor@skip=\dimen143
 \pgffor@stack=\toks25
 \pgffor@toks=\toks26
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer
+\tikz\tikz.code.tex"
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgf
+libraryplothandlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \pgf@plot@mark@count=\count98
 \pgfplotmarksize=\dimen144
@@ -330,8 +355,8 @@ File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
 \tikznumberofcurrentchild=\count101
 \tikz@fig@count=\count102
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmo
+dulematrix.code.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 \pgfmatrixcurrentrow=\count103
 \pgfmatrixcurrentcolumn=\count104
@@ -339,28 +364,28 @@ File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
 )
 \tikz@expandcount=\count106
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer
+\tikz\libraries\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks27
 \ex@=\dimen151
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen152
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count107
@@ -401,11 +426,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/multicol.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\multicol.sty"
 Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \c@tracingmulticols=\count119
 \mult@box=\box39
@@ -454,17 +479,17 @@ Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \colbreak@box=\box64
 \mc@col@check@num=\count127
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/varwidth/varwidth.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\varwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box65
 \sift@deathcycles=\count128
 \@vwid@loff=\dimen169
 \@vwid@roff=\dimen170
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/blindtext/blindtext.sty
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\blindtext\blindtext
+.sty"
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 \c@blindtext=\count129
@@ -486,10 +511,10 @@ Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 \c@blind@pangramcount=\count145
 \c@blind@pangrammax=\count146
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/linguex/linguex.sty
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\linguex\linguex.sty
+"
 Package: linguex 2013/05/28 Example formatting for linguistics v. 4.3
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/gb4e/cgloss4e.sty
+ ("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\gb4e\cgloss4e.sty"
 \lineone=\box66
 \linetwo=\box67
 \linethree=\box68
@@ -526,8 +551,7 @@ LaTeX Info: Redefining \b on input line 307.
 LaTeX Info: Redefining \c on input line 311.
 LaTeX Info: Redefining \d on input line 313.
 \c@tmpaEx=\count154
-)
-(/usr/local/texlive/2017/texmf-dist/tex/latex/pslatex/pslatex.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\pslatex\pslatex.sty"
 Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -562,7 +586,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/apacite/apacite.sty
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\apacite\apacite.sty
+"
 Package: apacite 2013/07/21 v6.03 APA citation
 \c@BibCnt=\count155
 \bibleftmargin=\skip64
@@ -571,10 +596,10 @@ Package: apacite 2013/07/21 v6.03 APA citation
 \bibitemsep=\skip67
 \biblabelsep=\skip68
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/placeins/placeins.sty
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\placeins\placeins.s
+ty"
 Package: placeins 2005/04/18  v 2.2
-)
-(./prior-inference-CogSci.aux)
+) (prior-inference-CogSci.aux)
 \openout1 = `prior-inference-CogSci.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -587,7 +612,7 @@ LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 32.
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 32
 .
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omspzccm.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omspzccm.fd"
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
 LaTeX Font Info:    ... okay on input line 32.
@@ -597,7 +622,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 
 ABD: EveryShipout initializing macros
-(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mki
+i"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count156
 \scratchdimen=\dimen171
@@ -610,15 +636,15 @@ ABD: EveryShipout initializing macros
 \MPnumerator=\count160
 \makeMPintoPDFobject=\count161
 \everyMPtoPDFconversion=\toks34
-) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -626,22 +652,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -654,34 +680,30 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+)
 \c@maskedRefs=\count162
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/apacite/english.apc
+("C:\Users\Martin Butz\AppData\Roaming\MiKTeX\2.9\tex\latex\apacite\english.apc
+"
 File: english.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
 LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 33
 .
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptmcm.fd"
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 33
 .
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlptmcm.fd"
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+psycm on input line 33
 .
 
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omxpsycm.fd"
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
@@ -694,166 +716,160 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 LaTeX Warning: No \author given.
 
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
 
-Overfull \hbox (4.66144pt too wide) in paragraph at lines 36--43
+Overfull \hbox (4.66144pt too wide) in paragraph at lines 36--49
 []\OT1/ptm/m/n/9 From the Gricean per-spec-tive, am-bi-gu-ity in lan-guage is s
 ome-thing to be avoided.
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
 [1
 
-{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{C:/Users/Martin Butz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 
 [2]
 
-LaTeX Warning: File `images/rsascene.eps' not found on input line 82.
+LaTeX Warning: File `images/rsascene.eps' not found on input line 88.
 
 Package epstopdf Info: Source file: <images/rsascene.eps>
 (epstopdf)             Output file: <images/rsascene-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-04-24 17:39:12
+(epstopdf)                    date: 2019-08-17 23:59:22
 (epstopdf)                    size: 6152 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/rsascene-eps-conver
-ted-to.pdf images/rsascene.eps>
-(epstopdf)             \includegraphics on input line 82.
+(epstopdf)             Command: <epstopdf --outfile=images/rsascene-eps-convert
+ed-to.pdf images/rsascene.eps>
+(epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
-<images/rsascene-eps-converted-to.pdf, id=16, 64.24pt x 21.07875pt>
+<images/rsascene-eps-converted-to.pdf, id=15, 64.24pt x 21.07875pt>
 File: images/rsascene-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/rsascene-eps-converted-to.pdf>
 Package pdftex.def Info: images/rsascene-eps-converted-to.pdf used on input lin
-e 82.
+e 88.
 (pdftex.def)             Requested size: 144.54pt x 47.43086pt.
- [3 <./images/rsascene-eps-converted-to.pdf>] [4] [5]
+ [3] [4 <./images/rsascene-eps-converted-to.pdf>] [5] [6]
 
-LaTeX Warning: File `images/exp1-trial.eps' not found on input line 144.
+LaTeX Warning: File `images/exp1-trial.eps' not found on input line 150.
 
 Package epstopdf Info: Source file: <images/exp1-trial.eps>
 (epstopdf)             Output file: <images/exp1-trial-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-04-24 17:39:12
+(epstopdf)                    date: 2019-08-17 23:59:22
 (epstopdf)                    size: 108770 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/exp1-trial-eps-conv
-erted-to.pdf images/exp1-trial.eps>
-(epstopdf)             \includegraphics on input line 144.
+(epstopdf)             Command: <epstopdf --outfile=images/exp1-trial-eps-conve
+rted-to.pdf images/exp1-trial.eps>
+(epstopdf)             \includegraphics on input line 150.
 Package epstopdf Info: Output file is already uptodate.
-<images/exp1-trial-eps-converted-to.pdf, id=31, 743.77875pt x 450.68375pt>
+<images/exp1-trial-eps-converted-to.pdf, id=33, 743.77875pt x 450.68375pt>
 File: images/exp1-trial-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/exp1-trial-eps-converted-to.pdf>
 Package pdftex.def Info: images/exp1-trial-eps-converted-to.pdf used on input l
-ine 144.
+ine 150.
 (pdftex.def)             Requested size: 325.215pt x 197.06361pt.
 
 
-LaTeX Warning: File `images/X4-scatter-CogSci.eps' not found on input line 152.
+LaTeX Warning: File `images/X4-scatter-CogSci.eps' not found on input line 158.
 
 
 Package epstopdf Info: Source file: <images/X4-scatter-CogSci.eps>
 (epstopdf)             Output file: <images/X4-scatter-CogSci-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2019-04-24 17:39:12
+(epstopdf)                    date: 2019-08-17 23:59:22
 (epstopdf)                    size: 36787 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/X4-scatter-CogSci-e
-ps-converted-to.pdf images/X4-scatter-CogSci.eps>
-(epstopdf)             \includegraphics on input line 152.
+(epstopdf)             Command: <epstopdf --outfile=images/X4-scatter-CogSci-ep
+s-converted-to.pdf images/X4-scatter-CogSci.eps>
+(epstopdf)             \includegraphics on input line 158.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/X4-scatter-CogSci-eps-converted-to.pdf, id=32, 903.375pt x 752.8125pt>
+<images/X4-scatter-CogSci-eps-converted-to.pdf, id=34, 903.375pt x 752.8125pt>
 File: images/X4-scatter-CogSci-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/X4-scatter-CogSci-eps-converted-to.pdf>
 Package pdftex.def Info: images/X4-scatter-CogSci-eps-converted-to.pdf used on 
-input line 152.
+input line 158.
 (pdftex.def)             Requested size: 216.81pt x 180.66719pt.
- [6] [7 <./images/exp1-trial-eps-converted-to.pdf>]
-Overfull \hbox (37.74623pt too wide) in paragraph at lines 195--202
-\OT1/ptm/m/n/10 individually-optimized $\OML/ptmcm/m/it/10 ^^M$ \OT1/ptm/m/n/10
- pa-ram-e-ters yielded an av-er-age KL di-ver-gence of $\OT1/ptmcm/m/n/10 2\OML
-/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 058$ \OT1/ptm/m/n/10 (median=$\OT1/ptmcm/m/n/
-10 1\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 524$\OT1/ptm/m/n/10 ).
+ [7 <./images/exp1-trial-eps-converted-to.pdf>]
+Overfull \hbox (37.74623pt too wide) in paragraph at lines 201--208
+\OT1/ptm/m/n/10 individually-optimized $\OML/ptmcm/m/it/10 $ \OT1/ptm/m/n/10 p
+a-ram-e-ters yielded an av-er-age KL di-ver-gence of $\OT1/ptmcm/m/n/10 2\OML/p
+tmcm/m/it/10 :\OT1/ptmcm/m/n/10 058$ \OT1/ptm/m/n/10 (median=$\OT1/ptmcm/m/n/10
+ 1\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 524$\OT1/ptm/m/n/10 ).
  []
 
-[8 <./images/X4-scatter-CogSci-eps-converted-to.pdf>]
+[8 <./images/X4-scatter-CogSci-eps-converted-to.pdf>] [9]
 
-LaTeX Warning: File `images/exp2-trial.eps' not found on input line 230.
+LaTeX Warning: File `images/exp2-trial.eps' not found on input line 236.
 
 Package epstopdf Info: Source file: <images/exp2-trial.eps>
 (epstopdf)             Output file: <images/exp2-trial-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-04-24 17:39:12
+(epstopdf)                    date: 2019-08-17 23:59:22
 (epstopdf)                    size: 104772 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/exp2-trial-eps-conv
-erted-to.pdf images/exp2-trial.eps>
-(epstopdf)             \includegraphics on input line 230.
+(epstopdf)             Command: <epstopdf --outfile=images/exp2-trial-eps-conve
+rted-to.pdf images/exp2-trial.eps>
+(epstopdf)             \includegraphics on input line 236.
 Package epstopdf Info: Output file is already uptodate.
-<images/exp2-trial-eps-converted-to.pdf, id=49, 743.77875pt x 547.04375pt>
+<images/exp2-trial-eps-converted-to.pdf, id=51, 743.77875pt x 547.04375pt>
 File: images/exp2-trial-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/exp2-trial-eps-converted-to.pdf>
 Package pdftex.def Info: images/exp2-trial-eps-converted-to.pdf used on input l
-ine 230.
+ine 236.
 (pdftex.def)             Requested size: 325.215pt x 239.1975pt.
- [9]
 
-LaTeX Warning: File `images/X3-scatter-CogSci.eps' not found on input line 245.
+
+LaTeX Warning: File `images/X3-scatter-CogSci.eps' not found on input line 251.
 
 
 Package epstopdf Info: Source file: <images/X3-scatter-CogSci.eps>
 (epstopdf)             Output file: <images/X3-scatter-CogSci-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2019-04-24 17:39:12
+(epstopdf)                    date: 2019-08-17 23:59:22
 (epstopdf)                    size: 37465 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/X3-scatter-CogSci-e
-ps-converted-to.pdf images/X3-scatter-CogSci.eps>
-(epstopdf)             \includegraphics on input line 245.
+(epstopdf)             Command: <epstopdf --outfile=images/X3-scatter-CogSci-ep
+s-converted-to.pdf images/X3-scatter-CogSci.eps>
+(epstopdf)             \includegraphics on input line 251.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/X3-scatter-CogSci-eps-converted-to.pdf, id=53, 903.375pt x 752.8125pt>
+<images/X3-scatter-CogSci-eps-converted-to.pdf, id=52, 903.375pt x 752.8125pt>
 File: images/X3-scatter-CogSci-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/X3-scatter-CogSci-eps-converted-to.pdf>
 Package pdftex.def Info: images/X3-scatter-CogSci-eps-converted-to.pdf used on 
-input line 245.
+input line 251.
 (pdftex.def)             Requested size: 216.81pt x 180.66719pt.
  [10 <./images/exp2-trial-eps-converted-to.pdf>] [11 <./images/X3-scatter-CogSc
 i-eps-converted-to.pdf>]
-(./prior-inference-CogSci.bbl [12]) [13] (./prior-inference-CogSci.aux) ) 
+(prior-inference-CogSci.bbl [12] [13]) [14] (prior-inference-CogSci.aux) ) 
 Here is how much of TeX's memory you used:
- 13428 strings out of 492995
- 260844 string characters out of 6132704
- 305566 words of memory out of 5000000
- 16672 multiletter control sequences out of 15000+600000
- 52682 words of font info for 104 fonts, out of 8000000 for 9000
+ 13425 strings out of 493323
+ 262344 string characters out of 3139046
+ 304803 words of memory out of 3000000
+ 16657 multiletter control sequences out of 15000+200000
+ 52682 words of font info for 104 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,8n,54p,2162b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/
-local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2
-017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2017
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/ti
-mes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on prior-inference-CogSci.pdf (13 pages, 408073 bytes).
+ 55i,8n,54p,2165b,312s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/P
+rogram Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier
+/ucrr8a.pfb><C:/Users/Martin Butz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/sy
+mbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on prior-inference-CogSci.pdf (14 pages, 421268 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
