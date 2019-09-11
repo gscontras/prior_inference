@@ -1,3 +1,5 @@
+setwd("~/git/prior_inference/RSA_2019_07_05/")
+
 source("RSA_StratUttModel_2019_0114.R")
 source("RSA_StratUtt_getConstCode_2019_0114.R")
 
@@ -95,7 +97,7 @@ modelDataOrdered[,4] <- x3pilotData$obj3
 modelDataOrdered[,5] <- x3pilotData$obj1OC27
 modelDataOrdered[,6] <- x3pilotData$obj2OC27
 modelDataOrdered[,7] <- x3pilotData$obj3OC27
-write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted.csv")
+#write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted.csv")
 ################################################################################
 
 
@@ -149,6 +151,24 @@ model <- lm(formula = rsaModel2~workerData)
 summary(model)
 confint(model)
 
+### paper plot for optimized model
+d = data.frame(rsaModel1,workerData)
+require(ggplot2)
+ggplot(d, aes(x=rsaModel1,y=workerData)) +
+  geom_point() +
+  geom_smooth(method=lm,color="black") +
+  xlab("model predictions")+
+  ylab("human data")+
+  theme_bw()
+#ggsave("X3-scatter-CogSci.png",width=3,height=2.5)
+#ggsave("../RSA_for_cogsci_poster/X3-scatter-simple-CogSci.png",width=2,height=1.875)
 
+### correlation analysis for paper
+require(boot)
+require(zoo)
+require(hydroGOF)
+gof(as.numeric(d$rsaModel1),as.numeric(d$workerData)) ## r2 = 0.91
+results <- boot(data=d, statistic=rsq, R=10000, formula=workerData~rsaModel1)
+boot.ci(results, type="bca") # 95% CI  ( 0.8395,  0.9466 )  
 
 
