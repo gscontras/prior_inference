@@ -10,7 +10,7 @@ getConstellationCode <- function(objectConstellation, chosenFeature) {
                    allObjectsToUtterancesMappings[objectConstellation[3],])
   ## feature order
   featureOrder <- c(1:3)
-  ##
+  ## create adequate featureOrder
   if(chosenFeature!=1) {
     featureOrder[chosenFeature] <- 1
     featureOrder[1] <- chosenFeature
@@ -26,11 +26,11 @@ getConstellationCode <- function(objectConstellation, chosenFeature) {
   matchF2_23 <- ifelse(allFeatures[featureOrder[2]+3]==allFeatures[featureOrder[2]+6],2,1)
   matchF3_23 <- ifelse(allFeatures[featureOrder[3]+3]==allFeatures[featureOrder[3]+6],2,1)
   ## 
-  # print("Initialization of allFeatures, featureOrder, objectOrder, and feature matches:")
-  # print(allFeatures)
-  # print(featureOrder)
-  # print(objectOrder)
-  # print(c(matchF1, matchF1_23, matchF2, matchF2_23, matchF3, matchF3_23))
+  print("Initialization of allFeatures, featureOrder, objectOrder, and feature matches:")
+  print(allFeatures)
+  print(featureOrder)
+  print(objectOrder)
+  print(c(matchF1, matchF1_23, matchF2, matchF2_23, matchF3, matchF3_23))
   ##
   ## Resulting Code String initialization and first values... 
   resultCode <- rep(0, 6)

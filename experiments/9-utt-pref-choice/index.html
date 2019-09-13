@@ -1,0 +1,344 @@
+<html>
+
+<head>
+    <title>Prior inference</title>
+
+    <!--JS-->
+    <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+
+    <!-- external general utilities -->
+    <script src="background/js/jquery-1.11.1.min.js "></script>
+    <script src="background/full-projects/jquery-ui/jquery-ui.min.js"></script>
+    <script src="background/js/underscore-min.js"></script>
+    <!-- if you want to draw stuff: -->
+    <script src="background/js/raphael-min.js"></script>
+
+    <!-- cocolab experiment logic -->
+    <script src="background/js/exp-V2.js"></script>
+    <script src="background/js/stream-V2.js"></script>
+
+    <!-- cocolab general utilities -->
+    <script src="background/js/mmturkey.js "></script>
+    <script src="background/js/browserCheck.js"></script>
+    <script src="background/js/utils.js"></script>
+    <!-- if you want to draw cute creatures (depends on raphael): -->
+    <!-- <script src="background/js/ecosystem.js"></script> -->
+
+    <!-- experiment specific helper functions -->
+    <!-- <script src="js/local-utils.js"></script> -->
+
+    <!--CSS-->
+    <link href="background/full-projects/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="background/css/meaninglab-style.css" rel="stylesheet" type="text/css" />
+    <link href="css/local-style.css" rel="stylesheet" type="text/css" />
+
+    <!-- experiment file -->
+    <script src="js/prior-inference_copy.js"></script>
+    <script src="expt-files/stimuli.js"></script>
+    <script src="expt-files/stimuli_color.js"></script>
+    <script src="expt-files/stimuli_shape.js"></script>
+    <script src="expt-files/stimuli_texture.js"></script>
+    <script src="expt-files/names.js"></script>
+
+    <!-- check unique turkers -->
+    <script src="background/js/uniqueturker.js"></script>
+
+
+</head>
+
+<body onload="init();">
+    <noscript>This page requires JavaScript.</noscript>
+
+    <div class="slide" id="i0">
+        <img src="background/images/UniversitaetTuebingen.png" alt="Universität Tübingen" id="uniTuebingenLogo"></img>
+        <p id="instruct-text">This HIT involves reasoning about images. The task should take about fifteen minutes.
+            Please
+            pay attention. Thanks!</p>
+        <button class="button" id="start_button" type="button">Start Experiment</button>
+        <p id="legal">Legal information: By answering the following questions, you are participating in a study being
+            performed by cognitive scientists at the University of Tübingen, Germany. If you have questions about this
+            research, please contact Ella Eisemann at
+            <a
+                href="mailto://ella-isabel.eisemann@student.uni-tuebingen.de">ella-isabel.eisemann@student.uni-tuebingen.de</a>.
+            You must be at least 18 years old to participate. Your participation in this research is voluntary. You may
+            decline to answer any or all of the following questions. You may decline further participation, at any time,
+            without adverse consequences. Your anonymity is assured; the researchers who have requested your
+            participation will not receive any personal information about you.</p>
+    </div>
+
+    <div class="slide" id="instructions1">
+        <p><b>Please read the instructions carefully!</b></p>
+        <hr>
+        <h3>The story</h3>
+        <div id="Mary">
+            <p><i>"Hi, I'm Mary!"</i></p>
+            <img src='faces/f0.jpg' width='120'></img>
+        </div>
+        <p>Tomorrow is Mary's birthday and although that you don't know her well, you want to give her a birthday
+            present.
+            But what should you choose? You have the choice between a number of objects and now you want
+            to find out which one she will like the most.
+        </p>
+
+        <h3>Instructions for a block</h3>
+        <p>You will see a series of scenarios with one person and three objects. The person will stay the
+            same over the whole block but the objects and the feature (color, shape or texture) will change.
+            Each feature can have different forms. For example the texture can be <i>solid, striped</i> or <i>polka-dotted</i>.
+            One scenario might look like this:
+            <div><img class="screenshot" src='background/screeshots_explanation/begin.jpg' width='70% '
+                    border="5"></img></div>
+            <!-- <div class="wrapper">
+            <div id="object1i" class="object"><img src='images/111.png' width='120'></img></div>
+            <div id="object2i" class="object"><img src='images/222.png' width='120'></img></div>
+            <div id="object3i" class="object"><img src='images/333.png' width='120'></img></div>
+        </div> -->
+
+            <h4>Your task is divided in two parts</h4>
+            <p>When you choose an utterance, Mary picks an object that corresponds to the utterance
+                You get to observe her choice. 
+                To help you, the objects which don't match your utterance will move to the background.
+                Mary's preferences would be reflected in Mary's object choice.
+                You know that she always says what she thinks and that her preferences don't change over time.<br />
+                <div><img class="screenshot" src='background/screeshots_explanation/after_response.jpg' width='70%'
+                        border="5"> </img></div><br />
+                In the second part you adjust the sliders according to what Mary likes. <br />
+                Does she like blue? Green? Red? <br />
+                <div><img class="screenshot" src='background/screeshots_explanation/after_preferences.jpg' width='70%'
+                        border="5"> </img></div><br />
+            </p>
+            <!-- To give her the best present possible, try to find out everything you can about her color preferences. -->
+
+
+            <h3>Experiment</h3>
+            <p>The experiment consists out of one practice block and <span class="expBlock"> </span> experimental blocks. In each block you will need to
+                find a birthday present for a new person.
+            </p>
+
+            <p>Let's practice!</p>
+            <!-- <p class="instruction_condition">{{}}</p> -->
+            <button class="button" onclick="_s.button()">Okay</button>
+    </div>
+
+    <div class="slide" id="task">
+        <div class="UttChoiceTask" id="multi_radio">
+
+            <p>Suppose you want to find out which <b><span class="targetFeature"></span></b> <span
+                    class="person2"></span>
+                likes the most in the following slides:</p>
+
+            <p id="responseText"><span class="person2"></span> chose the object with the yellow frame.</p>
+
+            <div class="wrapper" id="wrapper">
+                <div id="object1" class="object"></div>
+                <div id="object2" class="object"></div>
+                <div id="object3" class="object"></div>
+            </div>
+
+            <p>You can choose a single utterance and then watch <span class="person2"></span>
+                select an object. <br />What should you say?</p>
+
+            <table id="multi_radio_table" class="radio_table"></table>
+
+            <button class="button" id="responseButton" onclick="_s.responseButton()">Get the answer</button>
+            <div class="firstErr">Please choose one of the utterances before you can see the response.</div>
+        </div>
+
+        <div class="PreferenceTask" id="multi_slider">
+            <p><i>"Hi, I'm <span class="person2"></span>!"</i></p>
+            <div class="personPic"></div>
+            <hr>
+            <p>Please adjust the sliders according to what <span class="targetFeature"></span> <br /> you think <span
+                    class="person2"></span> likes the most.</p>
+            <table id="multi_slider_table" class="slider_table">
+                <tr>
+                    <td></td>
+                    <td class="left">definitely not</td>
+                    <td class="right">definitely</td>
+                </tr>
+            </table>
+            <button class="prefButton" id="continueButton" onclick="_s.continueButton()">Next trial</button>
+            <div class="secondErr"> Please ajust <b>all</b> the sliders according to what you learned about what <span class="person2"></span> likes. 
+                If you  didn't learn anything just touch all the sliders.</div>
+        </div>
+        <br style="clear:both;" />
+    </div>
+
+    <div class="slide" id="certainty">
+        <p id="infoTextCertainty"> Are you sure you now know <span class="person2"></span>'s preferences
+            for <span class="targetFeature"></span>s? </p>
+        <div class="wrapper" id="wrapper">
+            <div id="inline"> No, I have no idea. </div>
+            <div id="certaintySlider" class="certaintySlider"> </div>
+            <div id="inlineLast"> Yes, I'm sure! </div>
+        </div>
+        <div class="err">Please answer by moving the slider.</div>
+        <button class="buttonWMargin" onclick="_s.button()">Continue</button>
+    </div>
+
+    <div class="slide" id="comparison">
+        <h3 id="comparison"><img src='faces/cake.png' width='70'> You go to the birthday party. <img
+                src='faces/confetti.png' width='70'></h3>
+
+        <p> You guessed that <span class="person2"></span>'s favorite <span class="fixedTargetFeature"></span> is <b><span class="favGuess"></span></b> and that
+            <span class="pronoun"></span> also likes <b><span class="midGuess"></span></b> things.<br />
+            That's why you give <span class="dirPronoun"></span> a <b><span class="favGuess"></span></b> present with a 
+            <b><span class="midGuess"></span></b> birthday card.
+        </p>
+<!-- 
+        <p><i>"Hi, thank you for coming to my birthday!"</i></p>
+        <div class="personPic"></div> -->
+
+        <div class="feedbackSentence"><span class="person2"></span> is <span class="emotion"></span> <span class="feedback"></span> </div>
+        <br />
+        <p>
+            Actually <span class="persPronoun"></span> favorite <span class="targetFeature"></span> is <b><span
+                    class="simFav"></span></b> and <span class="persPronoun"></span> second favourite is
+            <b><span class="simMid"></span></b> but <span class="pronoun"></span>
+            doesn't like <b><span class="simDis"></span></b> at all.<br /><br />
+        </p>
+
+        <button class="button" onclick="_s.button()">Ok</button>
+
+        <!-- <span class="preferences0"></span> </p>
+            <span class="actualSliderPosition0"></span> <br /> and <span class="person2"></span> liked it
+            <span class="simPreferences0"></span> </p>
+
+            <span class="preferences1"></span> </p>
+            <span class="actualSliderPosition1"></span> <br /> 
+            <span class="simPreferences1"></span> </p>
+
+            <span class="preferences2"></span> </p>
+            <span class="actualSliderPosition2"></span> <br /> 
+            <span class="simPreferences2"></span> </p> --> 
+    </div>
+
+    <div class="slide" id="blockPause">
+        <h3>Block <span class="blockNr"></span> of <span class="expBlock"></span></h3>
+        <p class="blockText"></p>
+        <p> In this next block you will meet a new person and you will again have to find out about their preferences
+            to find a birthday present for them. <br />
+            As before, you will see a series of scenarios with the person and three objects. The person will stay the
+            same over the whole block but the objects will change. The person doesn't lie and the preferences
+            they have will stay the same over the block.</p>
+        <p>Are you ready?</p>
+        <button class="button" onclick="_s.button()">Continue</button>
+    </div>
+
+    <div class="slide" id="subj_info">
+        <div class="long_form">
+            <div class="subj_info_title">Additional information</div>
+            <p class="info">Answering these questions is optional, but will help us understand your answers.</p>
+            <p>Did you read the instructions and do you think you did the HIT correctly?</p>
+            <label><input type="radio" name="assess" value="No" />No</label>
+            <label><input type="radio" name="assess" value="Yes" />Yes</label>
+            <label><input type="radio" name="assess" value="Confused" />I was confused</label>
+
+            <p>Gender:
+                <select id="gender">
+                    <label>
+                        <option value="" /></label>
+                    <label>
+                        <option value="Male" />Male</label>
+                    <label>
+                        <option value="Female" />Female</label>
+                    <label>
+                        <option value="Other" />Other</label>
+                </select>
+            </p>
+
+            <p>Age: <input type="text" id="age" /></p>
+
+            <p>Level Of Education:
+                <select id="education">
+                    <label>
+                        <option value="-1" /></label>
+                    <label>
+                        <option value="0" />Some High School</label>
+                    <label>
+                        <option value="1" />Graduated High School</label>
+                    <label>
+                        <option value="2" />Some College</label>
+                    <label>
+                        <option value="3" />Graduated College</label>
+                    <label>
+                        <option value="4" />Hold a higher degree</label>
+                </select>
+            </p>
+
+            <p>Native Language: <input type="text" id="language" /></p>
+            <label>(the language(s) spoken at home when you were a child)</label>
+
+            <p>Did you enjoy the hit?</p>
+            <select id="enjoyment">
+                <label>
+                    <option value="-1"></option>
+                </label>
+                <label>
+                    <option value="0">Worse than the Average HIT</option>
+                </label>
+                <label>
+                    <option value="1">An Average HIT</option>
+                </label>
+                <label>
+                    <option value="2">Better than average HIT</option>
+                </label>
+            </select>
+
+            <p>We would be interested in any comments you have about this experiment. Please type them here:</p>
+            <textarea id="comments" rows="3" cols="50"></textarea>
+            <br />
+            <button class="button" onclick="_s.submit()">Submit</button>
+
+            <p class="aknowlegements"> <br /><br /><br /><br />Thanks to freepik.com for the avatar pictures. <a
+                    href="https://www.freepik.com/free-photos-vectors/people">People vector created by freepik -
+                    www.freepik.com</a></p>
+        </div>
+    </div>
+
+    <div id="thanks" class="slide js">
+        <p class="big">Thank you for your time!</p>
+    </div>
+
+    <div class="progress">
+        <span>Progress:</span>
+        <div class="bar-wrapper">
+            <div class="bar" width="0%">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+<div class="slide" id="multi_slider_salience">
+
+    <p>Imagine someone is talking to you and uses a word you <br>
+        don't know to refer to one of these objects:</p>
+
+    <div class="wrapper">
+        <div id="object1" class="object"></div>
+        <div id="object2" class="object"></div>
+        <div id="object3" class="object"></div>
+    </div>
+
+    <!--     <p>Do the statements make sense?</p>
+    <label><input type="radio"  name="sense" value="Yes"/>Yes</label>
+    <label><input type="radio"  name="sense" value="No"/>No</label>
+    </br></br>
+ -->
+    <p>Which object are they talking about?</p>
+
+    <table id="multi_radio_table" class="radio_table">
+        <tr>
+            <td></td>
+            <td class="left">very unlikely</td>
+            <td class="right">very likely</td>
+        </tr>
+    </table>
+
+    <button onclick="_s.button()">Continue</button>
+    <div class="err">Please adjust the sliders before continuing.</div>
+</div>

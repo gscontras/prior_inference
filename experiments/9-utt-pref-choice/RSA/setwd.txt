@@ -1,0 +1,5 @@
+C:/Users/Ella/Seafile/Meine Bibliothek/UNI/Bachelorarbeit/Ambiguity/Git/prior_inference/experiments/9-utt-pref-choice/RSA
+
+setwd("C:/Users/Ella/Seafile/Meine Bibliothek/UNI/Bachelorarbeit/Ambiguity/Git/prior_inference/experiments/9-utt-pref-choice/RSA")
+
+source("RSA_StratUttModelSimple_2019_0505SAVE.R")

@@ -1,0 +1,1052 @@
+[
+  {
+    "item": [
+      "332",
+      "213",
+      "123"
+    ],
+    "utterancecode": "211",
+    "IDf": "1518-0",
+    "ID": 15180,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "332",
+      "213",
+      "123"
+    ],
+    "utterancecode": "211",
+    "IDf": "1518-1",
+    "ID": 15181,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "231",
+      "312",
+      "122"
+    ],
+    "utterancecode": "211",
+    "IDf": "0282-0",
+    "ID": 2820,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "231",
+      "312",
+      "122"
+    ],
+    "utterancecode": "211",
+    "IDf": "0282-1",
+    "ID": 2821,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "131",
+      "312",
+      "222"
+    ],
+    "utterancecode": "211",
+    "IDf": "0347-0",
+    "ID": 3470,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "131",
+      "312",
+      "222"
+    ],
+    "utterancecode": "211",
+    "IDf": "0347-1",
+    "ID": 3471,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "132",
+      "323"
+    ],
+    "utterancecode": "211",
+    "IDf": "1880-2",
+    "ID": 18802,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "132",
+      "323"
+    ],
+    "utterancecode": "211",
+    "IDf": "1880-0",
+    "ID": 18800,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "striped",
+      "polka-dotted",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "232",
+      "113"
+    ],
+    "utterancecode": "211",
+    "IDf": "0940-2",
+    "ID": 9402,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "solid",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "232",
+      "113"
+    ],
+    "utterancecode": "211",
+    "IDf": "0940-1",
+    "ID": 9401,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "211",
+      "321",
+      "132"
+    ],
+    "utterancecode": "211",
+    "IDf": "0466-1",
+    "ID": 4661,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "211",
+      "321",
+      "132"
+    ],
+    "utterancecode": "211",
+    "IDf": "0466-0",
+    "ID": 4660,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "332",
+      "133"
+    ],
+    "utterancecode": "211",
+    "IDf": "2164-0",
+    "ID": 21640,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "striped",
+      "polka-dotted",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "332",
+      "133"
+    ],
+    "utterancecode": "211",
+    "IDf": "2164-2",
+    "ID": 21642,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "311",
+      "122",
+      "213"
+    ],
+    "utterancecode": "211",
+    "IDf": "1037-0",
+    "ID": 10370,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "311",
+      "122",
+      "213"
+    ],
+    "utterancecode": "211",
+    "IDf": "1037-2",
+    "ID": 10372,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "solid",
+      "striped"
+    ]
+  },
+  {
+    "item": [
+      "321",
+      "332",
+      "213"
+    ],
+    "utterancecode": "211",
+    "IDf": "1110-1",
+    "ID": 11101,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "circle",
+      "square",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "321",
+      "332",
+      "213"
+    ],
+    "utterancecode": "211",
+    "IDf": "1110-2",
+    "ID": 11102,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "circle",
+      "square",
+      "solid",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "131",
+      "213",
+      "323"
+    ],
+    "utterancecode": "211",
+    "IDf": "1948-1",
+    "ID": 19481,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "blue",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "131",
+      "213",
+      "323"
+    ],
+    "utterancecode": "211",
+    "IDf": "1948-0",
+    "ID": 19480,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "blue",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "321",
+      "222",
+      "133"
+    ],
+    "utterancecode": "211",
+    "IDf": "2107-0",
+    "ID": 21070,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "striped",
+      "polka-dotted",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "321",
+      "222",
+      "133"
+    ],
+    "utterancecode": "211",
+    "IDf": "2107-2",
+    "ID": 21072,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "111",
+      "332",
+      "123"
+    ],
+    "utterancecode": "211",
+    "IDf": "1466-2",
+    "ID": 14662,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "square",
+      "solid",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "111",
+      "332",
+      "123"
+    ],
+    "utterancecode": "211",
+    "IDf": "1466-1",
+    "ID": 14661,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "square",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "112",
+      "323",
+      "233"
+    ],
+    "utterancecode": "211",
+    "IDf": "2562-0",
+    "ID": 25620,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "112",
+      "323",
+      "233"
+    ],
+    "utterancecode": "211",
+    "IDf": "2562-1",
+    "ID": 25621,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "332",
+      "113",
+      "223"
+    ],
+    "utterancecode": "211",
+    "IDf": "1710-1",
+    "ID": 17101,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "332",
+      "113",
+      "223"
+    ],
+    "utterancecode": "211",
+    "IDf": "1710-0",
+    "ID": 17100,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "231",
+      "122",
+      "213"
+    ],
+    "utterancecode": "211",
+    "IDf": "1042-1",
+    "ID": 10421,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "231",
+      "122",
+      "213"
+    ],
+    "utterancecode": "211",
+    "IDf": "1042-2",
+    "ID": 10422,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "solid",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "121",
+      "313",
+      "233"
+    ],
+    "utterancecode": "211",
+    "IDf": "2493-1",
+    "ID": 24931,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "blue",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "121",
+      "313",
+      "233"
+    ],
+    "utterancecode": "211",
+    "IDf": "2493-0",
+    "ID": 24930,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "blue",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "311",
+      "222",
+      "233"
+    ],
+    "utterancecode": "211",
+    "IDf": "2380-1",
+    "ID": 23801,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "circle",
+      "square",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "311",
+      "222",
+      "233"
+    ],
+    "utterancecode": "211",
+    "IDf": "2380-2",
+    "ID": 23802,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "circle",
+      "square",
+      "solid",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "321",
+      "112",
+      "133"
+    ],
+    "utterancecode": "211",
+    "IDf": "2065-1",
+    "ID": 20651,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "square",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "321",
+      "112",
+      "133"
+    ],
+    "utterancecode": "211",
+    "IDf": "2065-2",
+    "ID": 20652,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "square",
+      "solid",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "131",
+      "322",
+      "113"
+    ],
+    "utterancecode": "211",
+    "IDf": "0913-2",
+    "ID": 9132,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "square",
+      "solid",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "131",
+      "322",
+      "113"
+    ],
+    "utterancecode": "211",
+    "IDf": "0913-1",
+    "ID": 9131,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "square",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "211",
+      "121",
+      "333"
+    ],
+    "utterancecode": "211",
+    "IDf": "2604-1",
+    "ID": 26041,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "blue",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "211",
+      "121",
+      "333"
+    ],
+    "utterancecode": "211",
+    "IDf": "2604-0",
+    "ID": 26040,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "blue",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "332",
+      "213"
+    ],
+    "utterancecode": "211",
+    "IDf": "1109-1",
+    "ID": 11091,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "circle",
+      "square",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "332",
+      "213"
+    ],
+    "utterancecode": "211",
+    "IDf": "1109-2",
+    "ID": 11092,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "circle",
+      "square",
+      "solid",
+      "striped",
+      "polka-dotted"
+    ]
+  },
+  {
+    "item": [
+      "311",
+      "223",
+      "133"
+    ],
+    "utterancecode": "211",
+    "IDf": "2257-1",
+    "ID": 22571,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "blue",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "311",
+      "223",
+      "133"
+    ],
+    "utterancecode": "211",
+    "IDf": "2257-0",
+    "ID": 22570,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "blue",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "321",
+      "212",
+      "113"
+    ],
+    "utterancecode": "211",
+    "IDf": "0866-2",
+    "ID": 8662,
+    "targetfeature": "color",
+    "targetfeaturenum": 3,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "solid",
+      "striped"
+    ]
+  },
+  {
+    "item": [
+      "321",
+      "212",
+      "113"
+    ],
+    "utterancecode": "211",
+    "IDf": "0866-0",
+    "ID": 8660,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "blue",
+      "red",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "111",
+      "321",
+      "232"
+    ],
+    "utterancecode": "211",
+    "IDf": "0570-1",
+    "ID": 5701,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "111",
+      "321",
+      "232"
+    ],
+    "utterancecode": "211",
+    "IDf": "0570-0",
+    "ID": 5700,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "blue",
+      "red"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "131",
+      "313"
+    ],
+    "utterancecode": "211",
+    "IDf": "1159-0",
+    "ID": 11590,
+    "targetfeature": "shape",
+    "targetfeaturenum": 1,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "solid",
+      "striped",
+      "polka-dotted",
+      "blue",
+      "green"
+    ]
+  },
+  {
+    "item": [
+      "221",
+      "131",
+      "313"
+    ],
+    "utterancecode": "211",
+    "IDf": "1159-1",
+    "ID": 11591,
+    "targetfeature": "texture",
+    "targetfeaturenum": 2,
+    "targeteduttcode": "211-3",
+    "numFeatures": 5,
+    "featuresPresent": [
+      "cloud",
+      "circle",
+      "square",
+      "blue",
+      "green"
+    ]
+  }
+]
