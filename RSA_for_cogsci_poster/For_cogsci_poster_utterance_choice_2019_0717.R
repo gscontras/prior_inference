@@ -1,3 +1,5 @@
+setwd("~/git/prior_inference/RSA_for_cogsci_poster/")
+
 library(reshape2)
 library(Rmisc)
 library(ggplot2)
@@ -75,5 +77,6 @@ ggplot(allStats, aes(x=sliderNumber, y=sliderValue, fill = type)) +
   xlab("")+
   scale_x_discrete(limits=c("1","2","3","4","5","6"),
                    labels=c("cloud", "circle", "striped","solid","blue","green"))+
-  theme(legend.position="bottom")+
-  ggsave("utterancePlot.pdf")
+  theme(legend.position="bottom")
+  #ggsave("utterancePlot.pdf")
+#ggsave("X3-example-simple-model-CogSci.png",width=4.3,height=2.44)

@@ -1,3 +1,5 @@
+setwd("~/git/prior_inference/RSA_for_cogsci_poster/")
+
 source("RSA_StratUttModel_2019_0114.R")
 source("RSA_StratUtt_getConstCode_2019_0114.R")
 
@@ -95,7 +97,7 @@ modelDataOrdered[,4] <- x3pilotData$obj3
 modelDataOrdered[,5] <- x3pilotData$obj1OC27
 modelDataOrdered[,6] <- x3pilotData$obj2OC27
 modelDataOrdered[,7] <- x3pilotData$obj3OC27
-write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted.csv")
+#write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted.csv")
 ################################################################################
 
 
