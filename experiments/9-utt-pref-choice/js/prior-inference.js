@@ -317,27 +317,51 @@ function make_slides(f) {
         randNumMax += Number(simPreferences[possibleChoicesNum[i] - 1]);
       };
 
-      var randNum = Math.random() * randNumMax;
+      // var randNum = Math.random() * randNumMax;
       var answerInd = -1; // ranges from 1-3 like all numbers whih refer to featurevalues
       var incrementPreferences = 0;
-      var indexNumberFeature = 0;
-      var answerSortedInd = -1;
+      var answerPossInd = -1;
       console.log(simPreferences + " simPreferences")
       var sortedSimPreferences = simPreferences.slice();
       sortedSimPreferences.sort(function(a, b){return b-a});
       console.log(sortedSimPreferences + " sortedSimPreferences" + simPreferences + " simPreferences");
-      for (var i = 0; i < simPreferences.length; i++) {
-        console.log(possibleChoicesNum + " possibleChoicesNum" + String(simPreferences.indexOf(sortedSimPreferences[i])+1) + " String(simPreferences.indexOf(sortedSimPreferences[i])+1))");
-        if (possibleChoicesNum.includes(String(simPreferences.indexOf(sortedSimPreferences[i])+1))){
-          incrementPreferences += sortedSimPreferences[i];
-          if (randNum <= incrementPreferences) {
-            answerSortedInd = i;
-            console.log(randNum + " randNum " + incrementPreferences + " incrementPreferences " + answerSortedInd + " answerSortedInd")
-            break;
-          };
-        }
-      }
-      answerInd = simPreferences.indexOf(sortedSimPreferences[answerSortedInd])+1
+      possSimPreferences = [];
+      for (var i = 0; i < possibleChoicesNum.length; i++) {
+        possSimPreferences[i] = simPreferences[possibleChoicesNum[i]-1]
+      };
+      console.log(possSimPreferences);
+      possSimPreferences.sort(function(a, b){return b-a});
+      // for (var i = 0; i < simPreferences.length; i++) {
+        console.log(possibleChoicesNum + " possibleChoicesNum");
+        // if (possibleChoicesNum.includes(String(simPreferences.indexOf(sortedSimPreferences[i])+1))){
+          if (possSimPreferences.indexOf(1) != -1){
+            answerPossInd = possSimPreferences.indexOf(1);
+          } else if (possSimPreferences.indexOf(0.5) != -1){
+            answerPossInd = possSimPreferences.indexOf(0.5);
+          } else if (possSimPreferences.indexOf(0) != -1){
+            answerPossInd = possSimPreferences.indexOf(0);
+          } 
+          // if (sortedSimPreferences[i] == 1){
+          //   answerSortedInd = i;
+          //   console.log(incrementPreferences + " incrementPreferences " + answerSortedInd + " answerSortedInd")
+          //   break;
+          // } else if (sortedSimPreferences[i] == 0.5){
+          //   answerSortedInd = i;
+          //   console.log(incrementPreferences + " incrementPreferences " + answerSortedInd + " answerSortedInd")
+          // } else if (sortedSimPreferences[i] == 0){
+          //   answerSortedInd = i;
+          //   console.log(incrementPreferences + " incrementPreferences " + answerSortedInd + " answerSortedInd")
+          // }
+          // incrementPreferences += sortedSimPreferences[i];
+          // if (randNum <= incrementPreferences) {
+          //   answerSortedInd = i;
+          //   console.log(randNum + " randNum " + incrementPreferences + " incrementPreferences " + answerSortedInd + " answerSortedInd")
+          //   break;
+          // };
+        // }
+      // }
+      console.log(answerPossInd + " answerPossInd")
+      answerInd = simPreferences.indexOf(possSimPreferences[answerPossInd])+1
       console.log(answerInd + " answerInd");
       // for (var i = 0; i < simPreferences.length; i++) {
       //   indexNumberFeature = i + 1;
