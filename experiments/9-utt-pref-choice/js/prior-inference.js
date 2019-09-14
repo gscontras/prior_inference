@@ -28,7 +28,7 @@ function make_slides(f) {
     }
   });
 
-  var simPreferences = [0, 1 / 3, 2 / 3];
+  var simPreferences = [0, 0.5, 1];
   var actualSliderPosition = [0.5, 0.5, 0.5];
   var fixedTargetFeature = shuffle(['color', 'shape', 'texture'])[0];
   var sex = shuffle(["female", "male"])[0];
@@ -95,7 +95,7 @@ function make_slides(f) {
     } else {
       slides.task.preferences = slides.comparison.preferences = ["ERROR", "ERROR", "ERROR"]
     };
-    slides.task.simPreferences = slides.comparison.simPreferences = shuffle([0, 1 / 3, 2 / 3]);
+    slides.task.simPreferences = slides.comparison.simPreferences = shuffle([0, 0.5, 1]);
     slides.task.actualSliderPosition = slides.comparison.actualSliderPosition = [0.5, 0.5, 0.5];
     slides.task.presentColor = _.shuffle(stimuli_color).splice(0, maxTrialNr);
     slides.task.presentShape = _.shuffle(stimuli_shape).splice(0, maxTrialNr);
@@ -144,7 +144,7 @@ function make_slides(f) {
   blockNr = 0;
   // totalBlock = 5; //take the amout of blocks (expBlock) you want + one test block
   // expBlock = this.totalBlock - 1;
-  $(".expBlock").html(this.expBlock);
+  $(".expBlock").html(this.expBlock+1);
 
   slides.task = slide({//multi_radio = slide({
     // presentStimuli: [],
@@ -321,16 +321,34 @@ function make_slides(f) {
       var answerInd = -1; // ranges from 1-3 like all numbers whih refer to featurevalues
       var incrementPreferences = 0;
       var indexNumberFeature = 0;
+      var answerSortedInd = -1;
+      console.log(simPreferences + " simPreferences")
+      var sortedSimPreferences = simPreferences.slice();
+      sortedSimPreferences.sort(function(a, b){return b-a});
+      console.log(sortedSimPreferences + " sortedSimPreferences" + simPreferences + " simPreferences");
       for (var i = 0; i < simPreferences.length; i++) {
-        indexNumberFeature = i + 1;
-        if (possibleChoicesNum.includes(String(indexNumberFeature))) {
-          incrementPreferences += simPreferences[i];
+        console.log(possibleChoicesNum + " possibleChoicesNum" + String(simPreferences.indexOf(sortedSimPreferences[i])+1) + " String(simPreferences.indexOf(sortedSimPreferences[i])+1))");
+        if (possibleChoicesNum.includes(String(simPreferences.indexOf(sortedSimPreferences[i])+1))){
+          incrementPreferences += sortedSimPreferences[i];
           if (randNum <= incrementPreferences) {
-            answerInd = indexNumberFeature;
+            answerSortedInd = i;
+            console.log(randNum + " randNum " + incrementPreferences + " incrementPreferences " + answerSortedInd + " answerSortedInd")
             break;
           };
         }
       }
+      answerInd = simPreferences.indexOf(sortedSimPreferences[answerSortedInd])+1
+      console.log(answerInd + " answerInd");
+      // for (var i = 0; i < simPreferences.length; i++) {
+      //   indexNumberFeature = i + 1;
+      //   if (possibleChoicesNum.includes(String(indexNumberFeature))) {
+      //     incrementPreferences += simPreferences[i];
+      //     if (randNum <= incrementPreferences) {
+      //       answerInd = indexNumberFeature;
+      //       break;
+      //     };
+      //   }
+      // }
       if (answerInd == -1) console.error('AnswerInd not found (-1)');
 
       for (var i = 0; i < possibleChoices.length; i++) {
@@ -480,6 +498,8 @@ function make_slides(f) {
         "sex": this.sex,
         "name": name,
       });
+      console.error("targetUttCode " + this.stim.targeteduttcode);
+      console.error("uttCode" + this.stim.utterancecode);
     },
 
   });
@@ -546,6 +566,7 @@ function make_slides(f) {
       var actualSliderPosition = this.actualSliderPosition;
       var simPreferences = this.simPreferences;
       $(".blockNr").html(this.blockNr + 2);
+      console.error(simPreferences + " simPreferences")
 
       var maxGuessIndex = actualSliderPosition.indexOf(Math.max.apply(Math, actualSliderPosition))
       var favGuess = preferences[maxGuessIndex];
@@ -562,12 +583,15 @@ function make_slides(f) {
 
       var maxSimIndex = simPreferences.indexOf(Math.max.apply(Math, simPreferences))
       var simFav = preferences[maxSimIndex];
+      console.log(simFav + " simFav " + maxSimIndex + " maxSimIndex " + preferences + " preferences")
       $(".simFav").html(simFav);
       var minSimIndex = simPreferences.indexOf(Math.min.apply(Math, simPreferences))
       var simDis = preferences[minSimIndex];
+      console.log(simDis + " simDis " + minSimIndex + " minSimIndex " + preferences + " preferences")
       $(".simDis").html(simDis);
       firstNLastSim = [simDis, simFav]
       var simMid = preferences.filter(e => !firstNLastSim.includes(e))
+      console.log(simMid + " simMid " + preferences + " preferences")
       $(".simMid").html(simMid);
 
       simRank = [String(simFav), String(simMid), String(simDis)];
@@ -656,7 +680,7 @@ function make_slides(f) {
       var blockText = "";
       if (this.blockNr == -1) {
         blockText = "After this first test block, you can take a deep breath and then start with the first real block. ";
-      } else if (this.blockNr == this.expBlock - 1) {
+      } else if (this.blockNr == this.expBlock) {
         blockText = "The end is near! Take a deep breath and get ready to start with the last block. ";
       } else {
         blockText = "Take a deep breath and get ready to start with the next block. ";
@@ -734,7 +758,7 @@ function init() {
     var structure = ["i0", "instructions1",
       'task', 'certainty',
       'comparison'];
-    for (var i = 0; i < this.expBlock; i++) {
+    for (var i = 0; i < this.expBlock-1; i++) {
       structure.push("blockPause", 'task', 'certainty',
         'comparison');
     }
