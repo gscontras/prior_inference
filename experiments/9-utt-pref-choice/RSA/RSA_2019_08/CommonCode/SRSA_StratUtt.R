@@ -104,24 +104,24 @@ simpleBestInfGainUtterance <- function(preferencesPrior, relevantUtterances, cur
 
 
 # ## Tests 1:
-notObeyInst <- 1e-10
-softPrefValue <- 0.1
-currentObjects <- c(1,2,3)
-relevantUtterances <- determineValidUtterances(currentObjects)
-mapObjToUtt <- determineObjectToUtterancesMapping(currentObjects)
-mapUttToObjProbs <- determineUtteranceToObjectProbabilities(relevantUtterances,
-                                                            currentObjects,
-                                                            mapObjToUtt, notObeyInst)
-objectPreferenceSoftPriors <- getObjectPreferencePriors(relevantUtterances, currentObjects,
-                                                        softPrefValue, mapUttToObjProbs)
-#pragmaticSpeaker <- function(utterance, obj, preferencesPrior,
-#                             relevantUtterances, currentObjects, mapUttToObjProbs,
-#                             objectPreferenceSoftPriors) {
+# notObeyInst <- 1e-10
+# softPrefValue <- 0.1
+# currentObjects <- c(1,2,3)
+# relevantUtterances <- determineValidUtterances(currentObjects)
+# mapObjToUtt <- determineObjectToUtterancesMapping(currentObjects)
+# mapUttToObjProbs <- determineUtteranceToObjectProbabilities(relevantUtterances,
+#                                                             currentObjects,
+#                                                             mapObjToUtt, notObeyInst)
+# objectPreferenceSoftPriors <- getObjectPreferencePriors(relevantUtterances, currentObjects,
+#                                                         softPrefValue, mapUttToObjProbs)
+# #pragmaticSpeaker <- function(utterance, obj, preferencesPrior,
+# #                             relevantUtterances, currentObjects, mapUttToObjProbs,
+# #                             objectPreferenceSoftPriors) {
 # simplePragmaticSpeaker(4, 1, c(0, 0, 0, 0, 0, 1), relevantUtterances, currentObjects,
 #                  mapUttToObjProbs, objectPreferenceSoftPriors) # sanity check - definite prior, no inf. gain possible
-simplePragmaticSpeaker(4, 1, c(.2, .2, .2, .2, .2, 0), relevantUtterances, currentObjects,
-                 mapUttToObjProbs, objectPreferenceSoftPriors) # NON compliant listener...
-
+# simplePragmaticSpeaker(4, 1, c(.2, .2, .2, .2, .2, 0), relevantUtterances, currentObjects,
+#                  mapUttToObjProbs, objectPreferenceSoftPriors) # NON compliant listener...
+# 
 # # Tests 2:
 # notObeyInst <- 0.1
 # softPrefValue <- .01
