@@ -65,7 +65,7 @@ getSpeakerUtteranceUniformPrior <- function(relevantUtterances) {
 #    determined listener's object preferences.
 # @param preferencesPrior = probability mass over all feature values present in the scenario plus a "no preference" case
 simpleBestInfGainUtterance <- function(preferencesPrior, relevantUtterances, currentObjects, 
-                                 mapUttToObjProbs, objectPreferenceSoftPriors, klValueFactor=1) {
+                                       mapUttToObjProbs, objectPreferenceSoftPriors, klValueFactor=1) {
   postUttGPrefPrior <- rep(0, length(relevantUtterances))
   utterancePrior <- getSpeakerUtteranceUniformPrior(relevantUtterances) # prior over speaker utterances
   #
@@ -78,15 +78,15 @@ simpleBestInfGainUtterance <- function(preferencesPrior, relevantUtterances, cur
         if(mapUttToObjProbs[utt,obj] > 0) {
           if(preferencesPrior[pref] > 0) { # only pay attention to preferences with non-zero probability
             featurePrefsPosterior <- simplePragmaticSpeaker(utt, obj, preferencesPrior, 
-                                                 relevantUtterances, currentObjects, 
-                                                 mapUttToObjProbs, objectPreferenceSoftPriors)
+                                                            relevantUtterances, currentObjects, 
+                                                            mapUttToObjProbs, objectPreferenceSoftPriors)
             # print(objPrefPosterior)
             KLvalue <- KLdivergence(preferencesPrior, featurePrefsPosterior)
-
+            
             # log-likelihood interpretation of KLvalue:
             prefPost <- prefPost + mapUttToObjProbs[utt,obj] * utterancePrior[utt] * 
-                preferencesPrior[pref] * objectPreferenceSoftPriors[[pref]][obj] *
-                exp(klValueFactor * KLvalue)
+              preferencesPrior[pref] * objectPreferenceSoftPriors[[pref]][obj] *
+              exp(klValueFactor * KLvalue)
             
           }
         }

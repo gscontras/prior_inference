@@ -1,4 +1,4 @@
-source("AllUtterancesAndObjects.R")
+source("CommonCode/AllUtterancesAndObjects.R")
 
 # an object constellation is a 3-value vector \in {1,...,27]}^3
 # the first object is the one that is chosen

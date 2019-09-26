@@ -1,4 +1,4 @@
-source("AllUtterancesAndObjects.R")
+source("CommonCode/AllUtterancesAndObjects.R")
 
 # simple KL divergence function 
 KLdivergence <- function(p, q) {

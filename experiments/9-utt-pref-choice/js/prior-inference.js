@@ -1,4 +1,4 @@
-var totalBlock = 3;
+var totalBlock = 2;
 var expBlock = totalBlock;
 
 
@@ -61,7 +61,7 @@ function make_slides(f) {
     var preferences = ["ERROR", "ERROR", "ERROR"]
   };
 
-  var maxTrialNr = 4;
+  var maxTrialNr = 2;
   var presentColor = _.shuffle(stimuli_color).splice(0, maxTrialNr);
   var presentShape = _.shuffle(stimuli_shape).splice(0, maxTrialNr);
   var presentTexture = _.shuffle(stimuli_texture).splice(0, maxTrialNr);
@@ -385,20 +385,21 @@ function make_slides(f) {
 
     simAnswer: ' ',
 
+    simSimCode: ' ',
     simulateSim: function () {
       var order = this.order;
-      var simSimCode = this.simulateSimCode();
+      this.simSimCode = this.simulateSimCode();
       // for (var i = 0; i < order.length; i++) {
       //   console.error("order[" + i + "]" + order[i]);
       // };
-      if (simSimCode == order[0]) {
+      if (this.simSimCode == order[0]) {
         this.simAnswer = '#object1';
-      } else if (simSimCode == order[1]) {
+      } else if (this.simSimCode == order[1]) {
         this.simAnswer = '#object2';
-      } else if (simSimCode == order[2]) {
+      } else if (this.simSimCode == order[2]) {
         this.simAnswer = '#object3';
       } else {
-        console.error("well, that didn't work with the simulateSim..." + simSimCode + order);// print("well, that didn't work with the simulateSim...");
+        console.error("well, that didn't work with the simulateSim..." + this.simSimCode + order);// print("well, that didn't work with the simulateSim...");
       }
     },
 
@@ -497,15 +498,15 @@ function make_slides(f) {
         "numFeatures": this.stim["numFeatures"],
         "featuresPresent": this.stim["featuresPresent"],
         "utterance": this.find_chosen_utterance(),
-        "pref1": this.preferences[0],
+        "pref0": this.preferences[0],
         // "response0": exp.sliderPost[0],
         "response0": this.actualSliderPosition[0],
         "normResponse0": this.normResponse[0],
-        "pref2": this.preferences[1],
+        "pref1": this.preferences[1],
         // "response1": exp.sliderPost[1],
         "response1": this.actualSliderPosition[1],
         "normResponse1": this.normResponse[1],
-        "pref3": this.preferences[2],
+        "pref2": this.preferences[2],
         // "response2": exp.sliderPost[2],
         "response2": this.actualSliderPosition[2],
         "normResponse2": this.normResponse[2],
@@ -516,11 +517,18 @@ function make_slides(f) {
         "obj1": this.stim.item[0],
         "obj2": this.stim.item[1],
         "obj3": this.stim.item[2],
+        "order0": this.order[0],
+        "order1": this.order[1],
+        "order2": this.order[2],
+        "simPreference0": this.simPreferences[0],
+        "simPreference1": this.simPreferences[1],
+        "simPreference2": this.simPreferences[2],
+        "simulatedAnswer": this.simSimCode,
         "targetFeature": this.stim.targetfeature,
         "targetFeatureNum": this.stim.targetfeaturenum,
         "numFeatures": this.stim.numFeatures,
         "sex": this.sex,
-        "name": name,
+        "name": this.name,
       });
       console.error("targetUttCode " + this.stim.targeteduttcode);
       console.error("uttCode" + this.stim.utterancecode);
@@ -663,6 +671,16 @@ function make_slides(f) {
 
       var person2 = this.names_list[0];
       $(".person2").html(person2);
+
+      exp.data_trials.push({
+        "evalNum": evalNum,
+        "simRank0": simRank[0],
+        "simRank1": simRank[1],
+        "simRank2": simRank[2],
+        "guessRank0": guessRank[0],
+        "guessRank1": guessRank[1],
+        "guessRank2": guessRank[2],
+      });
     },
     // updateValue: function () {
     //   var fixedTargetFeature = shuffle(['color', 'shape', 'texture'])[0];

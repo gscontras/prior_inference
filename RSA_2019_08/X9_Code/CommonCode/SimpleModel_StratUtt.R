@@ -1,7 +1,7 @@
 ##########################################
 ## 
-source("AllUtterancesAndObjects.R")
-source("getConstCodeStratUtt.R")
+source("CommonCode/AllUtterancesAndObjects.R")
+source("CommonCode/getConstCodeStratUtt.R")
 
 # par is the parameter that determines how more likely the participant likes the features values of the chosen object
 # data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:UUFeat, 5:Q1Feat,6:Q2Feat,
