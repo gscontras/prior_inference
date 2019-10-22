@@ -1,14 +1,44 @@
 source("CommonCode/RSA_StratUtt.R")
 source("CommonCode/getConstCodeStratUtt.R")
 
-# loading the augmented pilot data
-#x4pilotData <- read.csv("X4_Data/x4pilotDataAugmGlobal12_2019_04_30.csv")
+############################################
+# simple RSA
+############################################
 
-#x4pilotData <- read.csv("X4_Data/x4pilotDataAugm_SimpleRSA_fixed.20_.2.2_2019_07_05.csv")
-#x4pilotData <- read.csv("X4_Data/x4pilotDataAugm_SimpleRSA_prefOpt0and.2forobey_2019_07_05.csv")
-#x4pilotData <- read.csv("X4_Data/x4pilotDataAugm_SimpleRSA_obejOpt0and.2forpref_2019_07_05.csv")
-x4pilotData <- read.csv("X4_Data/x4pilotDataAugm_SimpleRSA_fixed00_prefAndObejOpt_2019_07_05.csv")
-  
+# simple RSA with individual optimization
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_fixed00_and_fixed.20.csv")
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefStrengthOpt_obed0_and_obed.2.csv")
+x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefandObedOpt_and_fixed.2.2.csv")
+
+# simple RSA with individual crossvalidation (leave-one-out) 
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAcrossVal_Opt1_and_Opt2.csv")
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAcrossVal_Opt1obed.1_and_fixed.1.1.csv")
+
+# simple RSA global optimization
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAglobaOpt_fixed.1.1_and_OptPrefobedFixed.1.csv")
+x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt12.csv")
+
+
+############################################
+# full RSA
+############################################
+
+# full RSA with individual optimzation 
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAindOpt_fixed.1.11_and_OptPrefandAlphaObed0.csv")
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAindOpt_OptPrefAndObedAlpha1_and_OptAll3.csv")
+
+# full RSA with individual crossvalidation (leave-one-out) 
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAcrossVal_fixed001_and_Opt1fixed01.csv")
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAcrossVal_Opt12fixed1_and_Opt123.csv")
+
+# full RSA global optimization
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAglobalOpt_Opt1_and__Opt1obed.1.csv")
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAglobalOpt_Opt2_and__Opt12.csv")
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAglobalOpt_Opt13_and__Opt123.csv")
+
+
+#x4pilotData <- read.csv("")
+
 # adding feature property codes (which feature was uttereed, which features were questioned)
 uttFeat <- ifelse(x4pilotData$utterance=="green" | x4pilotData$utterance=="red" | x4pilotData$utterance=="blue", 3,
                   ifelse(x4pilotData$utterance=="solid" | x4pilotData$utterance=="striped" | x4pilotData$utterance=="polka-dotted", 2, 1))

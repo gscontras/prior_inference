@@ -35,7 +35,7 @@ RSAModelUttKLDiv_3params <- function(data, par1, par2, par3) {
     validUtterances <- determineValidUtterances(currentObjects)
     ## determining the model predictions
     bInfGainUttModel <- rep(NA, 9)
-    bInfGainUttModel[validUtterances] <- getBestInfGainUttPreferences(currentObjects, par1, par2, par3, 1)
+    bInfGainUttModel[validUtterances] <- getBestInfGainUttPreferences(currentObjects, par1, par2, 1, par3)
     ## adding the negative log likelihoods
     for(j in c(1:length(validUtterances))) {
       llRes <- llRes + data[i, 4+validUtterances[j]] * 

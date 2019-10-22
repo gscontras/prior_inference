@@ -80,13 +80,13 @@ workerIDs <- x4pilotData$workerid
 idMax <- max(workerIDs)
 
 #################################################
-llWorkers12 <- as.matrix(read.csv("X4_Data/x4SimpleRSAModelsKLDivs_2019_0705.csv"))
-paramsWorkers12 <- as.matrix(read.csv("X4_Data/x4SimpleRSAModelsOptParams_2019_0705.csv"))
+llWorkers12 <- as.matrix(read.csv("X4_Data/x4KLDivs_simpleRSA_indOpt_2019_1010.csv"))
+paramsWorkers12 <- as.matrix(read.csv("X4_Data/x4Params_simpleRSA_indOpt_2019_1010.csv"))
 llWorkers12 <- llWorkers12[,c(2:ncol(llWorkers12))]
 paramsWorkers12 <- paramsWorkers12[,c(2:ncol(paramsWorkers12))]
 
 ############################################################################################
-procType <- 4    ###########################################################################
+procType <- 3    ###########################################################################
 ############################################################################################
 
 ### 
@@ -112,18 +112,16 @@ for(i in c(1:length(x4pilotData$X))) {
     workerID <- x4pilotData$workerid[i]
     # all three optimized    params <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(11:13)]
     params1only <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(2)]
-    params2only <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(3)]
-    params1only_obey.2 <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(4)]
-    params2only_pref.2 <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(5)]
-    params12 <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(6:7)]
+    params1only_obey.2 <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(3)]
+    params12 <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(4:5)]
     # print(params)
   }
   ###############
   if(procType == 1) {
     postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
-                                                                  .2, 0)
+                                                                  0, 0)
     postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
-                                                                  .2, .2)
+                                                                  .2, 0)
   }else if(procType == 2) {
     postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
                                                                   abs(params1only[1]), 0)
@@ -131,14 +129,9 @@ for(i in c(1:length(x4pilotData$X))) {
                                                                   abs(params1only_obey.2[1]), .2)
   }else if(procType == 3) {
     postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
-                                                                  0, abs(params2only[1]))
-    postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
-                                                                  .2, abs(params2only_pref.2[1]))
-  }else if(procType == 4) {
-    postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
-                                                                  0, 0)
-    postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
                                                                   abs(params12[1]), abs(params12[2]))
+    postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
+                                                                  .2, .2)
   }
 }
 
@@ -162,11 +155,9 @@ x4pilotData$CCode <- uniqueCCode
 x4pilotData$logLik <- logLik
 
 if(procType == 1) {
-write.csv(x4pilotData, "X4_Data/x4pilotDataAugm_SimpleRSA_fixed.20_.2.2_2019_07_05.csv")
+write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAindOpt_fixed00_and_fixed.20.csv")
 }else if(procType == 2) {
-  write.csv(x4pilotData, "X4_Data/x4pilotDataAugm_SimpleRSA_prefOpt0and.2forobey_2019_07_05.csv")
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAindOpt_PrefStrengthOpt_obed0_and_obed.2.csv")
 }else if(procType == 3) {
-  write.csv(x4pilotData, "X4_Data/x4pilotDataAugm_SimpleRSA_obejOpt0and.2forpref_2019_07_05.csv")
-}else if(procType == 4) {
-  write.csv(x4pilotData, "X4_Data/x4pilotDataAugm_SimpleRSA_fixed00_prefAndObejOpt_2019_07_05.csv")
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAindOpt_PrefandObedOpt_and_fixed.2.2.csv")
 }

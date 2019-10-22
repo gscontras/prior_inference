@@ -6,13 +6,13 @@ x4pilotData <- read.csv("X4_Data/4-pilot-training.csv")
 
 # adding feature property codes (which feature was uttereed, which features were questioned)
 uttFeat <- ifelse(x4pilotData$utterance=="green" | x4pilotData$utterance=="red" | x4pilotData$utterance=="blue", 3,
-                            ifelse(x4pilotData$utterance=="solid" | x4pilotData$utterance=="striped" | x4pilotData$utterance=="polka-dotted", 2, 1))
+                  ifelse(x4pilotData$utterance=="solid" | x4pilotData$utterance=="striped" | x4pilotData$utterance=="polka-dotted", 2, 1))
 x4pilotData$uttFeat <- uttFeat
 
 q1Feat <- ifelse(x4pilotData$pref1=="green things" | x4pilotData$pref1=="red things" | x4pilotData$pref1=="blue things", 3,
-                  ifelse(x4pilotData$pref1=="solid things" | x4pilotData$pref1=="striped things" | x4pilotData$pref1=="polka-dotted things", 2, 
-                  ifelse(x4pilotData$pref1=="clouds" | x4pilotData$pref1=="circles" | x4pilotData$pref1=="squares", 1,
-                  -1 ) ))
+                 ifelse(x4pilotData$pref1=="solid things" | x4pilotData$pref1=="striped things" | x4pilotData$pref1=="polka-dotted things", 2, 
+                        ifelse(x4pilotData$pref1=="clouds" | x4pilotData$pref1=="circles" | x4pilotData$pref1=="squares", 1,
+                               -1 ) ))
 x4pilotData$q1Feat <- q1Feat
 
 q2Feat <- ifelse(x4pilotData$pref4=="green things" | x4pilotData$pref4=="red things" | x4pilotData$pref4=="blue things", 3,
@@ -83,10 +83,12 @@ idMax <- max(workerIDs)
 #llWorkers12 <- llWorkers12[order(llWorkers12[,4]),]
 #llWorkers12[,2:7] <- llWorkers12[,2:7]*2
 ## writing out sorted table
-llWorkers12 <- as.matrix(read.csv("X4_Data/x4ModelsKLDivs_2019_0430.csv"))
-paramsWorkers12 <- as.matrix(read.csv("X4_Data/x4ModelsOptParams_2019_0430.csv"))
-llWorkers12 <- llWorkers12[,c(2:ncol(llWorkers12))]
+paramsWorkers12 <- as.matrix(read.csv("X4_Data/x4OptParams_fullRSA_indOpt_2019_1006.csv"))
 paramsWorkers12 <- paramsWorkers12[,c(2:ncol(paramsWorkers12))]
+
+#######################################
+procType <- 2
+#######################################
 
 
 ### 
@@ -95,9 +97,6 @@ constellationCode <- matrix(0,length(x4pilotData$X),6)
 uniqueCCode <- rep(0, length(x4pilotData$X))
 postListMat1Opt <- matrix(0,length(x4pilotData$X),9)
 postListMat2Opt <- matrix(0,length(x4pilotData$X),9)
-postListMat1Opt <- matrix(0,length(x4pilotData$X),9)
-postListMat2Opt <- matrix(0,length(x4pilotData$X),9)
-logLik <- rep(0,length(x4pilotData$X))
 workerID <- -1
 for(i in c(1:length(x4pilotData$X))) {
   objectConstellation <- c(targetOC27[i],obj2OC27[i],obj3OC27[i])
@@ -111,39 +110,24 @@ for(i in c(1:length(x4pilotData$X))) {
   if(workerID != x4pilotData$workerid[i]) {
     workerID <- x4pilotData$workerid[i]
     # all three optimized    params <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(11:13)]
-    params1only <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(2)]
-    params2only <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(3)]
-    params3only <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(4)]
+    params13 <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(7,8)]
     params12 <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(9,10)]
     params123 <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(11:13)]
     # print(params)
   }
-postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
-                                                  abs(params1only[1]), 0, 1)
-postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
-                                                        0, abs(params2only[1]), 1)
-#postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
-#                                                  0, 0, 1)
-#postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
-#                                                        abs(params123[1]), abs(params123[2]), abs(params123[3]))
-}
-
-
-
-
-
-# now determine expected log likelihoods given the subject responses and the optimized model values.
-logLik <- rep(0,length(x4pilotData$X))
-for(i in c(1:length(x4pilotData$X))) {
-  for(j in 1:3) {  
-    logLik[i] <- logLik[i] - subjectResponses[i,j] * 
-      log(postListMat1Opt[i, j+(q1Feat[i]-1)*3])
-  }
-  for(j in 1:3) {  
-    logLik[i] <- logLik[i] - subjectResponses[i,3+j] * 
-      log(postListMat1Opt[i, j+(q2Feat[i]-1)*3])
+  if(procType == 1) {
+    postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
+                                                         .1, .1, 1)
+    postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
+                                                         abs(params13[1]), 0, abs(params13[2]))
+  }else if(procType == 2) {
+    postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
+                                                         abs(params12[1]), abs(params12[2]), 1)
+    postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
+                                                         abs(params123[1]), abs(params123[2]), abs(params123[3]))
   }
 }
+
 
 ###########
 ## adding all those values to the x4pilotData table.
@@ -162,7 +146,10 @@ consCodeAndPosteriorsNO <- data.frame(as.data.frame(postListMat2Opt))
 x4pilotData <- data.frame(x4pilotData, consCodeAndPosteriorsNO) 
 
 x4pilotData$CCode <- uniqueCCode
-x4pilotData$logLik <- logLik
 
-write.csv(x4pilotData, "X4_Data/x4pilotDataAugm_2019_04_30.csv")
+if(procType == 1) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAindOpt_fixed.1.11_and_OptPrefandAlphaObed0.csv")
+}else if(procType == 2) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAindOpt_OptPrefAndObedAlpha1_and_OptAll3.csv")
+}
 

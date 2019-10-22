@@ -78,7 +78,7 @@ subjectResponsesOrdered <- round(subjectResponsesOrdered, digits=5)
 ## recording KL divergence and parameters (base model, 1 param, 2 params)
 workerIDs <- x4pilotData$workerid
 idMax <- max(workerIDs)
-llWorkers12 <- matrix(0,length(unique(workerIDs)), 10)
+klDivWorkers12 <- matrix(0,length(unique(workerIDs)), 10)
 paramsWorkers12 <- matrix(0,length(unique(workerIDs)), 14)
 ##########
 ## Starting with simple base model determination:
@@ -87,13 +87,13 @@ workerIndex <- 1
 for(workerID in c(0:idMax)) {
   idICases <- which(workerIDs == workerID)
   if(length(idICases)>0) {
-    llWorkers12[workerIndex,1] <- workerID
+    klDivWorkers12[workerIndex,1] <- workerID
     paramsWorkers12[workerIndex,1] <- workerID
     ## based model -> no change in preferences!
-    llWorkers12[workerIndex,2] <- 0 # -2 * length(idICases) * log(1/3)
+    klDivWorkers12[workerIndex,2] <- 0 # -2 * length(idICases) * log(1/3)
     for(i in c(1:length(idICases))) {
       for(j in c(1:6)) {
-        llWorkers12[workerIndex, 2] <- llWorkers12[workerIndex, 2] + 
+        klDivWorkers12[workerIndex, 2] <- klDivWorkers12[workerIndex, 2] + 
           subjectResponses[idICases[i],j] * 
           (log(subjectResponses[idICases[i],j]) - log(1/3))
       }
@@ -118,24 +118,24 @@ dataWorker[,5] <- q1Feat[allIndices]
 dataWorker[,6] <- q2Feat[allIndices]
 dataWorker[,7:12] <- subjectResponses[allIndices,1:6]
 
-# before optimization:         llWorkers12[1,3] <- RSAModelLL1(c(.2), dataWorker)
+# before optimization:         klDivWorkers12[1,3] <- RSAModelLL1(c(.2), dataWorker)
 optRes1 <- optimize(RSAModelLL1_1, c(0,1e+10), dataWorker)
 optRes1notObey.1 <- optimize(RSAModelLL1_1_notObey.1, c(0,1e+10), dataWorker)
 optRes2 <- optimize(RSAModelLL1_2, c(0,1e+10), dataWorker)   
-optRes3 <- optimize(RSAModelLL1_3, c(.01,100), dataWorker)   
+#optRes3 <- optimize(RSAModelLL1_3, c(.01,100), dataWorker)   
 #print(optRes)
 ## 1 param RSA model
-llWorkers12[1,3] <- optRes1$objective
-llWorkers12[1,4] <- optRes1notObey.1$objective
-llWorkers12[1,5] <- optRes2$objective
-llWorkers12[1,6] <- optRes3$objective
+klDivWorkers12[1,3] <- optRes1$objective
+klDivWorkers12[1,4] <- optRes1notObey.1$objective
+klDivWorkers12[1,5] <- optRes2$objective
+#klDivWorkers12[1,6] <- optRes3$objective
 ## resulting parameter choice
 paramsWorkers12[1,2] <- optRes1$minimum
 paramsWorkers12[1,3] <- optRes1notObey.1$minimum
 paramsWorkers12[1,4] <- optRes2$minimum
-paramsWorkers12[1,5] <- optRes3$minimum
+#paramsWorkers12[1,5] <- optRes3$minimum
 ####
-print(llWorkers12[1,])
+print(klDivWorkers12[1,])
 print(paramsWorkers12[1,])
 ####
 
@@ -154,9 +154,9 @@ dataWorker[,5] <- q1Feat[allIndices]
 dataWorker[,6] <- q2Feat[allIndices]
 dataWorker[,7:12] <- subjectResponses[allIndices,1:6]
 
-# before optimization:     llWorkers12[workerIndex,7] <- RSAModelLL2(c(.2,.2), dataWorker)
-optRes2n1 <- optim(c(.2, .2), RSAModelLL2_n1, method="L-BFGS-B", gr=NULL, dataWorker,
-                   lower = c(0,0.01), upper = c(1e+10,100))
+# before optimization:     klDivWorkers12[workerIndex,7] <- RSAModelLL2(c(.2,.2), dataWorker)
+#optRes2n1 <- optim(c(.2, .2), RSAModelLL2_n1, method="L-BFGS-B", gr=NULL, dataWorker,
+#                   lower = c(0,0.01), upper = c(1e+10,100))
 optRes2n2 <- optim(c(.2, .2), RSAModelLL2_n2, method="L-BFGS-B", gr=NULL, dataWorker,
                    lower = c(0,0.01), upper = c(1e+10,100))
 optRes2n3 <- optim(c(.2, .2), RSAModelLL2_n3, method="L-BFGS-B", gr=NULL, dataWorker,
@@ -166,13 +166,13 @@ optRes3 <- optim(c(.2, .2, .2), RSAModelLL3, method="L-BFGS-B", gr=NULL, dataWor
 # print(optRes)
 ## 2 and 3 param RSA model2
 ## max likelihood parameter choice
-llWorkers12[1,7] <- optRes2n1$value
-llWorkers12[1,8] <- optRes2n2$value
-llWorkers12[1,9] <- optRes2n3$value
-llWorkers12[1,10] <- optRes3$value
+#klDivWorkers12[1,7] <- optRes2n1$value
+klDivWorkers12[1,8] <- optRes2n2$value
+klDivWorkers12[1,9] <- optRes2n3$value
+klDivWorkers12[1,10] <- optRes3$value
 ## max likelihood parameter choice
-paramsWorkers12[1,6] <- optRes2n1$par[1]
-paramsWorkers12[1,7] <- optRes2n1$par[2]
+#paramsWorkers12[1,6] <- optRes2n1$par[1]
+#paramsWorkers12[1,7] <- optRes2n1$par[2]
 paramsWorkers12[1,8] <- optRes2n2$par[1]
 paramsWorkers12[1,9] <- optRes2n2$par[2]
 paramsWorkers12[1,10] <- optRes2n3$par[1]
@@ -181,15 +181,15 @@ paramsWorkers12[1,12] <- optRes3$par[1]
 paramsWorkers12[1,13] <- optRes3$par[2]
 paramsWorkers12[1,14] <- optRes3$par[3]
 ##
-print(llWorkers12[1,])
+print(klDivWorkers12[1,])
 print(paramsWorkers12[1,])
 
 ## sorting based on 2-parameter RSA optimized version. 
-#llWorkers12 <- llWorkers12[order(llWorkers12[,4]),]
-#llWorkers12[,2:7] <- llWorkers12[,2:7]*2
+#klDivWorkers12 <- klDivWorkers12[order(klDivWorkers12[,4]),]
+#klDivWorkers12[,2:7] <- klDivWorkers12[,2:7]*2
 ## writing out sorted table
-write.csv(llWorkers12, "X4_Data/x4ModelsKLDivsGlobal_2019_0512.csv")
-write.csv(paramsWorkers12, "X4_Data/x4ModelsOptParamsGlobal_2019_0512.csv")
+write.csv(klDivWorkers12, "X4_Data/x4KLDivs_fullRSA_globalOpt_2019_1006.csv")
+write.csv(paramsWorkers12, "X4_Data/x4Params_fullRSA_globalOpt_2019_1006.csv")
 
 # 
 # ### 

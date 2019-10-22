@@ -43,7 +43,6 @@ x4pilotData$obj3OC27 <- obj3OC27
 ## now determining the recorded subject responses 
 subjectResponses <- matrix(0,length(x4pilotData$X),6)
 # postListMat <- matrix(0,length(pilotData$X),9)
-# logLik <- rep(0,length(pilotData$X))
 for(i in c(1:length(x4pilotData$X))) {
   # objectConstellation <- c(targetOC27[i],obj2OC27[i],obj3OC27[i])
   # featChoice <- uttFeat[i]
@@ -79,22 +78,22 @@ subjectResponsesOrdered <- round(subjectResponsesOrdered, digits=5)
 workerIDs <- x4pilotData$workerid
 idMax <- max(workerIDs)
 
-## sorting based on 2-parameter RSA optimized version. 
-#llWorkers12 <- llWorkers12[order(llWorkers12[,4]),]
-#llWorkers12[,2:7] <- llWorkers12[,2:7]*2
-## writing out sorted table
-#llWorkers12 <- as.matrix(read.csv("X4_Data/x4ModelsKLDivs_2019_0430.csv"))
-paramsWorkers12 <- as.matrix(read.csv("X4_Data/x4ModelsOptParamsGlobal_2019_0512.csv"))
-#llWorkers12 <- llWorkers12[,c(2:ncol(llWorkers12))]
+## reading in parameters from optimization files 
+paramsWorkers12 <- as.matrix(read.csv("X4_Data/x4Params_fullRSA_globalOpt_2019_1006.csv"))
 paramsWorkers12 <- paramsWorkers12[,c(2:ncol(paramsWorkers12))]
 
-params1only <- paramsWorkers12[1,2]
-params1only.1obeyInst <- paramsWorkers12[1,3]
-params2only <- paramsWorkers12[1,4]
-#params3only <- paramsWorkers12[1,5]
-params12 <- paramsWorkers12[1,c(10,11)]
+params1 <- paramsWorkers12[1,2]
+params1notObey.1 <- paramsWorkers12[1,3]
+params12 <- paramsWorkers12[1,4]
+#
+params2obeyFixed <- paramsWorkers12[1,c(8,9)]
+params2alphaFixed <- paramsWorkers12[1,c(10:11)]
+#
 params123 <- paramsWorkers12[1,c(12:14)]
 
+###################################################################################
+parOptType <-3 ######## number of parameters to be optimized. #####################
+###################################################################################
 
 ### 
 # determining the model predictions after worker-specific model parameter optimization!
@@ -102,9 +101,6 @@ constellationCode <- matrix(0,length(x4pilotData$X),6)
 uniqueCCode <- rep(0, length(x4pilotData$X))
 postListMat1Opt <- matrix(0,length(x4pilotData$X),9)
 postListMat2Opt <- matrix(0,length(x4pilotData$X),9)
-postListMat1Opt <- matrix(0,length(x4pilotData$X),9)
-postListMat2Opt <- matrix(0,length(x4pilotData$X),9)
-logLik <- rep(0,length(x4pilotData$X))
 
 for(i in c(1:length(x4pilotData$X))) {
   objectConstellation <- c(targetOC27[i],obj2OC27[i],obj3OC27[i])
@@ -116,31 +112,21 @@ for(i in c(1:length(x4pilotData$X))) {
   }
   uniqueCCode[i] <- uc
 
-  
-  postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
-                                                  abs(params1only.1obeyInst[1]), 0.1, 1)
-  postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
-                                                       abs(params12[1]), abs(params12[2]), 1)
-  #postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
-  #                                                  0, 0, 1)
-  #postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
-  #                                                        abs(params123[1]), abs(params123[2]), abs(params123[3]))
-}
-
-
-
-
-
-# now determine expected log likelihoods given the subject responses and the optimized model values.
-logLik <- rep(0,length(x4pilotData$X))
-for(i in c(1:length(x4pilotData$X))) {
-  for(j in 1:3) {  
-    logLik[i] <- logLik[i] - subjectResponses[i,j] * 
-      log(postListMat1Opt[i, j+(q1Feat[i]-1)*3])
-  }
-  for(j in 1:3) {  
-    logLik[i] <- logLik[i] - subjectResponses[i,3+j] * 
-      log(postListMat1Opt[i, j+(q2Feat[i]-1)*3])
+  if(parOptType == 1) {
+    postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
+                                                        abs(params1[1]), 0.1, 1)
+    postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
+                                                        abs(params1notObey.1[1]), .1, 1)
+  }else if(parOptType == 2) {
+    postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
+                                                        abs(params12[1]), 0.1, 1)
+    postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
+                                                        abs(params2alphaFixed[1]), abs(params2alphaFixed[2]), 1)
+  }else if(parOptType == 3) {
+    postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
+                                                      abs(params2obeyFixed[1]), 0, abs(params2obeyFixed[2]) )
+    postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
+                                                     abs(params123[1]), abs(params123[2]), abs(params123[3]))
   }
 }
 
@@ -161,7 +147,8 @@ consCodeAndPosteriorsNO <- data.frame(as.data.frame(postListMat2Opt))
 x4pilotData <- data.frame(x4pilotData, consCodeAndPosteriorsNO) 
 
 x4pilotData$CCode <- uniqueCCode
-x4pilotData$logLik <- logLik
 
-write.csv(x4pilotData, "X4_Data/x4pilotDataAugmGlobal12_2019_04_30.csv")
+write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAglobalOpt_Opt1_and__Opt1obed.1.csv")
+write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAglobalOpt_Opt2_and__Opt12.csv")
+write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAglobalOpt_Opt13_and__Opt123.csv")
 

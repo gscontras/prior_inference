@@ -88,8 +88,17 @@ idMax <- max(workerIDs)
 #paramsWorkers1notObey.1 <- as.matrix(read.csv("X4_Data/x4CrossVal_SimpleRSA_Params_notObey.1_2019_0430.csv"))
 #paramsWorkers1notObey.1 <- paramsWorkers1notObey.1[,c(2:ncol(paramsWorkers1notObey.1))]
 
-paramsWorkers12 <- as.matrix(read.csv("X4_Data/x4CrossVal_SimpleRSA_Params_12parOpt_2019_0430.csv"))
-paramsWorkers12 <- paramsWorkers12[,c(2:ncol(paramsWorkers12))]
+paramsWorkers1 <- as.matrix(read.csv("X4_Data/x4Params_fullRSA_crossVal_1parOpt_2019_1008.csv"))
+paramsWorkers1 <- paramsWorkers1[,c(2:ncol(paramsWorkers1))]
+paramsWorkers1notObey.1 <- as.matrix(read.csv("X4_Data/x4Params_simpleRSA_crossVal_1parOptnotObej.1_2019_1009.csv"))
+paramsWorkers1notObey.1 <- paramsWorkers1notObey.1[,c(2:ncol(paramsWorkers1notObey.1))]
+paramsWorkers2 <- as.matrix(read.csv("X4_Data/x4Params_simpleRSA_crossVal_2parOpt_2019_1009.csv"))
+paramsWorkers2 <- paramsWorkers2[,c(2:ncol(paramsWorkers2))]
+
+
+############################################################################################
+procType <- 2   ###########################################################################
+############################################################################################
 
 ### 
 # determining the model predictions after worker-specific model parameter optimization!
@@ -116,22 +125,21 @@ for(i in c(1:length(x4pilotData$X))) {
     workerIndex <- workerIndex + 1
     trialIndex <- 1
   }
-#  postListMat1[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
-#                                                             0, 0)
-#  postListMat2[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
-#                                                             .1, 0)
-
-#  params1 <- paramsWorkers1[workerIndex, trialIndex]
-#  postListMat1[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice,
-#                                                           params1[1], 0)
-#  params1notObey.1 <- paramsWorkers1notObey.1[workerIndex, trialIndex]
-#  postListMat2[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice,
-#                                                             params1notObey.1[1], 0.1)
-  params12 <- paramsWorkers12[workerIndex, (((trialIndex-1)*2+1):((trialIndex-1)*2+2))]
-  postListMat1[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
-                                                    .1, .1)
-  postListMat2[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
-                                                   abs(params12[1]), abs(params12[2]))
+  if(procType == 1) {
+    params1 <- paramsWorkers1[workerIndex, trialIndex]
+    postListMat1[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice,
+                                                               params1[1], 0) 
+    params2 <- paramsWorkers2[workerIndex, (((trialIndex-1)*2+1):((trialIndex-1)*2+2))]
+    postListMat2[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice,
+                                                               params2[1], params2[2]) 
+  } else if(procType == 2) {
+    params1nO.1 <- paramsWorkers1notObey.1[workerIndex, trialIndex]
+    postListMat1[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice,
+                                                               params1nO.1[1], 0.1) 
+    postListMat2[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice,
+                                                               0.1, 0.1) 
+    
+  } 
   trialIndex <- trialIndex + 1
 }
 # now determine expected log likelihoods given the subject responses and the optimized model values.
@@ -166,7 +174,10 @@ x4pilotData <- data.frame(x4pilotData, consCodeAndPosteriorsNO)
 x4pilotData$CCode <- uniqueCCode
 x4pilotData$logLik <- logLik
 
-#write.csv(x4pilotData, "X4_Data/x4pilot_SimpleRSA_DataCrossValAugmentedfixed_2019_0429.csv")
-#write.csv(x4pilotData, "X4_Data/x4pilot_SimpleRSA_DataCrossValAugmented_2019_0507.csv")
-write.csv(x4pilotData, "X4_Data/x4pilot_SimpleRSA_DataCrossValAugmented2_2019_0507.csv")
+if(procType == 1) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAcrossVal_Opt1_and_Opt2.csv")
+} else if(procType == 2) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAcrossVal_Opt1obed.1_and_fixed.1.1.csv")
+} 
+
 

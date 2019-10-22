@@ -89,7 +89,7 @@ uniqueItemCodes <- sort(unique(x4pilotData$itemCode))
 # leave one out parameter determination for each participant!
 
 ###################################################################################
-parOptType <-1 ######## number of parameters to be optimized. #####################
+parOptType <-2 ######## number of parameters to be optimized. #####################
 ###################################################################################
 
 llWorkers12 <- matrix(0,length(unique(workerIDs)), 15)
@@ -177,17 +177,17 @@ for(workerID in c(0:idMax)) {
 ## 
 ## writing out tables
 if(parOptType==1) {
-  write.csv(llWorkers12, "X4_Data/x4CrossVal_KLDivOpt_1parOpt_2019_0430.csv")
-  write.csv(paramsWorkers12, "X4_Data/x4CrossVal_Params_1parOpt_2019_0430.csv")
-  write.csv(klDivCrossValValues, "X4_Data/x4CrossVal_KLDivTrial_1parOpt_2019_0430.csv")
+  write.csv(llWorkers12, "X4_Data/x4klDivOpt_fullRSA_crossVal_1parOpt_2019_1008.csv")
+  write.csv(paramsWorkers12, "X4_Data/x4Params_fullRSA_crossVal_1parOpt_2019_1008.csv")
+  write.csv(klDivCrossValValues, "X4_Data/x4klDiv_Trials_fullRSA_1parOpt_crossVal_2019_1008.csv")
 }else if(parOptType==2) {
-  write.csv(llWorkers12, "X4_Data/x4CrossVal_KLDivOpt_12parOpt_2019_0430.csv")
-  write.csv(paramsWorkers12, "X4_Data/x4CrossVal_Params_12parOpt_2019_0430.csv")
-  write.csv(klDivCrossValValues, "X4_Data/x4CrossVal_KLDivTrial_12parOpt_2019_0430.csv")
+  write.csv(llWorkers12, "X4_Data/x4klDivOpt_fullRSA_crossVal_2parOpt_2019_1008.csv")
+  write.csv(paramsWorkers12, "X4_Data/x4Params_fullRSA_crossVal_2parOpt_2019_1008.csv")
+  write.csv(klDivCrossValValues, "X4_Data/x4klDiv_Trials_fullRSA_2parOpt_crossVal_2019_1008.csv")
 }else if(parOptType==3) {
-  write.csv(llWorkers12, "X4_Data/x4CrossVal_KLDivOpt_123parOpt_2019_0430.csv")
-  write.csv(paramsWorkers12, "X4_Data/x4CrossVal_Params_123parOpt_2019_0430.csv")
-  write.csv(klDivCrossValValues, "X4_Data/x4CrossVal_KLDivTrial_123parOpt_2019_0430.csv")
+  write.csv(llWorkers12, "X4_Data/x4klDivOpt_fullRSA_crossVal_3parOpt_2019_1008.csv")
+  write.csv(paramsWorkers12, "X4_Data/x4Params_fullRSA_crossVal_3parOpt_2019_1008.csv")
+  write.csv(klDivCrossValValues, "X4_Data/x4klDiv_Trials_fullRSA_3parOpt_crossVal_2019_1008.csv")
 }
 
 

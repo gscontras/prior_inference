@@ -72,7 +72,7 @@ idMax <- max(workerIDs)
 ## starting with 1 parameter RSA model optimizations... 
 # data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:numUttOptions,7-X(max 15):TurkerSliderValues]
 ###################################################################################
-parOptType <- 3 ######## 1, 2, 3, or 4                        #####################
+parOptType <- 4 ######## 1, 2, 3, or 4                        #####################
 ###################################################################################
 
 klDivUttWorkers <- matrix(0,length(unique(workerIDs)), 15)
@@ -87,7 +87,7 @@ if(parOptType==1) {
 workerIndex <- 1
 for(workerID in c(0:idMax)) {
   idICases <- which(workerIDs == workerID)
-  if(length(idICases)>0) {
+  if(length(idICases)>0 & workerID != 54) {
     print(c("Optimizing Simple RSA cross. val. w.r.t. worker with ID: ",workerID))
     workerItemCodes <- (x3pilotData$itemCode)[idICases]
     ## now moving through the trials and optimizing with respect to the other trials
@@ -105,18 +105,18 @@ for(workerID in c(0:idMax)) {
       # print(dataWorker)
       
       if(parOptType==1) {
-        optRes1 <- optimize(SimpleRSAModelUttKLDivParamB, c(0,1e+10), dataWorker)
+        optRes1 <- optimize(SimpleRSAModelUttKLDivParamK, c(-10,10), dataWorker)
         klDivUttWorkers[workerIndex,workerTrialIndex] <- optRes1$objective
         paramsUttWorkers[workerIndex,workerTrialIndex] <- optRes1$minimum
       }else if(parOptType==2) {
-        optRes2 <- optim(c(.2, 0), SimpleRSAModelUttKLDivParamBK, method="L-BFGS-B", gr=NULL, dataWorker,
+        optRes2 <- optim(c(.2, 0), SimpleRSAModelUttKLDivParamAK, method="L-BFGS-B", gr=NULL, dataWorker,
                          lower = c(0,-10), upper = c(1e+10,10))
         klDivUttWorkers[workerIndex,workerTrialIndex] <- optRes2$value
         paramsUttWorkers[workerIndex,(workerTrialIndex-1)*2+1] <- optRes2$par[1]
         paramsUttWorkers[workerIndex,(workerTrialIndex-1)*2+2] <- optRes2$par[2]
       }else if(parOptType==3) {
-        optRes3 <-  optim(c(.2, .2), SimpleRSAModelUttKLDivParamAB, method="L-BFGS-B", gr=NULL, dataWorker,
-                          lower = c(0,0), upper = c(1e+10,1e+10))
+        optRes3 <-  optim(c(.2, .2), SimpleRSAModelUttKLDivParamBK, method="L-BFGS-B", gr=NULL, dataWorker,
+                          lower = c(0,-10), upper = c(1e+10,10))
         klDivUttWorkers[workerIndex,workerTrialIndex] <- optRes3$value
         paramsUttWorkers[workerIndex,(workerTrialIndex-1)*2+1] <- optRes3$par[1]
         paramsUttWorkers[workerIndex,(workerTrialIndex-1)*2+2] <- optRes3$par[2]
@@ -139,13 +139,13 @@ for(workerID in c(0:idMax)) {
       
       if(parOptType==1) {
         klDivCrossValValues[workerIndex, workerTrialIndex] <-
-          SimpleRSAModelUttKLDiv_3params(dataTrialWorker, 0.2, optRes1$minimum, 1)
+          SimpleRSAModelUttKLDiv_3params(dataTrialWorker, 0, 0, optRes1$minimum)
       }else if(parOptType==2) {
         klDivCrossValValues[workerIndex, workerTrialIndex] <- 
-          SimpleRSAModelUttKLDiv_3params(dataTrialWorker, 0.2, optRes2$par[1], optRes2$par[2])
+          SimpleRSAModelUttKLDiv_3params(dataTrialWorker, optRes2$par[1], 0, optRes2$par[2])
       }else if(parOptType==3) {
         klDivCrossValValues[workerIndex, workerTrialIndex] <-
-          SimpleRSAModelUttKLDiv_3params(dataTrialWorker, optRes3$par[1], 0.2, optRes3$par[2])
+          SimpleRSAModelUttKLDiv_3params(dataTrialWorker, 0, optRes3$par[1], optRes3$par[2])
       }else if(parOptType==4) {
         klDivCrossValValues[workerIndex, workerTrialIndex] <-
           SimpleRSAModelUttKLDiv_3params(dataTrialWorker, optRes4$par[1], optRes4$par[2], optRes4$par[3])
@@ -159,20 +159,20 @@ for(workerID in c(0:idMax)) {
 ## 
 ## writing out tables
 if(parOptType==1) {
-  write.csv(klDivUttWorkers, "X3_Data/x3CrossVal_SimpleRSA_KLDivOpt_ObedPar_2019_0516.csv")
-  write.csv(paramsUttWorkers, "X3_Data/x3CrossVal_SimpleRSA_Params_ObedPar_2019_0516.csv")
-  write.csv(klDivCrossValValues, "X3_Data/x3CrossVal_SimpleRSA_KLDivTrial_ObedPar_2019_0516.csv")
+  write.csv(klDivUttWorkers, "X3_Data/x3klDivOpt_simpleRSA_KappaOpt_crossVal_2019_1011.csv")
+  write.csv(paramsUttWorkers, "X3_Data/x3Params_simpleRSA_KappaOpt_crossVal_2019_1011.csv")
+  write.csv(klDivCrossValValues, "X3_Data/x3klDiv_Trials_simpleRSA_KappaOpt_crossVal_2019_1011.csv")
 }else if(parOptType==2) {
-  write.csv(klDivUttWorkers, "X3_Data/x3CrossVal_SimpleRSA_KLDivOpt_ObedAndKPars_2019_0516.csv")
-  write.csv(paramsUttWorkers, "X3_Data/x3CrossVal_SimpleRSA_Params_ObedAndKPars_2019_0516.csv")
-  write.csv(klDivCrossValValues, "X3_Data/x3CrossVal_SimpleRSA_KLDivTrial_ObedAndKPars_2019_0516.csv")
+  write.csv(klDivUttWorkers, "X3_Data/x3klDivOpt_simpleRSA_PrefKappaOpt_crossVal_2019_1011.csv")
+  write.csv(paramsUttWorkers, "X3_Data/x3Params_simpleRSA_PrefKappaOpt_crossVal_2019_1011.csv")
+  write.csv(klDivCrossValValues, "X3_Data/x3klDiv_Trials_simpleRSA_PrefKappaOpt_crossVal_2019_1011.csv")
 }else if(parOptType==3) {
-  write.csv(klDivUttWorkers, "X3_Data/x3CrossVal_SimpleRSA_KLDivOpt_PrefAndKPars_2019_0516.csv")
-  write.csv(paramsUttWorkers, "X3_Data/x3CrossVal_SimpleRSA_Params_PrefAndKPars_2019_0516.csv")
-  write.csv(klDivCrossValValues, "X3_Data/x3CrossVal_SimpleRSA_KLDivTrial_PrefAndKPars_2019_0516.csv")
+  write.csv(klDivUttWorkers, "X3_Data/x3klDivOpt_simpleRSA_ObedKappaOpt_crossVal_2019_1011.csv")
+  write.csv(paramsUttWorkers, "X3_Data/x3Params_simpleRSA_ObedKappaOpt_crossVal_2019_1011.csv")
+  write.csv(klDivCrossValValues, "X3_Data/x3klDiv_Trials_simpleRSA_ObedKappaOpt_crossVal_2019_1011.csv")
 }else if(parOptType==4) {
-  write.csv(klDivUttWorkers, "X3_Data/x3CrossVal_SimpleRSA_KLDivOpt_PrefObedKPars_2019_0516.csv")
-  write.csv(paramsUttWorkers, "X3_Data/x3CrossVal_SimpleRSA_Params_PrefObedKPars_2019_0516.csv")
-  write.csv(klDivCrossValValues, "X3_Data/x3CrossVal_SimpleRSA_KLDivTrial_PrefObedKPars_2019_0516.csv")
+  write.csv(klDivUttWorkers, "X3_Data/x3klDivOpt_simpleRSA_all3Opt_crossVal_2019_1011.csv")
+  write.csv(paramsUttWorkers, "X3_Data/x3Params_simpleRSA_all3Opt_crossVal_2019_1011.csv")
+  write.csv(klDivCrossValValues, "X3_Data/x3klDiv_Trials_simpleRSA_all3Opt_crossVal_2019_1011.csv")
 }
 

@@ -105,7 +105,7 @@ RSAModelLL3 <- function(params,  data) {
 #                                                          7:Q1AnswerV1,V2,V3, 10:Q2AnserV1,V2,V3]
 RSAModelKLDiv3paramsAllValuesConsidered <- function(data, par1, par2, par3) {
   #  print(params)
-  llRes <- 0
+  klDiv <- 0
   for(i in c(1:nrow(data))) {
     ## determining the object and utterance
     currentObjects <- c(data[i,1],data[i,2],data[i,3])
@@ -114,15 +114,15 @@ RSAModelKLDiv3paramsAllValuesConsidered <- function(data, par1, par2, par3) {
     probModelRes <- determineSpeakerPostListPrefs(currentObjects, uttFeat, par1, par2, par3)
     ## adding the negative log likelihoods
     for(j in c(1:3)) {
-      llRes <- llRes + data[i, 6+j] * 
+      klDiv <- klDiv + data[i, 6+j] * 
         ( log(data[i, 6+j] + 1e-100) - log( probModelRes[j + (data[i, 5]-1)*3] + 1e-100) )
     }
     for(j in c(1:3)) {  
-      llRes <- llRes + data[i, 9+j] * 
+      klDiv <- klDiv + data[i, 9+j] * 
         ( log(data[i, 9+j] + 1e-100) - log( probModelRes[j + (data[i, 6]-1)*3] + 1e-100) )
     }
   }
-  return(llRes)
+  return(klDiv)
 }
 
 
@@ -131,7 +131,7 @@ RSAModelKLDiv3paramsAllValuesConsidered <- function(data, par1, par2, par3) {
 #                                                          7:Q1AnswerV1,V2,V3, 10:Q2AnswerV1,V2,V3]
 RSAModelKLDiv3paramsOnlyAvailableFeatureValuesConsidered <- function(data, par1, par2, par3) {
   #  print(params)
-  llRes <- 0
+  klDiv <- 0
   for(i in c(1:nrow(data))) {
     ## determining the object and utterance
     currentObjects <- c(data[i,1],data[i,2],data[i,3])
@@ -151,7 +151,7 @@ RSAModelKLDiv3paramsOnlyAvailableFeatureValuesConsidered <- function(data, par1,
     data[i,6+relIndicesRel] <- data[i,6+relIndicesRel] / (sum(data[i,6+relIndicesRel]) + 1e-100)
     # determining respective KL divergence values
     for(j in c(1:length(relevantIndices))) {
-      llRes <- llRes + data[i, 6+relIndicesRel[j]] * 
+      klDiv <- klDiv + data[i, 6+relIndicesRel[j]] * 
         ( log(data[i, 6+relIndicesRel[j]] + 1e-100) - log(probModelRes[validUtterances[relevantIndices[j]]] + 1e-100) )
     }
     ##
@@ -164,16 +164,16 @@ RSAModelKLDiv3paramsOnlyAvailableFeatureValuesConsidered <- function(data, par1,
     data[i,9+relIndicesRel] <- data[i,9+relIndicesRel] / (sum(data[i,9+relIndicesRel]) + 1e-100)
     # determining respective KL divergence values
     for(j in c(1:length(relevantIndices))) {
-      llRes <- llRes + data[i, 9+relIndicesRel[j] ] * 
+      klDiv <- klDiv + data[i, 9+relIndicesRel[j] ] * 
         ( log(data[i, 9+relIndicesRel[j] ] + 1e-100) - log(probModelRes[validUtterances[relevantIndices[j]]] + 1e-100) )
     }
   }
-  return(llRes)
+  return(klDiv)
 }
 
 # data is a matrix with data rows. 
 UniformModelKLDiv <- function(data) {
-  llRes <- 0
+  klDiv <- 0
   for(i in c(1:nrow(data))) {
     ## determining the object and utterance
     currentObjects <- c(data[i,1],data[i,2],data[i,3])
@@ -191,7 +191,7 @@ UniformModelKLDiv <- function(data) {
     data[i,6+relIndicesRel] <- data[i,6+relIndicesRel] / (sum(data[i,6+relIndicesRel]) + 1e-100)
     # determining respective KL divergence values
     for(j in c(1:length(relevantIndices))) {
-      llRes <- llRes + data[i, 6+relIndicesRel[j]] * 
+      klDiv <- klDiv + data[i, 6+relIndicesRel[j]] * 
         ( log(data[i, 6+relIndicesRel[j]] + 1e-100) - log( 1 / length(relevantIndices)) )  
     }
     ##
@@ -202,11 +202,11 @@ UniformModelKLDiv <- function(data) {
     data[i,9+relIndicesRel] <- data[i,9+relIndicesRel] / (sum(data[i,9+relIndicesRel]) + 1e-100)
     # determining respective KL divergence values
     for(j in c(1:length(relevantIndices))) {
-      llRes <- llRes + data[i, 9+relIndicesRel[j] ] * 
+      klDiv <- klDiv + data[i, 9+relIndicesRel[j] ] * 
         ( log(data[i, 9+relIndicesRel[j] ] + 1e-100) - log( 1 / length(relevantIndices) ) ) 
     }
   }
-  return(llRes)
+  return(klDiv)
 }
 
 

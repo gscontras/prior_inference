@@ -83,13 +83,16 @@ idMax <- max(workerIDs)
 ##############################################################################
 
 ## loading optimized trial-respective cross-validated parameter values 
-#paramsWorkers1 <- as.matrix(read.csv("X4_Data/x4CrossVal_Params_1parOpt_2019_0430.csv")) 
-paramsWorkers1 <- as.matrix(read.csv("X4_Data/x4CrossVal_Params_notObey.1_2019_0429.csv"))
+paramsWorkers1 <- as.matrix(read.csv("X4_Data/x4Params_fullRSA_crossVal_1parOpt_2019_1008.csv"))
 paramsWorkers1 <- paramsWorkers1[,c(2:ncol(paramsWorkers1))]
-#paramsWorkers12 <- as.matrix(read.csv("X4_Data/x4CrossVal_Params_12parOpt_2019_0430.csv"))
-#paramsWorkers123 <- as.matrix(read.csv("X4_Data/x4CrossVal_Params_123parOpt_2019_0430.csv"))
-#paramsWorkers12 <- paramsWorkers12[,c(2:ncol(paramsWorkers12))]
-#paramsWorkers123 <- paramsWorkers123[,c(2:ncol(paramsWorkers123))]
+paramsWorkers12n3 <- as.matrix(read.csv("X4_Data/x4Params_fullRSA_crossVal_2parOpt_2019_1008.csv"))
+paramsWorkers12n3 <- paramsWorkers12n3[,c(2:ncol(paramsWorkers12n3))]
+paramsWorkers123 <- as.matrix(read.csv("X4_Data/x4Params_fullRSA_crossVal_3parOpt_2019_1008.csv"))
+paramsWorkers123 <- paramsWorkers123[,c(2:ncol(paramsWorkers123))]
+
+######################################
+procType <- 2
+######################################
 
 ### 
 # determining the model predictions after worker-specific model parameter optimization!
@@ -117,16 +120,20 @@ for(i in c(1:length(x4pilotData$X))) {
     trialIndex <- 1
   }
   params1 <- paramsWorkers1[workerIndex, trialIndex]
-  postListMat1[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
-                                                    0.1, 0.1, 1)
-  postListMat2[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
-                                                    params1[1], 0.1, 1)
-#  params12 <- paramsWorkers12[workerIndex, (((trialIndex-1)*2+1):((trialIndex-1)*2+2))]
-#  params123 <- paramsWorkers123[workerIndex, (((trialIndex-1)*3+1):((trialIndex-1)*3+3))]
-#  postListMat1[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
-#                                                    abs(params12[1]), abs(params12[2]), 1)
-#  postListMat2[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
-#                                                   abs(params123[1]), abs(params123[2]), params123[3])
+  params12n3 <- paramsWorkers12n3[workerIndex, (((trialIndex-1)*2+1):((trialIndex-1)*2+2))]
+  params123 <- paramsWorkers123[workerIndex, (((trialIndex-1)*3+1):((trialIndex-1)*3+3))]
+  
+  if(procType == 1) {
+    postListMat1[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
+                                                    0, 0, 1)
+    postListMat2[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
+                                                    params1[1], 0, 1)
+  } else if(procType == 2) {
+    postListMat1[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
+                                                    abs(params12n3[1]), abs(params12n3[2]), 1)
+    postListMat2[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, 
+                                                   abs(params123[1]), abs(params123[2]), params123[3])
+  }
   trialIndex <- trialIndex + 1
 }
 # now determine expected log likelihoods given the subject responses and the optimized model values.
@@ -138,7 +145,7 @@ for(i in c(1:length(x4pilotData$X))) {
   }
   for(j in 1:3) {  
     logLik[i] <- logLik[i] - subjectResponses[i,3+j] * 
-      log(postListMat1[i, j+(q2Feat[i]-1)*3])
+      log(postListMat2[i, j+(q2Feat[i]-1)*3])
   }
 }
 
@@ -161,7 +168,10 @@ x4pilotData <- data.frame(x4pilotData, consCodeAndPosteriorsNO)
 x4pilotData$CCode <- uniqueCCode
 x4pilotData$logLik <- logLik
 
-#write.csv(x4pilotData, "X4_Data/x4pilot_DataCrossValAugmentedfixed_2019_0429.csv")
-write.csv(x4pilotData, "X4_Data/x4pilot_DataCrossValAugmented1notObey.1_2019_0429.csv")
-#write.csv(x4pilotData, "X4_Data/x4pilot_DataCrossValAugmented23_2019_0429.csv")
+if(procType == 1) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAcrossVal_fixed001_and_Opt1fixed01.csv")
+} else if(procType == 2) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAcrossVal_Opt12fixed1_and_Opt123.csv")
+} 
+
 

@@ -78,8 +78,8 @@ subjectResponsesOrdered <- round(subjectResponsesOrdered, digits=5)
 ## recording KL divergence and parameters (base model, 1 param, 2 params)
 workerIDs <- x4pilotData$workerid
 idMax <- max(workerIDs)
-llWorkers12 <- matrix(0,length(unique(workerIDs)), 8)
-paramsWorkers12 <- matrix(0,length(unique(workerIDs)), 8)
+llWorkers12 <- matrix(0,length(unique(workerIDs)), 5)
+paramsWorkers12 <- matrix(0,length(unique(workerIDs)), 5)
 
 ##########
 ## Starting with simple base model determination:
@@ -123,20 +123,13 @@ for(workerID in c(0:idMax)) {
     
     # before optimization:         llWorkers12[workerIndex,3] <- RSAModelLL1(c(.2), dataWorker)
     optRes1 <- optimize(RSAModelLL1_1simpleRSA, c(0,1e+10), dataWorker)   
-    optRes2 <- optimize(RSAModelLL1_2simpleRSA, c(0,1e+10), dataWorker)   
-    optRes3 <- optimize(RSAModelLL1_1simpleRSA_notObey.2, c(0,1e+10), dataWorker)   
-    optRes4 <- optimize(RSAModelLL1_2simpleRSA_pref2, c(0,1e+10), dataWorker)   
-    #print(optRes)
+    optRes2 <- optimize(RSAModelLL1_1simpleRSA_notObey.2, c(0,1e+10), dataWorker)   
     ## 1 param RSA model
     llWorkers12[workerIndex,3] <- optRes1$objective
     llWorkers12[workerIndex,4] <- optRes2$objective
-    llWorkers12[workerIndex,5] <- optRes3$objective
-    llWorkers12[workerIndex,6] <- optRes4$objective
     ## resulting parameter choice
     paramsWorkers12[workerIndex,2] <- optRes1$minimum
     paramsWorkers12[workerIndex,3] <- optRes2$minimum
-    paramsWorkers12[workerIndex,4] <- optRes3$minimum
-    paramsWorkers12[workerIndex,5] <- optRes4$minimum
     ####
     print(llWorkers12[workerIndex,])
     print(paramsWorkers12[workerIndex,])
@@ -173,10 +166,10 @@ for(workerID in c(0:idMax)) {
     # print(optRes)
     ## 2 and 3 param RSA model2
     ## max likelihood parameter choice
-    llWorkers12[workerIndex,7] <- optRes2n1$value
+    llWorkers12[workerIndex,5] <- optRes2n1$value
     ## max likelihood parameter choice
-    paramsWorkers12[workerIndex,6] <- optRes2n1$par[1]
-    paramsWorkers12[workerIndex,7] <- optRes2n1$par[2]
+    paramsWorkers12[workerIndex,4] <- optRes2n1$par[1]
+    paramsWorkers12[workerIndex,5] <- optRes2n1$par[2]
     ##
     print(llWorkers12[workerIndex,])
     print(paramsWorkers12[workerIndex,])
@@ -187,5 +180,5 @@ for(workerID in c(0:idMax)) {
 
 
 ## writing out result tables
-write.csv(llWorkers12, "X4_Data/x4SimpleRSAModelsKLDivs_2019_0705.csv")
-write.csv(paramsWorkers12, "X4_Data/x4SimpleRSAModelsOptParams_2019_0705.csv")
+write.csv(llWorkers12, "X4_Data/x4KLDivs_simpleRSA_indOpt_2019_1010")
+write.csv(paramsWorkers12, "X4_Data/x4Params_simpleRSA_indOpt_2019_1010.csv")

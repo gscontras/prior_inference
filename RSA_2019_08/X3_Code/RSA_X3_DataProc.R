@@ -56,8 +56,8 @@ for(i in c(1:nrow(x3pilotData)) ) {
 ## recording KL divergence and parameters (base model, 1 param, 2 params)
 workerIDs <- x3pilotData$workerid
 idMax <- max(workerIDs)
-klDivUttWorkers <- matrix(0,length(unique(workerIDs)), 9)
-paramsUttWorkers <- matrix(0,length(unique(workerIDs)), 13)
+klDivUttWorkers <- matrix(0,length(unique(workerIDs)), 7)
+paramsUttWorkers <- matrix(0,length(unique(workerIDs)), 10)
 
 #######################################################
 ## Starting with simple base model determination:    ##
@@ -106,50 +106,35 @@ for(workerID in c(0:idMax)) {
     dataWorker[,5:13] <- bInfGainUttTurkers[idICases,]
     # print(dataWorker)
     # now optimize for one parameter... 
-#    optRes1 <- optimize(RSAModelUttKLDivParamA, c(-10,10), dataWorker)
-#    print(optRes1$objective)
-#    optRes2 <- optimize(RSAModelUttKLDivParamB, c(-10,10), dataWorker)   
-#    print(optRes2$objective)
-    optRes3 <- optimize(RSAModelUttKLDivParamD4, c(-10,10), dataWorker)   
-    print(optRes3$objective)
+    optRes1 <- optimize(RSAModelUttKLDivParamA, c(0,1e+10), dataWorker)   
+    optRes2 <- optimize(RSAModelUttKLDivParamD4, c(-10,10), dataWorker)   
     
     ## 1 param RSA Utt model
-#    klDivUttWorkers[workerIndex,3] <- optRes1$objective
-#    klDivUttWorkers[workerIndex,4] <- optRes2$objective
-    klDivUttWorkers[workerIndex,5] <- optRes3$objective
+    klDivUttWorkers[workerIndex,3] <- optRes1$objective
+    klDivUttWorkers[workerIndex,4] <- optRes2$objective
     ## resulting parameter choice
-#    paramsUttWorkers[workerIndex,2] <- optRes1$minimum
-#    paramsUttWorkers[workerIndex,3] <- optRes2$minimum
-    paramsUttWorkers[workerIndex,4] <- optRes3$minimum
+    paramsUttWorkers[workerIndex,2] <- optRes1$minimum
+    paramsUttWorkers[workerIndex,3] <- optRes2$minimum
     ####
     optRes2n1 <- optim(c(.2, .2), RSAModelUttKLDivParamBD4, method="L-BFGS-B", gr=NULL, dataWorker,
                        lower = c(0,-10), upper = c(1e+10,10))
-    print(optRes2n1$value)
     optRes2n2 <- optim(c(.2, .2), RSAModelUttKLDivParamAD4, method="L-BFGS-B", gr=NULL, dataWorker,
                        lower = c(0,-10), upper = c(1e+10,10))
-    print(optRes2n2$value)
-#    optRes2n3 <- optim(c(.2, .2), RSAModelUttKLDivParamAB, method="L-BFGS-B", gr=NULL, dataWorker,
-#                       lower = c(0,0), upper = c(1e+10,1e+10))
-#    print(optRes2n3$value)
     optRes3 <- optim(c(.2, .2, 1), RSAModelUttKLDivParamABD4, method="L-BFGS-B", gr=NULL, dataWorker,
                      lower = c(0,0,-10), upper = c(1e+10,1e+10,10))
-    print(optRes3$value)
     ## 2 and 3 param RSA model2
     ## max likelihood parameter choice
-    klDivUttWorkers[workerIndex,6] <- optRes2n1$value
-    klDivUttWorkers[workerIndex,7] <- optRes2n2$value
-#    klDivUttWorkers[workerIndex,8] <- optRes2n3$value
-    klDivUttWorkers[workerIndex,9] <- optRes3$value ### war zunächste leider noch auskommentiert
+    klDivUttWorkers[workerIndex,5] <- optRes2n1$value
+    klDivUttWorkers[workerIndex,6] <- optRes2n2$value
+    klDivUttWorkers[workerIndex,7] <- optRes3$value 
     ## max likelihood parameter choice
-    paramsUttWorkers[workerIndex,5] <- optRes2n1$par[1]
-    paramsUttWorkers[workerIndex,6] <- optRes2n1$par[2]
-    paramsUttWorkers[workerIndex,7] <- optRes2n2$par[1]
-    paramsUttWorkers[workerIndex,8] <- optRes2n2$par[2]
-#    paramsUttWorkers[workerIndex,9] <- optRes2n3$par[1]
-#    paramsUttWorkers[workerIndex,10] <- optRes2n3$par[2]
-    paramsUttWorkers[workerIndex,11] <- optRes3$par[1]
-    paramsUttWorkers[workerIndex,12] <- optRes3$par[2]
-    paramsUttWorkers[workerIndex,13] <- optRes3$par[3]
+    paramsUttWorkers[workerIndex,4] <- optRes2n1$par[1]
+    paramsUttWorkers[workerIndex,5] <- optRes2n1$par[2]
+    paramsUttWorkers[workerIndex,6] <- optRes2n2$par[1]
+    paramsUttWorkers[workerIndex,7] <- optRes2n2$par[2]
+    paramsUttWorkers[workerIndex,8] <- optRes3$par[1]
+    paramsUttWorkers[workerIndex,9] <- optRes3$par[2]
+    paramsUttWorkers[workerIndex,10] <- optRes3$par[3]
     ##    
     print(c("Done with worker ",workerIndex," with worder ID ", workerID))
     print(c(klDivUttWorkers[workerIndex,], paramsUttWorkers[workerIndex,]))
@@ -158,7 +143,7 @@ for(workerID in c(0:idMax)) {
   }
 }
 
-write.csv(klDivUttWorkers, "X3_Data/KLDivUttWorkers_x3_2019_05_27.csv")
-write.csv(paramsUttWorkers, "X3_Data/KLDivUttParamsWorkers_x3_2019_05_27.csv")
+write.csv(klDivUttWorkers, "X3_Data/x3KLDivs_fullRSA_indOpt_2019_10_11.csv")
+write.csv(paramsUttWorkers, "X3_Data/x3Params_fullRSA_indOpt_2019_10_11.csv")
 
 
