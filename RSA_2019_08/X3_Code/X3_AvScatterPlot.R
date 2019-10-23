@@ -1,27 +1,25 @@
 source("CommonCode/RSA_StratUtt.R")
 source("CommonCode/getConstCodeStratUtt.R")
 
-# loading the augmented pilot data (processed via RSA_x3PilotDataProcessing01.R)
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm_052019.csv")
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm_ADandBD_052019.csv")
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm_ABandABD_052019.csv")
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm_.2fixAndD_052019.csv")
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm_.2ADandBD_052019.csv")
+# loading the augmented pilot data file
 
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm.2_fixedAndD_052019.csv")
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm_.2ADandBD_052019.csv")
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm.2_ABandABD_052019.csv")
+################### full RSA ########################
 
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm_CrossVal_SimpleRSA_Opt34_2019_05_17.csv")
+### full RSA - individually optimized
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_RSAindOpt_fixed_and_PrefOnly.csv")
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_RSAindOpt_KappaOnly_and_ObedAndKappa.csv")
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_RSAindOpt_PrefAndKappa_and_PrefObedAndKappa.csv")
 
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugmV.2_fixedAndD_052019.csv")
+################### simple RSA ######################
 
-x3pilotData <- read.csv("X3_Data/x3pilotDataAugmV0_fixedAndD_052019.csv") # for cogsci poster
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugmV0_ADandBD_052019.csv")
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugmV0_ABandABD_052019.csv")
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAugm_fixedAndD_052019.csv")
+### simple RSA - individually optimized
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed001_and_fixed000.csv")
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_prefOnly_and_obedOnly.csv")
+x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_kappaOnly_and_obedAndKappa.csv")
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_prefAndKappa_and_prefObedAndKappa.csv")
 
-#x3pilotData <- read.csv("X3_Data/x3pilotDataAug_052019_dand0011fixed.csv") # for cogsci poster
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_SRSAcrossVal_KappaOnly_and_PrefAndKappa.csv")
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_SRSAcrossVal_ObedAndKappa_and_PrefObedAndKappa.csv")
 
 ## adding the 1-27 target and object2 & object3 code.
 o1 <- x3pilotData$obj1OC27
@@ -33,12 +31,8 @@ o3 <- x3pilotData$obj3OC27
 ## filtering for only the present feature values for each feature.
 ###########
 subjectGuessIndexM1 <- grep("^DPost_1", colnames(x3pilotData)) - 1
-modelGuessIndex1M1 <- grep("^MPost_1", colnames(x3pilotData)) - 1
-modelGuessIndex2M1 <- grep("^MPostNO_1", colnames(x3pilotData)) - 1
-if(is.numeric(modelGuessIndex1M1)) {
-  modelGuessIndex1M1 <- grep("^MPost1_1", colnames(x3pilotData)) - 1
-  modelGuessIndex2M1 <- grep("^MPost2_1", colnames(x3pilotData)) - 1
-}
+modelGuessIndex1M1 <- grep("^MPost1_1", colnames(x3pilotData)) - 1
+modelGuessIndex2M1 <- grep("^MPost2_1", colnames(x3pilotData)) - 1
 
 for(i in c(1:nrow(x3pilotData))) {
   currentObjects <- c(o1[i], o2[i], o3[i])
@@ -75,12 +69,8 @@ for(i in c(1:length(x3pilotData$X))) {
 # object order specifies reordering of presented object order
 # featureValueOrder specifies how the present feature in an object constellation should be ordered.
 subjectGuessIndex <- grep("^DPost_1", colnames(x3pilotData))
-modelGuessIndex1 <- grep("^MPost_1", colnames(x3pilotData))
-modelGuessIndex2 <- grep("^MPostNO_1", colnames(x3pilotData))
-if(is.numeric(modelGuessIndex1M1)) {
-  modelGuessIndex1 <- grep("^MPost1_1", colnames(x3pilotData))
-  modelGuessIndex2 <- grep("^MPost2_1", colnames(x3pilotData))
-}
+modelGuessIndex1 <- grep("^MPost1_1", colnames(x3pilotData))
+modelGuessIndex2 <- grep("^MPost2_1", colnames(x3pilotData))
 
 x3pilotData$CCode <- uniqueCCode
 x3pilotData$featValOrder <- featureValueOrder

@@ -73,16 +73,15 @@ parOptType <- 34 ########  12 OR 34  ###########################################
 ###################################################################################
 
 if(parOptType == 12) {
-  paramsUttWorkers1 <- as.matrix(read.csv("X3_Data/x3CrossVal_SimpleRSA_Params_ObedPar_2019_0516.csv"))
+  paramsUttWorkers1 <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_KappaOpt_crossVal_2019_1011.csv"))
   paramsUttWorkers1 <- paramsUttWorkers1[ , 2:ncol(paramsUttWorkers1)]
-  paramsUttWorkers2 <- as.matrix(read.csv("X3_Data/x3CrossVal_SimpleRSA_Params_ObedAndKPars_2019_0516.csv"))
+  paramsUttWorkers2 <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_PrefKappaOpt_crossVal_2019_1011.csv"))
   paramsUttWorkers2 <- paramsUttWorkers2[ , 2:ncol(paramsUttWorkers2)]
 }else if(parOptType == 34) {
-  paramsUttWorkers3 <- as.matrix(read.csv("X3_Data/x3CrossVal_SimpleRSA_Params_PrefAndKPars_2019_0516.csv"))
+  paramsUttWorkers3 <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_ObedKappaOpt_crossVal_2019_1011.csv"))
   paramsUttWorkers3 <- paramsUttWorkers3[ , 2:ncol(paramsUttWorkers3)]
-  paramsUttWorkers4 <- as.matrix(read.csv("X3_Data/x3CrossVal_SimpleRSA_Params_PrefObedKPars_2019_0516.csv"))
+  paramsUttWorkers4 <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_all3Opt_crossVal_2019_1011.csv"))
   paramsUttWorkers4 <- paramsUttWorkers4[ , 2:ncol(paramsUttWorkers4)]
-  
 }
 
 #####################################################################################################
@@ -112,17 +111,17 @@ for(i in c(1:length(x3pilotData$X))) {
   if(parOptType==12) {
     params1 <- paramsUttWorkers1[workerIndex, trialIndex]
     postListMat1[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation,  
-                                                               0.2, abs(params1[1]), 1)
+                                                               0, 0, params1[1])
     params2 <- paramsUttWorkers2[workerIndex, (((trialIndex-1)*2+1):((trialIndex-1)*2+2))]
     postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 
-                                                               0.2, abs(params2[1]), abs(params2[2]))
+                                                               abs(params2[1]), 0, params2[2])
   }else if(parOptType==34) {
     params3 <- paramsUttWorkers3[workerIndex, (((trialIndex-1)*2+1):((trialIndex-1)*2+2))]
     postListMat1[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 
-                                                               abs(params3[1]), 0.2, abs(params3[2]))
+                                                               0, abs(params3[1]), params3[2])
     params4 <- paramsUttWorkers4[workerIndex, (((trialIndex-1)*3+1):((trialIndex-1)*3+3))]
     postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 
-                                                           params4[1], params4[2], params4[3])
+                                                           abs(params4[1]), abs(params4[2]), params4[3])
   }
 }
 
@@ -141,9 +140,9 @@ colnames(postListMat2) <- colnames(postListMat2, do.NULL = FALSE, prefix = "MPos
 x3pilotData <- data.frame(x3pilotData, as.data.frame(postListMat2)) 
 
 if(parOptType==12) {
-  write.csv(x3pilotData, "X3_Data/x3pilotDataAugm_CrossVal_SimpleRSA_Opt12_2019_05_17.csv")
+  write.csv(x3pilotData, "X3_Data/x3pDataAugm_SRSAcrossVal_KappaOnly_and_PrefAndKappa.csv")
 }else if(parOptType==34) {
-  write.csv(x3pilotData, "X3_Data/x3pilotDataAugm_CrossVal_SimpleRSA_Opt34_2019_05_17.csv")
+  write.csv(x3pilotData, "X3_Data/x3pDataAugm_SRSAcrossVal_ObedAndKappa_and_PrefObedAndKappa.csv")
 }
 
 

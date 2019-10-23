@@ -116,17 +116,17 @@ for(workerID in c(0:idMax)) {
     paramsUttWorkers[workerIndex,2] <- optRes1$minimum
     paramsUttWorkers[workerIndex,3] <- optRes2$minimum
     ####
-    optRes2n1 <- optim(c(.2, .2), RSAModelUttKLDivParamBD4, method="L-BFGS-B", gr=NULL, dataWorker,
-                       lower = c(0,-10), upper = c(1e+10,10))
-    optRes2n2 <- optim(c(.2, .2), RSAModelUttKLDivParamAD4, method="L-BFGS-B", gr=NULL, dataWorker,
-                       lower = c(0,-10), upper = c(1e+10,10))
-    optRes3 <- optim(c(.2, .2, 1), RSAModelUttKLDivParamABD4, method="L-BFGS-B", gr=NULL, dataWorker,
-                     lower = c(0,0,-10), upper = c(1e+10,1e+10,10))
+#    optRes2n1 <- optim(c(.2, .2), RSAModelUttKLDivParamBD4, method="L-BFGS-B", gr=NULL, dataWorker,
+#                       lower = c(0,-10), upper = c(1e+10,10))
+#    optRes2n2 <- optim(c(.2, .2), RSAModelUttKLDivParamAD4, method="L-BFGS-B", gr=NULL, dataWorker,
+#                       lower = c(0,-10), upper = c(1e+10,10))
+#    optRes3 <- optim(c(.2, .2, 1), RSAModelUttKLDivParamABD4, method="L-BFGS-B", gr=NULL, dataWorker,
+#                     lower = c(0,0,-10), upper = c(1e+10,1e+10,10))
     ## 2 and 3 param RSA model2
     ## max likelihood parameter choice
-    klDivUttWorkers[workerIndex,5] <- optRes2n1$value
-    klDivUttWorkers[workerIndex,6] <- optRes2n2$value
-    klDivUttWorkers[workerIndex,7] <- optRes3$value 
+#    klDivUttWorkers[workerIndex,5] <- optRes2n1$value
+#    klDivUttWorkers[workerIndex,6] <- optRes2n2$value
+#    klDivUttWorkers[workerIndex,7] <- optRes3$value 
     ## max likelihood parameter choice
     paramsUttWorkers[workerIndex,4] <- optRes2n1$par[1]
     paramsUttWorkers[workerIndex,5] <- optRes2n1$par[2]

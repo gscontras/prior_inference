@@ -53,52 +53,52 @@ for(i in c(1:nrow(x3pilotData)) ) {
   }
 }
 
-#pragmaticSpeaker <- function(utterance, obj, preferencesPrior, 
-#                             relevantUtterances, currentObjects, mapUttToObjProbs,
-#                             objectPreferenceSoftPriors, alpha) {
-#bestInfGainUtterance <- function(preferencesPrior, relevantUtterances, currentObjects, 
-#                                 mapUttToObjProbs, objectPreferenceSoftPriors, alpha) {
-
 ## reloading optimization values
-klDivUttWorkers <- as.matrix(read.csv("X3_Data/KLDivUttWorkers_x3_UttChoiceSimpleRSA_2019_06_03.csv"))
-klDivUttWorkers <- klDivUttWorkers[ , 2:ncol(klDivUttWorkers)]
-paramsUttWorkers <- as.matrix(read.csv("X3_Data/KLDivUttParamsWorkers_x3_UttChoiceSimpleRSA_2019_06_03.csv"))
+paramsUttWorkers <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_indOpt_2019_10_11.csv"))
 paramsUttWorkers <- paramsUttWorkers[ , 2:ncol(paramsUttWorkers)]
 
+#####################
+procType <- 4
+#####################
 
 #####################################################################################################
 ##############  TIME To determine and record the actual (optimized) Model Predictions ###############
 #####################################################################################################
-### 
+
 # determining the model predictions after worker-specific model parameter optimization!
-postListMat <- matrix(0,length(x3pilotData$X),9)
-postListMatNotOpt <- matrix(0,length(x3pilotData$X),9)
+postListMat1 <- matrix(0,length(x3pilotData$X),9)
+postListMat2 <- matrix(0,length(x3pilotData$X),9)
 klDivValues <- matrix(NA,length(x3pilotData$X),3)
 workerID <- -1
 for(i in c(1:length(x3pilotData$X))) {
   objectConstellation <- c(obj1OC27[i],obj2OC27[i],obj3OC27[i])
   if(workerID != x3pilotData$workerid[i]) {
     workerID <- x3pilotData$workerid[i]
-    paramsD <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(4:4)]
-    paramsAD <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(7:8)]
+    paramsA <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(2)]
+    paramsB <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(3)]
+    paramsD <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(4)]
     paramsBD <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(5:6)]
-    paramsAB <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(9:10)]
-    paramsABD <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(11:13)]
+    paramsAD <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(7:8)]
+    paramsABD <- paramsUttWorkers[which(paramsUttWorkers[,1]==workerID)[1],c(9:11)]
     # print(params)
   }
   ##
   validUtterances <- determineValidUtterances(objectConstellation)
+
   ## determining the model predictions
-#  postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, 1)
-#  postListMatNotOpt[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, paramsD[1])
-#  postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsAD[1], 0, paramsAD[2])
-#  postListMatNotOpt[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, paramsBD[1], paramsBD[2])
-  postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, abs(paramsAB[1]), abs(paramsAB[2]), 1)
-  postListMatNotOpt[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, abs(paramsABD[1]), abs(paramsABD[2]), abs(paramsABD[3]) )
-  ## KL divergence values.... 
-  klDivValues[i,1] <- KLdivergence(bInfGainUttTurkers[i, validUtterances], rep(1/length(validUtterances), length(validUtterances)))
-  klDivValues[i,2] <- KLdivergence(bInfGainUttTurkers[i, validUtterances], postListMat[i, validUtterances])
-  klDivValues[i,3] <- KLdivergence(bInfGainUttTurkers[i, validUtterances], postListMatNotOpt[i, validUtterances])
+  if(procType == 1) {
+    postListMat1[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, 1)
+    postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, 0)
+  }else if(procType == 2) {
+    postListMat1[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsA[1], 0, 1)
+    postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, paramsB[1], 1)
+  }else if(procType == 3) {
+    postListMat1[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, paramsD[1])
+    postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, paramsBD[1], paramsBD[2])
+  }else if(procType == 4) {
+    postListMat1[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsAD[1], 0, paramsAD[2])
+    postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsABD[1], paramsABD[2], paramsABD[3])
+  }
 }
 
 ###########
@@ -107,25 +107,23 @@ subjectResponses <- round(bInfGainUttTurkers, digits=3)
 colnames(subjectResponses) <- colnames(subjectResponses, do.NULL = FALSE, prefix = "DPost_")
 x3pilotData <- data.frame(x3pilotData, as.data.frame(subjectResponses)) 
 
-postListMat <- round(postListMat, digits=3)
-colnames(postListMat) <- colnames(postListMat, do.NULL = FALSE, prefix = "MPost1_")
-x3pilotData <- data.frame(x3pilotData, as.data.frame(postListMat)) 
+postListMat1 <- round(postListMat1, digits=3)
+colnames(postListMat1) <- colnames(postListMat1, do.NULL = FALSE, prefix = "MPost1_")
+x3pilotData <- data.frame(x3pilotData, as.data.frame(postListMat1)) 
 
-postListMatNotOpt <- round(postListMatNotOpt, digits=3)
-colnames(postListMatNotOpt) <- colnames(postListMatNotOpt, do.NULL = FALSE, prefix = "MPost2_")
-x3pilotData <- data.frame(x3pilotData, as.data.frame(postListMatNotOpt)) 
+postListMat2 <- round(postListMat2, digits=3)
+colnames(postListMat2) <- colnames(postListMat2, do.NULL = FALSE, prefix = "MPost2_")
+x3pilotData <- data.frame(x3pilotData, as.data.frame(postListMat2)) 
 
-klDivValues <- round(klDivValues, digits=3)
-colnames(klDivValues) <- colnames(klDivValues, do.NULL = FALSE, prefix = "KLDiv_")
-x3pilotData <- data.frame(x3pilotData, as.data.frame(klDivValues)) 
-
-#write.csv(x3pilotData, "X3_Data/x3pilotDataAugmV0_fixedAndD_052019.csv")
-#write.csv(x3pilotData, "X3_Data/x3pilotDataAugmV0_ADandBD_052019.csv")
-write.csv(x3pilotData, "X3_Data/x3pilotDataAugmV0_ABandABD_052019.csv")
-#write.csv(x3pilotData, "X3_Data/x3pilotDataAugmV.2_fixedAndD_052019.csv")
-#write.csv(x3pilotData, "X3_Data/x3pilotDataAugmV.2_ADandBD_052019.csv")
-#write.csv(x3pilotData, "X3_Data/x3pilotDataAugmV.2_ABandABD_052019.csv")
-
+if(procType == 1) {
+  write.csv(x3pilotData, "X3_Data/x3pDataAugm_simpleRSAindOpt_fixed001_and_fixed000.csv")
+}else if(procType == 2) {
+  write.csv(x3pilotData, "X3_Data/x3pDataAugm_simpleRSAindOpt_prefOnly_and_obedOnly.csv")
+}else if(procType == 3) {
+  write.csv(x3pilotData, "X3_Data/x3pDataAugm_simpleRSAindOpt_kappaOnly_and_obedAndKappa.csv")
+}else if(procType == 4) {
+  write.csv(x3pilotData, "X3_Data/x3pDataAugm_simpleRSAindOpt_prefAndKappa_and_prefObedAndKappa.csv")
+}
 
 
 
