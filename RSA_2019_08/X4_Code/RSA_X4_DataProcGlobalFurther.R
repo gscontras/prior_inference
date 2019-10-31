@@ -82,9 +82,9 @@ idMax <- max(workerIDs)
 paramsWorkers12 <- as.matrix(read.csv("X4_Data/x4Params_fullRSA_globalOpt_2019_1006.csv"))
 paramsWorkers12 <- paramsWorkers12[,c(2:ncol(paramsWorkers12))]
 
-params1 <- paramsWorkers12[1,2]
+params1 <- paramsWorkers12[1,2] 
 params1notObey.1 <- paramsWorkers12[1,3]
-params12 <- paramsWorkers12[1,4]
+params12 <- paramsWorkers12[1,4] # obedience optimized
 #
 params2obeyFixed <- paramsWorkers12[1,c(8,9)]
 params2alphaFixed <- paramsWorkers12[1,c(10:11)]
@@ -92,7 +92,7 @@ params2alphaFixed <- paramsWorkers12[1,c(10:11)]
 params123 <- paramsWorkers12[1,c(12:14)]
 
 ###################################################################################
-parOptType <-3 ######## number of parameters to be optimized. #####################
+parOptType <- 2 ######## number of parameters to be optimized. #####################
 ###################################################################################
 
 ### 
@@ -114,12 +114,12 @@ for(i in c(1:length(x4pilotData$X))) {
 
   if(parOptType == 1) {
     postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
-                                                        abs(params1[1]), 0.1, 1)
+                                                        abs(params1[1]), 0, 1)
     postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
                                                         abs(params1notObey.1[1]), .1, 1)
   }else if(parOptType == 2) {
     postListMat1Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
-                                                        abs(params12[1]), 0.1, 1)
+                                                        0, abs(params12[1]), 1) 
     postListMat2Opt[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice,
                                                         abs(params2alphaFixed[1]), abs(params2alphaFixed[2]), 1)
   }else if(parOptType == 3) {
@@ -148,7 +148,10 @@ x4pilotData <- data.frame(x4pilotData, consCodeAndPosteriorsNO)
 
 x4pilotData$CCode <- uniqueCCode
 
-write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAglobalOpt_Opt1_and__Opt1obed.1.csv")
-write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAglobalOpt_Opt2_and__Opt12.csv")
-write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAglobalOpt_Opt13_and__Opt123.csv")
-
+if(parOptType == 1) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAglobalOpt_Opt1_and__Opt1obed.1.csv")
+}else if(parOptType == 2) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAglobalOpt_Opt2_and__Opt12.csv")
+}else if(parOptType == 3) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_RSAglobalOpt_Opt13_and__Opt123.csv")
+}

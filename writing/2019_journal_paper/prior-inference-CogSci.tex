@@ -59,7 +59,7 @@ It is not surprising in light of the cases mentioned above (and other more frequ
 If we look back at the study of ambiguity, we notice that the strategy of ambiguity avoidance is much older than the pronouncements of modern linguists. 
 Greek and Latin rhetoricians believed that a skillfully written text allows for a perfectly accurate and lossless transmission of meaning to the listener or reader \cite{ossarichardson2019}; such a text avoids ambiguities.
 
-Still, despite the teachings of classical philologists, authors continued to  create ambiguous texts and readers were faced with the challenge of interpreting them. The Bible is one of the most significant of such texts. In the sixteenth century, the Catholic church responded to the Reformation by proposing that the Bible can contain multiple meanings---\citeA{ossarichardson2019} equates these meanings with multiple paths that lead readers to God. In a sense, this proposal contained one of the first acknowledgments of the virtue of ambiguity, though with a  special caveat---only God could introduce ambiguity, humans should not. The search for efficient transmission of meaning that lasted over millenia rested on an important assumption: we communicate to transfer knowledge to our conversation partner. However, information-seeking might be not the only communicative task we engage in \cite{markova1995preface}, and following instructions is not the only one, and probably not even the most common type of communicative acts \cite{foppa1995mutual} \gcs{not sure what is meant by this last bit}. 
+Still, despite the teachings of classical philologists, authors continued to  create ambiguous texts and readers were faced with the challenge of interpreting them. The Bible is one of the most significant of such texts. In the sixteenth century, the Catholic church responded to the Reformation by proposing that the Bible can contain multiple meanings---\citeA{ossarichardson2019} equates these meanings with multiple paths that lead readers to God. In a sense, this proposal contained one of the first acknowledgments of the virtue of ambiguity, though with a  special caveat---only God could introduce ambiguity, humans should not. The search for efficient transmission of meaning that lasted over millenia rested on an important assumption: we communicate to transfer knowledge to our conversation partner. However, information-seeking might be not the only communicative task we engage in \cite{markova1995preface}, and following instructions--a task commonly used to evaluate the efficiency of communication--is not the only one, and probably not even the most common type of communicative acts \cite{foppa1995mutual} \gcs{not sure what is meant by this last bit}. 
 
 More recent research has begun to take notice of the efficiency ambiguity affords to us: by relying on context to fill in missing information, we can reuse lightweight bits of language rather than fully specifying the intended message \cite{levinson2000,piantadosietal2012,wasow2015}. 
 Viewed in this way, ambiguity serves as a feature---not a bug---of an efficient communication system.
@@ -112,7 +112,7 @@ $$P_{L_{1}}(s|u) \propto P_{S_{1}}(u|s) \cdot P(s).$$
 
 \citeA{frankgoodman2012} tested the predictions of their model against behavioral data from reference games as in Figure \ref{FG-ref-game}. To model production behavior (i.e., which utterance should be chosen to communicate a given object) the authors generate predictions from $S_1$. To model interpretation behavior (i.e., which object the speaker is trying to communicate on the basis of their utterance) the authors generate predictions from $L_1$. Finding extremely high correlations between model predictions and behavioral data in both cases, \citeauthor{frankgoodman2012} have strong support for their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015}, for a fuller exploration of the modeling choices).
 
-Our model builds on the vanilla version of RSA above by allowing for uncertainty around the listener's state prior, $P(s)$. We have in mind a scenario where a listener might have a preference for a certain object feature (e.g., blue things, squares, circles, etc.), and these preference will influence their object choice. With this in mind, the speaker produces an utterance $u$, observes the listener's referent choice $s$, and, on the basis of that choice, infers the preferences $f$ the listener might have had when making the choice.
+Our model builds on the vanilla version of RSA above by allowing for uncertainty around the listener's state prior, $P(s)$. In that sense, the model belongs to the family of models known as uncertain RSA \cite{goodmanfrank2016}. We have in mind a scenario where a listener might have a preference for a certain object feature (e.g., blue things, squares, circles, etc.), and these preference will influence their object choice. With this in mind, the speaker produces an utterance $u$, observes the listener's referent choice $s$, and, on the basis of that choice, infers the preferences $f$ the listener might have had when making the choice.
 We use the same $L_0$ and $S_1$ from the vanilla model. However, we now parameterize $L_1$'s state prior so that it operates with respect to a given feature preference $P(s|f)$:
 $$P_{L_{1}}(s|u,f) \propto P_{S_{1}}(u|s) \cdot P(s|f).$$
 We then model a pragmatic speaker $S_2$ who updates beliefs about $L_1$'s preferences, $P(f)$. To do so, $S_2$ produces $u$, then observes $L_1$'s choice of $s$, and finally reasons about the likely feature preference $f$ that $L_1$ used to make that choice:
@@ -145,6 +145,8 @@ We presented participants with a series of reference game scenarios modeled afte
 
 We followed \citeA{frankgoodman2012} in our stimuli creation. Objects were allowed to vary along three dimensions: color (blue, red, green), shape (cloud, circle, or square), and pattern (solid, striped, polka-dotted). The speaker's utterance was chosen at random from the properties of the three objects present, and the listener's choice was chosen at random from the subset of the three objects that possesed the uttered feature. By varying the object properties, the targeted object, and the utterance, we generated a total of 2400 scenes. Speaker and listener names were chosen randomly in each trial. Participants saw the speaker's utterance in bold (e.g., ``green'' in Figure \ref{exp1-trial}) and the listener's choice appeared with a dotted orange outline (e.g., the leftmost object in Figure \ref{exp1-trial}). Based on the observed choice, participants were instructed to adjust a series of six sliders to indicate how likely it is that the listener had a preference for a given feature. The sliders specified the six feature values of the two feature dimensions that were not mentioned in the speaker's utterance (e.g., pattern and shape in Figure \ref{exp1-trial}). Participants completed a series of $15$ trials. Objects and utterances were chosen as detailed above, with the constraint that 10 trials were potentially informative with respect to listener preferences and 5 trials were uninformative with respect to listener preferences (e.g., observing that the listener chose one of three identical objects). 
 
+% Change this trial to trial that we showed on Cogsci poster, it goes together with the barplot below
+
 \begin{figure*}[ht!]
 	\centering
 	\includegraphics[width=4.5in]{images/exp1-trial.eps}
@@ -153,29 +155,43 @@ We followed \citeA{frankgoodman2012} in our stimuli creation. Objects were allow
 
 \subsection{Results}
 
-\begin{figure}[ht]
+\begin{figure}[ht!]
 	\centering
-	\includegraphics[width=3in]{images/X4-scatter-CogSci.eps}
-	\caption{Average human data from Experiment 1 plotted against the predictions of the $\gamma$-optimized RSA model; $r^{2}=0.96$, 95\% CI [0.94, 0.97].}\label{exp1-results}
+	\includegraphics[width=3.5in]{images/X4-example-simple-model-CogSci.png}
+	\caption{Model predictions and human data for one of the classes of stimuli \emph{Experiment 1: Inferring preferences}.}\label{slider-barplot-4}
 \end{figure}
 
-\subsubsection{Parameter-free models}
+\subsubsection{Models with global optimization}
+
+To compare RSA model predictions to the human data, we identified all distinguishable cases in the light of the ambiguity of the chosen utterance and the possible object choices, essentially binning the data of all stimuli for which the extended RSA model yields equal preference-estimate posteriors; there were $48$ scene types in our stimuli.
+%We binned those scene types 
+For all scene types, the actual feature values and objects in a scene were reordered according to the specific preference inference involved. 
+Thus, after reordering, the results of the individual slider values for individual scenes in each scene type could be averaged for both the participant data and the model predictions. We will look at the model performance for one of the types of stimuli.
+
+
 
 % I used the code length(levels(as.factor(uniqueCCode))) to calculate the number of conditions
 
 %Since not all of the stimuli allowed for inference of preferences in the same way, we introduced a new categorization of stimuli. Our base model would then predict the same preferences for the same category of stimuli. The categorization takes into account the distribution of features, the chosen object and which feature was uttered. Each category consists of 3 tuples of 2 digits. Each tuple refers to one feature, where the first tuple always refers to the uttered feature. The first digit in each tuple would then denote how many objects share the value of the picked object for the corresponding feature. In figure \ref{FG-ref-game}, if the utterance was blue and the blue square was picked, the first tuple would reference color and its first digit would be a "2". Note that this does not determine which other object shares the feature value, i.e. "blue". To compensate, the second digit of the tuple denotes which other object shares this value. This depends on the order of the objects---we stipulated that the picked object would be the first. The further order would be determined by which other object shares this specific value, i.e. the "blue circle" in figure \ref{FG-ref-game} would be the first of the "other objects" and the "green square" the second. The picked object is at position zero in this sense. Thus the first tuple for figure \ref{FG-ref-game} would be (2,1). For the other tuples, the first digits would be "2" for shape and "3" for texture. To streamline the category code we stipulated that we would order the features in descending order of their first digit, so that we would have texture's "3" next in figure \ref{FG-ref-game}. If a tuple starts with "3" or "1", the second digit would simply denote whether the other objects have different values for that feature or the same. Thus we would have (3,2) for texture, with the second digit signaling that the non-picked objects share their texture. The tuple for shape would finally be (2,2), because the value "square" is shared with the second other object (see above). Thus for figure \ref{FG-ref-game} we would end up with [(2,1),(3,2),(2,2)].
 
-We first present the non-parametrized versions of the model. We hypothesized that participants may either go through all the layers of pragmatic reasoning, and additionally calculate the prefrences that lead to particular object choice. The last layer of this model $S_2$  returns a posterior distribution over inferred feature preferences $f$ after observing a listener selecting an object in response to an utterance. 
+We first present the globally-optimized versions of the model (Figure \ref{simple-full}). We hypothesized that participants may either go through all the layers of pragmatic reasoning, and additionally calculate the prefrences that lead to particular object choice. The last layer of this model $S_2$  returns a posterior distribution over inferred feature preferences $f$ after observing a listener selecting an object in response to an utterance. 
 
 In a simpler model, the object choice is driven only by a $L_0$ semantics enhanced with priors over feature preferences. Upon hearing an utterance \textit{blue} a participants assigns equal probabilities to all blue objects in a scene, and the actual choice of object signals a preference of other feature values that object has. For example, picking a blue circle rather than a blue square is driven by a prefrence for circles.
 
-Both, the simple and the full models provide a good fit to the data (simple model: $p$, $r^2$; full model: $p$, $r^2$) suggesting that participants are indeed able to infer the feature preferences that lead to a choice of an object. We can also see that the simple model fits the data just as well as the full more complex model.
+Both, the simple and the full models provide a good fit to the data (simple model: $p < 0.001$, $r^2 = 0.86$; full model: $p < 0.001$, $r^2 = 0.86$) suggesting that participants are indeed able to infer the feature preferences that lead to a choice of an object. We can also see that the simple model fits the data just as well as the full more complex model.
 
-* insert Figure comparing simple and full RSA non-parametrized models for exp 3 here *
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=2in]{images/m13.pdf}
+	\includegraphics[width=2in]{images/m23.pdf}
+	\caption{Average human data from Experiment 1 plotted against the predictions of the $\beta$-optimized RSA model; both models $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full}
+\end{figure}
 
-\subsubsection{Fitted models}
+\subsubsection{Individually-fitted models}
 
-Model fits improves even more if we fit two parameters on individual level, i.e. calculating a parameter estimate for each participant.
+Model fits improves even more if we fit two parameters on individual level, i.e. calculating a parameter estimate for each participant. Individual-level modeling allows to explore potential differences between participants, and more importantly, to evaluate whether the Gricean reasoning strategies apply at the level of individual speakers or only population as a whole \cite{franke2016reasoning}. 
+
+We fit a number of parameters at the individual level to assess reasoning strategies individual speakers employ.
 For the full RSA model, the first is the soft-max scaling parameter $\alpha$ in the $S_1$ layer of the model, where the default value is typically set to $\alpha=1$. 
 This parameter controls how likely $S_1$ is to maximize utility when choosing utterances. The second parameter scales the strength of individual feature preferences $f_i$. 
 The softness parameter $\gamma$ determines how strong a preference is if a certain feature value is indeed preferred.
@@ -197,28 +213,41 @@ $$\textrm{KL} = \sum_{i=1}^{n} P(f'_i|u,s) (\textrm {log} (P(f'_i|u,s) - \textrm
 where $P(f'_i|u,s)$ specifies a participant's normalized slider value settings, that is, empirical estimates of the feature preference posterior given an object scene and a particular utterance $u$ and object choice $s$; $P(f_i|u,s)$ specifies the respective model prediction value.
 Since no conclusions can be drawn concerning feature values that are not present in the scene, we ignored the respective feature preference estimates. 
 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=2in]{images/m3.pdf}
+	\includegraphics[width=2in]{images/m16.pdf}
+	\caption{Average human data from Experiment 1 plotted against the predictions of the individually $\beta$-optimized simpe RSA model $r^{2}=0.86$, 95\% CI [0.81 0.90] and $\beta$ and $\alpha$ optimized full RSA model; $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full-individual}
+\end{figure}
+
+Figure \ref{simple-full-individual} demonstrates that the full model optimized at the individual level for an additional parameter $\alpha$ does not improve the fit compared to the simple model. We will therefore now proceed with the simple model evaluation.
 
 By minimizing KL divergence between the empirical and model-predicted preferences for each participant, we maximize the model fit to the individual participants' data.
 When compared to the uniform-distribution base model, optimizing $\gamma$ alone yielded a much lower KL divergence value: while the uniform base model yields an average KL divergence of $9.848$ (median=$7.028$), our extended RSA model with individually-optimized $\gamma$ parameters yielded an average KL divergence of $2.058$ (median=$1.524$). 
 When optimizing $\alpha$ and $\gamma$ together, a yet smaller average KL divergence of $1.451$ (median=$0.952$) is reached.
 In the light of the $G^2$ statistics and under the assumption that we calculated $2$ KL divergences in all $15$ trials per participant, the KL values should be multiplied by $2*15*2=60$ to yield a $G^2$ estimate, although one may want to consider the two KL divergences in each trial as closely related, such that $2*15=30$ may be considered as a more passive multiplier.
-With this factor, we get a difference of $233.7$ between the uniform base model and the one-parameter extended RSA model, while the additional optimization of $\alpha$ improves $G^2$ further by a value of $18.21$. Both of these results are far above the cutoff value of $6.63$ for $p=.01$, assuming a Chi-square distribution \cite{Lewandowsky:2011}. 
-Thus, the extended model exceeds the uniform base model with very high likelihood. 
-However, considering the much smaller improvement due to the additional optimization of $\alpha$, we analyze correlations with respect to the one-parameter (i.e., $\gamma$-optimized) model in what follows. 
 
-When considering the distribution of optimized parameters, we can identify three participants who cause the optimization process to yield $\gamma$ values above $100$, indicating lazy participants who simply leave the slider values unadjusted. 
-Another 15 participants yielded a $\gamma$ value above $1$, which indicates that they are considering preferences only to a small extent. The rest (i.e., 64 participants) yielded values below $1$, indicating a strong consideration of preference inferences in line with the model. 
+%asya Since there is no alpha in the simple model we have to adjust the next paragraphs
+
+%With this factor, we get a difference of $233.7$ between the uniform base model and the one-parameter extended RSA model, while the additional optimization of $\alpha$ improves $G^2$ further by a value of $18.21$. Both of these results are far above the cutoff value of $6.63$ for $p=.01$, assuming a Chi-square distribution \cite{Lewandowsky:2011}. 
+%Thus, the extended model exceeds the uniform base model with very high likelihood. 
+%However, considering the much smaller improvement due to the additional optimization of $\alpha$, we analyze correlations with respect to the one-parameter (i.e., $\gamma$-optimized) model in what follows. 
+
+%When considering the distribution of optimized parameters, we can identify three participants who cause the optimization process to yield $\gamma$ values above $100$, indicating lazy participants who simply leave the slider values unadjusted. 
+%Another 15 participants yielded a $\gamma$ value above $1$, which indicates that they are considering preferences only to a small extent. The rest (i.e., 64 participants) yielded values below $1$, indicating a strong consideration of preference inferences in line with the model. 
  
 %We compared  in the light of the distinguishable interpretation cases. 
-To compare RSA model predictions to the human data, we identified all distinguishable cases in the light of the ambiguity of the chosen utterance and the possible object choices, essentially binning the data of all stimuli for which the extended RSA model yields equal preference-estimate posteriors; there were $48$ scene types in our stimuli.
-%We binned those scene types 
-For all scene types, the actual feature values and objects in a scene were reordered according to the specific preference inference involved. 
-Thus, after reordering, the results of the individual slider values for individual scenes in each scene type could be averaged for both the participant data and the model predictions. 
 
+We plot predictions from the $\beta$ and $\gamma$-optimized model in Figure \ref{cross-validation}, where a strong positive correlation between the human judgments and model predictions ($r^2 = 0.99, p < 0.001$) can be observed. We additionally check the generalizability of the model by performing cross-validation. We show in Figure \ref{cross-validation} that the cross-validated model retains its fit.
 
-We plot predictions from the $\gamma$-optimized model in Figure \ref{exp1-results}, where a strong positive correlation between the human judgments and model predictions ($r^2 = 0.96, p < 0.001$) can be observed. Thus, we find strong empirical support for our extended RSA model of preference inference: speakers are indeed able to use listener behavior to arrive at information about their preferences. The question now turns to whether speakers are aware of the relative utility of different utterances when it comes to this reasoning. In other words, are speakers aware that ambiguous language is potentially more informative?
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=2in]{images/m5.pdf}
+	\includegraphics[width=2in]{images/m8.pdf}
+	\caption{Average human data from Experiment 1 plotted against the predictions of the individually $\beta$ and $\gamma$-optimized simpe RSA model, non-cross-validated (left panel) $r^{2}=0.99$, 95\% CI [0.98 1.00] and cross-validated (right panel) $r^{2}=0.99$, 95\% CI [0.98 1.01] .}\label{cross-validation}
+\end{figure}
 
-
+Thus, we find strong empirical support for our extended RSA model of preference inference: speakers are indeed able to use listener behavior to arrive at information about their preferences. The question now turns to whether speakers are aware of the relative utility of different utterances when it comes to this reasoning. In other words, are speakers aware that ambiguous language is potentially more informative?
 
 %\FloatBarrier 
 % tried to keep figures in relevant sections but it doesn't look too good yet. Maybe when we have final text it will work out
@@ -252,8 +281,6 @@ We used the same sets of objects from Experiment 1, which could vary along three
 	\caption{Experiment 2 results; $r^{2}=0.91$, 95\% CI [0.84, 0.95].}\label{exp2-results}
 \end{figure}
 
-
-
 % I recorded the same number of conditions as in Experiment 1. I think Experiment 2 used the same ambiguity code.
 
 By reasoning the about predictions of $S_2$, we are able to use our extended RSA model to compute the expected most informative utterance with respect to inferring preferences. In other words, $P_b(u)$ calculates the probability that a speaker would choose $u$ for the purpose of inferring preferences in our reference game scenario.
@@ -283,7 +310,6 @@ After matching the respective actual feature values with the utterance choice re
 
 
 Figure \ref{exp2-results} plots predictions from the $\lambda$-optimized model, together with the human data. Again, we observe a strong positive correlation between the human judgments and model predictions ($r^2 = 0.91, p < 0.001$). In other words, we find evidence in support of the idea that speakers reason pragmatically about the relative informativity of ambiguous language.
-
 
 
 \section{Discussion}

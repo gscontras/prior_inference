@@ -209,6 +209,33 @@ Frank, M\BPBI C.%
 
 \bibitem [\protect \citeauthoryear {%
 Franke%
+\ \BBA {} Degen%
+}{%
+Franke%
+\ \BBA {} Degen%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+franke2016reasoning}
+\APACinsertmetastar {%
+franke2016reasoning}%
+\begin{APACrefauthors}%
+Franke, M.%
+\BCBT {}\ \BBA {} Degen, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reasoning in reference games: Individual-vs.
+  population-level probabilistic modeling} {Reasoning in reference games:
+  Individual-vs. population-level probabilistic modeling}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{PloS one}{11}{5}{e0154854}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Franke%
 \ \BBA {} J{\"{a}}ger%
 }{%
 Franke%
@@ -309,32 +336,6 @@ Levinson, S\BPBI C.%
   implicature}.
 \newblock
 \APACaddressPublisher{Cambridge, MA}{{MIT} Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Lewandowsky%
-\ \BBA {} Farrell%
-}{%
-Lewandowsky%
-\ \BBA {} Farrell%
-}{%
-{\protect \APACyear {2011}}%
-}]{%
-Lewandowsky:2011}
-\APACinsertmetastar {%
-Lewandowsky:2011}%
-\begin{APACrefauthors}%
-Lewandowsky, S.%
-\BCBT {}\ \BBA {} Farrell, S.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2011}.
-\newblock
-\APACrefbtitle {Computational modeling in cognition: {P}rinciples and practice}
-  {Computational modeling in cognition: {P}rinciples and practice}.
-\newblock
-\APACaddressPublisher{Thousand Oaks}{Sage Publications}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
