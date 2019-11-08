@@ -157,8 +157,8 @@ We followed \citeA{frankgoodman2012} in our stimuli creation. Objects were allow
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=3.5in]{images/X4-example-simple-model-CogSci.png}
-	\caption{Model predictions and human data for one of the classes of stimuli \emph{Experiment 1: Inferring preferences}.}\label{slider-barplot-4}
+	\includegraphics[width=2.5in]{images/barplot_x4.pdf}
+	\caption{Model predictions and human data for one of the classes of stimuli \emph{Experiment 1: Inferring preferences}.}\label{barplot_x4}
 \end{figure}
 
 \subsubsection{Models with global optimization}
@@ -275,14 +275,6 @@ We used the same sets of objects from Experiment 1, which could vary along three
 
 \subsection{Results}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=3in]{images/X3-scatter-CogSci.eps}
-	\caption{Experiment 2 results; $r^{2}=0.91$, 95\% CI [0.84, 0.95].}\label{exp2-results}
-\end{figure}
-
-% I recorded the same number of conditions as in Experiment 1. I think Experiment 2 used the same ambiguity code.
-
 By reasoning the about predictions of $S_2$, we are able to use our extended RSA model to compute the expected most informative utterance with respect to inferring preferences. In other words, $P_b(u)$ calculates the probability that a speaker would choose $u$ for the purpose of inferring preferences in our reference game scenario.
 To generate predictions from $P_b(u)$, a total of three free parameters can be identified. 
 As with the analysis for Experiment 1, we consider different values for $\alpha$ (i.e., speaker's soft-max factor) and $\gamma$ (i.e., preference softness). 
@@ -291,25 +283,52 @@ Note that when allowing negative values for $\lambda$, negated information gain 
 Thus, in this case the model would favor unambiguous utterances. 
 Moreover, when $\lambda=0$, the model collapses to a uniform distribution of utterance choices, thus yielding a nested model to a uniform base model. 
 
-We again optimized model values with respect to KL divergence estimates between the participant data and the model predictions---in this case for utterance preference distributions. 
-The results for the base model yielded an average KL divergence value of $5.415$ (median=$3.997$), while the $\lambda$-optimized model yielded a mean KL divergence of $3.774$ (median=$2.108$).
-Again determining $G^2$ to enable a Chi-square test for significant model differences in fitting the data, the difference between the base model and one-parameter model (factored by $2*15=30$) of $49.23$ (median difference of $56.67$) is highly significant, indicating that the one-parameter model fits the data much better than a uniform base model. 
-% Note: these interesting observations may not be mentioned _ I leave them in for now because the discussion can relate to them 
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=2.5in]{images/barplot_x3.pdf}
+	\caption{Model predictions and human data for one of the classes of stimuli \emph{Experiment 2: Picking utterances}.}\label{barplot_x3}
+\end{figure}
 
-As with the results of the previous experiment, we were able to distinguish three groups of participants on the basis of the fitted parameter values of $\lambda$. 
-The first was a ``lazy worker'' group of $18$ participants whose fitted $\lambda$ values were close to zero (i.e.,  $-.02 < \lambda<.02$).
-The second group of $32$ participants yielded more negative values (i.e., $-8.20<\lambda<-.02$), indicating that a significant number of participants preferred to systematically choose non-ambiguous utterances. 
-The third group of again $32$ participants yielded more positive values (i.e., $.02<\lambda<.47$), indicating that these participants indeed chose the most ambiguous utterance in a rather strategic manner. 
-
-
-The proper model fit is confirmed when considering the correlation between the participants' data and the model predictions. 
+%The proper model fit is confirmed when considering the correlation between the participants' data and the model predictions. 
 As with Experiment 1, we averaged the data and the respective model predictions across specific case bins, which include all scenes that yield identical utterance choice options. 
 In this case, $14$ distinct conditions can be identified, with a total of $84$ slider values to set. 
 % Note: I did check it - there are indeed 14. 5+5+6+7+6+6+7+3+4+5+6+7+8+9
 After matching the respective actual feature values with the utterance choice relevant within the respectively-binned conditions, we again computed averages over utterance preference values for the respectively-binned trials across participants and across respective model predictions. 
 
+Figure \ref{simple-full-x3} shows the model fits of non-parametrized full and simple RSA models, with both models failing to predict the human data. Therefore, we proceed with optimizing free parameters of the model.
 
-Figure \ref{exp2-results} plots predictions from the $\lambda$-optimized model, together with the human data. Again, we observe a strong positive correlation between the human judgments and model predictions ($r^2 = 0.91, p < 0.001$). In other words, we find evidence in support of the idea that speakers reason pragmatically about the relative informativity of ambiguous language.
+
+%Figure \ref{exp2-results} plots predictions from the $\lambda$-optimized model, together with the human data. Again, we observe a strong positive correlation between the human judgments and model predictions ($r^2 = 0.91, p < 0.001$). In other words, we find evidence in support of the idea that speakers reason pragmatically about the relative informativity of ambiguous language.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=2in]{images/x3_m1.pdf}
+	\includegraphics[width=2in]{images/x3_m7.pdf}
+	\caption{Average human data from Experiment 2 plotted against the predictions of the parameter-free RSA model; both models $r^{2}=0.07$, 95\% CI [0.01.23].}\label{simple-full-x3}
+\end{figure}
+
+% I recorded the same number of conditions as in Experiment 1. I think Experiment 2 used the same ambiguity code.
+We again optimized model values with respect to KL divergence estimates between the participant data and the model predictions---in this case for utterance preference distributions. 
+The results for the base model yielded an average KL divergence value of $5.415$ (median=$3.997$), while the $\lambda$-optimized model yielded a mean KL divergence of $3.774$ (median=$2.108$).
+Again determining $G^2$ to enable a Chi-square test for significant model differences in fitting the data, the difference between the base model and one-parameter model (factored by $2*15=30$) of $49.23$ (median difference of $56.67$) is highly significant, indicating that the one-parameter model fits the data much better than a uniform base model. 
+% Note: these interesting observations may not be mentioned _ I leave them in for now because the discussion can relate to them 
+
+We compared three individually-optimized models to determine which model provides the best fit to the data. All the models have similar levels of complexity with only one free parameter being optimized. The results indicate that we get the best fit by optimizing the KL-factor ($r^{2}=0.91$; cross-validated optimization $r^{2}=0.89$), with other models showing smaller improvement: obedience ($r^{2}=0.80$), softness of preferences ($r^{2}=0.81$). Optimizing for two parameters (KL-factor and softness) does not further improve the fit  ($r^{2}=0.88$), neither does optimizing for three parameters ($r^{2}=0.81$).
+
+In Figure \ref{kl-factor} we compare a KL-factor optimized model (right panel) to a uniform base model (left panel) that assigns equal probability to each utterance available for a particular context.
+ 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=2in]{images/x3_m20.pdf}
+	\includegraphics[width=2in]{images/x3_m11.pdf}
+	\caption{Average human data from Experiment 2 plotted against the predictions of the uniform and simple RSA models; uniform model  $r^{2}=0.75$, 95\% CI [0.65 0.84], KL-factor optimized  $r^{2}=0.91$, 95\% CI [0.92 1.06]]. }\label{kl-factor}
+\end{figure}
+
+
+As with the results of the previous experiment, we were able to distinguish three groups of participants on the basis of the fitted parameter values of $\lambda$. 
+The first was a ``lazy worker'' group of $18$ participants whose fitted $\lambda$ values were close to zero (i.e.,  $-.02 < \lambda<.02$).
+The second group of $32$ participants yielded more negative values (i.e., $-8.20<\lambda<-.02$), indicating that a significant number of participants preferred to systematically choose non-ambiguous utterances. 
+The third group of again $32$ participants yielded more positive values (i.e., $.02<\lambda<.47$), indicating that these participants indeed chose the most ambiguous utterance in a rather strategic manner. 
 
 
 \section{Discussion}

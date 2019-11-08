@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 OCT 2019 09:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 NOV 2019 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -753,37 +753,34 @@ Package pdftex.def Info: images/exp1-trial-eps-converted-to.pdf used on input l
 ine 152.
 (pdftex.def)             Requested size: 325.215pt x 197.06361pt.
 
-<images/X4-example-simple-model-CogSci.png, id=35, 1294.8375pt x 602.25pt>
-File: images/X4-example-simple-model-CogSci.png Graphic file (type png)
+<images/barplot_x4.pdf, id=35, 505.89pt x 505.89pt>
+File: images/barplot_x4.pdf Graphic file (type pdf)
 
-<use images/X4-example-simple-model-CogSci.png>
-Package pdftex.def Info: images/X4-example-simple-model-CogSci.png used on inpu
-t line 160.
-(pdftex.def)             Requested size: 252.94499pt x 117.64503pt.
- [7 <./images/exp1-trial-eps-converted-to.pdf> <./images/X4-example-simple-mode
-l-CogSci.png>]
-<images/m13.pdf, id=45, 441.65pt x 441.65pt>
+<use images/barplot_x4.pdf>
+Package pdftex.def Info: images/barplot_x4.pdf used on input line 160.
+(pdftex.def)             Requested size: 180.67499pt x 180.67676pt.
+ [7 <./images/exp1-trial-eps-converted-to.pdf>]
+<images/m13.pdf, id=43, 441.65pt x 441.65pt>
 File: images/m13.pdf Graphic file (type pdf)
  <use images/m13.pdf>
 Package pdftex.def Info: images/m13.pdf used on input line 185.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
 
-<images/m23.pdf, id=46, 549.05125pt x 538.01pt>
+<images/m23.pdf, id=44, 549.05125pt x 538.01pt>
 File: images/m23.pdf Graphic file (type pdf)
  <use images/m23.pdf>
 Package pdftex.def Info: images/m23.pdf used on input line 186.
 (pdftex.def)             Requested size: 144.54pt x 141.62788pt.
- [8 <./images/m13.pdf> <./images/m23.pdf>] <images/m3.pdf, id=64, 441.65pt x 44
-1.65pt>
+ [8 <./images/barplot_x4.pdf> <./images/m13.pdf> <./images/m23.pdf>]
+<images/m3.pdf, id=67, 441.65pt x 441.65pt>
 File: images/m3.pdf Graphic file (type pdf)
-
-<use images/m3.pdf>
+ <use images/m3.pdf>
 Package pdftex.def Info: images/m3.pdf used on input line 218.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
- <images/m16.pdf, id=65, 441.65pt x 441.65pt>
-File: images/m16.pdf Graphic file (type pdf)
 
-<use images/m16.pdf>
+<images/m16.pdf, id=68, 441.65pt x 441.65pt>
+File: images/m16.pdf Graphic file (type pdf)
+ <use images/m16.pdf>
 Package pdftex.def Info: images/m16.pdf used on input line 219.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
 
@@ -801,13 +798,13 @@ del pre-dic-tions ($\OML/ptmcm/m/it/10 r[] \OT1/ptmcm/m/n/10 = 0\OML/ptmcm/m/it
 /10 :\OT1/ptmcm/m/n/10 99\OML/ptmcm/m/it/10 ; p <
  []
 
-<images/m5.pdf, id=83, 441.65pt x 530.98375pt>
+<images/m5.pdf, id=86, 441.65pt x 530.98375pt>
 File: images/m5.pdf Graphic file (type pdf)
  <use images/m5.pdf>
 Package pdftex.def Info: images/m5.pdf used on input line 245.
 (pdftex.def)             Requested size: 144.54pt x 173.77489pt.
 
-<images/m8.pdf, id=84, 441.65pt x 530.98375pt>
+<images/m8.pdf, id=87, 441.65pt x 530.98375pt>
 File: images/m8.pdf Graphic file (type pdf)
  <use images/m8.pdf>
 Package pdftex.def Info: images/m8.pdf used on input line 246.
@@ -824,59 +821,69 @@ Package epstopdf Info: Source file: <images/exp2-trial.eps>
 erted-to.pdf images/exp2-trial.eps>
 (epstopdf)             \includegraphics on input line 265.
 Package epstopdf Info: Output file is already uptodate.
-<images/exp2-trial-eps-converted-to.pdf, id=102, 743.77875pt x 547.04375pt>
+<images/exp2-trial-eps-converted-to.pdf, id=105, 743.77875pt x 547.04375pt>
 File: images/exp2-trial-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/exp2-trial-eps-converted-to.pdf>
 Package pdftex.def Info: images/exp2-trial-eps-converted-to.pdf used on input l
 ine 265.
 (pdftex.def)             Requested size: 325.215pt x 239.1975pt.
+ [11 <./images/exp2-trial-eps-converted-to.pdf>] <images/barplot_x3.pdf, id=112
+, 505.89pt x 505.89pt>
+File: images/barplot_x3.pdf Graphic file (type pdf)
 
+<use images/barplot_x3.pdf>
+Package pdftex.def Info: images/barplot_x3.pdf used on input line 288.
+(pdftex.def)             Requested size: 180.67499pt x 180.67676pt.
+ <images/x3_m1.pdf, id=113, 505.89pt x 505.89pt>
+File: images/x3_m1.pdf Graphic file (type pdf)
 
-LaTeX Warning: File `images/X3-scatter-CogSci.eps' not found on input line 280.
+<use images/x3_m1.pdf>
+Package pdftex.def Info: images/x3_m1.pdf used on input line 305.
+(pdftex.def)             Requested size: 144.54pt x 144.54294pt.
+ <images/x3_m7.pdf, id=114, 505.89pt x 505.89pt>
+File: images/x3_m7.pdf Graphic file (type pdf)
 
+<use images/x3_m7.pdf>
+Package pdftex.def Info: images/x3_m7.pdf used on input line 306.
+(pdftex.def)             Requested size: 144.54pt x 144.54294pt.
+ [12 <./images/barplot_x3.pdf>]
+<images/x3_m20.pdf, id=123, 505.89pt x 505.89pt>
+File: images/x3_m20.pdf Graphic file (type pdf)
+ <use images/x3_m20.pdf>
+Package pdftex.def Info: images/x3_m20.pdf used on input line 322.
+(pdftex.def)             Requested size: 144.54pt x 144.54294pt.
 
-Package epstopdf Info: Source file: <images/X3-scatter-CogSci.eps>
-(epstopdf)             Output file: <images/X3-scatter-CogSci-eps-converted-to.
-pdf>
-(epstopdf)                    date: 2019-09-10 14:41:07
-(epstopdf)                    size: 37465 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/X3-scatter-CogSci-e
-ps-converted-to.pdf images/X3-scatter-CogSci.eps>
-(epstopdf)             \includegraphics on input line 280.
-Package epstopdf Info: Output file is already uptodate.
+<images/x3_m11.pdf, id=124, 505.89pt x 505.89pt>
+File: images/x3_m11.pdf Graphic file (type pdf)
+ <use images/x3_m11.pdf>
+Package pdftex.def Info: images/x3_m11.pdf used on input line 323.
+(pdftex.def)             Requested size: 144.54pt x 144.54294pt.
 
-<images/X3-scatter-CogSci-eps-converted-to.pdf, id=103, 903.375pt x 752.8125pt>
-File: images/X3-scatter-CogSci-eps-converted-to.pdf Graphic file (type pdf)
-<use images/X3-scatter-CogSci-eps-converted-to.pdf>
-Package pdftex.def Info: images/X3-scatter-CogSci-eps-converted-to.pdf used on 
-input line 280.
-(pdftex.def)             Requested size: 216.81pt x 180.66719pt.
- [11 <./images/exp2-trial-eps-converted-to.pdf>] [12 <./images/X3-scatter-CogSc
-i-eps-converted-to.pdf>]
-(./prior-inference-CogSci.bbl [13] [14]) [15] (./prior-inference-CogSci.aux) ) 
+[13 <./images/x3_m1.pdf> <./images/x3_m7.pdf> <./images/x3_m20.pdf> <./images/x
+3_m11.pdf>] (./prior-inference-CogSci.bbl [14]) [15]
+(./prior-inference-CogSci.aux) ) 
 Here is how much of TeX's memory you used:
- 13453 strings out of 492995
- 261272 string characters out of 6132704
- 305575 words of memory out of 5000000
- 16691 multiletter control sequences out of 15000+600000
+ 13474 strings out of 492995
+ 261462 string characters out of 6132704
+ 304594 words of memory out of 5000000
+ 16709 multiletter control sequences out of 15000+600000
  48423 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,6n,54p,2161b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{
-/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2017/texmf-dist/fon
-ts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/u
-tmri8a.pfb>
-Output written on prior-inference-CogSci.pdf (15 pages, 443767 bytes).
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/d
+vips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a
+.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on prior-inference-CogSci.pdf (15 pages, 405994 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
- 108 compressed objects within 2 object streams
+ 193 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 68 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
