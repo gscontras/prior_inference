@@ -58,7 +58,7 @@ paramsUttWorkers <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_indOpt_2019_1
 paramsUttWorkers <- paramsUttWorkers[ , 2:ncol(paramsUttWorkers)]
 
 #####################
-procType <- 4
+procType <- 5
 #####################
 
 #####################################################################################################
@@ -98,6 +98,9 @@ for(i in c(1:length(x3pilotData$X))) {
   }else if(procType == 4) {
     postListMat1[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsAD[1], 0, paramsAD[2])
     postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsABD[1], paramsABD[2], paramsABD[3])
+  }else if(procType == 5) {
+    postListMat1[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, -1)
+    postListMat2[i,validUtterances] <- rep(1./length(validUtterances), length(validUtterances) )
   }
 }
 
@@ -123,6 +126,8 @@ if(procType == 1) {
   write.csv(x3pilotData, "X3_Data/x3pDataAugm_simpleRSAindOpt_kappaOnly_and_obedAndKappa.csv")
 }else if(procType == 4) {
   write.csv(x3pilotData, "X3_Data/x3pDataAugm_simpleRSAindOpt_prefAndKappa_and_prefObedAndKappa.csv")
+}else if(procType == 5) {
+  write.csv(x3pilotData, "X3_Data/x3pDataAugm_simpleRSAindOpt_fixed00-1_and_uniform.csv")
 }
 
 

@@ -15,8 +15,9 @@ source("CommonCode/getConstCodeStratUtt.R")
 ### simple RSA - individually optimized
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed001_and_fixed000.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_prefOnly_and_obedOnly.csv")
-x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_kappaOnly_and_obedAndKappa.csv")
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_kappaOnly_and_obedAndKappa.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_prefAndKappa_and_prefObedAndKappa.csv")
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed00-1_and_uniform.csv")
 
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_SRSAcrossVal_KappaOnly_and_PrefAndKappa.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_SRSAcrossVal_ObedAndKappa_and_PrefObedAndKappa.csv")
@@ -90,7 +91,7 @@ modelDataOrdered[,4] <- x3pilotData$obj3
 modelDataOrdered[,5] <- x3pilotData$obj1OC27
 modelDataOrdered[,6] <- x3pilotData$obj2OC27
 modelDataOrdered[,7] <- x3pilotData$obj3OC27
-write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted.csv")
+#write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted.csv")
 ################################################################################
 
 
