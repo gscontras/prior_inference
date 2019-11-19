@@ -29,45 +29,45 @@ Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, K
 while executing---line 5079 of file apacite.bst
 Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
 while executing---line 5079 of file apacite.bst
-You've used 22 entries,
+You've used 23 entries,
             6951 wiz_defined-function locations,
-            1414 strings with 14076 characters,
-and the built_in function-call counts, 41648 in all, are:
-= -- 5409
-> -- 314
-< -- 1803
-+ -- 1861
-- -- 44
-* -- 2481
-:= -- 7250
-add.period$ -- 102
-call.type$ -- 22
-change.case$ -- 383
+            1421 strings with 14235 characters,
+and the built_in function-call counts, 43398 in all, are:
+= -- 5627
+> -- 328
+< -- 1885
++ -- 1939
+- -- 46
+* -- 2588
+:= -- 7576
+add.period$ -- 106
+call.type$ -- 23
+change.case$ -- 400
 chr.to.int$ -- 0
-cite$ -- 44
-duplicate$ -- 1081
-empty$ -- 1702
-format.name$ -- 466
-if$ -- 8212
+cite$ -- 46
+duplicate$ -- 1127
+empty$ -- 1776
+format.name$ -- 490
+if$ -- 8554
 int.to.chr$ -- 0
-int.to.str$ -- 66
+int.to.str$ -- 69
 missing$ -- 0
-newline$ -- 539
-num.names$ -- 188
-pop$ -- 745
+newline$ -- 564
+num.names$ -- 196
+pop$ -- 792
 preamble$ -- 1
-purify$ -- 90
+purify$ -- 94
 quote$ -- 0
-skip$ -- 2996
+skip$ -- 3094
 stack$ -- 0
-substring$ -- 2131
-swap$ -- 633
-text.length$ -- 75
+substring$ -- 2216
+swap$ -- 656
+text.length$ -- 77
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2208
+type$ -- 2288
 warning$ -- 0
-while$ -- 171
+while$ -- 178
 width$ -- 0
-write$ -- 630
+write$ -- 661
 (There were 8 error messages)

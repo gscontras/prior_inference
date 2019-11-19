@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  8 NOV 2019 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  19 NOV 2019 18:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,143 +734,120 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
  [4 <./images/rsascene-eps-converted-to.pdf>] [5] [6]
+<images/preference-trial.png, id=34, 1654.18pt x 1082.0425pt>
+File: images/preference-trial.png Graphic file (type png)
 
-LaTeX Warning: File `images/exp1-trial.eps' not found on input line 152.
-
-Package epstopdf Info: Source file: <images/exp1-trial.eps>
-(epstopdf)             Output file: <images/exp1-trial-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-09-10 14:41:07
-(epstopdf)                    size: 108770 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/exp1-trial-eps-conv
-erted-to.pdf images/exp1-trial.eps>
-(epstopdf)             \includegraphics on input line 152.
-Package epstopdf Info: Output file is already uptodate.
-<images/exp1-trial-eps-converted-to.pdf, id=34, 743.77875pt x 450.68375pt>
-File: images/exp1-trial-eps-converted-to.pdf Graphic file (type pdf)
-
-<use images/exp1-trial-eps-converted-to.pdf>
-Package pdftex.def Info: images/exp1-trial-eps-converted-to.pdf used on input l
-ine 152.
-(pdftex.def)             Requested size: 325.215pt x 197.06361pt.
-
-<images/barplot_x4.pdf, id=35, 505.89pt x 505.89pt>
+<use images/preference-trial.png>
+Package pdftex.def Info: images/preference-trial.png used on input line 152.
+(pdftex.def)             Requested size: 325.215pt x 212.7228pt.
+ [7 <./images/preference-trial.png>]
+<images/barplot_x4.pdf, id=41, 505.89pt x 505.89pt>
 File: images/barplot_x4.pdf Graphic file (type pdf)
 
 <use images/barplot_x4.pdf>
-Package pdftex.def Info: images/barplot_x4.pdf used on input line 160.
+Package pdftex.def Info: images/barplot_x4.pdf used on input line 172.
 (pdftex.def)             Requested size: 180.67499pt x 180.67676pt.
- [7 <./images/exp1-trial-eps-converted-to.pdf>]
-<images/m13.pdf, id=43, 441.65pt x 441.65pt>
+ [8 <./images/barplot_x4.pdf>]
+<images/m13.pdf, id=50, 441.65pt x 441.65pt>
 File: images/m13.pdf Graphic file (type pdf)
  <use images/m13.pdf>
-Package pdftex.def Info: images/m13.pdf used on input line 185.
+Package pdftex.def Info: images/m13.pdf used on input line 204.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
 
-<images/m23.pdf, id=44, 549.05125pt x 538.01pt>
+<images/m23.pdf, id=51, 549.05125pt x 538.01pt>
 File: images/m23.pdf Graphic file (type pdf)
  <use images/m23.pdf>
-Package pdftex.def Info: images/m23.pdf used on input line 186.
+Package pdftex.def Info: images/m23.pdf used on input line 205.
 (pdftex.def)             Requested size: 144.54pt x 141.62788pt.
- [8 <./images/barplot_x4.pdf> <./images/m13.pdf> <./images/m23.pdf>]
-<images/m3.pdf, id=67, 441.65pt x 441.65pt>
+
+<images/m3.pdf, id=52, 441.65pt x 441.65pt>
 File: images/m3.pdf Graphic file (type pdf)
  <use images/m3.pdf>
-Package pdftex.def Info: images/m3.pdf used on input line 218.
+Package pdftex.def Info: images/m3.pdf used on input line 227.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
 
-<images/m16.pdf, id=68, 441.65pt x 441.65pt>
+<images/m16.pdf, id=53, 441.65pt x 441.65pt>
 File: images/m16.pdf Graphic file (type pdf)
  <use images/m16.pdf>
-Package pdftex.def Info: images/m16.pdf used on input line 219.
+Package pdftex.def Info: images/m16.pdf used on input line 228.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
-
-Overfull \hbox (37.74623pt too wide) in paragraph at lines 225--229
-\OT1/ptm/m/n/10 individually-optimized $\OML/ptmcm/m/it/10 ^^M$ \OT1/ptm/m/n/10
- pa-ram-e-ters yielded an av-er-age KL di-ver-gence of $\OT1/ptmcm/m/n/10 2\OML
-/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 058$ \OT1/ptm/m/n/10 (median=$\OT1/ptmcm/m/n/
-10 1\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 524$\OT1/ptm/m/n/10 ).
- []
-
-[9 <./images/m3.pdf> <./images/m16.pdf>]
-Overfull \hbox (4.58752pt too wide) in paragraph at lines 241--242
+ [9 <./images/m13.pdf> <./images/m23.pdf>]
+Overfull \hbox (4.58752pt too wide) in paragraph at lines 250--251
 \OT1/ptm/m/n/10 pos-i-tive cor-re-la-tion be-tween the hu-man judg-ments and mo
 del pre-dic-tions ($\OML/ptmcm/m/it/10 r[] \OT1/ptmcm/m/n/10 = 0\OML/ptmcm/m/it
 /10 :\OT1/ptmcm/m/n/10 99\OML/ptmcm/m/it/10 ; p <
  []
 
-<images/m5.pdf, id=86, 441.65pt x 530.98375pt>
+
+Overfull \hbox (2.93791pt too wide) in paragraph at lines 250--251
+\OT1/ptm/m/n/10 model pro-vides a bet-ter fit com-pared to a model op-ti-mized 
+only for $\OML/ptmcm/m/it/10 ^^M$ \OT1/ptm/m/n/10 ($\OML/ptmcm/m/it/10 G[] \OT1
+/ptmcm/m/n/10 = 237\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 36\OML/ptmcm/m/it/10 ;
+ df \OT1/ptmcm/m/n/10 =
+ []
+
+<images/m5.pdf, id=71, 441.65pt x 530.98375pt>
 File: images/m5.pdf Graphic file (type pdf)
  <use images/m5.pdf>
-Package pdftex.def Info: images/m5.pdf used on input line 245.
+Package pdftex.def Info: images/m5.pdf used on input line 254.
 (pdftex.def)             Requested size: 144.54pt x 173.77489pt.
 
-<images/m8.pdf, id=87, 441.65pt x 530.98375pt>
+<images/m8.pdf, id=72, 441.65pt x 530.98375pt>
 File: images/m8.pdf Graphic file (type pdf)
  <use images/m8.pdf>
-Package pdftex.def Info: images/m8.pdf used on input line 246.
+Package pdftex.def Info: images/m8.pdf used on input line 255.
 (pdftex.def)             Requested size: 144.54pt x 173.77489pt.
- [10 <./images/m5.pdf> <./images/m8.pdf>]
+ [10 <./images/m3.pdf> <./images/m16.pdf> <./images/m5.pdf> <./images/m8.pdf>]
+<images/utterance-choice-trial.png, id=104, 1243.64626pt x 1038.88126pt>
+File: images/utterance-choice-trial.png Graphic file (type png)
 
-LaTeX Warning: File `images/exp2-trial.eps' not found on input line 265.
-
-Package epstopdf Info: Source file: <images/exp2-trial.eps>
-(epstopdf)             Output file: <images/exp2-trial-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-09-10 14:41:07
-(epstopdf)                    size: 104772 bytes
-(epstopdf)             Command: <repstopdf --outfile=images/exp2-trial-eps-conv
-erted-to.pdf images/exp2-trial.eps>
-(epstopdf)             \includegraphics on input line 265.
-Package epstopdf Info: Output file is already uptodate.
-<images/exp2-trial-eps-converted-to.pdf, id=105, 743.77875pt x 547.04375pt>
-File: images/exp2-trial-eps-converted-to.pdf Graphic file (type pdf)
-
-<use images/exp2-trial-eps-converted-to.pdf>
-Package pdftex.def Info: images/exp2-trial-eps-converted-to.pdf used on input l
-ine 265.
-(pdftex.def)             Requested size: 325.215pt x 239.1975pt.
- [11 <./images/exp2-trial-eps-converted-to.pdf>] <images/barplot_x3.pdf, id=112
-, 505.89pt x 505.89pt>
+<use images/utterance-choice-trial.png>
+Package pdftex.def Info: images/utterance-choice-trial.png used on input line 2
+78.
+(pdftex.def)             Requested size: 252.94499pt x 211.29172pt.
+ [11 <./images/utterance-choice-trial.png>] <images/barplot_x3.pdf, id=109, 505
+.89pt x 505.89pt>
 File: images/barplot_x3.pdf Graphic file (type pdf)
 
 <use images/barplot_x3.pdf>
-Package pdftex.def Info: images/barplot_x3.pdf used on input line 288.
+Package pdftex.def Info: images/barplot_x3.pdf used on input line 292.
 (pdftex.def)             Requested size: 180.67499pt x 180.67676pt.
- <images/x3_m1.pdf, id=113, 505.89pt x 505.89pt>
-File: images/x3_m1.pdf Graphic file (type pdf)
-
-<use images/x3_m1.pdf>
-Package pdftex.def Info: images/x3_m1.pdf used on input line 305.
-(pdftex.def)             Requested size: 144.54pt x 144.54294pt.
- <images/x3_m7.pdf, id=114, 505.89pt x 505.89pt>
-File: images/x3_m7.pdf Graphic file (type pdf)
-
-<use images/x3_m7.pdf>
-Package pdftex.def Info: images/x3_m7.pdf used on input line 306.
-(pdftex.def)             Requested size: 144.54pt x 144.54294pt.
  [12 <./images/barplot_x3.pdf>]
-<images/x3_m20.pdf, id=123, 505.89pt x 505.89pt>
+<images/x3_m1.pdf, id=118, 505.89pt x 505.89pt>
+File: images/x3_m1.pdf Graphic file (type pdf)
+ <use images/x3_m1.pdf>
+Package pdftex.def Info: images/x3_m1.pdf used on input line 320.
+(pdftex.def)             Requested size: 144.54pt x 144.54294pt.
+
+<images/x3_m7.pdf, id=119, 505.89pt x 505.89pt>
+File: images/x3_m7.pdf Graphic file (type pdf)
+ <use images/x3_m7.pdf>
+Package pdftex.def Info: images/x3_m7.pdf used on input line 321.
+(pdftex.def)             Requested size: 144.54pt x 144.54294pt.
+
+<images/x3_m20.pdf, id=120, 505.89pt x 505.89pt>
 File: images/x3_m20.pdf Graphic file (type pdf)
  <use images/x3_m20.pdf>
-Package pdftex.def Info: images/x3_m20.pdf used on input line 322.
+Package pdftex.def Info: images/x3_m20.pdf used on input line 336.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
 
-<images/x3_m11.pdf, id=124, 505.89pt x 505.89pt>
+<images/x3_m11.pdf, id=121, 505.89pt x 505.89pt>
 File: images/x3_m11.pdf Graphic file (type pdf)
  <use images/x3_m11.pdf>
-Package pdftex.def Info: images/x3_m11.pdf used on input line 323.
+Package pdftex.def Info: images/x3_m11.pdf used on input line 337.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
 
-[13 <./images/x3_m1.pdf> <./images/x3_m7.pdf> <./images/x3_m20.pdf> <./images/x
-3_m11.pdf>] (./prior-inference-CogSci.bbl [14]) [15]
+[13 <./images/x3_m1.pdf> <./images/x3_m7.pdf>] (./prior-inference-CogSci.bbl
+[14 <./images/x3_m20.pdf> <./images/x3_m11.pdf>] [15]) [16]
 (./prior-inference-CogSci.aux) ) 
 Here is how much of TeX's memory you used:
- 13474 strings out of 492995
- 261462 string characters out of 6132704
- 304594 words of memory out of 5000000
- 16709 multiletter control sequences out of 15000+600000
+ 13479 strings out of 492995
+ 261502 string characters out of 6132704
+ 305724 words of memory out of 5000000
+ 16713 multiletter control sequences out of 15000+600000
  48423 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,54p,2161b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,7n,54p,2161b,313s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/d
 vips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts
@@ -880,10 +857,10 @@ m/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a
 local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texl
 ive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/t
 exmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prior-inference-CogSci.pdf (15 pages, 405994 bytes).
+Output written on prior-inference-CogSci.pdf (16 pages, 1406417 bytes).
 PDF statistics:
  193 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

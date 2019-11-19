@@ -339,6 +339,32 @@ Levinson, S\BPBI C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Lewandowsky%
+\ \BBA {} Farrell%
+}{%
+Lewandowsky%
+\ \BBA {} Farrell%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+Lewandowsky:2011}
+\APACinsertmetastar {%
+Lewandowsky:2011}%
+\begin{APACrefauthors}%
+Lewandowsky, S.%
+\BCBT {}\ \BBA {} Farrell, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2011}.
+\newblock
+\APACrefbtitle {Computational modeling in cognition: {P}rinciples and practice}
+  {Computational modeling in cognition: {P}rinciples and practice}.
+\newblock
+\APACaddressPublisher{Thousand Oaks}{Sage Publications}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Markova%
 \ \BBA {} Graumann%
 }{%
