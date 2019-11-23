@@ -7486,4 +7486,60 @@
   doi    = {10.13140/RG.2.2.30535.14249},
 }
 
+@Article{franke2016reasoning,
+  author    = {Franke, Michael and Degen, Judith},
+  title     = {Reasoning in reference games: Individual-vs. population-level probabilistic modeling},
+  journal   = {PloS one},
+  year      = {2016},
+  volume    = {11},
+  number    = {5},
+  pages     = {e0154854},
+  publisher = {Public Library of Science},
+}
+
+@Article{Borghi2019,
+  author   = {Anna M. Borghi and Laura Barca and Ferdinand Binkofski and Cristiano Castelfranchi and Giovanni Pezzulo and Luca Tummolini},
+  title    = {Words as social tools: Language, sociality and inner grounding in abstract concepts},
+  journal  = {Physics of Life Reviews},
+  year     = {2019},
+  volume   = {29},
+  pages    = {120 - 153},
+  issn     = {1571-0645},
+  abstract = {The paper introduces a new perspective on abstract concepts (e.g. â€œfreedomâ€) and their associate words representation, the Words As social Tools (WAT) view. Traditional theories conceptualize language as a way to index referents, a shortcut to access meaning, or a way to access meaning through words associations. WAT goes beyond these theories by identifying additional functions of words and language: words are tools helping us to perform actions and change the state of our social environment, and language is a means to improve our thought abilities, to control our behavior and plays a predictive role, helping us to form categories. Most importantly, WAT proposes that language and sociality â€“ along with interoceptive and metacognitive processes â€“ are key for the grounding of abstract concepts (ACs) that are more complex, variable, and more detached from perceptual and motor experience than concrete concepts (CCs). We highlight four tenets of WAT and discuss each of them in light of recent evidence: a. acquisition: compared to concrete concepts, the acquisition of abstract concepts relies more on social and linguistic inputs; b. brain representation: abstract concepts recruit more linguistic and social brain areas; c. mouth activation: due to the relevance of language for representing them, abstract concepts activate more the oral motor system; d. linguistic variability: abstract concepts are more affected by differences between spoken languages. We discuss evidence supporting these four tenets of WAT, and its advantages and limitations compared to other views on abstract concepts. Finally, we outline a conceptual proposal that specifies how internal models supporting the representation and processing of ACs can be grounded on interoceptive, metacognitive, social, and linguistic experience.},
+  doi      = {https://doi.org/10.1016/j.plrev.2018.12.001},
+  keywords = {Abstract concepts, Embodied and grounded cognition, Inner speech, Social cognition, Language, Metacognition},
+  url      = {http://www.sciencedirect.com/science/article/pii/S1571064518301271},
+}
+
+@Article{Friston:2015,
+  author    = {Friston, Karl and Rigoli, Francesco and Ognibene, Dimitri and Mathys, Christoph and FitzGerald, Thomas and Pezzulo, Giovanni},
+  title     = {Active inference and epistemic value},
+  journal   = {Cognitive Neuroscience},
+  year      = {2015},
+  volume    = {6},
+  pages     = {187-214},
+  abstract  = { We offer a formal treatment of choice behaviour based on the premise that agents minimise the expected free energy of future outcomes. Crucially, the negative free energy or quality of a policy can be decomposed into extrinsic and epistemic (or intrinsic) value. Minimising expected free energy is therefore equivalent to maximising extrinsic value or expected utility (defined in terms of prior preferences or goals), while maximising information gain or intrinsic value (reducing uncertainty about the causes of valuable outcomes). The resulting scheme resolves the exploration-exploitation dilemma: epistemic value is maximised until there is no further information gain, after which exploitation is assured through maximisation of extrinsic value. This is formally consistent with the Infomax principle, generalising formulations of active vision based upon salience (Bayesian surprise) and optimal decisions based on expected utility and risk-sensitive (Kullback-Leibler) control. Furthermore, as with previous active inference formulations of discrete (Markovian) problems, ad hoc softmax parameters become the expected (Bayes-optimal) precision of beliefs about, or confidence in, policies. This article focuses on the basic theory, illustrating the ideas with simulations. A key aspect of these simulations is the similarity between precision updates and dopaminergic discharges observed in conditioning paradigms. },
+  doi       = {10.1080/17588928.2015.1020053},
+  eprint    = {http://dx.doi.org/10.1080/17588928.2015.1020053},
+  owner     = {mvbutz},
+  timestamp = {2015.02.22},
+}
+
+@InCollection{Butz:2017a,
+  author    = {Butz, Martin V.},
+  title     = {Which structures are out there? Learning predictive compositional concepts based on social sensorimotor explorations},
+  publisher = {MIND Group},
+  year      = {2017},
+  editor    = {Metzinger, Thomas K. and Wiese, Wanja},
+  address   = {Frankfurt am Main},
+  abstract  = {How do we learn to think about our world in a flexible, compositional manner? What is the actual content of a particular thought? How do we become language ready? I argue that free energy-based inference processes, which determine the learning of predictive encodings, need to incorporate additional structural learning biases that reflect those structures of our world that are behaviorally relevant for us. In particular, I argue that the inference processes and thus the resulting predictive encodings should enable (i) the distinction of space from entities, with their perceptually and behaviorally relevant properties, (ii) the flexible, temporary activation of relative spatial relations between different entities, (iii) the dynamic adaptation of the involved, distinct encodings while executing, observing, or imagining particular interactions, and (iv) the development of a - probably motor-grounded - concept of forces, which predictively encodes the results of relative spatial and property manipulations dynamically over time. Furthermore, seeing that entity interactions typically have a beginning and an end, free energy-based inference should be additionally biased towards the segmentation of continuous sensorimotor interactions and sensory experiences into events and event boundaries. Thereby, events may be characterized by particular sets of active predictive encodings. Event boundaries, on the other hand, identify those situational aspects that are critical for the commencement or the termination of a particular event, such as the establishment of object contact and contact release. I argue that the development of predictive event encodings naturally lead to the development of conceptual encodings and the possibility of composing these encodings in a highly flexible, semantic manner. Behavior is generated by means of active inference. The addition of internal motivations in the form of homeostatic variables focusses our behavior - including attention and thought - on those environmental interactions that are motivationally-relevant, thus continuously striving for internal homeostasis in a goal-directed manner. As a consequence, behavior focusses cognitive development towards (believed) bodily and cognitively (including socially) relevant aspects. The capacity to integrate tools and other humans into our minds, as well as the motivation to flexibly interact with them, seem to open up the possibility of assigning roles - such as actors, instruments, and recipients - when observing, executing, or imagining particular environmental interactions. Moreover, in conjunction with predictive event encodings, this tool- and socially-oriented mental flexibilization fosters perspective taking, reasoning, and other forms of mentalizing. Finally, I discuss how these structures and mechanisms are exactly those that seem necessary to make our minds language ready.},
+  doi       = {10.15502/9783958573093},
+  issn      = {9783958573093},
+  journal   = {Philosophy and Predictive Processing},
+  keywords  = {Embodiment, Predictive encodings, Language, Social interactions, Anticipatory behavior, Homeostasis, Cooperation, Free energy principle, Event segmentation theory, Compositional concepts, Sensorimotor learning},
+  language  = {English},
+  refid     = {8},
+  url       = {http://predictive-mind.net/papers/which-structures-are-out-there},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

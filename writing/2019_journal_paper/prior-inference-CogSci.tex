@@ -42,7 +42,7 @@ The resulting model is additionally able to
 (i) infer Bayesian posteriors of listeners' preferences when analyzing their choice responses to (ambiguous) utterances dependent on the number of options they have, and 
 (ii) choose (ambiguous) utterances by maximizing (or minimizing) expected information gain about the listeners preferences. 
 The modeling results imply that we indeed are able to learn about the listeners' preferences when monitoring their responses to (ambiguous) utterances ($R^2>96\%$).
-Moreover, some but not all of us appear able to strategically chose ambiguous over unambiguous utterances because we want to learn more about the conversation partner, that is, the listener.
+Moreover, some but not all of us appear able to strategically chose ambiguous over unambiguous utterances when we want to learn more about the conversation partner, that is, the listener.
 In this latter case, our model fits the participants' utterance choices revealing two main groups: while the one group acts upon maximizing expected social information gain (expecting to learn more about others'), the other group seems not interested in social learning, effectively even minimizing the expected gain ($R^2>91\%$). 
 Overall, we essentially show that when monitoring a conversational partner's responses to our (partially ambiguous) utterances, we socially learn about the partner's inference model, revealing, for example, their preferences, opinions, and beliefs. 
 Moreover, some of us can choose utterances that are expected to yield the highest social information gain about (particular parts of) the partner's inference model.
@@ -53,7 +53,7 @@ ambiguity; pragmatics; information gain; predictive priors; Rational Speech Act 
 
 \section{Introduction}
 
-If a speaker and a listener understand an ambiguous utterance differently, communication between them might fail. On rare occaisions, such communication failure is deadly. \citeA{pinker2015sense} alludes to the Charge of the Light Brigade during the Crimean war as an example of a military disaster that was caused by vague orders. He also mentions how poor wording on a warning light was responsible for the nuclear meltdown at Three Mile Island. Finally, citing \citeA{cushing1994fatal}, Pinker describes how the deadliest plane crash in history resulted from pilots and air traffic controllers arriving at different interpretations of the phrase `at takeoff'.
+If a speaker and a listener understand an ambiguous utterance differently, communication between them might fail. On rare occasions, such communication failure is deadly. \citeA{pinker2015sense} alludes to the Charge of the Light Brigade during the Crimean war as an example of a military disaster that was caused by vague orders. He also mentions how poor wording on a warning light was responsible for the nuclear meltdown at Three Mile Island. Finally, citing \citeA{cushing1994fatal}, Pinker describes how the deadliest plane crash in history resulted from pilots and air traffic controllers arriving at different interpretations of the phrase `at takeoff'.
 
 Given that ambiguity can hinder the efficient transfer of information between conversation partners, it is not surprising that linguists have treated the possibility for ambiguity as a bug in the communication system \cite{grice1975,chomsky2002minimalism}.
 If we look back at the study of ambiguity, we notice that the strategy of ambiguity avoidance is much older than the pronouncements of modern linguists. 
@@ -364,11 +364,19 @@ The results of Experiment 2 demonstrate that at least some speakers are able to 
 
 Taken together, the results of our experiments and the success of our model in predicting those results indicate that humans are aware of the fact that by observing responses to ambiguous utterances, information about the listener's prior preferences can be inferred. 
 Used in this way to inform preferences, ambiguous utterances are closely related to questions, which may ask directly about the  relevant preferences. 
-However, ambiguous language provides a ready alternative to asking directly. In normal conversations, a speaker might favor the indirect route afforded by ambiguous utterances, given considerations of politeness and possibly also in an effort to keep the conversation on track.  
+However, ambiguous language provides a ready alternative to asking directly. In normal conversations, a speaker might favor the indirect route afforded by ambiguous utterances, given considerations of politeness and possibly also in an effort to keep the conversation open, in that the conversation partner can choose to disambiguate the ambiguous utterance or, alternatively, choose to continue in a different direction or even to change topic.
 
-We note that the analyzed preference prior, viewed from a broader perspective, can be interpreted as the general predictive state of mind of the listener when interpreting the speaker's utterance \cite{Butz:2017}. \gcs{I think it would help to expand on this point if we're going to raise it}
-Thus, this state of mind does not only include preferences per se, but all imaginable opinions, beliefs, \emph{and} preferences of the listener. 
-Moreover, during a conversation, this prior will dynamically develop depending on the internal predictive models and the generated utterances and actions of the speaker and listener. This prior depends on the privileged grounds of the conversational partners, and also on the common ground in which the conversation unfolds. Ambiguous utterances are one device for making the privileged ground common knowledge. 
+
+We note that the analyzed preference prior, viewed from a broader perspective, can be closely related to a part of the predictive mind of the listener and the speaker \cite{Butz:2016,Butz:2017}. 
+When interpreting an utterance -- in our case opening up a set of choices -- the listener's mind infers the current choices and integrates them with the preference priors, implicitly anticipating possible choice consequences.
+Moreover, the expected information gain term -- computing the utterance choice of the speaker -- can be equated with the computation of socially-motivated active inference \cite{Butz:2017a,Friston:2015}.
+It causes the model to strive for an anticipated epistemic value that quantifies the expected information gain about the assumed preference priors of the listener, that is, expected social information gain. 
+
+
+In general, predictive states of mind about others do not only include considerations of the preferences of others, but generally may concern all imaginable knowledge, opinions, beliefs, current train of thought considerations, and preferences of the listener.
+Moreover, during a conversation, the involved ``social'' priors will dynamically develop depending on the internal predictive models and the generated utterances, actions, and responses of the speaker and listener. 
+The prior dynamically depend on the privileged grounds of the conversational partners, and also on the common ground in which the conversation unfolds.
+In that sense, ambiguous utterances are one device for projecting parts of each others' privileged grounds into the common ground. 
 
 
 %Moreover, there 

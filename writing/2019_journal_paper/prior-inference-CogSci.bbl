@@ -2,6 +2,65 @@
 
 \bibitem [\protect \citeauthoryear {%
 Butz%
+}{%
+Butz%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+Butz:2016}
+\APACinsertmetastar {%
+Butz:2016}%
+\begin{APACrefauthors}%
+Butz, M\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Towards a Unified Sub-Symbolic Computational Theory of
+  Cognition} {Towards a unified sub-symbolic computational theory of
+  cognition}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Frontiers in Psychology}{7}{925}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.3389/fpsyg.2016.00925} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Butz%
+}{%
+Butz%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+Butz:2017a}
+\APACinsertmetastar {%
+Butz:2017a}%
+\begin{APACrefauthors}%
+Butz, M\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Which structures are out there? Learning predictive
+  compositional concepts based on social sensorimotor explorations} {Which
+  structures are out there? learning predictive compositional concepts based on
+  social sensorimotor explorations}.{\BBCQ}
+\newblock
+\BIn{} T\BPBI K.~Metzinger\ \BBA {} W.~Wiese\ (\BEDS), .
+\newblock
+\APACaddressPublisher{Frankfurt am Main}{MIND Group}.
+\newblock
+\begin{APACrefURL}
+  \url{http://predictive-mind.net/papers/which-structures-are-out-there}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.15502/9783958573093} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Butz%
 \ \BBA {} Kutter%
 }{%
 Butz%
@@ -259,6 +318,36 @@ Franke, M.%
   rule is probably important for pragmatics}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Zeitschrift f\"{u}r Sprachwissenschaft}{35}{1}{3--44}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Friston%
+\ \protect \BOthers {.}}{%
+Friston%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+Friston:2015}
+\APACinsertmetastar {%
+Friston:2015}%
+\begin{APACrefauthors}%
+Friston, K.%
+, Rigoli, F.%
+, Ognibene, D.%
+, Mathys, C.%
+, FitzGerald, T.%
+\BCBL {}\ \BBA {} Pezzulo, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Active inference and epistemic value} {Active inference
+  and epistemic value}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognitive Neuroscience}{6}{}{187-214}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/17588928.2015.1020053} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
