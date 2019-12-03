@@ -1,6 +1,63 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Belardinelli%
+, Lohmann%
+, Farn{\`e}%
+\BCBL {}\ \BBA {} Butz%
+}{%
+Belardinelli%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+belardinelli2018mental}
+\APACinsertmetastar {%
+belardinelli2018mental}%
+\begin{APACrefauthors}%
+Belardinelli, A.%
+, Lohmann, J.%
+, Farn{\`e}, A.%
+\BCBL {}\ \BBA {} Butz, M\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Mental space maps into the future} {Mental space maps
+  into the future}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognition}{176}{}{65--73}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Belardinelli%
+, Stepper%
+\BCBL {}\ \BBA {} Butz%
+}{%
+Belardinelli%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+belardinelli2016s}
+\APACinsertmetastar {%
+belardinelli2016s}%
+\begin{APACrefauthors}%
+Belardinelli, A.%
+, Stepper, M\BPBI Y.%
+\BCBL {}\ \BBA {} Butz, M\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {It's in the eyes: Planning precise manual actions before
+  execution} {It's in the eyes: Planning precise manual actions before
+  execution}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of vision}{16}{1}{18--18}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Butz%
 }{%
 Butz%
@@ -188,6 +245,34 @@ Eisenberg, E\BPBI M.%
   {Ambiguity as strategy in organizational communication}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Communication monographs}{51}{3}{227--242}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Federmeier%
+\ \BBA {} Kutas%
+}{%
+Federmeier%
+\ \BBA {} Kutas%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+federmeier2002picture}
+\APACinsertmetastar {%
+federmeier2002picture}%
+\begin{APACrefauthors}%
+Federmeier, K\BPBI D.%
+\BCBT {}\ \BBA {} Kutas, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Picture the difference: Electrophysiological
+  investigations of picture processing in the two cerebral hemispheres}
+  {Picture the difference: Electrophysiological investigations of picture
+  processing in the two cerebral hemispheres}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Neuropsychologia}{40}{7}{730--747}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -404,6 +489,88 @@ Grice, H\BPBI P.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Jones%
+\ \BBA {} Davis%
+}{%
+Jones%
+\ \BBA {} Davis%
+}{%
+{\protect \APACyear {1965}}%
+}]{%
+jones1965acts}
+\APACinsertmetastar {%
+jones1965acts}%
+\begin{APACrefauthors}%
+Jones, E\BPBI E.%
+\BCBT {}\ \BBA {} Davis, K\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1965}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {From acts to dispositions the attribution process in
+  person perception} {From acts to dispositions the attribution process in
+  person perception}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Advances in experimental social psychology} {Advances in
+  experimental social psychology}\ (\BVOL~2, \BPGS\ 219--266).
+\newblock
+\APACaddressPublisher{}{Elsevier}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kelley%
+}{%
+Kelley%
+}{%
+{\protect \APACyear {1967}}%
+}]{%
+kelley1967attribution}
+\APACinsertmetastar {%
+kelley1967attribution}%
+\begin{APACrefauthors}%
+Kelley, H\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1967}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Attribution theory in social psychology.} {Attribution
+  theory in social psychology.}{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Nebraska symposium on motivation.} {Nebraska symposium
+  on motivation.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kelley%
+\ \BBA {} Stahelski%
+}{%
+Kelley%
+\ \BBA {} Stahelski%
+}{%
+{\protect \APACyear {1970}}%
+}]{%
+kelley1970social}
+\APACinsertmetastar {%
+kelley1970social}%
+\begin{APACrefauthors}%
+Kelley, H\BPBI H.%
+\BCBT {}\ \BBA {} Stahelski, A\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1970}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Social interaction basis of cooperators' and
+  competitors' beliefs about others.} {Social interaction basis of cooperators'
+  and competitors' beliefs about others.}{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of personality and social
+  psychology}{16}{1}{66}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Levinson%
 }{%
 Levinson%
@@ -425,6 +592,29 @@ Levinson, S\BPBI C.%
   implicature}.
 \newblock
 \APACaddressPublisher{Cambridge, MA}{{MIT} Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Levy%
+}{%
+Levy%
+}{%
+{\protect \APACyear {2008}}%
+}]{%
+levy2008expectation}
+\APACinsertmetastar {%
+levy2008expectation}%
+\begin{APACrefauthors}%
+Levy, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Expectation-based syntactic comprehension}
+  {Expectation-based syntactic comprehension}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognition}{106}{3}{1126--1177}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -451,6 +641,34 @@ Lewandowsky, S.%
   {Computational modeling in cognition: {P}rinciples and practice}.
 \newblock
 \APACaddressPublisher{Thousand Oaks}{Sage Publications}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lohmann%
+, Belardinelli%
+\BCBL {}\ \BBA {} Butz%
+}{%
+Lohmann%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+lohmann2019hands}
+\APACinsertmetastar {%
+lohmann2019hands}%
+\begin{APACrefauthors}%
+Lohmann, J.%
+, Belardinelli, A.%
+\BCBL {}\ \BBA {} Butz, M\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Hands Ahead in Mind and Motion: Active Inference in
+  Peripersonal Hand Space} {Hands ahead in mind and motion: Active inference in
+  peripersonal hand space}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Vision}{3}{2}{15}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -637,6 +855,34 @@ Qing, C.%
   semantics and pragmatics}\ (\BPG~201-220).
 \newblock
 \APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Shafto%
+, Goodman%
+\BCBL {}\ \BBA {} Frank%
+}{%
+Shafto%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+shafto2012learning}
+\APACinsertmetastar {%
+shafto2012learning}%
+\begin{APACrefauthors}%
+Shafto, P.%
+, Goodman, N\BPBI D.%
+\BCBL {}\ \BBA {} Frank, M\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Learning from others: The consequences of psychological
+  reasoning for human learning} {Learning from others: The consequences of
+  psychological reasoning for human learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Perspectives on Psychological Science}{7}{4}{341--351}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
