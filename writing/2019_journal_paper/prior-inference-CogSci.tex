@@ -149,7 +149,6 @@ In the simplified model, the pragmatic speaker $S_{1\textrm{-simp}}$ reasons dir
 $$P_{S_{1\textrm{-simp}}}(f\mid u,s) \propto P_{L_{0\textrm{-simp}}}(s\mid u,f) \cdot P(f).$$
 
 
-
 \section{Experiment 1: Inferring preferences}
 
 Our first task is to check the predictions of our pragmatic speaker layer: having observed that a listener selects some object $s$ in response to an utterance $u$, what are the most likely preferences the listener had when making their choice? 
@@ -178,28 +177,32 @@ Participants completed a series of $15$ trials. Objects and utterances were chos
 
 \subsubsection{Models with global optimization}
 
-To compare RSA model predictions to the human data, we identified all distinguishable stimuli in the light of the ambiguity of the chosen utterance and the possible object choices, thereby binning the data of all stimuli for which the extended RSA model yields equal preference-estimate posteriors; there were $48$ of these scene types among our stimuli.
+To compare RSA model predictions to the human data, we calculated an average value for each slider binning data into 48 ambiguity classes. We excluded the sliders if their corresponding feature value as not present in a scene. For example, for Figure \ref{exp1-trial} we excluded the sliders for solid things and squares since none of these are present, and therefore no learning is possible.
 %We binned those scene types 
 %For all scene types, the actual feature values and objects in a scene were reordered according to the specific preference inference involved \gcs{I'm not sure what you mean here}. 
 %Thus, after reordering, the results of the individual slider values for individual scenes in each scene type could be averaged for both the participant data and the model predictions. 
 
-We performed two types of optimization: at the individual level and at the global group levels. We first present the globally-optimized versions of the model (Figure \ref{simple-full}). We fit three parameters (two for the simple model) to assess the reasoning strategies that individual speakers employ.
-For the full RSA model, the first is the soft-max scaling parameter $\alpha$ in the $S_1$ layer of the model, where the default value is typically set to $\alpha=1$ (i.e., no scaling). 
-This parameter controls how likely $S_1$ is to maximize utility when choosing utterances. 
+We performed two types of optimization: at the individual level and at the global group levels by optimizing a Kullback-Leibler divergence between the data and the model predictions:
+
+$$\textrm{KL} = \sum_{i=1}^{n} P(f'_i\mid u,s) (\textrm {log} (P(f'_i\mid u,s) - \textrm {log} (P(f_i\mid u,s)),$$
+
+where $P(f'_i\mid u,s)$ specifies a participant's normalized slider value settings, which offer empirical estimates of the feature preference posterior given an object scene and a particular utterance $u$ and object choice $s$; $P(f_i\mid u,s)$ specifies the respective model prediction value. 
+Since no conclusions can be drawn concerning feature values that are not present in the scene, we ignored the respective feature preference estimates. By minimizing KL divergence between the empirical and model-predicted preferences for each participant, we maximize the model fit to the individual participants' data. We can then use the KL divergence values to perform the likelihood ratio test for nested models relying on the $G^2$-statistic which is approximately chi-square distributed \cite{Lewandowsky:2011}. 
+
+We first present the globally-optimized versions of the model (Figure \ref{simple-full}). We fit three parameters for the full RSA model, and two for the simple model. We hypothesized that participants may either go through all the layers of pragmatic reasoning, and additionally calculate the preferences that lead to particular object choice. The last layer of this model $S_2$  returns a posterior distribution over inferred feature preferences $f$ after observing a listener selecting an object in response to an utterance. In a simpler model, the object choice is driven only by a $L_0$ semantics enhanced with priors over feature preferences. Upon hearing an utterance \textit{blue} a participants assigns equal probabilities to all blue objects in a scene, and the actual choice of object signals a preference of other feature values that object has. For example, picking a blue circle rather than a blue square is driven by a prefrence for circles.
+
+For the full RSA model, the first parameter is the soft-max scaling factor $\alpha$ in the $S_1$ layer of the model, where the default value is typically set to $\alpha=1$ (i.e., no scaling). 
+This parameter controls how likely $S_1$ is to maximize utility when choosing utterances. The simple model does not rely on this parameter.
 
 The second parameter scales the softness of individual feature preferences $f_i$. This parameter controls the shape of each of the possible feature preferences $f_i$ that $S_2$ considers. 
 
-$$ P(s\mid f) = \frac{P(s\mid f) + \gamma}{P(s\mid f) + 3\gamma}$$
-
+$$ P(s\mid f) = \frac{P(s\mid f) + \gamma}{\sum P(s\mid f) + 3\gamma}$$
 % I tried to write it in a more general form that works for both P = 0 and P = 1 but I'm not sure that works.
-
 % This is the R code:
 %objectPreferenceSoftPriors[[utt]] <- objectPreferenceHardPriors[[utt]] + softAddProb
 %objectPreferenceSoftPriors[[utt]] <- objectPreferenceSoftPriors[[utt]] / sum(objectPreferenceSoftPriors[[utt]])
-
  %$$ P(s_{\textrm{cloud}}\mid f_{\textrm{cloud}}) = \frac{1 + \gamma}{1 + 3\gamma}$$
  % This is what we wrote. It makes sense for P = 1 but I'm not sure the numbers come out right when we calculate how softness changes the probability of objects that don't qualify.
- 
  For example, in trial shown in Figure \ref{exp1-trial}, there are two objects that fit the description \textit{red}: a red striped cloud and a red dotted circle. The softness parameter $\gamma$ regulates the probability that the middle object will be picked if a person has a preference for clouds. Preference softness increases with $\gamma$: 
  a value of $\gamma=0$ specifies a hard preference, which means that the listener will always choose the object that holds the preferred feature value if possible (e.g., clouds when clouds are preferred). 
  We assume $\gamma=0$ as the default model value. Let us see how the probability changes if $\gamma$ is set to 0.2:
@@ -214,12 +217,12 @@ $$ P(s\mid f) = \frac{P(s\mid f) + \gamma}{P(s\mid f) + 3\gamma}$$
 
 Finally, we allow for the possibility of noise in our human data introduced by participants not following instructions. The parameter $\beta$, when above 0, allows subjects to consider objects that do not pass the semantic filter of the literal listener. 
 
-$$ P(s_{\textrm{x}}\mid u_{\textrm{x}}) = \frac{1 + \beta}{1 + 3\beta}$$
+$$ P(s_{\textrm{x}}\mid u_{\textrm{x}}) = \frac{P(s\mid u) + \beta}{\sum P(s\mid u) + 3\beta}$$
 As $\beta$ increases, speakers disregard instructions and assign non-zero probabilities to objects that do not correspond to the utterance; with $\beta = 0$, speakers fully obey the instructions and only consider objects with the named property (e.g., only red objects following the utterance \textit{red}).
 
 
 Figure \ref{barplot_x4} presents the model performance for the scene type of the sample trial from Figure \ref{exp1-trial}. In that trial, participants saw that the middle object was chosen following the utterance \textit{red}. There are two potential referents for this description: a red striped cloud and a red dotted circle. Since the cloud was chosen, we infer that the person who chose this object has a preference for clouds over circles, and for striped objects vs.~dotted ones. From this trial, we cannot learn anything about the preference for solid things or squares, so we expect the subjects to leave the sliders in their default location (i.e., centered).
-The barplot in Figure \ref{barplot_x4} shows that indeed when faced with a combination of objects from Figure \ref{exp1-trial}, both humans and the models assign high slider values to clouds and striped things, and low values of the sliders to circles and dotted things. 
+The barplot in Figure \ref{barplot_x4} shows that indeed when faced with a combination of objects from Figure \ref{exp1-trial}, both humans and the models assign high slider values to clouds and striped things, and low values of the sliders to circles and dotted things. In this plot we show two types of models: an optimized and a non-optimized one.
 
 \begin{figure}[ht!]
 	\centering
@@ -227,14 +230,9 @@ The barplot in Figure \ref{barplot_x4} shows that indeed when faced with a combi
 	\caption{Model predictions and human data for one of the classes of stimuli \emph{Experiment 1: Inferring preferences}.}\label{barplot_x4}
 \end{figure}
 
-In this plot we show two types of models: an optimized and a non-optimized one.
 % I used the code length(levels(as.factor(uniqueCCode))) to calculate the number of conditions
 %Since not all of the stimuli allowed for inference of preferences in the same way, we introduced a new categorization of stimuli. Our base model would then predict the same preferences for the same category of stimuli. The categorization takes into account the distribution of features, the chosen object and which feature was uttered. Each category consists of 3 tuples of 2 digits. Each tuple refers to one feature, where the first tuple always refers to the uttered feature. The first digit in each tuple would then denote how many objects share the value of the picked object for the corresponding feature. In figure \ref{FG-ref-game}, if the utterance was blue and the blue square was picked, the first tuple would reference color and its first digit would be a "2". Note that this does not determine which other object shares the feature value, i.e. "blue". To compensate, the second digit of the tuple denotes which other object shares this value. This depends on the order of the objects---we stipulated that the picked object would be the first. The further order would be determined by which other object shares this specific value, i.e. the "blue circle" in figure \ref{FG-ref-game} would be the first of the "other objects" and the "green square" the second. The picked object is at position zero in this sense. Thus the first tuple for figure \ref{FG-ref-game} would be (2,1). For the other tuples, the first digits would be "2" for shape and "3" for texture. To streamline the category code we stipulated that we would order the features in descending order of their first digit, so that we would have texture's "3" next in figure \ref{FG-ref-game}. If a tuple starts with "3" or "1", the second digit would simply denote whether the other objects have different values for that feature or the same. Thus we would have (3,2) for texture, with the second digit signaling that the non-picked objects share their texture. The tuple for shape would finally be (2,2), because the value "square" is shared with the second other object (see above). Thus for figure \ref{FG-ref-game} we would end up with [(2,1),(3,2),(2,2)].
 
-
-We hypothesized that participants may either go through all the layers of pragmatic reasoning, and additionally calculate the prefrences that lead to particular object choice. The last layer of this model $S_2$  returns a posterior distribution over inferred feature preferences $f$ after observing a listener selecting an object in response to an utterance. 
-
-In a simpler model, the object choice is driven only by a $L_0$ semantics enhanced with priors over feature preferences. Upon hearing an utterance \textit{blue} a participants assigns equal probabilities to all blue objects in a scene, and the actual choice of object signals a preference of other feature values that object has. For example, picking a blue circle rather than a blue square is driven by a prefrence for circles.
 
 Both, the simple and the full models with softness optimized globally provide a good linear fit to the data (simple model: $p < 0.001$, $r^2 = 0.86$; full model: $p < 0.001$, $r^2 = 0.86$) suggesting that participants are indeed able to infer the feature preferences that lead to a choice of an object. %We can also see that the simple model fits the data just as well as the full more complex model.
 
@@ -249,12 +247,11 @@ Both, the simple and the full models with softness optimized globally provide a 
 
 \subsubsection{Individually-fitted models}
 
-Model fit improves when parameters are fit on the individual level, calculating a parameter estimate for each participant. Individual-level modeling allows us to explore potential differences between participants, and, more importantly, to evaluate whether the Gricean reasoning strategies apply at the level of individual speakers or only to population as a whole \cite{franke2016reasoning}. 
+Model fit improves when we fit the parameters at the individual level, calculating a parameter estimate for each participant. Individual-level modeling allows us to explore potential differences between participants, and, more importantly, to evaluate whether the Gricean reasoning strategies apply at the level of individual speakers or only to population as a whole \cite{franke2016reasoning}. 
 
-We optimized $\alpha$ and $\gamma$ in light of the KL divergence between the individual participants' slider value choices and the corresponding model predictions:
-$$\textrm{KL} = \sum_{i=1}^{n} P(f'_i\mid u,s) (\textrm {log} (P(f'_i\mid u,s) - \textrm {log} (P(f_i\mid u,s)),$$
-where $P(f'_i\mid u,s)$ specifies a participant's normalized slider value settings, which offer empirical estimates of the feature preference posterior given an object scene and a particular utterance $u$ and object choice $s$; $P(f_i\mid u,s)$ specifies the respective model prediction value. 
-Since no conclusions can be drawn concerning feature values that are not present in the scene, we ignored the respective feature preference estimates. By minimizing KL divergence between the empirical and model-predicted preferences for each participant, we maximize the model fit to the individual participants' data. We can then use the KL divergence values to perform the likelihood ratio test for nested models relying on the $G^2$-statistic which is approximately chi-square distributed \cite{Lewandowsky:2011}. 
+We optimized $\alpha$ and $\gamma$ in light of the KL divergence between the individual participants' slider value choices and the corresponding model predictions.
+
+
 
 %the For example, if a $S_2$ observes that following an utterance $blue$ and three objects all three of which are blue, but all differ in shape, the speaker chooses a square, the speaker might conclude that the $L_1$  has a preference for squares. However, the exact value on the slider the $S_2$ picks depends on the $\gamma$ parameter: if it is close to $0$, the speaker will mark that the $L_1$ had a perefernce for squares close to $1$. As the parameter value increases, the softness of preference will increase as well, drawing the preference value towards uniform (uninformative).
 %he model contains three parameters: the informativity paramter $\alpha$ (how informative speakers choose to be), the obey-instructions parameter $\beta$, and the softness of preferences parameter $\gamma$. The latter 
