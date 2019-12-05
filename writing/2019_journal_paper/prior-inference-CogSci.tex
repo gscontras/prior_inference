@@ -33,20 +33,28 @@
 \maketitle
 
 \begin{abstract}
-Ambiguity seems ubiquitous during conversations despite the fact that speakers driven by pragmatic principles of cooperative communication \cite{grice1975} should avoid it. We modeled how speakers use ambiguity resolution as a source of information about their conversation partners.
+Seemingly in contradiction to Grice's maxim of manner, which postulates that ambiguity should be avoided during conversations to maximize clarity, ambiguity is ubiquitous during conversations.
+Some ambiguity may be useful for efficiency reasons in cases when clarity is not affected.
+Here we show that ambiguity can have another, socially highly relevant benefit: responses to ambiguous utterances reveal parts of the internal model of the interpreter.
+We ran two main types of experiments online using a modified version of the original reference game experiment \cite{frankgoodman2012} and modeled the recorded response data by enhancing the Rational Speech Act framework.
+We asked (i) whether speakers can use ambiguity resolving responses as a source of information about the unknown preferences of their conversation partner and (ii) whether speakers are able to strategically chose ambiguous over unambiguous utterances to learn about the preferences of their conversation partner.
+The experimental and modeling results confirm both points. 
+Participants were able to infer Bayesian posteriors of listeners' preferences when analyzing their choice of objects in a situation of referential ambiguity.
+Moreover, in the second type of experiment, nearly 40\% of the speakers were able to strategically choose ambiguous over unambiguous utterances in an epistemic, goal-directed manner, maximizing expected information gain about the listener's preferences.
+Surprisingly, an equally large number of participants seemed to minimize expected information gain by systematically choosing unambiguous utterances. 
+Our results thus show that ambiguity resolution can reveal aspects of the knowledge, preferences, and beliefs of conversation partners and some of us are able to strategically use (ambiguous) utterances to gain knowledge about some of these aspects.
 %We investigated and modeled how speakers learn about opinions, preferences, and beliefs of their conversation partners when monitoring their responses.
-Moreover, we asked the question whether speakers are able to strategically chose ambiguous over unambiguous utterances to learn more about the conversation partner, that is, the listener.
-Accordingly, we ran two main types of experiments online using a modified version of the original reference game experiment \cite{frankgoodman2012} and modeled the recorded response data by enhancing the Rational Speech Act framework.
+%Moreover, we asked the question whether 
+%Accordingly, 
 %The resulting model is additionally able to 
 %(i) infer Bayesian posteriors of listeners' preferences when analyzing their choice responses to (ambiguous) utterances dependent on the number of options they have, and 
 %(ii) choose (ambiguous) utterances by maximizing (or minimizing) expected information gain about the listeners preferences. 
-The modeling results show that participants were able to infer Bayesian posteriors of listeners' preferences when analyzing their choice of objects in a situation of referential ambiguity.
-Moreover, some speakers were able to strategically choose ambiguous over unambiguous utterances to learn more about the listener.
+%The modeling results show that 
 %In this latter case, our model fits the participants' utterance choices revealing two main groups: while the one
-This group of speakers maximized expected social information gain (expecting to learn more about others). Another group of participants seemed not interested in social learning, effectively minimizing the expected gain. 
+%This group of speakers maximized expected social information gain (expecting to learn more about others). Another %group of participants seemed not interested in social learning, effectively minimizing the expected gain. 
 %Overall, we essentially show that when monitoring a conversational partner's responses to our (partially ambiguous) utterances, we socially learn about the partner's inference model, revealing, for example, their preferences, opinions, and beliefs. 
 %Moreover, some of us can choose utterances that are expected to yield the highest social information gain about (particular parts of) the partner's inference model.
-We discuss these situations of social learning in light of the predictive mind paradigm: we show how ambiguity in communication creates opportunities for conversation partners to build accurate predictive models of each other.                                                                    
+%We discuss these situations of social learning in light of the predictive mind paradigm: we show how ambiguity in communication creates opportunities for conversation partners to build accurate predictive models of each other.                                                                    
 
 \textbf{Keywords:} 
 ambiguity; pragmatics; information gain; predictive priors; Rational Speech Act model
@@ -54,11 +62,29 @@ ambiguity; pragmatics; information gain; predictive priors; Rational Speech Act 
 
 \section{Introduction}
 
-The anticipatory nature of the human mind reveals itself in many domains. We anticipate future actions and pre-plan our hand movements even before we reach for objects \cite{belardinelli2016s, belardinelli2018mental, lohmann2019hands} revealing anticipatory processing in the sensory-motor domain.  In the domain of higher cognitive functions, such as language, predictions span across a variety of tasks. Listeners predict the semantic category of upcoming words \cite{federmeier2002picture} as evidenced by neurophysiological effect known as N400. Comprehension of sentences relies not only on the ability of listeners to anticipate subsequent words based on their transitional probabilities, but also takes into account the structural properties of sentences -- showing a more abstract level of predictions \cite{levy2008expectation}.
+The anticipatory nature of the human mind reveals itself in many domains.
+We anticipate future events and event boundaries and pre-plan our hand movements even before we start moving \cite{Hayhoe:2004,belardinelli2016s, belardinelli2018mental, lohmann2019hands}, revealing anticipatory active inference processes in the sensory-motor domain.
+In the language domain predictions span across a variety of tasks.
+Listeners predict the semantic category of upcoming words \cite{federmeier2002picture} as evidenced by a neurophysiological effect known as N400.
+Comprehension of sentences relies not only on the ability of listeners to anticipate subsequent words based on their transitional probabilities, but also takes into account the structural properties of sentences, revealing an even more abstract level of predictions \cite{levy2008expectation}.
+Dynamic language models show that complex, event-predictive structures guide ambiguity resolution during comprehension and likely also constrain ambiguity generation during language production \cite{MyRaeElman:2019}. 
 
-In this paper we explore, how speakers watch communicative behavior of their conversation partners to update their predictive models of the listener's preferences and beliefs. Conceptually, the idea that humans can interpret behavior of other people as driven by their motives, intentions or personal characteristics goes back to the attribution theory \cite{jones1965acts, kelley1967attribution, kelley1970social}. More recently, \citeA{shafto2012learning} developed a Bayesian model of learning that formalizes the process of inferring others' knowledge about the world based on their actions and goals. 
+These processes have recently been linked to the predictive mind perspective \cite{Friston:2015,Hohwy:2013,Clark:2014}, proposing that our cognitive mind may be best characterized by an event-predictive inference system \cite{Butz:2016,Butz:2017}.
+Various discipline associated with cognitive science provide evidence and theoretical considerations in this respect, including neuroscience, linguistics, developmental psychology, and philosophy \Cite{Zacks:2019,Baldwin:2019,...}.
+The closely related, active inference mechanism \cite{PezzuloFristonSchwartenbeck:2016?} implies that our behavior is both, goal-directed and epistemic, expecting increases in internal homeostasis and knowledge gain, respectively.
+Here, we reveal socially epistemic actions and interaction interpretations, gaining knowledge about the internal models, which are assumed to be used to interpret ambiguous utterances by the conversation partner.
 
-Here we focus on the situation of ambiguity resolution as a situation that lets the conversation partners observe each other's behavior and reason about internal beliefs that lead to particular choices of interpretations. The rest of the paper is structured as follows: in Section 2 we first review how different disciplines approached ambiguity in natural language and communication, and then provide a computational background on referential ambiguity resolution. In Section 3, we develop models that are able to infer the preferences of the agent that led her to a particular choice of objects, as well as a model that predicts which utterances are most useful to create the possibility of learning. Sections 4 and 5 demonstrate the results of behavioral experiments, followed by a discussion in Section 6 where we conclude that participants in our experiments were indeed able to use observable behavior of others to infer their prior beliefs, and hypothesize why the ability to intentionally create situations leading to possible learning can be found only in a part of the population.
+In two main studies, we show how speakers update predictive models of the listener's preferences and beliefs when watching social event interactions, such as when offering a few entities to choose from and observing the choice of the partner. 
+We thus show that humans can interpret behavior of other people as driven by their motives, intentions, or personal characteristics.
+Conceptually, this idea goes back to the attribution theory \cite{jones1965acts, kelley1967attribution, kelley1970social}.
+More recently, \citeA{shafto2012learning} developed a Bayesian model of learning that formalizes the process of inferring others' knowledge about the world based on their actions and goals. 
+
+Here we focus on the situation of ambiguity resolution as a situation that lets the conversation partners observe each other's behavior and reason about internal beliefs that lead to particular choices of interpretations.
+Moreover, we adapt the Rational Speech Act model framework, reliably modeling the involved, probabilistic interpretation processes as well as epistemic action choice. 
+Interestingly, the modeling work reveals good interpretive abilities but also strong individual differences when the task is to choose (ambiguous) utterances strategically for gaining social knowledge. 
+
+
+The rest of the paper is structured as follows: in Section 2 we first review how different disciplines approached ambiguity in natural language and communication, and then provide a computational background on referential ambiguity resolution. In Section 3, we develop models that are able to infer the preferences of the agent that led her to a particular choice of objects, as well as a model that predicts which utterances are most useful to create the possibility of learning. Sections 4 and 5 demonstrate the results of behavioral experiments, followed by a discussion in Section 6 where we conclude that participants in our experiments were indeed able to use observable behavior of others to infer their prior beliefs, and hypothesize why the ability to intentionally create situations leading to possible learning can be found only in a part of the population.
 
 \section{Ambiguity in natural language and communication}
 \subsection{Theoretical approaches}
