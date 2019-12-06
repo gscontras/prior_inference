@@ -1,20 +1,38 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: prior-inference-CogSci.aux
 The style file: apacite.bst
 Database file #1: prior-inference.bib
-Repeated entry---line 7623 of file prior-inference.bib
- : @article{federmeier2002picture
- :                               ,
-I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "Hohwy:2013"
+Warning--I didn't find a database entry for "Clark:2014"
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5062 of file apacite.bst
 Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
 while executing---line 5062 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5066 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5066 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5068 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5068 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5072 of file apacite.bst
 Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
 while executing---line 5072 of file apacite.bst
 Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
 while executing---line 5075 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5075 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5076 of file apacite.bst
 Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5076 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5079 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5079 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5079 of file apacite.bst
 Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
 while executing---line 5079 of file apacite.bst
@@ -22,4 +40,6 @@ Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, K
 while executing---line 5079 of file apacite.bst
 Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
 while executing---line 5079 of file apacite.bst
-(There were 9 error messages)
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5079 of file apacite.bst
+(There were 19 error messages)
