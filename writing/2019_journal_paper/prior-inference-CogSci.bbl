@@ -259,6 +259,29 @@ Christiansen, M\BPBI H.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Clark%
+}{%
+Clark%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+Clark:2016}
+\APACinsertmetastar {%
+Clark:2016}%
+\begin{APACrefauthors}%
+Clark, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2016}.
+\newblock
+\APACrefbtitle {Surfing Uncertainty: Prediction, action and the embodied mind}
+  {Surfing uncertainty: Prediction, action and the embodied mind}.
+\newblock
+\APACaddressPublisher{Oxford, UK}{Oxford University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Cushing%
 }{%
 Cushing%
@@ -654,6 +677,28 @@ Hayhoe, M\BPBI M.%
 \APACjournalVolNumPages{Journal of Vision}{3}{1}{49--63}.
 \newblock
 \begin{APACrefDOI} \doi{10:1167/3.1.6} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Hohwy%
+}{%
+Hohwy%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+Hohwy:2013}
+\APACinsertmetastar {%
+Hohwy:2013}%
+\begin{APACrefauthors}%
+Hohwy, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {The Predictive Mind} {The predictive mind}.
+\newblock
+\APACaddressPublisher{Oxford, UK}{Oxford University Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

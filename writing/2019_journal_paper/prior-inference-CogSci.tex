@@ -38,7 +38,7 @@ Nonetheless, ambiguity is ubiquitous during conversations.
 Some ambiguity may be useful for efficiency reasons in cases when clarity is not affected.
 Here we show that ambiguity can have another, socially highly relevant benefit:
 responses to ambiguous utterances can reveal parts of the internal model of the interpreter.
-We ran two main types of experiments online using a modified version of the original reference game experiment \cite{frankgoodman2012} and modeled the recorded data by enhancing the Rational Speech Act framework.
+We ran two main types of experiments online using a modified version of the original reference game experiment \cite{frankgoodman2012}. We modeled the recorded data by enhancing the Rational Speech Act framework.
 We asked whether speakers (i) can use responses as a source of information about the unknown preferences of their conversation partner and (ii) are able to strategically chose ambiguous over unambiguous utterances for learning about their conversation partner's object preferences. 
 The data and modeling results confirm both points. 
 Participants were able to infer Bayesian posteriors of listeners' preferences when analyzing their choice of objects in situations of referential ambiguity.
@@ -75,7 +75,7 @@ Comprehension of sentences relies not only on the ability of listeners to antici
 Dynamic language models show that complex, event-predictive structures guide ambiguity resolution during comprehension and likely also constrain ambiguity generation during language production \cite{Elman:2019}. 
 
 Active inference, that is, the anticipatory, goal-directed, and epistemic invocation of behavior, is
-closely linked to the predictive mind perspective \cite{Friston:2015,Hohwy:2013,Clark:2014}. 
+closely linked to the predictive mind perspective \cite{Friston:2015,Hohwy:2013,Clark:2016}. 
 When systematic abstractions become relevant, event-predictive processes seem to be at play, compressing sensorimotor experiences, including language, into event-predictive encodings \cite{Butz:2016,Butz:2017a}.
 Various disciplines associated with cognitive science suggest that our predictive minds develop event compressive, predictive encodings, which interact with action, including language, production and comprehension, essentially determining thought itself in a highly active, epistemic, goal-directed manner  \cite{Baldwin:2019tsi,DuBrow:2019tsi,Elsner:2019tsi,Fallgatter:2019tsi,Knott:2019tsi,Papafragou:2019tsi,Zacks:2019tsi}.
 Here, we reveal both socially epistemic comprehension and utterance productions, while observing and generating social event-predictive interactions.
@@ -84,7 +84,7 @@ In two main studies, we show how speakers update predictive models of the listen
 We thus show that humans can interpret behavior of other people as driven by their motives, intentions, or personal characteristics.
 Conceptually, this idea goes back to the attribution theory \cite{jones1965acts, kelley1967attribution, kelley1970social}.
 More recently, \citeA{shafto2012learning} developed a Bayesian model of learning that formalizes the process of inferring others' knowledge about the world based on their actions and goals. 
-% TODO - can one contrast this to our modeling perspective?
+% TODO Martin: can one contrast this to our modeling perspective?
 We focus on the situation of ambiguity resolution as a situation that lets the conversation partners observe each other's behavior and reason about internal beliefs that lead to particular choices of interpretations.
 Moreover, we adapt the Rational Speech Act model framework, reliably modeling the involved, probabilistic interpretation processes as well as epistemic action choice. 
 Interestingly, the modeling work reveals good interpretive abilities but also strong individual differences when the task is to choose (ambiguous) utterances strategically for gaining social knowledge. 
@@ -144,7 +144,7 @@ Suppose a speaker produces the single-word utterance ``blue'' in an attempt to s
 
 \begin{figure}
 	\centering
-	\includegraphics[width=2in]{images/rsascene.eps}
+	\includegraphics[width=.5\linewidth]{images/rsascene-eps-converted-to.pdf}
 	\caption{A simple reference game scenario from \protect\citeA{frankgoodman2012}.
 		In the game, speakers are confronted with a collection of objects, which determine the current state $s_s$, where $s_s=(blue\ plain\ square,\ blue\ plain\ circle,\ green\ plain\ square)$ in the depicted example. 
 		They are then supposed to choose a single-word utterance to signal one of the objects to a listener.
@@ -280,10 +280,11 @@ We optimized model parameters either at the individual level or the group level 
 
 $$\textrm{KL} = \sum_{i=1}^{n} P(f'_i\mid u',s') (\textrm {log} (P(f'_i\mid u',s') - \textrm {log} (P(f_i\mid u',s')),$$
 
-where $P(f'_i\mid u',s')$ specifies a participant's normalized slider value settings, which offer empirical estimates of the feature preference posterior given an object scene and a particular utterance $u'$ and object choice $s'$; $P(f_i\mid u',s')$ specifies the respective model prediction value. 
+where $P(f'_i\mid u',s')$ specifies a participant's normalized slider value setting, which offer empirical estimates of the feature preference posterior given an object scene $s$ and a particular utterance $u'$ and object choice $s'$;
+$P(f_i\mid u',s')$ specifies the respective model prediction value. 
 Since no conclusions can be drawn concerning feature values that are not present in the scene, we ignored the respective feature preference estimates.
 By minimizing KL divergence between the empirical and model-predicted preferences for each participant, we maximize the model fit to the participants' data. 
-Moreover, we can use the minimized KL divergence values to perform the likelihood ratio test for nested models relying on the $G^2$-statistic, which is approximately chi-square distributed \cite{Lewandowsky:2011}. 
+Moreover, we can use the minimized KL divergence values to perform the likelihood ratio test for nested models relying on the $G^2$-statistic, because the summed KL divergence values are approximately chi-square distributed \cite{Lewandowsky:2011}. 
 
 
 \subsubsection{Models with global optimization}
@@ -292,32 +293,33 @@ We first present the globally-optimized versions of PSIRSA (Figure~\ref{simple-f
 We fit three parameters for fPSIRSA, and two for sPSIRSA.
 %We hypothesized that participants may either go through all the layers of pragmatic reasoning, and additionally calculate the preferences that lead to particular object choice. The last layer of this model $S_2$ returns a posterior distribution over inferred feature preferences $f$ after observing a listener selecting an object in response to an utterance. 
 %In a simpler model, the object choice is driven only by a $L_0$ semantics enhanced with priors over feature preferences. Upon hearing an utterance \textit{blue} a participants assigns equal probabilities to all blue objects in a scene, and the actual choice of object signals a preference of other feature values that object has. For example, picking a blue circle rather than a blue square is driven by a prefrence for circles.
-The soft-max scaling factor $\alpha$ is only relevant in fPSIRSA, controlling how likely $S_1$ is to maximize utility when choosing utterances. 
+The soft-max scaling factor $\alpha$ is only relevant in fPSIRSA.s
+It controls how likely speaker $S_1$ is to maximize utility when choosing utterances. 
 The default value is typically set to $\alpha=1$ (i.e., no scaling). 
 
 
 The softness parameter $\gamma$ regulates the strength of individual feature preferences $f_i$:
-$$ P(s_i \mid f_i) \prop \begin{cases}
-\frac{1 + \gamma}, & \text{if}\ s_i \text{contains} f_i \\
+$$ P(s_i \mid f_i) \propto \begin{cases}
+1 + \gamma, & \text{if}\ s_i\ \text{contains}\ f_i \\
 \gamma, & \text{otherwise}
 \end{cases},$$
-boosting the choice of those objects $s_i$ that contain feature $f_i$. 
-Note that $\gamma=0$ models a hard preference choice, that is, in that case the speaker is assumed to always choose one of the preferred objects. 
-On the other hand, when $\gamma \rightarrow \infty$, the choice becomes uniform over all objects, effectively ignoring feature preferences. 
-That is, a large value of $\gamma$ approximates uniform prior feature preferences.
+controlling the choice probability of those objects $s_i$ that contain feature $f_i$ compared to those that do not.  
+A value of $\gamma=0$ models a hard preference choice, that is, the speaker always chooses one of the preferred objects. 
+On the other hand, when $\gamma \rightarrow \infty$, the choice prior becomes uniform over all objects, thus ignoring feature preferences. 
+% That is, a large value of $\gamma$ approximates uniform prior feature preferences.
 % I tried to write it in a more general form that works for both P = 0 and P = 1 but I'm not sure that works.
 % This is the R code:
 %objectPreferenceSoftPriors[[utt]] <- objectPreferenceHardPriors[[utt]] + softAddProb
 %objectPreferenceSoftPriors[[utt]] <- objectPreferenceSoftPriors[[utt]] / sum(objectPreferenceSoftPriors[[utt]])
  %$$ P(s_{\textrm{cloud}}\mid f_{\textrm{cloud}}) = \frac{1 + \gamma}{1 + 3\gamma}$$
  % This is what we wrote. It makes sense for P = 1 but I'm not sure the numbers come out right when we calculate how softness changes the probability of objects that don't qualify.
- For example, in the trial shown in Figure \ref{exp1-trial} there are two objects that fit the utterance $u'=``red''$: a red striped cloud and a red dotted circle.
- When $\gamma=1$, $P(s_{\textrm{red\ striped\ cloud}}\mid f_{\textrm{``cloud''}}) ) 2/3$, while
- $P(s_{\textrm{red\ dotted\ circle}}\mid f_{\textrm{``cloud''}}) ) 1/3$, yielding a soft preference for clouds.
+ For example, in the trial shown in Figure~\ref{exp1-trial} there are two objects that fit the utterance $u'=\text{``red''}$: a red striped cloud and a red dotted circle.
+ When $\gamma=1$, $P(s_{\textrm{red\ striped\ cloud}}\mid f_{\textrm{``cloud''}}) = 2/3$, while
+ $P(s_{\textrm{red\ dotted\ circle}}\mid f_{\textrm{``cloud''}})= 1/3$, yielding a soft preference for clouds.
  % The softness parameter $\gamma$ regulates the probability that the middle object will be picked if a person has a preference for clouds. 
  %Preference softness increases with $\gamma$: 
  %a value of $\gamma=0$ specifies a hard preference, which means that the listener will always choose the object that holds the preferred feature value if possible (e.g., clouds when clouds are preferred). 
- We assume $\gamma=0$ as the default model value.
+ We assume $\gamma=0$, that is, hard preferences as the default model value.
  %Let us see how the probability changes if $\gamma$ is set to 0.2:
  % $$ P(s_{\textrm{cloud}}\mid f_{\textrm{cloud}}) = \frac{1 + 0.2}{1 + 3 \cdot 0.2} = 0.75$$
  %Here the preference becomes softer: a subject will pick up clouds with a probability of 0.75 rather than 1.
@@ -327,7 +329,8 @@ That is, a large value of $\gamma$ approximates uniform prior feature preference
  %such that the RSA models can be viewed as being nested within the default model.
 % Note: I removed $\beta$ because it complicates things enormously and proved to be not really relevant.
 
-Finally, we allow for the possibility of noise in our human data introduced by participants not following instructions. The parameter $\beta$ models the possibility that listeners may choose objects that do not pass the semantic filter of the literal listener, that is, objects that do not match the received utterance $u'$. 
+Finally, we allow for the possibility of noise in our human data introduced by participants not following instructions.
+Parameter $\beta$ models the possibility that listeners may choose objects that do not pass the semantic filter of the literal listener, that is, objects that do not match the received utterance $u'$. 
 The computation is equivalent to the softness parameter above, in this case softening the object choices of the literal listener $L_0$ towards a uniform choice over all objects present. 
 %$$ P(s_{\textrm{x}}\mid u_{\textrm{x}}) = \frac{P(s\mid u) + \beta}{\sum P(s\mid u) + 3\beta}$$
 Again, $\beta=0$ models a hard object choice, that is, full obedience to the uttered instruction $u'$, 
@@ -335,8 +338,9 @@ while $\beta \rightarrow \infty$ models a uniform object choice, that is, full i
 %As $\beta$ increases, speakers disregard instructions and assign non-zero probabilities to objects that do not correspond to the utterance; with $\beta = 0$, speakers fully obey the instructions and only consider objects with the named property (e.g., only red objects following the utterance \textit{red}).
 
 
-Figure \ref{barplot_x4} presents the model performance for the scene type of the sample trial from Figure \ref{exp1-trial}. In that trial, participants saw that the middle object was chosen following the utterance \textit{red}. There are two potential referents for this description: a red striped cloud and a red dotted circle. Since the cloud was chosen, we infer that the person who chose this object has a preference for clouds over circles, and for striped objects vs.~dotted ones. From this trial, we cannot learn anything about the preference for solid things or squares, so we expect the subjects to leave the sliders in their default location (i.e., centered).
-The barplot in Figure \ref{barplot_x4} shows that indeed when faced with a combination of objects from Figure \ref{exp1-trial}, both humans and the models assign high slider values to clouds and striped things, and low values of the sliders to circles and dotted things. In this plot we show two types of models: an optimized and a non-optimized one.
+Figure~\ref{barplot_x4} presents the model performance for the scene type of the sample trial from Figure~\ref{exp1-trial}. In that trial, participants saw that the middle object was chosen following the utterance \textit{red}. There are two potential referents for this description: a red striped cloud and a red dotted circle. Since the cloud was chosen, we infer that the person who chose this object has a preference for clouds over circles, and for striped objects over dotted ones. From this trial, we cannot learn anything about the preference for solid things or squares, so we expect the subjects to leave the sliders in their default location (i.e., centered).
+Indeed, both humans and the models assign high slider values to clouds and striped things, and low values to circles and dotted things. 
+Figure~\ref{barplot_x4} shows the average responses of the human participants as well as two types of model predictions: from an optimized and a non-optimized one.
 
 \begin{figure}[ht!]
 	\centering
@@ -348,22 +352,26 @@ The barplot in Figure \ref{barplot_x4} shows that indeed when faced with a combi
 %Since not all of the stimuli allowed for inference of preferences in the same way, we introduced a new categorization of stimuli. Our base model would then predict the same preferences for the same category of stimuli. The categorization takes into account the distribution of features, the chosen object and which feature was uttered. Each category consists of 3 tuples of 2 digits. Each tuple refers to one feature, where the first tuple always refers to the uttered feature. The first digit in each tuple would then denote how many objects share the value of the picked object for the corresponding feature. In figure \ref{FG-ref-game}, if the utterance was blue and the blue square was picked, the first tuple would reference color and its first digit would be a "2". Note that this does not determine which other object shares the feature value, i.e. "blue". To compensate, the second digit of the tuple denotes which other object shares this value. This depends on the order of the objects---we stipulated that the picked object would be the first. The further order would be determined by which other object shares this specific value, i.e. the "blue circle" in figure \ref{FG-ref-game} would be the first of the "other objects" and the "green square" the second. The picked object is at position zero in this sense. Thus the first tuple for figure \ref{FG-ref-game} would be (2,1). For the other tuples, the first digits would be "2" for shape and "3" for texture. To streamline the category code we stipulated that we would order the features in descending order of their first digit, so that we would have texture's "3" next in figure \ref{FG-ref-game}. If a tuple starts with "3" or "1", the second digit would simply denote whether the other objects have different values for that feature or the same. Thus we would have (3,2) for texture, with the second digit signaling that the non-picked objects share their texture. The tuple for shape would finally be (2,2), because the value "square" is shared with the second other object (see above). Thus for figure \ref{FG-ref-game} we would end up with [(2,1),(3,2),(2,2)].
 
 
-Both, the simple and the full models with softness optimized globally provide a good linear fit to the data (simple model: $p < 0.001$, $r^2 = 0.86$; full model: $p < 0.001$, $r^2 = 0.86$) suggesting that participants are indeed able to infer the feature preferences that lead to a choice of an object. %We can also see that the simple model fits the data just as well as the full more complex model.
+Both, the simple and the full models with softness optimized globally provide a good linear fit to the data (simple model: $p < 0.001$, $r^2 = 0.86$; full model: $p < 0.001$, $r^2 = 0.86$) suggesting that participants are indeed able to infer the feature preferences that lead to a choice of an object.
+% TODO please report the actual parameter values here seeing tha the statistic is identical!?
+%We can also see that the simple model fits the data just as well as the full more complex model.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=2in]{images/m13.pdf}
 	\includegraphics[width=2in]{images/m23.pdf}
 	\caption{Average human data from Experiment 1 plotted against the predictions of the $\beta$-optimized RSA model; both models $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full}
+%TODO: Martin: please ensure that ALL figures have the same text sizes and a sufficiently readable (need larger fonts!)
 \end{figure}
 
 %\gcs{how was the fitting performed?}
 
 \subsubsection{Individually-fitted models}
 
-Model fit improves when we fit the parameters at the individual level, calculating a parameter estimate for each participant. Individual-level modeling allows us to explore potential differences between participants, and, more importantly, to evaluate whether the Gricean reasoning strategies apply at the level of individual speakers or only to population as a whole \cite{franke2016reasoning}. 
+Model fit improves when we fit the parameters at the individual level, calculating a parameter estimate for each participant. Individual-level modeling allows us to explore potential differences between participants, and, more importantly, to evaluate whether the Gricean reasoning strategies apply at the level of individual speakers or only to the population as a whole \cite{franke2016reasoning}. 
 
 We optimized $\alpha$ and $\gamma$ in light of the KL divergence between the individual participants' slider value choices and the corresponding model predictions.
+Figure \ref{simple-full-individual} demonstrates that fPSIRSA optimized at the individual level for an additional parameter $\alpha$ does not improve the fit compared to the simplified model. Since the two models account for the same amount of variance in the data, we will proceed with the simplified model evaluation.
 
 
 
@@ -381,8 +389,6 @@ We optimized $\alpha$ and $\gamma$ in light of the KL divergence between the ind
 	\caption{Average human data from Experiment 1 plotted against the predictions of the individually $\gamma$-optimized simplified RSA model $r^{2}=0.86$, 95\% CI [0.81 0.90] and $\gamma$ and $\alpha$ optimized full RSA model; $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full-individual}
 \end{figure}
 
-Figure \ref{simple-full-individual} demonstrates that the full model optimized at the individual level for an additional parameter $\alpha$ does not improve the fit compared to the simplified model. Since the two models account for the same amount of variance in the data, we will proceed with the simplified model evaluation.
-
 
 
 %When compared to the uniform-distribution base model, optimizing $\gamma$ alone yielded a much lower KL divergence value: while the uniform base model yields an average KL divergence of $9.848$ (median=$7.028$), our extended RSA model with individually-optimized $\gamma$ parameters yielded an average KL divergence of $2.058$ (median=$1.524$). 
@@ -399,7 +405,7 @@ Figure \ref{simple-full-individual} demonstrates that the full model optimized a
  
 %We compared  in the light of the distinguishable interpretation cases. 
 
-We plot predictions from the $\beta$ and $\gamma$-optimized model in Figure \ref{cross-validation}, where a strong positive correlation between the human judgments and model predictions ($r^2 = 0.99, p < 0.001$) can be observed. The likelihood ratio test revealed that a $\gamma$ and $\beta$-optimized model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, df = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject giving us 82 degrees of freedom. We additionally check the generalizability of the model by performing a leave-one-out cross-validation. We show in Figure \ref{cross-validation} that the cross-validated model retains its fit.
+We plot predictions from the $\beta$ and $\gamma$-optimized model in Figure~\ref{cross-validation}, where a strong positive correlation between the human judgments and model predictions ($r^2 = 0.99, p < 0.001$) can be observed. The likelihood ratio test revealed that a $\gamma$ and $\beta$-optimized model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, df = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject giving us 82 degrees of freedom. We additionally check the generalizability of the model by performing a leave-one-out cross-validation. We show in Figure \ref{cross-validation} that the cross-validated model retains its fit.
 
 \begin{figure}[ht]
 	\centering
@@ -413,6 +419,9 @@ Thus, we find strong empirical support for our extended RSA model of preference 
 
 %\FloatBarrier 
 % tried to keep figures in relevant sections but it doesn't look too good yet. Maybe when we have final text it will work out
+
+
+
 
 \section{Experiment 2: Choosing utterances}
 
@@ -434,24 +443,24 @@ Participants encountered a reference game scenario similar to Experiment 1 in wh
 
 We used the same sets of objects from Experiment 1, which could vary along three dimensions. Each trial featured a set of three objects, as in Figure \ref{exp2-trial}. After observing the objects, participants adjusted sliders to indicate which single-feature utterance the speaker should choose. Potential utterances corresponded to the features of the objects present; depending on the number of unique features, participants adjusted between three and nine sliders. As with Experiment 1, we averaged the data and the respective model predictions across specific ambiguity classes, which include all scenes that yield identical utterance choice options. 
 In this case, $14$ distinct conditions can be identified, with a total of $84$ slider values to set. 
-Membership within an ambiguity class is defined by how many objects in a scene share each of the features: shape, pattern and color. If objects share a feature, we also consider whether these objects also share other features. For example, in Figure \ref{exp2-trial}, two green objects differ in shape, making the utterance \textit{green} informative. If, on the other hand, both green objects were clouds, uttering \textit{green} would not let the speaker update their belief about listener's preferences.
-In the most extreme case, when all objects share all three features we are dealing with identical objects. In that situation, all utterances are ambiguous since multiple objects can be picked but no utterance allows the speaker to learn anything about the listener since the object choice is uninformative. Another extreme case is a situation when all objects are unique and do not share any features. Then any utterance will only pick 1 object, making learning about preferences impossible.
+Membership within an ambiguity class is defined by how many objects in a scene share each of the features: shape, pattern, and color. If objects share a feature, we also consider whether these objects also share other features. For example, in Figure \ref{exp2-trial}, two green objects differ in shape, making the utterance \textit{green} informative. If, on the other hand, both green objects were clouds, uttering \textit{green} would not allow the speaker to update their beliefs about the listener's shape preferences.
+In the most extreme case, when all objects share all three features we are dealing with identical objects. In that situation, all utterances are ambiguous since multiple objects can be picked but no utterance allows the speaker to learn anything about the listener since the object choice is uninformative. Another extreme case is a situation when all objects are unique and do not share any features. Then any utterance will only pick 1 object, making learning about preferences impossible unless $\beta>0$.
 
-Participants completed a series of 15 trials. As with Experiment 1, objects were chosen at random, with the constraint that 10 trials were potentially informative with respect to listener preferences (as in Figure \ref{exp2-trial}) and 5 trials were uninformative with respect to listener preferences (e.g., observing a set of three identical objects).
+Participants completed a series of $15$ trials. As with Experiment 1, objects were chosen at random, with the constraint that $10$ trials were potentially informative with respect to the listener's preferences (as in Figure~\ref{exp2-trial}) and $5$ trials were uninformative with respect to the listener's preferences (e.g., observing a set of three identical objects).
 
 
 
 \subsection{Results}
 
 
-By reasoning the about predictions of $S_2$, we are able to use our extended RSA model to compute the expected most informative utterance with respect to inferring preferences. In other words, $P_b(u)$ calculates the probability that a speaker would choose $u$ for the purpose of inferring preferences in our reference game scenario.
+By reasoning about predictions of $S_2$, we are able to use PSIRSA to compute the expected most informative utterance with respect to inferring preferences. In other words, $P_b(u)$ calculates the probability that a speaker would choose $u$ for the purpose of inferring preferences in our reference game scenario.
 
 To generate predictions from $P_b(u)$, a total of four free parameters can be identified. 
 As with the analysis for Experiment 1, we consider different values for $\alpha$ (i.e., speaker's soft-max factor) and $\gamma$ (i.e., preference softness), and obedience $\beta$. 
 We must also set the $\lambda$ parameter, which factors the importance of choosing the expected most informative utterance with respect to the determined KL divergence values.
 Note that when allowing negative values for $\lambda$, negated information gain essentially minimizes expected information gain.
 Thus, with negative values for $\lambda$, the model favors unambiguous utterances. 
-Moreover, when $\lambda=0$, the model collapses to a uniform distribution of utterance choices 
+Moreover, when $\lambda=0$, the model collapses to a uniform distribution over the available utterances.
 %\gcs{is this true? Will utterances that can describe more objects be preferred?}. Asya: verified with Martin, the description is correct.
 
 
@@ -474,9 +483,9 @@ Figure \ref{simple-full-x3} shows the model fits of the unfit full and simple RS
 %Again determining $G^2$ to enable a Chi-square test for significant model differences in fitting the data, the difference between the base model and one-parameter model (factored by $2*15=30$) of $49.23$ (median difference of $56.67$) is highly significant, indicating that the one-parameter model fits the data much better than a uniform base model. 
 % Note: these interesting observations may not be mentioned _ I leave them in for now because the discussion can relate to them 
 
-To fit model parameters, we again optimized values with respect to KL divergence estimates between the participant data and the model predictions---in this case for utterance preference distributions.  We compared three individually-optimized models to determine which model provides the best linear fit to the data. All the models have similar levels of complexity with either softness $\gamma$, obedience $\beta$, or KL-value factor $\lambda$ being optimized. The results indicate that we get the best fit by optimizing the KL-factor $\lambda$ ($r^{2}=0.91$; cross-validated optimization $r^{2}=0.89$), with other models capturing less variance in the data: obedience ($r^{2}=0.80$), softness of preferences ($r^{2}=0.81$). Two- and three-parameter optimization were unstable due to parameter interactions, therefore we do not report the results for those models here.
+To fit model parameters, we again optimized values with respect to KL divergence estimates between the participant data and the model predictions---in this case for utterance preference distributions.  We compared three individually-optimized models to determine which model provides the best linear fit to the data. All the models have similar levels of complexity with either softness $\gamma$, obedience $\beta$, or KL-value factor $\lambda$ being optimized. The results indicate that we get the best fit by optimizing the KL-factor $\lambda$ ($r^{2}=0.91$; leave one out cross-validated optimization $r^{2}=0.89$), with other models capturing less variance in the data: obedience ($r^{2}=0.80$), softness of preferences ($r^{2}=0.81$). Two- and three-parameter optimization were unstable due to parameter interactions, therefore we do not report the results for those models.
 
-Unlike for Experiment 1, where even the parameter-free models ensured a good linear fit to the data, optimization produces a large effect on the model predictions in Experiment 2. We illustrate this effect with the predictions of the model for the sample trial (Figure \ref{exp2-trial}). Figure \ref{barplot_x3} shows that in a situation with a  striped green circle, a blue striped cloud, and a solid green  cloud, uttering things like \textit{cloud}, \textit{striped}, or \textit{green} and then observing the listener pick an referent could let the speaker learn something about the listener's preferences. For example, \textit{green} picks out two objects: a striped green circle and a solid green cloud; after saying ``green'', the speaker could learn whether the listener prefers striped things over solid things, or circles over clouds.
+Unlike for Experiment 1, where even the parameter-free models ensured a good linear fit to the data, optimization produces a large effect on the model predictions in Experiment 2. We illustrate this effect with the predictions of the model for the sample trial (Figure~\ref{exp2-trial}). Figure~\ref{barplot_x3} shows that in a situation with a striped green circle, a blue striped cloud, and a solid green cloud, uttering things like \textit{cloud}, \textit{striped}, or \textit{green} and then observing the listener pick a referent could let the speaker learn something about the listener's preferences. For example, \textit{green} picks out two objects: a striped green circle and a solid green cloud; after saying ``green'', the speaker could learn whether the listener prefers striped things over solid things, or circles over clouds.
 
 \begin{figure}[ht!]
 	\centering
@@ -488,7 +497,7 @@ Unlike for Experiment 1, where even the parameter-free models ensured a good lin
 %After matching the respective actual feature values with the utterance choice relevant within the respectively-binned conditions, we again computed averages over utterance preference values for the respectively-binned trials across participants and across respective model predictions \gcs{this is awfully hard to follow}. Asya: decided to remove this part, reordering can just as well stay behind the scenes.
 
 
-In Figure \ref{kl-factor} we compare a $\lambda$-optimized model (right panel) to a uniform base model (left panel) that assigns equal probability to each utterance available for a particular context.
+In Figure~\ref{kl-factor} we compare a $\lambda$-optimized model (right panel) to a uniform base model (left panel), which assigns equal probability to each utterance available for a particular context.
  %\gcs{how is this model defined?} Asya: it really is a model that takes the probability of 1 and distributes it evenly between all possible utterances.
  A model with the $\lambda$ parameter optimized at the individual level fits the data better than a uniform model  (Likelihood ratio test: $G = 268.87, df = 82, p <0.01$). 
 \begin{figure}[ht]
@@ -498,21 +507,23 @@ In Figure \ref{kl-factor} we compare a $\lambda$-optimized model (right panel) t
 	\caption{Average human data from Experiment 2 plotted against the predictions of the uniform and simple RSA models; uniform model  $r^{2}=0.75$, 95\% CI [0.65 0.84], KL-factor optimized  $r^{2}=0.91$, 95\% CI [0.92 1.06]]. }\label{kl-factor}
 \end{figure}
 
-We were able to distinguish three groups of participants on the basis of the fitted parameter values of $\lambda$. 
+We were able to distinguish three groups of participants on the basis of the individually fitted parameter values of $\lambda$. 
 The first was a ``lazy worker'' group of $18$ participants whose fitted $\lambda$ values were close to zero (i.e.,  $-.02 < \lambda<.02$).
 The second group of $32$ participants yielded more negative values (i.e., $-7.13<\lambda<-.02$), indicating that a significant number of participants preferred to systematically choose unambiguous utterances. 
 The third group of again $32$ participants yielded more positive values (i.e., $.02<\lambda<.54$), indicating that these participants indeed chose the most ambiguous utterance in a strategic manner. 
+
 
 
 \section{General discussion}
 
 We have found strong support for our model of inferring priors on the basis of ambiguous language.
 % \gcs{we might want to talk about this as ``priors'' in the introduction as well} Asya: added a new section to the Intro
-The results of Experiment 1 demonstrate that na\"ive speakers are able to reason pragmatically about \emph{why} listeners may take the actions they do, and the success of our computational model in predicting the observed behavior offers an articulated hypothesis about \emph{how} this reasoning proceeds: when speakers are aware of the ambiguity in their utterances, observing how listeners resolve that ambiguity provides clues to the preferences listeners use when doing so.
+The results of Experiment~1 demonstrate that na\"ive speakers are able to reason pragmatically about \emph{why} listeners may take the actions they do. 
+The success of our computational model in predicting the observed behavior offers an articulated hypothesis about \emph{how} this reasoning proceeds: when speakers are aware of the ambiguity in their utterances, observing how listeners resolve that ambiguity provides clues to the preferences listeners use when doing so.
 The results of Experiment 2 demonstrate that at least some speakers are able to capitalize on this reasoning to strategically select ambiguous utterances that are most likely to inform their understanding of the preferences of their listeners.
 
 Taken together, the results of our experiments and the success of our model in predicting those results indicate that humans are aware of the fact that by observing responses to ambiguous utterances, information about the listener's prior preferences can be inferred. 
-Used in this way to inform preferences, ambiguous utterances are closely related to questions, which may ask directly about the  relevant preferences. 
+Used in this way to inform preferences, ambiguous utterances are closely related to questions, which may ask directly about the relevant preferences. 
 However, ambiguous language provides a ready alternative to asking directly. In normal conversations, a speaker might favor the indirect route afforded by ambiguous utterances, given considerations of politeness and possibly also in an effort to keep the conversation open, in that the conversation partner can choose to disambiguate the ambiguous utterance or, alternatively, choose to continue in a different direction or even to change topic.
 
 
@@ -522,9 +533,9 @@ Moreover, the expected information gain term -- computing the utterance choice o
 It causes the model to strive for an anticipated epistemic value that quantifies the expected information gain about the assumed preference priors of the listener, that is, expected social information gain. 
 
 
-In general, predictive states of mind about others do not only include considerations of the preferences of others, but generally may concern all imaginable knowledge, opinions, beliefs, current train of thought considerations, and preferences of the listener.
+More generally, predictive states of mind about others do not only include considerations of the preferences of others, but may also concern all imaginable knowledge, opinions, beliefs, current train of thought considerations, and preferences of the listener.
 Moreover, during a conversation, the involved ``social'' priors will dynamically develop depending on the internal predictive models and the generated utterances, actions, and responses of the speaker and listener. 
-The prior dynamically depend on the privileged grounds of the conversational partners, and also on the common ground in which the conversation unfolds.
+The priors dynamically depend on the privileged grounds of the conversational partners, and also on the common ground in which the conversation unfolds.
 In that sense, ambiguous utterances are one device for projecting parts of each others' privileged grounds into the common ground. 
 
 

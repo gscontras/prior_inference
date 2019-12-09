@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.24)  6 DEC 2019 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.24)  9 DEC 2019 22:13
 entering extended mode
 **./prior-inference-CogSci.tex
 (prior-inference-CogSci.tex
@@ -721,31 +721,14 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 [1
 
 {C:/Users/Martin Butz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-LaTeX Warning: Citation `Hohwy:2013' undefined on input line 78.
-
-
-LaTeX Warning: Citation `Clark:2014' undefined on input line 78.
-
 [2] [3] [4]
-
-LaTeX Warning: File `images/rsascene.eps' not found on input line 147.
-
-Package epstopdf Info: Source file: <images/rsascene.eps>
-(epstopdf)             Output file: <images/rsascene-eps-converted-to.pdf>
-(epstopdf)                    date: 2019-08-17 23:59:22
-(epstopdf)                    size: 6152 bytes
-(epstopdf)             Command: <epstopdf --outfile=images/rsascene-eps-convert
-ed-to.pdf images/rsascene.eps>
-(epstopdf)             \includegraphics on input line 147.
-Package epstopdf Info: Output file is already uptodate.
 <images/rsascene-eps-converted-to.pdf, id=20, 64.24pt x 21.07875pt>
 File: images/rsascene-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/rsascene-eps-converted-to.pdf>
 Package pdftex.def Info: images/rsascene-eps-converted-to.pdf used on input lin
 e 147.
-(pdftex.def)             Requested size: 144.54pt x 47.43086pt.
+(pdftex.def)             Requested size: 172.5pt x 56.60616pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -764,55 +747,46 @@ File: images/preference-trial.png Graphic file (type png)
 <use images/preference-trial.png>
 Package pdftex.def Info: images/preference-trial.png used on input line 268.
 (pdftex.def)             Requested size: 325.215pt x 212.7228pt.
- [9 <./images/preference-trial.png>]
-! Undefined control sequence.
-l.300 $$ P(s_i \mid f_i) \prop
-                               \begin{cases}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[10] <images/barplot_x4.pdf, id=50, 505.89pt x 505.89pt>
+ [9 <./images/preference-trial.png>] [10]
+<images/barplot_x4.pdf, id=50, 505.89pt x 505.89pt>
 File: images/barplot_x4.pdf Graphic file (type pdf)
 
 <use images/barplot_x4.pdf>
-Package pdftex.def Info: images/barplot_x4.pdf used on input line 343.
+Package pdftex.def Info: images/barplot_x4.pdf used on input line 347.
 (pdftex.def)             Requested size: 180.67499pt x 180.67676pt.
  <images/m13.pdf, id=51, 441.65pt x 441.65pt>
 File: images/m13.pdf Graphic file (type pdf)
 
 <use images/m13.pdf>
-Package pdftex.def Info: images/m13.pdf used on input line 355.
+Package pdftex.def Info: images/m13.pdf used on input line 361.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
  <images/m23.pdf, id=52, 549.05125pt x 538.01pt>
 File: images/m23.pdf Graphic file (type pdf)
 
 <use images/m23.pdf>
-Package pdftex.def Info: images/m23.pdf used on input line 356.
+Package pdftex.def Info: images/m23.pdf used on input line 362.
 (pdftex.def)             Requested size: 144.54pt x 141.62788pt.
  [11 <./images/barplot_x4.pdf> <./images/m13.pdf> <./images/m23.pdf>] <images/m
 3.pdf, id=75, 441.65pt x 441.65pt>
 File: images/m3.pdf Graphic file (type pdf)
  <use images/m3.pdf>
-Package pdftex.def Info: images/m3.pdf used on input line 379.
+Package pdftex.def Info: images/m3.pdf used on input line 387.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
 
 <images/m16.pdf, id=76, 441.65pt x 441.65pt>
 File: images/m16.pdf Graphic file (type pdf)
  <use images/m16.pdf>
-Package pdftex.def Info: images/m16.pdf used on input line 380.
+Package pdftex.def Info: images/m16.pdf used on input line 388.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
 
-Overfull \hbox (4.58752pt too wide) in paragraph at lines 402--403
+Overfull \hbox (4.58752pt too wide) in paragraph at lines 408--409
 \OT1/ptm/m/n/10 pos-i-tive cor-re-la-tion be-tween the hu-man judg-ments and mo
 del pre-dic-tions ($\OML/ptmcm/m/it/10 r[] \OT1/ptmcm/m/n/10 = 0\OML/ptmcm/m/it
 /10 :\OT1/ptmcm/m/n/10 99\OML/ptmcm/m/it/10 ; p <
  []
 
 
-Overfull \hbox (2.93791pt too wide) in paragraph at lines 402--403
+Overfull \hbox (2.93791pt too wide) in paragraph at lines 408--409
 \OT1/ptm/m/n/10 model pro-vides a bet-ter fit com-pared to a model op-ti-mized 
 only for $\OML/ptmcm/m/it/10 $ \OT1/ptm/m/n/10 ($\OML/ptmcm/m/it/10 G[] \OT1/p
 tmcm/m/n/10 = 237\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 36\OML/ptmcm/m/it/10 ; d
@@ -822,13 +796,13 @@ f \OT1/ptmcm/m/n/10 =
 <images/m5.pdf, id=77, 441.65pt x 530.98375pt>
 File: images/m5.pdf Graphic file (type pdf)
  <use images/m5.pdf>
-Package pdftex.def Info: images/m5.pdf used on input line 406.
+Package pdftex.def Info: images/m5.pdf used on input line 412.
 (pdftex.def)             Requested size: 144.54pt x 173.77489pt.
 
 <images/m8.pdf, id=78, 441.65pt x 530.98375pt>
 File: images/m8.pdf Graphic file (type pdf)
  <use images/m8.pdf>
-Package pdftex.def Info: images/m8.pdf used on input line 407.
+Package pdftex.def Info: images/m8.pdf used on input line 413.
 (pdftex.def)             Requested size: 144.54pt x 173.77489pt.
  [12 <./images/m3.pdf> <./images/m16.pdf>]
 <images/utterance-choice-trial.png, id=96, 1243.64626pt x 1038.88126pt>
@@ -836,70 +810,64 @@ File: images/utterance-choice-trial.png Graphic file (type png)
 
 <use images/utterance-choice-trial.png>
 Package pdftex.def Info: images/utterance-choice-trial.png used on input line 4
-31.
+40.
 (pdftex.def)             Requested size: 252.94499pt x 211.29172pt.
  [13 <./images/m5.pdf> <./images/m8.pdf>] <images/x3_m1.pdf, id=115, 505.89pt x
  505.89pt>
 File: images/x3_m1.pdf Graphic file (type pdf)
  <use images/x3_m1.pdf>
-Package pdftex.def Info: images/x3_m1.pdf used on input line 466.
+Package pdftex.def Info: images/x3_m1.pdf used on input line 475.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
 
 <images/x3_m7.pdf, id=116, 505.89pt x 505.89pt>
 File: images/x3_m7.pdf Graphic file (type pdf)
  <use images/x3_m7.pdf>
-Package pdftex.def Info: images/x3_m7.pdf used on input line 467.
+Package pdftex.def Info: images/x3_m7.pdf used on input line 476.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
  [14 <./images/utterance-choice-trial.png>]
 <images/barplot_x3.pdf, id=121, 505.89pt x 505.89pt>
 File: images/barplot_x3.pdf Graphic file (type pdf)
 
 <use images/barplot_x3.pdf>
-Package pdftex.def Info: images/barplot_x3.pdf used on input line 483.
+Package pdftex.def Info: images/barplot_x3.pdf used on input line 492.
 (pdftex.def)             Requested size: 180.67499pt x 180.67676pt.
  <images/x3_m20.pdf, id=122, 505.89pt x 505.89pt>
 File: images/x3_m20.pdf Graphic file (type pdf)
 
 <use images/x3_m20.pdf>
-Package pdftex.def Info: images/x3_m20.pdf used on input line 496.
+Package pdftex.def Info: images/x3_m20.pdf used on input line 505.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
  <images/x3_m11.pdf, id=123, 505.89pt x 505.89pt>
 File: images/x3_m11.pdf Graphic file (type pdf)
 
 <use images/x3_m11.pdf>
-Package pdftex.def Info: images/x3_m11.pdf used on input line 497.
+Package pdftex.def Info: images/x3_m11.pdf used on input line 506.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
  [15 <./images/x3_m1.pdf> <./images/x3_m7.pdf>] [16 <./images/barplot_x3.pdf>] 
 (prior-inference-CogSci.bbl [17 <./images/x3_m20.pdf> <./images/x3_m11.pdf>]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
- [18]) [19] (prior-inference-CogSci.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [18]) [19] (prior-inference-CogSci.aux) ) 
 Here is how much of TeX's memory you used:
- 13582 strings out of 493323
- 265011 string characters out of 3139046
- 308351 words of memory out of 3000000
- 16804 multiletter control sequences out of 15000+200000
+ 13585 strings out of 493323
+ 265092 string characters out of 3139046
+ 308465 words of memory out of 3000000
+ 16808 multiletter control sequences out of 15000+200000
  52087 words of font info for 103 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,54p,2164b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/
-ucrr8a.pfb><C:/Users/Martin Butz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/sym
-bol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prior-inference-CogSci.pdf (19 pages, 1451172 bytes).
+ 55i,9n,54p,2164b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/en
+c/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Martin Butz/AppDat
+a/Roaming/MiKTeX/2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
+w/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on prior-inference-CogSci.pdf (19 pages, 1452015 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -7697,15 +7697,103 @@
   publisher = {Cognitive Science Society},
 }
 
-@Article{Elman:2017,
-  author    = {Elman, J. L. and McRae, K.},
-  title     = {A model of event knowledge},
-  journal   = {Proceedings of the 39th Annual Conference of the Cognitive Science Society},
-  year      = {2017},
-  pages     = {337-342},
-  address   = {Austin, TX},
-  editor    = {G. Gunzelmann, A. Howes, T. Tenbrink, \& E. J. Davelaar},
-  publisher = {Cognitive Science Society},
+@Article{Elman:2019,
+  author   = {Elman, J. L., and McRae, K.},
+  title    = {A model of event knowledge},
+  journal  = {Psychological Review},
+  year     = {2019},
+  volume   = {126},
+  pages    = {252–291},
+  abstract = {Our knowledge of events and situations in the world plays a critical role in our ability to understand what is happening around us, to predict what might happen next, and to comprehend language. What has not been so clear is the form and structure of this knowledge, how it is learned, and how it is deployed in real time. Despite many important theoretical proposals, often using different terminology such as schemas, scripts, frames, and event knowledge, developing a model that addresses these three questions (the form, learning, and use of such knowledge) has remained an elusive challenge for decades. In this article, we present a connectionist model of event knowledge that attempts to fill this gap. From sequences of activities, the model learns both the internal structure of activities as well as the temporal structure that organizes activity sequences. The model simulates a wide range of human behaviors that have been argued to involve the use of event knowledge and the temporal structure of events. Furthermore, it makes testable predictions about behaviors not yet observed. Most importantly, the model’s ability to learn event structure from experience is a novel solution to the question, “What is the form and representation of event knowledge?”},
+  doi      = {10.1037/rev0000133},
+}
+
+@Article{Fallgatter:2019tsi,
+  author  = {Helena Storchak and Ann-Christine Ehlis and Andreas J. Fallgatter},
+  title   = {Action monitoring alterations as indicators of predictive deficits in schizophrenia},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{Cooper:2019tsi,
+  author  = {Richard Paul Cooper},
+  title   = {Action production and event comprehension as routine sequential behaviours},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{Zacks:2019tsi,
+  author  = {David Stawarczyk and Matthew A. Bezdek and Jeffrey M. Zacks},
+  title   = {Constructing event representations: The role of the midline default network core},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{Paulin:2019tsi,
+  author  = {Michael G. Paulin and Joseph Cahill-Lane},
+  title   = {Events in early nervous system evolution},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{Papafragou:2019tsi,
+  author  = {Ercenur {\"U}nal and Yue Ji and Anna Papafragou},
+  title   = {From event representation to linguistic meaning},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{Baldwin:2019tsi,
+  author  = {Dare Ann Baldwin and Jessica E. Kosie},
+  title   = {How does the mind render streaming experience as events?},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{Elsner:2019tsi,
+  author  = {Birgit Elsner and Maurits Adam},
+  title   = {Infants' prediction of action-events for human and non-human agents},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{Bilkey:2019tsi,
+  author  = {David Bilkey and Charlotte Jensen},
+  title   = {Neural markers of event boundaries},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{McRae:2019tsi,
+  author  = {Ken McRae and Kevin S. Brown and Jeffrey L. Elman},
+  title   = {Prediction-based learning and processing of event knowledge},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{Knott:2019tsi,
+  author  = {Alistair Knott and Martin Takac},
+  title   = {Roles for event representations in sensorimotor experience, memory formation and language processing},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
+}
+
+@Article{DuBrow:2019tsi,
+  author  = {Yeon Soon Shin and Sarah DuBrow},
+  title   = {Structuring memory through inference-based event segmentation},
+  journal = {Topics in Cognitive Science},
+  year    = {2019},
+  note    = {this volume},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
