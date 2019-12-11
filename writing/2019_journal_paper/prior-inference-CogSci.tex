@@ -337,9 +337,9 @@ Again, $\beta=0$ models a hard object choice, that is, full obedience to the utt
 while $\beta \rightarrow \infty$ models a uniform object choice, that is, full ignorance of $u'$.
 %As $\beta$ increases, speakers disregard instructions and assign non-zero probabilities to objects that do not correspond to the utterance; with $\beta = 0$, speakers fully obey the instructions and only consider objects with the named property (e.g., only red objects following the utterance \textit{red}).
 
-Figure~\ref{barplot_x4} presents the simple model performance for the scene type of the sample trial from Figure~\ref{exp1-trial}. In that trial, participants saw that the middle object was chosen following the utterance \textit{red}. There are two potential referents for this description: a red striped cloud and a red dotted circle. Since the cloud was chosen, we infer that the person who chose this object has a preference for clouds over circles, and for striped objects over dotted ones. From this trial, we cannot learn anything about the preference for solid things or squares, so we expect the subjects to leave the sliders in their default location (i.e., centered).
+Figure~\ref{barplot_x4} presents the simple model performance for the scene type of the sample trial from Figure~\ref{exp1-trial}. In that trial, participants saw that the middle object was chosen following the utterance \textit{red} \gcs{need to be consistent with italics vs.~quotation}. There are two potential referents for this description: the red striped cloud and the red dotted circle. Since the cloud was chosen, we infer that the person who chose this object has a preference for clouds over circles, and for striped objects over dotted ones. From this trial, we cannot learn anything about the preference for solid things or squares, so we expect the subjects to leave the sliders in their default location (i.e., centered).
 Indeed, both humans and the models assign high slider values to clouds and striped things, and low values to circles and dotted things. 
-Figure~\ref{barplot_x4} shows the average responses of the human participants as well as two types of model predictions: from an optimized and a non-optimized one.
+Figure~\ref{barplot_x4} shows the average responses of the human participants as well as two types of model predictions: from an optimized \gcs{globally?} and a non-optimized one \gcs{are these simple or pragmatic model predictions?}.
 
 \begin{figure}[ht!]
 	\centering
@@ -351,7 +351,7 @@ Figure~\ref{barplot_x4} shows the average responses of the human participants as
 %Since not all of the stimuli allowed for inference of preferences in the same way, we introduced a new categorization of stimuli. Our base model would then predict the same preferences for the same category of stimuli. The categorization takes into account the distribution of features, the chosen object and which feature was uttered. Each category consists of 3 tuples of 2 digits. Each tuple refers to one feature, where the first tuple always refers to the uttered feature. The first digit in each tuple would then denote how many objects share the value of the picked object for the corresponding feature. In figure \ref{FG-ref-game}, if the utterance was blue and the blue square was picked, the first tuple would reference color and its first digit would be a "2". Note that this does not determine which other object shares the feature value, i.e. "blue". To compensate, the second digit of the tuple denotes which other object shares this value. This depends on the order of the objects---we stipulated that the picked object would be the first. The further order would be determined by which other object shares this specific value, i.e. the "blue circle" in figure \ref{FG-ref-game} would be the first of the "other objects" and the "green square" the second. The picked object is at position zero in this sense. Thus the first tuple for figure \ref{FG-ref-game} would be (2,1). For the other tuples, the first digits would be "2" for shape and "3" for texture. To streamline the category code we stipulated that we would order the features in descending order of their first digit, so that we would have texture's "3" next in figure \ref{FG-ref-game}. If a tuple starts with "3" or "1", the second digit would simply denote whether the other objects have different values for that feature or the same. Thus we would have (3,2) for texture, with the second digit signaling that the non-picked objects share their texture. The tuple for shape would finally be (2,2), because the value "square" is shared with the second other object (see above). Thus for figure \ref{FG-ref-game} we would end up with [(2,1),(3,2),(2,2)].
 
 
-Both, the simple and the pragmatic models with softness optimized globally provide a good linear fit to the data (simple model: $p < 0.001$, $r^2 = 0.86$; full model: $p < 0.001$, $r^2 = 0.86$) suggesting that participants are indeed able to infer the feature preferences that lead to a choice of an object\footnote{We were unable to perform a likelihood ration test to compare these models since they are not nested.}.
+As Figure \ref{simple-full} shows, both the simple and the pragmatic model with softness ($\gamma$) optimized globally provide a good linear fit to the data (simple model: $p < 0.001$, $r^2 = 0.86$; full model: $p < 0.001$, $r^2 = 0.86$), suggesting that participants are indeed able to infer the feature preferences that lead to the choice of an object.\footnote{We were unable to perform a likelihood ratio test to compare these models since they are not nested.}
 % TODO please report the actual parameter values here seeing tha the statistic is identical!?
 %We can also see that the simple model fits the data just as well as the full more complex model.
 
@@ -359,7 +359,7 @@ Both, the simple and the pragmatic models with softness optimized globally provi
 	\centering
 	\includegraphics[width=2in]{images/m13.pdf}
 	\includegraphics[width=2in]{images/m23.pdf}
-	\caption{Average human data from Experiment 1 plotted against the predictions of the $\beta$-optimized Pragmatic and Simple Social Inference models; both models: $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full}
+	\caption{Average human data from Experiment 1 plotted against the predictions of the Pragmatic and Simple Social Inference models with $\beta$ optimized globally across participants \gcs{in the prose you say that softness ($\gamma$) was optimized, and in the figure it says that obedience ($\beta$) was set to its default}; both models: $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full}
 %TODO: Martin: please ensure that ALL figures have the same text sizes and a sufficiently readable (need larger fonts!)
 \end{figure}
 
@@ -381,7 +381,7 @@ Since the two models account for the same amount of variance in the data, we wil
 	\centering
 	\includegraphics[width=2in]{images/m3.pdf}
 	\includegraphics[width=2in]{images/m16.pdf}
-	\caption{Average human data from Experiment 1 plotted against the predictions of the individually $\gamma$-optimized Simple Social Inference model $r^{2}=0.86$, 95\% CI [0.81 0.90] and $\gamma$ and $\alpha$ optimized Pragmatic Social Inference model; $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full-individual}
+	\caption{Average human data from Experiment 1 plotted against the predictions of the individually $\gamma$-optimized Simple Social Inference model $r^{2}=0.86$, 95\% CI [0.81 0.90] and $\gamma$- and $\alpha$-optimized Pragmatic Social Inference model; $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full-individual}
 \end{figure}
 
 
@@ -406,11 +406,12 @@ We plot predictions from the $\beta$ and $\gamma$-optimized model in Figure~\ref
 	\centering
 	\includegraphics[width=2in]{images/m5.pdf}
 	\includegraphics[width=2in]{images/m8.pdf}
-	\caption{Average human data from Experiment 1 plotted against the predictions of the individually $\beta$ and $\gamma$-optimized simplified RSA model, non-cross-validated (left panel) $r^{2}=0.99$, 95\% CI [0.98 1.00] and cross-validated (right panel) $r^{2}=0.99$, 95\% CI [0.98 1.01] .}\label{cross-validation}
+	\caption{Average human data from Experiment 1 plotted against the predictions of the individually $\beta$- and $\gamma$-optimized simplified RSA model, non-cross-validated (left panel; $r^{2}=0.99$, 95\% CI [0.98 1.00]) and cross-validated (right panel; $r^{2}=0.99$, 95\% CI [0.98 1.01]).}\label{cross-validation}
 \end{figure}
 
 
-Thus, we find strong empirical support for our Simple Social Inference model: speakers are indeed able to use listener behavior to arrive at information about their preferences. The Pragmatic Social Inference model does not predict the data better, we relate this result to the fact that the task in our experiments does not rely on the type of pragmatic inference of the original reference games \cite{frankgoodman2012}. There speakers needed to signal a particular object to the listener, while in our experiments the intention of the speaker is quite different: she produces an utterance to create a situation of ambiguity resolution. In turn, it is not the listener's goal to infer what object was intended as a referent; rather the listener picks an object according to her preferences.
+Thus, we find strong empirical support for our Simple Social Inference model: speakers are indeed able to use listener behavior to arrive at information about their preferences. We fail to find that the Pragmatic Social Inference model predicts the data better. This result suggests that the task in our experiments does not require full-blown pragmatic inference about alternative utterances, in contrast with \citeA{frankgoodman2012} but in line with \citeA{sikos2019}. 
+%There speakers needed to signal a particular object to the listener, while in our experiments the intention of the speaker is quite different: she produces an utterance to create a situation of ambiguity resolution. In turn, it is not the listener's goal to infer what object was intended as a referent; rather the listener picks an object according to her preferences.
 
 The question now turns to whether speakers are able to capitalize on this reasoning when it comes to selecting utterances. In other words, are speakers aware that ambiguous language is potentially more informative?
 
