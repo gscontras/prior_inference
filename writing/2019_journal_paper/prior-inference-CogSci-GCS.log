@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  11 DEC 2019 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  11 DEC 2019 18:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**prior-inference-CogSci.tex
-(./prior-inference-CogSci.tex
+**prior-inference-CogSci-GCS.tex
+(./prior-inference-CogSci-GCS.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
@@ -574,8 +574,8 @@ Package: apacite 2013/07/21 v6.03 APA citation
 (/usr/local/texlive/2019/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
 )
-(./prior-inference-CogSci.aux)
-\openout1 = `prior-inference-CogSci.aux'.
+No file prior-inference-CogSci-GCS.aux.
+\openout1 = `prior-inference-CogSci-GCS.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
@@ -586,7 +586,6 @@ LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 32.
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 32
 .
-
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
@@ -696,145 +695,396 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
 LaTeX Warning: No \author given.
 
+
+LaTeX Warning: Citation `frankgoodman2012' undefined on input line 41.
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
+
+LaTeX Warning: Citation `belardinelli2016s' undefined on input line 71.
+
+
+LaTeX Warning: Citation `belardinelli2018mental' undefined on input line 71.
+
+
+LaTeX Warning: Citation `Friston:2015' undefined on input line 71.
+
+
+LaTeX Warning: Citation `Hayhoe:2003' undefined on input line 71.
+
+
+LaTeX Warning: Citation `lohmann2019hands' undefined on input line 71.
+
+
+LaTeX Warning: Citation `Christiansen:2016' undefined on input line 72.
+
+
+LaTeX Warning: Citation `Gaerdenfors:2014' undefined on input line 72.
+
+
+LaTeX Warning: Citation `federmeier2002picture' undefined on input line 73.
+
+
+LaTeX Warning: Citation `levy2008expectation' undefined on input line 74.
+
+
+LaTeX Warning: Citation `Elman:2019' undefined on input line 75.
+
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2] [3] [4]
-<images/rsascene-eps-converted-to.pdf, id=21, 64.24pt x 21.07875pt>
+
+LaTeX Warning: Citation `Hohwy:2013' undefined on input line 78.
+
+
+LaTeX Warning: Citation `Clark:2016' undefined on input line 78.
+
+
+LaTeX Warning: Citation `Butz:2016' undefined on input line 79.
+
+
+LaTeX Warning: Citation `Butz:2017a' undefined on input line 79.
+
+
+LaTeX Warning: Citation `Baldwin:2019tsi' undefined on input line 80.
+
+
+LaTeX Warning: Citation `DuBrow:2019tsi' undefined on input line 80.
+
+
+LaTeX Warning: Citation `Elsner:2019tsi' undefined on input line 80.
+
+
+LaTeX Warning: Citation `Fallgatter:2019tsi' undefined on input line 80.
+
+
+LaTeX Warning: Citation `Knott:2019tsi' undefined on input line 80.
+
+
+LaTeX Warning: Citation `Papafragou:2019tsi' undefined on input line 80.
+
+
+LaTeX Warning: Citation `Zacks:2019tsi' undefined on input line 80.
+
+
+LaTeX Warning: Citation `jones1965acts' undefined on input line 85.
+
+
+LaTeX Warning: Citation `kelley1967attribution' undefined on input line 85.
+
+
+LaTeX Warning: Citation `kelley1970social' undefined on input line 85.
+
+
+LaTeX Warning: Citation `shafto2012learning' undefined on input line 86.
+
+
+LaTeX Warning: Citation `pinker2015sense' undefined on input line 105.
+
+
+LaTeX Warning: Citation `cushing1994fatal' undefined on input line 106.
+
+
+LaTeX Warning: Citation `grice1975' undefined on input line 108.
+
+
+LaTeX Warning: Citation `chomsky2002minimalism' undefined on input line 108.
+
+[2]
+
+LaTeX Warning: Citation `ossarichardson2019' undefined on input line 110.
+
+
+LaTeX Warning: Citation `foppa1995mutual' undefined on input line 114.
+
+
+LaTeX Warning: Citation `markova1995preface' undefined on input line 114.
+
+
+LaTeX Warning: Citation `levinson2000' undefined on input line 117.
+
+
+LaTeX Warning: Citation `piantadosietal2012' undefined on input line 117.
+
+
+LaTeX Warning: Citation `wasow2015' undefined on input line 117.
+
+
+LaTeX Warning: Citation `ferreira2008' undefined on input line 119.
+
+
+LaTeX Warning: Citation `eisenberg1984ambiguity' undefined on input line 125.
+
+
+LaTeX Warning: Citation `mohr1983implications' undefined on input line 125.
+
+
+LaTeX Warning: Citation `carmon2013' undefined on input line 127.
+
+
+LaTeX Warning: Citation `pascale1981art' undefined on input line 129.
+
+[3]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 144.
+
+
+LaTeX Warning: Reference `FG-ref-game' on page 4 undefined on input line 144.
+
+<images/rsascene-eps-converted-to.pdf, id=18, 64.24pt x 21.07875pt>
 File: images/rsascene-eps-converted-to.pdf Graphic file (type pdf)
 <use images/rsascene-eps-converted-to.pdf>
 Package pdftex.def Info: images/rsascene-eps-converted-to.pdf  used on input li
-ne 147.
+ne 149.
 (pdftex.def)             Requested size: 172.5pt x 56.60616pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
+
+LaTeX Warning: Citation `frankgoodman2012' undefined on input line 155.
+
+
+LaTeX Warning: Citation `frankgoodman2012' undefined on input line 155.
+
+
+LaTeX Warning: Citation `frankgoodman2012' undefined on input line 160.
+
+
+LaTeX Warning: Citation `frankejaeger2016' undefined on input line 160.
+
+
+LaTeX Warning: Citation `goodmanfrank2016' undefined on input line 160.
+
+[4]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 171.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
- [5 <./images/rsascene-eps-converted-to.pdf>]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 171.
+
+
+LaTeX Warning: Reference `FG-ref-game' on page 5 undefined on input line 172.
+
+[5 <./images/rsascene-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
- [6] [7] [8]
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
+
+
+LaTeX Warning: Reference `FG-ref-game' on page 6 undefined on input line 200.
+
+
+LaTeX Warning: Citation `qingfranke2015' undefined on input line 203.
+
+[6]
+
+LaTeX Warning: Citation `sikos2019' undefined on input line 233.
+
+
+LaTeX Warning: Reference `FG-ref-game' on page 7 undefined on input line 235.
+
+[7]
+
+LaTeX Warning: Reference `FG-ref-game' on page 8 undefined on input line 262.
+
+
+LaTeX Warning: Reference `exp1-trial' on page 8 undefined on input line 264.
+
+
+LaTeX Warning: Reference `exp1-trial' on page 8 undefined on input line 264.
+
+
+LaTeX Warning: Reference `exp1-trial' on page 8 undefined on input line 264.
+
+
+LaTeX Warning: Reference `exp1-trial' on page 8 undefined on input line 266.
+
+[8]
 <images/preference-trial.png, id=41, 1654.18pt x 1082.0425pt>
 File: images/preference-trial.png Graphic file (type png)
 <use images/preference-trial.png>
-Package pdftex.def Info: images/preference-trial.png  used on input line 268.
+Package pdftex.def Info: images/preference-trial.png  used on input line 272.
 (pdftex.def)             Requested size: 325.215pt x 212.7228pt.
- [9 <./images/preference-trial.png>] [10]
-<images/barplot_x4.pdf, id=51, 505.89pt x 505.89pt>
+
+
+LaTeX Warning: Reference `exp1-trial' on page 9 undefined on input line 278.
+
+
+LaTeX Warning: Citation `Lewandowsky:2011' undefined on input line 291.
+
+[9 <./images/preference-trial.png>]
+
+LaTeX Warning: Reference `simple-full' on page 10 undefined on input line 296.
+
+
+LaTeX Warning: Reference `exp1-trial' on page 10 undefined on input line 320.
+
+
+LaTeX Warning: Reference `barplot_x4' on page 10 undefined on input line 345.
+
+
+LaTeX Warning: Reference `exp1-trial' on page 10 undefined on input line 345.
+
+
+LaTeX Warning: Reference `barplot_x4' on page 10 undefined on input line 347.
+
+<images/barplot_x4.pdf, id=47, 505.89pt x 505.89pt>
 File: images/barplot_x4.pdf Graphic file (type pdf)
 <use images/barplot_x4.pdf>
-Package pdftex.def Info: images/barplot_x4.pdf  used on input line 346.
+Package pdftex.def Info: images/barplot_x4.pdf  used on input line 351.
 (pdftex.def)             Requested size: 180.67499pt x 180.67676pt.
-<images/m13.pdf, id=52, 441.65pt x 441.65pt>
+<images/m13.pdf, id=48, 441.65pt x 441.65pt>
 File: images/m13.pdf Graphic file (type pdf)
 <use images/m13.pdf>
-Package pdftex.def Info: images/m13.pdf  used on input line 360.
+Package pdftex.def Info: images/m13.pdf  used on input line 365.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
-<images/m23.pdf, id=53, 549.05125pt x 538.01pt>
+<images/m23.pdf, id=49, 549.05125pt x 538.01pt>
 File: images/m23.pdf Graphic file (type pdf)
 <use images/m23.pdf>
-Package pdftex.def Info: images/m23.pdf  used on input line 361.
+Package pdftex.def Info: images/m23.pdf  used on input line 366.
 (pdftex.def)             Requested size: 144.54pt x 141.62788pt.
- [11 <./images/barplot_x4.pdf>]
-<images/m3.pdf, id=62, 441.65pt x 441.65pt>
+
+LaTeX Warning: Citation `franke2016reasoning' undefined on input line 375.
+
+[10]
+
+LaTeX Warning: Reference `simple-full-individual' on page 11 undefined on input
+ line 378.
+
+<images/m3.pdf, id=54, 441.65pt x 441.65pt>
 File: images/m3.pdf Graphic file (type pdf)
 <use images/m3.pdf>
-Package pdftex.def Info: images/m3.pdf  used on input line 382.
+Package pdftex.def Info: images/m3.pdf  used on input line 391.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
-<images/m16.pdf, id=63, 441.65pt x 441.65pt>
+<images/m16.pdf, id=55, 441.65pt x 441.65pt>
 File: images/m16.pdf Graphic file (type pdf)
 <use images/m16.pdf>
-Package pdftex.def Info: images/m16.pdf  used on input line 383.
+Package pdftex.def Info: images/m16.pdf  used on input line 392.
 (pdftex.def)             Requested size: 144.54pt x 144.53865pt.
 
-Overfull \hbox (4.58752pt too wide) in paragraph at lines 403--404
+LaTeX Warning: Reference `cross-validation' on page 11 undefined on input line 
+412.
+
+
+LaTeX Warning: Reference `cross-validation' on page 11 undefined on input line 
+412.
+
+
+Overfull \hbox (4.58752pt too wide) in paragraph at lines 412--413
 \OT1/ptm/m/n/10 pos-i-tive cor-re-la-tion be-tween the hu-man judg-ments and mo
 del pre-dic-tions ($\OML/ptmcm/m/it/10 r[] \OT1/ptmcm/m/n/10 = 0\OML/ptmcm/m/it
 /10 :\OT1/ptmcm/m/n/10 99\OML/ptmcm/m/it/10 ; p <
  []
 
-<images/m5.pdf, id=64, 441.65pt x 530.98375pt>
+
+Overfull \hbox (2.93791pt too wide) in paragraph at lines 412--413
+\OT1/ptm/m/n/10 model pro-vides a bet-ter fit com-pared to a model op-ti-mized 
+only for $\OML/ptmcm/m/it/10 ^^M$ \OT1/ptm/m/n/10 ($\OML/ptmcm/m/it/10 G[] \OT1
+/ptmcm/m/n/10 = 237\OML/ptmcm/m/it/10 :\OT1/ptmcm/m/n/10 36\OML/ptmcm/m/it/10 ;
+ df \OT1/ptmcm/m/n/10 =
+ []
+
+[11 <./images/barplot_x4.pdf> <./images/m13.pdf> <./images/m23.pdf>]
+<images/m5.pdf, id=78, 441.65pt x 530.98375pt>
 File: images/m5.pdf Graphic file (type pdf)
 <use images/m5.pdf>
-Package pdftex.def Info: images/m5.pdf  used on input line 407.
+Package pdftex.def Info: images/m5.pdf  used on input line 416.
 (pdftex.def)             Requested size: 144.54pt x 173.77489pt.
-<images/m8.pdf, id=65, 441.65pt x 530.98375pt>
+<images/m8.pdf, id=79, 441.65pt x 530.98375pt>
 File: images/m8.pdf Graphic file (type pdf)
 <use images/m8.pdf>
-Package pdftex.def Info: images/m8.pdf  used on input line 408.
+Package pdftex.def Info: images/m8.pdf  used on input line 417.
 (pdftex.def)             Requested size: 144.54pt x 173.77489pt.
-[12 <./images/m13.pdf> <./images/m23.pdf> <./images/m3.pdf> <./images/m16.pdf>]
-[13 <./images/m5.pdf> <./images/m8.pdf>]
-<images/utterance-choice-trial.png, id=115, 1243.64626pt x 1038.88126pt>
+ [12 <./images/m3.pdf> <./images/m16.pdf> <./images/m5.pdf> <./images/m8.pdf>]
+<images/utterance-choice-trial.png, id=111, 1243.64626pt x 1038.88126pt>
 File: images/utterance-choice-trial.png Graphic file (type png)
 <use images/utterance-choice-trial.png>
 Package pdftex.def Info: images/utterance-choice-trial.png  used on input line 
-438.
+444.
 (pdftex.def)             Requested size: 252.94499pt x 211.29172pt.
- [14 <./images/utterance-choice-trial.png>]
-<images/x3_m1.pdf, id=120, 505.89pt x 505.89pt>
+
+
+LaTeX Warning: Reference `exp2-trial' on page 13 undefined on input line 448.
+
+
+LaTeX Warning: Reference `exp2-trial' on page 13 undefined on input line 450.
+
+[13 <./images/utterance-choice-trial.png>]
+
+LaTeX Warning: Reference `exp2-trial' on page 14 undefined on input line 453.
+
+
+LaTeX Warning: Reference `simple-full-x3' on page 14 undefined on input line 47
+3.
+
+<images/x3_m1.pdf, id=117, 505.89pt x 505.89pt>
 File: images/x3_m1.pdf Graphic file (type pdf)
 <use images/x3_m1.pdf>
-Package pdftex.def Info: images/x3_m1.pdf  used on input line 473.
+Package pdftex.def Info: images/x3_m1.pdf  used on input line 479.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
-<images/x3_m7.pdf, id=121, 505.89pt x 505.89pt>
+<images/x3_m7.pdf, id=118, 505.89pt x 505.89pt>
 File: images/x3_m7.pdf Graphic file (type pdf)
 <use images/x3_m7.pdf>
-Package pdftex.def Info: images/x3_m7.pdf  used on input line 474.
+Package pdftex.def Info: images/x3_m7.pdf  used on input line 480.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
- [15 <./images/x3_m1.pdf> <./images/x3_m7.pdf>]
-<images/barplot_x3.pdf, id=139, 505.89pt x 505.89pt>
+
+LaTeX Warning: Reference `exp2-trial' on page 14 undefined on input line 492.
+
+
+LaTeX Warning: Reference `barplot_x3' on page 14 undefined on input line 492.
+
+[14]
+<images/barplot_x3.pdf, id=122, 505.89pt x 505.89pt>
 File: images/barplot_x3.pdf Graphic file (type pdf)
 <use images/barplot_x3.pdf>
-Package pdftex.def Info: images/barplot_x3.pdf  used on input line 491.
+Package pdftex.def Info: images/barplot_x3.pdf  used on input line 496.
 (pdftex.def)             Requested size: 180.67499pt x 180.67676pt.
-<images/x3_m20.pdf, id=140, 505.89pt x 505.89pt>
+
+
+LaTeX Warning: Reference `kl-factor' on page 15 undefined on input line 504.
+
+<images/x3_m20.pdf, id=123, 505.89pt x 505.89pt>
 File: images/x3_m20.pdf Graphic file (type pdf)
 <use images/x3_m20.pdf>
-Package pdftex.def Info: images/x3_m20.pdf  used on input line 504.
+Package pdftex.def Info: images/x3_m20.pdf  used on input line 509.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
-<images/x3_m11.pdf, id=141, 505.89pt x 505.89pt>
+<images/x3_m11.pdf, id=124, 505.89pt x 505.89pt>
 File: images/x3_m11.pdf Graphic file (type pdf)
 <use images/x3_m11.pdf>
-Package pdftex.def Info: images/x3_m11.pdf  used on input line 505.
+Package pdftex.def Info: images/x3_m11.pdf  used on input line 510.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
+[15 <./images/x3_m1.pdf> <./images/x3_m7.pdf> <./images/barplot_x3.pdf>]
 
-Overfull \hbox (13.83649pt too wide) in paragraph at lines 509--513
-[]\OT1/ptm/m/n/10 We were able to dis-tin-guish three groups of par-tic-i-pants
- on the ba-sis of the individually-
- []
+LaTeX Warning: Citation `Butz:2017' undefined on input line 534.
 
-[16 <./images/barplot_x3.pdf>] [17 <./images/x3_m20.pdf> <./images/x3_m11.pdf>]
-(./prior-inference-CogSci.bbl [18] [19]) [20] (./prior-inference-CogSci.aux) ) 
+[16 <./images/x3_m20.pdf> <./images/x3_m11.pdf>]
+No file prior-inference-CogSci-GCS.bbl.
+[17] (./prior-inference-CogSci-GCS.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 13754 strings out of 492616
- 267780 string characters out of 6129482
- 316471 words of memory out of 5000000
- 17348 multiletter control sequences out of 15000+600000
- 53223 words of font info for 104 fonts, out of 8000000 for 9000
+ 13702 strings out of 492616
+ 266821 string characters out of 6129482
+ 311841 words of memory out of 5000000
+ 17303 multiletter control sequences out of 15000+600000
+ 51564 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,48p,2161b,295s stack positions out of 5000i,500n,10000p,200000b,80000s
-{
-/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
-ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2019/texm
-f-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-dist/font
-s/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/ur
-w/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/ut
-mri8a.pfb>
-Output written on prior-inference-CogSci.pdf (20 pages, 1433252 bytes).
+ 55i,9n,48p,2165b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texm
+f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on prior-inference-CogSci-GCS.pdf (17 pages, 1405415 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
+ 196 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  88 words of extra memory for PDF output out of 10000 (max. 10000000)
 
