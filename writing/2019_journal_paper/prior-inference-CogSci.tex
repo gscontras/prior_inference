@@ -492,21 +492,22 @@ Participants completed a series of $15$ trials. As with Experiment 1, objects we
 \subsection{Results}
 
 
-By reasoning about the predictions of $S_2$, we are able to use the Social Inference models to compute the expected most informative utterance with respect to inferring preferences. In other words, $P_b(u)$ calculates the probability that a speaker would choose $u$ for the purpose of inferring preferences in our reference game scenario.
+By reasoning about the predictions of $S_2$, we are able to use simplePSIRSA to compute the expected most informative utterance with respect to inferring preferences. In other words, $P_b(u)$ calculates the probability that a speaker would choose $u$ for the purpose of inferring preferences in our reference game scenario.
 
-To generate predictions from $P_b(u)$, a total of four free parameters can be identified. 
-As with the analysis for Experiment 1, we consider different values for $\alpha$ (i.e., speaker's soft-max factor) and $\gamma$ (i.e., preference softness), and obedience $\beta$. 
-We must also set the $\lambda$ parameter, which factors the importance of choosing the expected most informative utterance with respect to the determined KL divergence values.
+To generate predictions from $P_{S-2}(u)$, a total of three free parameters can be identified. 
+We consider different values for $\gamma$ (i.e., preference softness) and obedience $\beta$ as well as for the $\lambda$ parameter, which factors the importance of choosing the expected most informative utterance with respect to the determined KL divergence values.
 Note that when allowing negative values for $\lambda$, negated information gain essentially minimizes expected information gain.
-Thus, with negative values for $\lambda$, the model favors unambiguous utterances. 
+Thus, negative values for $\lambda$ yield a model that favors unambiguous utterances. 
 Moreover, when $\lambda=0$, the model collapses to a uniform distribution over the available utterances.
 %\gcs{is this true? Will utterances that can describe more objects be preferred?}. Asya: verified with Martin, the description is correct.
 
 
 %The proper model fit is confirmed when considering the correlation between the participants' data and the model predictions. 
 
-Figure~\ref{simple-full-x3} shows the model fits of the non-optimized fullPSIRSA and simplePSIRSA models.
-Both models fail to predict the human data.
+Figure~\ref{simple-full-x3} shows the model fits of the non-optimized simplePSIRSA and the simplePSIRSA model, 
+where all three parameters are optimized globally. 
+Again we optimized values with respect to KL divergence estimates between the participant data and the model predictions---in this case for utterance preference distributions.
+Both models fail to predict the human data ($r^2=0.0709$, $p=0.01439$).
 
 %Figure \ref{exp2-results} plots predictions from the $\lambda$-optimized model, together with the human data. Again, we observe a strong positive correlation between the human judgments and model predictions ($r^2 = 0.91, p < 0.001$). In other words, we find evidence in support of the idea that speakers reason pragmatically about the relative informativity of ambiguous language.
 
@@ -514,7 +515,8 @@ Both models fail to predict the human data.
 	\centering
 	\includegraphics[width=2in]{images/x3_m1.pdf}
 	\includegraphics[width=2in]{images/x3_m7.pdf}
-	\caption{Average human data from Experiment 2 plotted against the predictions of the non-optimized fullPSIRSA and simplePSIRSA models; both  models: $r^{2}=0.07$.}\label{simple-full-x3}
+	\caption{Average human data from Experiment 2 plotted against the predictions of the non-optimized and three parameter optimized simplePSIRSA models. }
+	\label{simple-full-x3}
 \end{figure}
 
 % I recorded the same number of conditions as in Experiment 1. I think Experiment 2 used the same ambiguity code.
@@ -523,9 +525,13 @@ Both models fail to predict the human data.
 %Again determining $G^2$ to enable a Chi-square test for significant model differences in fitting the data, the difference between the base model and one-parameter model (factored by $2*15=30$) of $49.23$ (median difference of $56.67$) is highly significant, indicating that the one-parameter model fits the data much better than a uniform base model. 
 % Note: these interesting observations may not be mentioned _ I leave them in for now because the discussion can relate to them 
 
-To fit model parameters, we again optimized values with respect to KL divergence estimates between the participant data and the model predictions---in this case for utterance preference distributions.  We compared three individually-optimized \gcs{what about global optimization?} Simple Social Inference models to determine which model provides the best linear fit to the data. All the models have similar levels of complexity with either softness $\gamma$, obedience $\beta$, or KL-value factor $\lambda$ being optimized. The results indicate that we get the best fit by optimizing the KL-factor $\lambda$ ($r^{2}=0.91$; leave-one-out cross-validated optimization $r^{2}=0.89$), with other models capturing less variance in the data ($\beta$-optimized $r^{2}=0.80$; $\gamma$-optimized $r^{2}=0.81$). Two- and three-parameter optimizations were unstable due to parameter interactions; therefore, we do not report the results for those models.
+Seeing that global optimization does not yield good fits, we moved on to individual optimization. 
+We compared three individually-optimized simplePSIRSA models to determine which model provides the best fit to the data. 
+All models have similar levels of complexity with either softness $\gamma$, obedience $\beta$, or KL-value factor $\lambda$ being optimized.
+The results indicate that we get the best fit by optimizing the KL-factor $\lambda$ ($r^{2}=0.9071$; leave-one-out cross-validated optimization $r^{2}=0.8902$), with other models capturing less variance in the data ($\beta$-optimized $r^{2}=0.8039$; $\gamma$-optimized $r^{2}=0.8100$).
+Two- and three-parameter individual optimizations were unstable due to parameter interactions; therefore, we do not report the results for those models.
 
-Unlike for Experiment 1 where even the non-optimized models provided a good linear fit to the data, optimization produces a large effect on the model predictions in Experiment 2. Figure~\ref{barplot_x3} compares individually-optimized vs.~non-optimized model predictions against the human behavior for the sample trial in Figure~\ref{exp2-trial}. We see that the non-optimized model strongly favors ambiguous utterances: in a situation with a striped green circle, a blue striped cloud, and a solid green cloud, uttering things like \textit{cloud}, \textit{striped}, or \textit{green} (i.e., the utterances that pick out more than one object in the scene) and then observing the listener pick a referent could let the speaker learn something about the listener's preferences. However, Figure~\ref{barplot_x3} also shows that human behavior deviates quite starkly from the unfit, ambiguity-selecting baseline; once we optimize $\lambda$, we are able to capture human behavior in the task.
+Unlike for Experiment 1 where even the non-optimized models provided a good linear fit to the data, optimization produces a large effect on the model predictions in Experiment 2. Figure~\ref{barplot_x3} compares individually-optimized vs.~non-optimized model predictions against the human behavior for the sample trial in Figure~\ref{exp2-trial}. We see that the non-optimized model strongly favors ambiguous utterances: in a situation with a striped green circle, a blue striped cloud, and a solid green cloud, uttering things like \textit{cloud}, \textit{striped}, or \textit{green} (i.e., the utterances that point to more than one object in the scene) and then observing the listener pick a referent could let the speaker learn something about the listener's preferences. However, Figure~\ref{barplot_x3} shows that human behavior deviates quite strongly from the unfit, ambiguity-selecting baseline; once we optimize $\lambda$, we are able to capture human behavior in the task.
 %For example, \textit{green} picks out two objects: a striped green circle and a solid green cloud; after saying ``green'', the speaker could learn whether the listener prefers striped things over solid things, or circles over clouds.
 
 \begin{figure}[ht!]
@@ -538,38 +544,56 @@ Unlike for Experiment 1 where even the non-optimized models provided a good line
 %After matching the respective actual feature values with the utterance choice relevant within the respectively-binned conditions, we again computed averages over utterance preference values for the respectively-binned trials across participants and across respective model predictions \gcs{this is awfully hard to follow}. Asya: decided to remove this part, reordering can just as well stay behind the scenes.
 
 
-In Figure~\ref{kl-factor}, we compare a $\lambda$-optimized simple model (right panel) to a uniform base model (left panel), which assigns equal probability to each utterance available for a particular context \gcs{why is this a reasonable model to compare against? I think we need to do more to motivate this comparison.}. 
+In Figure~\ref{kl-factor}, we compare $\lambda$-optimized simplePSIRSA (right panel) with a uniform base model (left panel), which assigns equal probability to each utterance available for a particular context.
+This baseline model essentially has not utterance  preferences whatsoever, but reflects the fact that the ambiguity classes distinguish between cases with a different number of utterance choice options (i.e. three to nine)
+ %\gcs{why is this a reasonable model to compare against? I think we need to do more to motivate this comparison.}. 
  %\gcs{how is this model defined?} Asya: it really is a model that takes the probability of 1 and distributes it evenly between all possible utterances.
- A model with the $\lambda$ parameter optimized at the individual level fits the data better than a uniform model  (Likelihood ratio test: $G = 268.87, df = 82, p <0.01$). 
+ Since simplePSIRSA with $\lambda=0$ collapses to the baseline model, optimizing the $\lambda$ parameter in simplePSIRSA is a nested model. 
+ When statistically comparing the individually optimized $\lambda$ simplePSIRSA model with the baseline model, the likelihood ration test confirms that individual $\lambda$ optimizations yield better fits than the baseline model ($G^2 = 268.87, \textrm{df} = 82, p <0.01$).
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=2in]{images/x3_m20.pdf}
 	\includegraphics[width=2in]{images/x3_m11.pdf}
-	\caption{Average human data from Experiment 2 plotted against the predictions of the uniform and simple RSA models; uniform model  $r^{2}=0.75$, 95\% CI [0.65 0.84], KL-factor optimized  $r^{2}=0.91$, 95\% CI [0.92 1.06]]. }\label{kl-factor}
+	\caption{Average human data from Experiment 2 plotted against the predictions of the uniform baseline model and the simplePSIRSA model; uniform model: $r^{2}=0.7497$, KL-factor $\lambda$ optimized model: $r^{2}=0.9071$. }\label{kl-factor}
 \end{figure}
 
 We were able to distinguish three groups of participants on the basis of the individually-optimized parameter values of $\lambda$. 
-The first was a ``lazy worker'' group of $18$ participants whose fitted $\lambda$ values were close to zero (i.e.,  $-.02 < \lambda<.02$), indicating that they were simply selecting utterances at random.
+The first was a ``lazy worker'' group of $18$ participants whose fitted $\lambda$ values were close to zero (i.e.,  $-.02 < \lambda<.02$), indicating that they were randomly selecting utterances.
 The second group of $32$ participants yielded more negative values (i.e., $-7.13<\lambda<-.02$), indicating that a significant number of participants preferred to systematically choose unambiguous utterances. 
 The third group of again $32$ participants yielded more positive values (i.e., $.02<\lambda<.54$), indicating that these participants indeed chose the most ambiguous utterance in a strategic manner. 
 
+
+
 \section{General discussion}
 
-We have found strong support for our Simple Social Inference model of inferring priors on the basis of ambiguous language.
+We have found strong support for PSIRSA, which infers preference posteriors on the basis of ambiguous language.
 % \gcs{we might want to talk about this as ``priors'' in the introduction as well} Asya: added a new section to the Intro
 The results of Experiment~1 demonstrate that na\"ive speakers are able to reason pragmatically about \emph{why} listeners may take the actions they do. 
 The success of our computational model in predicting the observed behavior offers an articulated hypothesis about \emph{how} this reasoning proceeds: when speakers are aware of the ambiguity in their utterances, observing how listeners resolve that ambiguity provides clues to the preferences listeners use when doing so.
-The results of Experiment 2 demonstrate that at least some speakers are able to capitalize on this reasoning to strategically select ambiguous utterances that are most likely to inform their understanding of the preferences of their listeners. \gcs{it might be good to speculate as to why only some of our participants selected ambiguous utterances: misunderstanding instructions, inability to follow instructions, or perhaps some other factor}
+The results of Experiment 2 demonstrate that at least some speakers are able to capitalize on this reasoning to strategically select ambiguous utterances that are most likely to inform their understanding of the preferences of their listeners.
+It is highly surprising, though, that this group included only about $40\%$ of the participants. 
+Further experiments with highly similar setups (not reported in detail here), however, confirmed this trend. 
+In particular, we ran a complementary study where participants first had to work on trials similar to those in Experiment~1 and then on trials as those in Experiment~2. 
+Even in such an experimental setup, the trend stayed the same.
+Currently we are transferring the experimental setup to more natural scenarios. 
+Even in these cases, though, it appears that we still find participants who consistently prefer to choose unambiguous utterances. 
+Two explanations may be warranted and need to be investigated further. 
+First, it may be the case that these participants think overly egocentrically, thus having the intention to signal their own preferences rather than to give options to the listener. 
+Second, it may simply be the case that these participants do not have access to the required deeper reasoning process, and thus prefer to give instructions with predictable outcomes. 
+% \gcs{it might be good to speculate as to why only some of our participants selected ambiguous utterances: misunderstanding instructions, inability to follow instructions, or perhaps some other factor}
 
-Taken together, the results of our experiments and the success of our model in predicting those results indicate that humans are aware of the fact that by observing responses to ambiguous utterances, information about the listener's prior preferences can be inferred. 
-Used in this way to inform preferences, ambiguous utterances are closely related to questions, which may ask directly about the relevant preferences. 
-However, ambiguous language provides a ready alternative to asking directly. In normal conversations, a speaker might favor the indirect route afforded by ambiguous utterances, given considerations of politeness and possibly also in an effort to keep the conversation open---with ambiguous language, the conversation partner can choose to disambiguate the ambiguous utterance or, alternatively, choose to continue in a different direction or even to change topic.
+Nonetheless, taken together, the results of our experiments and the success of our model in predicting those results indicate that humans are aware of the fact that by observing responses to ambiguous utterances, information about the listener's prior preferences can be inferred, that is, they are able to learn about the hidden model states of others, including preferences but probably also other belief and knowledge aspects. 
+It should also be noted that ambiguous utterances used in the way presented to learn about others are closely related to questions, which may ask directly about considered preferences. 
+Ambiguous utterances provide a ready but more subtle, indirect alternative to asking directly. 
+In normal conversations, a speaker might favor the indirect route, given considerations of politeness and possibly also in an effort to keep the conversation open. 
+With ambiguous language, the conversation partner can choose to disambiguate the ambiguous utterance or, alternatively, choose to continue in a different direction or even to change topic.
 
 
-We note that the analyzed preference prior, viewed from a broader perspective, can be closely related to a part of the predictive mind of the listener and the speaker \cite{Butz:2016,Butz:2017}. 
-When interpreting an utterance---in our case, opening up a set of referent choices---the listener's mind infers the current choices and integrates them with the preference priors, implicitly anticipating possible choice consequences.
+We note that the analyzed preference prior, viewed from a broader perspective, can be closely related to a part of the event-predictive mind of the listener and the speaker \cite{Butz:2016,Butz:2017}. 
+When interpreting an utterance---in our case, opening up a set of referent choices---the listener's mind infers the current choices and integrates them with her preference priors, implicitly anticipating possible choice consequences.
 Moreover, the expected information gain term---computing the utterance choice of the speaker---can be equated with the computation of socially-motivated active inference \cite{Butz:2017a,Friston:2015}.
-It causes the model to strive for an anticipated epistemic value that quantifies the expected information gain about the assumed preference priors of the listener---that is, expected social information gain. 
+It causes the model to strive for an anticipated epistemic value that quantifies the expected information gain about the preferences of the listener---that is, expecting a form of social information gain. 
 
 
 More generally, predictive states of mind about others do not only include considerations of the preferences of others, but may also concern all imaginable knowledge, opinions, beliefs, current trains of thought, and preferences of the listener.

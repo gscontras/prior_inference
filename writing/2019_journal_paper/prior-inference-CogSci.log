@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.24)  13 DEC 2019 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.24)  13 DEC 2019 21:26
 entering extended mode
 **./prior-inference-CogSci.tex
 (prior-inference-CogSci.tex
@@ -810,52 +810,52 @@ Package pdftex.def Info: images/utterance-choice-trial.png used on input line 4
 <images/x3_m1.pdf, id=118, 505.89pt x 505.89pt>
 File: images/x3_m1.pdf Graphic file (type pdf)
  <use images/x3_m1.pdf>
-Package pdftex.def Info: images/x3_m1.pdf used on input line 514.
+Package pdftex.def Info: images/x3_m1.pdf used on input line 516.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
 
 <images/x3_m7.pdf, id=119, 505.89pt x 505.89pt>
 File: images/x3_m7.pdf Graphic file (type pdf)
  <use images/x3_m7.pdf>
-Package pdftex.def Info: images/x3_m7.pdf used on input line 515.
+Package pdftex.def Info: images/x3_m7.pdf used on input line 517.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
  [15 <./images/utterance-choice-trial.png>]
 <images/barplot_x3.pdf, id=124, 505.89pt x 505.89pt>
 File: images/barplot_x3.pdf Graphic file (type pdf)
 
 <use images/barplot_x3.pdf>
-Package pdftex.def Info: images/barplot_x3.pdf used on input line 532.
+Package pdftex.def Info: images/barplot_x3.pdf used on input line 539.
 (pdftex.def)             Requested size: 180.67499pt x 180.67676pt.
  <images/x3_m20.pdf, id=125, 505.89pt x 505.89pt>
 File: images/x3_m20.pdf Graphic file (type pdf)
 
 <use images/x3_m20.pdf>
-Package pdftex.def Info: images/x3_m20.pdf used on input line 545.
+Package pdftex.def Info: images/x3_m20.pdf used on input line 556.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
  <images/x3_m11.pdf, id=126, 505.89pt x 505.89pt>
 File: images/x3_m11.pdf Graphic file (type pdf)
 
 <use images/x3_m11.pdf>
-Package pdftex.def Info: images/x3_m11.pdf used on input line 546.
+Package pdftex.def Info: images/x3_m11.pdf used on input line 557.
 (pdftex.def)             Requested size: 144.54pt x 144.54294pt.
 
-Overfull \hbox (13.83649pt too wide) in paragraph at lines 550--554
+Overfull \hbox (13.83649pt too wide) in paragraph at lines 561--565
 []\OT1/ptm/m/n/10 We were able to dis-tin-guish three groups of par-tic-i-pants
  on the ba-sis of the individually-
  []
 
 [16 <./images/x3_m1.pdf> <./images/x3_m7.pdf>] [17 <./images/barplot_x3.pdf>]
-(prior-inference-CogSci.bbl [18 <./images/x3_m20.pdf> <./images/x3_m11.pdf>]
+[18 <./images/x3_m20.pdf> <./images/x3_m11.pdf>] (prior-inference-CogSci.bbl
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
 
 [19] [20]) [21] (prior-inference-CogSci.aux) ) 
 Here is how much of TeX's memory you used:
- 13582 strings out of 493323
- 265118 string characters out of 3139046
+ 13584 strings out of 493323
+ 265131 string characters out of 3139046
  307558 words of memory out of 3000000
  16808 multiletter control sequences out of 15000+200000
- 50997 words of font info for 100 fonts, out of 3000000 for 9000
+ 52110 words of font info for 102 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,54p,2164b,335s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/font
@@ -868,7 +868,7 @@ pData/Roaming/MiKTeX/2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on prior-inference-CogSci.pdf (21 pages, 1456960 bytes).
+Output written on prior-inference-CogSci.pdf (21 pages, 1457758 bytes).
 PDF statistics:
  210 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
