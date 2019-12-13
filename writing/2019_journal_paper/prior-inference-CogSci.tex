@@ -23,7 +23,11 @@
 % Possible title: Higher order pragmatic reasoning in reference games
 
 %\title{On the purpose of ambiguous utterances}
-\title{Social Inference via Ambiguity}
+\title{Learning About Others:\\
+	Pragmatic Social Inference with Ambiguous Rational Speech Acts
+	and their Interpretive Resolutions}
+% OR: Pragmatic Social Inference while Observing Ambiguity Resolutions 
+%                        and Strategically Generating Ambiguous Utterances
 %\author{\large \textbf{our names}\\
 %our emails\\
 %our affiliations}
@@ -35,11 +39,11 @@
 \begin{abstract}
 Grice's maxim of manner postulates that ambiguity should be avoided to maximize clarity.
 Nonetheless, ambiguity is ubiquitous during conversations.
-Some ambiguity may be useful for efficiency reasons in cases when clarity is not affected.
-Here we show that ambiguity can have another, socially highly relevant benefit:
-responses to ambiguous utterances can reveal parts of the internal model of the interpreter.
-We ran two online experiments using a modified version of the original reference game framework \cite{frankgoodman2012}. We modeled the recorded data by enhancing the Rational Speech Act framework.
-We asked whether speakers (i) can use responses as a source of information about the unknown preferences of their conversation partner and (ii) are able to strategically chose ambiguous over unambiguous utterances for learning about their conversation partner's object preferences. 
+It has been suggested that some ambiguity may be useful for efficiency reasons in cases when clarity is not affected.
+Here we investigated whether disambiguations of ambiguous utterances yield another, socially highly relevant benefit.
+In particular, we asked if responses to ambiguous utterances can reveal parts of the internal model of the interpreter. 
+More concretely, we asked if speakers (i) can use responses as a source of information to infer unknown preferences of their conversation partner and (ii) are able to strategically chose ambiguous over unambiguous utterances for learning about their conversation partner's object preferences. 
+We ran two online experiments using a modified version of the original reference game framework \cite{frankgoodman2012} and modeled the recorded data by modifying the Rational Speech Act model.
 The data and modeling results confirm both points. 
 Participants were able to infer Bayesian posteriors of listeners' preferences when analyzing their choice of objects in situations of referential ambiguity.
 Moreover, nearly 40\% of the speakers were able to strategically choose ambiguous over unambiguous utterances in an epistemic, goal-directed manner, maximizing expected information gain about the listener's preferences.
@@ -71,31 +75,36 @@ closely linked to the predictive mind perspective \cite{Friston:2015,Hohwy:2013,
 The anticipatory nature of the human mind reveals itself in many domains.
 With respect to planning and executing manual sensorimotor interactions, 
 it has been shown that we anticipate future events and event boundaries revealing anticipatory active inference processes \cite{belardinelli2016s, belardinelli2018mental,Friston:2015,Hayhoe:2003,lohmann2019hands}.
-In a somewhat similar manner, also in the language domain predictive, active inference processes seem to continuously unfold \cite{Christiansen:2016}, compressing information into event-like units of thought \cite{Gaerdenfors:2014}.
-For exampole, listeners predict the semantic category of upcoming words \cite{federmeier2002picture} as evidenced by a neurophysiological data.
+Also in the language domain, predictive active inference processes seem to continuously unfold \cite{Christiansen:2016}, compressing information into event-like units of thought \cite{Gaerdenfors:2014}.
+For example, listeners predict the semantic category of upcoming words \cite{federmeier2002picture} as evidenced by neurophysiological data.
 Comprehension of sentences relies not only on the ability of listeners to anticipate subsequent words based on their transitional probabilities, but also takes into account the structural properties of sentences, revealing an even more abstract level of predictions \cite{levy2008expectation}.
 Dynamic language models show that complex, event-predictive structures guide ambiguity resolution during comprehension and likely also constrain ambiguity generation during language production \cite{Elman:2019}. 
 
 When systematic abstractions become relevant, event-predictive processes seem to be at play, compressing sensorimotor experiences, including language, into event-predictive encodings \cite{Butz:2016,Butz:2017a}.
 Various disciplines associated with cognitive science suggest that our predictive minds develop event compressive, predictive encodings, which interact with action, including language, production and comprehension, essentially determining thought itself in a highly active, epistemic, goal-directed manner  \cite{Baldwin:2019tsi,DuBrow:2019tsi,Elsner:2019tsi,Fallgatter:2019tsi,Knott:2019tsi,Papafragou:2019tsi,Zacks:2019tsi}.
-Here, we reveal both socially epistemic comprehension and utterance productions, while observing and generating social event-predictive interactions.
+Here, we reveal socially epistemic comprehension and utterance productions, while observing and generating social event-predictive interactions.
+
 
 In two main studies, we show how speakers update predictive models of the listener's preferences and beliefs when watching social event interactions, such as when offering a few objects to choose from and observing the object choice of the conversation partner. 
 We thus show that humans can interpret behavior of other people as driven by their motives, intentions, or personal characteristics.
 Conceptually, this idea goes back to the attribution theory \cite{jones1965acts, kelley1967attribution, kelley1970social}.
-More recently, \citeA{shafto2012learning} developed a Bayesian model of learning that formalizes the process of inferring others' knowledge about the world based on their actions and goals. They argue that efficient learning is possible if we assume that agent's actions are driven either by action or communicative goals but are not random. The authors show that a communicative goal of the agent allows the learner to draw a stronger inference concerning the underlying hypothesis. The model predicts that learners use knowledge of agent's goals to evaluate how knowledgeable they are, and as a consequence, how much a learner can trust their actions to be informative about a hypothesis.
+More recently, \citeA{shafto2012learning} developed a Bayesian model of learning that formalizes the process of inferring others' knowledge about the world based on their actions and goals. They argue that efficient learning is possible if we assume that agent's actions are driven either by physical (non-social) or communicative goals but are not random. The authors show that giving a communicative goal of an agent allows the observer to draw a stronger inference concerning the underlying hypothesis.
+The model predicts that learners use knowledge of agent's goals to evaluate how knowledgeable they are, and as a consequence, how much a learner can trust their actions to be informative about a hypothesis.
  
-% TODO Martin: can one contrast this to our modeling perspective? Asya: related our work to their model.
-Our model relies on a similar mechanism of inference.
-We focus on the situation of ambiguity resolution as a situation that lets the conversation partners observe each other's behavior and reason about internal beliefs that lead to particular choices of interpretations. Like \citeA{shafto2012learning}, we assume that the agent's actions--in our situation choices of objects--are not random but driven by the agent's preferences for certain types of properties, or features, as we call them.
-We adapt the Rational Speech Act model framework, reliably modeling the involved, probabilistic interpretation processes as well as epistemic action choice. 
+
+While our model also pursues Bayesian inference, that is, psychological reasoning,   
+we do not focus on the inference of the actor's knowledge, that is, on \emph{learning from others} \cite{shafto2012learning}.
+Rather, we focus on \emph{learning about others}, that is, on learning about actors' preferences when observing their disambiguating behavioral responses, that is, their interpretive choices
+and on the potential strategic, socially epistemic usage of ambiguous utterances in anticipation of actors' responses. 
+We adapt the Rational Speech Act model framework, reliably modeling the involved, probabilistic interpretation processes and socially epistemic action choice. 
 Interestingly, the modeling work reveals good interpretive abilities but also strong individual differences when the task is to choose (ambiguous) utterances strategically for gaining social knowledge. 
 
 
 In the following, we first review how different disciplines approached ambiguity in natural language and communication and provide a computational background on referential ambiguity resolution. 
 In Section 3 we develop computational models that are able to infer the preferences of the agent that led her to a particular choice of objects, as well as a model that predicts which utterances are most useful to create the possibility of learning about the preferences of the conversation partner. 
 Sections 4 and 5 demonstrate the results of behavioral experiments and modeling performance. 
-Section 6 concludes that participants in our experiments were indeed able to use observable behavior of others to infer their prior beliefs and hypothesizes why the ability to intentionally create epistemic situations can be found only in a part of the population.
+Section 6 concludes that participants were indeed able to use observable behavior of others to infer their prior beliefs and hypothesizes why the ability to intentionally create epistemic situations can be found only in a part of the population.
+
 
 \section{Ambiguity in natural language and communication}
 \subsection{Theoretical approaches}
@@ -148,9 +157,11 @@ Suppose a speaker produces the single-word utterance ``blue'' in an attempt to s
 	\centering
 	\includegraphics[width=.5\linewidth]{images/rsascene-eps-converted-to.pdf}
 	\caption{A simple reference game scenario from \protect\citeA{frankgoodman2012}.
-		In the game, speakers are confronted with a collection of objects. 
+		In the game, speakers are confronted with a collection of objects, 
+		here, $S=\{\textrm{blue\ solid\ square},\ \textrm{blue\ solid\ circle},\ \textrm{green\ solid\ square}\} $
 		%, which determine the current state $s$, where the possible states for the set $S=\{solid\ blue\ square,\ solid\ blue\ circle,\ solid\ green\ square\}$ in the depicted example. 
-		The speaker chooses a single-word utterance to signal one of the objects to a listener.
+		The speaker chooses a single-word utterance $u$ to signal one of the objects $s\in S$ to a listener, choosing from the 
+		possible utterances, i.e, $u\in U=\{\textrm{blue,\ green,\ solid,\ square,\ circle} \}$.
 		%In the depicted scenario, the speaker may choose between the utterances $U=\{ ``blue'',\ ``green'',\ ``square'',\ ``circle''\}$.
 	}
 	\label{FG-ref-game}
@@ -168,11 +179,13 @@ The current paper builds on the foundational, vanilla RSA model of reference gam
 
 
 \section{Model}
-Our model is a modified version of the vanilla RSA model \cite{frankgoodman2012}. \gcs{I'm not sure I follow the update to the variable naming (the prime vs.~not-prime distinction) in the prose and updated probability expressions. I'm used to the convention of capital letters for sets (so, $S$ and $U$ for the set of possible states/utterances), and \sem{$u$}($s$) maps $s$ to a boolean (true or false), not a set---at least this is the convention from semantics. Also, I worry that there might be a couple of inconsistencies in the use of prime vs.~not-prime variables, but I'm hesitant to change things without understanding how they're being used.}
-It formalizes a state space $s$ in the form of a particular collection of objects (cf. the example in Figure~\ref{FG-ref-game}) and an utterance space $u$,
-which consists of all possible utterances, that is, all features present in $s$. 
-Moreover, the model considers probability distributions over those spaces, i.e., $P(s)$ and $P(u)$, as well as the particular object $s'\in s$ that the speaker may refer to by a particular utterance $u' \in u$, essentially specifying priors or posteriors over referenced objects, object choices, utterance preferences, and utterance choices. 
-For notational convenience, we will also denote a particular object choice of the listener by $s' \ in$ $s$.
+Our model is a modified version of the vanilla RSA model \cite{frankgoodman2012}. 
+%\gcs{I'm not sure I follow the update to the variable naming (the prime vs.~not-prime distinction) in the prose and updated probability expressions. I'm used to the convention of capital letters for sets (so, $S$ and $U$ for the set of possible states/utterances), and \sem{$u$}($s$) maps $s$ to a boolean (true or false), not a set---at least this is the convention from semantics. Also, I worry that there might be a couple of inconsistencies in the use of prime vs.~not-prime variables, but I'm hesitant to change things without understanding how they're being used.}
+It formalizes a state space $S$ in the form of a particular set of objects (cf. the example in Figure~\ref{FG-ref-game}) and an utterance space $U$, which consists of the set of possible utterances, that is, all features present in $S$. 
+Moreover, the model considers probability distributions over those sets, i.e., $P(S)$ and $P(U)$, as well as 
+a particular object $s\in S$, which the speaker may refer to by means of one particular utterance $u \in U$.
+It specifies priors or posteriors over referenced objects, object choices, utterance preferences, and utterance choices. 
+For notational convenience, we will also denote a particular object choice of the listener by $s \ in$ $S$.
 RSA then models a recursive social reasoning processes, incorporating several levels of probabilistic inference. 
 
 
@@ -180,21 +193,24 @@ RSA then models a recursive social reasoning processes, incorporating several le
 
 % The recursive social reasoning inherent to the RSA modeling framework gets cashed out as various layers of inference.
 
-At the basis, there is a hypothetical, na\"ive literal listener $L_0$, who hears an utterance $u$ and attempts to infer the object $s'$ that $u$ is meant to refer to.
-$L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}$(s)\subset s$, which specifies the subset of objects that are literally referenced by $u'$. 
-$L_0$ then returns a uniform distribution over \sem{$u'$}:
-$$P_{L_{0}}(s\mid u') \propto \sem{$u'$}(s).$$
+At the basis, there is a hypothetical, na\"ive literal listener $L_0$, who hears an utterance $u$ and attempts to infer the object $s$ that $u$ is meant to refer.
+$L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}$(s)\subset s$, which returns $true$ for those objects that contain the uttered feature and $false$ otherwise.
+As a result, object choice probabilities for the literal listener can be computed:  
+$$P_{L_{0}}(s\mid u) \propto \sem{$u$}(s),$$
+essentially returning a uniform distribution over those objects in $S$ that contain the uttered feature $u$.\\
+\footnote{Please note that the context $S$ is typically not made explicit.}
 
-One layer up, the speaker $S_1$ observes the state $s$ and is assumed to have the intention to refer to a particular object $s' \in s$, choosing an utterance $u'$ to communicate $s'$ to $L_0$.
-$S_1$ chooses an utterance $u'$ on the basis of its expected utility for signaling $s'$ to $L_0$ given $s$, which is determined by the log-likelihood of this particular object choice $U_{S_1}(u';s';s)$\footnote{The original model in \citeA{frankgoodman2012} also includes a term for the cost of utterance $C(u)$. We ignore the term here since we assume uniform cost over all utterances.}:
-$$U_{S_{1}}(u';s',s) = \textrm{log}(P_{L_{0}}(s' \mid u')).$$ 
-Depending on a ``greediness factor'' $\alpha$, the speaker chooses a particular utterance $u'$ with a probability that is exponentially proportional to the utility estimates: 
-$$P_{S_{1}} (u' \mid s') \propto   \textrm{exp}(\alpha \cdot U_{S_{1}} (u';s',s)).$$
 
-At the top layer of the vanilla RSA model, the \emph{pragmatic} listener $L_1$ infers posteriors over $s$ on the basis of some observed utterance $u'$.
+One layer up, the speaker $S_1$ observes the state $S$ and is assumed to have the intention to refer to a particular object $s \in S$.
+$S_1$ chooses an utterance $u$ on the basis of its expected utility for signaling $s$ in the situation $S$, which is determined by the log-likelihood of this particular object choice $U_{S_1}(u;s)$\footnote{The original model in \citeA{frankgoodman2012} also includes a term for the cost of utterance $C(u)$. We ignore the term here since we assume uniform cost over all utterances.}:
+$$U_{S_{1}}(u;s) = \textrm{log}(P_{L_{0}}(s \mid u)).$$ 
+Depending on a ``greediness factor'' $\alpha$, the speaker chooses a particular utterance $u$ with a probability that is exponentially proportional to the utility estimates: 
+$$P_{S_{1}} (u \mid s) \propto   \textrm{exp}(\alpha \cdot U_{S_{1}} (u;s)).$$
+
+At the top layer of the vanilla RSA model, the \emph{pragmatic} listener $L_1$ infers posteriors over $s$ on the basis of some observed utterance $u$.
 However, unlike $L_0$, $L_1$ updates beliefs about the world by reasoning about the process that \emph{generated} $u$, namely $S_1$.
-In other words, $L_1$ reasons about the $s'$ that would have been most likely lead $S_1$ to choose $u'$:
-$$P_{L_{1}}(s\mid u') \propto P_{S_{1}}(u' \mid s) \cdot P(s).$$
+In other words, $L_1$ reasons about the $s$ that would have been most likely led $S_1$ to choose $u$:
+$$P_{L_{1}}(s \mid u) \propto P_{S_{1}}(u \mid s) \cdot P(s).$$
 
 \citeA{frankgoodman2012} tested the predictions of their model against behavioral data from reference games, as in Figure \ref{FG-ref-game}.
 To model production behavior (i.e., which utterance should be chosen to communicate a given object), the authors used the probability distributions form $S_1$.
@@ -204,50 +220,49 @@ Finding extremely high correlations between model predictions and behavioral dat
 
 \subsection{Full pragmatic social inference RSA}
 
-Our model builds on the vanilla version of RSA presented above, modifying the listener's state prior $P(s)$ and enhancing the reasoning process towards a social component, yielding a yielding a full pragmatic social inference RSA model (fPSIRSA). %In that sense, the model belongs to the family of models known as uncertain RSA \cite{goodmanfrank2016}. 
-By changing $P(s)$ to a non-uniform distribution, we essentially model prior beliefs of which object the speaker is more likely to refer to, or--when viewed from a more self-centered perspective--which prior object feature preferences $f'$ the listener may have. 
-For example, the listener may like blue things, such that she may be more likely to choose the blue square instead of the green one when hearing the utterance ``square''.
-As a result, when a pragmatic speaker produces an utterance $u'$ and observes the listener's referent choice $s'$, the speaker may infer posteriors over possible feature preferences $f$, attempting to explain the observed object choice in this way.
-We use the same $L_0$ and $S_1$ from the vanilla model.
-However, we now parameterize $L_1$'s state prior such that it operates given a feature preference $f$:
-$$P_{L_{1}}(s\mid u',f) \propto P_{S_{1}}(u' \mid s) \cdot P(s \mid f).$$
+Our model builds on the vanilla version of RSA presented above, modifying the listener's state prior $P(s)$ and enhancing the reasoning process towards a social component, yielding a full pragmatic social inference RSA model (fullPSIRSA). %In that sense, the model belongs to the family of models known as uncertain RSA \cite{goodmanfrank2016}. 
+By changing $P(s)$ to a non-uniform distribution, we essentially model prior beliefs of which object the speaker is more likely to refer to, or--when viewed from a more self-centered perspective--which prior object feature preferences $f$ the listener may have. 
+For example, the listener may like blue things, such that she may be more likely to choose the blue square instead of the green one when hearing the utterance ``square'' in the scenario shown in Figure~\ref{FG-ref-game}.
+As a result, when a pragmatic speaker produces utterance $u$ and observes the listener's referent choice $s$, the speaker may infer posteriors over possible feature preferences, attempting to explain the observed object choice in this way.
+We use $L_0$ and $S_1$ from the vanilla model, but we now parameterize $L_1$'s state prior such that it operates given a feature preference $f$:
+$$P_{L_{1}}(s\mid u,f) \propto P_{S_{1}}(u \mid s) \cdot P(s \mid f).$$
 We then model a pragmatic speaker $S_2$, who updates beliefs about $L_1$'s preferences, $P(f)$.
-$S_2$ observes $L_1$'s choice of $s'$ given the produced utterance $u'$ and then reasons about the likely feature preference $f$ that $L_1$ used to make the observed choice:
-$$P_{S_{2}}(f\mid u',s') \propto P_{L_{1}}(s'\mid u',f) \cdot P(f).$$
+$S_2$ observes $L_1$'s choice of $s$ given the produced utterance $u$ and then reasons about the likely feature preference $f$ that $L_1$ used to make the observed choice:
+$$P_{S_{2}}(f\mid u,s) \propto P_{L_{1}}(s \mid u,f) \cdot P(f).$$
 
 We also model the reasoning process by which a speaker may select the best utterance to learn about the preferences of the listener, essentially striving to maximize expected information gain over the listeners feature preferences $P(f)$.
 Starting with no knowledge of the listener's preferences, $S_2$ can be assumed to expect a uniform (i.e., flat) feature preference prior $P(f)$.
-The more the speaker's posterior beliefs about the preferences, $P_{S_{2}}(f\mid u',s')$, deviate from the uniform prior, the more the speaker will have learned about the listener's preferences. 
-We can thus model this reasoning in the light of expected information gain, which can be equated with the attempt to maximize the KL divergence between the speaker's flat prior and the expected posterior over the listener's feature preferences $f$, integrating over all hypothetically possible state observations $s' \in s$: %\gcs{can we assume a uniform cost and then remove $C(u)$ from our equations, mentioning this move in a footnote?}
-$$P_{S_2}(u') \propto \sum_{s':\  [\![u']\!](s)} P(s'|u',f)\ \exp(\lambda \cdot \textrm{KL}(P(f),P_{S_{2}}(f\mid u',s'))),$$
+The more the speaker's posterior beliefs about the preferences, $P_{S_{2}}(f\mid u,s)$, deviate from the uniform prior, the more the speaker will have learned about the listener's preferences. 
+We can thus model this reasoning in the light of expected information gain, which can be equated with the attempt to maximize the KL divergence between the speaker's flat prior and the expected posterior over the listener's feature preferences $f$, integrating over all hypothetically possible state observations $s \in S$: %\gcs{can we assume a uniform cost and then remove $C(u)$ from our equations, mentioning this move in a footnote?}
+$$P_{S_2}(u) \propto \sum_{s:\  [\![u]\!](s)=1} P(s|u,f)\ \exp(\lambda \cdot \textrm{KL}(P(f)\mid\mid P_{S_{2}}(f\mid u,s))),$$
 where the factor $\lambda$ scales the importance of the KL divergence term. 
 
-As a result, we need to evaluate two main predictions of  fPSIRSA:  
+As a result, we need to evaluate two main predictions of PSIRSA:  
 first, the pragmatic speaker's inference about the listener's feature preferences on the basis of observed object choices in particular situations; 
-second, the pragmatic speaker's strategic utterance selection in the light of the anticipated information gain about the listener's preferences considering the possible object choices.
-Before presenting the experimental and modeling results, though, we introduce a simplification of this pragmatic social inference model. 
+second, the pragmatic speaker's strategic utterance selection $P_{S_2}(u)$ in the light of the anticipated information gain about the listener's preferences considering the possible object choices.
+Before presenting the experimental and modeling results, though, we introduce a simplification of fullPSIRSA. 
 
 
 \subsection{Simplified pragmatic social inference RSA}
 
-fPSIRSA assumes a rather deep reasoning process. 
+fullPSIRSA assumes a rather deep reasoning process. 
 Recently, it has been shown that even in the original, simpler reference games, fewer layers of reasoning often perform equally well or better than more complex models \citeA{sikos2019}.
-fPSIRSA essentially assumes that feature preference inference not only considers the current object choices possible, but it differentiates the choice options further with respect to their pragmatic plausibility. 
-For example, it includes modeling the fact that when a speaker utters ``blue'' in the object situation depicted in Figure~\ref{FG-ref-game}, she is more likely to refer to the blue square than to the blue circle, because in the latter case the utterance choice ``circle'' would have been unambiguous. 
+fullPSIRSA essentially assumes that feature preference inference does not only consider the current object choices possible, but it differentiates the choice options further with respect to their pragmatic plausibility. 
+For example, it includes modeling the fact that when a speaker utters ``blue'' in the object situation depicted in the example in Figure~\ref{FG-ref-game}, she is more likely to refer to the blue square than to the blue circle, because in the latter case the utterance choice ``circle'' would have been unambiguous and thus a better choice for the speaker.
 % In fact, their simplified model with only an enhanced $L_0$ equipped with an informative prior outperformed the full vanilla RSA model when it came to predicting interpretation behavior, suggesting that participants engage in shallower reasoning than predicted by the full-blown RSA. We therefore compare the predictions of our full pragmatic model with those of a simplified model.
-We thus will compare modeling performance of the pragmatic model with the following simplified social inference model, which removes this pragmatic reasoning aspect.
 
 
-sPSIRSA removes $L_1$ and $S_1$, and allows $S_2$ to directly tap onto the (expected) interpretation of $L_0$, directly augmenting the literal listener's choice likelihoods with preference-specific state prior $P(s\mid f)$:
+simplePSIRSA removes $L_1$ and $S_1$, and allows $S_2$ to directly tap onto the (expected) interpretation of $L_0$, directly augmenting the literal listener's choice likelihoods with the feature preference dependent object prior $P(s\mid f)$:
 $$P_{L_{0\textrm{-simp}}}(s\mid u,f) \propto \sem{$u$}(s) \cdot P(s\mid f).$$
 The pragmatic speaker $S_{s\textrm{-simp}}$ then reasons directly about the modified literal listener $L_{0\textrm{-simp}}$: 
 $$P_{S_{1\textrm{-simp}}}(f\mid u,s) \propto P_{L_{0\textrm{-simp}}}(s\mid u,f) \cdot P(f).$$
-As a result, sPSIRSA ignores any indirect pragmatic reasoning considerations about which object the speaker may refer to given an utterance and a particular object constellation.
-It simply assumes that all objects may be chosen that match the utterance, modulo the relevant feature preference.
+As a result, simplePSIRSA ignores any indirect pragmatic reasoning considerations about which object the speaker may refer to given an utterance and a particular object constellation.
+It simply assumes that all objects may be chosen that match the utterance, modifying these choice options dependent on the feature preference-dependent object choice priors.
+In the evaluation section below, we compare modeling performance of fullPSIRSA with simplePSIRSA. 
+% the pragmatic model with the following simplified social inference model, which removes this pragmatic reasoning aspect.
 
 
-
-\section{Experiment 1: Inferring preferences}
+\section{Exp. 1: Learning about others' preferences}
 
 Our first task is to check the inferences of the pragmatic speaker $S_2$ having observed that a listener selects some object $s$ in response to an utterance $u$. 
 Is it possible to draw inferences about the most likely preferences the listener had when making her choice? 
@@ -282,32 +297,32 @@ To compare PSIRSA's predictions to the human data, we calculated an average valu
 
 We fit the model parameters either at the individual level or at the group level by optimizing the KL(Kullback-Leibler)-divergence between the data and the model predictions:
 
-$$\textrm{KL} = \sum_{i=1}^{n} P(f'_i\mid u',s') (\textrm {log} (P(f'_i\mid u',s') - \textrm {log} (P(f_i\mid u',s')),$$
+$$\textrm{KL}(P_{data}(f \mid u,s)\mid\mid (P_{model}(f\mid u,s))$$
 
-\noindent where $P(f'_i\mid u',s')$ specifies a participant's normalized slider value setting, which offer empirical estimates of the feature preference posterior given an object scene $s$ and a particular utterance $u'$ and object choice $s'$;
-$P(f_i\mid u',s')$ specifies the respective model prediction value. 
+\noindent where $P_{data}(f\mid u,s)$ specifies a participant's normalized slider value setting, which offer empirical estimates of the feature preference posterior given object scene $S$, particular utterance choice $u$, and consequent object choice $s$;
+$P_{model}(f\mid u,s)$ specifies the corresponding model posterior. 
 %Since no conclusions can be drawn concerning feature values that are not present in the scene, we ignored the respective feature preference estimates.
-By minimizing KL divergence between the empirical and model-predicted preferences for each participant, we maximize the model fit to the participants' data. 
+By minimizing the KL divergence between the empirical and model-predicted preference posteriors for each participant, we maximize the model fit to the participants' data. 
 Moreover, we can use the minimized KL divergence values to perform the likelihood ratio test for nested models relying on the $G^2$-statistic, because the summed KL divergence values are approximately chi-square distributed \cite{Lewandowsky:2011}. 
 Individual vs. global-level modeling allows us to explore potential differences between participants, and, more importantly, to evaluate whether the Gricean reasoning strategies apply at the level of individual speakers or only to the population as a whole \cite{franke2016reasoning}. 
 
 
 \subsubsection{Models with global optimization}
 
-We first present the globally-optimized versions of  PSIRSA  (Figure~\ref{simple-full}).
-We fit three parameters for fPSIRSA and two for sPSIRSA.
+We first present results of the globally-optimized versions of  PSIRSA  (Figure~\ref{simple-full}).
+We fit three parameters for fullPSIRSA and two for simplePSIRSA.
 %We hypothesized that participants may either go through all the layers of pragmatic reasoning, and additionally calculate the preferences that lead to particular object choice. The last layer of this model $S_2$ returns a posterior distribution over inferred feature preferences $f$ after observing a listener selecting an object in response to an utterance. 
 %In a simpler model, the object choice is driven only by a $L_0$ semantics enhanced with priors over feature preferences. Upon hearing an utterance \textit{blue} a participants assigns equal probabilities to all blue objects in a scene, and the actual choice of object signals a preference of other feature values that object has. For example, picking a blue circle rather than a blue square is driven by a prefrence for circles.
-The soft-max scaling factor $\alpha$ is only relevant for the fPSIRSA; it  controls how likely speaker $S_1$ is to maximize utility when choosing utterances. 
+The soft-max scaling factor $\alpha$ is only relevant for fullPSIRSA; it  controls how likely speaker $S_1$ is to maximize utility when choosing utterances. 
 The default value is typically set to $\alpha=1$ (i.e., no scaling). 
 
 
-The softness parameter $\gamma$ regulates the strength of individual feature preferences $f_i$:
-$$ P(s_i \mid f_i) \propto \begin{cases}
-1 + \gamma, & \text{if}\ s_i\ \text{contains}\ f_i \\
+The softness parameter $\gamma$ regulates the strength of individual feature preferences $f$:
+$$ P(s \mid f) \propto \begin{cases}
+1 + \gamma, & \text{if}\ s\ \text{contains}\ f \\
 \gamma, & \text{otherwise}
 \end{cases},$$
-controlling the choice probability of those objects $s_i$ that contain feature $f_i$ compared to those that do not.  
+controlling the choice probability of those objects $s$ that contain feature $f$ compared to those that do not.  
 A value of $\gamma=0$ models a hard preference choice, that is, the speaker always chooses one of the preferred objects. 
 On the other hand, when $\gamma \rightarrow \infty$, the choice prior becomes uniform over all objects, thus ignoring feature preferences. 
 % That is, a large value of $\gamma$ approximates uniform prior feature preferences.
@@ -317,7 +332,7 @@ On the other hand, when $\gamma \rightarrow \infty$, the choice prior becomes un
 %objectPreferenceSoftPriors[[utt]] <- objectPreferenceSoftPriors[[utt]] / sum(objectPreferenceSoftPriors[[utt]])
  %$$ P(s_{\textrm{cloud}}\mid f_{\textrm{cloud}}) = \frac{1 + \gamma}{1 + 3\gamma}$$
  % This is what we wrote. It makes sense for P = 1 but I'm not sure the numbers come out right when we calculate how softness changes the probability of objects that don't qualify.
- For example, in the trial shown in Figure~\ref{exp1-trial} there are two objects that fit the utterance $u'=\text{``red''}$: a red striped cloud and a red dotted circle.
+ For example, in the trial shown in Figure~\ref{exp1-trial} there are two objects that fit the utterance $u=\text{``red''}$: a red striped cloud and a red dotted circle.
  When $\gamma=1$, $P(s_{\textrm{red\ striped\ cloud}}\mid f_{\textrm{``cloud''}}) = 2/3$, while
  $P(s_{\textrm{red\ dotted\ circle}}\mid f_{\textrm{``cloud''}})= 1/3$, yielding a soft preference for clouds.
  % The softness parameter $\gamma$ regulates the probability that the middle object will be picked if a person has a preference for clouds. 
@@ -334,46 +349,68 @@ On the other hand, when $\gamma \rightarrow \infty$, the choice prior becomes un
 % Note: I removed $\beta$ because it complicates things enormously and proved to be not really relevant.
 
 Finally, we allow for the possibility of noise in our human data introduced by participants not following instructions.
-Parameter $\beta$ models the possibility that listeners may choose objects that do not pass the semantic filter of the literal listener, that is, objects that do not match the received utterance $u'$. 
+Parameter $\beta$ models the possibility that listeners choose objects that do not pass the semantic filter of the literal listener, that is, objects whose features do not match the received utterance $u$. 
 The computation is equivalent to the softness parameter above, in this case softening the object choices of the literal listener $L_0$ towards a uniform choice over all objects present. 
 %$$ P(s_{\textrm{x}}\mid u_{\textrm{x}}) = \frac{P(s\mid u) + \beta}{\sum P(s\mid u) + 3\beta}$$
-Again, $\beta=0$ models a hard object choice, that is, full obedience to the uttered instruction $u'$, 
-while $\beta \rightarrow \infty$ models a uniform object choice, that is, full ignorance of $u'$.
+Again, $\beta=0$ models a hard object choice, that is, full obedience to the uttered instruction $u$, 
+while $\beta \rightarrow \infty$ models a uniform object choice, that is, full ignorance of $u$.
 %As $\beta$ increases, speakers disregard instructions and assign non-zero probabilities to objects that do not correspond to the utterance; with $\beta = 0$, speakers fully obey the instructions and only consider objects with the named property (e.g., only red objects following the utterance \textit{red}).
 
-Figure~\ref{barplot_x4} presents the simple model performance for the scene type of the sample trial from Figure~\ref{exp1-trial}. In that trial, participants saw that the middle object was chosen following the utterance ``red". There are two potential referents for this description: the red striped cloud and the red dotted circle. Since the cloud was chosen, we infer that the person who chose this object has a preference for clouds over circles, and for striped objects over dotted ones. From this trial, we cannot learn anything about the preference for solid things or squares, so we expect the subjects to leave the sliders in their default location (i.e., centered).
+Figure~\ref{barplot_x4} shows the average responses of the human participants and of the individually, two parameter optimized simplePSIRSA model and the non-optimized simplePSIRSA model for the scene type of the sample trial from Figure~\ref{exp1-trial}.
+In that trial, participants saw that the middle object was chosen following the utterance ``red". There are two potential referents for this description: the red striped cloud and the red dotted circle. Since the cloud was chosen, we infer that the person who chose this object has a preference for clouds over circles, and for striped objects over dotted ones. 
+Note that we cannot learn anything about the preference for solid things or squares in this trials because these features are not present, thus we ignore the respective slider values. 
+Moreover, we can definitely not learn anything about color preferences, because the color was the uttered instruction, thus not presenting those sliders at all.  
 Indeed, both humans and the models assign high slider values to clouds and striped things, and low values to circles and dotted things. 
-Figure~\ref{barplot_x4} shows the average responses of the human participants as well as two types of model predictions: from an individually 2-parameter optimized and a non-optimized simple models.
+
 
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=2.5in]{images/december_barplot_x4.pdf}
-	\caption{Model predictions and human data for one of the classes of stimuli \emph{Experiment 1: Inferring preferences}.}\label{barplot_x4}
+	\caption{Human data and simplePSIRSA's (individually, two-parameter optimized and non-opimized) feature preference posterior estimates for the scenario $S$ shown in Figure~\ref{exp1-trial}.}\label{barplot_x4}
 \end{figure}
 
 % I used the code length(levels(as.factor(uniqueCCode))) to calculate the number of conditions
 %Since not all of the stimuli allowed for inference of preferences in the same way, we introduced a new categorization of stimuli. Our base model would then predict the same preferences for the same category of stimuli. The categorization takes into account the distribution of features, the chosen object and which feature was uttered. Each category consists of 3 tuples of 2 digits. Each tuple refers to one feature, where the first tuple always refers to the uttered feature. The first digit in each tuple would then denote how many objects share the value of the picked object for the corresponding feature. In figure \ref{FG-ref-game}, if the utterance was blue and the blue square was picked, the first tuple would reference color and its first digit would be a "2". Note that this does not determine which other object shares the feature value, i.e. "blue". To compensate, the second digit of the tuple denotes which other object shares this value. This depends on the order of the objects---we stipulated that the picked object would be the first. The further order would be determined by which other object shares this specific value, i.e. the "blue circle" in figure \ref{FG-ref-game} would be the first of the "other objects" and the "green square" the second. The picked object is at position zero in this sense. Thus the first tuple for figure \ref{FG-ref-game} would be (2,1). For the other tuples, the first digits would be "2" for shape and "3" for texture. To streamline the category code we stipulated that we would order the features in descending order of their first digit, so that we would have texture's "3" next in figure \ref{FG-ref-game}. If a tuple starts with "3" or "1", the second digit would simply denote whether the other objects have different values for that feature or the same. Thus we would have (3,2) for texture, with the second digit signaling that the non-picked objects share their texture. The tuple for shape would finally be (2,2), because the value "square" is shared with the second other object (see above). Thus for figure \ref{FG-ref-game} we would end up with [(2,1),(3,2),(2,2)].
 
 
-As Figure \ref{simple-full} shows, both the simple and the pragmatic model with softness ($\gamma$) optimized globally provide a good linear fit to the data (simple model: $p < 0.001$, $r^2 = 0.86$; full model: $p < 0.001$, $r^2 = 0.86$), suggesting that participants are indeed able to infer the feature preferences that lead to the choice of an object.\footnote{We were unable to perform a likelihood ratio test to compare these models since they are not nested.}
-% TODO please report the actual parameter values here seeing tha the statistic is identical!?
-%We can also see that the simple model fits the data just as well as the full more complex model.
+As Figure \ref{simple-full} shows, both simplePSIRSA and fullPSIRSA with softness ($\gamma$) optimized globally provide a nearly identically good fits to the data.
+simplePSIRSA yields a correlation of $r^2 = 0.8614$\footnote{All correlations were highly significant, that is, $p < 0.001$, if not stated differently in the text.} when only softness parameter $\gamma$ is optimized ($\gamma=0.2204$ after optimization). 
+When both parameters are optimized globally, a correlation of $r^2 = 0.9789$ is reached
+($\gamma=0.2210$ and $\beta=0.2693$ after optimization), indicating that participants indeed considered (possibly subconsciously) the option of choosing an object that did not contain the uttered feature. 
+% only $\gamma$ optimized: Multiple R-squared:  0.8614; gamma=0.220358
+% $\gamma$ and $\beta$ optimized: Multiple R-squared:  0.9789; gamma=0.2210127, beta=0.2692707
+fullPSIRSA yields nearly identical values.
+Optimizing only parameter $\gamma$, a correlation of $r^2 = 0.8576$ is reached ($\gamma=0.2231$).
+Optimizing both, $\alpha$ and $\gamma$, a correlation of $r^2 = 0.8614$ is reached ($\alpha=0.1797$, $\gamma=0.2205$), which is identical to simplePSIRSA.
+When optimizing all three parameters, fullPSIRSA yields a correlation of $r^2 = 0.9773$ ($\alpha=0.2657$, $\gamma=0.2214$, $\beta=0.0030$), not quite reaching the correlation of simplePSIRSA, which may be due to some subtle interactions between parameters $\alpha$ and $\beta$. 
+% only $\gamma$ optimized: Multiple R-squared:  0.8576 ; gamma=0.2231055
+% only $\alpha$ and $\gamma$ optimized: Multiple R-squared:  0.8614; alpha=0.1797266, gamma=0.2204913
+% all three parameters globally optimized: Multiple R-squared:  0.9773; alpha=0.26568, gamma=0.2214308, beta = 0.003027947\\
+Overall, the results show that participants are indeed able to infer the feature preferences that lead to the choice of an object and simplePSIRA models this inference process very well.
+The higher model flexibility of fullPSIRSA, controlled via parameter $\alpha$, does not yield any modeling improvement. 
+
+% \footnote{We were unable to perform a likelihood ratio test to compare these models since they are not nested.}
+
+
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=2in]{images/m13.pdf}
 	\includegraphics[width=2in]{images/m23.pdf}
-	\caption{Average human data from Experiment 1 plotted against the predictions of the Pragmatic and Simple Social Inference models with $\beta$ optimized globally across participants \gcs{in the prose you say that softness ($\gamma$) was optimized, and in the figure it says that obedience ($\beta$) was set to its default}; both models: $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full}
-%TODO: Martin: please ensure that ALL figures have the same text sizes and a sufficiently readable (need larger fonts!)
+	\caption{Human data from Experiment 1 plotted against the predictions of simplePSIRSA (left) and fullPSIRSA (right) with $\gamma$ \emph{optimized globally}. Each data point indicates the slider values and model predicted feature preference posteriors for a particular ambiguity class.}
+		\label{simple-full}
 \end{figure}
 
 %\gcs{how was the fitting performed?}
 
 \subsubsection{Individually-fitted models}
 
-Model fit improves when we fit the parameters at the individual level, calculating a parameter estimate for each participant. We optimized $\alpha$ and $\gamma$ in light of the KL divergence between the individual participants' slider value choices and the corresponding model predictions.
-Figure \ref{simple-full-individual} demonstrates that the pragmatic model optimized at the individual level for an additional parameter $\alpha$ does not improve the fit compared to the simplified model. 
-Since the two models account for the same amount of variance in the data, we will proceed with the simple model evaluation.
+We now compare our two model variants further when fitting the parameters to the individual data of each participant separately. 
+We optimized $\alpha$ and $\gamma$ in the light of the KL divergence between the individual participants' slider value choices and the corresponding model predictions for fullRSA.
+We then again averaged the individualized model prediction values and participants' slider values with respect to the particular ambiguity classes and calculated correlations between the data and the model.
+Figure~\ref{simple-full-individual} shows that the pragmatic model optimized at the individual level for an additional parameter $\alpha$ does not improve the fit compared to the simplified model (simplePSIRSA: $r^{2}=0.8631$; fullPSIRSA: $r^{2}=0.8614$). 
+Seeing that both models fit the data nearly equally well (if at all simplePSIRSA performs slightly better), we will form now on only consider simplePSIRSA.
+Please note that the individually fitted parameters do not improve the correlation values much, if at all, when compared to the globally fitted model, which changes when $\beta$ is optimized additionally.
 
 
 %the For example, if a $S_2$ observes that following an utterance $blue$ and three objects all three of which are blue, but all differ in shape, the speaker chooses a square, the speaker might conclude that the $L_1$  has a preference for squares. However, the exact value on the slider the $S_2$ picks depends on the $\gamma$ parameter: if it is close to $0$, the speaker will mark that the $L_1$ had a perefernce for squares close to $1$. As the parameter value increases, the softness of preference will increase as well, drawing the preference value towards uniform (uninformative).
@@ -385,7 +422,7 @@ Since the two models account for the same amount of variance in the data, we wil
 	\centering
 	\includegraphics[width=2in]{images/m3.pdf}
 	\includegraphics[width=2in]{images/m16.pdf}
-	\caption{Average human data from Experiment 1 plotted against the predictions of the individually $\gamma$-optimized Simple Social Inference model $r^{2}=0.86$, 95\% CI [0.81 0.90] and $\gamma$- and $\alpha$-optimized Pragmatic Social Inference model; $r^{2}=0.86$, 95\% CI [0.80 0.90].}\label{simple-full-individual}
+	\caption{Human data from Experiment 1 plotted against the predictions of the \emph{individually} $\gamma$-optimized simplePSIRSA and the \emph{individually} $\gamma$- and $\alpha$-optimized fullPSIRSA model.}\label{simple-full-individual}
 \end{figure}
 
 
@@ -404,17 +441,17 @@ Since the two models account for the same amount of variance in the data, we wil
  
 %We compared  in the light of the distinguishable interpretation cases. 
 
-We plot predictions from the $\beta$ and $\gamma$-optimized model in Figure~\ref{cross-validation}, where a strong positive correlation between the human judgments and model predictions ($r^2 = 0.99, p < 0.001$) can be observed. The likelihood ratio test revealed that a $\gamma$ and $\beta$-optimized simple model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, \textrm{df} = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject giving us 82 degrees of freedom. We additionally checked the generalizability of the model by performing a leave-one-out cross-validation. We show in Figure \ref{cross-validation} that the cross-validated model retains its fit.
+We plot predictions from the $\beta$ and $\gamma$-optimized model in Figure~\ref{cross-validation}, where the strongest positive correlation between the human judgments and model predictions ($r^2 = 0.992$) can be observed. The likelihood ratio test revealed that a $\gamma$ and $\beta$-optimized simple model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, \textrm{df} = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject giving us 82 degrees of freedom. We additionally checked the generalizability of the model by performing leave-one-out cross-validation. Figure~\ref{cross-validation} shows that the resulting cross-validated model predictions retain the strong correlation ($r^{2}=0.9901$).
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=2in]{images/m5.pdf}
 	\includegraphics[width=2in]{images/m8.pdf}
-	\caption{Average human data from Experiment 1 plotted against the predictions of the individually $\beta$- and $\gamma$-optimized simplified RSA model, non-cross-validated (left panel; $r^{2}=0.99$, 95\% CI [0.98 1.00]) and cross-validated (right panel; $r^{2}=0.99$, 95\% CI [0.98 1.01]).}\label{cross-validation}
+	\caption{Human data from Experiment 1 plotted against the predictions of the \emph{individually} $\beta$- and $\gamma$-optimized simplePSIRSA model. Left panel: \emph{non-cross-validated} ($r^{2}=0.992$); Right panel: \emph{cross-validated} ($r^{2}=0.9901$).}\label{cross-validation}
 \end{figure}
 
 
-Thus, we find strong empirical support for our Simple Social Inference model: speakers are indeed able to use listener behavior to arrive at information about their preferences. We fail to find that the Pragmatic Social Inference model predicts the data better. This result suggests that the task in our experiments does not require full-blown pragmatic inference about alternative utterances, in contrast with \citeA{frankgoodman2012} but in line with \citeA{sikos2019}. 
+Thus, we find strong empirical support for simplePSIRSA: speakers are indeed able to use listener behavior to arrive at information about their preferences. We fail to find that the Pragmatic Social Inference model predicts the data better. This result suggests that the task in our experiments does not require full-blown pragmatic inference about alternative utterances, in contrast with \citeA{frankgoodman2012} but in line with \citeA{sikos2019}. 
 %There speakers needed to signal a particular object to the listener, while in our experiments the intention of the speaker is quite different: she produces an utterance to create a situation of ambiguity resolution. In turn, it is not the listener's goal to infer what object was intended as a referent; rather the listener picks an object according to her preferences.
 
 The question now turns to whether speakers are able to capitalize on this reasoning when it comes to selecting utterances. In other words, are speakers aware that ambiguous language is potentially more informative?
@@ -425,13 +462,13 @@ The question now turns to whether speakers are able to capitalize on this reason
 
 
 
-\section{Experiment 2: Choosing utterances}
+\section{Exp. 2: Choosing utterances to learn about others}
 
 Our next task is to check the predictions of our strategic utterance selection model: given a set of potential referents, are participants able to reason pragmatically about the utility of ambiguous utterances in informing listener preferences?
 
 \subsection{Participants}
 
-We recruited 90 participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service; participants in Experiment 1 were not eligible to participate in Experiment 2. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we again identified  82 participants as native speakers of English; their data were included in the analyses reported below.
+We recruited $90$ participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service; participants in Experiment 1 were not eligible to participate in Experiment 2. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we again identified  82 participants as native speakers of English; their data were included in the analyses reported below.
 
 \subsection{Design and methods}
 
@@ -468,7 +505,8 @@ Moreover, when $\lambda=0$, the model collapses to a uniform distribution over t
 
 %The proper model fit is confirmed when considering the correlation between the participants' data and the model predictions. 
 
-Figure \ref{simple-full-x3} shows the model fits of the unfit Pragmatic and Simple Social Inference models, with both models failing to predict the human data.
+Figure~\ref{simple-full-x3} shows the model fits of the non-optimized fullPSIRSA and simplePSIRSA models.
+Both models fail to predict the human data.
 
 %Figure \ref{exp2-results} plots predictions from the $\lambda$-optimized model, together with the human data. Again, we observe a strong positive correlation between the human judgments and model predictions ($r^2 = 0.91, p < 0.001$). In other words, we find evidence in support of the idea that speakers reason pragmatically about the relative informativity of ambiguous language.
 
@@ -476,7 +514,7 @@ Figure \ref{simple-full-x3} shows the model fits of the unfit Pragmatic and Simp
 	\centering
 	\includegraphics[width=2in]{images/x3_m1.pdf}
 	\includegraphics[width=2in]{images/x3_m7.pdf}
-	\caption{Average human data from Experiment 2 plotted against the predictions of the non-optimized Pragmatic and Simple Social Inference models; both  models: $r^{2}=0.07$, 95\% CI [0.01.23].}\label{simple-full-x3}
+	\caption{Average human data from Experiment 2 plotted against the predictions of the non-optimized fullPSIRSA and simplePSIRSA models; both  models: $r^{2}=0.07$.}\label{simple-full-x3}
 \end{figure}
 
 % I recorded the same number of conditions as in Experiment 1. I think Experiment 2 used the same ambiguity code.
