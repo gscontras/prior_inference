@@ -1,7 +1,7 @@
 setwd("~/Documents/GitHub/prior_inference/RSA_2019_08")
 
-source("CommonCode/RSA_StratUtt.R")
-source("CommonCode/getConstCodeStratUtt.R")
+#source("CommonCode/RSA_StratUtt.R")
+#source("CommonCode/getConstCodeStratUtt.R")
 
 ### Creating a data frame with all model predictions and human data for experiment 4 ###
 
@@ -579,10 +579,53 @@ m28 <-data
 m28$Nr <- 28
 remove(data)
 
+###########################################################################################################
+# 
+x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefandObed100_and_uniform.csv")
+source("X4_Code/X4_AvScatterPlot.R")
+
+###########################################################################################################
+
+## Two uniform models ## This code isn't working well
+
+data <- matrix(NA,length(workerData),6)
+data <- as.data.frame(data)
+colnames(data) <- c("workerData","model","softness","obedience","alpha","type")
+data$type <- "uniform"
+data$softness <- 100
+data$obedience <- 100 
+data$workerData <- workerData
+data$model <- rsaModel
+data$cross_validated <- "no"
+m29 <-data
+m29$Nr <- 29
+remove(data)
+
+##  Cross-validated
+##  Individual optimization
+##  Full rsa, softness globally optimized, obedience globally optimized, alpha globally optimized ##
+
+data <- matrix(NA,length(workerData),6)
+data <- as.data.frame(data)
+colnames(data) <- c("workerData","model","softness","obedience","alpha","type")
+data$type <- "fullRSA"
+data$softness <- "globally_opt"
+data$obedience <- "globally_opt"
+data$alpha <- "globally_opt"
+data$workerData <- workerData
+data$model <- rsaModel2
+data$cross_validated <- "no"
+m30 <-data
+m30$Nr <- 30
+remove(data)
+
+
+
 
 
 ## Big data set ####
 
 
-full <- rbind(m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19,m20,m21,m22,m23,m24,m25,m26,m27,m28)
+full <- rbind(m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19,
+              m20,m21,m22,m23,m24,m25,m26,m27,m28)
 write.csv(full,"X4_Plots/for_scatterplots_updated.csv")

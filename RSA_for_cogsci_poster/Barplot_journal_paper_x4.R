@@ -13,7 +13,8 @@ library(Rmisc) # for confidence intervals
 ## the model predictions will be 1 for preference of a certain feature value and 0 for feature values not preferred.
 ## The optimized model is individually optimized for both parameters, cross-validated.
 
-data = read.csv("x4pilotDataModelOptimizedSorted.csv") 
+data = read.csv("x4pilotDataModelOptimizedSorted2.csv") 
+
 sample <- subset(data, CCode == 212212)
 example <- subset(sample,target == "122" & obj2 == "232" & obj3 == "133")
 
@@ -84,6 +85,6 @@ ggplot(allStats, aes(x=sliderNumber, y=sliderValue, fill = type)) +
         axis.title.y=element_text(size = 16),
         legend.text=element_text(size = 14))+
 #ggsave("examplePlot.pdf")
-ggsave("barplot_x4.pdf",width=7,height=7, units = "in")
+ggsave("december_barplot_x4.pdf",width=7,height=7, units = "in")
 
-### The non-optimized model has parameters fixed at 0.1 level (obedience and softness)
+### The non-optimized model has parameters fixed at 0.1 level (obedience and softness)ß

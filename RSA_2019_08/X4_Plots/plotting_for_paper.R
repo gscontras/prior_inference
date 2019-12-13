@@ -40,9 +40,70 @@ print.data.frame(ordered)
 plotData <- subset(full, softness == "globally_opt" & obedience == 0 & 
                           cross_validated == "no" & type == "fullRSA" & alpha == 1) 
 
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
+softness <- unique(as.character(plotData$softness))
+obedience <- unique(as.character(plotData$obedience))
+type <- unique(as.character(plotData$type))
+nr <- plotData$Nr[1]
+
+
+figure <- ggplot(plotData, aes(x = model, y = workerData)) +
+  geom_point() +
+  stat_smooth(method = "lm",
+              col = "black",
+              se = FALSE,
+              size = 1) +
+  theme_bw(base_size = 14) +
+  labs(title = "Full model")+
+#  labs(title = bquote(atop
+ #                     (.(type) ~"," ~ r^2 == .(r2),
+ #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
+ #                     )))+
+  ylab("human data")+
+  xlab("model predictions") +
+  theme(plot.title = element_text(hjust = 0.5))
+print(figure)
+ggsave(figure, height = 3, width = 3, units = "in", filename = paste("m", nr,".pdf", sep=""))
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+confint(model)
+
+
 # for m13
 plotData <- subset(full, softness == "globally_opt" & obedience == 0 & 
                      cross_validated == "no" & type == "simpleRSA") 
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+confint(model)
+
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
+softness <- unique(as.character(plotData$softness))
+obedience <- unique(as.character(plotData$obedience))
+type <- unique(as.character(plotData$type))
+nr <- plotData$Nr[1]
+
+
+figure <- ggplot(plotData, aes(x = model, y = workerData)) +
+  geom_point() +
+  stat_smooth(method = "lm",
+              col = "black",
+              se = FALSE,
+              size = 1) +
+  theme_bw(base_size = 14) +
+  labs(title = "Simple model")+
+  #  labs(title = bquote(atop
+  #                     (.(type) ~"," ~ r^2 == .(r2),
+  #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
+  #                     )))+
+  ylab("human data")+
+  xlab("model predictions") +
+  theme(plot.title = element_text(hjust = 0.5))
+print(figure)
+ggsave(figure, height = 3, width = 3, units = "in", filename = paste("m", nr,".pdf", sep=""))
+
+
 
 #plotData <- subset(full, softness == "individually_opt" & obedience == 0.1 & cross_validated == "yes" & type == "simpleRSA") # for m9
 
@@ -68,7 +129,7 @@ plotData <- subset(full, softness == "individually_opt" & obedience == "individu
 
 # Define variables to pass to plot title and ggsave
 
-r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 2)
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
 softness <- unique(as.character(plotData$softness))
 obedience <- unique(as.character(plotData$obedience))
 type <- unique(as.character(plotData$type))
@@ -83,7 +144,7 @@ figure <- ggplot(plotData, aes(x = model, y = workerData)) +
               col = "black",
               se = FALSE,
               size = 1) +
-  theme_bw() +
+  theme_bw(base_size = 18) +
   labs(title = bquote(atop
                      (.(type) ~"," ~ r^2 == .(r2),
                        ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
