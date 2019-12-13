@@ -7,8 +7,8 @@ source("CommonCode/getConstCodeStratUtt.R")
 
 # simple RSA with individual optimization
 #x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_fixed00_and_fixed.20.csv")
-#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefStrengthOpt_obed0_and_obed.2.csv")
-x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefandObedOpt_and_fixed.2.2.csv")
+x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefStrengthOpt_obed0_and_obed.2.csv")
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefandObedOpt_and_fixed.2.2.csv")
 
 # simple RSA with individual crossvalidation (leave-one-out) 
 #x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAcrossVal_Opt1_and_Opt2.csv")
@@ -16,7 +16,7 @@ x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefandObedOpt_and_fixed
 
 # simple RSA global optimization
 #x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAglobaOpt_fixed.1.1_and_OptPrefobedFixed.1.csv")
-x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt12.csv")
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt12.csv")
 
 
 ############################################
@@ -34,7 +34,7 @@ x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAglobalOpt_OptPrefObedFixed0_and
 # full RSA global optimization
 #x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAglobalOpt_Opt1_and__Opt1obed.1.csv")
 #x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAglobalOpt_Opt2_and__Opt12.csv")
-#x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAglobalOpt_Opt13_and__Opt123.csv")
+# x4pilotData <- read.csv("X4_Data/x4pDataAugm_RSAglobalOpt_Opt13_and__Opt123.csv")
 
 
 #x4pilotData <- read.csv("")
