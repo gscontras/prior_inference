@@ -1,4 +1,4 @@
-var totalBlock = 2;
+var totalBlock = 0;
 var expBlock = totalBlock;
 
 
@@ -61,7 +61,7 @@ function make_slides(f) {
     var preferences = ["ERROR", "ERROR", "ERROR"]
   };
 
-  var maxTrialNr = 2;
+  var maxTrialNr = 0;
   var presentColor = _.shuffle(stimuli_color).splice(0, maxTrialNr);
   var presentShape = _.shuffle(stimuli_shape).splice(0, maxTrialNr);
   var presentTexture = _.shuffle(stimuli_texture).splice(0, maxTrialNr);
@@ -142,6 +142,7 @@ function make_slides(f) {
   // };
 
   blockNr = 0;
+  trialNum = -1;
   // totalBlock = 5; //take the amout of blocks (expBlock) you want + one test block
   // expBlock = this.totalBlock - 1;
   $(".expBlock").html(this.expBlock+1);
@@ -163,6 +164,7 @@ function make_slides(f) {
     persPronoun: persPronoun,
     dirPronoun: dirPronoun,
     sex: sex,
+    trialNum: trialNum,
 
     present_handle: function (stim, fixedTargetFeature, order) {
       $(".progress").show();
@@ -174,7 +176,7 @@ function make_slides(f) {
       $(".secondErr").hide();
       this.stim = stim;
       this.order = order;
-
+      console.log(this.trialNum + " trialNum")
       // var names_list = _.shuffle(names);
 
       // var person1 = names_list[0];
@@ -422,6 +424,9 @@ function make_slides(f) {
         }
       }
       if (this.ok_to_response && this.ok_to_next_slide) {
+        this.trialNum++;
+        slides.blockPause.trialNum = this.trialNum;
+        console.log(this.trialNum + " trialNum");
         this.allObjVisible();
         document.getElementById('multi_slider_table').style.pointerEvents = 'none';
         document.getElementById('multi_radio_table').style.pointerEvents = 'auto';
@@ -494,6 +499,7 @@ function make_slides(f) {
     log_responses: function () {
       exp.data_trials.push({
         "blockNr": this.blockNr,
+        "trialNum": this.trialNum,
         "trial_type": "task",//"multi_radio",
         "numFeatures": this.stim["numFeatures"],
         "featuresPresent": this.stim["featuresPresent"],
@@ -715,6 +721,7 @@ function make_slides(f) {
     pronoun: pronoun,
     persPronoun: persPronoun,
     dirPronoun: dirPronoun,
+    trialNum: trialNum,
     start: function () {
       $('.pronoun').html(this.pronoun);
       $('.persPronoun').html(this.persPronoun);
@@ -729,6 +736,10 @@ function make_slides(f) {
       };
       $(".blockText").html(blockText);
       $(".instruction_condition").html("Between subject instruction manipulation: " + exp.instruction);
+      console.log(this.trialNum + " trialNum")
+      this.trialNum = -1;
+      slides.task.trialNum = -1;
+      console.log(this.trialNum + " trialNum")
     },
     button: function () {
       exp.go(); //use exp.go() if and only if there is no "present" data.
