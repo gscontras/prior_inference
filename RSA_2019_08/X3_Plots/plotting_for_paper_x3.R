@@ -42,6 +42,37 @@ plotData <- subset(full, softness == 0 & obedience == 0 &
                           cross_validated == "no" & type == "fullRSA" & 
                           alpha == 1) 
 
+
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
+softness <- unique(as.character(plotData$softness))
+obedience <- unique(as.character(plotData$obedience))
+type <- unique(as.character(plotData$type))
+nr <- plotData$Nr[1]
+
+
+figure <- ggplot(plotData, aes(x = model, y = workerData)) +
+  geom_point(shape = 1) +
+  stat_smooth(method = "lm",
+              col = "black",
+              se = FALSE,
+              size = .5) +
+  theme_bw(base_size = 14) +
+  labs(title = "Full model")+
+  #  labs(title = bquote(atop
+  #                     (.(type) ~"," ~ r^2 == .(r2),
+  #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
+  #                     )))+
+  ylab("human data")+
+  xlab("model predictions") +
+  theme(plot.title = element_text(hjust = 0.5))
+print(figure)
+ggsave(figure, height = 3, width = 3, units = "in", filename = paste("x3_m", nr,".pdf", sep=""))
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+confint(model)
+
+
 # for m6
 plotData <- subset(full, softness == "individually_opt" & obedience == "individually_opt" & 
                      kl_factor == "individually_opt" &
@@ -63,6 +94,36 @@ plotData <- subset(full, softness == "individually_opt" & obedience == 0 &
 # Shortcut to do subsets. List_of_models_x3.csv says which model is which
 
 plotData <- subset(full, Nr == 7)
+
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
+softness <- unique(as.character(plotData$softness))
+obedience <- unique(as.character(plotData$obedience))
+type <- unique(as.character(plotData$type))
+nr <- plotData$Nr[1]
+
+
+figure <- ggplot(plotData, aes(x = model, y = workerData)) +
+  geom_point(shape = 1) +
+  stat_smooth(method = "lm",
+              col = "black",
+              se = FALSE,
+              size = .5) +
+  theme_bw(base_size = 14) +
+  labs(title = "Simple model")+
+  #  labs(title = bquote(atop
+  #                     (.(type) ~"," ~ r^2 == .(r2),
+  #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
+  #                     )))+
+  ylab("human data")+
+  xlab("model predictions") +
+  theme(plot.title = element_text(hjust = 0.5))
+print(figure)
+ggsave(figure, height = 3, width = 3, units = "in", filename = paste("x3_m", nr,".pdf", sep=""))
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+confint(model)
+
 
 # for m9
 plotData <- subset(full, Nr == 9) 

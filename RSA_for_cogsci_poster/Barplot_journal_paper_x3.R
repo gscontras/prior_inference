@@ -70,18 +70,18 @@ ggplot(allStats, aes(x=sliderNumber, y=sliderValue, fill = type)) +
   geom_bar(position=position_dodge(.9), colour="black", stat="identity") +
 #  coord_flip()+
   geom_errorbar(position=position_dodge(.9), width=.25, aes(ymin=sliderValue-ci, ymax=sliderValue+ci)) +
-  scale_fill_manual(values = c("white","ivory3","ivory4"), labels = c("Data","Optimized model","Non-optim. model"), name = "") +
-  theme_bw()+
+  scale_fill_manual(values = c("white","ivory3","ivory4"), labels = c("Data","Opt. model","Non-opt. model"), name = "") +
+  theme_bw(base_size = 18)+
 #  labs(title="Example of class 22b2b")+
   ylab("Slider value (normalized)")+
   xlab("")+
   scale_x_discrete(limits=c("1","2","3","4","5","6"),
                    labels=c("cloud", "circle", "striped","solid","blue","green"))+
   theme(legend.position="bottom")+
-  theme (axis.text.x=element_text(size = 16),
-         axis.text.y=element_text(size = 16),
-         axis.title.x=element_text(size = 16),
-         axis.title.y=element_text(size = 16),
-         legend.text=element_text(size = 14))
+#  theme (axis.text.x=element_text(size = 16),
+ #        axis.text.y=element_text(size = 16),
+#         axis.title.x=element_text(size = 16),
+ ##        axis.title.y=element_text(size = 16),
+#         legend.text=element_text(size = 14))
   #ggsave("utterancePlot.pdf")
-ggsave("barplot_x3.pdf",width=7,height=7, units = "in")
+ggsave("december_barplot_x3.pdf",width=5,height=4.5, units = "in")

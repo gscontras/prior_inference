@@ -386,7 +386,7 @@ When optimizing all three parameters, fullPSIRSA yields a correlation of $r^2 = 
 % only $\gamma$ optimized: Multiple R-squared:  0.8576 ; gamma=0.2231055
 % only $\alpha$ and $\gamma$ optimized: Multiple R-squared:  0.8614; alpha=0.1797266, gamma=0.2204913
 % all three parameters globally optimized: Multiple R-squared:  0.9773; alpha=0.26568, gamma=0.2214308, beta = 0.003027947\\
-Overall, the results show that participants are indeed able to infer the feature preferences that lead to the choice of an object and simplePSIRA models this inference process very well.
+Overall, the results show that participants are indeed able to infer the feature preferences that lead to the choice of an object and simplePSIRSA models this inference process very well.
 The higher model flexibility of fullPSIRSA, controlled via parameter $\alpha$, does not yield any modeling improvement. 
 
 % \footnote{We were unable to perform a likelihood ratio test to compare these models since they are not nested.}
@@ -513,8 +513,8 @@ Both models fail to predict the human data ($r^2=0.0709$, $p=0.01439$).
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=2in]{images/x3_m1.pdf}
 	\includegraphics[width=2in]{images/x3_m7.pdf}
+	\includegraphics[width=2in]{images/x3_m11.pdf}
 	\caption{Average human data from Experiment 2 plotted against the predictions of the non-optimized and three parameter optimized simplePSIRSA models. }
 	\label{simple-full-x3}
 \end{figure}
@@ -536,20 +536,21 @@ Unlike for Experiment 1 where even the non-optimized models provided a good line
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=2.5in]{images/barplot_x3.pdf}
+	\includegraphics[width=2.5in]{images/december_barplot_x3.pdf}
 	\caption{Simple Social Inference model predictions and human data for one of the classes of stimuli \emph{Experiment 2: Picking utterances}. The optimized version of the model is optimized for the KL-value factor $\lambda$.}\label{barplot_x3}
 \end{figure}
 
 % Note: I did check it - there are indeed 14. 5+5+6+7+6+6+7+3+4+5+6+7+8+9
 %After matching the respective actual feature values with the utterance choice relevant within the respectively-binned conditions, we again computed averages over utterance preference values for the respectively-binned trials across participants and across respective model predictions \gcs{this is awfully hard to follow}. Asya: decided to remove this part, reordering can just as well stay behind the scenes.
 
-
-In Figure~\ref{kl-factor}, we compare $\lambda$-optimized simplePSIRSA (right panel) with a uniform base model (left panel), which assigns equal probability to each utterance available for a particular context.
+% Asya: Need to fix the text below 
+%In Figure~\ref{kl-factor}, 
+We compared $\lambda$-optimized simplePSIRSA (right panel) with a uniform base model (left panel), which assigns equal probability to each utterance available for a particular context.
 This baseline model essentially has not utterance  preferences whatsoever, but reflects the fact that the ambiguity classes distinguish between cases with a different number of utterance choice options (i.e. three to nine)
  %\gcs{why is this a reasonable model to compare against? I think we need to do more to motivate this comparison.}. 
  %\gcs{how is this model defined?} Asya: it really is a model that takes the probability of 1 and distributes it evenly between all possible utterances.
  Since simplePSIRSA with $\lambda=0$ collapses to the baseline model, optimizing the $\lambda$ parameter in simplePSIRSA is a nested model. 
- When statistically comparing the individually optimized $\lambda$ simplePSIRSA model with the baseline model, the likelihood ration test confirms that individual $\lambda$ optimizations yield better fits than the baseline model ($G^2 = 268.87, \textrm{df} = 82, p <0.01$).
+ When statistically comparing the individually optimized $\lambda$ simplePSIRSA model with the baseline model, the likelihood ratio test confirms that individual $\lambda$ optimizations yield better fits than the baseline model ($G^2 = 268.87, \textrm{df} = 82, p <0.01$).
 
 \begin{figure}[ht]
 	\centering
