@@ -82,7 +82,7 @@ Belardinelli, A.%
   execution} {It's in the eyes: Planning precise manual actions before
   execution}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of vision}{16}{1}{18--18}.
+\APACjournalVolNumPages{Journal of vision}{16}{1}{1--18}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -133,13 +133,11 @@ Butz, M\BPBI V.%
   structures are out there? learning predictive compositional concepts based on
   social sensorimotor explorations}.{\BBCQ}
 \newblock
-\BIn{} T\BPBI K.~Metzinger\ \BBA {} W.~Wiese\ (\BEDS), .
+\BIn{} T\BPBI K.~Metzinger\ \BBA {} W.~Wiese\ (\BEDS), \APACrefbtitle
+  {Philosophy and Predictive Processing.} {Philosophy and predictive
+  processing.}
 \newblock
 \APACaddressPublisher{Frankfurt am Main}{MIND Group}.
-\newblock
-\begin{APACrefURL}
-  \url{http://predictive-mind.net/papers/which-structures-are-out-there}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.15502/9783958573093} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -196,9 +194,6 @@ Carmon, A\BPBI F.%
 \newblock
 \APACjournalVolNumPages{Qualitative Research Reports in
   Communication}{14}{1}{87--96}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1080/17459435.2013.835346}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1080/17459435.2013.835346} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -301,7 +296,7 @@ Cushing, S.%
 \APACrefbtitle {Fatal words: Communication clashes and aircraft crashes} {Fatal
   words: Communication clashes and aircraft crashes}.
 \newblock
-\APACaddressPublisher{}{University of Chicago Press}.
+\APACaddressPublisher{Chicago}{University of Chicago Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -457,7 +452,8 @@ Foppa, K.%
 {\BBOQ}\APACrefatitle {On mutual understanding and agreement in dialogues} {On
   mutual understanding and agreement in dialogues}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Mutualities in dialogue.} {Mutualities in dialogue.}
+\BIn{} I.~Markova\ \BBA {} F\BPBI K.~Graumann Carl~F.\ (\BEDS), \APACrefbtitle
+  {Mutualities in dialogue.} {Mutualities in dialogue.}
 \newblock
 \APACaddressPublisher{Cambridge, UK}{Cambridge University Press}.
 \PrintBackRefs{\CurrentBib}
@@ -557,7 +553,7 @@ Friston, K.%
 , Rigoli, F.%
 , Ognibene, D.%
 , Mathys, C.%
-, FitzGerald, T.%
+, Fitzgerald, T.%
 \BCBL {}\ \BBA {} Pezzulo, G.%
 \end{APACrefauthors}%
 \unskip\
@@ -779,8 +775,8 @@ Kelley, H\BPBI H.%
   competitors' beliefs about others.} {Social interaction basis of cooperators'
   and competitors' beliefs about others.}{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of personality and social
-  psychology}{16}{1}{66}.
+\APACjournalVolNumPages{Journal of personality and social psychology}{16}{1}{66
+  -- 91}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -912,6 +908,8 @@ Lohmann, J.%
   peripersonal hand space}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Vision}{3}{2}{15}.
+\newblock
+\begin{APACrefDOI} \doi{doi.org/10.3390/vision3020015} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

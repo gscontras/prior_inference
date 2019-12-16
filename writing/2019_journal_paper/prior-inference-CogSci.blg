@@ -43,6 +43,8 @@ Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2
 while executing---line 5079 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5079 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry foppa1995mutual
+while executing---line 5079 of file apacite.bst
 Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
 while executing---line 5079 of file apacite.bst
 Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
@@ -53,43 +55,43 @@ Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, K
 while executing---line 5079 of file apacite.bst
 You've used 48 entries,
             6951 wiz_defined-function locations,
-            1568 strings with 18481 characters,
-and the built_in function-call counts, 91451 in all, are:
-= -- 11615
-> -- 719
-< -- 4193
-+ -- 4286
+            1568 strings with 18414 characters,
+and the built_in function-call counts, 91667 in all, are:
+= -- 11648
+> -- 721
+< -- 4199
++ -- 4306
 - -- 96
-* -- 5647
-:= -- 16235
-add.period$ -- 211
+* -- 5665
+:= -- 16271
+add.period$ -- 212
 call.type$ -- 48
-change.case$ -- 827
+change.case$ -- 828
 chr.to.int$ -- 0
 cite$ -- 96
-duplicate$ -- 2441
-empty$ -- 3669
-format.name$ -- 1138
-if$ -- 17761
+duplicate$ -- 2457
+empty$ -- 3667
+format.name$ -- 1144
+if$ -- 17794
 int.to.chr$ -- 0
 int.to.str$ -- 144
 missing$ -- 0
-newline$ -- 1214
-num.names$ -- 398
-pop$ -- 1529
+newline$ -- 1212
+num.names$ -- 400
+pop$ -- 1532
 preamble$ -- 1
 purify$ -- 194
 quote$ -- 0
-skip$ -- 6334
+skip$ -- 6336
 stack$ -- 0
-substring$ -- 4783
-swap$ -- 1392
+substring$ -- 4811
+swap$ -- 1403
 text.length$ -- 135
 text.prefix$ -- 0
 top$ -- 1
 type$ -- 4480
 warning$ -- 0
-while$ -- 399
+while$ -- 403
 width$ -- 0
-write$ -- 1465
-(There were 19 error messages)
+write$ -- 1463
+(There were 20 error messages)

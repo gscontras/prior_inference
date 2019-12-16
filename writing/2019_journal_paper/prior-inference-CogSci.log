@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 DEC 2019 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  16 DEC 2019 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -829,11 +829,11 @@ Missing character: There is no “ in font ptmr7t!
  [19] [20])
 [21] (./prior-inference-CogSci.aux) ) 
 Here is how much of TeX's memory you used:
- 13582 strings out of 492995
- 263584 string characters out of 6132704
+ 13579 strings out of 492995
+ 263556 string characters out of 6132704
  308332 words of memory out of 5000000
- 16819 multiletter control sequences out of 15000+600000
- 52110 words of font info for 102 fonts, out of 8000000 for 9000
+ 16818 multiletter control sequences out of 15000+600000
+ 51587 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,54p,2161b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/
@@ -841,15 +841,14 @@ enc/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/uc
-rr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></
-usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/
-texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prior-inference-CogSci.pdf (21 pages, 1427216 bytes).
+ts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/symbol/usy
+r.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/te
+xlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on prior-inference-CogSci.pdf (21 pages, 1415808 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
+ 192 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

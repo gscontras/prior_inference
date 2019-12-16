@@ -7220,6 +7220,7 @@
   booktitle = {Mutualities in dialogie},
   publisher = {Cambridge University Press},
   year      = {1995},
+  editor    = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
   address   = {Cambridge, UK},
 }
 
@@ -7312,7 +7313,7 @@
   year      = {1970},
   volume    = {16},
   number    = {1},
-  pages     = {66},
+  pages     = {66 -- 91},
   publisher = {American Psychological Association},
 }
 
@@ -7333,6 +7334,7 @@
   booktitle = {Mutualities in dialogue},
   publisher = {Cambridge University Press},
   year      = {1995},
+  editor    = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
   address   = {Cambridge, UK},
 }
 
@@ -7388,10 +7390,6 @@
   doi       = {10.1080/17459435.2013.835346},
   eprint    = {https://doi.org/10.1080/17459435.2013.835346},
   publisher = {Routledge},
-  url       = { 
-        https://doi.org/10.1080/17459435.2013.835346
-    
-},
 }
 
 @InCollection{boonholmes1991,
@@ -7476,6 +7474,7 @@
   publisher = {University of Chicago Press},
   year      = {1994},
   author    = {Cushing, Steven},
+  address   = {Chicago},
 }
 
 @Misc{sikos2019,
@@ -7512,7 +7511,7 @@
 }
 
 @Article{Friston:2015,
-  author    = {Friston, Karl and Rigoli, Francesco and Ognibene, Dimitri and Mathys, Christoph and FitzGerald, Thomas and Pezzulo, Giovanni},
+  author    = {Friston, Karl and Rigoli, Francesco and Ognibene, Dimitri and Mathys, Christoph and Fitzgerald, Thomas and Pezzulo, Giovanni},
   title     = {Active inference and epistemic value},
   journal   = {Cognitive Neuroscience},
   year      = {2015},
@@ -7528,6 +7527,7 @@
 @InCollection{Butz:2017a,
   author    = {Butz, Martin V.},
   title     = {Which structures are out there? Learning predictive compositional concepts based on social sensorimotor explorations},
+  booktitle = {Philosophy and Predictive Processing},
   publisher = {MIND Group},
   year      = {2017},
   editor    = {Metzinger, Thomas K. and Wiese, Wanja},
@@ -7539,7 +7539,6 @@
   keywords  = {Embodiment, Predictive encodings, Language, Social interactions, Anticipatory behavior, Homeostasis, Cooperation, Free energy principle, Event segmentation theory, Compositional concepts, Sensorimotor learning},
   language  = {English},
   refid     = {8},
-  url       = {http://predictive-mind.net/papers/which-structures-are-out-there},
 }
 
 @Article{Butz:2016,
@@ -7584,7 +7583,7 @@
   year      = {2016},
   volume    = {16},
   number    = {1},
-  pages     = {18--18},
+  pages     = {1--18},
   publisher = {The Association for Research in Vision and Ophthalmology},
 }
 
@@ -7606,6 +7605,7 @@
   volume    = {3},
   number    = {2},
   pages     = {15},
+  doi       = {doi.org/10.3390/vision3020015},
   publisher = {Multidisciplinary Digital Publishing Institute},
 }
 
@@ -7794,6 +7794,26 @@
   journal = {Topics in Cognitive Science},
   year    = {2019},
   note    = {this volume},
+}
+
+@Book{Hohwy:2013,
+  title     = {The Predictive Mind},
+  publisher = {Oxford University Press},
+  year      = {2013},
+  author    = {Jakob Hohwy},
+  address   = {Oxford, UK},
+  owner     = {mvbutz},
+  timestamp = {2016.01.27},
+}
+
+@Book{Clark:2016,
+  title     = {Surfing Uncertainty: Prediction, action and the embodied mind},
+  publisher = {Oxford University Press},
+  year      = {2016},
+  author    = {Andy Clark},
+  address   = {Oxford, UK},
+  owner     = {mvbutz},
+  timestamp = {2016.03.01},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
