@@ -131,8 +131,40 @@ plotData <- subset(full, Nr == 9)
 # for m10
 plotData <- subset(full, Nr == 10)
 
-# for m11
+# for m11 KL individually optimized
 plotData <- subset(full, Nr == 11)
+
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
+softness <- unique(as.character(plotData$softness))
+obedience <- unique(as.character(plotData$obedience))
+type <- unique(as.character(plotData$type))
+nr <- plotData$Nr[1]
+
+
+figure <- ggplot(plotData, aes(x = model, y = workerData)) +
+  geom_point(shape = 1) +
+  stat_smooth(method = "lm",
+              col = "black",
+              se = FALSE,
+              size = .5) +
+  theme_bw(base_size = 14) +
+  labs(title = "Simple model")+
+  #  labs(title = bquote(atop
+  #                     (.(type) ~"," ~ r^2 == .(r2),
+  #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
+  #                     )))+
+  ylab("human data")+
+  xlab("model predictions") +
+  theme(plot.title = element_text(hjust = 0.5))
+print(figure)
+ggsave(figure, height = 3, width = 3, units = "in", filename = paste("x3_m", nr,".pdf", sep=""))
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+confint(model)
+
+
+# for m9
 
 # for m13
 plotData <- subset(full, Nr == 13)
@@ -143,6 +175,36 @@ plotData <- subset(full, Nr == 14)
 plotData <- subset(full, Nr == 15)
 
 plotData <- subset(full, Nr == 20)
+
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
+softness <- unique(as.character(plotData$softness))
+obedience <- unique(as.character(plotData$obedience))
+type <- unique(as.character(plotData$type))
+nr <- plotData$Nr[1]
+
+
+figure <- ggplot(plotData, aes(x = model, y = workerData)) +
+  geom_point(shape = 1) +
+  stat_smooth(method = "lm",
+              col = "black",
+              se = FALSE,
+              size = .5) +
+  theme_bw(base_size = 14) +
+  labs(title = "Uniform model")+
+  #  labs(title = bquote(atop
+  #                     (.(type) ~"," ~ r^2 == .(r2),
+  #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
+  #                     )))+
+  ylab("human data")+
+  xlab("model predictions") +
+  theme(plot.title = element_text(hjust = 0.5))
+print(figure)
+ggsave(figure, height = 3, width = 3, units = "in", filename = paste("x3_m", nr,".pdf", sep=""))
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+confint(model)
+
 
 # Define variables to pass to plot title and ggsave
 
