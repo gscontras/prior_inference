@@ -23,7 +23,7 @@
 % Possible title: Higher order pragmatic reasoning in reference games
 
 %\title{On the purpose of ambiguous utterances}
-\title{Learning About Others:\\
+\title{Learning about Others:\\
 	Pragmatic Social Inference \\ through Ambiguity Resolution
 }
 % OR: Pragmatic Social Inference while Observing Ambiguity Resolutions 
@@ -40,15 +40,15 @@
 Grice's maxim of manner postulates that ambiguity should be avoided to maximize clarity.
 Nonetheless, ambiguity is ubiquitous during conversations.
 It has been suggested that some ambiguity may be useful for efficiency reasons in cases when clarity is not affected.
-Here we investigated whether disambiguations of ambiguous utterances yield another, socially highly relevant benefit.
+Here we investigated whether disambiguations of ambiguous utterances yield another, socially-relevant benefit.
 In particular, we asked if responses to ambiguous utterances can reveal parts of the internal model of the interpreter. 
-More concretely, we asked if speakers (i) can use responses as a source of information to infer unknown preferences of their conversation partner and (ii) are able to strategically chose ambiguous over unambiguous utterances for learning about their conversation partner's object preferences. 
-We ran two online experiments using a modified version of the original reference game framework \cite{frankgoodman2012} and modeled the recorded data by modifying the Rational Speech Act model.
+More concretely, we asked if speakers (i) can use responses as a source of information to infer unknown preferences of their conversation partner, and (ii) are able to strategically chose ambiguous utterances over unambiguous utterances for learning about their conversation partner's preferences. 
+We ran two web-based experiments using a modified version of the original reference game framework \cite{frankgoodman2012} and modeled the recorded data by modifying the vanilla Rational Speech Act model.
 The data and modeling results confirm both points. 
 Participants were able to infer Bayesian posteriors of listeners' preferences when analyzing their choice of objects in situations of referential ambiguity.
-Moreover, nearly 40\% of the speakers were able to strategically choose ambiguous over unambiguous utterances in an epistemic, goal-directed manner, maximizing expected information gain about the listener's preferences.
-Surprisingly, an equally large number of participants seemed to minimize expected information gain by systematically choosing unambiguous utterances. 
-Our results thus show that ambiguity resolution can reveal aspects of the knowledge, preferences, and beliefs of conversation partners and some of us are able to strategically use (ambiguous) utterances to gain knowledge about these aspects.
+Moreover, nearly 40\% of the speakers were able to strategically choose ambiguous over unambiguous utterances in an epistemic, goal-directed manner, maximizing expected information gain about the listeners' preferences.
+Surprisingly, an equally-large number of participants seemed to minimize expected information gain by systematically choosing unambiguous utterances. 
+Our results thus show that ambiguity resolution can reveal aspects of the knowledge, preferences, and beliefs of conversation partners, and that some of us are able to strategically use (ambiguous) utterances to gain knowledge about these aspects.
 %We investigated and modeled how speakers learn about opinions, preferences, and beliefs of their conversation partners when monitoring their responses.
 %Moreover, we asked the question whether 
 %Accordingly, 
@@ -63,47 +63,46 @@ Our results thus show that ambiguity resolution can reveal aspects of the knowle
 %We discuss these situations of social learning in light of the predictive mind paradigm: we show how ambiguity in communication creates opportunities for conversation partners to build accurate predictive models of each other.                                                                    
 
 \textbf{Keywords:} 
-ambiguity; pragmatics; information gain; event-predictive cognition; Rational Speech Act model; social intelligence
+ambiguity; pragmatics; information gain; event-predictive cognition; Rational Speech Act models; social intelligence
 \end{abstract}
 
 
 
 \section{Introduction}
 
-Active inference, that is, the anticipatory, goal-directed, and epistemic invocation of behavior, is
+Active inference---that is, the anticipatory, goal-directed, and epistemic invocation of behavior---is
 closely linked to the predictive mind perspective \cite{Friston:2015,Hohwy:2013,Clark:2016}. 
 The anticipatory nature of the human mind reveals itself in many domains.
 With respect to planning and executing manual sensorimotor interactions, 
-it has been shown that we anticipate future events and event boundaries revealing anticipatory active inference processes \cite{belardinelli2016s, belardinelli2018mental,Friston:2015,Hayhoe:2003,lohmann2019hands}.
-Also in the language domain, predictive active inference processes seem to continuously unfold \cite{Christiansen:2016}, compressing information into event-like units of thought \cite{Gaerdenfors:2014}.
-For example, listeners predict the semantic category of upcoming words \cite{federmeier2002picture} as evidenced by neurophysiological data.
+it has been shown that we anticipate future events and event boundaries, revealing anticipatory active inference processes \cite{belardinelli2016s, belardinelli2018mental,Friston:2015,Hayhoe:2003,lohmann2019hands}.
+In the language domain, predictive active inference processes seem to continuously unfold \cite{Christiansen:2016}, compressing information into event-like units of thought \cite{Gaerdenfors:2014}.
+For example, listeners predict the semantic category of upcoming words \cite{federmeier2002picture}, as evidenced by neurophysiological data.
 Comprehension of sentences relies not only on the ability of listeners to anticipate subsequent words based on their transitional probabilities, but also takes into account the structural properties of sentences, revealing an even more abstract level of predictions \cite{levy2008expectation}.
 Dynamic language models show that complex, event-predictive structures guide ambiguity resolution during comprehension and likely also constrain ambiguity generation during language production \cite{Elman:2019}. 
 
 When systematic abstractions become relevant, event-predictive processes seem to be at play, compressing sensorimotor experiences, including language, into event-predictive encodings \cite{Butz:2016,Butz:2017a}.
-Various disciplines associated with cognitive science suggest that our predictive minds develop event compressive, predictive encodings, which interact with action, including language, production and comprehension, essentially determining thought itself in a highly active, epistemic, goal-directed manner  \cite{Baldwin:2019tsi,DuBrow:2019tsi,Elsner:2019tsi,Fallgatter:2019tsi,Knott:2019tsi,Papafragou:2019tsi,Zacks:2019tsi}.
+Various disciplines associated with cognitive science suggest that our predictive minds develop event-compressive, predictive encodings, which interact with action, including language production and comprehension, essentially determining thought itself in a highly active, epistemic, goal-directed manner  \cite{Baldwin:2019tsi,DuBrow:2019tsi,Elsner:2019tsi,Fallgatter:2019tsi,Knott:2019tsi,Papafragou:2019tsi,Zacks:2019tsi}.
 Here, we reveal socially epistemic comprehension and utterance productions, while observing and generating social event-predictive interactions.
 
 
 In two main studies, we show how speakers update predictive models of the listener's preferences and beliefs when watching social event interactions, such as when offering a few objects to choose from and observing the object choice of the conversation partner. 
 We thus show that humans can interpret behavior of other people as driven by their motives, intentions, or personal characteristics.
 Conceptually, this idea goes back to the attribution theory \cite{jones1965acts, kelley1967attribution, kelley1970social}.
-More recently, \citeA{shafto2012learning} developed a Bayesian model of learning that formalizes the process of inferring others' knowledge about the world based on their actions and goals. They argue that efficient learning is possible if we assume that agent's actions are driven either by physical (non-social) or communicative goals but are not random. The authors show that giving a communicative goal of an agent allows the observer to draw a stronger inference concerning the underlying hypothesis.
-The model predicts that learners use knowledge of agent's goals to evaluate how knowledgeable they are, and as a consequence, how much a learner can trust their actions to be informative about a hypothesis.
+More recently, \citeA{shafto2012learning} developed a Bayesian model of learning that formalizes the process of inferring others' knowledge about the world based on their actions and goals. They argue that efficient learning is possible if we assume that agents' actions are driven either by physical (non-social) or communicative goals, but are crucially not random. The authors show that giving a communicative goal of an agent allows the observer to draw a stronger inference concerning the underlying hypothesis.
+The model predicts that learners use knowledge of agents' goals to evaluate how knowledgeable they are, and, as a consequence, how much a learner can trust their actions to be informative about a hypothesis.
  
 
-While our model also pursues Bayesian inference, that is, psychological reasoning,   
-we do not focus on the inference of the actor's knowledge, that is, on \emph{learning from others} \cite{shafto2012learning}.
-Rather, we focus on \emph{learning about others}, that is, on learning about actors' preferences when observing their disambiguating behavioral responses, that is, their interpretive choices
-and on the potential strategic, socially epistemic usage of ambiguous utterances in anticipation of actors' responses. 
-We adapt the Rational Speech Act model framework, reliably modeling the involved, probabilistic interpretation processes and socially epistemic action choice. 
+While our model also pursues Bayesian inference---that is, psychological reasoning---we do not focus on the inference of the actor's knowledge---that is, on \emph{learning from others} \cite{shafto2012learning}.
+Rather, we focus on \emph{learning about others}, learning about actors' preferences when observing their disambiguating behavioral responses. We explore interpretive choices
+and the potential strategic, socially epistemic usage of ambiguous utterances in anticipation of actors' responses. 
+To formalize our hypothesis, we adapt the Rational Speech Act model framework, reliably modeling the involved, probabilistic interpretation processes and socially epistemic action choice. 
 Interestingly, the modeling work reveals good interpretive abilities but also strong individual differences when the task is to choose (ambiguous) utterances strategically for gaining social knowledge. 
 
 
-In the following, we first review how different disciplines approached ambiguity in natural language and communication and provide a computational background on referential ambiguity resolution. 
-In Section 3 we develop computational models that are able to infer the preferences of the agent that led her to a particular choice of objects, as well as a model that predicts which utterances are most useful to create the possibility of learning about the preferences of the conversation partner. 
-Sections 4 and 5 demonstrate the results of behavioral experiments and modeling performance. 
-Section 6 concludes that participants were indeed able to use observable behavior of others to infer their prior beliefs and hypothesizes why the ability to intentionally create epistemic situations can be found only in a part of the population.
+In the following, we first review how different disciplines approach ambiguity in natural language and communication, and provide a computational background on referential ambiguity resolution. 
+In Section 3, we develop computational models that are able to infer the preferences of an agent that led her to a particular choice of objects, as well as a model that predicts which utterances are most useful to create the possibility of learning about the preferences of the conversation partner. 
+Sections 4 and 5 give the results of behavioral experiments and modeling performance. 
+Section 6 concludes that participants were indeed able to use observable behavior of others to infer their prior beliefs, and hypothesizes why the ability to intentionally create epistemic situations can be found only in part of the population.
 
 
 \section{Ambiguity in natural language and communication}
