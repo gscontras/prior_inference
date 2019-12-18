@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  17 DEC 2019 18:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  17 DEC 2019 20:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -734,111 +734,111 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 <images/preference-trial.png, id=41, 1654.18pt x 1082.0425pt>
 File: images/preference-trial.png Graphic file (type png)
 <use images/preference-trial.png>
-Package pdftex.def Info: images/preference-trial.png  used on input line 285.
+Package pdftex.def Info: images/preference-trial.png  used on input line 286.
 (pdftex.def)             Requested size: 325.215pt x 212.7228pt.
  [9]
 [10 <./images/preference-trial.png>]
-<images/december_barplot_x4.pdf, id=51, 361.35pt x 325.215pt>
-File: images/december_barplot_x4.pdf Graphic file (type pdf)
-<use images/december_barplot_x4.pdf>
-Package pdftex.def Info: images/december_barplot_x4.pdf  used on input line 366
-.
-(pdftex.def)             Requested size: 180.67499pt x 162.6071pt.
- [11 <./images/december_barplot_x4.pdf>]
-<images/m13.pdf, id=60, 216.81pt x 216.81pt>
+<images/m13.pdf, id=50, 216.81pt x 216.81pt>
 File: images/m13.pdf Graphic file (type pdf)
 <use images/m13.pdf>
-Package pdftex.def Info: images/m13.pdf  used on input line 396.
+Package pdftex.def Info: images/m13.pdf  used on input line 383.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/m23.pdf, id=61, 216.81pt x 216.81pt>
+<images/m23.pdf, id=51, 216.81pt x 216.81pt>
 File: images/m23.pdf Graphic file (type pdf)
 <use images/m23.pdf>
-Package pdftex.def Info: images/m23.pdf  used on input line 397.
+Package pdftex.def Info: images/m23.pdf  used on input line 384.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/m3.pdf, id=62, 216.81pt x 216.81pt>
+ [11]
+<images/m3.pdf, id=56, 216.81pt x 216.81pt>
 File: images/m3.pdf Graphic file (type pdf)
 <use images/m3.pdf>
-Package pdftex.def Info: images/m3.pdf  used on input line 421.
+Package pdftex.def Info: images/m3.pdf  used on input line 410.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/m16.pdf, id=63, 216.81pt x 216.81pt>
+<images/m16.pdf, id=57, 216.81pt x 216.81pt>
 File: images/m16.pdf Graphic file (type pdf)
 <use images/m16.pdf>
-Package pdftex.def Info: images/m16.pdf  used on input line 422.
+Package pdftex.def Info: images/m16.pdf  used on input line 411.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-
-[12 <./images/m13.pdf> <./images/m23.pdf>]
-<images/m5.pdf, id=79, 216.81pt x 216.81pt>
+ [12 <./images/m13.pdf> <./images/m23.pdf> <./images/m3.pdf> <./images/m16.pdf>
+]
+<images/m5.pdf, id=85, 216.81pt x 216.81pt>
 File: images/m5.pdf Graphic file (type pdf)
 <use images/m5.pdf>
-Package pdftex.def Info: images/m5.pdf  used on input line 446.
+Package pdftex.def Info: images/m5.pdf  used on input line 435.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/m8.pdf, id=80, 216.81pt x 216.81pt>
+<images/m8.pdf, id=86, 216.81pt x 216.81pt>
 File: images/m8.pdf Graphic file (type pdf)
 <use images/m8.pdf>
-Package pdftex.def Info: images/m8.pdf  used on input line 447.
+Package pdftex.def Info: images/m8.pdf  used on input line 436.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
- [13 <./images/m3.pdf> <./images/m16.pdf> <./images/m5.pdf> <./images/m8.pdf>]
-<images/utterance-choice-trial.png, id=109, 1243.64626pt x 1038.88126pt>
+<images/december_barplot_x4.pdf, id=87, 361.35pt x 325.215pt>
+File: images/december_barplot_x4.pdf Graphic file (type pdf)
+<use images/december_barplot_x4.pdf>
+Package pdftex.def Info: images/december_barplot_x4.pdf  used on input line 450
+.
+(pdftex.def)             Requested size: 180.67499pt x 162.6071pt.
+ [13 <./images/m5.pdf> <./images/m8.pdf>]
+<images/utterance-choice-trial.png, id=104, 1243.64626pt x 1038.88126pt>
 File: images/utterance-choice-trial.png Graphic file (type png)
 <use images/utterance-choice-trial.png>
 Package pdftex.def Info: images/utterance-choice-trial.png  used on input line 
-477.
+480.
 (pdftex.def)             Requested size: 252.94499pt x 211.29172pt.
- [14 <./images/utterance-choice-trial.png>]
-<images/x3_m7.pdf, id=114, 216.81pt x 216.81pt>
+ [14 <./images/december_barplot_x4.pdf>] [15 <./images/utterance-choice-trial.p
+ng>]
+<images/x3_m7.pdf, id=117, 216.81pt x 216.81pt>
 File: images/x3_m7.pdf Graphic file (type pdf)
 <use images/x3_m7.pdf>
-Package pdftex.def Info: images/x3_m7.pdf  used on input line 514.
+Package pdftex.def Info: images/x3_m7.pdf  used on input line 516.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/x3_m11.pdf, id=115, 216.81pt x 216.81pt>
+<images/x3_m11.pdf, id=118, 216.81pt x 216.81pt>
 File: images/x3_m11.pdf Graphic file (type pdf)
 <use images/x3_m11.pdf>
-Package pdftex.def Info: images/x3_m11.pdf  used on input line 515.
+Package pdftex.def Info: images/x3_m11.pdf  used on input line 517.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
- [15]
 <images/december_barplot_x3.pdf, id=119, 361.35pt x 325.215pt>
 File: images/december_barplot_x3.pdf Graphic file (type pdf)
 <use images/december_barplot_x3.pdf>
-Package pdftex.def Info: images/december_barplot_x3.pdf  used on input line 537
+Package pdftex.def Info: images/december_barplot_x3.pdf  used on input line 539
 .
 (pdftex.def)             Requested size: 180.67499pt x 162.6071pt.
- [16 <./images/x3_m7.pdf> <./images/x3_m11.pdf> <./images/december_barplot_x3.p
-df>]
-<images/x3_m20.pdf, id=140, 216.81pt x 216.81pt>
+ [16 <./images/x3_m7.pdf> <./images/x3_m11.pdf>]
+<images/x3_m20.pdf, id=135, 216.81pt x 216.81pt>
 File: images/x3_m20.pdf Graphic file (type pdf)
 <use images/x3_m20.pdf>
-Package pdftex.def Info: images/x3_m20.pdf  used on input line 555.
+Package pdftex.def Info: images/x3_m20.pdf  used on input line 557.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
 File: images/x3_m11.pdf Graphic file (type pdf)
 <use images/x3_m11.pdf>
-Package pdftex.def Info: images/x3_m11.pdf  used on input line 556.
+Package pdftex.def Info: images/x3_m11.pdf  used on input line 558.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
 
-Overfull \hbox (13.83649pt too wide) in paragraph at lines 560--564
+Overfull \hbox (13.83649pt too wide) in paragraph at lines 562--566
 []\OT1/ptm/m/n/10 We were able to dis-tin-guish three groups of par-tic-i-pants
  on the ba-sis of the individually-
  []
 
-[17 <./images/x3_m20.pdf>] (./prior-inference-CogSci.bbl [18] [19] [20])
-[21] (./prior-inference-CogSci.aux) ) 
+[17 <./images/december_barplot_x3.pdf> <./images/x3_m20.pdf>] [18]
+(./prior-inference-CogSci.bbl [19] [20]) [21] (./prior-inference-CogSci.aux) ) 
 Here is how much of TeX's memory you used:
- 13744 strings out of 492616
- 267713 string characters out of 6129482
+ 13742 strings out of 492616
+ 267700 string characters out of 6129482
  316524 words of memory out of 5000000
  17343 multiletter control sequences out of 15000+600000
- 51587 words of font info for 100 fonts, out of 8000000 for 9000
+ 50474 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,9n,48p,2161b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/
-enc/dvips/base/8r.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmex10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/symbol/usy
-r.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
-r/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/te
-xlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prior-inference-CogSci.pdf (21 pages, 1414795 bytes).
+{
+/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
+ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
+ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
+019/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/
+times/utmri8a.pfb>
+Output written on prior-inference-CogSci.pdf (21 pages, 1416124 bytes).
 PDF statistics:
  192 PDF objects out of 1000 (max. 8388607)
  132 compressed objects within 2 object streams
