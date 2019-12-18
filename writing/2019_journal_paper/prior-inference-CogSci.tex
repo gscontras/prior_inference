@@ -219,7 +219,7 @@ Finding extremely strong correlations between model predictions and behavioral d
 \subsection{Full pragmatic social inference RSA}
 
 Our model builds on the vanilla version of RSA presented above, modifying the listener's state prior $P(s)$ and enhancing the reasoning process towards a social component, yielding a full pragmatic social inference RSA model (fullPSIRSA). %In that sense, the model belongs to the family of models known as uncertain RSA \cite{goodmanfrank2016}. 
-By changing $P(s)$ to a non-uniform distribution, we essentially model prior beliefs of which object the speaker is more likely to refer to, or--when viewed from a more self-centered perspective--which prior object feature preferences $f$ the listener may have. 
+By changing $P(s)$ to a non-uniform distribution, we essentially model prior beliefs of which object the speaker is more likely to refer to, or---when viewed from a more self-centered perspective---which prior object feature preferences $f$ the listener may have. 
 For example, the listener may like blue things, such that she may be more likely to choose the blue square instead of the green one when hearing the utterance ``square'' in the scenario shown in Figure~\ref{FG-ref-game}.
 As a result, when a pragmatic speaker produces utterance $u$ and observes the listener's referent choice $s$, the speaker may infer posteriors over possible feature preferences, attempting to explain the observed object choice in this way.
 We use $L_0$ and $S_1$ from the vanilla model, but we now parameterize $L_1$'s state prior such that it operates given a feature preference $f$:
@@ -228,16 +228,16 @@ We then model a pragmatic speaker $S_2$, who updates beliefs about $L_1$'s prefe
 $S_2$ observes $L_1$'s choice of $s$ given the produced utterance $u$ and then reasons about the likely feature preference $f$ that $L_1$ used to make the observed choice:
 $$P_{S_{2}}(f\mid u,s) \propto P_{L_{1}}(s \mid u,f) \cdot P(f).$$
 
-We also model the reasoning process by which a speaker may select the best utterance to learn about the preferences of the listener, essentially striving to maximize expected information gain over the listeners feature preferences $P(f)$.
+We also model the reasoning process by which a speaker may select the best utterance to learn about the preferences of the listener, essentially striving to maximize expected information gain concerning the listener's feature preferences.
 Starting with no knowledge of the listener's preferences, $S_2$ can be assumed to expect a uniform (i.e., flat) feature preference prior $P(f)$.
 The more the speaker's posterior beliefs about the preferences, $P_{S_{2}}(f\mid u,s)$, deviate from the uniform prior, the more the speaker will have learned about the listener's preferences. 
-We can thus model this reasoning in the light of expected information gain, which can be equated with the attempt to maximize the KL divergence between the speaker's flat prior and the expected posterior over the listener's feature preferences $f$, integrating over all hypothetically possible state observations $s \in S$: %\gcs{can we assume a uniform cost and then remove $C(u)$ from our equations, mentioning this move in a footnote?}
+We can thus model this reasoning in light of expected information gain, which can be equated with the attempt to maximize the KL divergence between the speaker's flat prior and the expected posterior over the listener's feature preferences $f$, integrating over all hypothetically possible state observations $s \in S$: %\gcs{can we assume a uniform cost and then remove $C(u)$ from our equations, mentioning this move in a footnote?}
 $$P_{S_2}(u) \propto \sum_{s:\  [\![u]\!](s)=1} P(s|u,f)\ \exp(\lambda \cdot \textrm{KL}(P(f)\mid\mid P_{S_{2}}(f\mid u,s))),$$
 where the factor $\lambda$ scales the importance of the KL divergence term. 
 
-As a result, we need to evaluate two main predictions of PSIRSA:  
-first, the pragmatic speaker's inference about the listener's feature preferences on the basis of observed object choices in particular situations; 
-second, the pragmatic speaker's strategic utterance selection $P_{S_2}(u)$ in the light of the anticipated information gain about the listener's preferences considering the possible object choices.
+To test our model, we need to evaluate two main predictions of PSIRSA:  
+first, the pragmatic speaker's inference about the listener's feature preferences on the basis of observed object choices in particular situations $P_{S_{2}}(f\mid u,s)$; 
+second, the pragmatic speaker's strategic utterance selection $P_{S_2}(u)$ in light of the anticipated information gain about the listener's preferences considering the possible object choices.
 Before presenting the experimental and modeling results, though, we introduce a simplification of fullPSIRSA. 
 
 
@@ -245,22 +245,22 @@ Before presenting the experimental and modeling results, though, we introduce a 
 
 fullPSIRSA assumes a rather deep reasoning process. 
 Recently, it has been shown that even in the original, simpler reference games, fewer layers of reasoning often perform equally well or better than more complex models \citeA{sikos2019}.
-fullPSIRSA essentially assumes that feature preference inference does not only consider the current object choices possible, but it differentiates the choice options further with respect to their pragmatic plausibility. 
-For example, it includes modeling the fact that when a speaker utters ``blue'' in the object situation depicted in the example in Figure~\ref{FG-ref-game}, she is more likely to refer to the blue square than to the blue circle, because in the latter case the utterance choice ``circle'' would have been unambiguous and thus a better choice for the speaker.
+fullPSIRSA essentially assumes that feature preference inference not only considers the current object choices possible, but also differentiates the choice options further with respect to their pragmatic plausibility. 
+For example, fullPSIRSA includes modeling the fact that when a speaker utters ``blue'' in the object situation depicted in the example in Figure~\ref{FG-ref-game}, she is more likely to refer to the blue square than to the blue circle, because in the latter case the utterance choice ``circle'' would have been unambiguous and thus a better choice for the speaker.
 % In fact, their simplified model with only an enhanced $L_0$ equipped with an informative prior outperformed the full vanilla RSA model when it came to predicting interpretation behavior, suggesting that participants engage in shallower reasoning than predicted by the full-blown RSA. We therefore compare the predictions of our full pragmatic model with those of a simplified model.
 
 
-simplePSIRSA removes $L_1$ and $S_1$, and allows $S_2$ to directly tap onto the (expected) interpretation of $L_0$, directly augmenting the literal listener's choice likelihoods with the feature preference dependent object prior $P(s\mid f)$:
+simplePSIRSA removes this reasoning about alternative utterances and allows the pragmatic speaker to directly tap into the (expected) interpretation of $L_0$, directly augmenting the literal listener's choice likelihoods with the feature-preference-dependent object prior $P(s\mid f)$:
 $$P_{L_{0\textrm{-simp}}}(s\mid u,f) \propto \sem{$u$}(s) \cdot P(s\mid f).$$
 The pragmatic speaker $S_{s\textrm{-simp}}$ then reasons directly about the modified literal listener $L_{0\textrm{-simp}}$: 
 $$P_{S_{1\textrm{-simp}}}(f\mid u,s) \propto P_{L_{0\textrm{-simp}}}(s\mid u,f) \cdot P(f).$$
 As a result, simplePSIRSA ignores any indirect pragmatic reasoning considerations about which object the speaker may refer to given an utterance and a particular object constellation.
-It simply assumes that all objects may be chosen that match the utterance, modifying these choice options dependent on the feature preference-dependent object choice priors.
-In the evaluation section below, we compare modeling performance of fullPSIRSA with simplePSIRSA. 
+It simply assumes that all objects may be chosen that match the utterance, modifying these choice options dependent on the feature-preference-dependent object choice priors.
+In the evaluation section below, we compare the modeling performance of fullPSIRSA with simplePSIRSA. 
 % the pragmatic model with the following simplified social inference model, which removes this pragmatic reasoning aspect.
 
 
-\section{Exp. 1: Learning about others' preferences}
+\section{Experiment 1: Learning about others' preferences}
 
 Our first task is to check the inferences of the pragmatic speaker $S_2$ having observed that a listener selects some object $s$ in response to an utterance $u$. 
 Is it possible to draw inferences about the most likely preferences the listener had when making her choice? 
