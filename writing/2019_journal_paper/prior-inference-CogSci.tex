@@ -178,11 +178,13 @@ The current paper builds on the foundational, vanilla RSA model of reference gam
 \section{Model}
 Our model is a modified version of the vanilla RSA model \cite{frankgoodman2012}. 
 %\gcs{I'm not sure I follow the update to the variable naming (the prime vs.~not-prime distinction) in the prose and updated probability expressions. I'm used to the convention of capital letters for sets (so, $S$ and $U$ for the set of possible states/utterances), and \sem{$u$}($s$) maps $s$ to a boolean (true or false), not a set---at least this is the convention from semantics. Also, I worry that there might be a couple of inconsistencies in the use of prime vs.~not-prime variables, but I'm hesitant to change things without understanding how they're being used.}
-It formalizes a state space $S$ in the form of a particular set of objects (cf. the example in Figure~\ref{FG-ref-game}) and an utterance space $U$, which consists of the set of possible utterances, that is, all features present in $S$. 
-Moreover, the model considers probability distributions over those sets, i.e., $P(S)$ and $P(U)$, as well as 
-a particular object $s\in S$, which the speaker may refer to by means of one particular utterance $u \in U$.
-It specifies priors or posteriors over referenced objects, object choices, utterance preferences, and utterance choices. 
-For notational convenience, we will also denote a particular object choice of the listener by $s \ in$ $S$.
+It formalizes a state space $S$ in the form of a particular set of objects (cf.~the example in Figure~\ref{FG-ref-game}) and an utterance space $U$, which consists of the set of possible utterances; when conceived of as a set of single-word utterances, $U$ amounts to the set of all features present in $S$. 
+Moreover, the model 
+%considers probability distributions over those sets, $P(S)$ and $P(U)$, as well as 
+%a particular object $s\in S$, which the speaker may refer to by means of one particular utterance $u \in U$.
+%It 
+specifies priors or posteriors over referenced objects, object choices, utterance preferences, and utterance choices. 
+For notational convenience, we denote a particular object choice of the listener by $s \ in$ $S$.
 RSA then models a recursive social reasoning processes, incorporating several levels of probabilistic inference. 
 
 
@@ -190,29 +192,28 @@ RSA then models a recursive social reasoning processes, incorporating several le
 
 % The recursive social reasoning inherent to the RSA modeling framework gets cashed out as various layers of inference.
 
-At the basis, there is a hypothetical, na\"ive literal listener $L_0$, who hears an utterance $u$ and attempts to infer the object $s$ that $u$ is meant to refer.
-$L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}$(s)\subset s$, which returns $true$ for those objects that contain the uttered feature and $false$ otherwise.
+At the base of the reasoning process, there is a hypothetical, na\"ive literal listener $L_0$, who hears an utterance $u$ and attempts to infer the object $s$ that $u$ is meant to reference. 
+$L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}$(s)$, which returns $true$ (i.e., 1) for those objects that contain the uttered feature and $false$ (i.e., 0) otherwise.
 As a result, object choice probabilities for the literal listener can be computed:  
 $$P_{L_{0}}(s\mid u) \propto \sem{$u$}(s),$$
-essentially returning a uniform distribution over those objects in $S$ that contain the uttered feature $u$.\\
-\footnote{Please note that the context $S$ is typically not made explicit.}
+essentially returning a uniform distribution over those objects in $S$ that contain the uttered feature $u$.\footnote{Note that the context $S$ is typically not made explicit, but rather treated implicitly in the specification of the model.}
 
 
 One layer up, the speaker $S_1$ observes the state $S$ and is assumed to have the intention to refer to a particular object $s \in S$.
-$S_1$ chooses an utterance $u$ on the basis of its expected utility for signaling $s$ in the situation $S$, which is determined by the log-likelihood of this particular object choice $U_{S_1}(u;s)$\footnote{The original model in \citeA{frankgoodman2012} also includes a term for the cost of utterance $C(u)$. We ignore the term here since we assume uniform cost over all utterances.}:
+$S_1$ chooses an utterance $u$ on the basis of its expected utility for signaling $s$ in the situation $S$, which is determined by the log-likelihood of this particular object choice $U_{S_1}(u;s)$\footnote{The original model in \citeA{frankgoodman2012} also includes a term for the utterance cost, $C(u)$. We ignore the term here since we assume uniform cost over all utterances.}:
 $$U_{S_{1}}(u;s) = \textrm{log}(P_{L_{0}}(s \mid u)).$$ 
-Depending on a ``greediness factor'' $\alpha$, the speaker chooses a particular utterance $u$ with a probability that is exponentially proportional to the utility estimates: 
+Depending on a ``greediness'' factor $\alpha$, the speaker chooses a particular utterance $u$ with a probability that is exponentially proportional to the utility estimates: 
 $$P_{S_{1}} (u \mid s) \propto   \textrm{exp}(\alpha \cdot U_{S_{1}} (u;s)).$$
 
 At the top layer of the vanilla RSA model, the \emph{pragmatic} listener $L_1$ infers posteriors over $s$ on the basis of some observed utterance $u$.
 However, unlike $L_0$, $L_1$ updates beliefs about the world by reasoning about the process that \emph{generated} $u$, namely $S_1$.
-In other words, $L_1$ reasons about the $s$ that would have been most likely led $S_1$ to choose $u$:
+In other words, $L_1$ reasons about the $s$ that would have been most likely to lead $S_1$ to utter $u$:
 $$P_{L_{1}}(s \mid u) \propto P_{S_{1}}(u \mid s) \cdot P(s).$$
 
 \citeA{frankgoodman2012} tested the predictions of their model against behavioral data from reference games, as in Figure \ref{FG-ref-game}.
-To model production behavior (i.e., which utterance should be chosen to communicate a given object), the authors used the probability distributions form $S_1$.
+To model production behavior (i.e., which utterance should be chosen to communicate a given object), the authors used the probability distributions from $S_1$.
 To model interpretation behavior (i.e., which object the speaker is trying to communicate on the basis of their utterance), the authors generated predictions from $L_1$.
-Finding extremely high correlations between model predictions and behavioral data in both cases, \citeauthor{frankgoodman2012} have strong support for their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015} for a fuller exploration of the modeling choices).
+Finding extremely strong correlations between model predictions and behavioral data in both cases, \citeauthor{frankgoodman2012} have strong support for their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015}, for a fuller exploration of the modeling choices).
 
 
 \subsection{Full pragmatic social inference RSA}
