@@ -1,83 +1,89 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.8)  17 DEC 2019 20:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  18 DEC 2019 16:16
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **prior-inference-CogSci.tex
 (./prior-inference-CogSci.tex
-LaTeX2e <2018-12-01>
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
 x
 \pgfutil@everybye=\toks14
 \pgfutil@tempdima=\dimen103
 \pgfutil@tempdimb=\dimen104
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
 sts.tex))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box27
-(/usr/local/texlive/2019/texmf-dist/tex/latex/ms/everyshi.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box26
+(/usr/local/texlive/2017/texmf-dist/tex/latex/ms/everyshi.sty
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/pgf.revision.tex)
-Package: pgfrcs 2019/04/04 v3.1.2 (3.1.2)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
 ))
-Package: pgf 2019/04/04 v3.1.2 (3.1.2)
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
 ))
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
-Package: pgfsys 2019/04/04 v3.1.2 (3.1.2)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks16
 \pgfkeys@temptoks=\toks17
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
 ode.tex
 \pgfkeys@tmptoks=\toks18
 ))
@@ -98,34 +104,33 @@ ode.tex
 \t@pgf@toka=\toks19
 \t@pgf@tokb=\toks20
 \t@pgf@tokc=\toks21
-\pgf@sys@id@count=\count92
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
-File: pgf.cfg 2019/04/04 v3.1.2 (3.1.2)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
 ef
-File: pgfsys-pdftex.def 2019/04/04 v3.1.2 (3.1.2)
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
 df.def
-File: pgfsys-common-pdf.def 2019/04/04 v3.1.2 (3.1.2)
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
-File: pgfsyssoftpath.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfsyssoftpath@smallbuffer@items=\count93
-\pgfsyssoftpath@bigbuffer@items=\count94
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count92
+\pgfsyssoftpath@bigbuffer@items=\count93
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
-File: pgfsysprotocol.code.tex 2019/04/04 v3.1.2 (3.1.2)
-)) (/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/local/texlive/2017/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -139,43 +144,43 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
-Package: pgfcore 2019/04/04 v3.1.2 (3.1.2)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen115
-\pgfmath@count=\count95
-\pgfmath@box=\box28
+\pgfmath@count=\count94
+\pgfmath@box=\box27
 \pgfmath@toks=\toks22
 \pgfmath@stack@operand=\toks23
 \pgfmath@stack@operation=\toks24
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
 tex
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
 .code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
 nometric.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
 m.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
 rison.code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
 code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
 .code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
 code.tex)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count96
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count95
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
-File: pgfcorepoints.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
 \pgf@picminx=\dimen116
 \pgf@picmaxx=\dimen117
 \pgf@picminy=\dimen118
@@ -191,128 +196,123 @@ File: pgfcorepoints.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \pgf@zx=\dimen128
 \pgf@zy=\dimen129
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
 ruct.code.tex
-File: pgfcorepathconstruct.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
 \pgf@path@lastx=\dimen130
 \pgf@path@lasty=\dimen131
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
 .code.tex
-File: pgfcorepathusage.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
 \pgf@shorten@end@additional=\dimen132
 \pgf@shorten@start@additional=\dimen133
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
 de.tex
-File: pgfcorescopes.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfpic=\box29
-\pgf@hbox=\box30
-\pgf@layerbox@main=\box31
-\pgf@picture@serial@count=\count97
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box28
+\pgf@hbox=\box29
+\pgf@layerbox@main=\box30
+\pgf@picture@serial@count=\count96
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
-File: pgfcoregraphicstate.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
 \pgflinewidth=\dimen134
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
 ations.code.tex
-File: pgfcoretransformations.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
 \pgf@pt@x=\dimen135
 \pgf@pt@y=\dimen136
 \pgf@pt@temp=\dimen137
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
 e.tex
-File: pgfcorequick.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
 ode.tex
-File: pgfcoreobjects.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
 ssing.code.tex
-File: pgfcorepathprocessing.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
 de.tex
-File: pgfcorearrows.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
 \pgfarrowsep=\dimen138
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
 e.tex
-File: pgfcoreshade.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
 \pgf@max=\dimen139
-\pgf@sys@shading@range@num=\count98
-\pgf@shadingcount=\count99
+\pgf@sys@shading@range@num=\count97
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
-File: pgfcoreimage.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
 code.tex
-File: pgfcoreexternal.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfexternal@startupbox=\box32
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box31
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
 de.tex
-File: pgfcorelayers.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
 ncy.code.tex
-File: pgfcoretransparency.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
 code.tex
-File: pgfcorepatterns.code.tex 2019/04/04 v3.1.2 (3.1.2)
-)
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
-tex
-File: pgfcorerdf.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
 e.tex
-File: pgfmoduleshapes.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfnodeparttextbox=\box33
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box32
 )
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
 tex
-File: pgfmoduleplot.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
-Package: pgfcomp-version-0-65 2019/04/04 v3.1.2 (3.1.2)
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
 \pgf@nodesepstart=\dimen140
 \pgf@nodesepend=\dimen141
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
-Package: pgfcomp-version-1-18 2019/04/04 v3.1.2 (3.1.2)
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
-Package: pgffor 2019/04/04 v3.1.2 (3.1.2)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen142
 \pgffor@skip=\dimen143
 \pgffor@stack=\toks25
 \pgffor@toks=\toks26
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
-Package: tikz 2019/04/04 v3.1.2 (3.1.2)
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
-File: pgflibraryplothandlers.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgf@plot@mark@count=\count100
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count98
 \pgfplotmarksize=\dimen144
 )
 \tikz@lastx=\dimen145
@@ -321,72 +321,72 @@ File: pgflibraryplothandlers.code.tex 2019/04/04 v3.1.2 (3.1.2)
 \tikz@lastysaved=\dimen148
 \tikzleveldistance=\dimen149
 \tikzsiblingdistance=\dimen150
-\tikz@figbox=\box34
-\tikz@figbox@bg=\box35
-\tikz@tempbox=\box36
-\tikz@tempbox@bg=\box37
-\tikztreelevel=\count101
-\tikznumberofchildren=\count102
-\tikznumberofcurrentchild=\count103
-\tikz@fig@count=\count104
+\tikz@figbox=\box33
+\tikz@figbox@bg=\box34
+\tikz@tempbox=\box35
+\tikz@tempbox@bg=\box36
+\tikztreelevel=\count99
+\tikznumberofchildren=\count100
+\tikznumberofcurrentchild=\count101
+\tikz@fig@count=\count102
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
-File: pgfmodulematrix.code.tex 2019/04/04 v3.1.2 (3.1.2)
-\pgfmatrixcurrentrow=\count105
-\pgfmatrixcurrentcolumn=\count106
-\pgf@matrix@numberofcolumns=\count107
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count103
+\pgfmatrixcurrentcolumn=\count104
+\pgf@matrix@numberofcolumns=\count105
 )
-\tikz@expandcount=\count108
+\tikz@expandcount=\count106
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+(/usr/local/texlive/2017/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2019/04/04 v3.1.2 (3.1.2)
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2018/12/01 v2.17b AMS math features
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks27
 \ex@=\dimen151
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen152
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count109
-LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count110
-\leftroot@=\count111
-LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count112
-\DOTSCASE@=\count113
-LaTeX Info: Redefining \ldots on input line 482.
-LaTeX Info: Redefining \dots on input line 485.
-LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box38
-\strutbox@=\box39
+\inf@bad=\count107
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count108
+\leftroot@=\count109
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count110
+\DOTSCASE@=\count111
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box37
+\strutbox@=\box38
 \big@size=\dimen153
-LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count114
-\c@MaxMatrixCols=\count115
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count112
+\c@MaxMatrixCols=\count113
 \dotsspace@=\muskip10
-\c@parentequation=\count116
-\dspbrk@lvl=\count117
+\c@parentequation=\count114
+\dspbrk@lvl=\count115
 \tag@help=\toks28
-\row@=\count118
-\column@=\count119
-\maxfields@=\count120
+\row@=\count116
+\column@=\count117
+\maxfields@=\count118
 \andhelp@=\toks29
 \eqnshift@=\dimen154
 \alignsep@=\dimen155
@@ -398,36 +398,37 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks31
-LaTeX Info: Redefining \[ on input line 2844.
-LaTeX Info: Redefining \] on input line 2845.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
-\c@tracingmulticols=\count121
-\mult@box=\box40
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count119
+\mult@box=\box39
 \multicol@leftmargin=\dimen160
-\c@unbalance=\count122
-\c@collectmore=\count123
-\doublecol@number=\count124
-\multicoltolerance=\count125
-\multicolpretolerance=\count126
+\c@unbalance=\count120
+\c@collectmore=\count121
+\doublecol@number=\count122
+\multicoltolerance=\count123
+\multicolpretolerance=\count124
 \full@width=\dimen161
 \page@free=\dimen162
 \premulticols=\dimen163
 \postmulticols=\dimen164
 \multicolsep=\skip46
 \multicolbaselineskip=\skip47
-\partial@page=\box41
-\last@line=\box42
+\partial@page=\box40
+\last@line=\box41
 \maxbalancingoverflow=\dimen165
-\mult@rightbox=\box43
-\mult@grightbox=\box44
-\mult@gfirstbox=\box45
-\mult@firstbox=\box46
+\mult@rightbox=\box42
+\mult@grightbox=\box43
+\mult@gfirstbox=\box44
+\mult@firstbox=\box45
+\@tempa=\box46
 \@tempa=\box47
 \@tempa=\box48
 \@tempa=\box49
@@ -444,66 +445,65 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 \@tempa=\box60
 \@tempa=\box61
 \@tempa=\box62
-\@tempa=\box63
-\c@columnbadness=\count127
-\c@finalcolumnbadness=\count128
+\c@columnbadness=\count125
+\c@finalcolumnbadness=\count126
 \last@try=\dimen166
 \multicolovershoot=\dimen167
 \multicolundershoot=\dimen168
-\mult@nat@firstbox=\box64
-\colbreak@box=\box65
-\mc@col@check@num=\count129
+\mult@nat@firstbox=\box63
+\colbreak@box=\box64
+\mc@col@check@num=\count127
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/varwidth/varwidth.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box66
-\sift@deathcycles=\count130
+\@vwid@box=\box65
+\sift@deathcycles=\count128
 \@vwid@loff=\dimen169
 \@vwid@roff=\dimen170
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/blindtext/blindtext.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/xspace.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count131
-\c@Blindtext=\count132
-\c@blind@countparstart=\count133
-\blind@countxx=\count134
-\blindtext@numBlindtext=\count135
-\blind@countyy=\count136
-\c@blindlist=\count137
-\c@blindlistlevel=\count138
-\c@blindlist@level=\count139
-\blind@listitem=\count140
-\c@blind@listcount=\count141
-\c@blind@levelcount=\count142
-\blind@mathformula=\count143
-\blind@Mathformula=\count144
-\c@blind@randomcount=\count145
-\c@blind@randommax=\count146
-\c@blind@pangramcount=\count147
-\c@blind@pangrammax=\count148
+\c@blindtext=\count129
+\c@Blindtext=\count130
+\c@blind@countparstart=\count131
+\blind@countxx=\count132
+\blindtext@numBlindtext=\count133
+\blind@countyy=\count134
+\c@blindlist=\count135
+\c@blindlistlevel=\count136
+\c@blindlist@level=\count137
+\blind@listitem=\count138
+\c@blind@listcount=\count139
+\c@blind@levelcount=\count140
+\blind@mathformula=\count141
+\blind@Mathformula=\count142
+\c@blind@randomcount=\count143
+\c@blind@randommax=\count144
+\c@blind@pangramcount=\count145
+\c@blind@pangrammax=\count146
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/linguex/linguex.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/linguex/linguex.sty
 Package: linguex 2013/05/28 Example formatting for linguistics v. 4.3
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/gb4e/cgloss4e.sty
-\lineone=\box67
-\linetwo=\box68
-\linethree=\box69
-\wordone=\box70
-\wordtwo=\box71
-\wordthree=\box72
-\gline=\box73
+(/usr/local/texlive/2017/texmf-dist/tex/latex/gb4e/cgloss4e.sty
+\lineone=\box66
+\linetwo=\box67
+\linethree=\box68
+\wordone=\box69
+\wordtwo=\box70
+\wordthree=\box71
+\gline=\box72
 \glossglue=\skip48
 )
-\c@ExNo=\count149
-\c@SubExNo=\count150
-\c@SubSubExNo=\count151
-\c@FnExNo=\count152
-\c@ABC=\count153
+\c@ExNo=\count147
+\c@SubExNo=\count148
+\c@SubSubExNo=\count149
+\c@FnExNo=\count150
+\c@ABC=\count151
 \currentlabel=\skip49
 \lessthanten=\skip50
 \lessthanhundred=\skip51
@@ -519,15 +519,15 @@ Package: linguex 2013/05/28 Example formatting for linguistics v. 4.3
 \Exredux=\skip61
 \digitwidth=\skip62
 \mindigitwidth=\skip63
-\c@ExDepth=\count154
-\c@TempExDepth=\count155
+\c@ExDepth=\count152
+\c@TempExDepth=\count153
 \CollectTokens=\toks32
 LaTeX Info: Redefining \b on input line 307.
 LaTeX Info: Redefining \c on input line 311.
 LaTeX Info: Redefining \d on input line 313.
-\c@tmpaEx=\count156
+\c@tmpaEx=\count154
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pslatex/pslatex.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/pslatex/pslatex.sty
 Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -562,152 +562,174 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/apacite/apacite.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/apacite/apacite.sty
 Package: apacite 2013/07/21 v6.03 APA citation
-\c@BibCnt=\count157
+\c@BibCnt=\count155
 \bibleftmargin=\skip64
 \bibindent=\skip65
 \bibparsep=\skip66
 \bibitemsep=\skip67
 \biblabelsep=\skip68
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/placeins/placeins.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen171
+\captionmargin@=\dimen172
+\captionwidth=\dimen173
+\caption@tempdima=\dimen174
+\caption@indent=\dimen175
+\caption@parindent=\dimen176
+\caption@hangindent=\dimen177
+)
+\c@ContinuedFloat=\count156
+)
+\c@subfigure=\count157
+\c@subtable=\count158
 )
 (./prior-inference-CogSci.aux)
 \openout1 = `prior-inference-CogSci.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 36.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 36
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 37.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 37
 .
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omspzccm.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 ABD: EveryShipout initializing macros
-(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count158
-\scratchdimen=\dimen171
-\scratchbox=\box74
-\nofMPsegments=\count159
-\nofMParguments=\count160
+\scratchcounter=\count159
+\scratchdimen=\dimen178
+\scratchbox=\box73
+\nofMPsegments=\count160
+\nofMParguments=\count161
 \everyMPshowfont=\toks33
-\MPscratchCnt=\count161
-\MPscratchDim=\dimen172
-\MPnumerator=\count162
-\makeMPintoPDFobject=\count163
+\MPscratchCnt=\count162
+\MPscratchDim=\dimen179
+\MPnumerator=\count163
+\makeMPintoPDFobject=\count164
 \everyMPtoPDFconversion=\toks34
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-))))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@maskedRefs=\count164
+\c@maskedRefs=\count165
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/apacite/english.apc
+(/usr/local/texlive/2017/texmf-dist/tex/latex/apacite/english.apc
 File: english.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 37
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 38
 .
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 37
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 38
 .
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omlptmcm.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+psycm on input line 37
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 38
 .
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/omxpsycm.fd
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 38.
 
 
 LaTeX Warning: No \author given.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 
-Overfull \hbox (17.50667pt too wide) in paragraph at lines 73--82
+Overfull \hbox (17.50667pt too wide) in paragraph at lines 74--83
 \OT1/ptm/m/n/10 2014). For ex-am-ple, lis-ten-ers pre-dict the se-man-tic cat-e
 -gory of up-com-ing words []Federmeier
  []
 
 [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (9.1066pt too wide) in paragraph at lines 95--100
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (9.1066pt too wide) in paragraph at lines 96--101
 []\OT1/ptm/m/n/10 While our model also pur-sues Bayesian inference---that is, p
 sy-cho-log-i-cal reasoning---
  []
@@ -715,133 +737,306 @@ sy-cho-log-i-cal reasoning---
 [2] [3] [4]
 <images/rsascene-eps-converted-to.pdf, id=21, 64.24pt x 21.07875pt>
 File: images/rsascene-eps-converted-to.pdf Graphic file (type pdf)
+
 <use images/rsascene-eps-converted-to.pdf>
-Package pdftex.def Info: images/rsascene-eps-converted-to.pdf  used on input li
-ne 157.
+Package pdftex.def Info: images/rsascene-eps-converted-to.pdf used on input lin
+e 158.
 (pdftex.def)             Requested size: 172.5pt x 56.60616pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 181.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 181.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 181.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 182.
  [5 <./images/rsascene-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 199.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 200.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 199.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 200.
  [6] [7] [8]
 <images/preference-trial.png, id=41, 1654.18pt x 1082.0425pt>
 File: images/preference-trial.png Graphic file (type png)
+
 <use images/preference-trial.png>
-Package pdftex.def Info: images/preference-trial.png  used on input line 286.
+Package pdftex.def Info: images/preference-trial.png used on input line 287.
 (pdftex.def)             Requested size: 325.215pt x 212.7228pt.
- [9]
-[10 <./images/preference-trial.png>]
+ [9] [10 <./images/preference-trial.png>]
 <images/m13.pdf, id=50, 216.81pt x 216.81pt>
 File: images/m13.pdf Graphic file (type pdf)
-<use images/m13.pdf>
-Package pdftex.def Info: images/m13.pdf  used on input line 383.
-(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/m23.pdf, id=51, 216.81pt x 216.81pt>
-File: images/m23.pdf Graphic file (type pdf)
-<use images/m23.pdf>
-Package pdftex.def Info: images/m23.pdf  used on input line 384.
-(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
- [11]
-<images/m3.pdf, id=56, 216.81pt x 216.81pt>
-File: images/m3.pdf Graphic file (type pdf)
-<use images/m3.pdf>
-Package pdftex.def Info: images/m3.pdf  used on input line 410.
-(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/m16.pdf, id=57, 216.81pt x 216.81pt>
-File: images/m16.pdf Graphic file (type pdf)
-<use images/m16.pdf>
-Package pdftex.def Info: images/m16.pdf  used on input line 411.
-(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
- [12 <./images/m13.pdf> <./images/m23.pdf> <./images/m3.pdf> <./images/m16.pdf>
-]
-<images/m5.pdf, id=85, 216.81pt x 216.81pt>
-File: images/m5.pdf Graphic file (type pdf)
-<use images/m5.pdf>
-Package pdftex.def Info: images/m5.pdf  used on input line 435.
-(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/m8.pdf, id=86, 216.81pt x 216.81pt>
-File: images/m8.pdf Graphic file (type pdf)
-<use images/m8.pdf>
-Package pdftex.def Info: images/m8.pdf  used on input line 436.
-(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/december_barplot_x4.pdf, id=87, 361.35pt x 325.215pt>
-File: images/december_barplot_x4.pdf Graphic file (type pdf)
-<use images/december_barplot_x4.pdf>
-Package pdftex.def Info: images/december_barplot_x4.pdf  used on input line 450
-.
-(pdftex.def)             Requested size: 180.67499pt x 162.6071pt.
- [13 <./images/m5.pdf> <./images/m8.pdf>]
-<images/utterance-choice-trial.png, id=104, 1243.64626pt x 1038.88126pt>
-File: images/utterance-choice-trial.png Graphic file (type png)
-<use images/utterance-choice-trial.png>
-Package pdftex.def Info: images/utterance-choice-trial.png  used on input line 
-480.
-(pdftex.def)             Requested size: 252.94499pt x 211.29172pt.
- [14 <./images/december_barplot_x4.pdf>] [15 <./images/utterance-choice-trial.p
-ng>]
-<images/x3_m7.pdf, id=117, 216.81pt x 216.81pt>
-File: images/x3_m7.pdf Graphic file (type pdf)
-<use images/x3_m7.pdf>
-Package pdftex.def Info: images/x3_m7.pdf  used on input line 516.
-(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/x3_m11.pdf, id=118, 216.81pt x 216.81pt>
-File: images/x3_m11.pdf Graphic file (type pdf)
-<use images/x3_m11.pdf>
-Package pdftex.def Info: images/x3_m11.pdf  used on input line 517.
-(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-<images/december_barplot_x3.pdf, id=119, 361.35pt x 325.215pt>
-File: images/december_barplot_x3.pdf Graphic file (type pdf)
-<use images/december_barplot_x3.pdf>
-Package pdftex.def Info: images/december_barplot_x3.pdf  used on input line 539
-.
-(pdftex.def)             Requested size: 180.67499pt x 162.6071pt.
- [16 <./images/x3_m7.pdf> <./images/x3_m11.pdf>]
-<images/x3_m20.pdf, id=135, 216.81pt x 216.81pt>
-File: images/x3_m20.pdf Graphic file (type pdf)
-<use images/x3_m20.pdf>
-Package pdftex.def Info: images/x3_m20.pdf  used on input line 557.
-(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
-File: images/x3_m11.pdf Graphic file (type pdf)
-<use images/x3_m11.pdf>
-Package pdftex.def Info: images/x3_m11.pdf  used on input line 558.
+ <use images/m13.pdf>
+Package pdftex.def Info: images/m13.pdf used on input line 384.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
 
-Overfull \hbox (13.83649pt too wide) in paragraph at lines 562--566
+<images/m23.pdf, id=51, 216.81pt x 216.81pt>
+File: images/m23.pdf Graphic file (type pdf)
+ <use images/m23.pdf>
+Package pdftex.def Info: images/m23.pdf used on input line 385.
+(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
+ [11]
+<images/m5.pdf, id=56, 216.81pt x 216.81pt>
+File: images/m5.pdf Graphic file (type pdf)
+ <use images/m5.pdf>
+Package pdftex.def Info: images/m5.pdf used on input line 439.
+(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
+
+<images/m8.pdf, id=57, 216.81pt x 216.81pt>
+File: images/m8.pdf Graphic file (type pdf)
+ <use images/m8.pdf>
+Package pdftex.def Info: images/m8.pdf used on input line 440.
+(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
+ [12 <./images/m13.pdf> <./images/m23.pdf> <./images/m5.pdf> <./images/m8.pdf>]
+
+<images/december_barplot_x4.pdf, id=85, 361.35pt x 325.215pt>
+File: images/december_barplot_x4.pdf Graphic file (type pdf)
+
+<use images/december_barplot_x4.pdf>
+Package pdftex.def Info: images/december_barplot_x4.pdf used on input line 454.
+
+(pdftex.def)             Requested size: 180.67499pt x 162.6071pt.
+ [13 <./images/december_barplot_x4.pdf>]
+<images/utterance-choice-trial.png, id=95, 1243.64626pt x 1038.88126pt>
+File: images/utterance-choice-trial.png Graphic file (type png)
+
+<use images/utterance-choice-trial.png>
+Package pdftex.def Info: images/utterance-choice-trial.png used on input line 4
+84.
+(pdftex.def)             Requested size: 252.94499pt x 211.29172pt.
+ [14 <./images/utterance-choice-trial.png>] <images/x3_m7.pdf, id=100, 216.81pt
+ x 216.81pt>
+File: images/x3_m7.pdf Graphic file (type pdf)
+ <use images/x3_m7.pdf>
+Package pdftex.def Info: images/x3_m7.pdf used on input line 520.
+(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
+
+<images/x3_m11.pdf, id=101, 216.81pt x 216.81pt>
+File: images/x3_m11.pdf Graphic file (type pdf)
+ <use images/x3_m11.pdf>
+Package pdftex.def Info: images/x3_m11.pdf used on input line 521.
+(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
+
+[15] <images/december_barplot_x3.pdf, id=105, 361.35pt x 325.215pt>
+File: images/december_barplot_x3.pdf Graphic file (type pdf)
+
+<use images/december_barplot_x3.pdf>
+Package pdftex.def Info: images/december_barplot_x3.pdf used on input line 543.
+
+(pdftex.def)             Requested size: 180.67499pt x 162.6071pt.
+ [16 <./images/x3_m7.pdf> <./images/x3_m11.pdf> <./images/december_barplot_x3.p
+df>]
+<images/x3_m20.pdf, id=126, 216.81pt x 216.81pt>
+File: images/x3_m20.pdf Graphic file (type pdf)
+ <use images/x3_m20.pdf>
+Package pdftex.def Info: images/x3_m20.pdf used on input line 561.
+(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
+File: images/x3_m11.pdf Graphic file (type pdf)
+
+<use images/x3_m11.pdf>
+Package pdftex.def Info: images/x3_m11.pdf used on input line 562.
+(pdftex.def)             Requested size: 144.54pt x 144.54735pt.
+
+Overfull \hbox (13.83649pt too wide) in paragraph at lines 566--570
 []\OT1/ptm/m/n/10 We were able to dis-tin-guish three groups of par-tic-i-pants
  on the ba-sis of the individually-
  []
 
-[17 <./images/december_barplot_x3.pdf> <./images/x3_m20.pdf>] [18]
-(./prior-inference-CogSci.bbl [19] [20]) [21] (./prior-inference-CogSci.aux) ) 
+[17 <./images/x3_m20.pdf>] (./prior-inference-CogSci.bbl [18]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no “ in font ptmr7t!
+ [19] [20])
+<appendix/311.png, id=146, 142.3719pt x 142.3719pt>
+File: appendix/311.png Graphic file (type png)
+ <use appendix/311.png>
+Package pdftex.def Info: appendix/311.png used on input line 626.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/211.png, id=147, 142.3719pt x 142.3719pt>
+File: appendix/211.png Graphic file (type png)
+ <use appendix/211.png>
+Package pdftex.def Info: appendix/211.png used on input line 627.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/313.png, id=148, 142.3719pt x 142.3719pt>
+File: appendix/313.png Graphic file (type png)
+ <use appendix/313.png>
+Package pdftex.def Info: appendix/313.png used on input line 628.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/212.png, id=149, 142.3719pt x 142.3719pt>
+File: appendix/212.png Graphic file (type png)
+ <use appendix/212.png>
+Package pdftex.def Info: appendix/212.png used on input line 641.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/213.png, id=150, 142.3719pt x 142.3719pt>
+File: appendix/213.png Graphic file (type png)
+ <use appendix/213.png>
+Package pdftex.def Info: appendix/213.png used on input line 642.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/222.png, id=151, 142.3719pt x 142.3719pt>
+File: appendix/222.png Graphic file (type png)
+ <use appendix/222.png>
+Package pdftex.def Info: appendix/222.png used on input line 643.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+Overfull \hbox (9.57697pt too wide) in paragraph at lines 648--649
+[][] 
+ []
+
+<appendix/131.png, id=152, 142.3719pt x 142.3719pt>
+File: appendix/131.png Graphic file (type png)
+ <use appendix/131.png>
+Package pdftex.def Info: appendix/131.png used on input line 654.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/112.png, id=153, 142.3719pt x 142.3719pt>
+File: appendix/112.png Graphic file (type png)
+ <use appendix/112.png>
+Package pdftex.def Info: appendix/112.png used on input line 655.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/111.png, id=154, 142.3719pt x 142.3719pt>
+File: appendix/111.png Graphic file (type png)
+ <use appendix/111.png>
+Package pdftex.def Info: appendix/111.png used on input line 656.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+Overfull \hbox (7.90709pt too wide) in paragraph at lines 661--662
+[][] 
+ []
+
+<appendix/133.png, id=155, 142.3719pt x 142.3719pt>
+File: appendix/133.png Graphic file (type png)
+ <use appendix/133.png>
+Package pdftex.def Info: appendix/133.png used on input line 674.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/122.png, id=156, 142.3719pt x 142.3719pt>
+File: appendix/122.png Graphic file (type png)
+ <use appendix/122.png>
+Package pdftex.def Info: appendix/122.png used on input line 675.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/232.png, id=157, 142.3719pt x 142.3719pt>
+File: appendix/232.png Graphic file (type png)
+ <use appendix/232.png>
+Package pdftex.def Info: appendix/232.png used on input line 676.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+File: appendix/133.png Graphic file (type png)
+
+<use appendix/133.png>
+Package pdftex.def Info: appendix/133.png used on input line 689.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+File: appendix/122.png Graphic file (type png)
+ <use appendix/122.png>
+Package pdftex.def Info: appendix/122.png used on input line 690.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+File: appendix/232.png Graphic file (type png)
+ <use appendix/232.png>
+Package pdftex.def Info: appendix/232.png used on input line 691.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+Overfull \hbox (9.52971pt too wide) in paragraph at lines 696--697
+[][] 
+ []
+
+File: appendix/212.png Graphic file (type png)
+<use appendix/212.png>
+Package pdftex.def Info: appendix/212.png used on input line 702.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+ <appendix/221.png, id=158, 142.3719pt x 142.3719pt>
+File: appendix/221.png Graphic file (type png)
+
+<use appendix/221.png>
+Package pdftex.def Info: appendix/221.png used on input line 703.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+File: appendix/311.png Graphic file (type png)
+ <use appendix/311.png>
+Package pdftex.def Info: appendix/311.png used on input line 704.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+Overfull \hbox (7.90709pt too wide) in paragraph at lines 709--710
+[][] 
+ []
+
+File: appendix/131.png Graphic file (type png)
+<use appendix/131.png>
+Package pdftex.def Info: appendix/131.png used on input line 723.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+File: appendix/221.png Graphic file (type png)
+ <use appendix/221.png>
+Package pdftex.def Info: appendix/221.png used on input line 724.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/231.png, id=159, 142.3719pt x 142.3719pt>
+File: appendix/231.png Graphic file (type png)
+ <use appendix/231.png>
+Package pdftex.def Info: appendix/231.png used on input line 725.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+<appendix/123.png, id=160, 142.3719pt x 142.3719pt>
+File: appendix/123.png Graphic file (type png)
+ <use appendix/123.png>
+Package pdftex.def Info: appendix/123.png used on input line 737.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+File: appendix/122.png Graphic file (type png)
+
+<use appendix/122.png>
+Package pdftex.def Info: appendix/122.png used on input line 738.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+File: appendix/112.png Graphic file (type png)
+ <use appendix/112.png>
+Package pdftex.def Info: appendix/112.png used on input line 739.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+Overfull \hbox (9.57697pt too wide) in paragraph at lines 744--745
+[][] 
+ []
+
+File: appendix/311.png Graphic file (type png)
+<use appendix/311.png>
+Package pdftex.def Info: appendix/311.png used on input line 750.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+File: appendix/211.png Graphic file (type png)
+ <use appendix/211.png>
+Package pdftex.def Info: appendix/211.png used on input line 751.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+File: appendix/313.png Graphic file (type png)
+ <use appendix/313.png>
+Package pdftex.def Info: appendix/313.png used on input line 752.
+(pdftex.def)             Requested size: 42.67912pt x 42.67712pt.
+
+Overfull \hbox (7.90709pt too wide) in paragraph at lines 757--758
+[][] 
+ []
+
+[21 <./appendix/311.png> <./appendix/211.png> <./appendix/313.png> <./appendix/
+212.png> <./appendix/213.png> <./appendix/222.png> <./appendix/131.png> <./appe
+ndix/112.png> <./appendix/111.png>] [22 <./appendix/133.png> <./appendix/122.pn
+g> <./appendix/232.png> <./appendix/221.png> <./appendix/231.png> <./appendix/1
+23.png>] (./prior-inference-CogSci.aux) ) 
 Here is how much of TeX's memory you used:
- 13742 strings out of 492616
- 267700 string characters out of 6129482
- 316524 words of memory out of 5000000
- 17343 multiletter control sequences out of 15000+600000
+ 14816 strings out of 492995
+ 286201 string characters out of 6132704
+ 337554 words of memory out of 5000000
+ 18034 multiletter control sequences out of 15000+600000
  50474 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,48p,2161b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
-{
-/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texl
-ive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-019/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2019/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/
-type1/urw/times/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/
-times/utmri8a.pfb>
-Output written on prior-inference-CogSci.pdf (21 pages, 1416124 bytes).
+ 55i,11n,54p,2161b,829s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fo
+nts/enc/dvips/base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/symbol
+/usyr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+</usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on prior-inference-CogSci.pdf (22 pages, 1464790 bytes).
 PDF statistics:
- 192 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
+ 211 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 83 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 

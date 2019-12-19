@@ -14,6 +14,7 @@
 \usepackage{pslatex}
 \usepackage{apacite}
 \usepackage{placeins}
+\usepackage{subcaption}
 
 \newcommand{\sem}[1]{\mbox{$[\![$#1$]\!]$}}
 \newcommand{\lam}{$\lambda$}
@@ -231,7 +232,7 @@ $$P_{S_{2}}(f\mid u,s) \propto P_{L_{1}}(s \mid u,f) \cdot P(f).$$
 We also model the reasoning process by which a speaker may select the best utterance to learn about the preferences of the listener, essentially striving to maximize expected information gain concerning the listener's feature preferences.
 Starting with no knowledge of the listener's preferences, $S_2$ can be assumed to expect a uniform (i.e., flat) feature preference prior $P(f)$.
 The more the speaker's posterior beliefs about the preferences, $P_{S_{2}}(f\mid u,s)$, deviate from the uniform prior, the more the speaker will have learned about the listener's preferences. 
-We can thus model this reasoning in light of expected information gain, which can be equated with the attempt to maximize the KL divergence between the speaker's flat prior and the expected posterior over the listener's feature preferences $f$, integrating over all hypothetically possible state observations $s \in S$: %\gcs{can we assume a uniform cost and then remove $C(u)$ from our equations, mentioning this move in a footnote?}
+We can thus model this reasoning in light of expected information gain, which can be equated with the attempt to maximize the KL (Kullback-Leibler) divergence between the speaker's flat prior and the expected posterior over the listener's feature preferences $f$, integrating over all hypothetically possible state observations $s \in S$: %\gcs{can we assume a uniform cost and then remove $C(u)$ from our equations, mentioning this move in a footnote?}
 $$P_{S_2}(u) \propto \sum_{s:\  [\![u]\!](s)=1} P_{L_1}(s|u,f)\ \exp(\lambda \cdot \textrm{KL}(P(f)\mid\mid P_{S_{2}}(f\mid u,s))),$$
 where the factor $\lambda$ scales the importance of the KL divergence term. 
 
@@ -244,7 +245,7 @@ Before presenting the experimental and modeling results, though, we introduce a 
 \subsection{Simplified pragmatic social inference RSA}
 
 fullPSIRSA assumes a rather deep reasoning process. 
-Recently, it has been shown that even in the original, simpler reference games, fewer layers of reasoning often perform equally well or better than more complex models \citeA{sikos2019}.
+Recently, it has been shown that even in the original, simpler reference games, fewer layers of reasoning often perform equally well or better than more complex models \cite{sikos2019}.
 fullPSIRSA essentially assumes that feature preference inference not only considers the current object choices possible, but also differentiates the choice options further with respect to their pragmatic plausibility. 
 For example, fullPSIRSA includes modeling the fact that when a speaker utters ``blue'' in the object situation depicted in the example in Figure~\ref{FG-ref-game}, she is more likely to refer to the blue square than to the blue circle, because in the latter case the utterance choice ``circle'' would have been unambiguous and thus a better choice for the speaker.
 % In fact, their simplified model with only an enhanced $L_0$ equipped with an informative prior outperformed the full vanilla RSA model when it came to predicting interpretation behavior, suggesting that participants engage in shallower reasoning than predicted by the full-blown RSA. We therefore compare the predictions of our full pragmatic model with those of a simplified model.
@@ -382,7 +383,7 @@ The higher model flexibility of fullPSIRSA---controlled via parameter $\alpha$--
 	\centering
 	\includegraphics[width=2in]{images/m13.pdf}
 	\includegraphics[width=2in]{images/m23.pdf}
-	\caption{Human data from Experiment 1 plotted against the predictions of simplePSIRSA (left) and fullPSIRSA (right) with $\gamma$ \emph{optimized globally}. Each data point indicates the slider values and model predicted feature preference posteriors for a particular ambiguity class.}
+	\caption{Human data from Experiment 1 plotted against the predictions of simplePSIRSA and fullPSIRSA with $\gamma$ \emph{optimized globally}. Each data point indicates the slider values and model predicted feature preference posteriors for a particular ambiguity class. Left panel: \emph{simple model} ($r^2 = 0.8614$); right panel \emph{full model} ($r^2 = 0.8576$).}
 		\label{simple-full}
 \end{figure}
 
@@ -395,9 +396,10 @@ We optimized $\alpha$ and $\gamma$ in light of the KL divergence between the ind
 We then again averaged the individualized model prediction values and participants' slider values with respect to the particular ambiguity classes and calculated correlations between the data and the model.
 
 
-Figure~\ref{simple-full-individual} shows that the full model optimized at the individual level for the additional parameter $\alpha$ does not improve the fit compared to the simplified model (simplePSIRSA: $r^{2}=0.8631$; fullPSIRSA: $r^{2}=0.8614$). 
+%Figure~\ref{simple-full-individual} shows that 
+The full model optimized at the individual level for the additional parameter $\alpha$ does not improve the fit compared to the simplified model (simplePSIRSA: $r^{2}=0.8631$; fullPSIRSA: $r^{2}=0.8614$). 
 Seeing that both models fit the data nearly equally well (if anything, simplePSIRSA performs slightly better), we will henceforth only consider the predictions of simplePSIRSA.
-Note further that the individually-fitted parameters do not improve the correlation values much, if at all, when compared to the globally-fitted model, which changes when $\beta$ is optimized additionally. \gcs{I'm not sure I follow this last sentence.}
+Note further that the individually-fitted parameters do not improve the correlation values much, if at all, when compared to the globally-fitted model. 
 
 
 %the For example, if a $S_2$ observes that following an utterance $blue$ and three objects all three of which are blue, but all differ in shape, the speaker chooses a square, the speaker might conclude that the $L_1$  has a preference for squares. However, the exact value on the slider the $S_2$ picks depends on the $\gamma$ parameter: if it is close to $0$, the speaker will mark that the $L_1$ had a perefernce for squares close to $1$. As the parameter value increases, the softness of preference will increase as well, drawing the preference value towards uniform (uninformative).
@@ -405,12 +407,12 @@ Note further that the individually-fitted parameters do not improve the correlat
 
 % \gcs{We need to say something about how we fit individual participant data. How exactly where the parameter values fit? What were candidate values?}
 
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=2in]{images/m3.pdf}
-	\includegraphics[width=2in]{images/m16.pdf}
-	\caption{Human data from Experiment 1 plotted against the predictions of the \emph{individually} $\gamma$-optimized simplePSIRSA and the \emph{individually} $\gamma$- and $\alpha$-optimized fullPSIRSA models.}\label{simple-full-individual}
-\end{figure}
+%\begin{figure}[ht]
+%	\centering
+%	\includegraphics[width=2in]{images/m3.pdf}
+%	\includegraphics[width=2in]{images/m16.pdf}
+%	\caption{Human data from Experiment 1 plotted against the predictions of the \emph{individually} $\gamma$-optimized simplePSIRSA and the \emph{individually} $\gamma$- and $\alpha$-optimized fullPSIRSA models.}\label{simple-full-individual}
+% \end{figure}
 
 
 
@@ -428,7 +430,9 @@ Note further that the individually-fitted parameters do not improve the correlat
  
 %We compared  in the light of the distinguishable interpretation cases. 
 
-We plot predictions from the $\beta$- and $\gamma$-optimized model in Figure~\ref{cross-validation}, where the strongest positive correlation between the human judgments and model predictions ($r^2 = 0.992$) can be observed. The likelihood ratio test revealed that a $\gamma$- and $\beta$-optimized simplePSIRSA model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, \textrm{df} = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject, giving us 82 degrees of freedom. We additionally checked the generalizability of the model by performing leave-one-out cross-validation. Figure~\ref{cross-validation} shows that the resulting cross-validated model predictions retain the strong correlation ($r^{2}=0.9901$).
+The model fit improves considerably if we additionally fit the obedience parameter $\beta$ at the individual level. 
+%We plot predictions from the $\beta$- and $\gamma$-optimized model in Figure~\ref{cross-validation}, 
+Here the strongest positive correlation between the human judgments and model predictions ($r^2 = 0.992$) can be observed. The likelihood ratio test revealed that a $\gamma$- and $\beta$-optimized simplePSIRSA model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, \textrm{df} = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject, giving us 82 degrees of freedom. We additionally checked the generalizability of the model by performing leave-one-out cross-validation. Figure~\ref{cross-validation} shows that the resulting cross-validated model predictions retain the strong correlation ($r^{2}=0.9901$).
 
 \begin{figure}[ht]
 	\centering
@@ -556,15 +560,13 @@ This baseline model essentially has no utterance  preferences whatsoever, but re
 	\centering
 	\includegraphics[width=2in]{images/x3_m20.pdf}
 	\includegraphics[width=2in]{images/x3_m11.pdf}
-	\caption{Average human data from Experiment 2 plotted against the predictions of the uniform baseline model and the simplePSIRSA model; uniform model: $r^{2}=0.7497$, KL-factor $\lambda$-optimized model: $r^{2}=0.9071$. }\label{kl-factor}
+	\caption{Average human data from Experiment 2 plotted against the predictions of the uniform baseline model and the simplePSIRSA model. Left panel \emph{uniform model} ($r^{2}=0.7497$); right panel \emph{KL-factor $\lambda$-optimized model} ($r^{2}=0.9071$). }\label{kl-factor}
 \end{figure}
 
 We were able to distinguish three groups of participants on the basis of the individually-optimized parameter values of $\lambda$. 
 The first was a ``lazy worker'' group of $18$ participants whose fitted $\lambda$ values were close to zero (i.e.,  $-.02 < \lambda<.02$), indicating that they were randomly selecting utterances.
 The second group of $32$ participants yielded more negative values (i.e., $-7.13<\lambda<-.02$), indicating that a significant number of participants preferred to systematically choose unambiguous utterances. 
 The third group of again $32$ participants yielded more positive values (i.e., $.02<\lambda<.54$), indicating that these participants indeed chose the most ambiguous utterance in a strategic manner. 
-
-
 
 \section{General discussion}
 
@@ -613,6 +615,152 @@ In that sense, ambiguous utterances are one device for projecting parts of each 
 \setlength{\bibindent}{-\bibleftmargin}
 
 \bibliography{prior-inference}
+
+\appendix
+\noindent \textbf{Appendix \\ Description of ambiguity classes}
+\begin{figure*}[!ht]
+	\centering
+	\begin{subfigure}[b]{\linewidth}
+		\centering
+		\begin{tikzpicture}
+		\node[](o1) at (-2,0){\includegraphics[width=1.5cm]{appendix/311.png}};
+		\node[](o2) at (0,0){\includegraphics[width=1.5cm]{appendix/211.png}};
+		\node[](o3) at (2,0){\includegraphics[width=1.5cm]{appendix/313.png}};
+		
+		\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.75cm,1.75cm);
+		
+		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``blue"}};
+		\end{tikzpicture}
+		\subcaption{The objects can differ in shape, texture, and color. The utterance applies to 2 objects which differ in shape: a circle and a square. No clouds are present in the scene, therefore we cannot learn whether the listener likes clouds. All the objects have the same texture -- solid, so no learning about texture is possible.}
+	\end{subfigure}
+	
+	\vspace{0.2cm}
+	
+	\begin{subfigure}[b]{0.45\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-2,0){\includegraphics[width=1.5cm]{appendix/212.png}};
+		\node[](o2) at (0,0){\includegraphics[width=1.5cm]{appendix/213.png}};
+		\node[](o3) at (2,0){\includegraphics[width=1.5cm]{appendix/222.png}};
+		
+		\draw[dashed, color=orange,line width=1mm] (o3.south west) rectangle ++(1.75cm,1.75cm);
+		
+		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``red"}};
+		\end{tikzpicture}
+		\subcaption{Another combination, here two red objects differ in texture but share shape.}
+	\end{subfigure}
+	\hspace*{0.5cm}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-2,0){\includegraphics[width=1.5cm]{appendix/131.png}};
+		\node[](o2) at (0,0){\includegraphics[width=1.5cm]{appendix/112.png}};
+		\node[](o3) at (2,0){\includegraphics[width=1.5cm]{appendix/111.png}};
+		
+		\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.75cm,1.75cm);
+		
+		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``solid"}};
+		\end{tikzpicture}
+		\subcaption{Two solid objects differ in color but share shape.}
+	\end{subfigure}
+	\caption{In all these examples, the utterance picks out two objects. The picked object has one feature for itself. The other two objects share that feature between them. The last feature is shared by all objects.}
+	%21 32 12
+\end{figure*}
+
+%class 21 22 12
+\begin{figure*}[!ht]
+	\centering
+	\begin{subfigure}[b]{\linewidth}
+		\centering
+		\begin{tikzpicture}
+		\node[](o1) at (-2,0){\includegraphics[width=1.5cm]{appendix/133.png}};
+		\node[](o2) at (0,0){\includegraphics[width=1.5cm]{appendix/122.png}};
+		\node[](o3) at (2,0){\includegraphics[width=1.5cm]{appendix/232.png}};
+		
+		\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.75cm,1.75cm);
+		
+		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``red"}};
+		\end{tikzpicture}
+		\subcaption{The objects can differ in shape, texture, and color. The utterance applies to 2 objects which differ in shape and texture: a striped cloud and a polka-dotted circle. Solid objects or squares are absent in the scene, so we cannot learn whether the listener likes squares or solid objects.}
+	\end{subfigure}
+	
+	\vspace{0.2cm}
+	
+	\begin{subfigure}[b]{0.45\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-2,0){\includegraphics[width=1.5cm]{appendix/133.png}};
+		\node[](o2) at (0,0){\includegraphics[width=1.5cm]{appendix/122.png}};
+		\node[](o3) at (2,0){\includegraphics[width=1.5cm]{appendix/232.png}};
+		
+		\draw[dashed, color=orange,line width=1mm] (o1.south west) rectangle ++(1.75cm,1.75cm);
+		
+		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``polka-dotted"}};
+		\end{tikzpicture}
+		\subcaption{Another combination, here the polka-dotted objects differ in shape and color.}
+	\end{subfigure}
+	\hspace*{0.5cm}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-2,0){\includegraphics[width=1.5cm]{appendix/212.png}};
+		\node[](o2) at (0,0){\includegraphics[width=1.5cm]{appendix/221.png}};
+		\node[](o3) at (2,0){\includegraphics[width=1.5cm]{appendix/311.png}};
+		
+		\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.75cm,1.75cm);
+		
+		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``circle"}};
+		\end{tikzpicture}
+		\subcaption{Two circles differ in texture and color.}
+	\end{subfigure}
+	%21 22 12
+	\caption{The utterance always picks out two objects and both objects only share that uttered feature. The third object shares one feature with each of those objects.}
+\end{figure*}
+
+
+%class 32 21 12
+\begin{figure*}[!ht]
+	\centering
+	\begin{subfigure}[b]{\linewidth}
+		\centering
+		\begin{tikzpicture}
+		\node[](o1) at (-2,0){\includegraphics[width=1.5cm]{appendix/131.png}};
+		\node[](o2) at (0,0){\includegraphics[width=1.5cm]{appendix/221.png}};
+		\node[](o3) at (2,0){\includegraphics[width=1.5cm]{appendix/231.png}};
+		
+		\draw[dashed, color=orange,line width=1mm] (o1.south west) rectangle ++(1.75cm,1.75cm);
+		
+		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``blue"}};
+		\end{tikzpicture}
+		\subcaption{The objects can differ in shape, texture, and color. The utterance applies to all 3 objects but they differ in shape and texture. Solid objects or squares are absent here, so we cannot learn whether the listener likes squares or solid objects.}
+	\end{subfigure}
+	\vspace{0.2cm}
+	
+	\begin{subfigure}[b]{0.45\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-2,0){\includegraphics[width=1.5cm]{appendix/123.png}};
+		\node[](o2) at (0,0){\includegraphics[width=1.5cm]{appendix/122.png}};
+		\node[](o3) at (2,0){\includegraphics[width=1.5cm]{appendix/112.png}};
+		
+		\draw[dashed, color=orange,line width=1mm] (o3.south west) rectangle ++(1.75cm,1.75cm);
+		
+		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``cloud"}};
+		\end{tikzpicture}
+		\subcaption{Another combination, here all objects are clouds but the picked object shares being red with another object.}
+	\end{subfigure}
+	\hspace*{0.5cm}
+	\begin{subfigure}[b]{0.45\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-2,0){\includegraphics[width=1.5cm]{appendix/311.png}};
+		\node[](o2) at (0,0){\includegraphics[width=1.5cm]{appendix/211.png}};
+		\node[](o3) at (2,0){\includegraphics[width=1.5cm]{appendix/313.png}};
+		
+		\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.75cm,1.75cm);
+		
+		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{"solid"}};
+		\end{tikzpicture}
+		\subcaption{All objects are solid, the picked object shares being blue with one object.}
+	\end{subfigure}
+	%32 21 12
+	\caption{Here the utterance picks out all objects. The picked object shares one feature with one other object and has one feature just for itself while the other two objects share it.}
+\end{figure*}
+
 
 \end{document}
 
