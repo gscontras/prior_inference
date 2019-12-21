@@ -435,7 +435,8 @@ The question now turns to whether speakers are able to capitalize on this reason
 
 \subsection*{Experiment 2: Choosing utterances to learn about others}
 
-Our next task is to check the predictions of our strategic utterance selection model: given a set of potential referents, are participants able to reason pragmatically about the utility of ambiguous utterances in informing listener preferences? Figure \ref{exp2-trial} shows a sample trial.
+Our next task is to check the predictions of our strategic utterance selection model: given a set of potential referents $S$, are participants able to reason pragmatically about the anticipated potential epistemic utility of utterances $u\in U$ in inferring the listener's preferences? Figure \ref{exp2-trial} shows a sample trial, in which the speaker (``Katie'' in the example) is to choose an utterance in order to learn about the listener's preferences (``Elizabeth'' in the example). While the ambiguous utterances ``cloud'', ``green'', and ``striped'' may allow inferences about color \& texture, shape \& texture, and color \& shape, respectively, the utterances ``solid'', ``blue'', and ``circle'' leave only one response option to the listener, such that the speaker cannot learn about the listener's preferences when observing the listener's response (assuming the listener obeys the speaker's order).  
+
 
 \begin{figure*}[ht]
 	\centering
@@ -443,21 +444,33 @@ Our next task is to check the predictions of our strategic utterance selection m
 	\caption{A sample trial from \emph{Experiment 2: Choosing utterances}. }\label{exp2-trial}
 \end{figure*} 
 
-By reasoning about the predictions of $S_2$, we are able to use simplePSIRSA to compute the expected most informative utterance with respect to inferring preferences. In other words, $P_{S_1\textrm{-simp}}(u)$ calculates the probability that a speaker would choose $u$ for the purpose of inferring preferences in our reference game scenario.
+By reasoning about the predictions of $S_2$, we are able to use simplePSIRSA to compute the expected most informative utterance for inferring preferences.
+In other words, $P_{S_1\textrm{-simp}}(u)$ calculates the probability that a speaker would choose $u$ for the purpose of inferring preferences.
 
-To generate predictions from $P_{S_1\textrm{-simp}}(u)$, a total of three free parameters can be identified. 
-We consider different values for $\gamma$ (i.e., preference softness) and obedience $\beta$, as well as for the $\lambda$ parameter, which factors the importance of choosing the expected most informative utterance with respect to the determined KL divergence values.
-Note that when allowing negative values for $\lambda$, negated information gain essentially minimizes expected information gain.
-Thus, negative values for $\lambda$ yield a model that favors unambiguous utterances. 
-Moreover, when $\lambda=0$, the model collapses to a uniform distribution over the available utterances.
+To generate predictions from $P_{S_1\textrm{-simp}}(u)$, three free parameters can be identified:
+the preference softness $\gamma$, the obedience $\beta$, and a $\lambda$ parameter, which factors the importance of choosing the expected most informative utterance with respect to the expected KL divergence between preference priors and expected preference posteriors.
+Note that negative values for $\lambda$ results in a minimization of expected information gain, effectively favoring unambiguous utterances. 
+Moreover, when $\lambda=0$, the model collapses to an approximate uniform distribution over the available utterances.
 %\gcs{is this true? Will utterances that can describe more objects be preferred?}. Asya: verified with Martin, the description is correct.
 
 
 %The proper model fit is confirmed when considering the correlation between the participants' data and the model predictions. 
 
-Figure~\ref{simple-full-x3} shows the model fits of the non-optimized simplePSIRSA and the simplePSIRSA model with all three parameters optimized globally. 
-Again, we optimized values with respect to KL divergence estimates between the participant data and the model predictions---in this case, for utterance preference distributions.
-Both models fail to predict the human data ($r^2=0.0709$, $p=0.01439$ \gcs{we need another $r^2$ value (I think Martin is working on this)}).
+We compare simplePSIRSA with several parameter optimization options with the performance of a uniform base model, which simply chooses one of the available utterances at random. 
+Seeing that in particular ambiguity cases with particular constellations $S$ three up to nine utterances are possible, the base model yields different model predictions for the available utterances in the respective ambiguity classes. 
+As a result, the correlation performance of the uniform base model is much better than one would expect without this insight ($r^2=0.7467$, $p<0.001$).
+Figure~\ref{base-nonopt-x3} compares this performance to the non-optimized simplePSIRSA, where we set the parameters to hard preference and obedience ($\gamma=0$, $\beta=0$) and the information gain factor to $\lambda=1$, thus preferring to choose those utterances that are expected to yield high information gain. 
+Surprisingly, this model fully fails to predict the human data ($r^2=0.0595$, $p=0.0144$)
+
+
+To examine the reasons for this failure, we ran additional global parameter optimization runs.
+When optimizing all the model parameters, the correlation outperforms the uniform based model ($r^2=0.7991$, $p<0.001$; optimized model parameters: $\gamma=0.0006$, $\beta=0.2758$, $\lambda=0.3663$).
+Figure~\ref{global-individual-x2} shows the corresponding correlation plot. 
+The parameters indicate that the preference strength is rather high but obedience is lower, thus yielding better fits when considering the option that the listener may choose non-instructed objects, essentially expecting to learn from non-obedient behavior.
+This explanation, however, still seems somewhat unsatisfactory and questionable. 
+We thus turn to individual parameter optimization, suspecting that their may be fundamental differences between the individual groups of workers. 
+
+
 
 %Figure \ref{exp2-results} plots predictions from the $\lambda$-optimized model, together with the human data. Again, we observe a strong positive correlation between the human judgments and model predictions ($r^2 = 0.91, p < 0.001$). In other words, we find evidence in support of the idea that speakers reason pragmatically about the relative informativity of ambiguous language.
 
