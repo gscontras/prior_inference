@@ -148,14 +148,14 @@ figure <- ggplot(plotData, aes(x = model, y = workerData)) +
               se = FALSE,
               size = .5) +
   theme_bw(base_size = 14) +
-  labs(title = "Simple model")+
+  labs(title = "Simple model", subtitle = "Individually optimized")+
   #  labs(title = bquote(atop
   #                     (.(type) ~"," ~ r^2 == .(r2),
   #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
   #                     )))+
   ylab("human data")+
   xlab("model predictions") +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
 print(figure)
 ggsave(figure, height = 3, width = 3, units = "in", filename = paste("x3_m", nr,".pdf", sep=""))
 
@@ -190,14 +190,14 @@ figure <- ggplot(plotData, aes(x = model, y = workerData)) +
               se = FALSE,
               size = .5) +
   theme_bw(base_size = 14) +
-  labs(title = "Uniform model")+
+  labs(title = "Base model", subtitle = "Uniform")+
   #  labs(title = bquote(atop
   #                     (.(type) ~"," ~ r^2 == .(r2),
   #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
   #                     )))+
   ylab("human data")+
   xlab("model predictions") +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
 print(figure)
 ggsave(figure, height = 3, width = 3, units = "in", filename = paste("x3_m", nr,".pdf", sep=""))
 
@@ -258,7 +258,7 @@ figure <- ggplot(plotData, aes(x = model, y = workerData)) +
               se = FALSE,
               size = .5) +
   theme_bw(base_size = 14) +
-  labs(title = "Simple model", subtitle = "Global optimization")+
+  labs(title = "Simple model", subtitle = "Globally optimized")+
   #  labs(title = bquote(atop
   #                     (.(type) ~"," ~ r^2 == .(r2),
   #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
