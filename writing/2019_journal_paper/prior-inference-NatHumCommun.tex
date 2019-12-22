@@ -607,9 +607,27 @@ Depending on how many features competitor objects share with the chosen object, 
 
 Participants completed a series of fifteen trials. Objects and utterances were chosen as detailed above, with the constraint that ten trials were potentially informative with respect to listener preferences and five trials were uninformative with respect to listener preferences (e.g., observing that the listener chose one of three identical objects). 
 
+
+
 \subsubsection*{Ambiguity classes}
-\begin{figure*}[!ht]
+To determine model correlations with the gathered data, we partitioned the data into ambiguity classes, similar to \citeA{frankgoodman2012}. 
+The ambiguity classes identified in Experiment 1 distinguish how many objects are referenced by the utterance, how the referenced objects differ in their two non-uttered features, and how the non-referenced objects differ from the referenced objects and from each other.
+As a result, each ambiguity class yields exact model prediction values for the individual features present (with respect to their ``ambiguity role'' in the particular ambiguity class) in the respective scenarios $S$, effectively distinguishing all model-relevant cases. 
+
+Figure~\ref{fig:ambiguity-classes-exp1} shows three exemplar scenarios for three exemplarily picked ambiguity classes. 
+Let's considering the first class in more detail.
+In the scenario $S$ on the left side of Figure~\ref{fig:ambiguity-classes-exp1a}, 
+the utterance ``blue'' refers either to the blue square or the blue circle.
+The picked object, that is, the blue circle, is unique in its shape (circle) and shares the other non-referenced property with both other objects (that is, its plain pattern). 
+The referenced but not picked object (that is, the blue square), shares its shape with the non-referenced object. 
+In the scenario $S$ in the center, the referenced two red objects differ in texture but share shape with the non-referenced object.
+In the scenario $S$ on the right, the referenced two solid objects can be contrasted in their color but share their shape with the third object.
+
+
+
+\begin{figure*}[htb]
 	\centering
+	\begin{subfigure}{\linewidth}
 	\begin{subfigure}[b]{0.3\linewidth}
 		\centering
 		\begin{tikzpicture}
@@ -642,15 +660,14 @@ Participants completed a series of fifteen trials. Objects and utterances were c
 		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``solid"}};
 		\end{tikzpicture}
 	\end{subfigure}
-	\caption{Exemplar ambiguity class where the utterance references two objects, the picked object has one non-referenced unique feature, while the other, non-referenced feature is shared amongst all three objects.
-		The other referenced, but not chosen object, shares its first other feature with the non-referenced object. 
-	Left: The utterance ``blue'' refers either to the blue square or the blue circle. The picked object, that is, the blue circle, is unique in its shape (circle) and shares the other non-referenced property with both other objects (that is, its plain pattern). The referenced but not picked object (that is, the blue square), shares its shape with the non-referenced object. Middle: The two red objects differ in texture but share shape with the non-referenced object.
-Right: The two solid objects can be contrasted in their color and share their shape with the third object. }
+	\caption{The utterance references two objects, the picked object has one non-referenced unique feature, while the other, non-referenced feature is shared amongst all three objects.
+		The other referenced, but not chosen object, shares its other feature with the non-referenced object.} 
+\label{fig:ambiguity-classes-exp1a}
 	%21 32 12
-\end{figure*}
-
+	\end{subfigure}
+%%%%%%     Subfigure Part 2
 %class 21 22 12
-\begin{figure*}[!ht]
+	\begin{subfigure}{\linewidth}
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
 		\centering
@@ -663,7 +680,6 @@ Right: The two solid objects can be contrasted in their color and share their sh
 		
 		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``red"}};
 		\end{tikzpicture}
-%		\subcaption{The objects can differ in shape, texture, and color. The utterance applies to 2 objects which differ in shape and texture: a striped cloud and a polka-dotted circle. Solid objects or squares are absent in the scene, so we cannot learn whether the listener likes squares or solid objects.}
 	\end{subfigure}
 	\hspace*{0.3cm}
 	\begin{subfigure}[b]{0.3\linewidth}
@@ -674,7 +690,7 @@ Right: The two solid objects can be contrasted in their color and share their sh
 		
 		\draw[dashed, color=orange,line width=1mm] (o1.south west) rectangle ++(1.00cm,1.00cm);
 		
-		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``polka-dotted"}};
+		\node[] at ([yshift=10pt,xshift=0pt]o2.north){Utterance: \textbf{``polka-dotted"}};
 		\end{tikzpicture}
 %		\subcaption{Another combination, here the polka-dotted objects differ in shape and color.}
 	\end{subfigure}
@@ -692,12 +708,10 @@ Right: The two solid objects can be contrasted in their color and share their sh
 	%	\subcaption{Two circles differ in texture and color.}
 	\end{subfigure}
 	%21 22 12
-	\caption{The utterance always picks out two objects and both objects only share that uttered feature. The third object shares one feature with each of those objects.}
-\end{figure*}
-
-
-%class 32 21 12
-\begin{figure*}[!ht]
+	\caption{The utterance $u$ references two objects whereby both objects only share the uttered feature. The third object shares one feature with each of the two referenced objects.}
+	\end{subfigure}
+%%%%%%     Subfigure Part 3	
+	\begin{subfigure}{\linewidth}
 	\centering
 	\begin{subfigure}[b]{0.3\linewidth}
 		\centering
@@ -736,12 +750,16 @@ Right: The two solid objects can be contrasted in their color and share their sh
 		
 		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{"solid"}};
 		\end{tikzpicture}
-%		\subcaption{All objects are solid, the picked object shares being blue with one object.}
 	\end{subfigure}
+	\caption{In this third exemplar ambiguity class, the utterance refers to all three objects. The picked object shares one feature with one other object and has one feature just for itself while the other two objects share it.}
 	%32 21 12
-	\caption{Here the utterance picks out all objects. The picked object shares one feature with one other object and has one feature just for itself while the other two objects share it.}
+	\end{subfigure}
+	\caption{Three exemplar scenarios $S$, constraining utterance $u$, and chosen object $s$ are shown for three exemplar ambiguity classes for Experiment 1.}
+\label{fig:ambiguity-classes-exp1}
 \end{figure*}
-\FloatBarrier
+
+
+% \FloatBarrier
 
 
 \subsection*{Experiment 2}
@@ -760,6 +778,170 @@ Membership within an ambiguity class is defined by how many objects in a scene s
 In the most extreme case, when all objects share all three features, all utterances are ambiguous since multiple objects can always be picked; but no utterance allows the speaker to learn anything about the listener because the object choice is uninformative. Another extreme case is a situation where all objects are unique and do not share any features. In such a case, any utterance will only pick one object, making learning about preferences impossible unless obedience ($\beta$) is not 0---that is, unless listeners have a tendency to disobey the utterance and consider objects that do not satisfy its literal interpretation.
 
 Participants completed a series of fifteen trials. As with Experiment 1, objects were chosen at random, with the constraint that ten trials were potentially informative with respect to the listener's preferences (as in Figure~\ref{exp2-trial}) and five trials were uninformative with respect to the listener's preferences (e.g., observing a set of three identical objects).
+
+
+\subsubsection*{Ambiguity classes}
+As for Experiment 1, to determine model correlations with the gathered data, we partitioned the data into ambiguity classes. 
+For Experiment 2, the ambiguity classes distinguish how the three objects in the respective scenario $S$ differ from each other.
+As a result, the two most extreme classes contain identical objects -- in which case exactly three features are present in the scenario -- and three objects with all unique features, in which case all nine possible features are present. 
+As for Experiment 1, each ambiguity class yields exact model prediction values for the individual features (with respect to their ambiguity role in the respective ambiguity class) present in the respective scenarios $S$, effectively distinguishing all model-relevant cases. 
+
+
+Figure~\ref{fig:ambiguity-classes-exp1} shows three exemplar scenarios for three exemplarily picked ambiguity classes. 
+Let's again considering the first class in more detail.
+In the scenario $S$ on the left side of Figure~\ref{fig:ambiguity-classes-exp2a}, 
+all three objects share the feature pattern (solid), while two share the color (blue), and the other two share the shape (square).
+As a result, uttering \textit{green} or \textit{circle} will give no choice to the listener because the utterance identifies one unique object. 
+On the other hand, uttering \textit{solid} will let the listener choose freely, while uttering \textit{blue} or \textit{square} will give a specific choice between two objects, that is, between the blue circle and the blue square or between the blue square or the green square, respectively..
+In the scenario $S$ in the center, the objects share the shape (circle), two share the pattern (solid), and the other two share the color (red).
+Here, \textit{circle} references all three objects, \textit{red} or \textit{solid} reference pairs of objects, and \textit{striped} or \textit{green} reference one unique object each.
+In the scenario $S$ on the right, the object again share the shape (cloud), two share the pattern (solid), while the other two share the color (blue).
+
+
+\begin{figure*}[!htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+	\begin{subfigure}[t]{0.3\linewidth}
+		\centering
+		\begin{tikzpicture}
+		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
+		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/211.png}};
+		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/313.png}};
+		
+		\end{tikzpicture}
+%		\subcaption{}
+	\end{subfigure}
+	\hspace*{0.3cm}
+	\begin{subfigure}[t]{0.3\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/212.png}};
+		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/213.png}};
+		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/222.png}};
+		
+		\end{tikzpicture}
+%		\subcaption{Another combination, h}
+	\end{subfigure}
+	\hspace*{0.3cm}
+	\begin{subfigure}[t]{0.3\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/131.png}};
+		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/112.png}};
+		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/111.png}};
+		
+		\end{tikzpicture}
+%		\subcaption{Another combination following the same principle.}
+	\end{subfigure}
+	\caption{In this exemplar ambiguity class, one feature is shared by all three objects, while the two other features allow the distinction between two different pairs of objects and the reference of one of two uniquely identifiable objects.}
+	%322b
+	\end{subfigure}
+%%%%%%%%%%%%%%%%%%% start of second part 
+	\begin{subfigure}{\linewidth}
+	\centering
+	\begin{subfigure}[t]{0.3\linewidth}
+		\centering
+		\begin{tikzpicture}
+		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/133.png}};
+		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
+		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/232.png}};		
+		\end{tikzpicture}
+%		\subcaption{Uttering \textit{cloud}, \textit{red} or \textit{polka-dotted} will each pick out a different pair that lets us learn about a combination of two preferences. If we utter \textit{cloud} for example, a preference for green or red and a preference for polka-dotted or striped may figure in the listeners choice. Uttering \textit{circle}, \textit{green} or \textit{striped} will pick out a single object, giving the listener no choice.}
+	\end{subfigure}	
+	\hspace*{0.3cm}
+	\begin{subfigure}[t]{0.3\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/223.png}};
+		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/322.png}};
+		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/313.png}};
+		\end{tikzpicture}
+		%\subcaption{Another combination, here \textit{green}, \textit{striped} or \textit{square} will each pick out a pair. \textit{Solid}, \textit{red} or \textit{circle} will each pick out a single object.}
+	\end{subfigure}
+	\hspace*{0.3cm}
+	\begin{subfigure}[t]{0.3\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/212.png}};
+		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/221.png}};
+		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
+		\end{tikzpicture}
+%		\subcaption{Another combination following the same principle.}
+	\end{subfigure}
+	%22b2b
+	\caption{In this second exemplar ambiguity class, all three feature types allow the identification of pairs of objects or unique objects, where all three features contain one unique feature type, each. As a result, there are three utterances that each pick out a different pair of objects and three other utterances that each reference one single object -- effectively allowing the unique identification of each object as well as the identification of all three possible pairs.}
+	\end{subfigure}
+%%%%%%%%%%%%%  start of third part of figure
+	\begin{subfigure}{\linewidth}
+	\centering
+	\begin{subfigure}[b]{0.3\linewidth}
+		\centering
+		\begin{tikzpicture}
+		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/131.png}};
+		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/213.png}};
+		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/222.png}};		
+		\end{tikzpicture}
+%		\subcaption{Uttering \textit{circle} picks out the green solid one and the red striped one, letting us learn about a combination of preferences. Uttering \textit{solid}, \textit{striped}, \textit{polka-dotted}, \textit{cloud}, \textit{green}, \textit{red} or \textit{blue} would always pick just one object. That way, the listener would have no choice and we could not learn anything.}
+	\end{subfigure}
+	\hspace*{0.3cm}
+	\begin{subfigure}[t]{0.3\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/233.png}};
+		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
+		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/312.png}};		
+		\end{tikzpicture}
+%		\subcaption{Another combination, here all uttering \textit{red} is the only way to let the listener choose.}
+	\end{subfigure}
+	\hspace*{0.3cm}
+	\begin{subfigure}[t]{0.3\linewidth}
+		\begin{tikzpicture}
+		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/331.png}};
+		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/212.png}};
+		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/113.png}};	
+		\end{tikzpicture}
+%		\subcaption{Another combination following the same principle.}
+	\end{subfigure}
+	\caption{In this third exemplar ambiguity class, two features have three unique values, while one feature allows the identification of a pair of objects.}
+	\end{subfigure}
+	%211
+	\caption{Three exemplar scenarios $S$ are shown for three exemplar ambiguity classes for Experiment 2.} \end{figure*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \subsection*{Modeling: fullPSIRSA}
