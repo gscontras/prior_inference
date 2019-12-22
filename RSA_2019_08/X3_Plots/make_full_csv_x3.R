@@ -402,8 +402,146 @@ m20 <-data
 m20$Nr <- 20
 remove(data)
 
+#########################   Global optimization ########################################
+
+x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_kappaOnly_and_obedAndKappa.csv")
+source("X3_Code/X3_AvScatterPlot.R")
+
+########################################################################################
+
+# Simple rsa, softness at 0, obedience at 0, kl globally optimized
+
+data <- matrix(NA,length(workerData),7)
+data <- as.data.frame(data)
+colnames(data) <- c("workerData","model","softness","obedience","alpha","kl_factor","type")
+data$type <- "simpleRSA"
+data$softness <- 0
+data$obedience <- 0
+data$kl_factor <- "globally_opt"
+data$workerData <- workerData
+data$model <- rsaModel1
+data$cross_validated <- "no"
+m21 <-data
+m21$Nr <- 21
+remove(data)
+
+#########################   Global optimization ########################################
+
+x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_kappaOnly_and_obedAndKappa.csv")
+source("X3_Code/X3_AvScatterPlot.R")
+
+########################################################################################
+
+# Simple rsa, softness at 0, obedience globally optimized, kl-factor globally optimized
+
+data <- matrix(NA,length(workerData),7)
+data <- as.data.frame(data)
+colnames(data) <- c("workerData","model","softness","obedience","alpha","kl_factor","type")
+data$type <- "simpleRSA"
+data$softness <- 0
+data$obedience <- "globally_opt"
+data$kl_factor <- "globally_opt"
+data$workerData <- workerData
+data$model <- rsaModel2
+data$cross_validated <- "no"
+m22 <-data
+m22$Nr <- 22
+remove(data)
+
+#########################   Global optimization ########################################
+
+x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefAndKappa_and_prefObedAndKappa.csv")
+source("X3_Code/X3_AvScatterPlot.R")
+
+########################################################################################
+
+# Simple rsa, softness globally optimized, obedience at 0, kl globally optimized
+
+data <- matrix(NA,length(workerData),7)
+data <- as.data.frame(data)
+colnames(data) <- c("workerData","model","softness","obedience","alpha","kl_factor","type")
+data$type <- "simpleRSA"
+data$softness <- "globally_opt"
+data$obedience <- 0
+data$kl_factor <- "globally_opt"
+data$workerData <- workerData
+data$model <- rsaModel1
+data$cross_validated <- "no"
+m23 <-data
+m23$Nr <- 23
+remove(data)
+
+#########################   Global optimization ########################################
+
+x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefAndKappa_and_prefObedAndKappa.csv")
+source("X3_Code/X3_AvScatterPlot.R")
+
+########################################################################################
+
+# Simple rsa, softness globally optimized, obedience globally optimized, kl-factor globally optimized
+
+data <- matrix(NA,length(workerData),7)
+data <- as.data.frame(data)
+colnames(data) <- c("workerData","model","softness","obedience","alpha","kl_factor","type")
+data$type <- "simpleRSA"
+data$softness <- "globally_opt"
+data$obedience <- "globally_opt"
+data$kl_factor <- "globally_opt"
+data$workerData <- workerData
+data$model <- rsaModel2
+data$cross_validated <- "no"
+m24 <-data
+m24$Nr <- 24
+remove(data)
+
+#########################   Global optimization ########################################
+
+x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefOnly_and_obedOnly.csv")
+source("X3_Code/X3_AvScatterPlot.R")
+
+########################################################################################
+
+# Simple rsa, softness globally optimized, obedience at 0, kl at 1
+
+data <- matrix(NA,length(workerData),7)
+data <- as.data.frame(data)
+colnames(data) <- c("workerData","model","softness","obedience","alpha","kl_factor","type")
+data$type <- "simpleRSA"
+data$softness <- "globally_opt"
+data$obedience <- 0
+data$kl_factor <- 1
+data$workerData <- workerData
+data$model <- rsaModel1
+data$cross_validated <- "no"
+m25 <-data
+m25$Nr <- 25
+remove(data)
+
+#########################   Global optimization ########################################
+
+x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefOnly_and_obedOnly.csv")
+source("X3_Code/X3_AvScatterPlot.R")
+
+########################################################################################
+
+# Simple rsa, softness globally optimized, obedience globally optimized, kl-factor globally optimized
+
+data <- matrix(NA,length(workerData),7)
+data <- as.data.frame(data)
+colnames(data) <- c("workerData","model","softness","obedience","alpha","kl_factor","type")
+data$type <- "simpleRSA"
+data$softness <- 0
+data$obedience <- "globally_opt"
+data$kl_factor <- 1
+data$workerData <- workerData
+data$model <- rsaModel2
+data$cross_validated <- "no"
+m26 <-data
+m26$Nr <- 26
+remove(data)
+
 
 ## Big data set ####
 
-full <- rbind(m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19,m20)
+full <- rbind(m1,m2,m3,m4,m5,m6,m7,m8,m9,m10,m11,m12,m13,m14,m15,m16,m17,m18,m19,m20,m21,m22,m23,m24,m25,m26)
 write.csv(full,"X3_Plots/for_scatterplots_x3_updated.csv")
