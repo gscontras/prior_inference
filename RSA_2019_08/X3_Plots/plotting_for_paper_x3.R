@@ -109,14 +109,14 @@ figure <- ggplot(plotData, aes(x = model, y = workerData)) +
               se = FALSE,
               size = .5) +
   theme_bw(base_size = 14) +
-  labs(title = "Simple model")+
+  labs(title = "Simple model",subtitle = "Non-optimized")+
   #  labs(title = bquote(atop
   #                     (.(type) ~"," ~ r^2 == .(r2),
   #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
   #                     )))+
   ylab("human data")+
   xlab("model predictions") +
-  theme(plot.title = element_text(hjust = 0.5))
+  theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
 print(figure)
 ggsave(figure, height = 3, width = 3, units = "in", filename = paste("x3_m", nr,".pdf", sep=""))
 
@@ -238,6 +238,42 @@ figure <- ggplot(plotData, aes(x = model, y = workerData)) +
   theme(plot.title = element_text(hjust = 0.5))
 #print(figure)
 ggsave(figure, filename = paste("x3_m", nr,".pdf", sep=""),width = 7, height = 7, units = "in")
+
+
+######## Global optimization plot ############
+
+plotData <- subset(full, Nr == 24)
+
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
+softness <- unique(as.character(plotData$softness))
+obedience <- unique(as.character(plotData$obedience))
+type <- unique(as.character(plotData$type))
+nr <- plotData$Nr[1]
+
+
+figure <- ggplot(plotData, aes(x = model, y = workerData)) +
+  geom_point(shape = 1) +
+  stat_smooth(method = "lm",
+              col = "black",
+              se = FALSE,
+              size = .5) +
+  theme_bw(base_size = 14) +
+  labs(title = "Simple model", subtitle = "Global optimization")+
+  #  labs(title = bquote(atop
+  #                     (.(type) ~"," ~ r^2 == .(r2),
+  #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)
+  #                     )))+
+  ylab("human data")+
+  xlab("model predictions") +
+  theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
+print(figure)
+ggsave(figure, height = 3, width = 3, units = "in", filename = paste("x3_m", nr,".pdf", sep=""))
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+confint(model)
+
+
 
 
 ## Simple plot works a little faster to look up r2 values ##
