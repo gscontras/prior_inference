@@ -15,8 +15,6 @@ Database file #1: prior-inference.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5062 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5062 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5066 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
@@ -27,71 +25,55 @@ Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2
 while executing---line 5068 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5072 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5072 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5075 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5075 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5076 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5076 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5079 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5079 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry foppa1995mutual
-while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5079 of file apacite.bst
-You've used 48 entries,
+You've used 39 entries,
             6951 wiz_defined-function locations,
-            1568 strings with 18426 characters,
-and the built_in function-call counts, 91667 in all, are:
-= -- 11648
-> -- 721
-< -- 4199
-+ -- 4306
-- -- 96
-* -- 5665
-:= -- 16271
-add.period$ -- 212
-call.type$ -- 48
-change.case$ -- 828
+            1518 strings with 17117 characters,
+and the built_in function-call counts, 74564 in all, are:
+= -- 9410
+> -- 599
+< -- 3459
++ -- 3540
+- -- 78
+* -- 4650
+:= -- 13386
+add.period$ -- 170
+call.type$ -- 39
+change.case$ -- 672
 chr.to.int$ -- 0
-cite$ -- 96
-duplicate$ -- 2457
-empty$ -- 3667
-format.name$ -- 1144
-if$ -- 17794
+cite$ -- 78
+duplicate$ -- 1981
+empty$ -- 2964
+format.name$ -- 952
+if$ -- 14394
 int.to.chr$ -- 0
-int.to.str$ -- 144
+int.to.str$ -- 117
 missing$ -- 0
-newline$ -- 1212
-num.names$ -- 400
-pop$ -- 1532
+newline$ -- 983
+num.names$ -- 322
+pop$ -- 1266
 preamble$ -- 1
-purify$ -- 194
+purify$ -- 158
 quote$ -- 0
-skip$ -- 6336
+skip$ -- 5061
 stack$ -- 0
-substring$ -- 4811
-swap$ -- 1403
-text.length$ -- 135
+substring$ -- 3940
+swap$ -- 1135
+text.length$ -- 111
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 4480
+type$ -- 3568
 warning$ -- 0
-while$ -- 403
+while$ -- 332
 width$ -- 0
-write$ -- 1463
-(There were 20 error messages)
+write$ -- 1197
+(There were 11 error messages)

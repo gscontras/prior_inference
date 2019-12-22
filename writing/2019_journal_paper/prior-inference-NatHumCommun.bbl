@@ -7,7 +7,7 @@ Baldwin%
 Baldwin%
 \ \BBA {} Kosie%
 }{%
-{\protect \APACyear {2019}}%
+{\protect \APACyear {to appear}}%
 }]{%
 Baldwin:2019tsi}
 \APACinsertmetastar {%
@@ -18,14 +18,12 @@ Baldwin, D\BPBI A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2019}{}{}.
+\APACrefYearMonthDay{to appear}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {How does the mind render streaming experience as
   events?} {How does the mind render streaming experience as events?}{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\newblock
-\APACrefnote{this volume}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -171,34 +169,6 @@ Butz, M\BPBI V.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Carmon%
-}{%
-Carmon%
-}{%
-{\protect \APACyear {2013}}%
-}]{%
-carmon2013}
-\APACinsertmetastar {%
-carmon2013}%
-\begin{APACrefauthors}%
-Carmon, A\BPBI F.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2013}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Is It Necessary to be Clear? An Examination of Strategic
-  Ambiguity in Family Business Mission Statements} {Is it necessary to be
-  clear? an examination of strategic ambiguity in family business mission
-  statements}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Qualitative Research Reports in
-  Communication}{14}{1}{87--96}.
-\newblock
-\begin{APACrefDOI} \doi{10.1080/17459435.2013.835346} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Chomsky%
 }{%
 Chomsky%
@@ -297,29 +267,6 @@ Cushing, S.%
   words: Communication clashes and aircraft crashes}.
 \newblock
 \APACaddressPublisher{Chicago}{University of Chicago Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Eisenberg%
-}{%
-Eisenberg%
-}{%
-{\protect \APACyear {1984}}%
-}]{%
-eisenberg1984ambiguity}
-\APACinsertmetastar {%
-eisenberg1984ambiguity}%
-\begin{APACrefauthors}%
-Eisenberg, E\BPBI M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1984}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Ambiguity as strategy in organizational communication}
-  {Ambiguity as strategy in organizational communication}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Communication monographs}{51}{3}{227--242}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -433,32 +380,6 @@ Ferreira, V\BPBI S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Foppa%
-}{%
-Foppa%
-}{%
-{\protect \APACyear {1995}}%
-}]{%
-foppa1995mutual}
-\APACinsertmetastar {%
-foppa1995mutual}%
-\begin{APACrefauthors}%
-Foppa, K.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1995}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {On mutual understanding and agreement in dialogues} {On
-  mutual understanding and agreement in dialogues}.{\BBCQ}
-\newblock
-\BIn{} I.~Markova\ \BBA {} F\BPBI K.~Graumann Carl~F.\ (\BEDS), \APACrefbtitle
-  {Mutualities in dialogue.} {Mutualities in dialogue.}
-\newblock
-\APACaddressPublisher{Cambridge, UK}{Cambridge University Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Frank%
 \ \BBA {} Goodman%
 }{%
@@ -482,33 +403,6 @@ Frank, M\BPBI C.%
   {Predicting pragmatic reasoning in language games}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Science}{336}{}{998-998}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Franke%
-\ \BBA {} Degen%
-}{%
-Franke%
-\ \BBA {} Degen%
-}{%
-{\protect \APACyear {2016}}%
-}]{%
-franke2016reasoning}
-\APACinsertmetastar {%
-franke2016reasoning}%
-\begin{APACrefauthors}%
-Franke, M.%
-\BCBT {}\ \BBA {} Degen, J.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2016}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Reasoning in reference games: Individual-vs.
-  population-level probabilistic modeling} {Reasoning in reference games:
-  Individual-vs. population-level probabilistic modeling}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{PloS one}{11}{5}{e0154854}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -786,7 +680,7 @@ Knott%
 Knott%
 \ \BBA {} Takac%
 }{%
-{\protect \APACyear {2019}}%
+{\protect \APACyear {to appear}}%
 }]{%
 Knott:2019tsi}
 \APACinsertmetastar {%
@@ -797,7 +691,7 @@ Knott, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2019}{}{}.
+\APACrefYearMonthDay{to appear}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Roles for event representations in sensorimotor
   experience, memory formation and language processing} {Roles for event
@@ -805,8 +699,6 @@ Knott, A.%
   processing}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\newblock
-\APACrefnote{this volume}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -910,110 +802,6 @@ Lohmann, J.%
 \APACjournalVolNumPages{Vision}{3}{2}{15}.
 \newblock
 \begin{APACrefDOI} \doi{doi.org/10.3390/vision3020015} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Markova%
-\ \BBA {} Graumann%
-}{%
-Markova%
-\ \BBA {} Graumann%
-}{%
-{\protect \APACyear {1995}}%
-}]{%
-markova1995preface}
-\APACinsertmetastar {%
-markova1995preface}%
-\begin{APACrefauthors}%
-Markova, I.%
-\BCBT {}\ \BBA {} Graumann, F\BPBI K., Carl~F.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1995}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Preface} {Preface}.{\BBCQ}
-\newblock
-\BIn{} I.~Markova\ \BBA {} F\BPBI K.~Graumann Carl~F.\ (\BEDS), \APACrefbtitle
-  {Mutualities in dialogue.} {Mutualities in dialogue.}
-\newblock
-\APACaddressPublisher{Cambridge, UK}{Cambridge University Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Mohr%
-}{%
-Mohr%
-}{%
-{\protect \APACyear {1983}}%
-}]{%
-mohr1983implications}
-\APACinsertmetastar {%
-mohr1983implications}%
-\begin{APACrefauthors}%
-Mohr, L\BPBI B.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1983}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {The implications of effectiveness theory for managerial
-  practice in the public sector} {The implications of effectiveness theory for
-  managerial practice in the public sector}.{\BBCQ}
-\newblock
-\BIn{} K\BPBI S.~Cameron\ \BBA {} D\BPBI A.~Whetten\ (\BEDS), \APACrefbtitle
-  {Organizational effectiveness} {Organizational effectiveness}\ (\BPGS\
-  225--239).
-\newblock
-\APACaddressPublisher{}{Elsevier}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Ossa-Richardson%
-}{%
-Ossa-Richardson%
-}{%
-{\protect \APACyear {2019}}%
-}]{%
-ossarichardson2019}
-\APACinsertmetastar {%
-ossarichardson2019}%
-\begin{APACrefauthors}%
-Ossa-Richardson, A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2019}.
-\newblock
-\APACrefbtitle {A history of ambiguity} {A history of ambiguity}.
-\newblock
-\APACaddressPublisher{}{Princeton University Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Pascale%
-\ \BBA {} Athos%
-}{%
-Pascale%
-\ \BBA {} Athos%
-}{%
-{\protect \APACyear {1981}}%
-}]{%
-pascale1981art}
-\APACinsertmetastar {%
-pascale1981art}%
-\begin{APACrefauthors}%
-Pascale, R\BPBI T.%
-\BCBT {}\ \BBA {} Athos, A\BPBI G.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{1981}.
-\newblock
-\APACrefbtitle {The art of {Japanese} management} {The art of {Japanese}
-  management}.
-\newblock
-\APACaddressPublisher{New York}{Simon \& Schuster}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1133,7 +921,7 @@ Shin%
 Shin%
 \ \BBA {} DuBrow%
 }{%
-{\protect \APACyear {2019}}%
+{\protect \APACyear {to appear}}%
 }]{%
 DuBrow:2019tsi}
 \APACinsertmetastar {%
@@ -1144,15 +932,13 @@ Shin, Y\BPBI S.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2019}{}{}.
+\APACrefYearMonthDay{to appear}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Structuring memory through inference-based event
   segmentation} {Structuring memory through inference-based event
   segmentation}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\newblock
-\APACrefnote{this volume}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1211,37 +997,7 @@ Stawarczyk, D.%
 \newblock
 \APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
 \newblock
-\APACrefnote{this volume}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Storchak%
-, Ehlis%
-\BCBL {}\ \BBA {} Fallgatter%
-}{%
-Storchak%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2019}}%
-}]{%
-Fallgatter:2019tsi}
-\APACinsertmetastar {%
-Fallgatter:2019tsi}%
-\begin{APACrefauthors}%
-Storchak, H.%
-, Ehlis, A\BHBI C.%
-\BCBL {}\ \BBA {} Fallgatter, A\BPBI J.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2019}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Action monitoring alterations as indicators of
-  predictive deficits in schizophrenia} {Action monitoring alterations as
-  indicators of predictive deficits in schizophrenia}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\newblock
-\APACrefnote{this volume}
+\begin{APACrefDOI} \doi{doi.org/10.1111/tops.12450} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1251,7 +1007,7 @@ Storchak, H.%
 }{%
 {\"U}nal%
 \ \protect \BOthers {.}}{%
-{\protect \APACyear {2019}}%
+{\protect \APACyear {to appear}}%
 }]{%
 Papafragou:2019tsi}
 \APACinsertmetastar {%
@@ -1263,14 +1019,12 @@ Papafragou:2019tsi}%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2019}{}{}.
+\APACrefYearMonthDay{to appear}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {From event representation to linguistic meaning} {From
   event representation to linguistic meaning}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\newblock
-\APACrefnote{this volume}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
