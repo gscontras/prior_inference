@@ -6,7 +6,8 @@
 \usepackage{multicol}
 \usepackage{varwidth}
 \usepackage{blindtext}
-
+\usepackage[pagewise, displaymath, mathlines]{lineno}
+\linenumbers
 \usepackage{hyperref}
 
 
@@ -35,10 +36,10 @@
 		Asya Achimova\\
 		\href{mailto:asya.achimova@uni-tuebingen.de}{asya.achimova@uni-tuebingen.de}
 	\and
-		Greg Scontras\\
+		Gregoory Scontras\\
 		\href{mailto:gscontra@uci.edu}{gscontra@uci.edu}
 	\and 
-		Christian Stegemann\\
+		Christian Stegemann-Philipps\\
 		\href{mailto:christian.stegemann@uni-tuebingen.de}{christian.stegemann@uni-tuebingen.de}
 	\and
 		Johannes Lohmann\\
@@ -300,16 +301,16 @@ As for the preference parameter $\gamma$, the $\beta$ range includes hard obedie
 % We first present results for the globally-optimized versions of  PSIRSA .
 % I used the code length(levels(as.factor(uniqueCCode))) to calculate the number of conditions
 %Since not all of the stimuli allowed for inference of preferences in the same way, we introduced a new categorization of stimuli. Our base model would then predict the same preferences for the same category of stimuli. The categorization takes into account the distribution of features, the chosen object and which feature was uttered. Each category consists of 3 tuples of 2 digits. Each tuple refers to one feature, where the first tuple always refers to the uttered feature. The first digit in each tuple would then denote how many objects share the value of the picked object for the corresponding feature. In figure \ref{FG-ref-game}, if the utterance was blue and the blue square was picked, the first tuple would reference color and its first digit would be a "2". Note that this does not determine which other object shares the feature value, i.e. "blue". To compensate, the second digit of the tuple denotes which other object shares this value. This depends on the order of the objects---we stipulated that the picked object would be the first. The further order would be determined by which other object shares this specific value, i.e. the "blue circle" in figure \ref{FG-ref-game} would be the first of the "other objects" and the "green square" the second. The picked object is at position zero in this sense. Thus the first tuple for figure \ref{FG-ref-game} would be (2,1). For the other tuples, the first digits would be "2" for shape and "3" for texture. To streamline the category code we stipulated that we would order the features in descending order of their first digit, so that we would have texture's "3" next in figure \ref{FG-ref-game}. If a tuple starts with "3" or "1", the second digit would simply denote whether the other objects have different values for that feature or the same. Thus we would have (3,2) for texture, with the second digit signaling that the non-picked objects share their texture. The tuple for shape would finally be (2,2), because the value "square" is shared with the second other object (see above). Thus for figure \ref{FG-ref-game} we would end up with [(2,1),(3,2),(2,2)].
-simplePSIRSA and fullPSIRSA with softness ($\gamma$) optimized globally provide nearly identically good fits to the data  (Figure~\ref{simple-global-and-cross-validated}).
-simplePSIRSA yields a correlation of $r^2 = 0.8614$ when only softness parameter $\gamma$ is optimized ($\gamma=0.2204$ after optimization).\footnote{All correlations were highly significant, that is, $p < 0.001$, if not stated differently in the text.} 
-When both parameters are optimized globally, a correlation of $r^2 = 0.9789$ is reached
+simplePSIRSA and fullPSIRSA with softness ($\gamma$) optimized globally provide nearly identically good fits to the data  (Figure~\ref{simple-global-and-cross-validated}). Simple linear regression analysis was used to test whether the model values predicted the human data. 
+simplePSIRSA yields a value of $r^2 = 0.8607$\footnote{Here and throughout the paper we report adjusted $r^2$ values.} ($F(1,190) = 1181$)\footnote{All results were significant at $p < 0.001$ level if not stated differently in the text.} when only softness parameter $\gamma$ is optimized ($\gamma=0.2204$ after optimization). 
+When both parameters are optimized globally, a variance estimate of $r^2 = 0.9788$ ($F(1,190) = 8823$) is reached
 ($\gamma=0.2210$ and $\beta=0.2693$ after optimization), indicating that participants indeed considered (possibly subconsciously) the option to interpret utterances non-literally. 
 % only $\gamma$ optimized: Multiple R-squared:  0.8614; gamma=0.220358
 % $\gamma$ and $\beta$ optimized: Multiple R-squared:  0.9789; gamma=0.2210127, beta=0.2692707
 fullPSIRSA yields nearly identical values.
-When optimizing only the softness parameter $\gamma$, a correlation of $r^2 = 0.8576$ is reached ($\gamma=0.2231$).
-Optimizing both, $\alpha$ and $\gamma$, a correlation of $r^2 = 0.8614$ is reached ($\alpha=0.1797$, $\gamma=0.2205$).
-When optimizing all three parameters, fullPSIRSA yields a correlation of $r^2 = 0.9773$ ($\alpha=0.2657$, $\gamma=0.2214$, $\beta=0.0030$).
+When optimizing only the softness parameter $\gamma$, a value of $r^2 = 0.8568$ ($F(1, 190) = 1144$) is reached ($\gamma=0.2231$).
+Optimizing both, $\alpha$ and $\gamma$, a value of $r^2 = 0.8607$ ($F(1, 190) = 1144$) is reached ($\alpha=0.1797$, $\gamma=0.2205$).
+When optimizing all three parameters, fullPSIRSA yields a value of $r^2 = 0.9772$ ($F(1, 190) = 8170$) ($\alpha=0.2657$, $\gamma=0.2214$, $\beta=0.0030$).
 %, not quite reaching the correlation of simplePSIRSA, which may be due to some subtle interactions between parameters $\alpha$ and $\beta$. 
 % only $\gamma$ optimized: Multiple R-squared:  0.8576 ; gamma=0.2231055
 % only $\alpha$ and $\gamma$ optimized: Multiple R-squared:  0.8614; alpha=0.1797266, gamma=0.2204913
@@ -346,7 +347,7 @@ We then again averaged the individualized model prediction values and participan
 
 
 %Figure~\ref{simple-full-individual} shows that 
-The full model optimized at the individual level for the additional parameter $\alpha$ does not improve the fit compared to the simplified model (simplePSIRSA: $r^{2}=0.8631$; fullPSIRSA: $r^{2}=0.8614$). 
+The full model optimized at the individual level for the additional parameter $\alpha$ does not improve the fit compared to the simplified model (simplePSIRSA: $r^{2}=0.8631, F(1,190) = 1205$; fullPSIRSA: $r^{2}=0.8627, F(1,190) = 1201$). 
 Seeing that both models again fit the data nearly equally well (if anything, simplePSIRSA performs slightly better), we will henceforth only consider the predictions of simplePSIRSA.
 Note further that the individually-fitted parameters do not improve the correlation values much, if at all, when compared to the globally-fitted model. 
 
@@ -381,7 +382,7 @@ Note further that the individually-fitted parameters do not improve the correlat
 
 The model fit improves considerably when we additionally fit the obedience parameter $\beta$ at the individual level. 
 %We plot predictions from the $\beta$- and $\gamma$-optimized model in Figure~\ref{cross-validation}, 
-Here we found the strongest positive correlation between the human judgments and model predictions ($r^2 = 0.992$). The likelihood ratio test revealed that a $\gamma$- and $\beta$-optimized simplePSIRSA model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, \textrm{df} = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject, giving us 82 degrees of freedom. We additionally checked the generalizability of the model by performing leave-one-out cross-validation. Figure~\ref{simple-global-and-cross-validated} shows that the resulting cross-validated model predictions retain the strong correlation ($r^{2}=0.9901$).
+Here the model explains a large proportion of variance in the human judgments ($r^2 = 0.9919, F(1,190) = 23480$). The likelihood ratio test (two-tailed) revealed that a $\gamma$- and $\beta$-optimized simplePSIRSA model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, \textrm{df} = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject, giving us 82 degrees of freedom. We additionally checked the generalizability of the model by performing leave-one-out cross-validation. Figure~\ref{simple-global-and-cross-validated} shows that the resulting cross-validated model predictions retain the strong fit $r^2 = 0.99, F(1,190) = 18910$).
 
 %\begin{figure}[ht]%
 %	\centering
@@ -444,14 +445,16 @@ the preference softness $\gamma$, the obedience $\beta$, and a $\lambda$ paramet
 
 We compare simplePSIRSA with non-optimized parameters and with several parameter optimizations with the performance of a uniform base model, which simply chooses one of the available utterances at random. 
 Seeing that in particular ambiguity cases with particular constellations $S$ three up to nine utterances are possible, the base model yields different model predictions for the available utterances in the respective ambiguity classes. 
-As a result, the correlation performance of the uniform base model is much better than one would expect without this insight ($r^2=0.7467$, $p<0.001$).
+As a result, the the uniform base model is much better in capturing variance in the data than one would expect without this insight ($r^2=0.7466$, $F(1,82) = 245.6$, $p<0.001$).
 Figure~\ref{base-nonopt-x3} compares this performance to the non-optimized simplePSIRSA, where we set the parameters to hard preference and obedience ($\gamma=0$, $\beta=0$) and the information gain factor to $\lambda=1$, thus preferring to choose those utterances that are expected to yield high information gain. 
-Surprisingly, this model fully fails to predict the human data ($r^2=0.0595$, $p=0.0144$)
+Surprisingly, this model captures very little variance in
+%fully fails to predict 
+the human data ($r^2=0.0595$, $F(1,82) = 6.253$, $p  < 0.05$)
 
 
-To examine the reasons for this failure, we ran additional global parameter optimization runs.
-When optimizing all the model parameters, the correlation outperforms the uniform base model ($r^2=0.7991$, $p<0.001$; optimized model parameters: $\gamma=0.0006$, $\beta=0.2758$, $\lambda=0.3663$).
-Moreover, the nested model comparison test with three free parameters yields a G2 value of $13.6912$, which indicates a more accurate model with $p<0.004$. 
+To examine the reasons for this failure, we performed additional global parameter optimization runs.
+When optimizing all the model parameters, the model accounts for more variance than the uniform base model ($r^2=0.7991$, $F(1,82) = 331.2$, $p<0.001$; optimized model parameters: $\gamma=0.0006$, $\beta=0.2758$, $\lambda=0.3663$).
+Moreover, the nested model comparison test with three free parameters yields a $G^2$ value of $13.6912$, which indicates a more accurate model with $p<0.01$. 
 Figure~\ref{global-individual-x3} shows the correlation plot. 
 The parameters indicate that the preference strength is rather high, obedience is not as strong, while the information gain intention is visible. 
 We now turn to individual parameter optimization, suspecting that their may be fundamental differences between the individual groups of workers. 
@@ -465,8 +468,8 @@ We now turn to individual parameter optimization, suspecting that their may be f
 	\includegraphics[width=2in]{images/x3_m20.pdf}
 	\includegraphics[width=2in]{images/x3_m7.pdf}
 	\caption{Average human data from Experiment 2 plotted against the predictions of the uniform baseline model and the simplePSIRSA model. 
-		Left panel: \emph{uniform model} ($r^{2}=0.7497$);
-		Right panel: non-optimized simplePSIRSA ($r^2=0.0595$).
+		Left panel: \emph{uniform model} ($r^{2}=0.7466$);
+		right panel: \emph{non-optimized simplePSIRSA} ($r^2=0.0595$).
 	}
 	\label{base-nonopt-x3}
 \end{figure}
@@ -480,8 +483,8 @@ We now turn to individual parameter optimization, suspecting that their may be f
 
 We compared three single-parameter-individually-optimized simplePSIRSA models to determine which model provides the best fit to the data. 
 All models have similar levels of complexity, with either softness $\gamma$, obedience $\beta$, or KL-factor $\lambda$ being optimized.
-The results indicate that we get the best fit by optimizing the KL-factor $\lambda$ ($r^{2}=0.9071$; leave-one-out cross-validated optimization $r^{2}=0.8902$), with other models capturing less variance in the data ($\beta$-optimized $r^{2}=0.8039$; $\gamma$-optimized $r^{2}=0.8100$).
-Two- and three-parameter individual optimizations did not yield any significant model improvements (best improvement when optimizing $\gamma$ in addition to $\lambda$, with a G2 value of $24.72$, which is not significant when considering the $82$ additional degrees of freedom due to individual parameter optimization).
+The results indicate that we get the best fit by optimizing the KL-factor $\lambda$ ($r^{2}=0.9059$, $F(1,82) = 800.2$; leave-one-out cross-validated optimization $r^{2}=0.8902$, $F(1,82) = 664.8$, with other models capturing less variance in the data ($\beta$-optimized $r^{2}=0.8015$, $F(1,82) = 336.1$; $\gamma$-optimized $r^{2}=0.8077$, $F(1,82) = 349.6$).
+Two- and three-parameter individual optimizations did not yield any significant model improvements (best improvement when optimizing $\gamma$ in addition to $\lambda$, with a $G^2$ value of $24.72$, which is not significant when considering the $82$ additional degrees of freedom due to individual parameter optimization).
 % were unstable due to parameter interactions; therefore, we do not report the results for those models.
 Figure~\ref{global-individual-x3} shows the resulting correlation plot. 
  
@@ -490,8 +493,8 @@ Figure~\ref{global-individual-x3} shows the resulting correlation plot.
 	\includegraphics[width=2in]{images/x3_m24.pdf}
 	\includegraphics[width=2in]{images/x3_m11.pdf}
 	\caption{Average human data from Experiment 2 plotted against the predictions of optimized simplePSIRSA models.
-		Left panel: \emph{globally optimized 3 parameter model} ()$r^{2}=0.$;
-		right panel: \emph{individual KL-factor $\lambda$-optimized model} ($r^{2}=0.9071$). }
+		Left panel: \emph{globally optimized 3 parameter model} ($r^{2}=0.7466$;
+		right panel: \emph{individual KL-factor $\lambda$-optimized model} ($r^{2}=0.9059$). }
 	\label{global-individual-x3}
 \end{figure}
 
@@ -575,7 +578,7 @@ In that sense, ambiguous utterances and resolutions thereof are one device for p
 
 \subsubsection*{Participants}
 
-We recruited 90 participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we identified 82 participants as native speakers of English; their data were included in the analyses reported below.
+We recruited 90 participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we identified 82 participants as native speakers of English; their data were included in the analyses reported below. We obtained a confirmation from all the subjects to participate in the study.
 
 \subsubsection*{Design and methods}
 
@@ -594,157 +597,11 @@ Depending on how many features competitor objects share with the chosen object, 
 
 Participants completed a series of fifteen trials. Objects and utterances were chosen as detailed above, with the constraint that ten trials were potentially informative with respect to listener preferences and five trials were uninformative with respect to listener preferences (e.g., observing that the listener chose one of three identical objects). 
 
-
-
 \subsubsection*{Ambiguity classes}
+
 To determine model correlations with the gathered data, we partitioned the data into ambiguity classes, similar to \citeA{frankgoodman2012}. 
 The ambiguity classes identified in Experiment 1 distinguish how many objects are referenced by the utterance, how the referenced objects differ in their two non-uttered features, and how the non-referenced objects differ from the referenced objects and from each other.
-As a result, each ambiguity class yields exact model prediction values for the individual features present (with respect to their ``ambiguity role'' in the particular ambiguity class) in the respective scenarios $S$, effectively distinguishing all model-relevant cases. 
-
-Figure~\ref{fig:ambiguity-classes-exp1} shows three exemplar scenarios for three exemplarily picked ambiguity classes. 
-Let's considering the first class in more detail.
-In the scenario $S$ on the left side of Figure~\ref{fig:ambiguity-classes-exp1a}, 
-the utterance ``blue'' refers either to the blue square or the blue circle.
-The picked object, that is, the blue circle, is unique in its shape (circle) and shares the other non-referenced property with both other objects (that is, its plain pattern). 
-The referenced but not picked object (that is, the blue square), shares its shape with the non-referenced object. 
-In the scenario $S$ in the center, the referenced two red objects differ in texture but share shape with the non-referenced object.
-In the scenario $S$ on the right, the referenced two solid objects can be contrasted in their color but share their shape with the third object.
-
-
-
-\begin{figure*}[htb]
-	\centering
-	\begin{subfigure}{\linewidth}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\centering
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=.75cm]{appendix/311.png}};
-		\node[](o2) at (0,0){\includegraphics[width=.75cm]{appendix/211.png}};
-		\node[](o3) at (1,0){\includegraphics[width=.75cm]{appendix/313.png}};
-		\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.cm,1.cm);
-		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``blue"}};
-		\end{tikzpicture}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=.75cm]{appendix/212.png}};
-		\node[](o2) at (0,0){\includegraphics[width=.75cm]{appendix/213.png}};
-		\node[](o3) at (1,0){\includegraphics[width=.75cm]{appendix/222.png}};
-		
-		\draw[dashed, color=orange,line width=1mm] (o3.south west) rectangle ++(1.cm,1.cm);
-		
-		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``red"}};
-		\end{tikzpicture}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=.75cm]{appendix/112.png}};
-		\node[](o2) at (0,0){\includegraphics[width=.75cm]{appendix/131.png}};
-		\node[](o3) at (1,0){\includegraphics[width=.75cm]{appendix/111.png}};
-		\draw[dashed, color=orange,line width=1mm] (o1.south west) rectangle ++(1.cm,1.cm);
-		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``solid"}};
-		\end{tikzpicture}
-	\end{subfigure}
-	\caption{The utterance references two objects, the picked object has one non-referenced unique feature, while the other, non-referenced feature is shared amongst all three objects.
-		The other referenced, but not chosen object, shares its other feature with the non-referenced object.} 
-\label{fig:ambiguity-classes-exp1a}
-	%21 32 12
-	\end{subfigure}
-%%%%%%     Subfigure Part 2
-%class 21 22 12
-	\begin{subfigure}{\linewidth}
-	\centering
-	\begin{subfigure}[b]{0.3\linewidth}
-		\centering
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/133.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/232.png}};
-		
-		\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.00cm,1.00cm);
-		
-		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``red"}};
-		\end{tikzpicture}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/133.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/232.png}};
-		
-		\draw[dashed, color=orange,line width=1mm] (o1.south west) rectangle ++(1.00cm,1.00cm);
-		
-		\node[] at ([yshift=10pt,xshift=0pt]o2.north){Utterance: \textbf{``polka-dotted"}};
-		\end{tikzpicture}
-%		\subcaption{Another combination, here the polka-dotted objects differ in shape and color.}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/212.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/221.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
-		
-		\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.00cm,1.00cm);
-		
-		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``circle"}};
-		\end{tikzpicture}
-	%	\subcaption{Two circles differ in texture and color.}
-	\end{subfigure}
-	%21 22 12
-	\caption{The utterance $u$ references two objects whereby both objects only share the uttered feature. The third object shares one feature with each of the two referenced objects.}
-	\end{subfigure}
-%%%%%%     Subfigure Part 3	
-	\begin{subfigure}{\linewidth}
-	\centering
-	\begin{subfigure}[b]{0.3\linewidth}
-		\centering
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/131.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/221.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/231.png}};
-		
-		\draw[dashed, color=orange,line width=1mm] (o1.south west) rectangle ++(1.00cm,1.00cm);
-		
-		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``blue"}};
-		\end{tikzpicture}
-%		\subcaption{The objects can differ in shape, texture, and color. The utterance applies to all 3 objects but they differ in shape and texture. Solid objects or squares are absent here, so we cannot learn whether the listener likes squares or solid objects.}
-	\end{subfigure}
-	\hspace{0.3cm}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/123.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/112.png}};
-		
-		\draw[dashed, color=orange,line width=1mm] (o3.south west) rectangle ++(1.00cm,1.00cm);
-		
-		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``cloud"}};
-		\end{tikzpicture}
-%		\subcaption{Another combination, here all objects are clouds but the picked object shares being red with another object.}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[b]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/211.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/313.png}};
-		
-		\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.00cm,1.00cm);
-		
-		\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{"solid"}};
-		\end{tikzpicture}
-	\end{subfigure}
-	\caption{In this third exemplar ambiguity class, the utterance refers to all three objects. The picked object shares one feature with one other object and has one feature just for itself while the other two objects share it.}
-	%32 21 12
-	\end{subfigure}
-	\caption{Three exemplar scenarios $S$, constraining utterance $u$, and chosen object $s$ are shown for three exemplar ambiguity classes for Experiment 1.}
-\label{fig:ambiguity-classes-exp1}
-\end{figure*}
-
+As a result, each ambiguity class yields exact model prediction values for the individual features present (with respect to their ``ambiguity role'' in the particular ambiguity class) in the respective scenarios $S$, effectively distinguishing all model-relevant cases. Please see Supplementary materials for examples of different classes.
 
 % \FloatBarrier
 
@@ -753,7 +610,7 @@ In the scenario $S$ on the right, the referenced two solid objects can be contra
 
 \subsubsection*{Participants}
 
-We recruited $90$ participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service; participants in Experiment 1 were not eligible to participate in Experiment 2. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we again identified 82 participants as native speakers of English; their data were included in the analyses.
+We recruited $90$ participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service; participants in Experiment 1 were not eligible to participate in Experiment 2. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we again identified 82 participants as native speakers of English; their data were included in the analyses. We obtained a confirmation from all the subjects to participate in the study.
 
 \subsubsection*{Design and methods}
 
@@ -771,168 +628,7 @@ Participants completed a series of fifteen trials. As with Experiment 1, objects
 As for Experiment 1, to determine model correlations with the gathered data, we partitioned the data into ambiguity classes. 
 For Experiment 2, the ambiguity classes distinguish how the three objects in the respective scenario $S$ differ from each other.
 As a result, the two most extreme classes contain identical objects -- in which case exactly three features are present in the scenario -- and three objects with all unique features, in which case all nine possible features are present. 
-As for Experiment 1, each ambiguity class yields exact model prediction values for the individual features (with respect to their ambiguity role in the respective ambiguity class) present in the respective scenarios $S$, effectively distinguishing all model-relevant cases. 
-
-
-Figure~\ref{fig:ambiguity-classes-exp2} shows three exemplar scenarios for three exemplarily picked ambiguity classes. 
-Let's again considering the first class in more detail.
-In the scenario $S$ on the left side of Figure~\ref{fig:ambiguity-classes-exp2a}, 
-all three objects share the feature pattern (solid), while two share the color (blue), and the other two share the shape (square).
-As a result, uttering \textit{green} or \textit{circle} will give no choice to the listener because the utterance identifies one unique object. 
-On the other hand, uttering \textit{solid} will let the listener choose freely, while uttering \textit{blue} or \textit{square} will give a specific choice between two objects, that is, between the blue circle and the blue square or between the blue square or the green square, respectively..
-In the scenario $S$ in the center, the objects share the shape (circle), two share the pattern (solid), and the other two share the color (red).
-Here, \textit{circle} references all three objects, \textit{red} or \textit{solid} reference pairs of objects, and \textit{striped} or \textit{green} reference one unique object each.
-In the scenario $S$ on the right, the object again share the shape (cloud), two share the pattern (solid), while the other two share the color (blue).
-
-
-\begin{figure*}[!htb]
-	\centering
-	\begin{subfigure}{\linewidth}
-	\begin{subfigure}[t]{0.3\linewidth}
-		\centering
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/211.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/313.png}};
-		
-		\end{tikzpicture}
-%		\subcaption{}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[t]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/212.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/213.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/222.png}};
-		
-		\end{tikzpicture}
-%		\subcaption{Another combination, h}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[t]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/131.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/112.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/111.png}};
-		
-		\end{tikzpicture}
-%		\subcaption{Another combination following the same principle.}
-	\end{subfigure}
-	\caption{In this exemplar ambiguity class, one feature is shared by all three objects, while the two other features allow the distinction between two different pairs of objects and the reference of one of two uniquely identifiable objects.}
-	\label{fig:ambiguity-classes-exp2a}
-	%322b
-	\end{subfigure}
-%%%%%%%%%%%%%%%%%%% start of second part 
-	\begin{subfigure}{\linewidth}
-	\centering
-	\begin{subfigure}[t]{0.3\linewidth}
-		\centering
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/133.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/232.png}};		
-		\end{tikzpicture}
-%		\subcaption{Uttering \textit{cloud}, \textit{red} or \textit{polka-dotted} will each pick out a different pair that lets us learn about a combination of two preferences. If we utter \textit{cloud} for example, a preference for green or red and a preference for polka-dotted or striped may figure in the listeners choice. Uttering \textit{circle}, \textit{green} or \textit{striped} will pick out a single object, giving the listener no choice.}
-	\end{subfigure}	
-	\hspace*{0.3cm}
-	\begin{subfigure}[t]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/223.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/322.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/313.png}};
-		\end{tikzpicture}
-		%\subcaption{Another combination, here \textit{green}, \textit{striped} or \textit{square} will each pick out a pair. \textit{Solid}, \textit{red} or \textit{circle} will each pick out a single object.}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[t]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/212.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/221.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
-		\end{tikzpicture}
-%		\subcaption{Another combination following the same principle.}
-	\end{subfigure}
-	%22b2b
-	\caption{In this second exemplar ambiguity class, all three feature types allow the identification of pairs of objects or unique objects, where all three features contain one unique feature type, each. As a result, there are three utterances that each pick out a different pair of objects and three other utterances that each reference one single object -- effectively allowing the unique identification of each object as well as the identification of all three possible pairs.}
-	\end{subfigure}
-%%%%%%%%%%%%%  start of third part of figure
-	\begin{subfigure}{\linewidth}
-	\centering
-	\begin{subfigure}[b]{0.3\linewidth}
-		\centering
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/131.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/213.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/222.png}};		
-		\end{tikzpicture}
-%		\subcaption{Uttering \textit{circle} picks out the green solid one and the red striped one, letting us learn about a combination of preferences. Uttering \textit{solid}, \textit{striped}, \textit{polka-dotted}, \textit{cloud}, \textit{green}, \textit{red} or \textit{blue} would always pick just one object. That way, the listener would have no choice and we could not learn anything.}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[t]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/233.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/312.png}};		
-		\end{tikzpicture}
-%		\subcaption{Another combination, here all uttering \textit{red} is the only way to let the listener choose.}
-	\end{subfigure}
-	\hspace*{0.3cm}
-	\begin{subfigure}[t]{0.3\linewidth}
-		\begin{tikzpicture}
-		\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/331.png}};
-		\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/212.png}};
-		\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/113.png}};	
-		\end{tikzpicture}
-%		\subcaption{Another combination following the same principle.}
-	\end{subfigure}
-	\caption{In this third exemplar ambiguity class, two features have three unique values, while one feature allows the identification of a pair of objects.}
-	\end{subfigure}
-	%211
-	\caption{Three exemplar scenarios $S$ are shown for three exemplar ambiguity classes for Experiment 2.} 
-	\label{fig:ambiguity-classes-exp2}
-\end{figure*}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+As for Experiment 1, each ambiguity class yields exact model prediction values for the individual features (with respect to their ambiguity role in the respective ambiguity class) present in the respective scenarios $S$, effectively distinguishing all model-relevant cases. Please see Supplementary materials for examples of different classes.
 
 %\subsection*{Modeling: fullPSIRSA}
 %
@@ -1084,6 +780,12 @@ While a positive value yields the intention to maximize information gain,
 a negative value results in a tendency to minimize information gain, that is, a preference for no change in the posterior feature preference estimate $P_{S_{1\textrm{-simp}}}(f\mid u,s)$ in comparison to the prior estimate $P(f)$. 
 A value of $\lambda=0$ effectively ignores information gain and a resulting tendency to choose the object that was most likely referenced given the $utterance$.
 
+\section*{Funding}
+
+This project has been funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation)--Project number 198647426. 
+
+\section*{Data availability}
+Data supporting the findings of this study are available from the corresponding author upon reasonable request.
 
 \bibliographystyle{apacite}
 \setlength{\bibleftmargin}{.125in}

@@ -66,6 +66,13 @@ print(figure)
 ggsave(figure, height = 3, width = 3, units = "in", filename = paste("m", nr,".pdf", sep=""))
 
 model <- lm(formula = plotData$model~plotData$workerData)
+model2 <- lm(formula = plotData$workerData~plotData$model)
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+summary(model2)
+
+confint(model)
 summary(model)
 confint(model)
 
@@ -219,6 +226,7 @@ plotData <- subset(full, softness == "individually_opt" & obedience == "individu
                     cross_validated == "yes" & type == "simpleRSA") 
 
 model <- lm(formula = plotData$model~plotData$workerData)
+
 summary(model)
 confint(model)
 
@@ -246,6 +254,34 @@ figure <- ggplot(plotData, aes(x = model, y = workerData)) +
   theme(plot.title = element_text(hjust = 0.5), plot.subtitle = element_text(hjust = 0.5))
 print(figure)
 ggsave(figure, height = 3, width = 3, units = "in", filename = paste("m", nr,".pdf", sep=""))
+
+plotData <- subset(full, Nr == 14) 
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+confint(model)
+
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
+softness <- unique(as.character(plotData$softness))
+obedience <- unique(as.character(plotData$obedience))
+type <- unique(as.character(plotData$type))
+nr <- plotData$Nr[1]
+
+plotData <- subset(full, Nr == 27) 
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+confint(model)
+
+plotData <- subset(full, Nr == 28) 
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
+
+plotData <- subset(full, Nr == 16) 
+
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
 
 #### Old code below #####
 

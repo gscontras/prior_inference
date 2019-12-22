@@ -127,12 +127,18 @@ confint(model)
 
 # for m9
 plotData <- subset(full, Nr == 9) 
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
 
 # for m10
 plotData <- subset(full, Nr == 10)
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
 
 # for m11 KL individually optimized
 plotData <- subset(full, Nr == 11)
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
 
 r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
 softness <- unique(as.character(plotData$softness))
@@ -173,6 +179,8 @@ plotData <- subset(full, Nr == 13)
 plotData <- subset(full, Nr == 14)
 
 plotData <- subset(full, Nr == 15)
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
 
 plotData <- subset(full, Nr == 20)
 
@@ -205,7 +213,9 @@ model <- lm(formula = plotData$model~plotData$workerData)
 summary(model)
 confint(model)
 
-
+plotData <- subset(full, Nr == 24)
+model <- lm(formula = plotData$model~plotData$workerData)
+summary(model)
 # Define variables to pass to plot title and ggsave
 
 r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 2)
