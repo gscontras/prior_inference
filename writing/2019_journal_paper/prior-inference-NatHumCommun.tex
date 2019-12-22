@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage{tikz} % for drawing figures
 \usepackage{amsmath} % for equations
 \usepackage{url} % for URLs
@@ -57,14 +57,14 @@
 
 \begin{abstract}
 %Ambiguity is ubiquitous during conversations.
-We investigated whether ambiguity resolutions may yield socially-relevant benefits,
+We investigated whether ambiguity resolution may yield socially-relevant benefits,
 revealing parts of the privileged ground of the interpreter. 
 In particular, we asked if speakers can (i) use response observations to infer unknown preferences of a listener, and (ii) strategically chose ambiguous utterances for learning about those preferences. 
 We ran experiments in a reference game framework and modeled the data with a pragmatic social inference Rational Speech Act model.
 Participants were able to infer listeners' preferences when analyzing their choice of objects given referential ambiguity.
 Moreover, nearly 40\% of the speakers were able to strategically choose ambiguous over unambiguous utterances in an epistemic, event-predictive, goal-directed manner.
 Surprisingly, an equally-large number of participants systematically preferred unambiguous utterances. 
-We conclude that ambiguity resolutions indeed reveal aspects of the knowledge, preferences, and beliefs of our conversation partners and some of us are able to strategically use ambiguous utterances to gain knowledge about these aspects.
+We conclude that ambiguity resolution indeed reveal aspects of the knowledge, preferences, and beliefs of our conversation partners and some of us are able to strategically use ambiguous utterances to gain knowledge about these aspects.
 %We investigated and modeled how speakers learn about opinions, preferences, and beliefs of their conversation partners when monitoring their responses.
 %Moreover, we asked the question whether 
 %Accordingly, 
@@ -164,7 +164,7 @@ As a result, in a naturalistic conversation, where speakers take turns, ambiguou
 
 
 By way of illustration, take the scenario in Figure \ref{FG-ref-game}.
-Suppose a speaker produces the single-word utterance ``blue'' -- meaning: choose a blue object -- offering a referential ambiguity to the listener, that is, a choice between a blue square and a blue circle. 
+Suppose a speaker produces the single-word utterance ``blue'' -- meaning: choose a blue object -- creating referential ambiguity for the listener, that is, offering a choice between a blue square and a blue circle. 
 Suppose further that, upon hearing ``blue'', the listener selects the blue circle.
 In observing this choice, the speaker learns something about the private thoughts of the listener: what made her select the blue circle instead of the blue square? Perhaps the circle is more salient to the listener, or the listener has a preference for circles, or the listener may believe that the speaker has a preference for circles; there may even be mutual agreement that circles are to be preferred when possible. Importantly, by observing how the listener resolves the ambiguity in reference, the speaker can learn something about the private thoughts of the listener.
 
@@ -202,7 +202,7 @@ We formalize the human communicative behavior in a probabilistic Bayesian model,
 
 \section*{Results}
 
-Before we report the results and modeling insights from our socially pragmatic and event-epistemic experiments, we introduce our novel pragmatic social inference RSA model.
+Before we report the results and modeling insights from our socially pragmatic and event-epistemic experiments, we introduce our proposed pragmatic social inference RSA model.
 
 
 \subsection*{Pragmatic social inference RSA model}
@@ -291,7 +291,7 @@ A sample trial is shown in Figure~\ref{exp1-trial}.
 
 \subsubsection*{Models with global optimization}
 
-We fit the following free parameters to optimized the predictions of the models. First, the full model includes a ``greediness'' parameter $\alpha$ that controls how likely it is that speakers choose the best-suited utterance to signal a particular object to a listener. This parameter is absent in the simple model since it relies on fewer layers of reasoning. The second parameter $\gamma$ controls how soft the preferences are. 
+We fit the following free parameters to optimize the predictions of the models. First, the full model includes a ``greediness'' parameter $\alpha$ that controls how likely it is that speakers choose the best-suited utterance to signal a particular object to a listener. This parameter is absent in the simple model since it relies on fewer layers of reasoning. The second parameter $\gamma$ controls how soft the preferences are. 
 Hard preferences enforce the choice of the preferred object type, while increasing softness converges towards no object preference. 
 Similarly, the obedience parameter $\beta$ allows subjects to choose objects that do not qualify for the utterance. 
 As for the preference parameter $\gamma$, the $\beta$ range includes hard obedience on the one side of the spectrum -- for example, definitely choosing a blue object when hearing ``blue'' -- and full ignorance of the utterance at the other extreme, choosing uniformly from all available objects. 
@@ -382,7 +382,7 @@ Note further that the individually-fitted parameters do not improve the correlat
 
 The model fit improves considerably when we additionally fit the obedience parameter $\beta$ at the individual level. 
 %We plot predictions from the $\beta$- and $\gamma$-optimized model in Figure~\ref{cross-validation}, 
-Here the model explains a large proportion of variance in the human judgments ($r^2 = 0.9919, F(1,190) = 23480$). The likelihood ratio test (two-tailed) revealed that a $\gamma$- and $\beta$-optimized simplePSIRSA model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, \textrm{df} = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject, giving us 82 degrees of freedom. We additionally checked the generalizability of the model by performing leave-one-out cross-validation on the individual level. Figure~\ref{simple-global-and-cross-validated} shows that the resulting cross-validated model predictions retain the strong fit $r^2 = 0.99, F(1,190) = 18910$).
+Here the model explains a large proportion of variance in the human judgments ($r^2 = 0.9919, F(1,190) = 23480$). The likelihood ratio test (two-tailed) revealed that a $\gamma$- and $\beta$-optimized simplePSIRSA model provides a better fit compared to a model optimized only for $\gamma$ ($G^2 = 237.36, \textrm{df} = 82, p < 0.01$). The more complex model contains one additional parameter $\beta$ fitted for each subject, giving us 82 degrees of freedom. We additionally checked the generalizability of the model by performing leave-one-out cross-validation on the individual level. Figure~\ref{simple-global-and-cross-validated} shows that the resulting cross-validated model predictions retain the strong fit ($r^2 = 0.99, F(1,190) = 18910$).
 
 %\begin{figure}[ht]%
 %	\centering
@@ -402,7 +402,7 @@ As Figure~\ref{barplot_x4} shows, both humans and the models assign high slider 
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=2.5in]{images/december_barplot_x4.pdf}
-	\caption{Human data and simplePSIRSA's (individually-, two-parameter-optimized and non-opimized) feature preference posterior estimates for the scenario $S$ shown in Figure~\ref{exp1-trial}.}\label{barplot_x4}
+	\caption{Human data and simplePSIRSA's (individually-, two-parameter-optimized and non-opimized) feature preference posterior estimates for the scenario $S$ shown in Figure~\ref{exp1-trial}. Error bars represent 95\% confidence intervals.}\label{barplot_x4}
 \end{figure}
 
 
@@ -454,7 +454,7 @@ the human data ($r^2=0.0595$, $F(1,82) = 6.253$, $p  < 0.05$)
 
 To examine the reasons for this failure, we first performed additional global parameter optimization runs.
 When optimizing all the model parameters, the model accounts for more variance than the uniform base model ($r^2=0.7991$, $F(1,82) = 331.2$, $p<0.001$; optimized model parameters: $\gamma=0.0006$, $\beta=0.2758$, $\lambda=0.3663$).
-Moreover, the nested model comparison test with three free parameters yields a $G^2$ value of $13.6912$, which indicates a more accurate model with $p<0.01$. 
+Moreover, the nested model comparison test with three free parameters yields a $G^2$ value of $13.6912$, which indicates a more accurate model with $p<0.05$. 
 Figure~\ref{global-individual-x3} shows the correlation plot. 
 The parameters indicate that the preference strength is rather high, obedience is not as strong, while the information gain intention is present. 
 We now turn to individual parameter optimization, suspecting that their may be fundamental differences between the individual workers. 
@@ -505,7 +505,7 @@ Unlike for Experiment 1 where even the non-optimized models provided a good line
 \begin{figure}[ht!]
 	\centering
 	\includegraphics[width=2.5in]{images/december_barplot_x3.pdf}
-	\caption{Simple Social Inference model predictions and human data for one of the classes of stimuli \emph{Experiment 2: Picking utterances}. The optimized version of the model is optimized for the KL-factor $\lambda$.}\label{barplot_x3}
+	\caption{Simple Social Inference model predictions and human data for one of the classes of stimuli \emph{Experiment 2: Picking utterances}. The optimized version of the model is optimized for the KL-factor $\lambda$. Error bars represent 95\% confidence intervals.}\label{barplot_x3}
 \end{figure}
 
 % Note: I did check it - there are indeed 14. 5+5+6+7+6+6+7+3+4+5+6+7+8+9
@@ -578,7 +578,7 @@ In that sense, ambiguous utterances and resolutions thereof are one device for p
 
 \subsubsection*{Participants}
 
-We recruited 90 participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we identified 82 participants as native speakers of English; their data were included in the analyses reported below. We obtained a confirmation from all the subjects to participate in the study.
+We recruited 90 participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we identified 82 participants as native speakers of English; their data were included in the analyses reported below. We obtained a confirmation from all the subjects that they agree to participate in the study.
 
 \subsubsection*{Design and methods}
 
@@ -610,7 +610,7 @@ As a result, each ambiguity class yields exact model prediction values for the i
 
 \subsubsection*{Participants}
 
-We recruited $90$ participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service; participants in Experiment 1 were not eligible to participate in Experiment 2. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we again identified 82 participants as native speakers of English; their data were included in the analyses. We obtained a confirmation from all the subjects to participate in the study.
+We recruited $90$ participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service; participants in Experiment 1 were not eligible to participate in Experiment 2. Participants were compensated for their participation. On the basis of a post-test demographics questionnaire, we again identified 82 participants as native speakers of English; their data were included in the analyses. We obtained a confirmation from all the subjects that they agree to participate in the study.
 
 \subsubsection*{Design and methods}
 
@@ -712,7 +712,7 @@ We fit the model parameters either at the individual level or at the group level
 $P_{model}(f\mid u,s)$ specifies the corresponding model posterior, either $P_{S_{2}}(f\mid u,s)$ in the case of fullPSIRSA or $P_{S_{1\textrm{-simp}}}(f\mid u,s)$ in the case of simplePSIRSA. 
 %Since no conclusions can be drawn concerning feature values that are not present in the scene, we ignored the respective feature preference estimates.
 By minimizing the summed KL divergence between the empirical and model-predicted preference posteriors over all considered trials, we essentially maximize the model fit to the participants' data. 
-Moreover, we can use the minimized KL divergence values to perform the likelihood ratio test for nested models relying on the $G^2$-statistic, because the summed KL divergence values are approximately chi-square distributed \cite{Lewandowsky:2011}. 
+Moreover, we can use the minimized KL divergence values to calculate the the $G^2$-statistic and perform the likelihood ratio test for nested models, since $G^2$ values are approximately chi-square distributed \cite{Lewandowsky:2011}. 
 Individual vs. global parameter fitting allows us to explore potential differences between participants.
 In the case of individual model parameter optimization, parameters were optimized for each individual participant separately, determining the KL divergence with respect to the participant-specific set of trials. 
 In the case of global optimization, all trials of all participants were used to determine the summed KL divergence.
