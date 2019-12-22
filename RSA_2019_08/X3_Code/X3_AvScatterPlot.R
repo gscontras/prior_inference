@@ -24,7 +24,6 @@ x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed001_and_fixed0
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefAndKappa_and_prefObedAndKappa.csv")
 
 
-
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_SRSAcrossVal_KappaOnly_and_PrefAndKappa.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_SRSAcrossVal_ObedAndKappa_and_PrefObedAndKappa.csv")
 
