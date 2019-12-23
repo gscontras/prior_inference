@@ -483,8 +483,8 @@ We now turn to individual parameter optimization, suspecting that their may be f
 We compared three single-parameter-individually-optimized simplePSIRSA models to determine which model provides the best fit to the data. 
 All models have similar levels of complexity, with either softness $\gamma$, obedience $\beta$, or KL-factor $\lambda$ being optimized.
 The results indicate that we get the best fit by optimizing the KL-factor $\lambda$ ($r^{2}=0.9059$, $F(1,82) = 800.2$; leave-one-out cross-validated optimization $r^{2}=0.8902$, $F(1,82) = 664.8$, with other models capturing less variance in the data ($\beta$-optimized $r^{2}=0.8015$, $F(1,82) = 336.1$; $\gamma$-optimized $r^{2}=0.8077$, $F(1,82) = 349.6$).
-The comparison with the baseline model in terms of nested model statistics confirms that only the individual optimization of $\lambda$ improves model performance ($\lambda$: $G^2=268.88$, $df=82$, $p<0.001$; $\gamma$: $G^2=31.38$, n.s.; $\beta$: $G^2=56.29$, n.s.).
-Two- and three-parameter individual optimizations did not yield any significant model improvements when compared to the individually $\lambda$-optimized model (best improvement when optimizing $\gamma$ in addition to $\lambda$: $G^2=24.72$, $df=82$, n.s.).
+The comparison with the baseline model in terms of nested model statistics confirms that only the individual optimization of $\lambda$ improves model performance ($\lambda$: $G^2=268.88$, $\textrm{df}=82$, $p<0.001$; $\gamma$: $G^2=31.38$, n.s.; $\beta$: $G^2=56.29$, n.s.).
+Two- and three-parameter individual optimizations did not yield any significant model improvements when compared to the individually $\lambda$-optimized model (best improvement when optimizing $\gamma$ in addition to $\lambda$: $G^2=24.72$, $\textrm{df}=82$, n.s.).
 % were unstable due to parameter interactions; therefore, we do not report the results for those models.
 Figure~\ref{global-individual-x3} shows the resulting correlation plot for $\lambda$-individually optimized model. 
  
@@ -527,8 +527,8 @@ When examining the individually optimized model values in further detail, we not
 The first one may be termed a ``lazy worker'' group or ``unpredictable'' behaving group:
 for $28$ participants, the KL divergence values of the $\lambda$-optimized simplePSIRSA model failed to reach the performance of the baseline model, essentially failing to identify any model-corresponding regularity in the data that goes beyond random utterance choice behavior.
 %The first one is a ``lazy worker'' group of $18$ participants whose fitted $\lambda$ values were close to zero (i.e.,  $-.02 < \lambda<.02$), indicating that they were randomly selecting utterances.
-The second group of $33$ participants yielded more negative values (i.e., $-7.11<\lambda<-0.014$, $\bar{\lambda}=-0.823$), indicating that a significant number of participants preferred to systematically choose unambiguous utterances ($G^2=180,17$, $df=33$, $p<0.001$). 
-The third group of $21$ participants yielded positive values (i.e., $.0187<\lambda<.537$, $\bar{\lambda}=-0.124$), indicating that these participants indeed preferred the more ambiguous utterances in a strategic manner ($G^2=102,16$, $df=21$, $p<0.001$).
+The second group of $33$ participants yielded more negative values (i.e., $-7.11<\lambda<-0.014$, $\bar{\lambda}=-0.823$), indicating that a significant number of participants preferred to systematically choose unambiguous utterances ($G^2=180,17$, $\textrm{df}=33$, $p<0.001$). 
+The third group of $21$ participants yielded positive values (i.e., $.0187<\lambda<.537$, $\bar{\lambda}=-0.124$), indicating that these participants indeed preferred the more ambiguous utterances in a strategic manner ($G^2=102.16$, $\textrm{df}=21$, $p<0.001$).
 
 
 Further experiments with highly similar setups confirmed this trend.

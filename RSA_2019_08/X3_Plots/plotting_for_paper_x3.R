@@ -198,7 +198,7 @@ figure <- ggplot(plotData, aes(x = model, y = workerData)) +
               se = FALSE,
               size = .5) +
   theme_bw(base_size = 14) +
-  labs(title = "Base model", subtitle = "Uniform")+
+  labs(title = "Baseline model", subtitle = "Uniform")+
   #  labs(title = bquote(atop
   #                     (.(type) ~"," ~ r^2 == .(r2),
   #                       ~ "softness" == .(softness) ~ "," ~ "obedience" == .(obedience)

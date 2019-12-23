@@ -18,7 +18,7 @@ abs(g2) > qchisq(.95, df=1)
 totalDiff <- 444.0236 - 437.178 
 g2 <- totalDiff*2 # G^2 value
 qchisq(.95, df=3) # to display cut-off point
-abs(g2) > qchisq(.975, df=3) 
+abs(g2) > qchisq(.995, df=3) 
 
 
 # Does optimizing for preference softness and klFactor improve fit compared to just klFactor? No
@@ -125,7 +125,7 @@ colnames(x4_simple_individual_kl) <- c("workerid","uniform","preference","prefer
 
 totalDiff <- sum(x4_simple_individual_kl$preference_obedience - x4_simple_individual_kl$preference) 
 g2 <- totalDiff*2
-abs(g2) > qchisq(.99, df=length(x4_simple_individual_kl$workerid))
+abs(g2) > qchisq(.995, df=length(x4_simple_individual_kl$workerid))
 
 # Global vs individual
 
