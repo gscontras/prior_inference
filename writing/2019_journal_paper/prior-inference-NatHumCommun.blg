@@ -1,16 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: prior-inference-NatHumCommun.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: prior-inference-NatHumCommun.aux
 The style file: apacite.bst
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: prior-inference.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
@@ -35,45 +24,4 @@ Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2
 while executing---line 5079 of file apacite.bst
 Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
 while executing---line 5079 of file apacite.bst
-You've used 39 entries,
-            6951 wiz_defined-function locations,
-            1518 strings with 17117 characters,
-and the built_in function-call counts, 74564 in all, are:
-= -- 9410
-> -- 599
-< -- 3459
-+ -- 3540
-- -- 78
-* -- 4650
-:= -- 13386
-add.period$ -- 170
-call.type$ -- 39
-change.case$ -- 672
-chr.to.int$ -- 0
-cite$ -- 78
-duplicate$ -- 1981
-empty$ -- 2964
-format.name$ -- 952
-if$ -- 14394
-int.to.chr$ -- 0
-int.to.str$ -- 117
-missing$ -- 0
-newline$ -- 983
-num.names$ -- 322
-pop$ -- 1266
-preamble$ -- 1
-purify$ -- 158
-quote$ -- 0
-skip$ -- 5061
-stack$ -- 0
-substring$ -- 3940
-swap$ -- 1135
-text.length$ -- 111
-text.prefix$ -- 0
-top$ -- 1
-type$ -- 3568
-warning$ -- 0
-while$ -- 332
-width$ -- 0
-write$ -- 1197
 (There were 11 error messages)

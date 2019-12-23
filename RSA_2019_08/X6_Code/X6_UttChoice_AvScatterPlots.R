@@ -10,6 +10,7 @@ x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_SRSA_fixedAndD_2019_0
 #x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_SRSA_ADandBD_052019.csv")
 #x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_SRSA_ABandABD_052019.csv")
 
+
 ## adding the 1-27 target and object2 & object3 code.
 o1 <- x6pilotData$obj1OC27
 o2 <- x6pilotData$obj2OC27
