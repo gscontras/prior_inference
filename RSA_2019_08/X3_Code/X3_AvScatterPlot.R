@@ -13,7 +13,7 @@ source("CommonCode/getConstCodeStratUtt.R")
 ################### simple RSA ######################
 
 ### simple RSA - individually optimized
-x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed001_and_fixed000.csv")
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed001_and_fixed000.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_prefOnly_and_obedOnly.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_kappaOnly_and_obedAndKappa.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_prefAndKappa_and_prefObedAndKappa.csv")
@@ -24,7 +24,7 @@ x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed001_and_fixed0
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefAndKappa_and_prefObedAndKappa.csv")
 
 
-#x3pilotData <- read.csv("X3_Data/x3pDataAugm_SRSAcrossVal_KappaOnly_and_PrefAndKappa.csv")
+x3pilotData <- read.csv("X3_Data/x3pDataAugm_SRSAcrossVal_KappaOnly_and_PrefAndKappa.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_SRSAcrossVal_ObedAndKappa_and_PrefObedAndKappa.csv")
 
 ## adding the 1-27 target and object2 & object3 code.

@@ -36,7 +36,7 @@ simplePragmaticSpeaker <- function(utterance, obj, preferencesPrior,
     }
   }
   if(sum(prefPost) == 0) { # no evidence for any preferences... -> no inference
-    return(prefPost)
+    return(preferencesPrior)
   }
   return(prefPost / sum(prefPost))
 }
@@ -80,12 +80,14 @@ simpleBestInfGainUtterance <- function(preferencesPrior, relevantUtterances, cur
             featurePrefsPosterior <- simplePragmaticSpeaker(utt, obj, preferencesPrior, 
                                                  relevantUtterances, currentObjects, 
                                                  mapUttToObjProbs, objectPreferenceSoftPriors)
-            # print(objPrefPosterior)
+#            print(preferencesPrior)
+#            print(featirePrefsPosterior)
             KLvalue <- KLdivergence(preferencesPrior, featurePrefsPosterior)
 
             # log-likelihood interpretation of KLvalue:
-            prefPost <- prefPost + mapUttToObjProbs[utt,obj] * utterancePrior[utt] * 
-                preferencesPrior[pref] * objectPreferenceSoftPriors[[pref]][obj] *
+            prefPost <- prefPost +  mapUttToObjProbs[utt,obj] * 
+                  objectPreferenceSoftPriors[[pref]][obj] *
+                                   utterancePrior[utt] *  preferencesPrior[pref] *
                 exp(klValueFactor * KLvalue)
             
           }

@@ -17,6 +17,8 @@ getSimpleBestInfGainUttPreferences <- function(currentObjectConstellation, softP
                                                           softPrefValue, mapUttToObjDeterministic)
   
   preferencesPrior <- rep(1/(length(validUtterances)+1), length(validUtterances)+1)
+#  preferencesPrior <- rep(1/(length(validUtterances)), length(validUtterances)+1)
+#  preferencesPrior[length(validUtterances)+1] = 0
   return( simpleBestInfGainUtterance(preferencesPrior, validUtterances, currentObjectConstellation, 
                                mapUttToObjProbs, objectPreferenceSoftPriors, 
                                klValueFactor) )
