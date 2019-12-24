@@ -5,9 +5,9 @@ source("CommonCode/getConstCodeStratUtt.R")
 #x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_RSA_ADandBD_052019.csv")
 #x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_RSA_ABandABD_052019.csv")
 
-
-x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_SRSA_fixedAndD_2019_05_29.csv")
-#x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_SRSA_ADandBD_052019.csv")
+#x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_SRSA_BaseAndFixed000_2019_12_24.csv")
+#x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_SRSA_fixedAndD_2019_05_29.csv")
+x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_SRSA_ADandBD_052019.csv")
 #x6pilotData <- read.csv("X6_Data/x6pilotDataAugm_UttChoice_SRSA_ABandABD_052019.csv")
 
 

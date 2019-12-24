@@ -6,8 +6,10 @@ source("CommonCode/getConstCodeStratUtt.R")
 #x5UttChoiceData <- read.csv("X5_Data/x5pilotDataAugm_RSA_UttChoice_ABandABD.csv")
 
 #x5UttChoiceData <- read.csv("X5_Data/x5pilotDataAugm_UttChoice_SRSA_fixedAndD.csv")
-#x5UttChoiceData <- read.csv("X5_Data/x5pilotDataAugm_UttChoice_SRSA_ADandBD.csv")
-x5UttChoiceData <- read.csv("X5_Data/x5pilotDataAugm_UttChoice_SRSA_ABandABD.csv")
+x5UttChoiceData <- read.csv("X5_Data/x5pilotDataAugm_UttChoice_SRSA_ADandBD.csv")
+#x5UttChoiceData <- read.csv("X5_Data/x5pilotDataAugm_UttChoice_SRSA_ABandABD.csv")
+#x5UttChoiceData <- read.csv("X5_Data/x5pilotDataAugm_UttChoice_SRSA_BaseAndFixed000.csv")
+#x5UttChoiceData <- x5UttChoiceData[which(x5UttChoiceData$trial_type=="utterance_choice"),]
 
 ## adding the 1-27 target and object2 & object3 code.
 o1 <- x5UttChoiceData$obj1OC27

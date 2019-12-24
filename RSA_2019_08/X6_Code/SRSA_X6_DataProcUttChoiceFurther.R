@@ -95,10 +95,12 @@ for(i in c(1:length(x6pilotData$X))) {
   ##
   validUtterances <- determineValidUtterances(objectConstellation)
   ## determining the model predictions
-#  postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, 1)
+  postListMat[i,validUtterances] <- rep((1/length(validUtterances)),length(validUtterances))
+  postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, 0)
+  #  postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, 1)
 #  postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, params[1])
-  postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsAD[1], 0, paramsAD[2])
-  postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, paramsBD[1], paramsBD[2])
+#  postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsAD[1], 0, paramsAD[2])
+#  postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, paramsBD[1], paramsBD[2])
 #   postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsAB[1], paramsAB[2], 1)
  #  postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsABD[1], paramsABD[2], paramsABD[3])
   ########### with respect to KLDivUttParamsWorkersWith.2_x6_2019_05_16.csv 
@@ -130,8 +132,9 @@ klDivValues <- round(klDivValues, digits=3)
 colnames(klDivValues) <- colnames(klDivValues, do.NULL = FALSE, prefix = "KLDiv_")
 x6pilotData <- data.frame(x6pilotData, as.data.frame(klDivValues)) 
 
+write.csv(x6pilotData, "X6_Data/x6pilotDataAugm_UttChoice_SRSA_BaseAndFixed000_2019_12_24.csv")
 #write.csv(x6pilotData, "X6_Data/x6pilotDataAugm_UttChoice_SRSA_fixedAndD_2019_05_29.csv")
-write.csv(x6pilotData, "X6_Data/x6pilotDataAugm_UttChoice_SRSA_ADandBD_052019.csv")
+#write.csv(x6pilotData, "X6_Data/x6pilotDataAugm_UttChoice_SRSA_ADandBD_052019.csv")
 #write.csv(x6pilotData, "X6_Data/x6pilotDataAugm_UttChoice_SRSA_ABandABD_052019.csv")
 
 
