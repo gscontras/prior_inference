@@ -1,0 +1,97 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: prior-inference-Cognitive-Science.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: prior-inference.bib
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5062 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5062 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5066 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5066 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5068 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5068 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5072 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5072 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5075 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5075 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5076 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5076 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5079 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5079 of file apacite.bst
+Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
+while executing---line 5079 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry foppa1995mutual
+while executing---line 5079 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5079 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5079 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5079 of file apacite.bst
+Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
+while executing---line 5079 of file apacite.bst
+You've used 46 entries,
+            6951 wiz_defined-function locations,
+            1560 strings with 18110 characters,
+and the built_in function-call counts, 87559 in all, are:
+= -- 11141
+> -- 688
+< -- 3978
++ -- 4097
+- -- 92
+* -- 5389
+:= -- 15513
+add.period$ -- 204
+call.type$ -- 46
+change.case$ -- 794
+chr.to.int$ -- 0
+cite$ -- 92
+duplicate$ -- 2347
+empty$ -- 3514
+format.name$ -- 1088
+if$ -- 17011
+int.to.chr$ -- 0
+int.to.str$ -- 138
+missing$ -- 0
+newline$ -- 1151
+num.names$ -- 384
+pop$ -- 1479
+preamble$ -- 1
+purify$ -- 186
+quote$ -- 0
+skip$ -- 6080
+stack$ -- 0
+substring$ -- 4584
+swap$ -- 1339
+text.length$ -- 131
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 4320
+warning$ -- 0
+while$ -- 384
+width$ -- 0
+write$ -- 1387
+(There were 20 error messages)
