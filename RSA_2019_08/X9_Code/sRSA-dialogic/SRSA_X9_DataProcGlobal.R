@@ -1,10 +1,10 @@
-source("CommonCode/SRSA_StratUtt.R")
-source("CommonCode/SRSA_StratUttOptimization.R")
+source("SRSA_StratUtt.R")
+source("SRSA_StratUttOptimization.R")
 
 # ------------------- Ella's data ---------------------------------------------
 
 # loading the raw pilot data (as Greg sent it on 2018/12/21)
-x4pilotData <- read.csv("X9_Data/ella_total_allDataCleaned.csv")
+x4pilotData <- read.csv("ella_total_allDataCleaned.csv")
 
 # adding feature property codes (which feature was uttereed, which features were questioned)
 uttFeat <- ifelse(x4pilotData$utterance=="green" | x4pilotData$utterance=="red" | x4pilotData$utterance=="blue", 3,
