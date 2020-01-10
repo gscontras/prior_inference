@@ -23,7 +23,7 @@ unique(d$language)
 # only look at "español" as the native language
 d = d[d$language!="spanish"&d$language!="United States",]
 
-length(unique(d$workerid)) ## n=52
+length(unique(d$workerid)) ## n=52 (54)
 
 summary(d)
 
