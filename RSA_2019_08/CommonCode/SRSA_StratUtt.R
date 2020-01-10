@@ -42,6 +42,48 @@ simplePragmaticSpeaker <- function(utterance, obj, preferencesPrior,
 }
 
 
+simplePragmaticSpeakerIterative <-
+  function(utterance,
+           obj,
+           preferencesPriorAll,
+           relevantUtterances,
+           currentObjects,
+           mapUttToObjProbs,
+           objectPreferenceSoftPriors) {
+    #cat("preferencesPriorAll", preferencesPriorAll, "\n")
+    preferencesPrior <- preferencesPriorAll[relevantUtterances]
+    prefPost <- rep(0, length(relevantUtterances) + 1)
+    for (pref in c(1:length(preferencesPrior))) {
+      # prior over the preferences the speaker is interested in
+      if (preferencesPrior[pref] > 0) {
+        pp <-
+          simpleListener(utterance,
+                         mapUttToObjProbs,
+                         objectPreferenceSoftPriors[[pref]])
+        #cat("pp", print(pp))
+        prefPost[pref] <- pp[obj] * preferencesPrior[pref]
+        #cat("pp[obj], preferencesPrior[pref]", pp[obj], preferencesPrior[pref])
+        # cat("prefPost", prefPost)
+        #cat("preferencesPrior", preferencesPrior)
+        #cat(typeof(preferencesPrior[pref]))
+      }
+    }
+    for (pos in c(1:length(relevantUtterances))) {
+      preferencesPriorAll[relevantUtterances[pos]] <- prefPost[pos]
+    }
+    if (sum(preferencesPriorAll) == 0) {
+      # no evidence for any preferences... -> no inference
+      return(preferencesPriorAll)
+    }
+    return(preferencesPriorAll / sum(preferencesPriorAll))
+    # if(sum(prefPost) == 0) { # no evidence for any preferences... -> no inference
+    #   return(prefPost)
+    # }
+    # return(prefPost / sum(prefPost))
+  }
+
+
+
 # Speaker utterance prior function (i.e. prior utterance preferences of the speaker)
 getSpeakerUtteranceUniformPrior <- function(relevantUtterances) {
   return(rep(1./length(relevantUtterances), length(relevantUtterances) ) )

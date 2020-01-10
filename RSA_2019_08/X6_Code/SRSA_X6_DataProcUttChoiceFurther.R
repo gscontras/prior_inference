@@ -95,8 +95,8 @@ for(i in c(1:length(x6pilotData$X))) {
   ##
   validUtterances <- determineValidUtterances(objectConstellation)
   ## determining the model predictions
-  postListMat[i,validUtterances] <- rep((1/length(validUtterances)),length(validUtterances))
-  postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, 0)
+#  postListMat[i,validUtterances] <- rep((1/length(validUtterances)),length(validUtterances))
+#  postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, 0)
   #  postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, 1)
 #  postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, 0, 0, params[1])
 #  postListMat[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsAD[1], 0, paramsAD[2])

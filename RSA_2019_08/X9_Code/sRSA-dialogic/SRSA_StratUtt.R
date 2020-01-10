@@ -204,7 +204,7 @@ simpleBestInfGainUtterance <-
             if (preferencesPrior[pref] > 0) {
               # only pay attention to preferences with non-zero probability
               featurePrefsPosterior <-
-                simplePragmaticSpeaker(
+                simplePragmaticSpeakerOri(
                   utt,
                   obj,
                   preferencesPrior,

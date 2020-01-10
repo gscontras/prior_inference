@@ -107,3 +107,110 @@ getObjectPreferencePriors <- function(consideredUtterances, currentObjects, type
   }
   return(objectPreferenceSoftPriors)
 }
+
+
+
+######## From Ella's Code:
+# gives a full random matrix of all feature value preferences given a certain ratio i.e. c(0, 1/3, 2/3)
+getAllUtterancePref <- function(ratio) {
+  allUttNum <- c(1:9)
+  allUtterancePref <- matrix(allUttNum, length(allUttNum), 3)
+  sampledRatio <- c(sample(ratio), sample(ratio), sample(ratio))
+  repRatio <- c(ratio, ratio, ratio)
+  for(utt in rep(1:length(allUtterances))){
+    allUtterancePref[utt,1] <- utt
+    allUtterancePref[utt,2] <- allUtterances[utt]
+    # allUtterancePref[utt,3] <- as.numeric(sampledRatio[utt])
+    allUtterancePref[utt,3] <- as.numeric(repRatio[utt])
+  }
+  return(allUtterancePref)
+}
+
+determineAllFeaValues <- function(currentObjects) {
+  allFeaUtterances <- c()
+  for(i in c(1:length(currentObjects))) {
+    allFeaUtterances <- c(allFeaUtterances, allObjectsToUtterancesMappings[currentObjects[i],])
+  }
+  return(allFeaUtterances)
+}
+# get a matrix of all preferences for the relevantUtterances
+getMapUttToPref <- function(relevantUtterances, allObjects, allUtterancePref){
+  mapUttToPref <- allUtterancePref
+  allUtteranceNum <- c(1:9)
+  notRelevantUtt <- setdiff(allUtteranceNum, relevantUtterances)
+  for (rowNum in rep(1:length(notRelevantUtt))){
+    mapUttToPref <- mapUttToPref[-which(mapUttToPref[,1] == notRelevantUtt[rowNum]),]
+  }
+  return (mapUttToPref)
+}
+
+getObjectPreferencePriorsWithUttToPref <- function(consideredUtterances, currentObjects, type, mapUttToObjProbs, mapUttToPref) {
+  objectPreferenceHardPriors <- list()
+  for(utt in rep(1:length(consideredUtterances)) ) {
+    objectPreferenceHardPriors[[utt]] <- mapUttToObjProbs[utt,]#*as.numeric(mapUttToPref[utt,3])
+  }
+  #nopreference case
+  objectPreferenceHardPriors[[length(consideredUtterances)+1]] = rep(1/length(currentObjects), length(currentObjects) )
+  
+  #  soft preferences with uniform choice fusion. 
+  softAddProb <- type
+  objectPreferenceSoftPriors <- list()
+  for(utt in rep(1:(length(consideredUtterances)+1)) ) {
+    objectPreferenceSoftPriors[[utt]] <- objectPreferenceHardPriors[[utt]] + softAddProb
+    objectPreferenceSoftPriors[[utt]] <- objectPreferenceSoftPriors[[utt]] / sum(objectPreferenceSoftPriors[[utt]])
+  }
+  return(objectPreferenceSoftPriors)
+}
+# creates a matrix containing all preferences for the object choice of the listener, 
+# depending on the present objects and the target feature and the preferences
+# of the listener
+# targetfeature has to be numeric
+# +1 row without preferences
+getMapUttToObjToPref <- function(currentObjects, targetFeature, relevantUtterances, allUtterancePref, allObjects, mapUttToPref){
+  isUnique <- matrix(FALSE, nrow = length(relevantUtterances)+1, ncol = length(currentObjects))
+  mapUttToObjToPref <- matrix(0, nrow = length(relevantUtterances)+1, ncol = length(currentObjects))
+  objectSpecific <- matrix("", nrow= 3, ncol = 3)
+  for(obj in rep(1:3)){
+    objectSpecific[obj,] <- allObjects[currentObjects[obj],]
+  }
+  countedUttObj <- table(objectSpecific)
+  relevantUttWords <- relevantUtterances
+  for(utt in rep(1:length(relevantUttWords))){
+    relevantUttWords[utt] <- mapUttToPref[utt,2]
+    index <- which(objectSpecific == relevantUttWords[utt], arr.ind=TRUE)[,"row"]
+    for(ind in rep(1:length(index))){
+      isUnique[utt,index[ind]] <- TRUE
+    }
+  }
+  # cat(print(relevantUttWords))
+  # cat(print(isUnique))
+  for(row in rep(1:length(relevantUtterances))){
+    for(col in rep(1:length(currentObjects))){
+      if(isUnique[row,col]){
+        targetFeatureValue <- objectSpecific[col,targetFeature]
+        targetFeatureValuePref <- mapUttToPref[which(mapUttToPref[,2]==targetFeatureValue),3]
+        if(length(targetFeatureValuePref)==0) {
+          print(c("length is zero!?",targetFeatureValue,targetFeatureValuePref))
+          print(allUtterances[relevantUtterances])
+          print(allObjects[currentObjects,])
+        }
+        mapUttToObjToPref[row,col] <- targetFeatureValuePref
+      }
+    }
+  }
+  # cat(print(isUnique))
+  mapUttToObjToPref[length(relevantUtterances)+1,]<- 0.33
+  if(targetFeature == "shape" || targetFeature == 1){
+    notRelevantUtt <- c(1, 2, 3)
+  } else  if(targetFeature == "pattern" || targetFeature == 2){
+    notRelevantUtt <- c(4, 5, 6)
+  } else  if(targetFeature == "color" || targetFeature == 3){
+    notRelevantUtt <- c(7, 8, 9)
+  }
+  currentNotRelevantUtt <- which(as.numeric(mapUttToPref[,1]) %in% notRelevantUtt)
+  for (row in rep(1:length(currentNotRelevantUtt))){
+    mapUttToObjToPref[currentNotRelevantUtt[row],] <- 0
+  }
+  return (mapUttToObjToPref)
+}
+

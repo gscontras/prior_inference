@@ -214,6 +214,9 @@ getMapUttToObjToPref <- function(currentObjects, targetFeature, relevantUtteranc
       if(isUnique[row,col]){
         targetFeatureValue <- objectSpecific[col,targetFeature]
         targetFeatureValuePref <- mapUttToPref[which(mapUttToPref[,2]==targetFeatureValue),3]
+        if(length(targetFeatureValuePref)==0) {
+          print("This one is length 0!?")
+        }
         mapUttToObjToPref[row,col] <- targetFeatureValuePref
       }
     }
