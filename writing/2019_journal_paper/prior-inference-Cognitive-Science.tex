@@ -233,7 +233,7 @@ To model interpretation behavior (i.e., which object the speaker is trying to co
 %In particular, the model infers belief posteriors about the hypothetical object type preferences of the listener interpreting their observed referent choices.
 %Moreover, the model actively infers socially epistemic utterance values in anticipation of the potential referent choices considering each possible, partially choice-constraining, utterance.   
 
-\subsection{Pragmatic social inference RSA model}
+\section{Pragmatic social inference RSA model}
 
 %\subsection*{Modeling: fullPSIRSA}
 %
@@ -334,7 +334,7 @@ In the evaluation section below, we compare the modeling performance of fullPSIR
 
 %\section*{Methods}
 
-\section{Experiment 1: Learning about others' preferences}
+\section{Experiment 1: Inferring preferences}
 
 Our first task is to check the inferences of the pragmatic speaker having observed that a listener selects some object $s$ in response to an utterance $u$. 
 Is it possible to draw inferences about the most likely preferences the listener had when making her choice? 
@@ -360,7 +360,15 @@ One of the people served as the speaker, and the other served as the listener. T
 
 We followed \citeA{frankgoodman2012} in our stimuli creation. Objects were allowed to vary along three dimensions: color (blue, red, green), shape (cloud, circle, square), and pattern (solid, striped, polka-dotted). The speaker's utterance was chosen at random from the properties of the three objects present, and the listener's choice was chosen at random from the subset of the three objects that possessed the uttered feature. By varying the object properties, the targeted object, and the utterance, we generated a total of 2400 scenes. Speaker and listener names were chosen randomly in each trial. Participants saw the speaker's utterance in bold (e.g., ``red'' in Figure \ref{exp1-trial}) and the listener's choice appeared with a dotted orange outline (e.g., the center object in Figure \ref{exp1-trial}). Based on the observed choice, participants were instructed to adjust a series of six sliders to indicate how likely it is that the listener had a preference for a given feature. The sliders specified the six feature values of the two feature dimensions that were not mentioned in the speaker's utterance (e.g., pattern and shape in Figure \ref{exp1-trial}). 
 
-Depending on how many features competitor objects share with the chosen object, we were able to identify 48 ambiguity classes, which group the constellations that have the exact same ambiguity constellation. Figure~\ref{exp1-trial} shows a few of those ambiguity classes with particular, exemplary, object-utterance-choice constellations.
+To compare PSIRSA's predictions to the human data, we calculated an average value for each slider.
+%, binning data into 48 ambiguity classes.
+% for Experiment 1 and 14 classes for Experiment 2. 
+We excluded the sliders if their corresponding feature value was not present in a scene. For example, for the trial depicted in Figure \ref{exp1-trial}, we excluded the sliders for solid things and squares since none of these are present, and therefore no learning about them is possible.
+
+To determine model correlations with the gathered data, we partitioned the data into ambiguity classes, similar to \citeA{frankgoodman2012}. Depending on how many features competitor objects share with the chosen object, we were able to identify 48 ambiguity classes, which group the constellations that have the exact same ambiguity pattern. The ambiguity classes identified in Experiment 1 distinguish how many objects are referenced by the utterance, how the referenced objects differ in their two non-uttered features, and how the non-referenced objects differ from the referenced objects and from each other.
+As a result, each ambiguity class yields unique model prediction values for the individual features present (with respect to their ``ambiguity role'' in the particular ambiguity class) in corresponding scenarios $S$, effectively distinguishing all model-relevant cases. Please see the Appendix for examples of different classes.
+
+
 %For example, considering the top-left-most case, ,where the utterance ``red" refers to two possible objects and the choice falls onto one of them (here the red cloud), which shares one property with the other, not referenced object (its cloud shape), but no further properties with the other referenced object (neither its shape nor its pattern). Thus, its other property is unique (its striped pattern)
 %If, as an alternative scenario, he utterance was ``green", only one object would qualify (the green, dotted cloud), preventing the learning about preferences. 
 %In that case, the model would assign equal probability to the listener's preferring dotted objects, striped objects, clouds, and squares. 
@@ -369,22 +377,14 @@ Depending on how many features competitor objects share with the chosen object, 
 
 Participants completed a series of fifteen trials. Objects and utterances were chosen as detailed above, with the constraint that ten trials were potentially informative with respect to listener preferences and five trials were uninformative with respect to listener preferences (e.g., observing that the listener chose one of three identical objects). 
 
-To determine model correlations with the gathered data, we partitioned the data into ambiguity classes, similar to \citeA{frankgoodman2012}. 
-The ambiguity classes identified in Experiment 1 distinguish how many objects are referenced by the utterance, how the referenced objects differ in their two non-uttered features, and how the non-referenced objects differ from the referenced objects and from each other.
-As a result, each ambiguity class yields exact model prediction values for the individual features present (with respect to their ``ambiguity role'' in the particular ambiguity class) in the respective scenarios $S$, effectively distinguishing all model-relevant cases. Please see Supplementary materials for examples of different classes.
-
-% \FloatBarrier
-
 \subsection{Free parameters and optimization procedure}
 
-%\subsubsection*{Experiment 1}
 
-To compare PSIRSA's predictions to the human data, we calculated an average value for each slider, binning data into 48 ambiguity classes for Experiment 1 and 14 classes for Experiment 2. We excluded the sliders if their corresponding feature value was not present in a scene. For example, for the trial depicted in Figure \ref{exp1-trial}, we excluded the sliders for solid things and squares since none of these are present, and therefore no learning about them is possible.
 %We binned those scene types 
 %For all scene types, the actual feature values and objects in a scene were reordered according to the specific preference inference involved \gcs{I'm not sure what you mean here}. 
 %Thus, after reordering, the results of the individual slider values for individual scenes in each scene type could be averaged for both the participant data and the model predictions. 
 
-We fit the model parameters either at the individual level or at the group level by optimizing the KL (Kullback-Leibler) divergence between the data and the model predictions:
+We fit the model parameters either at the individual level or at the group level by optimizing the KL divergence between the data and the model predictions:
 
 \begin{equation}
 	\textrm{KL}(P_{data}(f \mid u,s)\mid\mid (P_{model}(f\mid u,s)),
@@ -453,14 +453,6 @@ The computation is equivalent to the softness parameter above, in this case soft
 
 Again, $\beta=0$ models a hard object choice---that is, full obedience to the uttered instruction $u$---while $\beta \rightarrow \infty$ models a uniform object choice---that is, full ignorance of $u$.
 %As $\beta$ increases, speakers disregard instructions and assign non-zero probabilities to objects that do not correspond to the utterance; with $\beta = 0$, speakers fully obey the instructions and only consider objects with the named property (e.g., only red objects following the utterance \textit{red}).
-
-For the case of utterance selection, the additional parameter $\lambda$ becomes relevant
-(cf. equations \ref{eq:kldivlambda} and \ref{eq:kldivlambdasimp}). 
-It scales the expected information gain. 
-While a positive value yields the intention to maximize information gain, 
-a negative value results in a tendency to minimize information gain, that is, a preference for no change in the posterior feature preference estimate $P_{S_{1\textrm{-simp}}}(f\mid u,s)$ in comparison to the prior estimate $P(f)$. 
-A value of $\lambda=0$ effectively ignores information gain and a resulting tendency to choose the object that was most likely referenced given the $utterance$.
-
 
 \subsection{Results}
 \subsubsection{Models with global optimization}
@@ -598,7 +590,7 @@ Our next task is to check the predictions of our strategic utterance selection m
 
 \begin{figure*}[ht]
 	\centering
-	\includegraphics[width=3.5in]{images/utterance-choice-trial.png}
+	\includegraphics[width=4.5in]{images/utterance-choice-trial.png}
 	\caption{A sample trial from \emph{Experiment 2: Choosing utterances}. }\label{exp2-trial}
 \end{figure*} 
 
@@ -615,21 +607,24 @@ In this case, $14$ distinct conditions can be identified, with a total of $84$ s
 Membership within an ambiguity class is defined by how many objects in a scene share each of the features: shape, pattern, and color. If objects share a feature, we also consider whether these objects also share other features. For example, in Figure \ref{exp2-trial}, two green objects differ in shape, making the utterance \textit{green} informative. If, on the other hand, both green objects were clouds, uttering \textit{green} would not allow the speaker to update their beliefs about the listener's shape preferences.
 In the most extreme case, when all objects share all three features, all utterances are ambiguous since multiple objects can always be picked; but no utterance allows the speaker to learn anything about the listener because the object choice is uninformative. Another extreme case is a situation where all objects are unique and do not share any features. In such a case, any utterance will only pick one object, making learning about preferences impossible unless obedience ($\beta$) is not 0---that is, unless listeners have a tendency to disobey the utterance and consider objects that do not satisfy its literal interpretation.
 
+Just like for Experiment 1, each ambiguity class yields unique model prediction values for the individual features present in the respective scenarios $S$, taking into account their ambiguity role. This grouping strategy effectively distinguishes all model-relevant cases. Please see the Appendix for examples of different classes.
+
+
 Participants completed a series of fifteen trials. As with Experiment 1, objects were chosen at random, with the constraint that ten trials were potentially informative with respect to the listener's preferences (as in Figure~\ref{exp2-trial}) and five trials were uninformative with respect to the listener's preferences (e.g., observing a set of three identical objects).
-
-As for Experiment 1, to determine model correlations with the gathered data, we partitioned the data into ambiguity classes. 
-For Experiment 2, the ambiguity classes distinguish how the three objects in the respective scenario $S$ differ from each other.
-As a result, the two most extreme classes contain identical objects -- in which case exactly three features are present in the scenario -- and three objects with all unique features, in which case all nine possible features are present. 
-As for Experiment 1, each ambiguity class yields exact model prediction values for the individual features (with respect to their ambiguity role in the respective ambiguity class) present in the respective scenarios $S$, effectively distinguishing all model-relevant cases. Please see Supplementary materials for examples of different classes.
-
 
 \subsection{Results}
 
-By reasoning about the predictions of $S_2$, we are able to use simplePSIRSA to compute the expected most informative utterance for inferring preferences.
+%To reason about the utterance choosing strategies of $S_1\textrm{-simp}$, 
+We use simplePSIRSA to compute the expected most informative utterance for inferring preferences.
 In other words, $P_{S_1\textrm{-simp}}(u)$ calculates the probability that a speaker would choose $u$ for the purpose of inferring preferences.
 
 To generate predictions from $P_{S_1\textrm{-simp}}(u)$, three free parameters can be identified:
-the preference softness $\gamma$, the obedience $\beta$, and the $\lambda$ parameter, which factors the importance of choosing the expected most informative utterance with respect to the expected KL divergence between preference priors and expected preference posteriors.
+the preference softness $\gamma$, the obedience $\beta$, and the $\lambda$ parameter, which factors the importance of choosing the expected most informative utterance with respect to the expected KL divergence between preference priors and expected preference posteriors 
+(cf. equations \ref{eq:kldivlambda} and \ref{eq:kldivlambdasimp}). 
+%It scales the expected information gain. 
+While a positive value yields the intention to maximize information gain, 
+a negative value results in a tendency to minimize information gain, that is, a preference for no change in the posterior feature preference estimate $P_{S_{1\textrm{-simp}}}(f\mid u,s)$ in comparison to the prior estimate $P(f)$. 
+A value of $\lambda=0$ effectively ignores information gain and a resulting tendency to choose the object that was most likely referenced given the $utterance$.
 % Martin - this information can be found at the end of the methods section
 %Note that negative values for $\lambda$ results in a minimization of expected information gain, effectively favoring unambiguous utterances. 
 %Moreover, when $\lambda=0$, the model collapses to an approximate uniform distribution over the available utterances.
@@ -697,7 +692,7 @@ Figure~\ref{global-individual-x3} shows the resulting correlation plot for $\lam
 
 Unlike for Experiment 1, where even the non-optimized models provided a good linear fit to the data, individual optimization produces a large effect on the model predictions in Experiment 2.
 Figure~\ref{barplot_x3} compares individually-optimized vs.~non-optimized model predictions against the human behavior for the sample trial in Figure~\ref{exp2-trial}.
-We see that the non-optimized model strongly favors ambiguous utterances: in a situation with a striped green circle, a blue striped cloud, and a solid green cloud, uttering things like \textit{cloud}, \textit{striped}, or \textit{green} (i.e., the utterances that point to more than one object in the scene) and could let the speaker learn something about the listener's preferences.
+We see that the non-optimized model strongly favors ambiguous utterances: in a situation with a striped green circle, a blue striped cloud, and a solid green cloud, uttering things like \textit{cloud}, \textit{striped}, or \textit{green} (i.e., the utterances that point to more than one object in the scene) could let the speaker learn something about the listener's preferences.
 However, Figure~\ref{barplot_x3} shows that human behavior deviates quite strongly from the non-optimized, ambiguity-selecting baseline; once we optimize $\lambda$, we are able to capture human behavior in the task.
 %For example, \textit{green} picks out two objects: a striped green circle and a solid green cloud; after saying ``green'', the speaker could learn whether the listener prefers striped things over solid things, or circles over clouds.
 
@@ -729,8 +724,8 @@ The third group of $21$ participants yielded positive values (i.e., $.0187<\lamb
 
 Further experiments with highly similar setups confirmed this trend.
 In particular, we ran two additional, complementary studies with a blocked design where participants first completed preference-inferences trials as in Experiment~1 and then utterance-selection trials as in Experiment~2. 
-In the first complementary study with 10 trials (123 participants), the identical analysis yielded $42\%$ participants that preferred ambiguous over unambiguous utterances ($37\%$ unpredictable participants; $21\%$ preferred unambiguous utterances). 
-In the second complementary study with 52 participants, which contained 30 trials in total and had slightly more general instructions, even $64\%$ of the participants systematically preferred ambiguous over unambiguous utterances ($21\%$ unpredictable workers; $15\%$ preferred unambiguous utterances). 
+In the first complementary study with 10 trials (135 participants, data from 123 native speakers of English included in the analysis, 12 non-native speakers excluded), the identical analysis yielded $42\%$ participants that preferred ambiguous over unambiguous utterances ($37\%$ unpredictable participants; $21\%$ preferred unambiguous utterances). 
+In the second complementary study with 54 participants (2 participants excluded as non-native speakers), which contained 30 trials in total and had slightly more general instructions, as many as $64\%$ of the participants systematically preferred ambiguous over unambiguous utterances ($21\%$ unpredictable workers; $15\%$ preferred unambiguous utterances). 
 
 
 
@@ -752,8 +747,7 @@ Second, it may simply be the case that these participants do not have access to 
 % \gcs{it might be good to speculate as to why only some of our participants selected ambiguous utterances: misunderstanding instructions, inability to follow instructions, or perhaps some other factor}
 
 Nonetheless, taken together, the results of our experiments and the success of PSIRSA in modeling these results indicate that humans are aware of the fact that by observing responses to ambiguous utterances, information about the listener's prior preferences can be inferred---that is, they are able to learn about the hidden model states of others, including preferences but probably also other aspects of beliefs. 
-It should also be noted that ambiguous utterances used in this way are closely related to questions, which may ask directly about considered preferences. 
-Ambiguous utterances provide a ready but more subtle, indirect alternative to asking directly. 
+It should also be noted that ambiguous utterances used in this way are closely related to questions, which may ask directly about considered preferences. Ambiguous utterances provide a ready but more subtle, indirect alternative to asking directly. 
 In normal conversations, a speaker might favor the indirect route, given considerations of politeness and possibly also in an effort to keep the conversation open. 
 With ambiguous language, the conversation partner can choose to disambiguate the ambiguous utterance or, alternatively, choose to continue in a different direction or even change topic.
 
@@ -792,7 +786,277 @@ Data supporting the findings of this study are available from the corresponding 
 
 \bibliography{prior-inference}
 
+\cleardoublepage
 
+\appendix
+
+\section{Ambiguity classes}
+
+\subsection*{Experiment 1}
+
+Figure~\ref{fig:ambiguity-classes-exp1} shows three exemplar scenarios for three representative ambiguity classes. 
+Let us consider the first class in more detail.
+In the scenario $S$ on the left side of Figure~\ref{fig:ambiguity-classes-exp1a}, 
+the utterance ``blue'' refers either to the blue square or the blue circle.
+The picked object, that is, the blue circle, is unique in its shape (circle) and shares the other non-referenced property with both other objects (that is, its plain pattern). 
+The referenced but not picked object (that is, the blue square), shares its shape with the non-referenced object. 
+In the scenario $S$ in the center, the referenced two red objects differ in texture but share shape with the non-referenced object.
+In the scenario $S$ on the right, the referenced two solid objects can be contrasted in their color but share their shape with the third object.
+
+
+
+\begin{figure*}[htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\begin{subfigure}[b]{0.3\linewidth}
+			\centering
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=.75cm]{appendix/311.png}};
+			\node[](o2) at (0,0){\includegraphics[width=.75cm]{appendix/211.png}};
+			\node[](o3) at (1,0){\includegraphics[width=.75cm]{appendix/313.png}};
+			\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.cm,1.cm);
+			\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``blue"}};
+			\end{tikzpicture}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[b]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=.75cm]{appendix/212.png}};
+			\node[](o2) at (0,0){\includegraphics[width=.75cm]{appendix/213.png}};
+			\node[](o3) at (1,0){\includegraphics[width=.75cm]{appendix/222.png}};
+			
+			\draw[dashed, color=orange,line width=1mm] (o3.south west) rectangle ++(1.cm,1.cm);
+			
+			\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``red"}};
+			\end{tikzpicture}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[b]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=.75cm]{appendix/112.png}};
+			\node[](o2) at (0,0){\includegraphics[width=.75cm]{appendix/131.png}};
+			\node[](o3) at (1,0){\includegraphics[width=.75cm]{appendix/111.png}};
+			\draw[dashed, color=orange,line width=1mm] (o1.south west) rectangle ++(1.cm,1.cm);
+			\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``solid"}};
+			\end{tikzpicture}
+		\end{subfigure}
+		\caption{The utterance references two objects, the picked object has one non-referenced unique feature, while the other, non-referenced feature is shared amongst all three objects.
+			The other referenced, but not chosen object, shares its other feature with the non-referenced object.} 
+		\label{fig:ambiguity-classes-exp1a}
+		%21 32 12
+	\end{subfigure}
+	%%%%%%     Subfigure Part 2
+	%class 21 22 12
+	\begin{subfigure}{\linewidth}
+		\centering
+		\begin{subfigure}[b]{0.3\linewidth}
+			\centering
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/133.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/232.png}};
+			
+			\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.00cm,1.00cm);
+			
+			\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``red"}};
+			\end{tikzpicture}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[b]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/133.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/232.png}};
+			
+			\draw[dashed, color=orange,line width=1mm] (o1.south west) rectangle ++(1.00cm,1.00cm);
+			
+			\node[] at ([yshift=10pt,xshift=0pt]o2.north){Utterance: \textbf{``polka-dotted"}};
+			\end{tikzpicture}
+			%		\subcaption{Another combination, here the polka-dotted objects differ in shape and color.}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[b]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/212.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/221.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
+			
+			\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.00cm,1.00cm);
+			
+			\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``circle"}};
+			\end{tikzpicture}
+			%	\subcaption{Two circles differ in texture and color.}
+		\end{subfigure}
+		%21 22 12
+		\caption{The utterance $u$ references two objects whereby both objects only share the uttered feature. The third object shares one feature with each of the two referenced objects.}
+	\end{subfigure}
+	%%%%%%     Subfigure Part 3	
+	\begin{subfigure}{\linewidth}
+		\centering
+		\begin{subfigure}[b]{0.3\linewidth}
+			\centering
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/131.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/221.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/231.png}};
+			
+			\draw[dashed, color=orange,line width=1mm] (o1.south west) rectangle ++(1.00cm,1.00cm);
+			
+			\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``blue"}};
+			\end{tikzpicture}
+			%		\subcaption{The objects can differ in shape, texture, and color. The utterance applies to all 3 objects but they differ in shape and texture. Solid objects or squares are absent here, so we cannot learn whether the listener likes squares or solid objects.}
+		\end{subfigure}
+		\hspace{0.3cm}
+		\begin{subfigure}[b]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/123.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/112.png}};
+			
+			\draw[dashed, color=orange,line width=1mm] (o3.south west) rectangle ++(1.00cm,1.00cm);
+			
+			\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{``cloud"}};
+			\end{tikzpicture}
+			%		\subcaption{Another combination, here all objects are clouds but the picked object shares being red with another object.}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[b]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/211.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/313.png}};
+			
+			\draw[dashed, color=orange,line width=1mm] (o2.south west) rectangle ++(1.00cm,1.00cm);
+			
+			\node[] at ([yshift=10pt]o2.north){Utterance: \textbf{"solid"}};
+			\end{tikzpicture}
+		\end{subfigure}
+		\caption{In this third exemplar ambiguity class, the utterance refers to all three objects. The picked object shares one feature with one other object and has one feature just for itself while the other two objects share it.}
+		%32 21 12
+	\end{subfigure}
+	\caption{Three exemplar scenarios $S$, constraining utterance $u$, and chosen object $s$ are shown for three exemplar ambiguity classes for Experiment 1.}
+	\label{fig:ambiguity-classes-exp1}
+\end{figure*}
+
+\subsection*{Experiment 2}
+
+Figure~\ref{fig:ambiguity-classes-exp2} shows three exemplar scenarios for three representative  ambiguity classes. 
+Let us again consider the first class in more detail.
+In the scenario $S$ on the left side of Figure~\ref{fig:ambiguity-classes-exp2a}, 
+all three objects share the feature pattern (solid), while two share the color (blue), and the other two share the shape (square).
+As a result, uttering \textit{green} or \textit{circle} will give no choice to the listener because the utterance identifies one unique object. 
+On the other hand, uttering \textit{solid} will let the listener choose freely, while uttering \textit{blue} or \textit{square} will give a specific choice between two objects, that is, between the blue circle and the blue square or between the blue square or the green square, respectively.
+In the scenario $S$ in the center, the objects share the shape (circle), two share the pattern (solid), and the other two share the color (red).
+Here, \textit{circle} references all three objects, \textit{red} or \textit{solid} reference pairs of objects, and \textit{striped} or \textit{green} reference one unique object each.
+In the scenario $S$ on the right, the object again share the shape (cloud), two share the pattern (solid), while the other two share the color (blue).
+
+
+\begin{figure*}[!htb]
+	\centering
+	\begin{subfigure}{\linewidth}
+		\begin{subfigure}[t]{0.3\linewidth}
+			\centering
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/211.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/313.png}};
+			
+			\end{tikzpicture}
+			%		\subcaption{}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[t]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/212.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/213.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/222.png}};
+			
+			\end{tikzpicture}
+			%		\subcaption{Another combination, h}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[t]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/131.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/112.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/111.png}};
+			
+			\end{tikzpicture}
+			%		\subcaption{Another combination following the same principle.}
+		\end{subfigure}
+		\caption{In this exemplar ambiguity class, one feature is shared by all three objects, while the two other features allow the distinction between two different pairs of objects and the reference of one of two uniquely identifiable objects.}
+		\label{fig:ambiguity-classes-exp2a}
+		%322b
+	\end{subfigure}
+	%%%%%%%%%%%%%%%%%%% start of second part 
+	\begin{subfigure}{\linewidth}
+		\centering
+		\begin{subfigure}[t]{0.3\linewidth}
+			\centering
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/133.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/232.png}};		
+			\end{tikzpicture}
+			%		\subcaption{Uttering \textit{cloud}, \textit{red} or \textit{polka-dotted} will each pick out a different pair that lets us learn about a combination of two preferences. If we utter \textit{cloud} for example, a preference for green or red and a preference for polka-dotted or striped may figure in the listeners choice. Uttering \textit{circle}, \textit{green} or \textit{striped} will pick out a single object, giving the listener no choice.}
+		\end{subfigure}	
+		\hspace*{0.3cm}
+		\begin{subfigure}[t]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/223.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/322.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/313.png}};
+			\end{tikzpicture}
+			%\subcaption{Another combination, here \textit{green}, \textit{striped} or \textit{square} will each pick out a pair. \textit{Solid}, \textit{red} or \textit{circle} will each pick out a single object.}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[t]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/212.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/221.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/311.png}};
+			\end{tikzpicture}
+			%		\subcaption{Another combination following the same principle.}
+		\end{subfigure}
+		%22b2b
+		\caption{In this second exemplar ambiguity class, all three feature types allow the identification of pairs of objects or unique objects, where all three features contain one unique feature type, each. As a result, there are three utterances that each pick out a different pair of objects and three other utterances that each reference one single object -- effectively allowing the unique identification of each object as well as the identification of all three possible pairs.}
+	\end{subfigure}
+	%%%%%%%%%%%%%  start of third part of figure
+	\begin{subfigure}{\linewidth}
+		\centering
+		\begin{subfigure}[b]{0.3\linewidth}
+			\centering
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/131.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/213.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/222.png}};		
+			\end{tikzpicture}
+			%		\subcaption{Uttering \textit{circle} picks out the green solid one and the red striped one, letting us learn about a combination of preferences. Uttering \textit{solid}, \textit{striped}, \textit{polka-dotted}, \textit{cloud}, \textit{green}, \textit{red} or \textit{blue} would always pick just one object. That way, the listener would have no choice and we could not learn anything.}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[t]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/233.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/122.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/312.png}};		
+			\end{tikzpicture}
+			%		\subcaption{Another combination, here all uttering \textit{red} is the only way to let the listener choose.}
+		\end{subfigure}
+		\hspace*{0.3cm}
+		\begin{subfigure}[t]{0.3\linewidth}
+			\begin{tikzpicture}
+			\node[](o1) at (-1,0){\includegraphics[width=0.75cm]{appendix/331.png}};
+			\node[](o2) at (0,0){\includegraphics[width=0.75cm]{appendix/212.png}};
+			\node[](o3) at (1,0){\includegraphics[width=0.75cm]{appendix/113.png}};	
+			\end{tikzpicture}
+			%		\subcaption{Another combination following the same principle.}
+		\end{subfigure}
+		\caption{In this third exemplar ambiguity class, two features have three unique values, while one feature allows the identification of a pair of objects.}
+	\end{subfigure}
+	%211
+	\caption{Three exemplar scenarios $S$ are shown for three exemplar ambiguity classes for Experiment 2.} 
+	\label{fig:ambiguity-classes-exp2}
+\end{figure*}
 
 \end{document}
 

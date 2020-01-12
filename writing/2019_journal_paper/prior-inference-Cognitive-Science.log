@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  9 JAN 2020 15:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 JAN 2020 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -843,7 +843,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
  [4]
-[5] <images/rsascene-eps-converted-to.pdf, id=259, 64.24pt x 21.07875pt>
+[5] <images/rsascene-eps-converted-to.pdf, id=263, 64.24pt x 21.07875pt>
 File: images/rsascene-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/rsascene-eps-converted-to.pdf>
@@ -879,52 +879,53 @@ Underfull \hbox (badness 5652) in paragraph at lines 185--185
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 203.
  [7] [8]
-<images/preference-trial.png, id=325, 1654.18pt x 1082.0425pt>
+<images/preference-trial.png, id=329, 1654.18pt x 1082.0425pt>
 File: images/preference-trial.png Graphic file (type png)
 
 <use images/preference-trial.png>
 Package pdftex.def Info: images/preference-trial.png used on input line 346.
 (pdftex.def)             Requested size: 325.215pt x 212.7228pt.
  [9] [10 <./images/preference-trial.png>]
-[11] [12] <images/m13.pdf, id=373, 216.81pt x 216.81pt>
+[11] [12] <images/m13.pdf, id=374, 216.81pt x 216.81pt>
 File: images/m13.pdf Graphic file (type pdf)
  <use images/m13.pdf>
-Package pdftex.def Info: images/m13.pdf used on input line 502.
+Package pdftex.def Info: images/m13.pdf used on input line 494.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
 
-<images/m8.pdf, id=374, 216.81pt x 216.81pt>
+<images/m8.pdf, id=375, 216.81pt x 216.81pt>
 File: images/m8.pdf Graphic file (type pdf)
  <use images/m8.pdf>
-Package pdftex.def Info: images/m8.pdf used on input line 504.
+Package pdftex.def Info: images/m8.pdf used on input line 496.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
- [13] [14 <./images/m13.pdf> <./images/m8.pdf>]
-<images/december_barplot_x4.pdf, id=403, 361.35pt x 325.215pt>
+ [13 <./images/m13.pdf> <./images/m8.pdf>]
+<images/december_barplot_x4.pdf, id=400, 361.35pt x 325.215pt>
 File: images/december_barplot_x4.pdf Graphic file (type pdf)
 
 <use images/december_barplot_x4.pdf>
-Package pdftex.def Info: images/december_barplot_x4.pdf used on input line 579.
+Package pdftex.def Info: images/december_barplot_x4.pdf used on input line 571.
 
 (pdftex.def)             Requested size: 180.67499pt x 162.6071pt.
 
-Underfull \hbox (badness 1648) in paragraph at lines 580--580
+Underfull \hbox (badness 1648) in paragraph at lines 572--572
 []\OT1/ptm/m/n/10.95 Figure 4: |Hu-man data and sim-pleP-SIRSA's (individually-
 , two-parameter-
  []
 
+[14]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 594.
+(hyperref)                removing `\\' on input line 586.
 
-[15 <./images/december_barplot_x4.pdf>]
-<images/utterance-choice-trial.png, id=418, 1243.64626pt x 1038.88126pt>
+<images/utterance-choice-trial.png, id=409, 1243.64626pt x 1038.88126pt>
 File: images/utterance-choice-trial.png Graphic file (type png)
 
 <use images/utterance-choice-trial.png>
-Package pdftex.def Info: images/utterance-choice-trial.png used on input line 6
-01.
-(pdftex.def)             Requested size: 252.94499pt x 211.29172pt.
- [16 <./images/utterance-choice-trial.png>] [17]
-Overfull \hbox (0.36546pt too wide) in paragraph at lines 650--656
+Package pdftex.def Info: images/utterance-choice-trial.png used on input line 5
+93.
+(pdftex.def)             Requested size: 325.215pt x 271.6721pt.
+ [15 <./images/december_barplot_x4.pdf>] [16 <./images/utterance-choice-trial.p
+ng>] [17]
+Overfull \hbox (0.36546pt too wide) in paragraph at lines 645--651
 \OML/ptmcm/m/it/10.95 F\OT1/ptmcm/m/n/10.95 (1\OML/ptmcm/m/it/10.95 ; \OT1/ptmc
 m/m/n/10.95 82) = 331\OML/ptmcm/m/it/10.95 :\OT1/ptmcm/m/n/10.95 2$\OT1/ptm/m/n
 /10.95 , $\OML/ptmcm/m/it/10.95 p < \OT1/ptmcm/m/n/10.95 0\OML/ptmcm/m/it/10.95
@@ -935,68 +936,358 @@ cm/m/n/10.95 = 0\OML/ptmcm/m/it/10.95 :\OT1/ptmcm/m/n/10.95 2758$\OT1/ptm/m/n/1
 0.95 ,
  []
 
-<images/x3_m20.pdf, id=434, 216.81pt x 216.81pt>
+<images/x3_m20.pdf, id=437, 216.81pt x 216.81pt>
 File: images/x3_m20.pdf Graphic file (type pdf)
  <use images/x3_m20.pdf>
-Package pdftex.def Info: images/x3_m20.pdf used on input line 663.
+Package pdftex.def Info: images/x3_m20.pdf used on input line 658.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
 
-<images/x3_m7.pdf, id=435, 216.81pt x 216.81pt>
+<images/x3_m7.pdf, id=438, 216.81pt x 216.81pt>
 File: images/x3_m7.pdf Graphic file (type pdf)
  <use images/x3_m7.pdf>
-Package pdftex.def Info: images/x3_m7.pdf used on input line 664.
+Package pdftex.def Info: images/x3_m7.pdf used on input line 659.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
 
-Overfull \hbox (13.34079pt too wide) in paragraph at lines 679--686
+Overfull \hbox (13.34079pt too wide) in paragraph at lines 674--681
 []\OT1/ptm/m/n/10.95 We com-pared three single-parameter-individually-optimized
  sim-pleP-SIRSA mod-
  []
 
-[18] <images/x3_m24.pdf, id=443, 216.81pt x 216.81pt>
+[18 <./images/x3_m20.pdf> <./images/x3_m7.pdf>]
+<images/x3_m24.pdf, id=458, 216.81pt x 216.81pt>
 File: images/x3_m24.pdf Graphic file (type pdf)
  <use images/x3_m24.pdf>
-Package pdftex.def Info: images/x3_m24.pdf used on input line 689.
+Package pdftex.def Info: images/x3_m24.pdf used on input line 684.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
 
-<images/x3_m11.pdf, id=444, 216.81pt x 216.81pt>
+<images/x3_m11.pdf, id=459, 216.81pt x 216.81pt>
 File: images/x3_m11.pdf Graphic file (type pdf)
  <use images/x3_m11.pdf>
-Package pdftex.def Info: images/x3_m11.pdf used on input line 690.
+Package pdftex.def Info: images/x3_m11.pdf used on input line 685.
 (pdftex.def)             Requested size: 144.54pt x 144.54735pt.
 
-[19 <./images/x3_m20.pdf> <./images/x3_m7.pdf> <./images/x3_m24.pdf> <./images/
-x3_m11.pdf>] <images/december_barplot_x3.pdf, id=477, 361.35pt x 325.215pt>
+<images/december_barplot_x3.pdf, id=463, 361.35pt x 325.215pt>
 File: images/december_barplot_x3.pdf Graphic file (type pdf)
 
 <use images/december_barplot_x3.pdf>
-Package pdftex.def Info: images/december_barplot_x3.pdf used on input line 706.
+Package pdftex.def Info: images/december_barplot_x3.pdf used on input line 701.
 
 (pdftex.def)             Requested size: 180.67499pt x 162.6071pt.
- [20 <./images/december_barplot_x3.pdf>]
-[21] (./prior-inference-Cognitive-Science.bbl [22]
+ [19 <./images/x3_m24.pdf> <./images/x3_m11.pdf>] [20 <./images/december_barplo
+t_x3.pdf>] [21]
+(./prior-inference-Cognitive-Science.bbl [22]
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no “ in font ptmr7t!
  [23] [24]) [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 797.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 797.
+<appendix/311.png, id=526, 142.3719pt x 142.3719pt>
+File: appendix/311.png Graphic file (type png)
+ <use appendix/311.png>
+Package pdftex.def Info: appendix/311.png used on input line 814.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/211.png, id=527, 142.3719pt x 142.3719pt>
+File: appendix/211.png Graphic file (type png)
+ <use appendix/211.png>
+Package pdftex.def Info: appendix/211.png used on input line 815.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/313.png, id=528, 142.3719pt x 142.3719pt>
+File: appendix/313.png Graphic file (type png)
+ <use appendix/313.png>
+Package pdftex.def Info: appendix/313.png used on input line 816.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/212.png, id=529, 142.3719pt x 142.3719pt>
+File: appendix/212.png Graphic file (type png)
+ <use appendix/212.png>
+Package pdftex.def Info: appendix/212.png used on input line 824.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/213.png, id=530, 142.3719pt x 142.3719pt>
+File: appendix/213.png Graphic file (type png)
+ <use appendix/213.png>
+Package pdftex.def Info: appendix/213.png used on input line 825.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/222.png, id=531, 142.3719pt x 142.3719pt>
+File: appendix/222.png Graphic file (type png)
+ <use appendix/222.png>
+Package pdftex.def Info: appendix/222.png used on input line 826.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/112.png, id=532, 142.3719pt x 142.3719pt>
+File: appendix/112.png Graphic file (type png)
+ <use appendix/112.png>
+Package pdftex.def Info: appendix/112.png used on input line 836.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/131.png, id=533, 142.3719pt x 142.3719pt>
+File: appendix/131.png Graphic file (type png)
+ <use appendix/131.png>
+Package pdftex.def Info: appendix/131.png used on input line 837.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/111.png, id=534, 142.3719pt x 142.3719pt>
+File: appendix/111.png Graphic file (type png)
+ <use appendix/111.png>
+Package pdftex.def Info: appendix/111.png used on input line 838.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/133.png, id=535, 142.3719pt x 142.3719pt>
+File: appendix/133.png Graphic file (type png)
+ <use appendix/133.png>
+Package pdftex.def Info: appendix/133.png used on input line 855.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/122.png, id=536, 142.3719pt x 142.3719pt>
+File: appendix/122.png Graphic file (type png)
+ <use appendix/122.png>
+Package pdftex.def Info: appendix/122.png used on input line 856.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/232.png, id=537, 142.3719pt x 142.3719pt>
+File: appendix/232.png Graphic file (type png)
+ <use appendix/232.png>
+Package pdftex.def Info: appendix/232.png used on input line 857.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/133.png Graphic file (type png)
+
+<use appendix/133.png>
+Package pdftex.def Info: appendix/133.png used on input line 867.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/122.png Graphic file (type png)
+ <use appendix/122.png>
+Package pdftex.def Info: appendix/122.png used on input line 868.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/232.png Graphic file (type png)
+ <use appendix/232.png>
+Package pdftex.def Info: appendix/232.png used on input line 869.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+Overfull \hbox (18.87064pt too wide) in paragraph at lines 874--876
+[][] 
+ []
+
+File: appendix/212.png Graphic file (type png)
+<use appendix/212.png>
+Package pdftex.def Info: appendix/212.png used on input line 880.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+ <appendix/221.png, id=538, 142.3719pt x 142.3719pt>
+File: appendix/221.png Graphic file (type png)
+
+<use appendix/221.png>
+Package pdftex.def Info: appendix/221.png used on input line 881.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/311.png Graphic file (type png)
+ <use appendix/311.png>
+Package pdftex.def Info: appendix/311.png used on input line 882.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 891.
+File: appendix/131.png Graphic file (type png)
+ <use appendix/131.png>
+Package pdftex.def Info: appendix/131.png used on input line 899.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/221.png Graphic file (type png)
+
+<use appendix/221.png>
+Package pdftex.def Info: appendix/221.png used on input line 900.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+ <appendix/231.png, id=539, 142.3719pt x 142.3719pt>
+File: appendix/231.png Graphic file (type png)
+
+<use appendix/231.png>
+Package pdftex.def Info: appendix/231.png used on input line 901.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+ <appendix/123.png, id=540, 142.3719pt x 142.3719pt>
+File: appendix/123.png Graphic file (type png)
+
+<use appendix/123.png>
+Package pdftex.def Info: appendix/123.png used on input line 912.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/122.png Graphic file (type png)
+ <use appendix/122.png>
+Package pdftex.def Info: appendix/122.png used on input line 913.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/112.png Graphic file (type png)
+ <use appendix/112.png>
+Package pdftex.def Info: appendix/112.png used on input line 914.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/311.png Graphic file (type png)
+
+<use appendix/311.png>
+Package pdftex.def Info: appendix/311.png used on input line 925.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/211.png Graphic file (type png)
+ <use appendix/211.png>
+Package pdftex.def Info: appendix/211.png used on input line 926.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/313.png Graphic file (type png)
+ <use appendix/313.png>
+Package pdftex.def Info: appendix/313.png used on input line 927.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+Overfull \hbox (3.68886pt too wide) in paragraph at lines 943--952
+\OT1/ptm/m/n/10.95 Figure []10[] shows three ex-em-plar sce-nar-ios for three r
+ep-re-sen-ta-tive am-bi-gu-ity classes.
+ []
+
+[26
+
+ <./appendix/311.png> <./appendix/211.png> <./appendix/313.png> <./appendix/212
+.png> <./appendix/213.png> <./appendix/222.png> <./appendix/112.png> <./appendi
+x/131.png> <./appendix/111.png> <./appendix/133.png> <./appendix/122.png> <./ap
+pendix/232.png> <./appendix/221.png> <./appendix/231.png> <./appendix/123.png>]
+File: appendix/311.png Graphic file (type png)
+ <use appendix/311.png>
+Package pdftex.def Info: appendix/311.png used on input line 960.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/211.png Graphic file (type png)
+ <use appendix/211.png>
+Package pdftex.def Info: appendix/211.png used on input line 961.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/313.png Graphic file (type png)
+ <use appendix/313.png>
+Package pdftex.def Info: appendix/313.png used on input line 962.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/212.png Graphic file (type png)
+
+<use appendix/212.png>
+Package pdftex.def Info: appendix/212.png used on input line 970.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/213.png Graphic file (type png)
+ <use appendix/213.png>
+Package pdftex.def Info: appendix/213.png used on input line 971.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/222.png Graphic file (type png)
+ <use appendix/222.png>
+Package pdftex.def Info: appendix/222.png used on input line 972.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/131.png Graphic file (type png)
+
+<use appendix/131.png>
+Package pdftex.def Info: appendix/131.png used on input line 980.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/112.png Graphic file (type png)
+ <use appendix/112.png>
+Package pdftex.def Info: appendix/112.png used on input line 981.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/111.png Graphic file (type png)
+ <use appendix/111.png>
+Package pdftex.def Info: appendix/111.png used on input line 982.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/133.png Graphic file (type png)
+
+<use appendix/133.png>
+Package pdftex.def Info: appendix/133.png used on input line 997.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/122.png Graphic file (type png)
+ <use appendix/122.png>
+Package pdftex.def Info: appendix/122.png used on input line 998.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/232.png Graphic file (type png)
+ <use appendix/232.png>
+Package pdftex.def Info: appendix/232.png used on input line 999.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/223.png, id=566, 142.3719pt x 142.3719pt>
+File: appendix/223.png Graphic file (type png)
+ <use appendix/223.png>
+Package pdftex.def Info: appendix/223.png used on input line 1006.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/322.png, id=567, 142.3719pt x 142.3719pt>
+File: appendix/322.png Graphic file (type png)
+ <use appendix/322.png>
+Package pdftex.def Info: appendix/322.png used on input line 1007.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/313.png Graphic file (type png)
+
+<use appendix/313.png>
+Package pdftex.def Info: appendix/313.png used on input line 1008.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/212.png Graphic file (type png)
+ <use appendix/212.png>
+Package pdftex.def Info: appendix/212.png used on input line 1015.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/221.png Graphic file (type png)
+ <use appendix/221.png>
+Package pdftex.def Info: appendix/221.png used on input line 1016.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/311.png Graphic file (type png)
+
+<use appendix/311.png>
+Package pdftex.def Info: appendix/311.png used on input line 1017.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/131.png Graphic file (type png)
+ <use appendix/131.png>
+Package pdftex.def Info: appendix/131.png used on input line 1030.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/213.png Graphic file (type png)
+ <use appendix/213.png>
+Package pdftex.def Info: appendix/213.png used on input line 1031.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/222.png Graphic file (type png)
+
+<use appendix/222.png>
+Package pdftex.def Info: appendix/222.png used on input line 1032.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+ <appendix/233.png, id=568, 142.3719pt x 142.3719pt>
+File: appendix/233.png Graphic file (type png)
+
+<use appendix/233.png>
+Package pdftex.def Info: appendix/233.png used on input line 1039.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/122.png Graphic file (type png)
+ <use appendix/122.png>
+Package pdftex.def Info: appendix/122.png used on input line 1040.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/312.png, id=569, 142.3719pt x 142.3719pt>
+File: appendix/312.png Graphic file (type png)
+ <use appendix/312.png>
+Package pdftex.def Info: appendix/312.png used on input line 1041.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+
+<appendix/331.png, id=570, 142.3719pt x 142.3719pt>
+File: appendix/331.png Graphic file (type png)
+ <use appendix/331.png>
+Package pdftex.def Info: appendix/331.png used on input line 1048.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+File: appendix/212.png Graphic file (type png)
+
+<use appendix/212.png>
+Package pdftex.def Info: appendix/212.png used on input line 1049.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+ <appendix/113.png, id=571, 142.3719pt x 142.3719pt>
+File: appendix/113.png Graphic file (type png)
+
+<use appendix/113.png>
+Package pdftex.def Info: appendix/113.png used on input line 1050.
+(pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
+ [27 <./appendix/223.png> <./appendix/322.png> <./appendix/233.png> <./appendix
+/312.png> <./appendix/331.png> <./appendix/113.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1061.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1061.
 
 (./prior-inference-Cognitive-Science.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 797.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 797.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1061.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1061.
+
 Package rerunfilecheck Info: File `prior-inference-Cognitive-Science.out' has n
 ot changed.
-(rerunfilecheck)             Checksum: 93D735649186440D65FE78897DF9F69A;1326.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 797.
+(rerunfilecheck)             Checksum: 5C794FF74E7EF2044CBB274A193A9E80;1353.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1061.
  ) 
 Here is how much of TeX's memory you used:
- 18415 strings out of 492995
- 340779 string characters out of 6132704
- 412248 words of memory out of 5000000
- 21503 multiletter control sequences out of 15000+600000
- 52222 words of font info for 102 fonts, out of 8000000 for 9000
+ 18605 strings out of 492995
+ 344398 string characters out of 6132704
+ 419693 words of memory out of 5000000
+ 21663 multiletter control sequences out of 15000+600000
+ 56833 words of font info for 113 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,54p,2172b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,54p,2172b,906s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -1006,11 +1297,11 @@ e/2017/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on prior-inference-Cognitive-Science.pdf (25 pages, 1417696 byte
+Output written on prior-inference-Cognitive-Science.pdf (27 pages, 1499670 byte
 s).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 512 compressed objects within 6 object streams
- 117 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 639 PDF objects out of 1000 (max. 8388607)
+ 530 compressed objects within 6 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
