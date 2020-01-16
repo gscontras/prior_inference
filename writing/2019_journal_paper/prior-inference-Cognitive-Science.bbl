@@ -169,34 +169,6 @@ Butz, M\BPBI V.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Carmon%
-}{%
-Carmon%
-}{%
-{\protect \APACyear {2013}}%
-}]{%
-carmon2013}
-\APACinsertmetastar {%
-carmon2013}%
-\begin{APACrefauthors}%
-Carmon, A\BPBI F.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2013}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Is It Necessary to be Clear? An Examination of Strategic
-  Ambiguity in Family Business Mission Statements} {Is it necessary to be
-  clear? an examination of strategic ambiguity in family business mission
-  statements}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Qualitative Research Reports in
-  Communication}{14}{1}{87--96}.
-\newblock
-\begin{APACrefDOI} \doi{10.1080/17459435.2013.835346} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Chomsky%
 }{%
 Chomsky%
@@ -295,29 +267,6 @@ Cushing, S.%
   words: Communication clashes and aircraft crashes}.
 \newblock
 \APACaddressPublisher{Chicago}{University of Chicago Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Eisenberg%
-}{%
-Eisenberg%
-}{%
-{\protect \APACyear {1984}}%
-}]{%
-eisenberg1984ambiguity}
-\APACinsertmetastar {%
-eisenberg1984ambiguity}%
-\begin{APACrefauthors}%
-Eisenberg, E\BPBI M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1984}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Ambiguity as strategy in organizational communication}
-  {Ambiguity as strategy in organizational communication}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Communication monographs}{51}{3}{227--242}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -480,6 +429,33 @@ Frank, M\BPBI C.%
   {Predicting pragmatic reasoning in language games}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Science}{336}{}{998-998}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Franke%
+\ \BBA {} Degen%
+}{%
+Franke%
+\ \BBA {} Degen%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+franke2016reasoning}
+\APACinsertmetastar {%
+franke2016reasoning}%
+\begin{APACrefauthors}%
+Franke, M.%
+\BCBT {}\ \BBA {} Degen, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Reasoning in reference games: Individual-vs.
+  population-level probabilistic modeling} {Reasoning in reference games:
+  Individual-vs. population-level probabilistic modeling}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{PloS one}{11}{5}{e0154854}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -910,34 +886,6 @@ Markova, I.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Mohr%
-}{%
-Mohr%
-}{%
-{\protect \APACyear {1983}}%
-}]{%
-mohr1983implications}
-\APACinsertmetastar {%
-mohr1983implications}%
-\begin{APACrefauthors}%
-Mohr, L\BPBI B.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1983}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {The implications of effectiveness theory for managerial
-  practice in the public sector} {The implications of effectiveness theory for
-  managerial practice in the public sector}.{\BBCQ}
-\newblock
-\BIn{} K\BPBI S.~Cameron\ \BBA {} D\BPBI A.~Whetten\ (\BEDS), \APACrefbtitle
-  {Organizational effectiveness} {Organizational effectiveness}\ (\BPGS\
-  225--239).
-\newblock
-\APACaddressPublisher{}{Elsevier}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Ossa-Richardson%
 }{%
 Ossa-Richardson%
@@ -957,32 +905,6 @@ Ossa-Richardson, A.%
 \APACrefbtitle {A history of ambiguity} {A history of ambiguity}.
 \newblock
 \APACaddressPublisher{}{Princeton University Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Pascale%
-\ \BBA {} Athos%
-}{%
-Pascale%
-\ \BBA {} Athos%
-}{%
-{\protect \APACyear {1981}}%
-}]{%
-pascale1981art}
-\APACinsertmetastar {%
-pascale1981art}%
-\begin{APACrefauthors}%
-Pascale, R\BPBI T.%
-\BCBT {}\ \BBA {} Athos, A\BPBI G.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{1981}.
-\newblock
-\APACrefbtitle {The art of {Japanese} management} {The art of {Japanese}
-  management}.
-\newblock
-\APACaddressPublisher{New York}{Simon \& Schuster}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
