@@ -75,11 +75,25 @@ determineUtteranceToObjectProbabilities <- function(consideredUtterances, curren
   mapUttToObj <- list()
   mapUttToObjProbs <- matrix(notObeyInst, length(consideredUtterances), length(currentObjects))
   for(utt in rep(1:length(consideredUtterances)) ) {
-    # determine array of all objects that match the utterance
+    # determine array of all objects that match the utterance:
+    #  take utterance index utt, 
+    #  return the indices of those rows of mapObjToUtt (=indices of objects) that have the feature denoted by utt
     mapUttToObj[[utt]] = ((which(mapObjToUtt[,] == consideredUtterances[utt])-1)%%nrow(mapObjToUtt))+1
+    #a (hopefully) equivalent alternative to the previous line: 
+    #  mapUttToObj[[utt]] = which(apply(mapObjToUtt, 1, function(currRow) (utt %in% currRow)))
+  
+  # Alternative code for the loop below
+    
+  #  for(obj in mapUttToObj[[utt]]) {
+  #    mapUttToObjProbs[utt,obj] <- mapUttToObjProbs[utt,obj] + 1;
+  #  }
+    
     for(i in rep(1:length(mapUttToObj[[utt]]))) {
       mapUttToObjProbs[utt,mapUttToObj[[utt]][i]] <- mapUttToObjProbs[utt,mapUttToObj[[utt]][i]] + 1;
-    }
+     }
+     
+    
+    
     mapUttToObjProbs[utt,] <- mapUttToObjProbs[utt,] / sum(mapUttToObjProbs[utt,])# length(mapUttToObj[[utt]])
   }
   return(mapUttToObjProbs)
@@ -96,7 +110,7 @@ getObjectPreferencePriors <- function(consideredUtterances, currentObjects, type
   for(utt in rep(1:length(consideredUtterances)) ) {
     objectPreferenceHardPriors[[utt]] <- mapUttToObjProbs[utt,]
   }
-  objectPreferenceHardPriors[[length(consideredUtterances)+1]] = 
+  objectPreferenceHardPriors[[length(consideredUtterances)+1]] = # Adding an extra row with flat prior over objects
     rep(1/length(currentObjects), length(currentObjects) )
   # soft preferences with uniform choice fusion. 
   softAddProb <- type

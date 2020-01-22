@@ -97,6 +97,8 @@ simplePragmaticSpeakerOri <-
     return(prefPost / sum(prefPost))
   }
 
+
+
 simplePragmaticSpeaker <-
   function(utterance,
            obj,
@@ -108,6 +110,7 @@ simplePragmaticSpeaker <-
     #cat("preferencesPriorAll", preferencesPriorAll, "\n")
     preferencesPrior <- preferencesPriorAll[relevantUtterances]
     prefPost <- rep(0, length(relevantUtterances) + 1)
+    
     for (pref in c(1:length(preferencesPrior))) {
       # prior over the preferences the speaker is interested in
       if (preferencesPrior[pref] > 0) {
@@ -123,9 +126,11 @@ simplePragmaticSpeaker <-
         #cat(typeof(preferencesPrior[pref]))
       }
     }
-    for (pos in c(1:length(relevantUtterances))) {
+    
+    for (pos in c(1:length(relevantUtterances))) { # for every feature value present
       preferencesPriorAll[relevantUtterances[pos]] <- prefPost[pos]
     }
+    
     if (sum(preferencesPriorAll) == 0) {
       # no evidence for any preferences... -> no inference
       return(preferencesPriorAll)
