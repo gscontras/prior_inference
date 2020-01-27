@@ -20,11 +20,14 @@ determineSpeakerPostListPrefsSimpleRSA <- function(currentObjectConstellation, f
   mapUttToObjDeterministic <- determineUtteranceToObjectProbabilities(validUtterances, 
                                                               currentObjectConstellation, 
                                                               mapObjToUtt, 0)
+#  prefPrior <- getPreferencesPrior(targetFeatureNum) # this part doesn't work
   #  print(mapUttToObjProbs)
   objectPreferenceSoftPriors <- getObjectPreferencePriors(validUtterances, currentObjectConstellation,
                                                           softPrefValue, mapUttToObjDeterministic)
   postListPrefs = rep(0,9)
-  for(f in c(1:3)) {
+
+# Old definition of priors  
+ for(f in c(1:3)) {
     prefPrior <- rep(0, length(validUtterances+1)) # determine preference prior over all valid utterances plus no preference
     relevantIndices <- which(validUtterances>(3*(f-1)) & validUtterances<(3*f+1)) # relevant indices for a particular feature type
     prefPrior[relevantIndices] <- 1/length(relevantIndices) # prior over the indices
@@ -32,10 +35,10 @@ determineSpeakerPostListPrefsSimpleRSA <- function(currentObjectConstellation, f
                                   allObjectsToUtterancesMappings[currentObjectConstellation[1],featureUtt]),
                           1, prefPrior, validUtterances, currentObjectConstellation, 
                           mapUttToObjProbs, objectPreferenceSoftPriors)
-    for(i in c((1+(f-1)*3):(f*3))) {
+   for(i in c((1+(f-1)*3):(f*3))) {
       postListPrefs[i] <- 1/3
     }
-    for(i in c(1:length(relevantIndices))) {
+   for(i in c(1:length(relevantIndices))) {
       postListPrefs[validUtterances[relevantIndices[i]]] <- prefPost[relevantIndices[i]] * length(relevantIndices) / 3 # posterior back into vector of 3x3 values
     }
   }
@@ -120,6 +123,7 @@ RSAModelKLDiv3paramsOnlyAvailableFeatureValuesConsidered_simpleRSA <- function(d
     uttFeat <- data[i,4]
     ##
     validUtterances <- determineValidUtterances(currentObjects)
+    targetFeatureNum <- data[i,9]
     ## determining the model predictions
     probModelRes <- determineSpeakerPostListPrefsSimpleRSA(currentObjects, uttFeat, abs(par1), abs(par2))
     ## adding the KL Divergence terms of the relevant feature values for the two sets of answers. 
@@ -130,25 +134,25 @@ RSAModelKLDiv3paramsOnlyAvailableFeatureValuesConsidered_simpleRSA <- function(d
     probModelRes[validUtterances[relevantIndices]] <- probModelRes[validUtterances[relevantIndices]] / 
                                                                     (sum(probModelRes[validUtterances[relevantIndices]]) +  1e-100)
     relIndicesRel <- validUtterances[relevantIndices] - ((data[i,5]-1)*3)
-    data[i,6+relIndicesRel] <- data[i,6+relIndicesRel] / (sum(data[i,6+relIndicesRel]) + 1e-100)
+    data[i,5+relIndicesRel] <- data[i,5+relIndicesRel] / (sum(data[i,5+relIndicesRel]) + 1e-100)
     # determining respective KL divergence values
     for(j in c(1:length(relevantIndices))) {
-      llRes <- llRes + data[i, 6+relIndicesRel[j]] * 
-        ( log(data[i, 6+relIndicesRel[j]] + 1e-100) - log(probModelRes[validUtterances[relevantIndices[j]]] + 1e-100) )
+      llRes <- llRes + data[i, 5+relIndicesRel[j]] * 
+        ( log(data[i, 5+relIndicesRel[j]] + 1e-100) - log(probModelRes[validUtterances[relevantIndices[j]]] + 1e-100) )
     }
     ##
-    ## answer set 2 with feature type data[i,6]
-    relevantIndices <- which(validUtterances>(3*(data[i, 6]-1)) & validUtterances<(3*data[i, 6] + 1)) # relevant indices for a particular feature type
-    # normalizing to one. 
-    probModelRes[validUtterances[relevantIndices]] <- probModelRes[validUtterances[relevantIndices]] / 
-                                                                     (sum(probModelRes[validUtterances[relevantIndices]]) +  1e-100)
-    relIndicesRel <- validUtterances[relevantIndices] - (3*(data[i, 6]-1))
-    data[i,9+relIndicesRel] <- data[i,9+relIndicesRel] / (sum(data[i,9+relIndicesRel]) + 1e-100)
+    # ## answer set 2 with feature type data[i,6]
+    # relevantIndices <- which(validUtterances>(3*(data[i, 6]-1)) & validUtterances<(3*data[i, 6] + 1)) # relevant indices for a particular feature type
+    # # normalizing to one. 
+    # probModelRes[validUtterances[relevantIndices]] <- probModelRes[validUtterances[relevantIndices]] / 
+    #                                                                  (sum(probModelRes[validUtterances[relevantIndices]]) +  1e-100)
+    # relIndicesRel <- validUtterances[relevantIndices] - (3*(data[i, 6]-1))
+    # data[i,9+relIndicesRel] <- data[i,9+relIndicesRel] / (sum(data[i,9+relIndicesRel]) + 1e-100)
     # determining respective KL divergence values
-    for(j in c(1:length(relevantIndices))) {
-      llRes <- llRes + data[i, 9+relIndicesRel[j] ] * 
-        ( log(data[i, 9+relIndicesRel[j] ] + 1e-100) - log(probModelRes[validUtterances[relevantIndices[j]]] + 1e-100) )
-    }
+    # for(j in c(1:length(relevantIndices))) {
+    #   llRes <- llRes + data[i, 9+relIndicesRel[j] ] * 
+    #     ( log(data[i, 9+relIndicesRel[j] ] + 1e-100) - log(probModelRes[validUtterances[relevantIndices[j]]] + 1e-100) )
+    # }
   }
   return(llRes)
 }

@@ -89,7 +89,13 @@ getSpeakerUtteranceUniformPrior <- function(relevantUtterances) {
   return(rep(1./length(relevantUtterances), length(relevantUtterances) ) )
 }
 
-
+getPreferencesPrior <- function(targetFeature) {
+  preferencesPrior <- c(rep(0, 9))
+  index <- targetFeature * 3
+  indices <- c(index, index - 1, index - 2)
+  preferencesPrior[indices] <- 1
+  return(preferencesPrior / sum(preferencesPrior))
+}
 
 # The ultimate function that determines the utterance preferences of a
 # speaker, who wants to learn about the listener's preferences. 
