@@ -18,8 +18,8 @@ source("CommonCode/getConstCodeStratUtt.R")
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobaOpt_fixed.1.1_and_OptPrefobedFixed.1.csv")
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt12.csv")
 
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed00_and_Opt1.csv")
-x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt1_nonIterative.csv")
+x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed00_and_Opt1.csv")
+#x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt1_nonIterative.csv")
 # adding feature property codes (which feature was uttereed, which features were questioned)
 
 uttFeat <- ifelse(x9data$utterance=="green" | x9data$utterance=="red" | x9data$utterance=="blue", 3,
@@ -149,7 +149,7 @@ uniqueCCode <- rep(0, length(x9data$X))
 featureOrder <- matrix(0, length(x9data$X), 3)
 objectOrder <- matrix(0, length(x9data$X), 3)
 for(i in c(1:length(x9data$X))) {
-  objectConstellation <- c(targetOC27[i],obj2OC27[i],obj3OC27[i])
+  objectConstellation <- c(targetObject[i],object2[i],object3[i]) 
   featChoice <- uttFeat[i]
   cc <- getConstellationCode(objectConstellation, featChoice)
   constellationCode[i,] <- cc[[1]]

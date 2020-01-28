@@ -53,8 +53,8 @@ if (whichDataSet == 0) {
 # totalWorkerWO <- 52
 
 ### Setting default parameters. 
-notObeyInst <- 0
-softPrefValue <- 1
+notObeyInst <- 0.114
+softPrefValue <- 0.664
 allObjectCodes <- getAllObjectCodes(allObjects, allUtterances) # working with "dotted" NOT "polka-dotted"!!!
 
 inputData$orderObjNum1 <- inputData$order0
@@ -908,13 +908,13 @@ if (plotting) {
   
   condensedComparePlot <-
     ggplot(inputDataCondensedCompare,
-           mapping = aes(normResponse, preferencesPrior)) +
+           mapping = aes(preferencesPrior, normResponse)) + # January 23, 2020, flipped axes
     geom_point() +
     geom_smooth(method = lm, se = FALSE) +
     coord_cartesian(ylim = c(0, 1)) +
     labs(x = "Last trials of block \nAll data \n",
-         x = "Human predictions",
-         y = "Model Predictions")
+         x = "Model Predictions",
+         y = "Human Data")
   
   condensedAmbiguousComparePlot <-
     ggplot(inputDataCondensedAmbiguousCompare,
