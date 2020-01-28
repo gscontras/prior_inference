@@ -275,6 +275,6 @@ x9data <- data.frame(x9data, consCodeAndPosteriorsNO)
 if(procType == 1) {
   write.csv(x9data, "X9_Data/x9dataAugm_SRSAglobalOpt_fixed00_and_Opt1.csv")
 }else if(procType == 2) {
-  write.csv(x9data, "X9_Data/x4pDataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt12_nonIterative.csv")
+  write.csv(x9data, "X9_Data/x9dataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt1_nonIterative.csv")
 }
 
