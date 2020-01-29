@@ -123,7 +123,7 @@ RSAModelKLDiv3paramsOnlyAvailableFeatureValuesConsidered_simpleRSA <- function(d
     uttFeat <- data[i,4]
     ##
     validUtterances <- determineValidUtterances(currentObjects)
-    targetFeatureNum <- data[i,9]
+#    targetFeatureNum <- data[i,9]
     ## determining the model predictions
     probModelRes <- determineSpeakerPostListPrefsSimpleRSA(currentObjects, uttFeat, abs(par1), abs(par2))
     ## adding the KL Divergence terms of the relevant feature values for the two sets of answers. 

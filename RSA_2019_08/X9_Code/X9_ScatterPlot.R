@@ -5,21 +5,22 @@ source("CommonCode/getConstCodeStratUtt.R")
 # simple RSA
 ############################################
 
-# simple RSA with individual optimization
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_and_fixed.20.csv")
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_PrefStrengthOpt_obed0_and_obed.2.csv")
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_PrefandObedOpt_and_fixed.2.2.csv")
-
-# simple RSA with individual crossvalidation (leave-one-out) 
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAcrossVal_Opt1_and_Opt2.csv")
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAcrossVal_Opt1obed.1_and_fixed.1.1.csv")
-
-# simple RSA global optimization
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobaOpt_fixed.1.1_and_OptPrefobedFixed.1.csv")
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt12.csv")
-
-x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed00_and_Opt1.csv")
+#x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed00_and_Opt1.csv")
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt1_nonIterative.csv")
+#x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12.csv")
+x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
+
+# Take only the data from the last trial in each block
+
+filtering <- "trial4" 
+
+if (filtering == "trial4"){
+  trial4indices <- which(x9data$X%%4 == 0)
+  x9data <- x9data[trial4indices,]
+}
+  
+
+#########################################################
 # adding feature property codes (which feature was uttereed, which features were questioned)
 
 uttFeat <- ifelse(x9data$utterance=="green" | x9data$utterance=="red" | x9data$utterance=="blue", 3,
@@ -185,11 +186,13 @@ for(i in c(1:length(x9data$X))) {
   ## now rearranging the individual feature values dependent on the object order (first object is the chosen one!)
   objectConstellation <- c(targetObject[i],object2[i],object3[i])
   objectCReordered <- replace(objectConstellation, c(1:3), objectConstellation[objectOrder[i,]])
-
+# Reordering of objects: target object stays in place, sometimes affects the ordering of 2nd and 3rd objects
+  
   for(j in c(1:3)) {
     featValOrder <- rep(0,3)
     targetFeatureValue <- allObjectsToUtterancesMappings[objectCReordered[1],featureOrder[i,j]]
     featValOrder[1] <-  targetFeatureValue # target feature value comes first
+#    featValOrder[1] <-  targetFeat # something going on with feature ordering ...
     featValIndex <- 2
     for(k in c(2:3)) {
       objectFeatureValue <- allObjectsToUtterancesMappings[objectCReordered[k],featureOrder[i,j]]

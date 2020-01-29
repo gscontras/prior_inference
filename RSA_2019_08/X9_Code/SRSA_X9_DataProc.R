@@ -1,7 +1,21 @@
-source("X9_Code/SRSA_StratUtt_X9.R")
-source("CommonCode/SRSA_StratUttOptimization_iterative.R")
 
-# loading the raw pilot data (as Greg sent it on 2018/12/21)
+
+############################################################################################
+procType <- 2    ###########################################################################
+############################################################################################
+# 1 iterative (works)
+# 2 non-iterative (doesn't work)
+
+if (procType == 1){
+  source("X9_Code/SRSA_StratUtt_X9.R")
+  source("CommonCode/SRSA_StratUttOptimization_iterative.R") 
+} else {
+  source("CommonCode/SRSA_StratUtt.R")
+  source("X9_Code/SRSA_StratUttOptimization_X9.R")
+}
+
+
+# Data file from Ella
 x9data = read.csv(
   "X9_Data/ella_total_allDataCleaned.csv",
   header = TRUE,
@@ -10,12 +24,11 @@ x9data = read.csv(
 
 # adding feature property codes (which feature was uttereed, which features were questioned)
 uttFeat <- ifelse(x9data$utterance=="green" | x9data$utterance=="red" | x9data$utterance=="blue", 3,
-                            ifelse(x9data$utterance=="solid" | x9data$utterance=="striped" | x9data$utterance=="polka-dotted", 2, 1))
+                  ifelse(x9data$utterance=="solid" | x9data$utterance=="striped" | x9data$utterance=="polka-dotted", 2, 1))
 x9data$uttFeat <- uttFeat
-
 targetFeat <- x9data$targetFeatureNum
 
-## adding the 1-27 target and object2 & object3 code.
+## adding the 1-27 target and object1, object2 & object3 code.
 temp <- x9data$simulatedAnswer
 temp2 <- (temp - temp %% 10) / 10
 temp3 <- (temp2 - temp2 %% 10) / 10
@@ -42,18 +55,12 @@ x9data$obj3OC27 <- obj3OC27
 
 ## now determining the recorded subject responses 
 subjectResponses <- matrix(0,length(x9data$X),3)
-# postListMat <- matrix(0,length(pilotData$X),9)
-# logLik <- rep(0,length(pilotData$X))
+
 for(i in c(1:length(x9data$X))) {
-  # objectConstellation <- c(targetOC27[i],obj2OC27[i],obj3OC27[i])
-  # featChoice <- uttFeat[i]
-  # postListMat[i,] <- determineSpeakerPostListPrefs(objectConstellation, featChoice, .1, 0)
-  # print(c(objectConstellation, featChoice))
-  #
   subjectResponses[i,1] <- x9data$normResponse0[i] + 1e-100
   subjectResponses[i,2] <- x9data$normResponse1[i] + 1e-100
   subjectResponses[i,3] <- x9data$normResponse2[i] + 1e-100
-#  subjectResponses[i,1:3] <- subjectResponses[i,1:3] / sum(subjectResponses[i,1:3])
+  #  subjectResponses[i,1:3] <- subjectResponses[i,1:3] / sum(subjectResponses[i,1:3]) # Ella already normalized the data
 }
 
 ## ordering the recorded subject responses such that they can be compared directly 
@@ -79,9 +86,9 @@ for (i in 1:length(x9data$X)){
     object2[i] <- obj2OC27[i]
     object3[i] <- obj3OC27[i]
   } else if (targetOC27[i] == obj2OC27[i]) 
-    {targetObject[i] <- obj2OC27[i]
-    object2[i] <- obj1OC27[i]
-    object3[i] <- obj3OC27[i]
+  {targetObject[i] <- obj2OC27[i]
+  object2[i] <- obj1OC27[i]
+  object3[i] <- obj3OC27[i]
   } else {
     targetObject[i] <- obj3OC27[i]
     object2[i] <- obj1OC27[i]
@@ -100,17 +107,17 @@ paramsWorkers12 <- matrix(0,length(unique(workerIDs)), 5)
 ##
 workerIndex <- 1
 for(workerID in c(0:idMax)) {
-  idICases <- which(workerIDs == workerID)
-  if(length(idICases)>0) {
+  allIndices <- which(workerIDs == workerID)
+  if(length(allIndices)>0) {
     llWorkers12[workerIndex,1] <- workerID
     paramsWorkers12[workerIndex,1] <- workerID
     ## based model -> no change in preferences!
-    llWorkers12[workerIndex,2] <- 0 # -2 * length(idICases) * log(1/3)
-    for(i in c(1:length(idICases))) {
+    llWorkers12[workerIndex,2] <- 0 # -2 * length(allIndices) * log(1/3)
+    for(i in c(1:length(allIndices))) {
       for(j in c(1:3)) {
         llWorkers12[workerIndex, 2] <- llWorkers12[workerIndex, 2] + 
-                                        subjectResponses[idICases[i],j] * 
-                                          (log(subjectResponses[idICases[i],j]) - log(1/3))
+          subjectResponses[allIndices[i],j] * 
+          (log(subjectResponses[allIndices[i],j]) - log(1/3))
       }
     }
     ## done with this worker -> proceed
@@ -134,9 +141,13 @@ for(workerID in c(0:idMax)) {
     dataWorker[,5] <- targetFeat[idICases]
     dataWorker[,6:8] <- subjectResponses[idICases,1:3]
     
-    # before optimization:         llWorkers12[workerIndex,3] <- RSAModelLL1(c(.2), dataWorker)
+    ######################### 1 parameter optimization ###########################
+    
+    # before optimization:         llWorkers12[1,3] <- RSAModelLL1(c(.2), dataWorker)
     optRes1 <- optimize(RSAModelLL1_1simpleRSA, c(0,1e+10), dataWorker)   
-    optRes2 <- optimize(RSAModelLL1_1simpleRSA_notObey.2, c(0,1e+10), dataWorker)   
+    optRes2 <- optimize(RSAModelLL1_2simpleRSA, c(0,1e+10), dataWorker)   
+    
+    ######################### recording results ################################# 
     ## 1 param RSA model
     llWorkers12[workerIndex,3] <- optRes1$objective
     llWorkers12[workerIndex,4] <- optRes2$objective
@@ -151,9 +162,9 @@ for(workerID in c(0:idMax)) {
   }
 }
 
-##########
+######################### 2 parameter optimization ###########################
+
 ## Optimizing the log likelihoods (maximum log likelihoods for each worker...)
-# 2 & 3 parameters 
 print("Starting optimization with two free parameters Simple RSA model... ")
 workerIDs <- x9data$workerid
 idMax <- max(workerIDs)
@@ -164,20 +175,20 @@ for(workerID in c(0:idMax)) {
   idICases <- which(workerIDs == workerID)
   if(length(idICases)>0) {
     ## generating data matrix for the purpose of optimization
-    dataWorker <- matrix(0, length(idICases), 12)
-    dataWorker[,1] <- targetOC27[idICases]
-    dataWorker[,2] <- obj2OC27[idICases]
-    dataWorker[,3] <- obj3OC27[idICases]
+    dataWorker <- matrix(0, length(idICases), 8)
+    dataWorker[,1] <- targetObject[idICases]
+    dataWorker[,2] <- object2[idICases]
+    dataWorker[,3] <- object3[idICases]
     dataWorker[,4] <- uttFeat[idICases]
     dataWorker[,5] <- targetFeat[idICases]
-    dataWorker[,6] <- q2Feat[idICases]
-    dataWorker[,7:12] <- subjectResponses[idICases,1:6]
+    dataWorker[,6:8] <- subjectResponses[idICases,1:3]
     
 # before optimization:     llWorkers12[workerIndex,7] <- RSAModelLL2(c(.2,.2), dataWorker)
     optRes2n1 <- optim(c(.2, .2), RSAModelLL2_simpleRSA, method="L-BFGS-B", gr=NULL, dataWorker,
                        lower = c(0,0), upper = c(1e+10,1e+10))
+    ##########
     # print(optRes)
-    ## 2 and 3 param RSA model2
+    ## 2 param RSA model2
     ## max likelihood parameter choice
     llWorkers12[workerIndex,5] <- optRes2n1$value
     ## max likelihood parameter choice
@@ -190,8 +201,11 @@ for(workerID in c(0:idMax)) {
   }
 }
 
-
-
 ## writing out result tables
-write.csv(llWorkers12, "X4_Data/x4KLDivs_simpleRSA_indOpt_2019_1010")
-write.csv(paramsWorkers12, "X4_Data/x4Params_simpleRSA_indOpt_2019_1010.csv")
+if(procType == 1) {
+write.csv(llWorkers12, "X9_Data/x9KLDivs_simpleRSA_indOpt.csv")
+write.csv(paramsWorkers12, "X9_Data/x9Params_simpleRSA_indOpt.csv")
+} else {
+write.csv(llWorkers12, "X9_Data/x9KLDivs_simpleRSA_indOpt_nonIterative.csv")
+write.csv(paramsWorkers12, "X9_Data/x9Params_simpleRSA_indOpt_nonIterative.csv")  
+}
