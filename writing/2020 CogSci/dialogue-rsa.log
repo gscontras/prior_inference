@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 JAN 2020 15:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  31 JAN 2020 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,20 +910,20 @@ Underfull \hbox (badness 2698) in paragraph at lines 241--242
 Underfull \vbox (badness 1178) has occurred while \output is active []
 
 
-<images/evalNumCompairPlotWithFirstBlock.png, id=176, 568.97139pt x 568.97139pt
+<images/evalNumCompairPlotWithFirstBlock.png, id=175, 568.97139pt x 568.97139pt
 >
 File: images/evalNumCompairPlotWithFirstBlock.png Graphic file (type png)
  <use images/evalNumCompairPlotWithFirstBlock.png>
 Package pdftex.def Info: images/evalNumCompairPlotWithFirstBlock.png used on in
-put line 275.
+put line 274.
 (pdftex.def)             Requested size: 121.95563pt x 121.95314pt.
 
-<images/LearningProcessLinePlot1.png, id=178, 568.97139pt x 568.97139pt>
+<images/LearningProcessLinePlot1.png, id=177, 568.97139pt x 568.97139pt>
 File: images/LearningProcessLinePlot1.png Graphic file (type png)
 
 <use images/LearningProcessLinePlot1.png>
 Package pdftex.def Info: images/LearningProcessLinePlot1.png used on input line
- 285.
+ 284.
 (pdftex.def)             Requested size: 121.95563pt x 121.95314pt.
  [4 <./images/utterance_choice_modification_4.png>]
 <images/LearningProcessLinePlotHuman3.png, id=190, 426.70273pt x 426.70273pt>
@@ -931,7 +931,7 @@ File: images/LearningProcessLinePlotHuman3.png Graphic file (type png)
 
 <use images/LearningProcessLinePlotHuman3.png>
 Package pdftex.def Info: images/LearningProcessLinePlotHuman3.png used on input
- line 295.
+ line 294.
 (pdftex.def)             Requested size: 121.95563pt x 121.95662pt.
 
 <images/LearningProcessLinePlotHuman2.png, id=191, 426.70273pt x 426.70273pt>
@@ -939,36 +939,36 @@ File: images/LearningProcessLinePlotHuman2.png Graphic file (type png)
 
 <use images/LearningProcessLinePlotHuman2.png>
 Package pdftex.def Info: images/LearningProcessLinePlotHuman2.png used on input
- line 303.
+ line 302.
 (pdftex.def)             Requested size: 121.95563pt x 121.95662pt.
 
-Underfull \hbox (badness 1259) in paragraph at lines 313--314
+Underfull \hbox (badness 1259) in paragraph at lines 312--313
 []\OT1/ptm/m/n/10 We sim-u-late the am-bi-gu-ity res-o-lu-tion pro-cess with a
  []
 
 (./dialogue-rsa.bbl [5 <./images/evalNumCompairPlotWithFirstBlock.png> <./image
 s/LearningProcessLinePlot1.png> <./images/LearningProcessLinePlotHuman3.png> <.
 /images/LearningProcessLinePlotHuman2.png>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 330.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
  [6
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 330.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
  (./dialogue-rsa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 330.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 330.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 329.
 Package rerunfilecheck Info: File `dialogue-rsa.out' has not changed.
 (rerunfilecheck)             Checksum: 69B8FF0981C2367B9CAD18D9423EA9BF;554.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 330.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 329.
  ) 
 Here is how much of TeX's memory you used:
  17994 strings out of 492995
  333877 string characters out of 6132704
- 410542 words of memory out of 5000000
+ 411539 words of memory out of 5000000
  21159 multiletter control sequences out of 15000+600000
  43979 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,9n,54p,1117b,456s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,9n,54p,1117b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -978,7 +978,7 @@ e/2017/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2017/texm
 f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb>
-Output written on dialogue-rsa.pdf (6 pages, 660211 bytes).
+Output written on dialogue-rsa.pdf (6 pages, 660184 bytes).
 PDF statistics:
  248 PDF objects out of 1000 (max. 8388607)
  216 compressed objects within 3 object streams

@@ -66,9 +66,9 @@ We propose that ambiguity of reference creates a space of alternatives, and choo
  Making an inference about those individual predispositions requires the speaker to reason pragmatically about the listener.
 %pragmatic reasoning of the listener---a higher-order pragmatic reasoning.
 % Asya: I'm not sure it's higher order pragmatic reasoning in the simple model: the speaker reasons about the listener, but the listener is just driven by her preferences, not full pragmatic reasoning.
-We use the paradigm of references games, as developed in \citeA{frank2009informative}, to model this choice process, and test whether human subjects are able to infer what properties of objects determined a particular course of events. In the course of a classic reference game, a speaker wants to signal a particular object to the listener, and to do that the speaker is allowed to use one-word utterances to refer to one of the objects (e.g. \citeNP{frankgoodman2012}). The task of the listener is to infer which of the available objects is the most likely referent. The listener reasons about the process that generated the utterance, assuming that the speaker uses the utterance that is the most efficient to signal a particular object. For example, consider a scenario in  Figure \ref{FG-ref-game}.
+We use the paradigm of references games, as developed in \citeA{frank2009informative}, to model this choice process, and test whether human subjects are able to infer what properties of objects determined a particular course of events. In the course of a classic reference game, a speaker wants to signal a particular object to the listener, and to do that the speaker is allowed to use one-word utterances to refer to one of the objects (e.g. \citeNP{frankgoodman2012}). The task of the listener is to infer which of the available objects is the most likely referent. The listener reasons about the process that generated the utterance, assuming that the speaker uses the utterance that is the most efficient to signal a particular object. 
 
-Suppose a speaker produces a single-word utterance ``blue'' -- meaning: choose a blue object -- creating referential ambiguity for the listener, that is, offering a choice between a blue square and a blue circle. 
+For example, consider a scenario in  Figure \ref{FG-ref-game}. Suppose a speaker produces a single-word utterance ``blue'' -- meaning: choose a blue object -- creating referential ambiguity for the listener, that is, offering a choice between a blue square and a blue circle. 
 Suppose further that, upon hearing ``blue'', the listener selects the blue circle.
 In observing this choice, the speaker learns something about the private thoughts of the listener: what made her select the blue circle instead of the blue square? If the listener's choice was driven by purely pragmatic considerations modeled in \citeA{frankgoodman2012}, the listener should have selected the blue square, since if the speaker had intended to refer to the circle, she could have used a more efficient utterance ``circle''. Since she did not say ``circle'' she must have referred to the square. Yet, in our situation, the listener did pick the circle following the utterance ``blue''. Perhaps there is another choice strategy that the listener is using: the circle might be more salient to the listener, the listener has a preference for circles, or the listener may believe that the speaker has a preference for circles; there may even be mutual agreement that circles are to be preferred when possible. Importantly, by observing how the listener resolves the ambiguity in reference, the speaker can learn something about the private thoughts of the listener.
 
@@ -90,7 +90,7 @@ We hypothesize that subjects use a Bayesian learning process: they take into acc
 
 \section{Modeling}
 
-The recursive interactions between the speaker and the listener are modeled wihin the Rational Speech Act (RSA)  framework (\citeNP{frankgoodman2012,goodman2013knowledge, frankejaeger2016, goodmanfrank2016}, cf. a game-theoretic approach of recursive reasoning in \citeNP{franke2009signal}. The model formalizes a state space, or scenario, $S$ in the form of a particular set of objects (e.g. Figure~\ref{FG-ref-game}) and the corresponding utterance space $U$. The utterance space contains all possible utterances which correspond to object features that are present in a particular scenario $S$.
+The recursive interactions between the speaker and the listener are modeled wihin the Rational Speech Act (RSA)  framework (\citeNP{frankgoodman2012,goodman2013knowledge, frankejaeger2016, goodmanfrank2016}, cf. a game-theoretic approach of recursive reasoning in \citeNP{franke2009signal}). The model formalizes a state space, or scenario, $S$ in the form of a particular set of objects (e.g. Figure~\ref{FG-ref-game}) and the corresponding utterance space $U$. The utterance space contains all possible utterances which correspond to object features that are present in a particular scenario $S$.
 
 At the base of the reasoning process, there is a hypothetical, na\"ive literal listener $L_0$, who hears an utterance $u\in U$ and attempts to infer the object $s \in S$ that $u$ is meant to reference. 
 $L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}$(s)$, which returns $true$ (i.e., 1) for those objects that contain the uttered feature and $false$ (i.e., 0), otherwise.
@@ -135,7 +135,7 @@ For example, the listener may like blue things, such that she may be more likely
 As a result, when a pragmatic speaker produces utterance $u$ and observes the listener's referent choice $s$, the speaker may infer posteriors over possible feature preferences, attempting to explain the observed object choice in this way.
 
 We introduce two more modifications to the original version of RSA. First, our model relies of fewer layers of reasoning. Recently, it has been shown that even in the original, simpler reference games, fewer layers of reasoning often perform equally well or better than more complex RSA-based models \cite{sikos2019}.
-Accordingly, simplePSIRSA removes the reasoning about alternative utterances and allows the pragmatic speaker to directly tap into the (expected) interpretation of $L_0$, augmenting the literal listener's choice likelihoods with the feature-preference-dependent object prior $P(s\mid f)$:
+Accordingly, PSIRSA removes the reasoning about alternative utterances and allows the pragmatic speaker to directly tap into the (expected) interpretation of $L_0$, augmenting the literal listener's choice likelihoods with the feature-preference-dependent object prior $P(s\mid f)$:
 \begin{equation}
 P_{L_{0}}(s\mid u,f) \propto \sem{$u$}(s) \cdot P(s\mid f).
 \end{equation}
@@ -145,14 +145,14 @@ The pragmatic speaker $S_{1\textrm{-simp}}$ then reasons directly about the modi
 P_{S_{1}}(f\mid u,s) \propto P_{L_{0}}(s\mid u,f) \cdot P(f).
 \end{equation}
 
-As a result, simplePSIRSA ignores any indirect pragmatic reasoning considerations about which object the speaker may refer to given an utterance and a particular object constellation.
+As a result, PSIRSA ignores any indirect pragmatic reasoning considerations about which object the speaker may refer to given an utterance and a particular object constellation.
 It simply assumes that all objects may be chosen that match the utterance, modifying these choice options dependent on the feature-preference-dependent object choice priors. The corresponding utterance-selection model simplifies the reasoning process accordingly:
 \begin{equation}
 P_{S_1}(u) \propto \sum_{s:\  [\![u]\!](s)=1} P_{L_0}(s|u,f)\ \exp(\lambda \cdot \textrm{KL}(P(f)\mid\mid P_{S_{1}}(f\mid u,s))).
 \label{eq:kldivlambdasimp}
 \end{equation}
 
-Second, we model reasoning as an iterative process where a learner accumulates and updates her understanding of another person's beliefs over a set of trials. A learner starts with a flat prior over possible feature preferences and infers posteriors upon hearing an utterance and observing an object. Then the model passes the obtained posterior distribution of preferences as prior for the next trial, implementing the Bayesian learning process.
+Second, we model reasoning as an iterative process where a learner accumulates and updates her understanding of another person's beliefs over a set of trials. A learner starts with a flat prior over possible feature preferences and infers posteriors upon hearing an utterance and observing an object choice. Then the model passes the obtained posterior distribution of preferences as prior for the next trial, implementing the Bayesian learning process.
 
 \subsection{Free parameter optimization}
 
@@ -186,7 +186,7 @@ P(s \mid f) \propto \begin{cases}
 controlling the choice probability of those objects $s$ that contain feature $f$ compared to those that do not.  
 A value of $\gamma=0$ models a hard preference choice; in this case, the speaker always chooses one of the preferred objects. 
 On the other hand, when $\gamma \rightarrow \infty$, the choice prior becomes uniform over all objects, thus ignoring feature preferences. 
-For example, consider a scenario in Figure \ref{exp1-trial}, where the listener picked a striped object following the utterance ``circle''. If her $\gamma=0$, she should adjust the ``striped'' slider to 1 and set other sliders to 0 if we assume she has not previously learned anything about the relative ranking of the other values. If her $\gamma=0$, the model predicts that she sets the ``striped'' slider to 0.75 and the other slider values to 0.25. In that case, we can say that her preferences became softer, i.e. less categorical.
+For example, consider a scenario in Figure \ref{exp1-trial}, where the listener picked a striped object following the utterance ``circle''. If her $\gamma=0$, she should adjust the ``striped'' slider to 1 and set other sliders to 0 if we assume she has not previously learned anything about the relative ranking of the other values. If her $\gamma=1$, the model predicts that she sets the ``striped'' slider to 0.75 and the other slider values to 0.25. In that case, we can say that her preferences became softer, i.e. less categorical.
 % if gamma = 1 and three feature values are present, then picked object gets 1, other objects get 0
 % (1+1) + (1+0) + (1+0) = 4. Devide everything by 4: 0.5, 0.25, 0.25
 % 
@@ -232,7 +232,7 @@ The experiment is designed to address three questions: first, whether speakers a
 \begin{figure*}[ht!]
 	\centering
 	\includegraphics[width=5.5in]{images/utterance_choice_modification_4.png}
-	\caption{ \small{A sample trial.  Each trial portrays a listener. The speaker (experiment participant) produces an utterance to refer to one of the objects. The listener picks the object with the orange dotted outline. The experiemtn participants then evaluates what preferences of the listener may have led her to the particular object choice, specifying their inference by adjusting the sliders for each of the features}.}
+	\caption{ \small{A sample trial.  Each trial portrays a listener. The speaker (experiment participant) produces an utterance to refer to one of the objects. The listener picks the object with the orange dotted outline. The experiment participant then evaluates what preferences of the listener may have led her to the particular object choice, specifying the inference by adjusting the sliders for each of the features}.}
 	\label{exp1-trial}
 \end{figure*}
 
@@ -243,7 +243,7 @@ We recruited 100 participants with US IP addresses through Amazon.com's Mechanic
 \subsection{Design and methods}
 
 We presented the subjects with a series of reference game scenarios modeled after Figure~\ref{FG-ref-game} from \citeA{frankgoodman2012}.
-Each trial consisted of 2 parts, as shown in Figure~\ref{exp1-trial}. The experiment participant played the role of a speaker. Her task first was to find out a certain type of preferences of the listener, either related to color of objects, their pattern or shape. Listener names and what particular feature preferences we need to infer (color, shape or pattern) were chosen randomly in each block but remained constant within a block. Participants completed a series of 4 blocks each containing 4 trials. 
+Each trial consisted of 2 parts, as shown in Figure~\ref{exp1-trial}. The experiment participant played the role of a speaker. Her task first was to find out a certain type of preferences of the listener, either related to color of objects, their pattern or shape. Listener names and what particular feature preferences the speaker needs to infer (color, shape or texture) were chosen randomly in each block but remained constant within a block. Participants completed a series of 4 blocks each containing 4 trials. 
 
 Objects were allowed to vary along three dimensions: color (blue, red, green), shape (cloud, circle, square), and texture (solid, striped, polka-dotted). The speaker's utterance was chosen at random from the properties of the three objects present, excluding the utterances which correspond to the target feature (e.g. texture in Figure \ref{exp1-trial}).  All trials contained at least 1 ambiguous utterance. 
 In the first part of the experiment (left side of the screen) the speaker had to pick an utterance and watch the simulated listener select an object. The listener's choices were driven by the literal semantics of the utterance, i.e. only red objects qualified as a possible choice following the utterance ``circle''. And second, we built in particular distributions of feature preferences giving a priority scale. The listener picked the object that matched the highest value on the scale. For example if the scale was red $>$ green $>$ blue, and all three colors were present in a scene, the listener picked the red object. If only green and blue objects were present and qualified, the listener picked a green object.
@@ -255,8 +255,7 @@ To compare the model predictions to the human data, we calculated an average val
 %, binning data into 48 ambiguity classes.
 % for Experiment 1 and 14 classes for Experiment 2. 
 %We excluded the sliders if their corresponding feature value was not present in a scene. For example, for the trial depicted in Figure \ref{exp1-trial}, we excluded the sliders for solid things and squares since none of these are present, and therefore no learning about them is possible.
-We partitioned the data into ambiguity classes, similar to \citeA{frankgoodman2012}. Depending on how many features competitor objects share with the chosen object, we were able to identify 33 ambiguity classes, which group the constellations that have the exact same ambiguity pattern. The ambiguity classes distinguish how many objects are referenced by the utterance, how the referenced objects differ in their two non-uttered features, and how the non-referenced objects differ from the referenced objects and from each other. We excluded combinations that contained identical objects as well as combinations were objects share non of the features, i.e. all objects are unique.
-As a result, each ambiguity class yields unique model prediction values for the individual features present (with respect to their ``ambiguity role'' in the particular ambiguity class) in corresponding scenarios $S$, effectively distinguishing all model-relevant cases.
+We partitioned the data into ambiguity classes, similar to \citeA{frankgoodman2012}. Depending on how many features competitor objects share with the chosen object, we were able to identify 48 ambiguity classes, which group the constellations that have the exact same ambiguity pattern. The ambiguity classes distinguish how many objects are referenced by the utterance, how the referenced objects differ in their two non-uttered features, and how the non-referenced objects differ from the referenced objects and from each other. We excluded combinations that contained identical objects as well as combinations were objects share non of the features, i.e. all objects are unique, leaving us 33 classes in this experiment. Each ambiguity class yields unique model prediction values for the individual features present (with respect to their ``ambiguity role'' in the particular ambiguity class) in corresponding scenarios $S$, effectively distinguishing all model-relevant cases.
 
 %For example, considering the top-left-most case, ,where the utterance ``red" refers to two possible objects and the choice falls onto one of them (here the red cloud), which shares one property with the other, not referenced object (its cloud shape), but no further properties with the other referenced object (neither its shape nor its pattern). Thus, its other property is unique (its striped pattern)
 %If, as an alternative scenario, he utterance was ``green", only one object would qualify (the green, dotted cloud), preventing the learning about preferences. 
@@ -266,7 +265,7 @@ As a result, each ambiguity class yields unique model prediction values for the 
 
 \section{Results}
 
-In this experiment, the task of the participants was to first pick an utterance, then observe the choice of an object and ultimately infer the hierarchy of the listener's preferences. In order to assess whether subjects learned the target ordering of listener preferences, we developed an evaluation score from 0 to 3. The preferences are encoded as pairs. If a hierarchy is $ a > b > c $, there are three relations to learn:  $ a > b$; $ b > c $, and $ a >  c $. A score of 3 is assigned if the relations in all the pair are identified correctly, a score of 0 means that all the relations between feature preferences have been reversed, and values 1 and 2 correspond to 1 and 2 pairs guessed correctly respectively.
+In this experiment, the task of the participants was to first pick an utterance, then observe the choice of an object and ultimately infer the hierarchy of the listener's preferences. In order to assess whether subjects learned the target ordering of listener preferences, we developed an evaluation score from 0 to 3. The preferences are encoded as pairs. If a hierarchy is $ a > b > c $, there are three relations to learn:  $ a > b$; $ b > c $, and $ a >  c $. A score of 3 is assigned if the relations in all the pairs are identified correctly, a score of 0 means that all the relations between feature preferences have been reversed, and values 1 and 2 correspond to 1 and 2 pairs guessed correctly respectively.
 
 Figure \ref{learning-success} reveals that both the model and the human subjects successfully learned the implemented hierarchy of preferences: both got the evaluation scores of 2 and 3 most of the time.
 
@@ -308,7 +307,7 @@ As both Figures \ref{learning-success} and \ref{learning-progression} show, in c
 
 \section{Discussion}
 
-In order to interpret an ambiguous utterance, listener need to rely on their priors to determine which interpretation is most likely. These priors broadly viewed can include personal preferences and beliefs, prior knowledge, and understanding of the current context. Listener choices are in that sense informative about the underlying priors of the listener. 
+In order to interpret an ambiguous utterance, the listener needs to draw on her prior knowledge to decide which interpretation is most likely. This prior knowledge broadly viewed can include personal preferences and beliefs, as well as the understanding of the current context. Listener choices are in that sense informative about the underlying priors of the listener. 
 
 We simulate the ambiguity resolution process with a Bayesian reasoning model that allows accumulation of evidence over a series of trials. We demonstrate that if ambiguous utterance are chosen, the accuracy of guesses improves as a function of trial order, and we faithfully model this process computationally.
 
