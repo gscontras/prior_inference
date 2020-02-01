@@ -1,18 +1,18 @@
 source("CommonCode/AllUtterancesAndObjects.R")
 
 # simple KL divergence function
-KLdivergence <- function(p, q) {
-  toleranceOffset <- 1e-20
-  return(max(0, sum(p * (log(
-    (toleranceOffset + p) / (toleranceOffset + q)
-  )))))
-}
+KLdivergenceDeprecated <-
+  function(p, q) {
+    toleranceOffset <- 1e-20
+    return(max(0, sum(p * (log(
+      (toleranceOffset + p) / (toleranceOffset + q)
+    )))))
+  }
 
-# The simple listener function
-# determines the listener's object choice given the
+# The simple listener function determines the listener's object choice given the
 # objects to choose from and its preferences, determining
 # P(obj | utt, listener's object preferences)
-simpleListener <-
+simpleListenerDeprecated <-
   function(utterance,
            mapUttToObjProbs,
            listenerObjectPreferences) {
@@ -24,46 +24,6 @@ simpleListener <-
     return(objPosterior / sum(objPosterior))
   }
 
-simpleListenerElla <-
-  function(utterance,
-           mapUttToObjToPref,
-           listenerObjectPreferences) {
-    objPosterior <-
-      as.numeric(mapUttToObjToPref[utterance, ]) * (listenerObjectPreferences + 1e-100)
-    if (sum(as.numeric(objPosterior)) == 0) {
-      return(as.numeric(objPosterior))
-    }
-    print(as.numeric(objPosterior) / sum(as.numeric(objPosterior)))
-    return(as.numeric(objPosterior) / sum(as.numeric(objPosterior)))
-  }
-
-#
-# simpleListenerMy <- function(utterance, allObjectsToUtterancesMappings, currentObjects, allUtterancePref) {
-#   possibleObjects <- which(allObjectsToUtterancesMappings[currentObjects,] == utterance,arr.ind=TRUE)[,1]
-#   possibleObjFeatureV <- allObjectsToUtterancesMappings[currentObjects,][possibleObjects,]
-#   possibleObjPref <- possibleObjFeatureV
-#   for(pos in c(1:length(possibleObjFeatureV))) {
-#     featureValue <- possibleObjFeatureV[pos]
-#     possibleObjPref[pos] <- allUtterancePref[featureValue,3]
-#   }
-#   print("simpleListener")
-#   print(possibleObjPref)
-#   if(is.na(possibleObjPref[1])){
-#     print("No valid utterance")
-#     return (c(0,0,0,0,0,0,0,0,0))
-#   }
-#   if(sum(as.numeric(possibleObjPref ))==0) {
-#       return(as.numeric(possibleObjPref ) )
-#     }
-#     return(as.numeric(possibleObjPref ) / sum(as.numeric(possibleObjPref )))
-#   # objPosterior <- mapUttToObjProbs[utterance,] * (listenerObjectPreferences + 1e-100)
-#   # print(objPosterior)
-#   # if(sum(objPosterior)==0) {
-#   #   return(objPosterior)
-#   # }
-#   # return(objPosterior / sum(objPosterior))
-# }
-
 # The simple pragmatic speaker considers all "imaginable" (i.e. implemented)
 # preference distributions over objects of the listener.
 # Starting with a prior assumption over the possible listener's preferences.
@@ -71,35 +31,40 @@ simpleListenerElla <-
 # makes a particular object choice.
 # utterance is an index refering to one of the relevantUtterances
 # i.e. P(listener's feature value preferences | utterance, object choice by the listener, prior over preferences)
-simplePragmaticSpeakerOri <-
+simplePragmaticSpeakerPrefPriorObjSpecificDeprecated <-
   function(utterance,
            obj,
-           preferencesPrior,
+           preferencesPriorObjSpecific,
            relevantUtterances,
            currentObjects,
            mapUttToObjProbs,
            objectPreferenceSoftPriors) {
     prefPost <- rep(0, length(relevantUtterances) + 1)
-    for (pref in c(1:length(preferencesPrior))) {
+    for (pref in c(1:length(preferencesPriorObjSpecific))) {
       # prior over the preferences the speaker is interested in
-      if (preferencesPrior[pref] > 0) {
+      if (preferencesPriorObjSpecific[pref] > 0) {
         pp <-
           simpleListener(utterance,
                          mapUttToObjProbs,
                          objectPreferenceSoftPriors[[pref]])
-        prefPost[pref] <- pp[obj] * preferencesPrior[pref]
+        prefPost[pref] <- pp[obj] * preferencesPriorObjSpecific[pref]
       }
     }
     if (sum(prefPost) == 0) {
       # no evidence for any preferences... -> no inference
-      return(prefPost)
+      return(preferencesPriorObjSpecific)
     }
     return(prefPost / sum(prefPost))
   }
 
 
-
-simplePragmaticSpeaker <-
+# The simple pragmatic speaker considers all "imaginable" (i.e. implemented)
+# preference distributions over objects of the listener.
+# Starting with a prior assumption over the possible listener's preferences.
+# It then infers the posterior over these preferences given the listener makes a particular object choice.
+# utterance is an index refering to one of the relevantUtterances
+# i.e. P(listener's feature value preferences | utterance, object choice by the listener, prior over preferences)
+simplePragmaticSpeakerPrefPriorAllDeprecated <-
   function(utterance,
            obj,
            preferencesPriorAll,
@@ -127,7 +92,8 @@ simplePragmaticSpeaker <-
       }
     }
     
-    for (pos in c(1:length(relevantUtterances))) { # for every feature value present
+    for (pos in c(1:length(relevantUtterances))) {
+      # for every feature value present
       preferencesPriorAll[relevantUtterances[pos]] <- prefPost[pos]
     }
     
@@ -142,30 +108,8 @@ simplePragmaticSpeaker <-
     # return(prefPost / sum(prefPost))
   }
 
-#
-# simplePragmaticSpeaker <- function(utterance, obj, preferencesPrior, #has to have the length of allUtterancesNew1
-#                                    relevantUtterances, currentObjects,
-#                                    objectPreferenceSoftPriors, allUtterancePref, mapUttToObjToPref) {
-#   for(pref in c(1:length(preferencesPrior))) {# prior over the preferences the speaker is interested in
-#     #print(preferencesPrior)
-#     if(preferencesPrior[pref] > 0) {
-#       # pp <- simpleListenerElla(utterance, mapUttToObjToPref, objectPreferenceSoftPriors[[pref]])
-#       # pp <-  simpleListener(utterance, mapUttToObjProbs, objectPreferenceSoftPriors[[pref]])
-#       pp <- simpleListener(utterance, allObjectsToUtterancesMappings, currentObjects, allUtterancePref)
-#       preferencesPrior[pref] <- pp[obj] * preferencesPrior[pref]
-#       print(pp)
-#     }
-#   }
-#   #print(preferencesPrior)
-#   if(sum(preferencesPrior) == 0) { # no evidence for any preferences... -> no inference
-#     return(preferencesPrior)
-#   }
-#   return(preferencesPrior / sum(preferencesPrior))
-# }
-
-
 # Speaker utterance prior function (i.e. prior utterance preferences of the speaker)
-getSpeakerUtteranceUniformPrior <- function(relevantUtterances) {
+getSpeakerUtteranceUniformPriorDeprecated <- function(relevantUtterances) {
   return(rep(1. / length(relevantUtterances), length(relevantUtterances)))
 }
 
@@ -186,7 +130,7 @@ getSpeakerUtteranceUniformPrior <- function(relevantUtterances) {
 # The utility is determined as the expected information gain between prior and posterior of the
 #    determined listener's object preferences.
 # @param preferencesPrior = probability mass over all feature values present in the scenario plus a "no preference" case
-simpleBestInfGainUtterance <-
+simpleBestInfGainUtteranceDeprecated <-
   function(preferencesPrior,
            relevantUtterances,
            currentObjects,
@@ -209,7 +153,7 @@ simpleBestInfGainUtterance <-
             if (preferencesPrior[pref] > 0) {
               # only pay attention to preferences with non-zero probability
               featurePrefsPosterior <-
-                simplePragmaticSpeakerOri(
+                simplePragmaticSpeakerPrefPriorObjSpecific(
                   utt,
                   obj,
                   preferencesPrior,
@@ -245,7 +189,7 @@ simpleBestInfGainUtterance <-
 
 
 
-getAllObjectCodes <- function(allObjects, allUtterancesNew1) {
+getAllObjectCodesDeprecated <- function(allObjects, allUtterancesNew1) {
   allObjectCodes <- c(rep("000":length(allObjects[, 1])))
   for (shape in c(1:length(allObjects[, 1]))) {
     shapeNo <- which(allUtterancesNew1 == allObjects[shape, 1])
@@ -262,9 +206,9 @@ getAllObjectCodes <- function(allObjects, allUtterancesNew1) {
   }
   return(allObjectCodes)
 }
-#which(allObjectCodes%in%c(111,331,113))
 
-getPreferencesPrior <- function(targetFeature) {
+
+getPreferencesPriorDeprecated <- function(targetFeature) {
   preferencesPrior <- c(rep(0, 9))
   index <- targetFeature * 3
   indices <- c(index, index - 1, index - 2)
@@ -272,22 +216,24 @@ getPreferencesPrior <- function(targetFeature) {
   return(preferencesPrior / sum(preferencesPrior))
 }
 
-evaluate <-
+evaluateDeprecated <-
   function(allUtterancePref,
            preferencesPrior,
            targetFeature) {
     index <- targetFeature * 3
     indices <- c(index - 2, index - 1, index)
     tarFeaPref <- allUtterancePref[indices, ]
-    if (length(preferencesPrior) > 3){
-    tarFeaPrefPrior <- preferencesPrior[indices]
-    } else {tarFeaPrefPrior <- preferencesPrior}
+    if (length(preferencesPrior) > 3) {
+      tarFeaPrefPrior <- preferencesPrior[indices]
+    } else {
+      tarFeaPrefPrior <- preferencesPrior
+    }
     prefRank <-
       order(as.numeric(tarFeaPref[, 3]))#, ties.method = "first")
-   # cat("prefRank", prefRank)
+    # cat("prefRank", prefRank)
     prefPriorRank <-
       order(tarFeaPrefPrior) #, ties.method = "first")
-   # cat("prefPriorRank", prefPriorRank)
+    # cat("prefPriorRank", prefPriorRank)
     
     # if (prefRank == prefPriorRank){
     #   evalNum <- 3
@@ -314,6 +260,11 @@ evaluate <-
   }
 
 
+#########################################################################
+############### TESTS To CHECK the FUNCTIONS ABOVE ######################
+#########################################################################
+
+
 ## Tests 1:
 # notObeyInst <- 1e-10
 # softPrefValue <- 0.1
@@ -327,13 +278,13 @@ evaluate <-
 # objectPreferenceSoftPriors <- getObjectPreferencePriors(relevantUtterances, currentObjects, softPrefValue, mapUttToObjProbs, mapUttToPref)
 # allUtterancePref <- getAllUtterancePref(c(1e-10, 1e-5, 1))
 # allUtterancePref
-# simplePragmaticSpeaker(4, 1, c(0, 0, 0, 0, 0, 1), relevantUtterances, currentObjects,
+# simplePragmaticSpeakerPrefPriorObjSpecific(4, 1, c(0, 0, 0, 0, 0, 1), relevantUtterances, currentObjects,
 #                  mapUttToObjProbs, objectPreferenceSoftPriors) # sanity check - definite prior, no inf. gain possible
 # preferencesPrior <- c(0, 0, 0, .2, .2, .2, 0, 0, 0)
 # utterance <- 2
 # obj <- 2
-# preferencesPrior <- simplePragmaticSpeaker(utterance, obj, preferencesPrior, relevantUtterances, currentObjects,objectPreferenceSoftPriors, allUtterancePref, mapUttToObjToPref) # NON compliant listener...
-# preferencesPrior <- simplePragmaticSpeaker(utterance, obj, preferencesPrior,relevantUtterances, currentObjects, mapUttToObjProbs, objectPreferenceSoftPriors)
+# preferencesPrior <- simplePragmaticSpeakerPrefPriorObjSpecific(utterance, obj, preferencesPrior, relevantUtterances, currentObjects,objectPreferenceSoftPriors, allUtterancePref, mapUttToObjToPref) # NON compliant listener...
+# preferencesPrior <- simplePragmaticSpeakerPrefPriorObjSpecific(utterance, obj, preferencesPrior,relevantUtterances, currentObjects, mapUttToObjProbs, objectPreferenceSoftPriors)
 # preferencesPrior
 # # # Tests 2:
 # # notObeyInst <- 0.1

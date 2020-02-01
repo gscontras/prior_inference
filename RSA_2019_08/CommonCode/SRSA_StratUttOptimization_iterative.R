@@ -1,7 +1,7 @@
 ##########################################
 source("CommonCode/AllUtterancesAndObjects.R")
 source("CommonCode/getConstCodeStratUtt.R")
-source("X9_Code/SRSA_StratUtt_X9.R")
+source("CommonCode/SRSA_StratUtt.R")
 
 ### 
 # Determines the speaker's posterior guess of the listener's feature value preferences
@@ -25,12 +25,13 @@ determineSpeakerPostListPrefsSimpleRSAWithPriorPref <- function(currentObjectCon
   #  print(mapUttToObjProbs)
   objectPreferenceSoftPriors <- getObjectPreferencePriors(validUtterances, currentObjectConstellation,
                                                           softPrefValue, mapUttToObjDeterministic)
-  prefPostAll <- simplePragmaticSpeaker(which(validUtterances==
+  prefPostAll <- simplePragmaticSpeakerWithPrefPriorAll(which(validUtterances==
                                                allObjectsToUtterancesMappings[currentObjectConstellation[1],featureUtt]),
                                        1, priorPrefAll, validUtterances, currentObjectConstellation, 
                                        mapUttToObjProbs, objectPreferenceSoftPriors)
   return(prefPostAll)
 }
+
 
 
 
@@ -41,23 +42,23 @@ determineSpeakerPostListPrefsSimpleRSAWithPriorPref <- function(currentObjectCon
 #   2: the non-obedience (default = 0), i.e. strength of not following the utterance in the choice
 # data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:UUFeat, 5:Q1Feat,6:Q2Feat,
 #                                                          7:Q1AnswerV1,V2,V3, 10:Q2AnserV1,V2,V3]
-RSAModelLL1_1simpleRSA <- function(params,  data) {
+RSAModelLL1_1simpleRSA4TrialsIterative <- function(params,  data) {
   return(RSAModelKLDiv3params_simpleRSA4Trials(data, abs(params[1]), 0))
 }
 
-RSAModelLL1_1simpleRSA_notObey.1 <- function(params,  data) {
+RSAModelLL1_1simpleRSA4TrialsIterative_notObey.1 <- function(params,  data) {
   return(RSAModelKLDiv3params_simpleRSA4Trials(data, abs(params[1]), .1))
 }
 
-RSAModelLL1_1simpleRSA_notObey.2 <- function(params,  data) {
+RSAModelLL1_1simpleRSA4TrialsIterative_notObey.2 <- function(params,  data) {
   return(RSAModelKLDiv3params_simpleRSA4Trials(data, abs(params[1]), .2))
 }
 
-RSAModelLL1_2simpleRSA <- function(params,  data) {
+RSAModelLL1_2simpleRSA4TrialsIterative <- function(params,  data) {
   return(RSAModelKLDiv3params_simpleRSA4Trials(data, 0, abs(params[1])))
 }
 
-RSAModelLL1_2simpleRSA_pref.2 <- function(params,  data) {
+RSAModelLL1_2simpleRSA4TrialsIterative_pref.2 <- function(params,  data) {
   return(RSAModelKLDiv3params_simpleRSA4Trials(data, 0.2, abs(params[1])))
 }
 
@@ -69,19 +70,19 @@ RSAModelLL1_2simpleRSA_pref.2 <- function(params,  data) {
 #   2: the non-obedience (default = 0), i.e. strength of not following the utterance in the choice
 # data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:UUFeat, 5:Q1Feat,6:Q2Feat,
 #                                                          7:Q1AnswerV1,V2,V3, 10:Q2AnserV1,V2,V3]
-RSAModelLL2_simpleRSA <- function(params,  data) {
-  return(RSAModelKLDiv3params_simpleRSA4Trials(data, abs(params[1]), abs(params[2])))
+RSAModelLL2_simpleRSA4TrialsIterative <- function(params,  data) {
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIterative(data, abs(params[1]), abs(params[2])))
 }
 
 #### actual RSA model Kullback leibler divergence determination
 # data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:UUFeat, 5:Q1Feat,
 #                                                          6:Q1AnswerV1,V2,V3]
-RSAModelKLDiv3params_simpleRSA4Trials <- function(data, par1, par2) {
+RSAModelKLDiv3params_simpleRSA4TrialsIterative<- function(data, par1, par2) {
   #  print(params)
   llRes <- 0
   for(i in c(1:nrow(data))) {
     if( (i-1)%%4 == 0) {
-    preferencesPriorAll <- getPreferencesPrior(data[i,5]) # focussing on the feature type in question.
+      preferencesPriorAll <- getPreferencesPrior(data[i,5]) # focussing on the feature type in question.
     }
     ## determining the object and utterance
     currentObjects <- c(data[i,1],data[i,2],data[i,3])
@@ -103,9 +104,84 @@ RSAModelKLDiv3params_simpleRSA4Trials <- function(data, par1, par2) {
 }
 
 
+
+
+
+
+
+####
+# Used to determine the KL divergence estimates of RSA model given the model parameters and the data
+# params is a 1 value vector specifying one of the three parameters:
+#   1: the softPrefValue (default = 0), i.e., the strength of preferring one entity over others
+#   2: the non-obedience (default = 0), i.e. strength of not following the utterance in the choice
+# data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:UUFeat, 5:Q1Feat,6:Q2Feat,
+#                                                          7:Q1AnswerV1,V2,V3, 10:Q2AnserV1,V2,V3]
+RSAModelLL1_1simpleRSA4TrialsIndependent <- function(params,  data) {
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIndependent(data, abs(params[1]), 0))
+}
+
+RSAModelLL1_1simpleRSA4TrialsIndependent_notObey.1 <- function(params,  data) {
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIndependent(data, abs(params[1]), .1))
+}
+
+RSAModelLL1_1simpleRSA4TrialsIndependent_notObey.2 <- function(params,  data) {
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIndependent(data, abs(params[1]), .2))
+}
+
+RSAModelLL1_2simpleRSA4TrialsIndependent <- function(params,  data) {
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIndependent(data, 0, abs(params[1])))
+}
+
+RSAModelLL1_2simpleRSA4TrialsIndependent_pref.2 <- function(params,  data) {
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIndependent(data, 0.2, abs(params[1])))
+}
+
+
+####
+# Used to determine the log likelihood estimates of RSA model given the model parameters and the data
+# params here is 2 value vector, which specifies two of three (n1=not the first, n2=...):
+#   1: the softPrefValue (default = 0), i.e., the strength of preferring one entity over others
+#   2: the non-obedience (default = 0), i.e. strength of not following the utterance in the choice
+# data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:UUFeat, 5:Q1Feat,6:Q2Feat,
+#                                                          7:Q1AnswerV1,V2,V3, 10:Q2AnserV1,V2,V3]
+RSAModelLL2_simpleRSA4TrialsIndependent <- function(params,  data) {
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIndependent(data, abs(params[1]), abs(params[2])))
+}
+
+#### actual RSA model Kullback leibler divergence determination
+# data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:UUFeat, 5:Q1Feat,
+#                                                          6:Q1AnswerV1,V2,V3]
+RSAModelKLDiv3params_simpleRSA4TrialsIndependent<- function(data, par1, par2) {
+  #  print(params)
+  llRes <- 0
+  for(i in c(1:nrow(data))) {
+    preferencesPriorAll <- getPreferencesPrior(data[i,5]) # focussing on the feature type in question.
+    ## determining the object and utterance
+    currentObjects <- c(data[i,1],data[i,2],data[i,3])
+    uttFeat <- data[i,4]
+    ##
+    validUtterances <- determineValidUtterances(currentObjects)
+    ## determining the model predictions
+    prefPostAll <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(currentObjects, uttFeat, abs(par1), abs(par2), preferencesPriorAll)
+    ## adding the KL Divergence terms of the relevant feature values for the two sets of answers. 
+    ##
+    ## adding the negative log likelihoods
+    for(j in c(1:3)) {
+      llRes <- llRes + data[i, 5+j] * 
+        ( log(data[i, 5+j] + 1e-100) - log( prefPostAll[j + (data[i, 5]-1)*3] + 1e-100) )
+    }
+    preferencesPriorAll <- prefPostAll
+  }
+  return(llRes)
+}
+
+
+
+
+
 ###
 # get matrix of all posteriors of all object constellations and object choices possible.
-getPostListPrefsForAllConstellations_simpleRSA <- function(softPrefValue=0, nonObedience=0, alpha=1) {
+getPostListPrefsForAllConstellations_simpleRSADEPRECATED <- function(softPrefValue=0, nonObedience=0, alpha=1) {
   resultMat <- matrix(0, 1+ (27*27*27*3), 28)
   for(o1 in c(1:27)) {
     print(o1)

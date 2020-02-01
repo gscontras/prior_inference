@@ -1,18 +1,12 @@
 
-
 ############################################################################################
-procType <- 2    ###########################################################################
+procType <- 2   ###########################################################################
 ############################################################################################
-# 1 iterative (works)
-# 2 non-iterative (doesn't work)
+# 1 iterative
+# 2 non-iterative
 
-if (procType == 1){
-  source("X9_Code/SRSA_StratUtt_X9.R")
-  source("CommonCode/SRSA_StratUttOptimization_iterative.R") 
-} else {
-  source("CommonCode/SRSA_StratUtt.R")
-  source("X9_Code/SRSA_StratUttOptimization_X9.R")
-}
+source("CommonCode/SRSA_StratUtt.R")
+source("CommonCode/SRSA_StratUttOptimization_iterative.R") 
 
 
 # Data file from Ella
@@ -143,9 +137,14 @@ for(workerID in c(0:idMax)) {
     
     ######################### 1 parameter optimization ###########################
     
-    # before optimization:         llWorkers12[1,3] <- RSAModelLL1(c(.2), dataWorker)
-    optRes1 <- optimize(RSAModelLL1_1simpleRSA, c(0,1e+10), dataWorker)   
-    optRes2 <- optimize(RSAModelLL1_2simpleRSA, c(0,1e+10), dataWorker)   
+    if (procType == 1){
+      # before optimization:         llWorkers12[1,3] <- RSAModelLL1(c(.2), dataWorker)
+      optRes1 <- optimize(RSAModelLL1_1simpleRSA4TrialsIterative, c(0,1e+10), dataWorker)   
+      optRes2 <- optimize(RSAModelLL1_2simpleRSA4TrialsIterative, c(0,1e+10), dataWorker)   
+    }else{
+      optRes1 <- optimize(RSAModelLL1_1simpleRSA4TrialsIndependent, c(0,1e+10), dataWorker)   
+      optRes2 <- optimize(RSAModelLL1_2simpleRSA4TrialsIndependent, c(0,1e+10), dataWorker)   
+    }
     
     ######################### recording results ################################# 
     ## 1 param RSA model
@@ -184,16 +183,22 @@ for(workerID in c(0:idMax)) {
     dataWorker[,6:8] <- subjectResponses[idICases,1:3]
     
 # before optimization:     llWorkers12[workerIndex,7] <- RSAModelLL2(c(.2,.2), dataWorker)
-    optRes2n1 <- optim(c(.2, .2), RSAModelLL2_simpleRSA, method="L-BFGS-B", gr=NULL, dataWorker,
-                       lower = c(0,0), upper = c(1e+10,1e+10))
+    if (procType == 1){
+      # before optimization:         llWorkers12[1,3] <- RSAModelLL1(c(.2), dataWorker)
+      optRes12 <- optim(c(.2, .2), RSAModelLL2_simpleRSA4TrialsIterative, method="L-BFGS-B", gr=NULL, dataWorker,
+                         lower = c(0,0), upper = c(1e+10,1e+10))
+    }else{
+      optRes12 <- optim(c(.2, .2), RSAModelLL2_simpleRSA4TrialsIndependent, method="L-BFGS-B", gr=NULL, dataWorker,
+                         lower = c(0,0), upper = c(1e+10,1e+10))
+    }
     ##########
     # print(optRes)
     ## 2 param RSA model2
     ## max likelihood parameter choice
-    llWorkers12[workerIndex,5] <- optRes2n1$value
+    llWorkers12[workerIndex,5] <- optRes12$value
     ## max likelihood parameter choice
-    paramsWorkers12[workerIndex,4] <- optRes2n1$par[1]
-    paramsWorkers12[workerIndex,5] <- optRes2n1$par[2]
+    paramsWorkers12[workerIndex,4] <- optRes12$par[1]
+    paramsWorkers12[workerIndex,5] <- optRes12$par[2]
     ##
     print(llWorkers12[workerIndex,])
     print(paramsWorkers12[workerIndex,])
@@ -203,8 +208,8 @@ for(workerID in c(0:idMax)) {
 
 ## writing out result tables
 if(procType == 1) {
-write.csv(llWorkers12, "X9_Data/x9KLDivs_simpleRSA_indOpt.csv")
-write.csv(paramsWorkers12, "X9_Data/x9Params_simpleRSA_indOpt.csv")
+write.csv(llWorkers12, "X9_Data/x9KLDivs_simpleRSA_indOpt_iterative.csv")
+write.csv(paramsWorkers12, "X9_Data/x9Params_simpleRSA_indOpt_iterative.csv")
 } else {
 write.csv(llWorkers12, "X9_Data/x9KLDivs_simpleRSA_indOpt_nonIterative.csv")
 write.csv(paramsWorkers12, "X9_Data/x9Params_simpleRSA_indOpt_nonIterative.csv")  
