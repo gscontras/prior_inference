@@ -7,18 +7,20 @@ source("CommonCode/getConstCodeStratUtt.R")
 
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed00_and_Opt1.csv")
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt1_nonIterative.csv")
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12.csv")
+
 x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
+#x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
 
 # Take only the data from the last trial in each block
 
-filtering <- "trial4" 
+filterTrials <- 4 # if greater zero then only those %% filterTrials trials are taken
+doAverageAmbiguityClasses <- FALSE
 
-if (filtering == "trial4"){
-  trial4indices <- which(x9data$X%%4 == 0)
+if (filterTrials > 0){
+  trial4indices <- which((((x9data$X)-1)%%4) == (filterTrials-1))
   x9data <- x9data[trial4indices,]
 }
-  
+
 
 #########################################################
 # adding feature property codes (which feature was uttereed, which features were questioned)
@@ -99,157 +101,179 @@ for (i in 1:length(x9data$X)){
 
 
 
-#### 
-## filtering for only the present feature values for each feature.
+###########
+## filtering for only the RELEVANT feature values for each feature.
 ###########
 subjectGuessIndexM1 <- grep("^DataPost_1", colnames(x9data)) - 1
 modelGuessIndexM1 <- grep("^Post1_1", colnames(x9data)) - 1
 modelGuessIndexM2 <- grep("^Post2_1", colnames(x9data)) - 1
 
-for(i in c(1:nrow(x9data))) {
-  currentObjects <- c(targetObject[i], object2[i], object3[i])
-  validUtterances <- determineValidUtterances(currentObjects)
-  for(j in c(1:3)) { # iterating over the three feature types
-  relevantIndices <- which(validUtterances>(3*(j-1)) & validUtterances<(3*j + 1)) # relevant indices for a particular feature type
-  valUttRel <- validUtterances[relevantIndices]
-  sumSG <- 0
-  sumMG <- 0
-  sumMG2 <- 0
-    for(x in c(1:length(valUttRel))) {
-      sumSG <- sumSG + x9data[[valUttRel[x]+subjectGuessIndexM1]][i] # column numbers of feature values present
-      sumMG <- sumMG + x9data[[valUttRel[x]+modelGuessIndexM1]][i]
-      sumMG2 <- sumMG2 + x9data[[valUttRel[x]+modelGuessIndexM2]][i]
-    }
-    if(!is.na(sumSG)) { # only for present feature values
-      for(x in c(1:length(valUttRel))) {
-        x9data[[valUttRel[x]+subjectGuessIndexM1]][i] <- x9data[[valUttRel[x]+subjectGuessIndexM1]][i] /
-          (sumSG + 1e-100)
-      }
-    }
-    for(x in c(1:length(valUttRel))) {
-      x9data[[valUttRel[x]+modelGuessIndexM1]][i] <- x9data[[valUttRel[x]+modelGuessIndexM1]][i] /
-        (sumMG + 1e-100)
-      x9data[[valUttRel[x]+modelGuessIndexM2]][i] <- x9data[[valUttRel[x]+modelGuessIndexM2]][i] /
-        (sumMG2 + 1e-100)
-    }
-    # setting the non-represented values to NA
-    for(v in c(1:3)) {
-      if(length(which(valUttRel == ((j-1)*3) + v )) == 0) {
-        x9data[[subjectGuessIndexM1 + ((j-1)*3) + v]][i] <- NA
-        x9data[[modelGuessIndexM1 + ((j-1)*3) + v]][i] <- NA
-        x9data[[modelGuessIndexM2 + ((j-1)*3) + v]][i] <- NA
-      }
-    }
-  } #iterating over feature types
-}
+# for(i in c(1:nrow(x9data))) {
+#   currentObjects <- c(targetObject[i], object2[i], object3[i])
+#   relevantFeatures <- c((x9data$targetFeatureNum)*3 - 2,(x9data$targetFeatureNum)*3 - 1, (x9data$targetFeatureNum)* 3)
+#   #  validUtterances <- determineValidUtterances(currentObjects)
+#   #  for(j in c(1:3)) { # iterating over the three feature types
+#   #  relevantIndices <- which(validUtterances>(3*(j-1)) & validUtterances<(3*j + 1)) # relevant indices for a particular feature type
+#   #  valUttRel <- validUtterances[relevantIndices]
+#   sumSG <- 0
+#   sumMG <- 0
+#   sumMG2 <- 0
+#   for(x in c(1:length(relevantFeatures))) {
+#     sumSG <- sumSG + x9data[[relevantFeatures[x]+subjectGuessIndexM1]][i] # column numbers of feature values present
+#     sumMG <- sumMG + x9data[[relevantFeatures[x]+modelGuessIndexM1]][i]
+#     sumMG2 <- sumMG2 + x9data[[relevantFeatures[x]+modelGuessIndexM2]][i]
+#   }
+#   if(!is.na(sumSG)) { # only for present feature values
+#     for(x in c(1:length(relevantFeatures))) {
+#       x9data[[relevantFeatures[x]+subjectGuessIndexM1]][i] <- x9data[[relevantFeatures[x]+subjectGuessIndexM1]][i] /
+#         (sumSG + 1e-100)
+#     }
+#   }
+#   for(x in c(1:length(relevantFeatures))) {
+#     x9data[[relevantFeatures[x]+modelGuessIndexM1]][i] <- x9data[[relevantFeatures[x]+modelGuessIndexM1]][i] /
+#       (sumMG + 1e-100)
+#     x9data[[relevantFeatures[x]+modelGuessIndexM2]][i] <- x9data[[relevantFeatures[x]+modelGuessIndexM2]][i] /
+#       (sumMG2 + 1e-100)
+#   }
+#   # setting the non-represented values to NA
+#   for(v in c(1:9)) {
+#     if(length(which(relevantFeatures == v)) == 0) {
+#       x9data[[subjectGuessIndexM1 + v]][i] <- NA
+#       x9data[[modelGuessIndexM1 + v]][i] <- NA
+#       x9data[[modelGuessIndexM2 + v]][i] <- NA
+#     }
+#   }
+# } #iterating over feature types
+# 
+# 
 
 
-## now determining the constellation code. 
-constellationCode <- matrix(0,length(x9data$X),6)
-uniqueCCode <- rep(0, length(x9data$X))
-featureOrder <- matrix(0, length(x9data$X), 3)
-objectOrder <- matrix(0, length(x9data$X), 3)
-for(i in c(1:length(x9data$X))) {
-  objectConstellation <- c(targetObject[i],object2[i],object3[i]) 
-  featChoice <- uttFeat[i]
-  cc <- getConstellationCode(objectConstellation, featChoice)
-  constellationCode[i,] <- cc[[1]]
-  featureOrder[i,] <- cc[[2]]
-  objectOrder[i,] <- cc[[3]]
-  ## one-column code
-  uc <- 0
-  for(j in c(1:6)) {
-    uc <- (uc * 10) + constellationCode[i,j]
-  }
-  uniqueCCode[i] <- uc
-}
-# feature order specified reordering of standard order (i.e. shape=1, texture=2, color=3)
-# object order specifies reordering of presented object order
 subjectGuessIndex <- grep("^DataPost_1", colnames(x9data))
 modelGuessIndex1 <- grep("^Post1_1", colnames(x9data))
 modelGuessIndex4 <- grep("^Post2_1", colnames(x9data))
 
-for(i in c(1:length(x9data$X))) {
-  # reordering the feature order
-  x9data[i,] <- replace(x9data[i,], c(subjectGuessIndex:(subjectGuessIndex+8)),  
-                           x9data[i, c( (subjectGuessIndex + (featureOrder[i,1]-1)*3) : (subjectGuessIndex+2+(featureOrder[i,1]-1)*3),
-                                           (subjectGuessIndex+ (featureOrder[i,2]-1)*3) : (subjectGuessIndex+2+(featureOrder[i,2]-1)*3),
-                                           (subjectGuessIndex+ (featureOrder[i,3]-1)*3) : (subjectGuessIndex+2+(featureOrder[i,3]-1)*3) )])
-  x9data[i,] <- replace(x9data[i,], c(modelGuessIndex1:(modelGuessIndex1+8)),  
-                             x9data[i, c( (modelGuessIndex1 + (featureOrder[i,1]-1)*3) : (modelGuessIndex1+2+(featureOrder[i,1]-1)*3),
-                                               (modelGuessIndex1+ (featureOrder[i,2]-1)*3) : (modelGuessIndex1+2+(featureOrder[i,2]-1)*3),
-                                               (modelGuessIndex1+ (featureOrder[i,3]-1)*3) : (modelGuessIndex1+2+(featureOrder[i,3]-1)*3) )])
-  x9data[i,] <- replace(x9data[i,], c(modelGuessIndex4:(modelGuessIndex4+8)),  
-                             x9data[i, c( (modelGuessIndex4 + (featureOrder[i,1]-1)*3) : (modelGuessIndex4+2+(featureOrder[i,1]-1)*3),
-                                               (modelGuessIndex4+ (featureOrder[i,2]-1)*3) : (modelGuessIndex4+2+(featureOrder[i,2]-1)*3),
-                                               (modelGuessIndex4+ (featureOrder[i,3]-1)*3) : (modelGuessIndex4+2+(featureOrder[i,3]-1)*3) )])
-  ## now rearranging the individual feature values dependent on the object order (first object is the chosen one!)
-  objectConstellation <- c(targetObject[i],object2[i],object3[i])
-  objectCReordered <- replace(objectConstellation, c(1:3), objectConstellation[objectOrder[i,]])
-# Reordering of objects: target object stays in place, sometimes affects the ordering of 2nd and 3rd objects
-  
-  for(j in c(1:3)) {
-    featValOrder <- rep(0,3)
-    targetFeatureValue <- allObjectsToUtterancesMappings[objectCReordered[1],featureOrder[i,j]]
-    featValOrder[1] <-  targetFeatureValue # target feature value comes first
-#    featValOrder[1] <-  targetFeat # something going on with feature ordering ...
-    featValIndex <- 2
-    for(k in c(2:3)) {
-      objectFeatureValue <- allObjectsToUtterancesMappings[objectCReordered[k],featureOrder[i,j]]
-      if(length(which(featValOrder==objectFeatureValue))==0) { # feature not included yet
-        featValOrder[featValIndex] <- objectFeatureValue
-        featValIndex <- featValIndex + 1
-      }
+if(doAverageAmbiguityClasses) {
+  ## now determining the constellation code. 
+  constellationCode <- matrix(0,length(x9data$X),6)
+  uniqueCCode <- rep(0, length(x9data$X))
+  featureOrder <- matrix(0, length(x9data$X), 3)
+  objectOrder <- matrix(0, length(x9data$X), 3)
+  for(i in c(1:length(x9data$X))) {
+    objectConstellation <- c(targetObject[i],object2[i],object3[i]) 
+    featChoice <- uttFeat[i]
+    cc <- getConstellationCode(objectConstellation, featChoice)
+    constellationCode[i,] <- cc[[1]]
+    featureOrder[i,] <- cc[[2]]
+    objectOrder[i,] <- cc[[3]]
+    ## one-column code
+    uc <- 0
+    for(j in c(1:6)) {
+      uc <- (uc * 10) + constellationCode[i,j]
     }
-    if(featValIndex < 4) { # not all feature values assigned, yet -> fill up
-      for(featVal in c(((featureOrder[i,j]-1)*3+1):((featureOrder[i,j]-1)*3+3))) {
-        if(length(which(featValOrder==featVal))==0) { # feature not included yet
-          featValOrder[featValIndex] <- featVal
+    uniqueCCode[i] <- uc
+  }
+  # feature order specified reordering of standard order (i.e. shape=1, texture=2, color=3)
+  # object order specifies reordering of presented object order
+  
+  for(i in c(1:length(x9data$X))) {
+    # reordering the feature order
+    x9data[i,] <- replace(x9data[i,], c(subjectGuessIndex:(subjectGuessIndex+8)),  
+                          x9data[i, c( (subjectGuessIndex + (featureOrder[i,1]-1)*3) : (subjectGuessIndex+2+(featureOrder[i,1]-1)*3),
+                                       (subjectGuessIndex+ (featureOrder[i,2]-1)*3) : (subjectGuessIndex+2+(featureOrder[i,2]-1)*3),
+                                       (subjectGuessIndex+ (featureOrder[i,3]-1)*3) : (subjectGuessIndex+2+(featureOrder[i,3]-1)*3) )])
+    x9data[i,] <- replace(x9data[i,], c(modelGuessIndex1:(modelGuessIndex1+8)),  
+                          x9data[i, c( (modelGuessIndex1 + (featureOrder[i,1]-1)*3) : (modelGuessIndex1+2+(featureOrder[i,1]-1)*3),
+                                       (modelGuessIndex1+ (featureOrder[i,2]-1)*3) : (modelGuessIndex1+2+(featureOrder[i,2]-1)*3),
+                                       (modelGuessIndex1+ (featureOrder[i,3]-1)*3) : (modelGuessIndex1+2+(featureOrder[i,3]-1)*3) )])
+    x9data[i,] <- replace(x9data[i,], c(modelGuessIndex4:(modelGuessIndex4+8)),  
+                          x9data[i, c( (modelGuessIndex4 + (featureOrder[i,1]-1)*3) : (modelGuessIndex4+2+(featureOrder[i,1]-1)*3),
+                                       (modelGuessIndex4+ (featureOrder[i,2]-1)*3) : (modelGuessIndex4+2+(featureOrder[i,2]-1)*3),
+                                       (modelGuessIndex4+ (featureOrder[i,3]-1)*3) : (modelGuessIndex4+2+(featureOrder[i,3]-1)*3) )])
+    ## now rearranging the individual feature values dependent on the object order (first object is the chosen one!)
+    objectConstellation <- c(targetObject[i],object2[i],object3[i])
+    objectCReordered <- replace(objectConstellation, c(1:3), objectConstellation[objectOrder[i,]])
+    # Reordering of objects: target object stays in place, sometimes affects the ordering of 2nd and 3rd objects
+    
+    for(j in c(1:3)) {
+      featValOrder <- rep(0,3)
+      targetFeatureValue <- allObjectsToUtterancesMappings[objectCReordered[1],featureOrder[i,j]]
+      featValOrder[1] <-  targetFeatureValue # target feature value comes first
+      #    featValOrder[1] <-  targetFeat # something going on with feature ordering ...
+      featValIndex <- 2
+      for(k in c(2:3)) {
+        objectFeatureValue <- allObjectsToUtterancesMappings[objectCReordered[k],featureOrder[i,j]]
+        if(length(which(featValOrder==objectFeatureValue))==0) { # feature not included yet
+          featValOrder[featValIndex] <- objectFeatureValue
           featValIndex <- featValIndex + 1
         }
       }
+      if(featValIndex < 4) { # not all feature values assigned, yet -> fill up
+        for(featVal in c(((featureOrder[i,j]-1)*3+1):((featureOrder[i,j]-1)*3+3))) {
+          if(length(which(featValOrder==featVal))==0) { # feature not included yet
+            featValOrder[featValIndex] <- featVal
+            featValIndex <- featValIndex + 1
+          }
+        }
+      }
+      featValOrder <- featValOrder - (featureOrder[i,j]-1)*3 - 1
+      ### now featValOrder specifies the feature value reordering for order feature with index j
+      # reordering the feature value order of ordered feature j 
+      x9data[i,] <- replace(x9data[i,], c(((j-1)*3 + subjectGuessIndex):(2+((j-1)*3 + subjectGuessIndex))),  
+                            x9data[i, subjectGuessIndex + ((j-1)*3 + featValOrder)]) 
+      x9data[i,] <- replace(x9data[i,], c(((j-1)*3 + modelGuessIndex1):(2+((j-1)*3 + modelGuessIndex1))),  
+                            x9data[i, modelGuessIndex1 + ((j-1)*3 + featValOrder)]) 
+      x9data[i,] <- replace(x9data[i,], c(((j-1)*3 + modelGuessIndex4):(2+((j-1)*3 + modelGuessIndex4))),  
+                            x9data[i, modelGuessIndex4 + ((j-1)*3 + featValOrder)]) 
     }
-    featValOrder <- featValOrder - (featureOrder[i,j]-1)*3 - 1
-    ### now featValOrder specifies the feature value reordering for order feature with index j
-    # reordering the feature value order of ordered feature j 
-    x9data[i,] <- replace(x9data[i,], c(((j-1)*3 + subjectGuessIndex):(2+((j-1)*3 + subjectGuessIndex))),  
-                             x9data[i, subjectGuessIndex + ((j-1)*3 + featValOrder)]) 
-    x9data[i,] <- replace(x9data[i,], c(((j-1)*3 + modelGuessIndex1):(2+((j-1)*3 + modelGuessIndex1))),  
-                               x9data[i, modelGuessIndex1 + ((j-1)*3 + featValOrder)]) 
-    x9data[i,] <- replace(x9data[i,], c(((j-1)*3 + modelGuessIndex4):(2+((j-1)*3 + modelGuessIndex4))),  
-                               x9data[i, modelGuessIndex4 + ((j-1)*3 + featValOrder)]) 
   }
-}
-x9data$CCode <- uniqueCCode
-#write.csv(x9data, "X9_Data/x9dataModelOptimizedSorted.csv")
-
-x9data <- x9data[order(x9data$CCode),]
-myCCodes <- unique(x9data$CCode)
-avDataMatrix <- matrix(0,length(myCCodes),19)
-dataPointIndex <- 0
-workerData <- 0
-rsaModel <- 0
-rsaModel2 <- 0
-for(i in c(1:length(myCCodes))) {
-  cc <- myCCodes[i]
-  cases <- which(x9data$CCode == cc)
-  allPilotDataCases <- x9data[cases,]
-  for(j in c(1:9)) {
-    specCases <- which(is.na(allPilotDataCases[,subjectGuessIndex-1+j]) == FALSE)
-    if(length(specCases) > 0) {
-#      if(mean(allPilotDataCases[specCases,(modelGuessIndex4-1+j)]) < 1/3 - 1e-5
-#         | mean(allPilotDataCases[specCases,(modelGuessIndex4-1+j)]) > 1/3 + 1e-5) {
+  x9data$CCode <- uniqueCCode
+  #write.csv(x9data, "X9_Data/x9dataModelOptimizedSorted.csv")
+  
+  x9data <- x9data[order(x9data$CCode),]
+  myCCodes <- unique(x9data$CCode)
+  avDataMatrix <- matrix(0,length(myCCodes),19)
+  dataPointIndex <- 0
+  workerData <- 0
+  rsaModel <- 0
+  rsaModel2 <- 0
+  for(i in c(1:length(myCCodes))) {
+    cc <- myCCodes[i]
+    cases <- which(x9data$CCode == cc)
+    allPilotDataCases <- x9data[cases,]
+    for(j in c(1:9)) {
+      specCases <- which(is.na(allPilotDataCases[,subjectGuessIndex-1+j]) == FALSE)
+      if(length(specCases) > 0) {
+        #      if(mean(allPilotDataCases[specCases,(modelGuessIndex4-1+j)]) < 1/3 - 1e-5
+        #         | mean(allPilotDataCases[specCases,(modelGuessIndex4-1+j)]) > 1/3 + 1e-5) {
         dataPointIndex <- dataPointIndex + 1
         workerData[dataPointIndex] <- mean(allPilotDataCases[specCases,(subjectGuessIndex-1+j)])
         rsaModel[dataPointIndex] <- mean(allPilotDataCases[specCases,(modelGuessIndex1-1+j)])
         rsaModel2[dataPointIndex] <- mean(allPilotDataCases[specCases,(modelGuessIndex4-1+j)])
-#      }
+        #      }
+      }
     }
   }
+  ### DONE with averaging over ambiguity classes (if selected) 
+}else{ 
+  ### generative worker and model data for all trials
+  allPilotDataCases <- x9data
+  workerData <- matrix(0,nrow(allPilotDataCases),3)
+  rsaModel <- matrix(0,nrow(allPilotDataCases),3)
+  rsaModel2 <- matrix(0,nrow(allPilotDataCases),3)
+  targetFeatures <-  c( (x9data$targetFeatureNum)*3 - 2, (x9data$targetFeatureNum)*3 - 1, (x9data$targetFeatureNum)*3)
+  relevatTargetFeatureIndices <- matrix(targetFeatures,nrow(x9data),3)
+  for(row in c(1:nrow(allPilotDataCases))) {
+    workerData[row,] <- as.vector(t(allPilotDataCases[row, (relevatTargetFeatureIndices + subjectGuessIndex - 1)[row,]]))
+    rsaModel[row,] <- as.vector(t(allPilotDataCases[row, (relevatTargetFeatureIndices + modelGuessIndex1 - 1)[row,]]))
+    rsaModel2[row,] <- as.vector(t(allPilotDataCases[row, (relevatTargetFeatureIndices + modelGuessIndex4 - 1)[row,]]))
+  }
+  workerData <- as.vector(workerData)
+  rsaModel <- as.vector(rsaModel)
+  rsaModel2 <- as.vector(rsaModel2)
 }
+
+
 ### plot after Optimization ###
-
-
 plot(rsaModel, workerData)
 abline(lm(formula = rsaModel~workerData), col="red") # regression line (y~x)
 lines(lowess(rsaModel,workerData), col="blue") # lowess line (x,y)

@@ -1,19 +1,11 @@
-
-
 ############################################################################################
-procType <- 2    ###########################################################################
+procType <- 1    ###########################################################################
 ############################################################################################
 # 1 iterative (works)
 # 2 non-iterative (doesn't work)
 
-if (procType == 1){
-  source("X9_Code/SRSA_StratUtt_X9.R")
-  source("CommonCode/SRSA_StratUttOptimization_iterative.R") 
-} else {
-  source("CommonCode/SRSA_StratUtt.R")
-  source("X9_Code/SRSA_StratUttOptimization_X9.R")
-}
-
+source("CommonCode/SRSA_StratUtt.R")
+source("CommonCode/SRSA_StratUttOptimization_iterative.R") 
 
 # Data file from Ella
 x9data = read.csv(
@@ -112,8 +104,8 @@ idMax <- max(workerIDs)
 #################################################
 
 if(procType == 1) {
-  paramsWorkers12 <- as.matrix(read.csv("X9_Data/x9Params_simpleRSA_indOpt.csv"))
-  llWorkers12 <- as.matrix(read.csv("X9_Data/x9KLDivs_simpleRSA_indOpt.csv"))
+  paramsWorkers12 <- as.matrix(read.csv("X9_Data/x9Params_simpleRSA_indOpt_iterative.csv"))
+  llWorkers12 <- as.matrix(read.csv("X9_Data/x9KLDivs_simpleRSA_indOpt_iterative.csv"))
 }else {
   paramsWorkers12 <- as.matrix(read.csv("X9_Data/x9Params_simpleRSA_indOpt_nonIterative.csv"))
   llWorkers12 <- as.matrix(read.csv("X9_Data/x9KLDivs_simpleRSA_indOpt_nonIterative.csv"))
@@ -122,9 +114,9 @@ if(procType == 1) {
 llWorkers12 <- llWorkers12[,c(2:ncol(llWorkers12))]
 paramsWorkers12 <- paramsWorkers12[,c(2:ncol(paramsWorkers12))]
 
-############################################################################################
-#procType <- 1    ###########################################################################
-############################################################################################
+
+
+
 
 ### 
 # determining the model predictions after worker-specific model parameter optimization!
@@ -157,7 +149,7 @@ for(i in c(1:length(x9data$X))) {
     if( (i-1)%%4 == 0) {
       priorPrefAll_1 <- getPreferencesPrior(x9data[i,"targetFeatureNum"])
       priorPrefAll_2 <- getPreferencesPrior(x9data[i,"targetFeatureNum"])
-    } # focussing on the feature type in question.
+    } # uniform focussing on the feature type in question.
     
     if(procType == 1) {
       postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
@@ -171,10 +163,10 @@ for(i in c(1:length(x9data$X))) {
       
   
     }else if(procType == 2) {
-      postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice,
-                                                                    0, 0)
-      postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice,
-                                                                    abs(params12[1]), abs(params12[2]))
+      postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+                                                                    0, 0, priorPrefAll_1)
+      postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+                                                                    abs(params12[1]), abs(params12[2]), priorPrefAll_2)
     } 
     
 }
@@ -199,7 +191,7 @@ x9data$CCode <- uniqueCCode
 x9data$logLik <- logLik
 
 if(procType == 1) {
-  write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12.csv")
+  write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
 }else if(procType == 2) {
   write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
 }
