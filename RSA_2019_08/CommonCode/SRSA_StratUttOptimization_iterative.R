@@ -43,23 +43,23 @@ determineSpeakerPostListPrefsSimpleRSAWithPriorPref <- function(currentObjectCon
 # data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:UUFeat, 5:Q1Feat,6:Q2Feat,
 #                                                          7:Q1AnswerV1,V2,V3, 10:Q2AnserV1,V2,V3]
 RSAModelLL1_1simpleRSA4TrialsIterative <- function(params,  data) {
-  return(RSAModelKLDiv3params_simpleRSA4Trials(data, abs(params[1]), 0))
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIterative(data, abs(params[1]), 0))
 }
 
 RSAModelLL1_1simpleRSA4TrialsIterative_notObey.1 <- function(params,  data) {
-  return(RSAModelKLDiv3params_simpleRSA4Trials(data, abs(params[1]), .1))
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIterative(data, abs(params[1]), .1))
 }
 
 RSAModelLL1_1simpleRSA4TrialsIterative_notObey.2 <- function(params,  data) {
-  return(RSAModelKLDiv3params_simpleRSA4Trials(data, abs(params[1]), .2))
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIterative(data, abs(params[1]), .2))
 }
 
 RSAModelLL1_2simpleRSA4TrialsIterative <- function(params,  data) {
-  return(RSAModelKLDiv3params_simpleRSA4Trials(data, 0, abs(params[1])))
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIterative(data, 0, abs(params[1])))
 }
 
 RSAModelLL1_2simpleRSA4TrialsIterative_pref.2 <- function(params,  data) {
-  return(RSAModelKLDiv3params_simpleRSA4Trials(data, 0.2, abs(params[1])))
+  return(RSAModelKLDiv3params_simpleRSA4TrialsIterative(data, 0.2, abs(params[1])))
 }
 
 
