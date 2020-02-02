@@ -217,6 +217,52 @@ simpleBestInfGainUtterance <-
     return(postUttGPrefPrior / sum(postUttGPrefPrior))
   }
 
+############## Functions from Ella's code #################################
+
+evaluate <-
+  function(allUtterancePref,
+           preferencesPrior,
+           targetFeature) {
+    index <- targetFeature * 3
+    indices <- c(index - 2, index - 1, index)
+    tarFeaPref <- allUtterancePref[indices, ]
+    if (length(preferencesPrior) > 3) {
+      tarFeaPrefPrior <- preferencesPrior[indices]
+    } else {
+      tarFeaPrefPrior <- preferencesPrior
+    }
+    prefRank <-
+      order(as.numeric(tarFeaPref[, 3]))#, ties.method = "first")
+    # cat("prefRank", prefRank)
+    prefPriorRank <-
+      order(tarFeaPrefPrior) #, ties.method = "first")
+    # cat("prefPriorRank", prefPriorRank)
+    
+    # if (prefRank == prefPriorRank){
+    #   evalNum <- 3
+    # } else if (prefRank == c(prefPriorRank[1],prefPriorRank[3],prefPriorRank[2]) || prefRank == c(prefPriorRank[2],prefPriorRank[1],prefPriorRank[3])){
+    #   evalNum <- 2
+    # }else if (prefRank == c(prefPriorRank[2],prefPriorRank[3],prefPriorRank[1]) || prefRank == c(prefPriorRank[3],prefPriorRank[1],prefPriorRank[2])){
+    #   evalNum <- 1
+    # }else if (prefRank == c(prefPriorRank[3],prefPriorRank[2],prefPriorRank[1])){
+    #   evalNum <- 0
+    # }
+    
+    if (identical(prefRank, prefPriorRank)) {
+      evalNum <- 3
+    } else if (identical(prefPriorRank, c(prefRank[1], prefRank[3], prefRank[2])) ||
+               identical(prefPriorRank, c(prefRank[2], prefRank[1], prefRank[3]))) {
+      evalNum <- 2
+    } else if (identical(prefPriorRank, c(prefRank[2], prefRank[3], prefRank[1])) ||
+               identical(prefPriorRank, c(prefRank[3], prefRank[1], prefRank[2]))) {
+      evalNum <- 1
+    } else if (identical(prefPriorRank, c(prefRank[3], prefRank[2], prefRank[1]))) {
+      evalNum <- 0
+    }
+    return(evalNum)
+  }
+
+###################################################
 
 # ## Tests 1:
 #notObeyInst <- 1e-10

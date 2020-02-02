@@ -1,6 +1,6 @@
 #library(knitr)
 rm(list = ls())
-source("X9_Code/SRSA_StratUtt_X9.R")
+source("CommonCode/SRSA_StratUtt.R")
 source("CommonCode/AllUtterancesAndObjects.R")
 
 library(gridExtra)
@@ -52,9 +52,62 @@ if (whichDataSet == 0) {
 # )
 # totalWorkerWO <- 52
 
+
+temp <- inputData$simulatedAnswer
+temp2 <- (temp - temp %% 10) / 10
+temp3 <- (temp2 - temp2 %% 10) / 10
+targetOC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
+inputData$targetOC27 <- targetOC27
+
+temp <- inputData$obj1
+temp2 <- (temp - temp %% 10) / 10
+temp3 <- (temp2 - temp2 %% 10) / 10
+obj1OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
+inputData$obj1OC27 <- obj1OC27
+
+temp <- inputData$obj2
+temp2 <- (temp - temp %% 10) / 10
+temp3 <- (temp2 - temp2 %% 10) / 10
+obj2OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
+inputData$obj2OC27 <- obj2OC27
+
+temp <- inputData$obj3
+temp2 <- (temp - temp %% 10) / 10
+temp3 <- (temp2 - temp2 %% 10) / 10
+obj3OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
+inputData$obj3OC27 <- obj3OC27
+
+
+## Reordering objects in input data
+
+targetObject <- rep(NA, length(inputData$X))
+object2 <- rep(NA, length(inputData$X))
+object3 <- rep(NA, length(inputData$X))
+
+for (i in 1:length(inputData$X)){
+  if(targetOC27[i] == obj1OC27[i]){
+    targetObject[i] <- targetOC27[i]
+    object2[i] <- obj2OC27[i]
+    object3[i] <- obj3OC27[i]
+  } else if (targetOC27[i] == obj2OC27[i]) 
+  {targetObject[i] <- obj2OC27[i]
+  object2[i] <- obj1OC27[i]
+  object3[i] <- obj3OC27[i]
+  } else {
+    targetObject[i] <- obj3OC27[i]
+    object2[i] <- obj1OC27[i]
+    object3[i] <- obj2OC27[i]
+  }
+}  
+
+inputData$targetObject <- targetObject
+inputData$object2 <- object2
+inputData$object3 <- object3
+
+
 ### Setting default parameters. 
-notObeyInst <- 0.114
-softPrefValue <- 0.664
+notObeyInst <- 0
+softPrefValue <- 0
 allObjectCodes <- getAllObjectCodes(allObjects, allUtterances) # working with "dotted" NOT "polka-dotted"!!!
 
 inputData$orderObjNum1 <- inputData$order0
@@ -182,6 +235,8 @@ inputData$preferencesPrior2 <- NA
 inputData$preferencesPrior3 <- NA
 inputData$ambiguousUtteranceCount <- NA
 
+preferencesPriorAll <- matrix(0,length(inputData$X),9)
+
 for (worker in c(0:totalWorker)) {
   wID <- unique(inputData$workerid)[worker + 1]
   # cat(worker)
@@ -194,9 +249,7 @@ for (worker in c(0:totalWorker)) {
              blockNr == block - 1 & workerid == wID)
     targetFeatureNum <- blockdata$targetFeatureNum[1]
     #cat("targetFeatureNum", print(targetFeatureNum))
-    preferencesPrior <- getPreferencesPrior(targetFeatureNum)
-    preferencesPriorIndices <- which(preferencesPrior != 0)
-  
+   
     ## simulated true preferences of the imaginatory partner
     allUtterancePref <-
       getAllUtterancePref(
@@ -208,52 +261,57 @@ for (worker in c(0:totalWorker)) {
       )
 
     ambiguousUtteranceCount <- 0
+    
     for (trial in c(1:maxTrialNum)) {
-      row <- row + 1
-      currentObjects <-
-        c(blockdata$orderObjNum1[trial],
-          blockdata$orderObjNum2[trial],
-          blockdata$orderObjNum3[trial])
-      #cat(blockdata$orderObjNum1[trial])
-      #cat("currentObjects", print(currentObjects))
-      allPresentFeaValues <- determineAllFeaValues(currentObjects)
-      inputData$allPresentFeaValues[row] <-
-        toString(allPresentFeaValues)
-      #cat(allPresentFeaValues, "\n")
-      relevantUtterances <- determineValidUtterances(currentObjects)
-      #cat("relevantUtterances", print(relevantUtterances))
-      utteranceGeneral <- as.integer(blockdata$utteranceNum[trial])
-      #cat("utterance", print(utterance))
-      utterance <- which(relevantUtterances == utteranceGeneral)
-      ambiguous <- isAmbiguous(allPresentFeaValues,
-                               utteranceGeneral,
-                               currentObjects,
-                               targetFeatureNum)
-      ambigRatio <- countAmbigUttRatio(allPresentFeaValues, 
-                                       currentObjects, 
-                                       targetFeatureNum)
-      inputData$ambigRatio[row] <- ambigRatio
-      # cat(ambiguous)
-      # cat(inputData)
-      inputData$ambiguous[row] <-
-        ambiguous
-      if (ambiguous) {
-        ambiguousUtteranceCount <- ambiguousUtteranceCount + 1
+      if( (trial-1)%%4 == 0) {
+        preferencesPriorAll <- getPreferencesPrior(blockdata[trial,"targetFeatureNum"])
       }
-      inputData$ambiguousUtteranceCount[row] <-
-        ambiguousUtteranceCount
-      mapObjToUtt <-
+      preferencesPriorIndices <- which(preferencesPriorAll != 0)
+      
+      currentObjects <-
+        c(blockdata$targetObject[trial],
+          blockdata$object2[trial],
+          blockdata$object3[trial])
+    
+      relevantUtterances <- determineValidUtterances(currentObjects)
+      utteranceWord <- blockdata$utterance[trial]
+      utteranceNum <- which(allUtterancesNew1 == as.character(utteranceWord))
+      utterance <- which(utteranceNum == relevantUtterances)
+      row <- row + 1
+            
+      allPresentFeaValues <- determineAllFeaValues(currentObjects)
+      inputData$allPresentFeaValues[row] <- toString(allPresentFeaValues)
+      utteranceGeneral <- as.integer(blockdata$utteranceNum[trial])
+   #   utterance <- which(relevantUtterances == utteranceGeneral)
+       ambiguous <- isAmbiguous(allPresentFeaValues,
+                                utteranceGeneral,
+                              currentObjects,
+                             targetFeatureNum)
+       ambigRatio <- countAmbigUttRatio(allPresentFeaValues, 
+                                        currentObjects, 
+                                        targetFeatureNum)
+       inputData$ambigRatio[row] <- ambigRatio
+      
+       inputData$ambiguous[row] <- ambiguous
+       if (ambiguous) {
+         ambiguousUtteranceCount <- ambiguousUtteranceCount + 1
+       }
+       inputData$ambiguousUtteranceCount[row] <-   ambiguousUtteranceCount
+      
+       ##### Now calculate posteriors ########################################
+       
+       mapObjToUtt <-
         determineObjectToUtterancesMapping(currentObjects)
-      #cat("mapObjToUtt", print(mapObjToUtt))
+      
       mapUttToObjProbs <-
         determineUtteranceToObjectProbabilities(relevantUtterances,
                                                 currentObjects,
                                                 mapObjToUtt,
                                                 notObeyInst)
-      #cat("mapUttToObjProbs", print(mapUttToObjProbs))
+      
       mapUttToPref <-
         getMapUttToPref(relevantUtterances, allObjects, allUtterancePref)
-      #cat("mapUttToPref", print(mapUttToPref))
+      
       objectPreferenceSoftPriors <-
         getObjectPreferencePriorsWithUttToPref(
           relevantUtterances,
@@ -262,7 +320,7 @@ for (worker in c(0:totalWorker)) {
           mapUttToObjProbs,
           mapUttToPref
         )
-      #cat("objectPreferenceSoftPriors", print(objectPreferenceSoftPriors))
+      
       mapUttToObjToPref <-
         getMapUttToObjToPref(
           currentObjects,
@@ -276,27 +334,28 @@ for (worker in c(0:totalWorker)) {
       #obj <- listenerObjChoice(mapUttToObjToPref, utterance)
       # obj <- blockdata$simulatedAnswer[trial]
       # obj <- blockdata$simulatedAnswerObjNum
-      obj <-
-        which(currentObjects == blockdata$simulatedAnswerObjNum[trial])
-      #cat("obj", print(obj))
-      #cat("preferencesPrior", preferencesPrior)
-      preferencesPrior <-
-        simplePragmaticSpeaker(
+
+      obj <- 1
+      
+      preferencesPriorAll <-
+        simplePragmaticSpeakerWithPrefPriorAll(
           utterance,
           obj,
-          preferencesPrior,
+          preferencesPriorAll, # taking posterior from previous trial
           relevantUtterances,
           currentObjects,
           mapUttToObjProbs,
           objectPreferenceSoftPriors
         )
+      
       # cat("preferencesPrior", preferencesPrior, "\n")
       inputData$preferencesPrior1[row] <-
-        preferencesPrior[preferencesPriorIndices[1]]
+        preferencesPriorAll[preferencesPriorIndices[1]]
       inputData$preferencesPrior2[row] <-
-        preferencesPrior[preferencesPriorIndices[2]]
+        preferencesPriorAll[preferencesPriorIndices[2]]
       inputData$preferencesPrior3[row] <-
-        preferencesPrior[preferencesPriorIndices[3]]
+        preferencesPriorAll[preferencesPriorIndices[3]]
+      
       evalNumModel <-
         evaluate(allUtterancePref, preferencesPrior, targetFeatureNum)
       inputData$evalNumModel[row] <- evalNumModel
@@ -313,6 +372,9 @@ for (worker in c(0:totalWorker)) {
     }
   }
 }
+
+
+
 inputData$evalNum <- as.factor(inputData$evalNum)
 inputData$evalNumModel <- as.factor(inputData$evalNumModel)
 inputDataCondensed <-
