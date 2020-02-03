@@ -24,7 +24,7 @@
 % Possible title: Higher order pragmatic reasoning in reference games
 
 %\title{On the purpose of ambiguous utterances}
-\title{Bayesian inference in dialog}
+\title{Bayesian inference in dialogue}
 
 %\author{
 %		Asya Achimova\\
@@ -48,20 +48,17 @@
 	
 An utterance is referentially ambiguous if it has several potential referents.
 Observing how listeners make choices among those referents can reveal not only the reasoning process but also their hidden beliefs and preferences.
-We asked subjects to observe how one of the objects is chosen following a possibly ambiguous utterance, and then to infer which preferences the listener may have had in choosing the particular object.
-Accordingly, we modify the traditional one-shot reference games by extending the scenarios to a round of 4-trial games and model the process within the Rational Speech Act framework, implementing iterative inference over multiple trials.
+We asked subjects to observe how one of the objects is chosen following a possibly ambiguous utterance, and then to infer which preferences the listener may have had in mind choosing the particular object.
+Accordingly, we modified the traditional one-shot reference games by extending the scenarios to a round of 4-trial games and modeled the process within the Rational Speech Act framework, implementing iterative inference over multiple trials.
 % Martin: I think this information is not necessary for the abstract:
 %, where posteriors from previous trials carry over to the next trial as priors. 
 The model predicts human inference behavior better than a baseline model as well as better than a non-iterative model. 
-The results imply that, in principle, humans are able to compute Bayesian-like inferences in dialog, learning about the beliefs and preferences of others in a cumulative manner.
+The results imply that, in principle, humans are able to compute Bayesian-like inferences in dialogue, learning about the beliefs and preferences of others in a cumulative manner.
                                                      
 
 \textbf{Keywords:} 
 ambiguity; iterative learning; pragmatics; information gain; event-predictive cognition; Rational Speech Act models; social intelligence
 \end{abstract}
-
-
-
 
 
 \section{Introduction}
@@ -152,7 +149,7 @@ P_{L_{1}}(s \mid u) \propto P_{S_{1}}(u \mid s) \cdot P(s).
 \citeA{frankgoodman2012} tested the predictions of RSA against behavioral data from reference games, as in Figure~\ref{FG-ref-game}.
 %To model production behavior (that is, which utterance should be chosen to communicate a given object), the authors used the probability distributions from $S_1$.
 %To model interpretation behavior (i.e., which object the speaker is trying to communicate on the basis of their utterance), the authors generated predictions from $L_1$.
-They found a strong correlation between model predictions and behavioral data in both cases, confirming the validity of their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015} for a fuller exploration of the modeling choices).
+They found a strong correlation between model predictions and behavioral data, confirming the validity of their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015} for a fuller exploration of the modeling choices).
 
 
 \subsection{Pragmatic social inference RSA model}
@@ -179,6 +176,7 @@ It simply assumes that all objects may be chosen that match the utterance, modif
 P_{S_1}(u) \propto \sum_{s:\  [\![u]\!](s)=1} P_{L_0}(s|u,f)\ \exp(\lambda \cdot \textrm{KL}(P(f)\mid\mid P_{S_{1}}(f\mid u,s))).
 \label{eq:kldivlambdasimp}
 \end{equation}
+The utterance choice process is aimed at maximizing the distance between the flat prior distribution of listener preferences and the posterior that can be obtained having observed a particular object choice. We formalize the distance between these two distributions as Kullback-Leibler divergence (KL).
 
 Second, we model reasoning as an iterative process where a learner accumulates and updates her understanding of another person's beliefs over a set of trials. A learner starts with a flat prior over possible feature preferences and infers posteriors upon hearing an utterance and observing an object choice. Then the model passes the obtained posterior distribution of preferences as prior for the next trial, implementing the Bayesian learning process.
 
@@ -190,8 +188,8 @@ We fit the model parameters at the group and individual levels by optimizing the
 \textrm{KL}(P_{data}(f \mid u,s)\mid\mid (P_{model}(f\mid u,s)),
 \end{equation}
 
-\noindent where $P_{data}(f\mid u,s)$ specifies a participant's normalized slider value setting, which offers empirical estimates of the feature-preference posterior given object scene $S$, a particular utterance choice $u$, and the consequent object choice $s$;
-$P_{model}(f\mid u,s)$ specifies the corresponding model posterior $P_{S_{1\textrm{-simp}}}(f\mid u,s)$. 
+\noindent where $P_{data}(f\mid u,s)$ specifies a participant's normalized response value, which offers empirical estimates of the feature-preference posterior given object scene $S$, a particular utterance choice $u$, and the consequent object choice $s$;
+$P_{model}(f\mid u,s)$ specifies the corresponding model posterior $P_{S_{1}}(f\mid u,s)$. 
 %Since no conclusions can be drawn concerning feature values that are not present in the scene, we ignored the respective feature preference estimates.
 %By minimizing the summed KL divergence between the empirical and model-predicted preference posteriors over all considered trials, we essentially maximize the model fit to the participants' data. 
 %Moreover, we can use the minimized KL divergence values to calculate the the $G^2$-statistic and perform the likelihood ratio test for nested models, since $G^2$ values are approximately chi-square distributed \cite{Lewandowsky:2011}. 
@@ -214,7 +212,7 @@ P(s \mid f) \propto \begin{cases}
 controlling the choice probability of those objects $s$ that contain feature $f$ compared to those that do not.  
 A value of $\gamma=0$ models a hard preference choice; in this case, the speaker always chooses one of the preferred objects. 
 On the other hand, when $\gamma \rightarrow \infty$, the choice prior becomes uniform over all objects, thus ignoring feature preferences. 
-For example, consider a scenario in Figure \ref{exp1-trial}, where the listener picked a striped object following the utterance ``circle''. If her $\gamma=0$, she should adjust the ``striped'' slider to 1 and set other sliders to 0 if we assume she has not previously learned anything about the relative ranking of the other values. If her $\gamma=1$, the model predicts that she sets the ``striped'' slider to 0.75 and the other slider values to 0.25. In that case, we can say that her preferences became softer, i.e. less categorical or strict.
+For example, consider a scenario in Figure \ref{exp1-trial}, where the listener picked a striped object following the utterance ``circle''. If her $\gamma=0$, she should adjust the ``striped'' slider to 1 and set other sliders to 0 if we assume she has not previously learned anything about the relative ranking of the other values. If her $\gamma=1$, the model predicts that she sets the ``striped'' slider to 0.5 and the other slider values to 0.25. In that case, we can say that her preferences became softer, i.e. less categorical or strict.
 % if gamma = 1 and three feature values are present, then picked object gets 1, other objects get 0
 % (1+1) + (1+0) + (1+0) = 4. Devide everything by 4: 0.5, 0.25, 0.25
 % 
@@ -232,7 +230,7 @@ For example, consider a scenario in Figure \ref{exp1-trial}, where the listener 
 % The softness parameter $\gamma$ regulates the probability that the middle object will be picked if a person has a preference for clouds. 
 %Preference softness increases with $\gamma$: 
 %a value of $\gamma=0$ specifies a hard preference, which means that the listener will always choose the object that holds the preferred feature value if possible (e.g., clouds when clouds are preferred). 
-We use $\gamma=0$---that is, hard preferences---as the default model value.
+We use $\gamma=0$--that is, hard preferences--as the default model value.
 %Let us see how the probability changes if $\gamma$ is set to 0.2:
 % $$ P(s_{\textrm{cloud}}\mid f_{\textrm{cloud}}) = \frac{1 + 0.2}{1 + 3 \cdot 0.2} = 0.75
 %%\end{equation}
@@ -255,35 +253,36 @@ Again, $\beta=0$ models a hard object choice---that is, full obedience to the ut
 
 \section{Experiment}
 
-The experiment is designed to address three questions: first, whether speakers are able to pick ambiguous utterances that could create a potentially informative learning situation. In such a situation, the listener's object choice would reveal his preferences. Second, we ask whether participants are able to infer the preferences of the listener. Finally, we are interested in whether participants are able to use the information about listener preferences that they accumulated over previous trials.
+The experiment was designed to address three questions: first, whether speakers are able to pick ambiguous utterances that could create a potentially informative learning situation. In such a situation, the listener's object choice would reveal his preferences. Second, we ask whether participants are able to infer the preferences of the listener. Finally, we are interested in whether participants are able to use the information about listener preferences that they accumulated over previous trials. This passing of information over trials helps the learners base their guesses on an informative rather than an uninformative flat prior. If their informative prior is accurate, the posterior estimate is also expected to improve, resulting in the overall success of learning.
 
 \begin{figure*}[ht!]
 	\centering
-	\includegraphics[width=5.5in]{images/utterance_choice_modification_4.png}
-	\caption{ \small{A sample trial. Each trial portrays a listener. The speaker (experiment participant) produces an utterance to refer to one of the objects. The listener picks the object with the orange dotted outline. The experiment participant then evaluates what preferences of the listener may have led her to the particular object choice, specifying the inference by adjusting the sliders for each of the features}.}
+	\includegraphics[width=5.5in]{images/trial.png}
+	\caption{ \small{A sample trial. Each trial portrays a listener. The speaker (experiment participant) produces an utterance to refer to one of the objects. The simulated listener picks an object, which gets marked with a yellow outline. The experiment participant then evaluates what preferences of the listener may have led her to the particular object choice, specifying the inference by adjusting the sliders for each of the features}.}
 	\label{exp1-trial}
 \end{figure*}
 
 \subsection{Participants}
 
-We recruited 100 participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service. Subjects were compensated for their participation. On the basis of a post-test demographics questionnaire, we identified 98 participants as native speakers of English. 3 participants reported that they did not understand the instructions or were confused by the task. As a result, the data from 95 participants were included in the analysis. We obtained a confirmation from all the subjects that they agree to participate in the study.
+We recruited 100 participants with US IP addresses through Amazon.com's Mechanical Turk crowdsourcing service. Subjects were compensated for their participation. On the basis of a post-test demographics questionnaire, we identified 98 participants as native speakers of English. 3 participants reported that they did not understand the instructions or were confused by the task. As a result, the data from 95 participants was included in the analysis. We obtained a confirmation from all the subjects that they agree to participate in the study.
 
 \subsection{Design and methods}
 
-We presented the subjects with a series of reference game scenarios modeled after Figure~\ref{FG-ref-game} from \citeA{frankgoodman2012}.
-Each trial consisted of 2 parts, as shown in Figure~\ref{exp1-trial}. The experiment participant played the role of a speaker. Her task first was to find out a certain type of preferences of the listener, either related to color of objects, their pattern or shape. Listener names and what particular feature preferences the speaker needs to infer (color, shape or texture) were chosen randomly in each block but remained constant within a block. Participants completed a series of 4 blocks each containing 4 trials. 
+We presented the subjects with a series of reference game scenarios modeled after Figure~\ref{FG-ref-game} from \citeA{frankgoodman2012}. The experiment participant played the role of a speaker. Her task was to find out a certain type of preferences of the listener, either related to color of objects, their texture or shape. 
+% Asya: I use the word 'texture' because that's what it says in Figure 2
 
-Objects were allowed to vary along three dimensions: color (blue, red, green), shape (cloud, circle, square), and texture (solid, striped, polka-dotted). The speaker's utterance was chosen at random from the properties of the three objects present, excluding the utterances which correspond to the target feature (e.g. texture in Figure \ref{exp1-trial}).  All trials contained at least 1 ambiguous utterance. 
-In the first part of the experiment (left side of the screen) the speaker had to pick an utterance and watch the simulated listener select an object. The listener's choices were driven by the literal semantics of the utterance, i.e. only red objects qualified as a possible choice following the utterance ``circle''. And second, we built in particular distributions of feature preferences giving a priority scale. The listener picked the object that matched the highest value on the scale. For example if the scale was red $>$ green $>$ blue, and all three colors were present in a scene, the listener picked the red object. If only green and blue objects were present and qualified, the listener picked a green object.
+Each trial consisted of 2 parts. 
+First, the speaker had to select an utterance (left part of Figure \ref{exp1-trial}) and watch the simulated listener pick an object. Listener's choices were driven by the literal semantics of the utterance, i.e. only red objects qualified as a possible choice following the utterance ``red'. We built in particular distributions of feature preferences giving a priority scale. The listener picked the object that matched the highest value on the scale. For example if the scale was ``red $>$ green $>$ blue'', and all three colors were present in a scene, the listener picked the red object. If only green and blue objects were present and qualified, the listener picked a green object. Listener names and what particular feature preferences the speaker needed to infer (color, shape or texture) were chosen randomly in each block but remained constant within a block. Participants completed a series of 4 blocks each containing 4 trials. 
 
-In the second part of the trial (right half of the screen in Figure \ref{exp1-trial}), the speaker adjusted the sliders guessing the listener's preferences. Then the experiment proceeded to the next trial with the same simulated listener and the same hierarchy of preferences. The sliders remained in their adjusted positions, so the participant could see what information about the listener's preferences she already obtained.
+In the second part of the trial (right half of Figure \ref{exp1-trial}), the speaker adjusted the sliders guessing the listener's preferences. Then the experiment proceeded to the next trial with the same simulated listener and the same hierarchy of preferences. The sliders remained in their adjusted positions, so the participant could see what information about the listener's preferences she already obtained.
 
+Objects were allowed to vary along three dimensions: color (blue, red, green), shape (cloud, circle, square), and texture (solid, striped, polka-dotted). The list of utterances contained the properties of the three objects present, excluding the utterances which correspond to the target feature (e.g. texture in Figure \ref{exp1-trial}).  All trials contained at least 1 ambiguous utterance. 
 
-To compare the model predictions to the human data, we calculated an average value for each slider.
+%To compare the model predictions to the human data, we calculated an average value for each slider.
 %, binning data into 48 ambiguity classes.
 % for Experiment 1 and 14 classes for Experiment 2. 
 %We excluded the sliders if their corresponding feature value was not present in a scene. For example, for the trial depicted in Figure \ref{exp1-trial}, we excluded the sliders for solid things and squares since none of these are present, and therefore no learning about them is possible.
-We partitioned the data into ambiguity classes, similar to \citeA{frankgoodman2012}. Depending on how many features competitor objects share with the chosen object, we were able to identify 48 ambiguity classes, which group the constellations that have the exact same ambiguity pattern. The ambiguity classes distinguish how many objects are referenced by the utterance, how the referenced objects differ in their two non-uttered features, and how the non-referenced objects differ from the referenced objects and from each other. We excluded combinations that contained identical objects as well as combinations were objects share non of the features, i.e. all objects are unique, leaving us 33 classes in this experiment. Each ambiguity class yields unique model prediction values for the individual features present (with respect to their ``ambiguity role'' in the particular ambiguity class) in corresponding scenarios $S$, effectively distinguishing all model-relevant cases.
+We partitioned the data into ambiguity classes, similar to \citeA{frankgoodman2012}. Depending on how many features competitor objects share with the chosen object, we were able to identify 48 ambiguity classes, which group the constellations that have the exact same ambiguity pattern. The ambiguity classes distinguish how many objects are referenced by the utterance, how the referenced objects differ in their two non-uttered features, and how the non-referenced objects differ from the referenced objects and from each other. We excluded combinations that contained identical objects as well as combinations were objects share none of the features, i.e. all objects are unique, leaving us 33 classes in this experiment. Each ambiguity class yields unique model prediction values for the individual features present (with respect to their ``ambiguity role'' in the particular ambiguity class) in corresponding scenarios $S$, effectively distinguishing all model-relevant cases.
 
 %For example, considering the top-left-most case, ,where the utterance ``red" refers to two possible objects and the choice falls onto one of them (here the red cloud), which shares one property with the other, not referenced object (its cloud shape), but no further properties with the other referenced object (neither its shape nor its pattern). Thus, its other property is unique (its striped pattern)
 %If, as an alternative scenario, he utterance was ``green", only one object would qualify (the green, dotted cloud), preventing the learning about preferences. 
@@ -295,24 +294,27 @@ We partitioned the data into ambiguity classes, similar to \citeA{frankgoodman20
 
 In this experiment, the task of the participants was to first pick an utterance, then observe the choice of an object and ultimately infer the hierarchy of the listener's preferences. Subjects watched an object choice in a series of 4 trials. We tested two main types of models: the iterative model that takes into account the posterior estimates from the previous trial, and the non-iterative model that assumes uniform priors for all trials. We expect to see the largest difference between the two models in trial 4, with the iterative model showing a better fit.
 
-In Figure \ref{iterative}, we plot the human data--slider values of individual trials--against the iterative model predictions. We optimized the two free parameters of the model--softness $\gamma$ and obedience $\beta$--at the global level, i.e. we obtained a single pair of estimates that we used to calculate the model predictions for each trial. The model captures a large proportion of variance in the human data  ($r^2=0.558$, $F(1,1138) = 1437$, $p<0.001$)
+In Figure \ref{iterative}, we plot the human data--slider values of individual trials--against the iterative model predictions. 
 
  \begin{figure}
- 	\centering
- 	\includegraphics[width=.8\linewidth]{images/m4.pdf}
- 	\caption{Iterative model predictions with softness and obedience optimized globally}	
- 	\label{iterative}
- \end{figure}
+	\centering
+	\includegraphics[width=.8\linewidth]{images/m4.pdf}
+	\caption{Iterative model predictions with softness $\gamma$ and obedience $\beta$ optimized globally. Each datapoint represents a single trial.}	
+	\label{iterative}
+\end{figure}
 
-The non-iterative model is less accurate at predicting the human data  ($r^2=0.382$, $F(1,1138) = 703.5$, $p<0.001$).
+
+We optimized the two free parameters of the model--softness $\gamma$ and obedience $\beta$--at the global level, i.e. we obtained a single pair of estimates based on the data from all the participants pulled together, that we later used to calculate the model predictions for each trial. The model iterative captures a large proportion of variance in the human data  ($r^2=0.558$, $F(1,1138) = 1437$, $p<0.001$). The non-iterative model (Figure \ref{non-iterative}) is less accurate at predicting the data  ($r^2=0.382$, $F(1,1138) = 703.5$, $p<0.001$).
 
  \begin{figure}
 	\centering
 	\includegraphics[width=.8\linewidth]{images/m8.pdf}
-	\caption{Non-Iterative model predictions with softness and obedience optimized globally}	
+	\caption{Non-Iterative model predictions with softness $\gamma$ and obedience $\beta$ optimized globally. Each datapoint represents a single trial.}	
 	\label{non-iterative}
 \end{figure}
  
+ To further assess the performance of the two models we can examine the KL values that we obtained in the course of optimization. For a point of comparison, we can use the KL for the uniform base model: $558.7$. A large KL divergence term indicates a poor fit of the model.
+ The iterative model produces a KL value of $318.4$ compared to $356.3$ for the non-iterative model. Since the KL divergence corresponds to the negative log-likelihood between the model and the data, we can interpret the difference between two KL values as a Bayes factor. In our case we observe a Bayes factor of 37.9 which corresponds to very strong evidence in favor of the iterative model on Jeffreys scale \cite{jeffreys1961theory}.
 
 %In order to assess whether subjects learned the target ordering of listener preferences, we developed an evaluation score from 0 to 3. The preferences are encoded as pairs. If a hierarchy is $ a > b > c $, there are three relations to learn:  $ a > b$; $ b > c $, and $ a >  c $. A score of 3 is assigned if the relations in all the pairs are identified correctly, a score of 0 means that all the relations between feature preferences have been reversed, and values 1 and 2 correspond to 1 and 2 pairs guessed correctly respectively.
 %
@@ -357,7 +359,14 @@ The non-iterative model is less accurate at predicting the human data  ($r^2=0.3
 
 In order to interpret an ambiguous utterance, the listener needs to draw on her prior knowledge to decide which interpretation is most likely. This prior knowledge broadly viewed can include personal preferences and beliefs, as well as the understanding of the current context. Listener choices are in that sense informative about the underlying priors of the listener. 
 
-We simulate the ambiguity resolution process with a Bayesian reasoning model that allows accumulation of evidence over a series of trials. We demonstrate that if ambiguous utterances are chosen, the accuracy of guesses improves as a function of trial order, and we faithfully model this process computationally.
+We simulate the ambiguity resolution process with a Bayesian reasoning model that allows accumulation of evidence over a series of trials. The experimental data reveals that speakers are indeed able to infer hidden prior preferences observing behavioral choices. This type of inference allows communicative partners to gain better understanding of each other, and further anticipate how ambiguity maybe resolved.
+
+A computational model of the reasoning process that we developed takes into account iterative learning, and implements the idea of accumulation of evidence in the form of passing posteriors over learned feature preferences as priors for the following trial. While we do observe a better performance of the iterative model compared to the model that assumes uniform priors for each trial, we also acknowledge the fact that there is substantial variance in the data that the model is unable to capture even when globally optimizing for 2 free parameters.  While the model successfully learns the relative hierarchy of preferences, it fails to predict the exact slider values. In order to mathematically model the exact values we would need to make additional assumptions about the nature of the scale itself as it can take many forms in linear or log space, to name a few.
+
+
+
+
+ %We demonstrate that if ambiguous utterances are chosen, the accuracy of guesses improves as a function of trial order, and we faithfully model this process computationally. 
 
 
 %\section*{Funding}

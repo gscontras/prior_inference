@@ -165,9 +165,11 @@ print(figure)
 
 ggsave(figure, height = 3, width = 3, units = "in", filename = paste("m", nr,".pdf", sep=""))
 
-model <- lm(formula = plotData$model~plotData$workerData)
+model_4 <- lm(formula = plotData$model~plotData$workerData)
 summary(model)
 
+plotData$workerid <- rep(1:95)
+lmer_model_4 <- lmer(plotData$workerData~plotData$model +(1|plotData$workerid))
 
 # for m5
 plotData <- subset(full, Nr == 5) 
@@ -269,6 +271,8 @@ summary(model)
 
 # for m8
 plotData <- subset(full, Nr == 8) 
+plotData$workerid <- rep(1:95)
+lmer_model_8 <- lmer(plotData$workerData~plotData$model +(1|plotData$workerid))
 
 r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
 softness <- unique(as.character(plotData$softness))
@@ -296,7 +300,7 @@ print(figure)
 
 ggsave(figure, height = 3, width = 3, units = "in", filename = paste("m", nr,".pdf", sep=""))
 
-model <- lm(formula = plotData$model~plotData$workerData)
+model_8 <- lm(formula = plotData$model~plotData$workerData)
 summary(model)
 
 

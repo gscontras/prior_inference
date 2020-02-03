@@ -78,8 +78,8 @@ Frank, M\BPBI C.%
   learning} {Informative communication in word production and word
   learning}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Proceedings of the annual meeting of the cognitive
-  science society} {Proceedings of the annual meeting of the cognitive science
+\BIn{} \APACrefbtitle {Proceedings of the Annual Meeting of the Cognitive
+  Science Society} {Proceedings of the annual meeting of the cognitive science
   society}\ (\BVOL~31).
 \PrintBackRefs{\CurrentBib}
 
@@ -263,6 +263,29 @@ Grice, H\BPBI P.%
   (\BPG~26-40).
 \newblock
 \APACaddressPublisher{New York}{Academic Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Jeffreys%
+}{%
+Jeffreys%
+}{%
+{\protect \APACyear {1961}}%
+}]{%
+jeffreys1961theory}
+\APACinsertmetastar {%
+jeffreys1961theory}%
+\begin{APACrefauthors}%
+Jeffreys, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1961}{}{}.
+\newblock
+\APACrefbtitle {Theory of probability, {C}larendon.} {Theory of probability,
+  {C}larendon.}
+\newblock
+\APACaddressPublisher{}{Oxford}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

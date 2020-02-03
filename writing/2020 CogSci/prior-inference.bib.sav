@@ -7814,7 +7814,7 @@
 @InProceedings{frank2009informative,
   author    = {Frank, Michael C. and Goodman, Noah and Lai, Peter and Tenenbaum, Joshua},
   title     = {Informative communication in word production and word learning},
-  booktitle = {Proceedings of the annual meeting of the cognitive science society},
+  booktitle = {Proceedings of the Annual meeting of the cognitive science society},
   year      = {2009},
   volume    = {31},
   number    = {31},
@@ -7857,6 +7857,13 @@
   keywords  = {Communication, Theory of mind, Active inference, Predictive coding, Attention, Sensory attenuation, Bayesian, Generalised synchrony},
   owner     = {mvbutz},
   timestamp = {2016.05.05},
+}
+
+@Misc{jeffreys1961theory,
+  author    = {Jeffreys, Harold},
+  title     = {Theory of probability, Clarendon},
+  year      = {1961},
+  publisher = {Oxford},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
