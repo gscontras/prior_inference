@@ -1,8 +1,10 @@
 ############################################################################################
-procType <- 1    ###########################################################################
+iterative12 <- 1   ###########################################################################
 ############################################################################################
 # 1 iterative (works)
 # 2 non-iterative (doesn't work)
+
+parSetting <- 2
 
 source("CommonCode/SRSA_StratUtt.R")
 source("CommonCode/SRSA_StratUttOptimization_iterative.R") 
@@ -103,7 +105,7 @@ idMax <- max(workerIDs)
 
 #################################################
 
-if(procType == 1) {
+if(iterative12 == 1) {
   paramsWorkers12 <- as.matrix(read.csv("X9_Data/x9Params_simpleRSA_indOpt_iterative.csv"))
   llWorkers12 <- as.matrix(read.csv("X9_Data/x9KLDivs_simpleRSA_indOpt_iterative.csv"))
 }else {
@@ -151,24 +153,34 @@ for(i in c(1:length(x9data$X))) {
       priorPrefAll_2 <- getPreferencesPrior(x9data[i,"targetFeatureNum"])
     } # uniform focussing on the feature type in question.
     
-    if(procType == 1) {
-      postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
-                                                                                 0, 0, priorPrefAll_1)
-
+    if(iterative12 == 1) {
+      if(parSetting == 1) {
+        postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+                                                                                   0, 0, priorPrefAll_1)
+        postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+                                                                                   abs(params12[1]), abs(params12[2]), priorPrefAll_2)
+      }else if(parSetting == 2) {
+        postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+                                                                                   1, 0, priorPrefAll_1)
+        postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+                                                                                   0.854056914004583, 1.68201930715193, priorPrefAll_2)
+      }      
       priorPrefAll_1 <- postListMat1Opt[i,]
-   
-      postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
-                                                                                 abs(params12[1]), abs(params12[2]), priorPrefAll_2)
       priorPrefAll_2 <- postListMat2Opt[i,]
-      
-  
-    }else if(procType == 2) {
-      postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+    }else if(iterative12 == 2) {
+      if(parSetting == 1) {
+        postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
                                                                     0, 0, priorPrefAll_1)
-      postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+        postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
                                                                     abs(params12[1]), abs(params12[2]), priorPrefAll_2)
-    } 
-    
+      }else if(parSetting == 2) {
+        postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+                                                                                   1, 0, priorPrefAll_1)
+        postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSAWithPriorPref(objectConstellation, featChoice,
+                                                                                   0.336897437687373,1.01378644853853, priorPrefAll_2)
+      
+      }
+    }
 }
 
 ###########
@@ -190,8 +202,16 @@ x9data <- data.frame(x9data, consCodeAndPosteriorsNO)
 x9data$CCode <- uniqueCCode
 x9data$logLik <- logLik
 
-if(procType == 1) {
-  write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
-}else if(procType == 2) {
-  write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
+if(iterative12 == 1) {
+  if(parSetting == 1) {
+    write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
+  }else if(parSetting == 2) {
+    write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed10_andGlobalOpt_iterative.csv")
+  }
+}else if(iterative12 == 2) {
+  if(parSetting == 1) {
+    write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
+  }else if(parSetting == 2) {
+    write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed10_andGlobalOpt_nonIterative.csv")
+  }
 }

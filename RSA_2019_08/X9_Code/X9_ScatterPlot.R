@@ -8,12 +8,15 @@ source("CommonCode/getConstCodeStratUtt.R")
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed00_and_Opt1.csv")
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_OptPrefObedFixed0_and_Opt1_nonIterative.csv")
 
-x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
+#x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
+x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed10_andGlobalOpt_nonIterative.csv")
+
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
+#x9data <- read.csv("x9dataAugm_SRSAindOpt_fixed10_andGlobalOpt_iterative.csv")
 
 # Take only the data from the last trial in each block
 
-filterTrials <- 4 # if greater zero then only those %% filterTrials trials are taken
+filterTrials <- 0 # if greater zero then only those %% filterTrials trials are taken
 doAverageAmbiguityClasses <- FALSE
 
 if (filterTrials > 0){
