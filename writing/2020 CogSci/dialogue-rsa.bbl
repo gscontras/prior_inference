@@ -20,8 +20,8 @@ Chomsky, N.%
 {\BBOQ}\APACrefatitle {An interview on minimalism} {An interview on
   minimalism}.{\BBCQ}
 \newblock
-\BIn{} A.~Belletti\ \BBA {} L.~Rizzi\ (\BEDS), \APACrefbtitle {On Nature and
-  Language} {On nature and language}\ (\BPG~92-161).
+\BIn{} A.~Belletti\ \BBA {} L.~Rizzi\ (\BEDS), \APACrefbtitle {On {Nature} and
+  {Language}} {On {Nature} and {Language}}\ (\BPG~92-161).
 \newblock
 \APACaddressPublisher{Cambridge}{Cambridge University Press}.
 \PrintBackRefs{\CurrentBib}
@@ -43,9 +43,9 @@ Ferreira, V\BPBI S.%
 \newblock
 \APACrefYearMonthDay{2008}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Ambiguity, Accessibility, and a Division of Labor for
-  Communicative Success} {Ambiguity, accessibility, and a division of labor for
-  communicative success}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Ambiguity, {Accessibility}, and a {Division} of {Labor}
+  for {Communicative} {Success}} {Ambiguity, {Accessibility}, and a {Division}
+  of {Labor} for {Communicative} {Success}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Psychology of Learning and Motivation: Advances in
   Research and Theory}{49}{}{209-246}.
@@ -78,9 +78,9 @@ Frank, M\BPBI C.%
   learning} {Informative communication in word production and word
   learning}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Proceedings of the Annual Meeting of the Cognitive
-  Science Society} {Proceedings of the annual meeting of the cognitive science
-  society}\ (\BVOL~31).
+\BIn{} \APACrefbtitle {Proceedings of the {Annual} {Meeting} of the {Cognitive}
+  {Science} {Society}} {Proceedings of the {Annual} {Meeting} of the
+  {Cognitive} {Science} {Society}}\ (\BVOL~31).
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -103,8 +103,8 @@ Frank, M\BPBI C.%
 \newblock
 \APACrefYearMonthDay{2012}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Predicting Pragmatic Reasoning in Language Games}
-  {Predicting pragmatic reasoning in language games}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Predicting {Pragmatic} {Reasoning} in {Language}
+  {Games}} {Predicting {Pragmatic} {Reasoning} in {Language} {Games}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Science}{336}{}{998-998}.
 \PrintBackRefs{\CurrentBib}
@@ -116,19 +116,21 @@ Franke%
 }{%
 {\protect \APACyear {2009}}%
 }]{%
-franke2009signal}
+Franke.2009}
 \APACinsertmetastar {%
-franke2009signal}%
+Franke.2009}%
 \begin{APACrefauthors}%
 Franke, M.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2009}{}{}.
+\APACrefYear{2009}.
 \newblock
-\APACrefbtitle {Signal to act: Game Theory in Pragmatics: University of
-  Amsterdam PhD dissertation.} {Signal to act: Game theory in pragmatics:
-  University of amsterdam phd dissertation.}
+\APACrefbtitle {Signal to act: Game theory in pragmatics} {Signal to act: Game
+  theory in pragmatics}\ (\BVOL\ DS-2009-11).
+\newblock
+\APACaddressPublisher{Amsterdam}{{Institute for Logic, Language and
+  Computation} and {Universiteit van Amsterdam [Host]}}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -178,7 +180,7 @@ Friston, K.%
 \newblock
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {A Duet for one} {A duet for one}.{\BBCQ}
+{\BBOQ}\APACrefatitle {A {Duet} for one} {A {Duet} for one}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Consciousness and Cognition}{36}{}{390--405}.
 \newblock
@@ -205,9 +207,9 @@ Goodman, N\BPBI D.%
 \newblock
 \APACrefYearMonthDay{2016}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Pragmatic Language Interpretation as Probabilistic
-  Inference} {Pragmatic language interpretation as probabilistic
-  inference}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Pragmatic {Language} {Interpretation} as {Probabilistic}
+  {Inference}} {Pragmatic {Language} {Interpretation} as {Probabilistic}
+  {Inference}}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Trends in Cognitive Sciences}{20}{11}{818-829}.
 \PrintBackRefs{\CurrentBib}
@@ -259,7 +261,7 @@ Grice, H\BPBI P.%
 {\BBOQ}\APACrefatitle {Logic and conversation} {Logic and conversation}.{\BBCQ}
 \newblock
 \BIn{} P.~Cole\ \BBA {} J\BPBI L.~Morgan\ (\BEDS), \APACrefbtitle {Syntax and
-  Semantics 3: Speech Acts} {Syntax and semantics 3: Speech acts}\
+  {Semantics} 3: {Speech} {Acts}} {Syntax and {Semantics} 3: {Speech} {Acts}}\
   (\BPG~26-40).
 \newblock
 \APACaddressPublisher{New York}{Academic Press}.
@@ -417,13 +419,14 @@ Qing, C.%
 \newblock
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Variations on a {B}ayesian Theme: Comparing {B}ayesian
-  Models of Referential Reasoning} {Variations on a {B}ayesian theme: Comparing
-  {B}ayesian models of referential reasoning}.{\BBCQ}
+{\BBOQ}\APACrefatitle {{Variations} on a {Bayesian} {Theme}: {Comparing}
+  {Bayesian} {Models} of {Referential} {Reasoning}} {{Variations} on a
+  {Bayesian} {Theme}: {Comparing} {Bayesian} {Models} of {Referential}
+  {Reasoning}}.{\BBCQ}
 \newblock
-\BIn{} H.~Zeevat\ \BBA {} H\BHBI C.~Schmitz\ (\BEDS), \APACrefbtitle {Bayesian
-  Natural Language Semantics and Pragmatics} {Bayesian natural language
-  semantics and pragmatics}\ (\BPG~201-220).
+\BIn{} H.~Zeevat\ \BBA {} H\BHBI C.~Schmitz\ (\BEDS), \APACrefbtitle
+  {{Bayesian} {Natural} {Language} {Semantics} and {Pragmatics}} {{Bayesian}
+  {Natural} {Language} {Semantics} and {Pragmatics}}\ (\BPG~201-220).
 \newblock
 \APACaddressPublisher{}{Springer}.
 \PrintBackRefs{\CurrentBib}
@@ -451,8 +454,9 @@ Sikos, L.%
 \newblock
 \APACrefYearMonthDay{2019}{04}{}.
 \newblock
-\APACrefbtitle {Reevaluating Pragmatic Reasoning in Web-based Language Games.}
-  {Reevaluating pragmatic reasoning in web-based language games.}
+\APACrefbtitle {Reevaluating {Pragmatic} {Reasoning} in {Web}-based {Language}
+  {Games}.} {Reevaluating {Pragmatic} {Reasoning} in {Web}-based {Language}
+  {Games}.}
 \newblock
 \begin{APACrefDOI} \doi{10.13140/RG.2.2.30535.14249} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -474,11 +478,11 @@ Wasow, T.%
 \newblock
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Ambiguity Avoidance is Overrated} {Ambiguity avoidance
-  is overrated}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Ambiguity {Avoidance} is {Overrated}} {Ambiguity
+  {Avoidance} is {Overrated}}.{\BBCQ}
 \newblock
 \BIn{} S.~Winkler\ (\BED), \APACrefbtitle {Ambiguity: Language and
-  Communication} {Ambiguity: Language and communication}\ (\BPG~29-47).
+  {Communication}} {Ambiguity: Language and {Communication}}\ (\BPG~29-47).
 \newblock
 \APACaddressPublisher{}{de Gruyter}.
 \PrintBackRefs{\CurrentBib}
