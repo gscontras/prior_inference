@@ -265,45 +265,65 @@ We partitioned the data into ambiguity classes, similar to \citeA{frankgoodman20
 
 \section{Results}
 
-In this experiment, the task of the participants was to first pick an utterance, then observe the choice of an object and ultimately infer the hierarchy of the listener's preferences. In order to assess whether subjects learned the target ordering of listener preferences, we developed an evaluation score from 0 to 3. The preferences are encoded as pairs. If a hierarchy is $ a > b > c $, there are three relations to learn:  $ a > b$; $ b > c $, and $ a >  c $. A score of 3 is assigned if the relations in all the pairs are identified correctly, a score of 0 means that all the relations between feature preferences have been reversed, and values 1 and 2 correspond to 1 and 2 pairs guessed correctly respectively.
+In this experiment, the task of the participants was to first pick an utterance, then observe the choice of an object and ultimately infer the hierarchy of the listener's preferences. Subjects watched an object choice in a series of 4 trials. We tested two main types of models: the iterative model that takes into account the posterior estimates from the previous trial, and the non-iterative model that assumes uniform priors for all trials. We expect to see the largest difference between the two models in trial 4, with the iterative model showing a better fit.
 
-Figure \ref{learning-success} reveals that both the model and the human subjects successfully learned the implemented hierarchy of preferences: both got the evaluation scores of 2 and 3 most of the time.
+In Figure \ref{iterative}, we plot the human data--slider values of individual trials--against the iterative model predictions. We optimized the two free parameters of the model--softness $\gamma$ and obedience $\beta$--at the global level, i.e. we obtained a single pair of estimates that we used to calculate the model predictions for each trial. The model captures a large proportion of variance in the human data  ($r^2=0.558$, $F(1,1138) = 1437$, $p<0.001$)
 
-\begin{figure}
+ \begin{figure}
+ 	\centering
+ 	\includegraphics[width=.8\linewidth]{images/m4.pdf}
+ 	\caption{Iterative model predictions with softness and obedience optimized globally}	
+ 	\label{iterative}
+ \end{figure}
+
+The non-iterative model is less accurate at predicting the human data  ($r^2=0.382$, $F(1,1138) = 703.5$, $p<0.001$).
+
+ \begin{figure}
 	\centering
-	\includegraphics[width=.5\linewidth]{images/evalNumCompairPlotWithFirstBlock.png}
-	\caption{Success of human subjects and the model in detecting the listener preferences}
-	% Martin: please leave in these details - this may appear slightly formal but very useful for the slightly more technical reader. 
-	\label{learning-success}
+	\includegraphics[width=.8\linewidth]{images/m8.pdf}
+	\caption{Non-Iterative model predictions with softness and obedience optimized globally}	
+	\label{non-iterative}
 \end{figure}
+ 
 
-We can now explore how the accuracy of predictions improves over time. We predicted that if learning is iterative and subjects use the information about the preferences that they have already accumulated, we should see higher evaluation scores on subsequent trials. We see in Figure \ref{learning-progression} that the line for best evaluation score ``3'' rises as the trial order increases.
-
-\begin{figure}
-	\centering
-	\includegraphics[width=.5\linewidth]{images/LearningProcessLinePlot1.png}
-	\caption{Success of human subjects and the model in detecting the listener preferences}
-	% Martin: please leave in these details - this may appear slightly formal but very useful for the slightly more technical reader. 
-	\label{learning-progression}
-\end{figure}
-
-As both Figures \ref{learning-success} and \ref{learning-progression} show, in certain cases both the speakers and the model failed to learn the preferences hierarchy. We attribute this effect to different strategies participants used when choosing utterances. Recall, that while every trial contained at least one ambiguous utterance, participants also had a possibility to choose an unambiguous utterance. Unambiguous utterances pick a single object making the learning impossible both for human subjects and for the model (Figure \ref{learning-unambiguous}). When subjects pick ambiguous utterances, learning curve clearly goes up (Figure \ref{learning-ambiguous}).
-
-\begin{figure}
-	\centering
-	\includegraphics[width=.5\linewidth]{images/LearningProcessLinePlotHuman3.png}
-	\caption{Success of human subjects and the model in detecting the listener preferences}
-	% Martin: please leave in these details - this may appear slightly formal but very useful for the slightly more technical reader. 
-	\label{learning-unambiguous}
-\end{figure}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=.5\linewidth]{images/LearningProcessLinePlotHuman2.png}
-	\caption{Success of human subjects and the model in detecting the listener preferences}
-	% Martin: please leave in these details - this may appear slightly formal but very useful for the slightly more technical reader. 
-	\label{learning-ambiguous}
-\end{figure}
+%In order to assess whether subjects learned the target ordering of listener preferences, we developed an evaluation score from 0 to 3. The preferences are encoded as pairs. If a hierarchy is $ a > b > c $, there are three relations to learn:  $ a > b$; $ b > c $, and $ a >  c $. A score of 3 is assigned if the relations in all the pairs are identified correctly, a score of 0 means that all the relations between feature preferences have been reversed, and values 1 and 2 correspond to 1 and 2 pairs guessed correctly respectively.
+%
+%Figure \ref{learning-success} reveals that both the model and the human subjects successfully learned the implemented hierarchy of preferences: both got the evaluation scores of 2 and 3 most of the time.
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=.5\linewidth]{images/evalNumCompairPlotWithFirstBlock.png}
+%	\caption{Success of human subjects and the model in detecting the listener preferences}
+%	\label{learning-success}
+%\end{figure}
+%
+%We can now explore how the accuracy of predictions improves over time. We predicted that if learning is iterative and subjects use the information about the preferences that they have already accumulated, we should see higher evaluation scores on subsequent trials. We see in Figure \ref{learning-progression} that the line for best evaluation score ``3'' rises as the trial order increases.
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=.5\linewidth]{images/LearningProcessLinePlot1.png}
+%	\caption{Success of human subjects and the model in detecting the listener preferences}
+%	% Martin: please leave in these details - this may appear slightly formal but very useful for the slightly more technical reader. 
+%	\label{learning-progression}
+%\end{figure}
+%
+%As both Figures \ref{learning-success} and \ref{learning-progression} show, in certain cases both the speakers and the model failed to learn the preferences hierarchy. We attribute this effect to different strategies participants used when choosing utterances. Recall, that while every trial contained at least one ambiguous utterance, participants also had a possibility to choose an unambiguous utterance. Unambiguous utterances pick a single object making the learning impossible both for human subjects and for the model (Figure \ref{learning-unambiguous}). When subjects pick ambiguous utterances, learning curve clearly goes up (Figure \ref{learning-ambiguous}).
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=.5\linewidth]{images/LearningProcessLinePlotHuman3.png}
+%	\caption{Success of human subjects and the model in detecting the listener preferences}
+%	% Martin: please leave in these details - this may appear slightly formal but very useful for the slightly more technical reader. 
+%	\label{learning-unambiguous}
+%\end{figure}
+%
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=.5\linewidth]{images/LearningProcessLinePlotHuman2.png}
+%	\caption{Success of human subjects and the model in detecting the listener preferences}
+%	% Martin: please leave in these details - this may appear slightly formal but very useful for the slightly more technical reader. 
+%	\label{learning-ambiguous}
+%\end{figure}
 
 \section{Discussion}
 

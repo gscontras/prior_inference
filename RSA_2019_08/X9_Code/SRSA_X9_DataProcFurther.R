@@ -1,8 +1,8 @@
 ############################################################################################
-iterative12 <- 1   ###########################################################################
+iterative12 <- 2   ###########################################################################
 ############################################################################################
-# 1 iterative (works)
-# 2 non-iterative (doesn't work)
+# 1 iterative 
+# 2 non-iterative
 
 parSetting <- 2
 
@@ -206,12 +206,12 @@ if(iterative12 == 1) {
   if(parSetting == 1) {
     write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
   }else if(parSetting == 2) {
-    write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed10_andGlobalOpt_iterative.csv")
+    write.csv(x9data, "X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_andOpt12_iterative.csv")
   }
 }else if(iterative12 == 2) {
   if(parSetting == 1) {
     write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
   }else if(parSetting == 2) {
-    write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed10_andGlobalOpt_nonIterative.csv")
+    write.csv(x9data, "X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_Opt12_nonIterative.csv")
   }
 }
