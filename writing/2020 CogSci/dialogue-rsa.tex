@@ -66,19 +66,29 @@ ambiguity; iterative learning; pragmatics; information gain; event-predictive co
 
 \section{Introduction}
 
-Social interactions rely on speakers being able to simulate the listener's thinking process, and the listener reasoning about why the speaker chose to say the things she did. For communicative behavior to be adaptive, interlocutors need to continuously update predictive models of each other. These models include, among other things, understanding the state of each other's knowledge, beliefs and preferences. During conversation, we actively seek to update the information state not only about the world but also about each other. Such interpretation of communicative behavior fits within a broader perspective on active inference as a core principle on which the human mind operates \cite{Friston:2015, Hohwy:2013, Clark:2016}. In this paper, we adopt the predictive mind perspective as it applies to social interactions.
+Social interactions rely on speakers being able to simulate the listener's thought processes, including---to some extent---the listener reasoning about why the speaker chose to say the things she did.
+For communicative behavior to be adaptive, interlocutors need to continuously update predictive model components of each other.
+These models include, among other things, understanding the state of each other's knowledge, beliefs, and preferences.
+During conversation, we actively seek to update the information state not only about the world but also about each other.
+Such interpretation of communicative behavior fits within a broader perspective on active inference as a core principle on which the human mind operates \cite{Friston:2015b}.
+% Not sure if we need all these others: , Hohwy:2013, Clark:2016}.
+In this paper, we adopt the predictive mind perspective as it applies to social interactions.
 
-We argue that ambiguity omnipresent in communication provides a learning platform where conversation partners can gain better understanding of each other. This work presents a considerable departure from a classic view on ambiguity that treats it as an inconvenient side effect of a language system \cite{grice1975,chomsky2002minimalism}. Within that paradigm, ambiguous utterances prevent an accurate transfer of information between interlocutors and therefore obscure communication. 
+We argue that ambiguity omnipresent in communication provides a learning platform where conversation partners can gain better understanding of each other.
+This work presents a considerable departure from a classic view on ambiguity, which treats it as an inconvenient side effect of a language system \cite{grice1975,chomsky2002minimalism}.
+Within that paradigm, ambiguous utterances prevent an accurate transfer of information between interlocutors and therefore obscure communication. 
 
 Despite the apparent negative consequences associated with the use of ambiguous utterances, agents rarely avoid ambiguity even in situations where it would be communicatively appropriate \cite{wasow2015, ferreira2008}. Instead, speakers rely on listeners to fill in the missing information and find an interpretation that is the most coherent within the current discourse.  \citeA{piantadosietal2012} show via statistical modeling that ambiguity is an essential product of an efficient communication system: it allows to reuse lightweight pieces of language instead of giving a fully specified description of a situation. Ambiguous descriptions save the effort on the speaker side while relying on the listener's ability to interpret the ambiguous utterances within context.
 
-We propose that ambiguity of reference creates a space of alternatives, and choosing of one of those alternatives becomes a meaningful event in itself. This idea is consistent with the attribution theory which captures the human ability to interpret each other's behavior as driven by motives, intentions and goals \cite{jones1965acts, kelley1967attribution, kelley1970social}.
- In a naturalistic conversation, where speakers take turns, ambiguous utterances open interpretation spaces and the resulting interpretation choices dynamically and mutually reveal individual opinions, beliefs, and preferences. 
+We propose that ambiguity of reference creates a space of alternatives, and choosing of one of those alternatives becomes a meaningful event in itself. This idea is consistent with the attribution theory, which captures the human ability to interpret each other's behavior as driven by motives, intentions, and goals \cite{jones1965acts, kelley1967attribution, kelley1970social}.
+In a naturalistic conversation, where speakers take turns, ambiguous utterances open interpretation spaces and the resulting interpretation choices dynamically and mutually reveal individual opinions, beliefs, and preferences. 
  
- Making an inference about those individual predispositions requires the speaker to reason pragmatically about the listener.
+Making an inference about those individual predispositions requires the speaker to reason pragmatically about the listener.
 %pragmatic reasoning of the listener---a higher-order pragmatic reasoning.
 % Asya: I'm not sure it's higher order pragmatic reasoning in the simple model: the speaker reasons about the listener, but the listener is just driven by her preferences, not full pragmatic reasoning.
-We use the paradigm of references games, as developed in \citeA{frank2009informative}, to model this choice process, and test whether human subjects are able to infer what properties of objects determined a particular course of events. In the course of a classic reference game, a speaker wants to signal a particular object to the listener, and to do that the speaker is allowed to use one-word utterances to refer to one of the objects (e.g. \citeNP{frankgoodman2012}). The task of the listener is to infer which of the available objects is the most likely referent. The listener reasons about the process that generated the utterance, assuming that the speaker uses the utterance that is the most efficient to signal a particular object. 
+We use the paradigm of references games, as developed in \citeA{frank2009informative}, to model this choice process, and test whether human subjects are able to infer what properties of objects determined a particular course of events. In the course of a classic reference game, a speaker wants to signal a particular object to the listener, and to do that the speaker is allowed to use one-word utterances to refer to one of the objects (e.g. \citeNP{frankgoodman2012}).
+The task of the listener is to infer which of the available objects is the most likely referent.
+The listener reasons about the process that generated the utterance, assuming that the speaker uses the utterance that is the most efficient to signal a particular object. 
 
 For example, consider a scenario in  Figure \ref{FG-ref-game}. Suppose a speaker produces a single-word utterance ``blue'' -- meaning: choose a blue object -- creating referential ambiguity for the listener, that is, offering a choice between a blue square and a blue circle. 
 Suppose further that, upon hearing ``blue'', the listener selects the blue circle.
@@ -92,17 +102,23 @@ In observing this choice, the speaker learns something about the private thought
 		A speaker may choose a single-word utterance $u$ to signal one of the objects $s\in S$ to a listener.
 		In the shown scenario, the following set of utterances is available: $U =\{\textit{``solid''},\ \textit{``blue''},\ \textit{``green''},\ \textit{``square''},\ \textit{``circle''}\}$.
 	}
-	% Martin: please leave in these details - this may appear slightly formal but very useful for the slightly more technical reader. 
 	\label{FG-ref-game}
 \end{figure}
 
 
-In a modified version of reference games, we created situations where a speaker picks an utterance and watches a simulated listener choose one of the objects. The task of the participant is to infer what preferences of the listener made her pick that particular object. In order to avoid an impression that the choice of an object might be random, we allow 4 consecutive trials that focus on the preferences of one particular person. Participants then track the object choices and update their understanding of the listener's preferences across a series of trials. 
-We hypothesize that subjects use a Bayesian learning process: they take into account their existing priors of the listener's preferences as the accumulate more evidence.
+In a modified version of reference games, we created situations where a speaker picks an utterance and watches a simulated listener choose one of the objects.
+The task of the participant is to infer what preferences of the listener made her pick that particular object.
+In order to avoid an impression that the choice of an object might be random, we allow 4 consecutive trials that focus on the preferences of one particular person.
+Participants then track the object choices and update their understanding of the listener's preferences across a series of trials. 
+We hypothesized that subjects use a Bayesian inference process: they take into account their existing priors of the listener's preferences as they accumulate more evidence.
+
+
 
 \section{Modeling}
 
-The recursive interactions between the speaker and the listener are modeled wihin the Rational Speech Act (RSA)  framework (\citeNP{frankgoodman2012,goodman2013knowledge, frankejaeger2016, goodmanfrank2016}, cf. a game-theoretic approach of recursive reasoning in \citeNP{franke2009signal}). The model formalizes a state space, or scenario, $S$ in the form of a particular set of objects (e.g. Figure~\ref{FG-ref-game}) and the corresponding utterance space $U$. The utterance space contains all possible utterances which correspond to object features that are present in a particular scenario $S$.
+The recursive interactions between the speaker and the listener are modeled wihin the Rational Speech Act (RSA)  framework (\citeNP{frankgoodman2012,goodman2013knowledge, frankejaeger2016, goodmanfrank2016}, cf. a game-theoretic approach of recursive reasoning in \citeNP{franke2009signal}).
+The model formalizes a state space, or scenario, $S$ in the form of a particular set of objects (e.g. Figure~\ref{FG-ref-game}) and the corresponding utterance space $U$.
+The utterance space contains all possible utterances, which correspond to object features that are present in a particular scenario $S$.
 
 At the base of the reasoning process, there is a hypothetical, na\"ive literal listener $L_0$, who hears an utterance $u\in U$ and attempts to infer the object $s \in S$ that $u$ is meant to reference. 
 $L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}$(s)$, which returns $true$ (i.e., 1) for those objects that contain the uttered feature and $false$ (i.e., 0), otherwise.
@@ -136,7 +152,7 @@ P_{L_{1}}(s \mid u) \propto P_{S_{1}}(u \mid s) \cdot P(s).
 \citeA{frankgoodman2012} tested the predictions of RSA against behavioral data from reference games, as in Figure~\ref{FG-ref-game}.
 %To model production behavior (that is, which utterance should be chosen to communicate a given object), the authors used the probability distributions from $S_1$.
 %To model interpretation behavior (i.e., which object the speaker is trying to communicate on the basis of their utterance), the authors generated predictions from $L_1$.
-They found a strong correlations between model predictions and behavioral data in both cases, confirming the validity of their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015} for a fuller exploration of the modeling choices).
+They found a strong correlation between model predictions and behavioral data in both cases, confirming the validity of their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015} for a fuller exploration of the modeling choices).
 
 
 \subsection{Pragmatic social inference RSA model}
@@ -198,7 +214,7 @@ P(s \mid f) \propto \begin{cases}
 controlling the choice probability of those objects $s$ that contain feature $f$ compared to those that do not.  
 A value of $\gamma=0$ models a hard preference choice; in this case, the speaker always chooses one of the preferred objects. 
 On the other hand, when $\gamma \rightarrow \infty$, the choice prior becomes uniform over all objects, thus ignoring feature preferences. 
-For example, consider a scenario in Figure \ref{exp1-trial}, where the listener picked a striped object following the utterance ``circle''. If her $\gamma=0$, she should adjust the ``striped'' slider to 1 and set other sliders to 0 if we assume she has not previously learned anything about the relative ranking of the other values. If her $\gamma=1$, the model predicts that she sets the ``striped'' slider to 0.75 and the other slider values to 0.25. In that case, we can say that her preferences became softer, i.e. less categorical.
+For example, consider a scenario in Figure \ref{exp1-trial}, where the listener picked a striped object following the utterance ``circle''. If her $\gamma=0$, she should adjust the ``striped'' slider to 1 and set other sliders to 0 if we assume she has not previously learned anything about the relative ranking of the other values. If her $\gamma=1$, the model predicts that she sets the ``striped'' slider to 0.75 and the other slider values to 0.25. In that case, we can say that her preferences became softer, i.e. less categorical or strict.
 % if gamma = 1 and three feature values are present, then picked object gets 1, other objects get 0
 % (1+1) + (1+0) + (1+0) = 4. Devide everything by 4: 0.5, 0.25, 0.25
 % 
@@ -244,7 +260,7 @@ The experiment is designed to address three questions: first, whether speakers a
 \begin{figure*}[ht!]
 	\centering
 	\includegraphics[width=5.5in]{images/utterance_choice_modification_4.png}
-	\caption{ \small{A sample trial.  Each trial portrays a listener. The speaker (experiment participant) produces an utterance to refer to one of the objects. The listener picks the object with the orange dotted outline. The experiment participant then evaluates what preferences of the listener may have led her to the particular object choice, specifying the inference by adjusting the sliders for each of the features}.}
+	\caption{ \small{A sample trial. Each trial portrays a listener. The speaker (experiment participant) produces an utterance to refer to one of the objects. The listener picks the object with the orange dotted outline. The experiment participant then evaluates what preferences of the listener may have led her to the particular object choice, specifying the inference by adjusting the sliders for each of the features}.}
 	\label{exp1-trial}
 \end{figure*}
 
@@ -341,7 +357,7 @@ The non-iterative model is less accurate at predicting the human data  ($r^2=0.3
 
 In order to interpret an ambiguous utterance, the listener needs to draw on her prior knowledge to decide which interpretation is most likely. This prior knowledge broadly viewed can include personal preferences and beliefs, as well as the understanding of the current context. Listener choices are in that sense informative about the underlying priors of the listener. 
 
-We simulate the ambiguity resolution process with a Bayesian reasoning model that allows accumulation of evidence over a series of trials. We demonstrate that if ambiguous utterance are chosen, the accuracy of guesses improves as a function of trial order, and we faithfully model this process computationally.
+We simulate the ambiguity resolution process with a Bayesian reasoning model that allows accumulation of evidence over a series of trials. We demonstrate that if ambiguous utterances are chosen, the accuracy of guesses improves as a function of trial order, and we faithfully model this process computationally.
 
 
 %\section*{Funding}

@@ -7833,4 +7833,15 @@
   year   = {2009},
 }
 
+@Article{goodman2013knowledge,
+  author    = {Goodman, Noah D and Stuhlm{\"u}ller, Andreas},
+  title     = {Knowledge and implicature: Modeling language understanding as social cognition},
+  journal   = {Topics in cognitive science},
+  year      = {2013},
+  volume    = {5},
+  number    = {1},
+  pages     = {173--184},
+  publisher = {Wiley Online Library},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

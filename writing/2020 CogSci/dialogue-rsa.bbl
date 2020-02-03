@@ -27,29 +27,6 @@ Chomsky, N.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Clark%
-}{%
-Clark%
-}{%
-{\protect \APACyear {2016}}%
-}]{%
-Clark:2016}
-\APACinsertmetastar {%
-Clark:2016}%
-\begin{APACrefauthors}%
-Clark, A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2016}.
-\newblock
-\APACrefbtitle {Surfing Uncertainty: Prediction, action and the embodied mind}
-  {Surfing uncertainty: Prediction, action and the embodied mind}.
-\newblock
-\APACaddressPublisher{Oxford, UK}{Oxford University Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Ferreira%
 }{%
 Ferreira%
@@ -183,32 +160,29 @@ Franke, M.%
 
 \bibitem [\protect \citeauthoryear {%
 Friston%
-\ \protect \BOthers {.}}{%
+\ \BBA {} Frith%
+}{%
 Friston%
-\ \protect \BOthers {.}}{%
+\ \BBA {} Frith%
+}{%
 {\protect \APACyear {2015}}%
 }]{%
-Friston:2015}
+Friston:2015b}
 \APACinsertmetastar {%
-Friston:2015}%
+Friston:2015b}%
 \begin{APACrefauthors}%
 Friston, K.%
-, Rigoli, F.%
-, Ognibene, D.%
-, Mathys, C.%
-, Fitzgerald, T.%
-\BCBL {}\ \BBA {} Pezzulo, G.%
+\BCBT {}\ \BBA {} Frith, C.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Active inference and epistemic value} {Active inference
-  and epistemic value}.{\BBCQ}
+{\BBOQ}\APACrefatitle {A Duet for one} {A duet for one}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Cognitive Neuroscience}{6}{}{187-214}.
+\APACjournalVolNumPages{Consciousness and Cognition}{36}{}{390--405}.
 \newblock
-\begin{APACrefDOI} \doi{10.1080/17588928.2015.1020053} \end{APACrefDOI}
+\begin{APACrefDOI} \doi{10.1016/j.concog.2014.12.003} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -289,28 +263,6 @@ Grice, H\BPBI P.%
   (\BPG~26-40).
 \newblock
 \APACaddressPublisher{New York}{Academic Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Hohwy%
-}{%
-Hohwy%
-}{%
-{\protect \APACyear {2013}}%
-}]{%
-Hohwy:2013}
-\APACinsertmetastar {%
-Hohwy:2013}%
-\begin{APACrefauthors}%
-Hohwy, J.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2013}.
-\newblock
-\APACrefbtitle {The Predictive Mind} {The predictive mind}.
-\newblock
-\APACaddressPublisher{Oxford, UK}{Oxford University Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
