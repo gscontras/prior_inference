@@ -5,7 +5,7 @@ source("CommonCode/getConstCodeStratUtt.R")
 # simple RSA
 ############################################
 
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
+x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_andOpt12_iterative.csv")
 
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
