@@ -151,33 +151,6 @@ for (row in c(1:length(inputData$utteranceNum))) {
 }
 
 
-### function defintion #####################################################
-isAmbiguous <-
-  function(allPresentFeaValues,
-           utteranceGeneral,
-           currentObjects,
-           targetFeatureNum) {
-    ambiguous <- FALSE
-    utteranceWord <- allUtterancesNew1[utteranceGeneral]
-    currentObjectsUtterances <- allObjects[currentObjects, ]
-    # if(str_count(allPresentFeaValues, toString(utteranceGeneral))>1){
-    if (sum(allPresentFeaValues == utteranceGeneral) > 1) {
-      ambiguous <- TRUE
-    }
-    if (ambiguous) {
-      possibleObjectIndex <-
-        which(currentObjectsUtterances == utteranceWord, arr.ind = TRUE)[, 1]
-      possibleObjects <-
-        currentObjectsUtterances[possibleObjectIndex, ]
-      possibleObjectTarFeaValue <-
-        possibleObjects[, targetFeatureNum]
-      if (!length(unique(possibleObjectTarFeaValue)) > 1) {
-        ambiguous <- FALSE
-      }
-    }
-    return(ambiguous)
-  }
-
 #########################################################
 inputData$ambigRatio <- NA
 countAmbigUttRatio <-
@@ -355,9 +328,12 @@ for (worker in c(0:totalWorker)) {
         preferencesPriorAll[preferencesPriorIndices[2]]
       inputData$preferencesPrior3[row] <-
         preferencesPriorAll[preferencesPriorIndices[3]]
-      
+  #  }}} # temporary  
+
+
+
       evalNumModel <-
-        evaluate(allUtterancePref, preferencesPrior, targetFeatureNum)
+        evaluate(allUtterancePref, preferencesPriorAll, targetFeatureNum)
       inputData$evalNumModel[row] <- evalNumModel
       humanResponse <-
         c(
@@ -694,26 +670,6 @@ if (plotting) {
       round(humanLearningProcessWithFirstBlock$Freq / total,
             digits = roundingDigits)
     
-    # humanLearnProcPlotWithFirstBlock <-
-    #   ggplot(data = humanLearningProcessWithFirstBlock, aes(x = Var1, y = relativeFreq, fill =
-    #                                                           Var2)) +
-    #   geom_bar(stat = "identity", position = position_dodge()) +
-    #   geom_text(
-    #     aes(label = relativeFreq * 100),
-    #     vjust = -0.3,
-    #     color = "black",
-    #     position = position_dodge(0.9),
-    #     size = 2
-    #   ) +
-    #   # xlab("evaluation Number") +
-    #   # ylab("frequency")+
-    #   labs(
-    #     title = "Human learning process, first block included\n",
-    #     x = "Trial",
-    #     y = "Frequency",
-    #     fill = "Evaluation\nNumber\n"
-    #   )
-    
     modelLearningProcessWithFirstBlock <-
       as.data.frame(
         table(
@@ -724,49 +680,6 @@ if (plotting) {
     modelLearningProcessWithFirstBlock$relativeFreq <-
       round(modelLearningProcessWithFirstBlock$Freq / total,
             digits = roundingDigits)
-    
-    
-    # modelLearnProcPlotWithFirstBlock <-
-    #   ggplot(data = modelLearningProcessWithFirstBlock, aes(x = Var1, y = relativeFreq, fill =
-    #                                                           Var2)) +
-    #   geom_bar(stat = "identity", position = position_dodge()) +
-    #   geom_text(
-    #     aes(label = relativeFreq * 100),
-    #     vjust = -0.3,
-    #     color = "black",
-    #     position = position_dodge(0.9),
-    #     size = 2
-    #   ) +
-    #   labs(
-    #     title = "Model learning process, first block included\n",
-    #     x = "Trial",
-    #     y = "Frequency",
-    #     fill = "Evaluation\nNumber\n"
-    #   )
-    
-    
-    # evaluation <-
-    #   grid.arrange(
-    #     # evalNumCompairPlot,
-    #     # humanLearnProcPlot,
-    #     # modelLearnProcPlot,
-    #     evalNumCompairPlotWithFirstBlock,
-    #     humanLearnProcPlotWithFirstBlock,
-    #     modelLearnProcPlotWithFirstBlock,
-    #     ncol = 3
-    #   )
-    # # dev.copy(png,"whatever.png")
-    # # dev.off()
-    #
-    # ggsave(
-    #   filename = "Evaluation_only_ambiguous.png",
-    #   plot = evaluation,
-    #   width = 40,
-    #   height = 12,
-    #   units = "cm",
-    #   dpi = 700
-    # )
-    
     
     
     #_____________Line Plot learning trajectory all in one______________________________________________________________________________________

@@ -117,6 +117,9 @@ simplePragmaticSpeakerWithPrefPriorAll <-
       return(preferencesPriorAll)
     }
     # normalizing relevant posterior preferences such that the sum is equal to their prior probability mass 
+    #   sum(preferencesPrior) is the probability mass of the full prior that we are "entitled" to redistribute because it concerns the features present in the trial
+    #   prefPost / sum(prefPost) is the normalized posterior, so that the updated vector sums up to 1
+    #   when we multiply, we redistribute the mass we are entitled to according to the prefPost we calculated above
     prefPost <- sum(preferencesPrior) * prefPost / sum(prefPost)
     # replacing the relevant old prior preferences values in preferencesPriorAll with their posteriors (which become the new priors)
     preferencesPriorAll[relevantUtterances] <- prefPost
@@ -262,6 +265,58 @@ evaluate <-
     return(evalNum)
   }
 
+getAllObjectCodes <- function(allObjects, allUtterancesNew1) {
+  allObjectCodes <- c(rep("000":length(allObjects[, 1])))
+  for (shape in c(1:length(allObjects[, 1]))) {
+    shapeNo <- which(allUtterancesNew1 == allObjects[shape, 1])
+    allObjectCodes[shape] <- shapeNo * 100
+  }
+  for (texture in c(1:length(allObjects[, 2]))) {
+    textureNo <- which(allUtterancesNew1 == allObjects[texture, 2]) - 3
+    allObjectCodes[texture] <-
+      allObjectCodes[texture] + (textureNo * 10)
+  }
+  for (color in c(1:length(allObjects[, 3]))) {
+    colorNo <- which(allUtterancesNew1 == allObjects[color, 3]) - 6
+    allObjectCodes[color] <- allObjectCodes[color] + colorNo
+  }
+  return(allObjectCodes)
+}
+
+
+getPreferencesPrior <- function(targetFeature) {
+  preferencesPrior <- c(rep(0, 9))
+  index <- targetFeature * 3
+  indices <- c(index, index - 1, index - 2)
+  preferencesPrior[indices] <- 1
+  return(preferencesPrior / sum(preferencesPrior))
+}
+
+isAmbiguous <-
+  function(allPresentFeaValues,
+           utteranceGeneral,
+           currentObjects,
+           targetFeatureNum) {
+    ambiguous <- FALSE
+    utteranceWord <- allUtterancesNew1[utteranceGeneral]
+    currentObjectsUtterances <- allObjects[currentObjects, ]
+    # if(str_count(allPresentFeaValues, toString(utteranceGeneral))>1){
+    if (sum(allPresentFeaValues == utteranceGeneral) > 1) {
+      ambiguous <- TRUE
+    }
+    if (ambiguous) {
+      possibleObjectIndex <-
+        which(currentObjectsUtterances == utteranceWord, arr.ind = TRUE)[, 1]
+      possibleObjects <-
+        currentObjectsUtterances[possibleObjectIndex, ]
+      possibleObjectTarFeaValue <-
+        possibleObjects[, targetFeatureNum]
+      if (!length(unique(possibleObjectTarFeaValue)) > 1) {
+        ambiguous <- FALSE
+      }
+    }
+    return(ambiguous)
+  }
 ###################################################
 
 # ## Tests 1:
