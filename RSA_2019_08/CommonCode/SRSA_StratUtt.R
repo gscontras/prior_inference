@@ -220,65 +220,134 @@ simpleBestInfGainUtterance <-
 
 ######### Iterative utterance choice function ###########
 
-
+simpleBestInfGainUtteranceWithPrefPriorAll <-
+  function(preferencesPriorAll,
+           relevantUtterances,
+           currentObjects,
+           mapUttToObjProbs,
+           objectPreferenceSoftPriors,
+           klValueFactor = 1,
+           targetFeature) {
+    postUttGPrefPrior <- rep(0, length(relevantUtterances))
+    preferencesPrior <- preferencesPriorAll[relevantUtterances]
+   
+     # Define utterance prior excluding utterances of target feature
+    utterancePrior <- rep(0,length(relevantUtterances))
+    irrelevantIndices <- which(relevantUtterances>(3*(targetFeature-1)) & relevantUtterances<(3*targetFeature + 1))
+    validUtterances <- relevantUtterances[-irrelevantIndices]
+    utterancePriorShort <- rep (1/length(validUtterances),length(validUtterances)) 
+    utterancePrior[-irrelevantIndices] <- utterancePriorShort
+    
+    # posterior preferences over feature values, rows for each objects, 9 columns
+    featurePrefsPosteriorAll <- matrix(0, 3, length(preferencesPriorAll))
+    # utterancePrior <-
+    #   getSpeakerUtteranceUniformPrior(relevantUtterances) # prior over speaker utterances
+    #
+    for (utt in c(1:length(relevantUtterances))) {
+      # evaluating the usage of a particular utterance utt
+      prefPostAll <- rep(0, length(preferencesPrior))
+      for (pref in c(1:length(preferencesPrior))) {
+        # prior over the preferences the speaker is interested in
+        ### What is the likelihood that this particular preference prior is the correct one?
+        prefPost <- 0
+        for (obj in c(1:length(currentObjects))) {
+          if (mapUttToObjProbs[utt, obj] > 0) {
+            if (preferencesPrior[pref] > 0) {
+              # only pay attention to preferences with non-zero probability
+              featurePrefsPosterior <-
+                simplePragmaticSpeakerWithPrefPriorAll(
+                  utt, obj, preferencesPriorAll, relevantUtterances,
+                  currentObjects, mapUttToObjProbs, objectPreferenceSoftPriors
+                )
+              #            print(preferencesPrior)
+              #            print(featirePrefsPosterior)
+              KLvalue <-
+                KLdivergence(preferencesPriorAll, featurePrefsPosterior)
+              featurePrefsPosteriorAll[obj,] <- featurePrefsPosterior
+              #       return(featurePrefsPosteriorAll)
+              # log-likelihood interpretation of KLvalue:
+              prefPost <- prefPost +  mapUttToObjProbs[utt, obj] *
+                objectPreferenceSoftPriors[[pref]][obj] *
+                utterancePrior[utt] *  preferencesPrior[pref] *
+                exp(klValueFactor * KLvalue)
+            }
+          }
+        }
+        #        preferencesPriorAll <- featurePrefsPosterior
+        
+        if (prefPost > 0) {
+          prefPostAll[pref] <- prefPost
+        }
+      }
+      postUttGPrefPrior[utt] <- sum(prefPostAll)
+    }
+    
+    ## Defining returns ##
+    
+    output1 <- list(utterancePrior,  featurePrefsPosteriorAll)
+    posterior <- postUttGPrefPrior / sum(postUttGPrefPrior)
+    output2 <- list(posterior, featurePrefsPosteriorAll)
+    #    return(rep(1 / length(relevantUtterances), length(relevantUtterances)))
+    if (sum(postUttGPrefPrior) == 0){# no gain from any utterance...
+      return(output1)} # if no learning occurs, use posterior over utterances of previous trials
+    #return(postUttGPrefPrior / sum(postUttGPrefPrior))
+    return(output2)
+  }
 
 
 ###################################################
 
 # ## Tests 1:
-notObeyInst <- 1e-10
-softPrefValue <- 0.1
-currentObjects <- c(1,2,3)
-relevantUtterances <- determineValidUtterances(currentObjects)
-mapObjToUtt <- determineObjectToUtterancesMapping(currentObjects)
-mapUttToObjProbs <- determineUtteranceToObjectProbabilities(relevantUtterances,
-                                                            currentObjects,
-                                                            mapObjToUtt, notObeyInst)
-objectPreferenceSoftPriors <- getObjectPreferencePriors(relevantUtterances, currentObjects,
-                                                        softPrefValue, mapUttToObjProbs)
-#pragmaticSpeaker <- function(utterance, obj, preferencesPrior,
-#                             relevantUtterances, currentObjects, mapUttToObjProbs,
-#                             objectPreferenceSoftPriors) {
-simplePragmaticSpeaker(4, 1, c(0, 0, 0, 0, 0, 1), relevantUtterances, currentObjects,
-                 mapUttToObjProbs, objectPreferenceSoftPriors) # sanity check - definite prior, no inf. gain possible
-simplePragmaticSpeaker(4, 1, c(.2, .2, .2, .2, .2, 0), relevantUtterances, currentObjects,
-                      mapUttToObjProbs, objectPreferenceSoftPriors) # NON compliant listener...
-simplePragmaticSpeakerWithPrefPriorAll(4, 1, c(1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9), relevantUtterances, currentObjects,
-                      mapUttToObjProbs, objectPreferenceSoftPriors) # NON compliant listener...
+# notObeyInst <- 1e-10
+# softPrefValue <- 0.1
+# currentObjects <- c(1,2,3)
+# relevantUtterances <- determineValidUtterances(currentObjects)
+# mapObjToUtt <- determineObjectToUtterancesMapping(currentObjects)
+# mapUttToObjProbs <- determineUtteranceToObjectProbabilities(relevantUtterances,
+#                                                             currentObjects,
+#                                                             mapObjToUtt, notObeyInst)
+# objectPreferenceSoftPriors <- getObjectPreferencePriors(relevantUtterances, currentObjects,
+#                                                         softPrefValue, mapUttToObjProbs)
+# #pragmaticSpeaker <- function(utterance, obj, preferencesPrior,
+# #                             relevantUtterances, currentObjects, mapUttToObjProbs,
+# #                             objectPreferenceSoftPriors) {
+# simplePragmaticSpeaker(4, 1, c(0, 0, 0, 0, 0, 1), relevantUtterances, currentObjects,
+#                  mapUttToObjProbs, objectPreferenceSoftPriors) # sanity check - definite prior, no inf. gain possible
+# simplePragmaticSpeaker(4, 1, c(.2, .2, .2, .2, .2, 0), relevantUtterances, currentObjects,
+#                       mapUttToObjProbs, objectPreferenceSoftPriors) # NON compliant listener...
+# simplePragmaticSpeakerWithPrefPriorAll(4, 1, c(1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9, 1/9), relevantUtterances, currentObjects,
+#                       mapUttToObjProbs, objectPreferenceSoftPriors) # NON compliant listener...
 
 #
 # # Tests 2:
-#notObeyInst <- 0.1
-#softPrefValue <- .01
-notObeyInst <- 0
-softPrefValue <- 0
-#currentObjects <- c(1,2,6)
-currentObjects <- c(21,6,9)
-targetFeature <- 3
-relevantUtterances <- determineValidUtterances(currentObjects)
-mapObjToUtt <- determineObjectToUtterancesMapping(currentObjects)
-mapUttToObjProbs <- determineUtteranceToObjectProbabilities(relevantUtterances,
-                                                            currentObjects,
-                                                            mapObjToUtt, notObeyInst)
-objectPreferenceSoftPriors <- getObjectPreferencePriors(relevantUtterances, currentObjects,
-                                                        softPrefValue, mapUttToObjProbs)
-preferencesPriorAll <- getPreferencesPrior(1)
+# notObeyInst <- 0.1
+# softPrefValue <- .01
+# currentObjects <- c(1,2,6)
+# targetFeature <- 1
+# relevantUtterances <- determineValidUtterances(currentObjects)
+# mapObjToUtt <- determineObjectToUtterancesMapping(currentObjects)
+# mapUttToObjProbs <- determineUtteranceToObjectProbabilities(relevantUtterances,
+#                                                             currentObjects,
+#                                                             mapObjToUtt, notObeyInst)
+# objectPreferenceSoftPriors <- getObjectPreferencePriors(relevantUtterances, currentObjects,
+#                                                         softPrefValue, mapUttToObjProbs)
+# preferencesPriorAll <- getPreferencesPrior(1)
+
 # # simpleBestInfGainUtterance <- function(preferencesPrior, relevantUtterances, currentObjects,
 # #                                 mapUttToObjProbs, objectPreferenceSoftPriors)
-simpleBestInfGainUtterance(c(0, 0, 0, 0, 0, 0, 1), relevantUtterances, currentObjects,
-                    mapUttToObjProbs, objectPreferenceSoftPriors) # sanity check - definite prior, no inf. gain possible
-round(simpleBestInfGainUtterance(c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6, 0), relevantUtterances, currentObjects,
-                    mapUttToObjProbs, objectPreferenceSoftPriors), 3) # sanity check - definite prior, no inf. gain possible
-
-### Output is not right! The function picks the unambiguous utterance.
-currentObjects <- c(21,6,9)
-
-round(simpleBestInfGainUtterance(c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6,1/6), relevantUtterances, currentObjects,
-                                 mapUttToObjProbs, objectPreferenceSoftPriors), 3)
-
-round(simpleBestInfGainUtteranceWithPrefPriorAll(preferencesPriorAll, relevantUtterances, currentObjects,
-                                           mapUttToObjProbs, objectPreferenceSoftPriors, 
-                                           1, targetFeature),3) #  
+# simpleBestInfGainUtterance(c(0, 0, 0, 0, 0, 0, 1), relevantUtterances, currentObjects,
+#                     mapUttToObjProbs, objectPreferenceSoftPriors) # sanity check - definite prior, no inf. gain possible
+# round(simpleBestInfGainUtterance(c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6, 0), relevantUtterances, currentObjects,
+#                     mapUttToObjProbs, objectPreferenceSoftPriors), 3) # sanity check - definite prior, no inf. gain possible
+# 
+# ### Testing iterative utterance choice function ###
+# 
+# simpleBestInfGainUtterance(c(1/3, 1/3, 1/3, 0, 0, 0), relevantUtterances, currentObjects,
+#                                  mapUttToObjProbs, objectPreferenceSoftPriors)
+# 
+# simpleBestInfGainUtteranceWithPrefPriorAll(preferencesPriorAll, relevantUtterances, currentObjects,
+#                                            mapUttToObjProbs, objectPreferenceSoftPriors, 
+#                                            1, targetFeature) #  
 
 #
 # # kldFact <- (c(0:200)-100)/2
