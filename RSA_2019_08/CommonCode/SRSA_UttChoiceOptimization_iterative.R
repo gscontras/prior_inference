@@ -34,21 +34,32 @@ getSimpleBestInfGainUttPreferencesIterative <- function(preferencesPriorAll,
                                klValueFactor, targetFeature, utterancePrior) )
 }
 
-#### Code below not edited yet ###
 
 #### actual RSA model Kullback leibler divergence determination for utterance choice experiments.
 # data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:numUttOptions,7-X:TurkerSliderValues]
-SimpleRSAModelUttKLDiv_3params <- function(data, par1, par2, par3) {
+SimpleRSAModelUttKLDiv_3params_iterative <- function(data, par1, par2, par3) {
   #   print(c(par1, par2, par3, data))
   klRes <- 0
   for(i in c(1:nrow(data))) {
+    if( (i-1)%%4 == 0) {
+      preferencesPriorAll <- getPreferencesPrior(data[i,5]) # focussing on the feature type in question.
+    }
     ## determining the object and utterance
     currentObjects <- c(data[i,1],data[i,2],data[i,3])
-    numUtterances <- data[i,4]
+#    numUtterances <- data[i,4]
+    uttFeat <- data[i,4]
+    targetFeat <- data[i, 5]
+    utterance <- data[i, 6]
     relevantUtterances <- determinerelevantUtterances(currentObjects)
     ## determining the model predictions
+    #################      Code below not edited ############
     bInfGainUttModel <- rep(NA, 9)
-    bInfGainUttModel[relevantUtterances] <- getSimpleBestInfGainUttPreferences(currentObjects, par1, par2, par3)
+    bInfGainUttModel[relevantUtterances] <- 
+      getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(param1), 
+                                                  abs(param2), abs(param3), targetFeature)
+     
+      getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(param1), 
+                                                  abs(param2), abs(param3), targetFeature)
     ## adding the negative log likelihoods
     for(j in c(1:length(relevantUtterances))) {
       klRes <- klRes + data[i, 4+relevantUtterances[j]] * 
@@ -104,3 +115,21 @@ SimpleRSAModelUttKLDivParamABK <- function(params, data) {
   return(SimpleRSAModelUttKLDiv_3params(data, abs(params[1]), abs(params[2]), params[3]))
 }
 
+# Testing optimization function
+currentObjects <- c(1,2,6)
+notObeyInst <- 0
+klValueFactor <- 1
+softPrefValue <- 0.01
+targetFeature <- 1
+trial <- 1
+utt <- 4
+obj <- 1
+if (trial-1%%4 == 0){
+  preferencesPriorAll <- getPreferencesPrior(targetFeature)
+}
+
+output <-  getSimpleBestInfGainUttPreferencesIterative(
+  preferencesPriorAll, currentObjects, 
+  softPrefValue, notObeyInst, klValueFactor, targetFeature)
+posteriorUtterances <- round(output[[1]],3)
+preferencesPriorAll <- round(output[[2]][utt,,obj],3)

@@ -321,6 +321,7 @@ simpleBestInfGainUtteranceWithPrefPriorAll <-
  softPrefValue <- 0.01
  currentObjects <- c(1,2,6)
  targetFeature <- 1
+ klValueFactor <- 1
  relevantUtterances <- determineValidUtterances(currentObjects)
  mapObjToUtt <- determineObjectToUtterancesMapping(currentObjects)
  mapUttToObjProbs <- determineUtteranceToObjectProbabilities(relevantUtterances,
@@ -348,9 +349,9 @@ simpleBestInfGainUtteranceWithPrefPriorAll <-
  simpleBestInfGainUtterance(c(1/3, 1/3, 1/3, 0, 0, 0), relevantUtterances, currentObjects,
                                   mapUttToObjProbs, objectPreferenceSoftPriors)
 
-simpleBestInfGainUtteranceWithPrefPriorAll(preferencesPriorAll, utterancePrior, relevantUtterances, currentObjects,
-                                            mapUttToObjProbs, objectPreferenceSoftPriors,
-                                            1, targetFeature) #
+simpleBestInfGainUtteranceWithPrefPriorAll(preferencesPriorAll, relevantUtterances, 
+                                           currentObjects, mapUttToObjProbs, objectPreferenceSoftPriors,
+                                            klValueFactor, targetFeature, utterancePrior) #
 
 #
 # # kldFact <- (c(0:200)-100)/2
