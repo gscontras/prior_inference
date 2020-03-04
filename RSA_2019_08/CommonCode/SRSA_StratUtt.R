@@ -286,7 +286,9 @@ simpleBestInfGainUtteranceWithPrefPriorAll <-
     output2 <- list(posterior, featurePrefsPosteriorAll)
     #    return(rep(1 / length(relevantUtterances), length(relevantUtterances)))
     if (sum(postUttGPrefPrior) == 0){# no gain from any utterance...
-      return(output1)} # if no learning occurs, use posterior over utterances of previous trials
+      return(output1)} # if no learning occurs, use uniform prior over available utterances. 
+                      # Available utterances correspond to present feature values excluding utterances for target feature
+                      # If the target feature is shape, 'square', 'circle', and 'cloud' are not available
     #return(postUttGPrefPrior / sum(postUttGPrefPrior))
     return(output2)
   }
@@ -317,7 +319,7 @@ simpleBestInfGainUtteranceWithPrefPriorAll <-
 
 #
 # # Tests 2:
- notObeyInst <- 0 # dangerous when set to 0.01!
+ notObeyInst <- 0 
  softPrefValue <- 0.01
  currentObjects <- c(1,2,6)
  targetFeature <- 1
