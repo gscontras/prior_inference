@@ -117,13 +117,13 @@ SimpleRSAModelUttKLDivParamABK <- function(params, data) {
 
 # Testing optimization function
 #currentObjects <- c(1,2,6)
-currentObjects <- c(27,5,17)
+currentObjects <- c(26,20,23)
 notObeyInst <- 0
 klValueFactor <- 1
 softPrefValue <- 0
-targetFeature <- 1
+targetFeature <- 2
 trial <- 1
-utt <- 4
+utt <- 5
 obj <- 1
 if (trial-1%%4 == 0){
   preferencesPriorAll <- getPreferencesPrior(targetFeature)

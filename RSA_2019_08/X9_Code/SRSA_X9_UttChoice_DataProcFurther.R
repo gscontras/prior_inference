@@ -1,3 +1,5 @@
+## Code for model predictions with parameters set to default ##
+
 ############################################################################################
 #iterative12 <- 2   ###########################################################################
 ############################################################################################
@@ -7,7 +9,7 @@
 #parSetting <- 2
 
 source("CommonCode/SRSA_StratUtt.R")
-source("CommonCode/SRSA_StratUttOptimization_iterative.R") 
+source("CommonCode/SRSA_StratUttOptimization_iterative.R")  # this line hasn't been tested
 
 # Data file from Ella
 x9data = read.csv(
@@ -127,9 +129,12 @@ posteriorUtterances <- matrix(0, length(x9data$X),9)
 logLik <- rep(0,length(x9data$X))
 workerID <- -1
 utterance <- rep(0, length(x9data$X))
+preferences <- matrix(0, length(x9data$X), 9)
 for(i in c(1:length(x9data$X))) {
-  utterance[i] <- match((as.character(x9data$utterance[i])),allUtterances)
+  utterance[i] <- match(as.character(x9data$utterance[i]),allUtterancesNew1) ## polka-dotted!!!
   currentObjects <- c(targetObject[i],object2[i],object3[i]) 
+  relevantUtterances <- determineValidUtterances(currentObjects)
+  pickedUtterance <- match(utterance[i], relevantUtterances)  
   featChoice <- uttFeat[i]
   targetFeature <- targetFeat[i]
 #  constellationCode[i,] <- getConstellationCode(objectConstellation, featChoice)[[1]]
@@ -146,22 +151,23 @@ for(i in c(1:length(x9data$X))) {
   #   params12 <- paramsWorkers12[which(paramsWorkers12[,1]==workerID)[1],c(4:5)]
   #   # print(params)
   # }
-  relevantUtterances <- determineValidUtterances(currentObjects)
-  pickedUtterance <- match(utterance[i], relevantUtterances)  
+ 
+  
     #  if( (i-1)%%4 == 0) {
     #   priorPrefAll_1 <- getPreferencesPrior(x9data[i,"targetFeatureNum"])
     #   priorPrefAll_2 <- getPreferencesPrior(x9data[i,"targetFeatureNum"])
     # } # uniform focussing on the feature type in question.
     
-    if (i-1%%4 == 0){
+    if ((i-1)%%4 == 0){
       preferencesPriorAll <- getPreferencesPrior(x9data[i,"targetFeatureNum"])
-    }
+    }  else preferencesPriorAll <- preferences[i-1,]
     ## Calculating model predictions ##
     
     output <- getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll, currentObjects, 0, 0, 1, targetFeature) 
     
-    posteriorUtterances[i,relevantUtterances] <- output[[1]] } # temporary closing. Works till here
-    preferencesPriorAll <- output[[2]][pickedUtterance,,1] 
+    posteriorUtterances[i,relevantUtterances] <- output[[1]] 
+    preferences[i,] <- output[[2]][pickedUtterance,,1] 
+#    preferencesPriorAll <- output[[2]][pickedUtterance,,1] 
     
     # if(iterative12 == 1) {
     #   if(parSetting == 1) {
@@ -195,33 +201,33 @@ for(i in c(1:length(x9data$X))) {
 
 ###########
 ## adding all those values to the x9data table.
-subjectResponsesOrdered <- round(subjectResponsesOrdered, digits=5)
-colnames(subjectResponsesOrdered) <- colnames(subjectResponsesOrdered, do.NULL = FALSE, prefix = "DataPost_")
-x9data <- data.frame(x9data, as.data.frame(subjectResponsesOrdered)) 
-
-postListMat1Opt <- round(postListMat1Opt, digits=5)
-colnames(postListMat1Opt) <- colnames(postListMat1Opt, do.NULL = FALSE, prefix = "Post1_")
-consCodeAndPosteriors <- data.frame(as.data.frame(postListMat1Opt))
-x9data <- data.frame(x9data, consCodeAndPosteriors) 
-
-postListMat2Opt <- round(postListMat2Opt, digits=5)
-colnames(postListMat2Opt) <- colnames(postListMat2Opt, do.NULL = FALSE, prefix = "Post2_")
-consCodeAndPosteriorsNO <- data.frame(as.data.frame(postListMat2Opt))
-x9data <- data.frame(x9data, consCodeAndPosteriorsNO) 
-
-x9data$CCode <- uniqueCCode
-x9data$logLik <- logLik
-
-if(iterative12 == 1) {
-  if(parSetting == 1) {
-    write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
-  }else if(parSetting == 2) {
-    write.csv(x9data, "X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_andOpt12_iterative.csv")
-  }
-}else if(iterative12 == 2) {
-  if(parSetting == 1) {
-    write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
-  }else if(parSetting == 2) {
-    write.csv(x9data, "X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_Opt12_nonIterative.csv")
-  }
-}
+# subjectResponsesOrdered <- round(subjectResponsesOrdered, digits=5)
+# colnames(subjectResponsesOrdered) <- colnames(subjectResponsesOrdered, do.NULL = FALSE, prefix = "DataPost_")
+# x9data <- data.frame(x9data, as.data.frame(subjectResponsesOrdered)) 
+# 
+# postListMat1Opt <- round(postListMat1Opt, digits=5)
+# colnames(postListMat1Opt) <- colnames(postListMat1Opt, do.NULL = FALSE, prefix = "Post1_")
+# consCodeAndPosteriors <- data.frame(as.data.frame(postListMat1Opt))
+# x9data <- data.frame(x9data, consCodeAndPosteriors) 
+# 
+# postListMat2Opt <- round(postListMat2Opt, digits=5)
+# colnames(postListMat2Opt) <- colnames(postListMat2Opt, do.NULL = FALSE, prefix = "Post2_")
+# consCodeAndPosteriorsNO <- data.frame(as.data.frame(postListMat2Opt))
+# x9data <- data.frame(x9data, consCodeAndPosteriorsNO) 
+# 
+# x9data$CCode <- uniqueCCode
+# x9data$logLik <- logLik
+# 
+# if(iterative12 == 1) {
+#   if(parSetting == 1) {
+#     write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
+#   }else if(parSetting == 2) {
+#     write.csv(x9data, "X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_andOpt12_iterative.csv")
+#   }
+# }else if(iterative12 == 2) {
+#   if(parSetting == 1) {
+#     write.csv(x9data, "X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
+#   }else if(parSetting == 2) {
+#     write.csv(x9data, "X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_Opt12_nonIterative.csv")
+#   }
+# }
