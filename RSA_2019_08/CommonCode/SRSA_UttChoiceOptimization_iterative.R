@@ -36,10 +36,10 @@ getSimpleBestInfGainUttPreferencesIterative <- function(preferencesPriorAll,
 
 
 #### actual RSA model Kullback leibler divergence determination for utterance choice experiments.
-# data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:numUttOptions,7-X:TurkerSliderValues]
+# data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:numUttOptions,6: picked utterance]
 SimpleRSAModelUttKLDiv_3params_iterative <- function(data, par1, par2, par3) {
   #   print(c(par1, par2, par3, data))
-  klRes <- 0
+  logLik <- 0
   for(i in c(1:nrow(data))) {
     if( (i-1)%%4 == 0) {
       preferencesPriorAll <- getPreferencesPrior(data[i,5]) # focussing on the feature type in question.
@@ -49,71 +49,143 @@ SimpleRSAModelUttKLDiv_3params_iterative <- function(data, par1, par2, par3) {
 #    numUtterances <- data[i,4]
     uttFeat <- data[i,4]
     targetFeat <- data[i, 5]
-    utterance <- data[i, 6]
+    pickedUtterance <- data[i, 6]
+    relevantUtterances <- determineValidUtterances(currentObjects)
+    ## determining the model predictions
+    #################      Code below not edited ############
+    bInfGainUttModel <- rep(NA, 9)
+    output <- getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(par1), 
+                                                          abs(par2), par3, targetFeature) 
+    bInfGainUttModel[relevantUtterances] <- output[[1]] 
+    preferencesPriorAll <- output[[2]][pickedUtterance,,1] 
+    ## adding the negative log likelihoods
+#    for(j in c(1:length(relevantUtterances))) {
+    logLik <- logLik + 1 * 
+        (log(1 + 1e-100) - log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100) )
+#    }
+    #    print(c(data[i, 4+relevantUtterances],9999,bInfGainUttModel[relevantUtterances],8888))
+  }
+  #  print(c("Result: ", llRes, par1, par2, par3) )
+  return(logLik)
+}
+
+SimpleRSAModelUttKLDivParamA_iterative <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, abs(par[1]), 0, 1))
+}
+SimpleRSAModelUttKLDivParamB_iterative <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, 0, abs(par[1]), 1))
+}
+SimpleRSAModelUttKLDivParamK_iterative <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, 0, 0, par[1]))
+}
+SimpleRSAModelUttKLDivParamBK_iterative <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, 0, abs(params[1]), params[2]))
+}
+SimpleRSAModelUttKLDivParamAK_iterative <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, abs(params[1]), 0, params[2]))
+}
+
+SimpleRSAModelUttKLDivParamAK.2_iterative <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, abs(params[1]), 0.2, params[2]))
+}
+SimpleRSAModelUttKLDivParamA.2_iterative <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, abs(par[1]), 0.2, 1))
+}
+SimpleRSAModelUttKLDivParamB.2_iterative <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, 0.2, abs(par[1]), 1))
+}
+SimpleRSAModelUttKLDivParamK.2.2_iterative <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, 0.2, 0.2, par[1]))
+}
+SimpleRSAModelUttKLDivParamK.2.0_iterative <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, 0.2, 0, par[1]))
+}
+SimpleRSAModelUttKLDivParamBK.2_iterative <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, 0.2, abs(params[1]), params[2]))
+}
+SimpleRSAModelUttKLDivParamAK.2_iterative <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, abs(params[1]), 0.2, params[2]))
+}
+SimpleRSAModelUttKLDivParamAB_iterative <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, abs(params[1]), abs(params[2]), 1))
+}
+SimpleRSAModelUttKLDivParamABK_iterative <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_iterative(data, abs(params[1]), abs(params[2]), params[3]))
+}
+
+SimpleRSAModelUttKLDiv_3params_independent <- function(data, par1, par2, par3) {
+  #   print(c(par1, par2, par3, data))
+  logLik <- 0
+  for(i in c(1:nrow(data))) {
+    preferencesPriorAll <- getPreferencesPrior(data[i,5]) # focussing on the feature type in question.
+    ## determining the object and utterance
+    currentObjects <- c(data[i,1],data[i,2],data[i,3])
+    #    numUtterances <- data[i,4]
+    uttFeat <- data[i,4]
+    targetFeat <- data[i, 5]
+    pickedUtterance <- data[i, 6]
     relevantUtterances <- determinerelevantUtterances(currentObjects)
     ## determining the model predictions
     #################      Code below not edited ############
     bInfGainUttModel <- rep(NA, 9)
     bInfGainUttModel[relevantUtterances] <- 
       getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(param1), 
-                                                  abs(param2), abs(param3), targetFeature)
-     
-      getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(param1), 
-                                                  abs(param2), abs(param3), targetFeature)
+                                                  abs(param2), param3, targetFeature)
     ## adding the negative log likelihoods
-    for(j in c(1:length(relevantUtterances))) {
-      klRes <- klRes + data[i, 4+relevantUtterances[j]] * 
-        (log(data[i, 4+relevantUtterances[j]] + 1e-100) - log(bInfGainUttModel[relevantUtterances[j]] + 1e-100) )
-    }
+    #    for(j in c(1:length(relevantUtterances))) {
+    logLik <- logLik + 1 * 
+      (log(1 + 1e-100) - log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100) )
+    #    }
     #    print(c(data[i, 4+relevantUtterances],9999,bInfGainUttModel[relevantUtterances],8888))
   }
   #  print(c("Result: ", llRes, par1, par2, par3) )
-  return(klRes)
+  return(logLik)
 }
 
-SimpleRSAModelUttKLDivParamA <- function(par, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, abs(par[1]), 0, 1))
+SimpleRSAModelUttKLDivParamA_independent <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, abs(par[1]), 0, 1))
 }
-SimpleRSAModelUttKLDivParamB <- function(par, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, 0, abs(par[1]), 1))
+SimpleRSAModelUttKLDivParamB_independent <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, 0, abs(par[1]), 1))
 }
-SimpleRSAModelUttKLDivParamK <- function(par, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, 0, 0, par[1]))
+SimpleRSAModelUttKLDivParamK_independent <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, 0, 0, par[1]))
 }
-SimpleRSAModelUttKLDivParamBK <- function(params, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, 0, abs(params[1]), params[2]))
+SimpleRSAModelUttKLDivParamBK_independent <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, 0, abs(params[1]), params[2]))
 }
-SimpleRSAModelUttKLDivParamAK <- function(params, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, abs(params[1]), 0, params[2]))
+SimpleRSAModelUttKLDivParamAK_independent <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, abs(params[1]), 0, params[2]))
 }
 
-SimpleRSAModelUttKLDivParamAK.2 <- function(params, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, abs(params[1]), 0.2, params[2]))
+SimpleRSAModelUttKLDivParamAK.2_independent <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, abs(params[1]), 0.2, params[2]))
 }
-SimpleRSAModelUttKLDivParamA.2 <- function(par, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, abs(par[1]), 0.2, 1))
+SimpleRSAModelUttKLDivParamA.2_independent <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, abs(par[1]), 0.2, 1))
 }
-SimpleRSAModelUttKLDivParamB.2 <- function(par, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, 0.2, abs(par[1]), 1))
+SimpleRSAModelUttKLDivParamB.2_independent <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, 0.2, abs(par[1]), 1))
 }
-SimpleRSAModelUttKLDivParamK.2.2 <- function(par, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, 0.2, 0.2, par[1]))
+SimpleRSAModelUttKLDivParamK.2.2_independent <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, 0.2, 0.2, par[1]))
 }
-SimpleRSAModelUttKLDivParamK.2.0 <- function(par, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, 0.2, 0, par[1]))
+SimpleRSAModelUttKLDivParamK.2.0_independent <- function(par, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, 0.2, 0, par[1]))
 }
-SimpleRSAModelUttKLDivParamBK.2 <- function(params, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, 0.2, abs(params[1]), params[2]))
+SimpleRSAModelUttKLDivParamBK.2_independent <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, 0.2, abs(params[1]), params[2]))
 }
-SimpleRSAModelUttKLDivParamAK.2 <- function(params, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, abs(params[1]), 0.2, params[2]))
+SimpleRSAModelUttKLDivParamAK.2_independent <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, abs(params[1]), 0.2, params[2]))
 }
-SimpleRSAModelUttKLDivParamAB <- function(params, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, abs(params[1]), abs(params[2]), 1))
+SimpleRSAModelUttKLDivParamAB_independent <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, abs(params[1]), abs(params[2]), 1))
 }
-SimpleRSAModelUttKLDivParamABK <- function(params, data) {
-  return(SimpleRSAModelUttKLDiv_3params(data, abs(params[1]), abs(params[2]), params[3]))
+SimpleRSAModelUttKLDivParamABK_independent <- function(params, data) {
+  return(SimpleRSAModelUttKLDiv_3params_independent(data, abs(params[1]), abs(params[2]), params[3]))
 }
+
 
 # Testing optimization function
 #currentObjects <- c(1,2,6)
