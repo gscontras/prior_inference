@@ -46,24 +46,19 @@ SimpleRSAModelUttKLDiv_3params_iterative <- function(data, par1, par2, par3) {
     }
     ## determining the object and utterance
     currentObjects <- c(data[i,1],data[i,2],data[i,3])
-#    numUtterances <- data[i,4]
     uttFeat <- data[i,4]
     targetFeat <- data[i, 5]
     pickedUtterance <- data[i, 6]
     relevantUtterances <- determineValidUtterances(currentObjects)
     ## determining the model predictions
-    #################      Code below not edited ############
     bInfGainUttModel <- rep(NA, 9)
     output <- getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(par1), 
                                                           abs(par2), par3, targetFeature) 
     bInfGainUttModel[relevantUtterances] <- output[[1]] 
     preferencesPriorAll <- output[[2]][pickedUtterance,,1] 
     ## adding the negative log likelihoods
-#    for(j in c(1:length(relevantUtterances))) {
-    logLik <- logLik + 1 * 
-        (log(1 + 1e-100) - log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100) )
-#    }
-    #    print(c(data[i, 4+relevantUtterances],9999,bInfGainUttModel[relevantUtterances],8888))
+    logLik <- logLik + log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100)
+#    print(logLik)
   }
   #  print(c("Result: ", llRes, par1, par2, par3) )
   return(logLik)
@@ -124,19 +119,17 @@ SimpleRSAModelUttKLDiv_3params_independent <- function(data, par1, par2, par3) {
     uttFeat <- data[i,4]
     targetFeat <- data[i, 5]
     pickedUtterance <- data[i, 6]
-    relevantUtterances <- determinerelevantUtterances(currentObjects)
+    relevantUtterances <- determineValidUtterances(currentObjects)
     ## determining the model predictions
     #################      Code below not edited ############
     bInfGainUttModel <- rep(NA, 9)
-    bInfGainUttModel[relevantUtterances] <- 
-      getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(param1), 
-                                                  abs(param2), param3, targetFeature)
+    output <- getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(par1), 
+                                                          abs(par2), par3, targetFeature) 
+    bInfGainUttModel[relevantUtterances] <- output[[1]] 
+    preferencesPriorAll <- output[[2]][pickedUtterance,,1] 
     ## adding the negative log likelihoods
-    #    for(j in c(1:length(relevantUtterances))) {
-    logLik <- logLik + 1 * 
-      (log(1 + 1e-100) - log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100) )
-    #    }
-    #    print(c(data[i, 4+relevantUtterances],9999,bInfGainUttModel[relevantUtterances],8888))
+    logLik <- logLik + log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100)
+    #    print(logLik)
   }
   #  print(c("Result: ", llRes, par1, par2, par3) )
   return(logLik)
@@ -189,20 +182,20 @@ SimpleRSAModelUttKLDivParamABK_independent <- function(params, data) {
 
 # Testing optimization function
 #currentObjects <- c(1,2,6)
-currentObjects <- c(26,20,23)
-notObeyInst <- 0
-klValueFactor <- 1
-softPrefValue <- 0
-targetFeature <- 2
-trial <- 1
-utt <- 5
-obj <- 1
-if (trial-1%%4 == 0){
-  preferencesPriorAll <- getPreferencesPrior(targetFeature)
-}
-
-output <-  getSimpleBestInfGainUttPreferencesIterative(
-  preferencesPriorAll, currentObjects, 
-  softPrefValue, notObeyInst, klValueFactor, targetFeature)
-posteriorUtterances <- round(output[[1]],3)
-preferencesPriorAll <- round(output[[2]][utt,,obj],3)
+# currentObjects <- c(26,20,23)
+# notObeyInst <- 0
+# klValueFactor <- 1
+# softPrefValue <- 0
+# targetFeature <- 2
+# trial <- 1
+# utt <- 5
+# obj <- 1
+# if (trial-1%%4 == 0){
+#   preferencesPriorAll <- getPreferencesPrior(targetFeature)
+# }
+# 
+# output <-  getSimpleBestInfGainUttPreferencesIterative(
+#   preferencesPriorAll, currentObjects, 
+#   softPrefValue, notObeyInst, klValueFactor, targetFeature)
+# posteriorUtterances <- round(output[[1]],3)
+# preferencesPriorAll <- round(output[[2]][utt,,obj],3)

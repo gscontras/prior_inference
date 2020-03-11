@@ -42,27 +42,6 @@ temp3 <- (temp2 - temp2 %% 10) / 10
 obj3OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
 x9data$obj3OC27 <- obj3OC27
 
-## now determining the recorded subject responses 
-subjectResponses <- matrix(0,length(x9data$X),3)
-
-for(i in c(1:length(x9data$X))) {
-  subjectResponses[i,1] <- x9data$normResponse0[i] + 1e-100
-  subjectResponses[i,2] <- x9data$normResponse1[i] + 1e-100
-  subjectResponses[i,3] <- x9data$normResponse2[i] + 1e-100
-  #  subjectResponses[i,1:3] <- subjectResponses[i,1:3] / sum(subjectResponses[i,1:3]) # Ella already normalized the data
-}
-
-## ordering the recorded subject responses such that they can be compared directly 
-#   to the model predictions 
-##             (particularly for visual comparison in the table) 
-subjectResponsesOrdered <- matrix(NA ,length(x9data$X),9)
-for(i in c(1:length(x9data$X))) {
-  for(j in 1:3) {  
-    subjectResponsesOrdered[i, (j+(targetFeat[i]-1)*3)] <- subjectResponses[i,j]
-  }
-}
-subjectResponsesOrdered <- round(subjectResponsesOrdered, digits=5)
-
 ## Reordering objects in input data
 
 targetObject <- rep(NA, length(x9data$X))
@@ -85,6 +64,8 @@ for (i in 1:length(x9data$X)){
   }
 }  
 
+# Which utterance the subjects picked
+
 for(i in c(1:length(x9data$X))) {
   utterance[i] <- match(as.character(x9data$utterance[i]),allUtterancesNew1) ## polka-dotted!!!
   currentObjects <- c(targetObject[i],object2[i],object3[i]) 
@@ -93,101 +74,60 @@ for(i in c(1:length(x9data$X))) {
   featChoice <- uttFeat[i]
 }
 
-
-##### This part will change since there is only one utterance chosen #########
-
-## now identify the first column number of the turker sliders and response pairs
-# sliderIndex <- grep("^pref1", colnames(x9data))
-# ## and use that index to determine all slider identities and corresponding slider values.
-# sliderUtteranceTypes <- matrix(NA, nrow(x9data), 9)
-# sliderSetValues <- matrix(NA,  nrow(x9data), 9)
-# for(i in c(1:9)) {
-#   colIndex <- sliderIndex + (i-1) * 2
-#   relRows <- which(!is.na(x9data[[colIndex]]))
-#   for(j in c(1:length(relRows) ) ) { 
-#     sliderUtteranceTypes[relRows[j], i] <- which(allUtterancesNew1==x9data[[colIndex]][relRows[j]])
-#     sliderSetValues[relRows[j], i] <- x9data[[colIndex+1]][relRows[j]]
-#   }
-# }
-# ### normalizing the turker estimates and setting them into the corresponding matrix.
-# bInfGainUttTurkers <- matrix(NA, nrow(x9data), 9)
-# for(i in c(1:nrow(x9data)) ) {
-#   s <- sum(sliderSetValues[i,c(1:x9data$numFeatures[i])])
-#   if(s > 0) {
-#     sliderSetValues[i,c(1:x9data$numFeatures[i])] <- sliderSetValues[i,c(1:x9data$numFeatures[i])] / s
-#   }else{
-#     sliderSetValues[i,c(1:x9data$numFeatures[i])] <- 1 / (x9data$numFeatures[i])
-#   }
-#   bInfGainUttTurkers[i, sliderUtteranceTypes[i,c(1:(x9data$numFeatures[i]) )] ] <- sliderSetValues[i,c(1:(x9data$numFeatures[i]) )]
-#   for(j in c(1:x9data$numFeatures[i])) {
-#     if(is.na(sliderSetValues[i,j])) {
-#       print("ERRor")
-#     }
-#   }
-# }
-
 ############ Set up the parameters and KL values matrix ##########
 
-## recording KL divergence and parameters (base model, 1 param, 2 params)
 workerIDs <- x9data$workerid
 idMax <- max(workerIDs)
-klDivUttWorkers <- matrix(0,length(unique(workerIDs)), 8)
+logLikWorkers <- matrix(0,length(unique(workerIDs)), 8)
 paramsUttWorkers <- matrix(0,length(unique(workerIDs)), 11)
 
 #######################################################
 ## Starting with simple base model determination:    ##
 #######################################################
+
 workerIndex <- 1
 for(workerID in c(0:idMax)) {
   idICases <- which(workerIDs == workerID)
   if(length(idICases)>0) {
-    klDivUttWorkers[workerIndex,1] <- workerID
+    logLikWorkers[workerIndex,1] <- workerID
+    logLikWorkers[workerIndex, 2] <- 0
     paramsUttWorkers[workerIndex,1] <- workerID
-    ## based model -> no change in preferences!
-    klDivUttWorkers[workerIndex,2] <- 0
-    for(i in c(1:length(idICases))) {
-      len <- x9data$numFeatures[idICases[i]]
-      for(j in c(1:len) ) {
-        klDivUttWorkers[workerIndex, 2] <- klDivUttWorkers[workerIndex, 2] + 
-          sliderSetValues[idICases[i],j] * 
-          (log(sliderSetValues[idICases[i],j] + 1e-100) - log(1/len))
-        if(is.na(klDivUttWorkers[workerIndex, 2])) {
-          print("Is NA!???")
-          print(c(sliderSetValues[idICases[i],j], log(1/len), i, j, len))
-          j <- 10
-          i <- length(idICases) +1 
-        }
-      }
-    }
-    ## done with this worker -> proceed
+    
+    dataWorker <- matrix(0, length(idICases), 6)
+    dataWorker[,1] <- targetObject[idICases]
+    dataWorker[,2] <- object2[idICases]
+    dataWorker[,3] <- object3[idICases]
+    dataWorker[,4] <- uttFeat[idICases]
+    dataWorker[,5] <- targetFeat[idICases]
+    dataWorker[,6] <- pickedUtterance[idICases] 
+      
+    ## base model -> no change in preferences!
+  for(i in c(1:length(idICases))) { 
+#   logLikWorkers[workerIndex,2] <- 0
+    currentObjects <- dataWorker[i,1:3] 
+    relevantUtterances <- determineValidUtterances(currentObjects)
+    irrelevantIndices <- which(relevantUtterances>(3*(dataWorker[i,5]-1)) & 
+                                   relevantUtterances<(3*dataWorker[i,5] + 1))
+    validUtterances <- relevantUtterances[-irrelevantIndices]  
+#    print(length(validUtterances))
+    logLikWorkers[workerIndex, 2] <- logLikWorkers[workerIndex, 2] + log(1/length(validUtterances))  
+      if(is.na(logLikWorkers[workerIndex, 2])) {
+        print("Is NA!???")
+        } 
+      } 
+     ## done with this worker -> proceed
     workerIndex <- workerIndex + 1
   }
 }
 
-############ Set up the data matrix ##########
 
-#######################
-## Optimizing (i.e. minimzing) the KL Divergence values for each worker...
+## Optimizing (i.e. minimzing) the negative log likelihood values for each worker...
 ## starting with 1 parameter RSA model optimizations... 
-# data is a matrix with data rows. column structure: [1:OC1,OC2,OC3,4:numUttOptions,7-X(max 15):TurkerSliderValues]
+## data is a matrix with data rows. column structure: 
+## [1:tagrget object, 2: object 2, 3: object 3,4:uttered featue, 5: target feature,6: picked utterance]
 
-dataWorker <- matrix(0, length(x9data$X), 6)
-dataWorker[,1] <- targetObject
-dataWorker[,2] <- object2
-dataWorker[,3] <- object3
-dataWorker[,4] <- uttFeat
-dataWorker[,5] <- targetFeat
-dataWorker[,6] <- pickedUtterance
-
-# logLik <- rep(NA, length(x9data$X))
-# workers <- split(dataWorker, x9data$workerid)
-# for (worker in workers) {
-#   logLik[i] <- SimpleRSAModelUttKLDiv_3params_iterative(worker$worker, 0,0,1)
-# }
-
-
-logLik <- rep(NA, length(x9data$X))
- workerIndex <- 1
+logLikDefaultParam <- rep(NA, length(x9data$X))
+workerIndex <- 1
  for(workerID in c(0:idMax)) {
    idICases <- which(workerIDs == workerID)
    if(length(idICases)>0) {
@@ -199,48 +139,61 @@ logLik <- rep(NA, length(x9data$X))
     dataWorker[,4] <- uttFeat[idICases]
     dataWorker[,5] <- targetFeat[idICases]
     dataWorker[,6] <- pickedUtterance[idICases]
-    logLik[workerID] <- SimpleRSAModelUttKLDiv_3params_iterative(dataWorker, 0,0,1) 
+#    logLikDefaultParam[workerIndex] <- SimpleRSAModelUttKLDiv_3params_iterative(dataWorker, 0,0,1) 
     # print(dataWorker)
-    # now optimize for one parameter... 
- #   optRes1 <- optimize(SimpleRSAModelUttKLDivParamA, c(0,1e+10), dataWorker)
- #   optRes2 <- optimize(SimpleRSAModelUttKLDivParamB, c(0,1e+10), dataWorker)   
-    optRes3 <- optimize(SimpleRSAModelUttKLDivParamK_iterative, c(-10,10), dataWorker)   
     
-    ## 1 param RSA Utt model
- #   klDivUttWorkers[workerIndex,3] <- optRes1$objective
- #   klDivUttWorkers[workerIndex,4] <- optRes2$objective
-    klDivUttWorkers[workerIndex,5] <- optRes3$objective
-    ## resulting parameter choice
-#    paramsUttWorkers[workerIndex,2] <- optRes1$minimum
-#    paramsUttWorkers[workerIndex,3] <- optRes2$minimum
+    ## 1 param RSA Utt model optimizing for kl-value factor
+
+    optRes3 <- optimize(SimpleRSAModelUttKLDivParamK_iterative, c(-10,10), dataWorker) 
+    optRes4 <- optimize(SimpleRSAModelUttKLDivParamK_independent, c(-10,10), dataWorker)
+    logLikWorkers[workerIndex,3] <- SimpleRSAModelUttKLDiv_3params_iterative(dataWorker, 0,0,1) 
+    logLikWorkers[workerIndex,4] <- SimpleRSAModelUttKLDiv_3params_independent(dataWorker, 0,0,1) 
+    logLikWorkers[workerIndex,5] <- optRes3$objective
+    logLikWorkers[workerIndex,6] <- optRes4$objective
+    logLikWorkers[workerIndex,7] <- optRes3$objective < optRes4$objective
     paramsUttWorkers[workerIndex,4] <- optRes3$minimum
-    ####
+    paramsUttWorkers[workerIndex,5] <- optRes4$minimum
+    colnames(logLikWorkers) <- c("workerid","uniform","default_param_iter", "default_param_indep" ,"iterative", "independent", "iterative_better", "v8")
+#    colnames(paramsUttWorkers) <- 
+    print(c("Done with worker ",workerIndex," with worker ID ", workerID))
+    print(c(logLikWorkers[workerIndex,], paramsUttWorkers[workerIndex,]))
+    # ####
+     workerIndex <- workerIndex + 1
+   }
+ }
+
+########### Additional optimization options #################
+
+#   optRes1 <- optimize(SimpleRSAModelUttKLDivParamA, c(0,1e+10), dataWorker)
+#   optRes2 <- optimize(SimpleRSAModelUttKLDivParamB, c(0,1e+10), dataWorker)   
+#   logLikWorkers[workerIndex,3] <- optRes1$objective
+#   logLikWorkers[workerIndex,4] <- optRes2$objective
+#   paramsUttWorkers[workerIndex,2] <- optRes1$minimum
+#   paramsUttWorkers[workerIndex,3] <- optRes2$minimum
+
 #    optRes2n1 <- optim(c(.2, .2), SimpleRSAModelUttKLDivParamBK, method="L-BFGS-B", gr=NULL, dataWorker,
 #                       lower = c(0,-10), upper = c(1e+10,10))
 #    optRes2n2 <- optim(c(.2, .2), SimpleRSAModelUttKLDivParamAK, method="L-BFGS-B", gr=NULL, dataWorker,
 #                       lower = c(0,-10), upper = c(1e+10,10))
 #    optRes3 <- optim(c(.2, .2, 1), SimpleRSAModelUttKLDivParamABK, method="L-BFGS-B", gr=NULL, dataWorker,
 #                     lower = c(0,0,-10), upper = c(1e+10,1e+10,10))
-    ## 2 and 3 param RSA model2
-    ## max likelihood parameter choice
-#    klDivUttWorkers[workerIndex,6] <- optRes2n1$value
-#    klDivUttWorkers[workerIndex,7] <- optRes2n2$value
-#    klDivUttWorkers[workerIndex,8] <- optRes3$value
-    ## max likelihood parameter choice
-    # paramsUttWorkers[workerIndex,5] <- optRes2n1$par[1]
-    # paramsUttWorkers[workerIndex,6] <- optRes2n1$par[2]
-    # paramsUttWorkers[workerIndex,7] <- optRes2n2$par[1]
-    # paramsUttWorkers[workerIndex,8] <- optRes2n2$par[2]
-    # paramsUttWorkers[workerIndex,9] <- optRes3$par[1]
-    # paramsUttWorkers[workerIndex,10] <- optRes3$par[2]
-    # paramsUttWorkers[workerIndex,11] <- optRes3$par[3]
-    ##    
-     print(c("Done with worker ",workerIndex," with worker ID ", workerID))
-     print(c(klDivUttWorkers[workerIndex,], paramsUttWorkers[workerIndex,]))
-    # ####
-     workerIndex <- workerIndex + 1
-   }
- }
 
- write.csv(klDivUttWorkers, "X9_Data/x9_logLik_indOpt.csv")
+## 2 and 3 param RSA model2
+## max likelihood parameter choice
+#    logLikWorkers[workerIndex,6] <- optRes2n1$value
+#    logLikWorkers[workerIndex,7] <- optRes2n2$value
+#    logLikWorkers[workerIndex,8] <- optRes3$value
+## max likelihood parameter choice
+# paramsUttWorkers[workerIndex,5] <- optRes2n1$par[1]
+# paramsUttWorkers[workerIndex,6] <- optRes2n1$par[2]
+# paramsUttWorkers[workerIndex,7] <- optRes2n2$par[1]
+# paramsUttWorkers[workerIndex,8] <- optRes2n2$par[2]
+# paramsUttWorkers[workerIndex,9] <- optRes3$par[1]
+# paramsUttWorkers[workerIndex,10] <- optRes3$par[2]
+# paramsUttWorkers[workerIndex,11] <- optRes3$par[3]
+##    
+ 
+############### Recording output ##########################
+
+ write.csv(logLikWorkers, "X9_Data/x9_logLik_indOpt.csv")
  write.csv(paramsUttWorkers, "X9_Data/x9Params_Lambda_indOpt.csv")

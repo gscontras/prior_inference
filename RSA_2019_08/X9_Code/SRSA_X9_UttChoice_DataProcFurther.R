@@ -9,7 +9,8 @@
 #parSetting <- 2
 
 source("CommonCode/SRSA_StratUtt.R")
-source("CommonCode/SRSA_StratUttOptimization_iterative.R")  # this line hasn't been tested
+source("CommonCode/SRSA_StratUttOptimization_iterative.R")
+source("CommonCode/SRSA_StratUttOptimization.R")
 
 # Data file from Ella
 x9data = read.csv(
@@ -126,6 +127,7 @@ idMax <- max(workerIDs)
 #postListMat1Opt <- matrix(0,length(x9data$X),9)
 #postListMat2Opt <- matrix(0,length(x9data$X),9)
 posteriorUtterances <- matrix(0, length(x9data$X),9)
+posteriorUtterancesIndependent <- matrix(0, length(x9data$X),9)
 logLik <- rep(0,length(x9data$X))
 workerID <- -1
 utterance <- rep(0, length(x9data$X))
@@ -167,6 +169,13 @@ for(i in c(1:length(x9data$X))) {
     
     posteriorUtterances[i,relevantUtterances] <- output[[1]] 
     preferences[i,] <- output[[2]][pickedUtterance,,1] 
+    
+# TODO: think about the function that caclulates independent predictions but with target feature priors
+    #    posteriorUtterancesIndependent[i,relevantUtterances] <- getSimpleBestInfGainUttPreferences(currentObjects, 0, 0, 1) 
+    
+    posteriorUtterances[i,relevantUtterances] <- outputIterative[[1]] 
+    preferences[i,] <- outputIterative[[2]][pickedUtterance,,1] 
+    
 #    preferencesPriorAll <- output[[2]][pickedUtterance,,1] 
     
     # if(iterative12 == 1) {
