@@ -100,22 +100,22 @@ for(workerID in c(0:idMax)) {
     dataWorker[,4] <- uttFeat[idICases]
     dataWorker[,5] <- targetFeat[idICases]
     dataWorker[,6] <- pickedUtterance[idICases] 
-      
+    
     ## base model -> no change in preferences!
-  for(i in c(1:length(idICases))) { 
-#   logLikWorkers[workerIndex,2] <- 0
-    currentObjects <- dataWorker[i,1:3] 
-    relevantUtterances <- determineValidUtterances(currentObjects)
-    irrelevantIndices <- which(relevantUtterances>(3*(dataWorker[i,5]-1)) & 
+    for(i in c(1:length(idICases))) { 
+      #   logLikWorkers[workerIndex,2] <- 0
+      currentObjects <- dataWorker[i,1:3] 
+      relevantUtterances <- determineValidUtterances(currentObjects)
+      irrelevantIndices <- which(relevantUtterances>(3*(dataWorker[i,5]-1)) & 
                                    relevantUtterances<(3*dataWorker[i,5] + 1))
-    validUtterances <- relevantUtterances[-irrelevantIndices]  
-#    print(length(validUtterances))
-    logLikWorkers[workerIndex, 2] <- logLikWorkers[workerIndex, 2] + log(1/length(validUtterances))  
+      validUtterances <- relevantUtterances[-irrelevantIndices]  
+      #    print(length(validUtterances))
+      logLikWorkers[workerIndex, 2] <- logLikWorkers[workerIndex, 2] - log(1/length(validUtterances))  
       if(is.na(logLikWorkers[workerIndex, 2])) {
         print("Is NA!???")
-        } 
       } 
-     ## done with this worker -> proceed
+    } 
+    ## done with this worker -> proceed
     workerIndex <- workerIndex + 1
   }
 }
@@ -128,9 +128,9 @@ for(workerID in c(0:idMax)) {
 
 logLikDefaultParam <- rep(NA, length(x9data$X))
 workerIndex <- 1
- for(workerID in c(0:idMax)) {
-   idICases <- which(workerIDs == workerID)
-   if(length(idICases)>0) {
+for(workerID in c(0:idMax)) {
+  idICases <- which(workerIDs == workerID)
+  if(length(idICases)>0) {
     ## generating data matrix for the purpose of optimization
     dataWorker <- matrix(0, length(idICases), 8)
     dataWorker[,1] <- targetObject[idICases]
@@ -139,11 +139,11 @@ workerIndex <- 1
     dataWorker[,4] <- uttFeat[idICases]
     dataWorker[,5] <- targetFeat[idICases]
     dataWorker[,6] <- pickedUtterance[idICases]
-#    logLikDefaultParam[workerIndex] <- SimpleRSAModelUttKLDiv_3params_iterative(dataWorker, 0,0,1) 
+    #    logLikDefaultParam[workerIndex] <- SimpleRSAModelUttKLDiv_3params_iterative(dataWorker, 0,0,1) 
     # print(dataWorker)
     
     ## 1 param RSA Utt model optimizing for kl-value factor
-
+    
     optRes3 <- optimize(SimpleRSAModelUttKLDivParamK_iterative, c(-10,10), dataWorker) 
     optRes4 <- optimize(SimpleRSAModelUttKLDivParamK_independent, c(-10,10), dataWorker)
     logLikWorkers[workerIndex,3] <- SimpleRSAModelUttKLDiv_3params_iterative(dataWorker, 0,0,1) 
@@ -153,14 +153,14 @@ workerIndex <- 1
     logLikWorkers[workerIndex,7] <- optRes3$objective < optRes4$objective
     paramsUttWorkers[workerIndex,4] <- optRes3$minimum
     paramsUttWorkers[workerIndex,5] <- optRes4$minimum
-    colnames(logLikWorkers) <- c("workerid","uniform","default_param_iter", "default_param_indep" ,"iterative", "independent", "iterative_better", "v8")
-#    colnames(paramsUttWorkers) <- 
+    colnames(logLikWorkers) <- c("workerid","uniform","default_param_iter", "default_param_indep" ,
+                                 "iterative", "independent", "iterative_better", "v8")
     print(c("Done with worker ",workerIndex," with worker ID ", workerID))
     print(c(logLikWorkers[workerIndex,], paramsUttWorkers[workerIndex,]))
     # ####
-     workerIndex <- workerIndex + 1
-   }
- }
+    workerIndex <- workerIndex + 1
+  }
+}
 
 ########### Additional optimization options #################
 
@@ -192,8 +192,8 @@ workerIndex <- 1
 # paramsUttWorkers[workerIndex,10] <- optRes3$par[2]
 # paramsUttWorkers[workerIndex,11] <- optRes3$par[3]
 ##    
- 
+
 ############### Recording output ##########################
 
- write.csv(logLikWorkers, "X9_Data/x9_logLik_indOpt.csv")
- write.csv(paramsUttWorkers, "X9_Data/x9Params_Lambda_indOpt.csv")
+write.csv(logLikWorkers, "X9_Data/x9_logLik_indOpt.csv")
+write.csv(paramsUttWorkers, "X9_Data/x9Params_Lambda_indOpt.csv")

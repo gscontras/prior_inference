@@ -50,14 +50,17 @@ SimpleRSAModelUttKLDiv_3params_iterative <- function(data, par1, par2, par3) {
     targetFeat <- data[i, 5]
     pickedUtterance <- data[i, 6]
     relevantUtterances <- determineValidUtterances(currentObjects)
+    irrelevantIndices <- which(relevantUtterances>(3*(data[i,5]-1)) & 
+                                 relevantUtterances<(3*data[i,5] + 1))
+    validUtterances <- relevantUtterances[-irrelevantIndices]  
     ## determining the model predictions
     bInfGainUttModel <- rep(NA, 9)
     output <- getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(par1), 
-                                                          abs(par2), par3, targetFeature) 
+                                                          abs(par2), par3, targetFeat) 
     bInfGainUttModel[relevantUtterances] <- output[[1]] 
     preferencesPriorAll <- output[[2]][pickedUtterance,,1] 
     ## adding the negative log likelihoods
-    logLik <- logLik + log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100)
+    logLik <- logLik - log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100)
 #    print(logLik)
   }
   #  print(c("Result: ", llRes, par1, par2, par3) )
@@ -120,15 +123,29 @@ SimpleRSAModelUttKLDiv_3params_independent <- function(data, par1, par2, par3) {
     targetFeat <- data[i, 5]
     pickedUtterance <- data[i, 6]
     relevantUtterances <- determineValidUtterances(currentObjects)
+    irrelevantIndices <- which(relevantUtterances>(3*(data[i,5]-1)) & 
+                                 relevantUtterances<(3*data[i,5] + 1))
+    validUtterances <- relevantUtterances[-irrelevantIndices]  
     ## determining the model predictions
     #################      Code below not edited ############
     bInfGainUttModel <- rep(NA, 9)
     output <- getSimpleBestInfGainUttPreferencesIterative(preferencesPriorAll,currentObjects, abs(par1), 
-                                                          abs(par2), par3, targetFeature) 
+                                                          abs(par2), par3, targetFeat) 
     bInfGainUttModel[relevantUtterances] <- output[[1]] 
-    preferencesPriorAll <- output[[2]][pickedUtterance,,1] 
+ #   preferencesPriorAll <- output[[2]][pickedUtterance,,1] 
     ## adding the negative log likelihoods
-    logLik <- logLik + log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100)
+    logLik <- logLik - log(bInfGainUttModel[relevantUtterances[pickedUtterance]] + 1e-100)
+   if (bInfGainUttModel[relevantUtterances[pickedUtterance]] == 0){
+      print('#####################')
+      print(bInfGainUttModel)
+      print(relevantUtterances)
+      print(validUtterances)
+      print(pickedUtterance)
+      print(currentObjects)
+      print()
+      print(allObjects[currentObjects,])
+    }
+    
     #    print(logLik)
   }
   #  print(c("Result: ", llRes, par1, par2, par3) )
@@ -180,22 +197,22 @@ SimpleRSAModelUttKLDivParamABK_independent <- function(params, data) {
 }
 
 
-# Testing optimization function
-#currentObjects <- c(1,2,6)
-# currentObjects <- c(26,20,23)
-# notObeyInst <- 0
-# klValueFactor <- 1
-# softPrefValue <- 0
-# targetFeature <- 2
-# trial <- 1
-# utt <- 5
-# obj <- 1
-# if (trial-1%%4 == 0){
-#   preferencesPriorAll <- getPreferencesPrior(targetFeature)
-# }
-# 
-# output <-  getSimpleBestInfGainUttPreferencesIterative(
-#   preferencesPriorAll, currentObjects, 
-#   softPrefValue, notObeyInst, klValueFactor, targetFeature)
-# posteriorUtterances <- round(output[[1]],3)
-# preferencesPriorAll <- round(output[[2]][utt,,obj],3)
+#Testing optimization function
+currentObjects <- c(1,2,6)
+#currentObjects <- c(26,20,23)
+notObeyInst <- 1000
+klValueFactor <- 1
+softPrefValue <- 1000
+targetFeature <- 2
+trial <- 1
+utt <- 5
+obj <- 1
+if (trial-1%%4 == 0){
+  preferencesPriorAll <- getPreferencesPrior(targetFeature)
+}
+
+output <-  getSimpleBestInfGainUttPreferencesIterative(
+  preferencesPriorAll, currentObjects,
+  softPrefValue, notObeyInst, klValueFactor, targetFeature)
+posteriorUtterances <- round(output[[1]],3)
+preferencesPriorAll <- round(output[[2]][utt,,obj],3)
