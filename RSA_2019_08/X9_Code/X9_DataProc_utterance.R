@@ -2,76 +2,35 @@ source("CommonCode/SRSA_StratUtt.R")
 source("CommonCode/SRSA_UttChoiceOptimization_iterative.R")
 
 x9data = read.csv(
-  "X9_Data/ella_total_allDataCleaned.csv",
+#  "X9_Data/ella_total_allDataCleaned.csv",
+  "X9_Data/ella_coded_data.csv",
   header = TRUE,
   na.strings = c("", " ", "NA")
 )
 
 # adding feature property codes (which feature was uttereed, which features were questioned)
-uttFeat <- ifelse(x9data$utterance=="green" | x9data$utterance=="red" | x9data$utterance=="blue", 3,
-                  ifelse(x9data$utterance=="solid" | x9data$utterance=="striped" | x9data$utterance=="polka-dotted", 2, 1))
-x9data$uttFeat <- uttFeat
+#uttFeat <- ifelse(x9data$utterance=="green" | x9data$utterance=="red" | x9data$utterance=="blue", 3,
+#                   ifelse(x9data$utterance=="solid" | x9data$utterance=="striped" | x9data$utterance=="polka-dotted", 2, 1))
+#x9data$uttFeat <- uttFeat
+
+########## Reading in information from the data table #####
+
 targetFeat <- x9data$targetFeatureNum
-#utterance <- x9data$utterance
+targetObject <- x9data$targetObject
+object2 <- x9data$object2
+object3 <- x9data$object3
+
+# Which utterance the subjects picked
 
 utterance <- rep(NA, length(x9data$X))
 pickedUtterance <- rep(NA, length(x9data$X))
-
-## adding the 1-27 target and object1, object2 & object3 code.
-temp <- x9data$simulatedAnswer
-temp2 <- (temp - temp %% 10) / 10
-temp3 <- (temp2 - temp2 %% 10) / 10
-targetOC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
-x9data$targetOC27 <- targetOC27
-
-temp <- x9data$obj1
-temp2 <- (temp - temp %% 10) / 10
-temp3 <- (temp2 - temp2 %% 10) / 10
-obj1OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
-x9data$obj1OC27 <- obj1OC27
-
-temp <- x9data$obj2
-temp2 <- (temp - temp %% 10) / 10
-temp3 <- (temp2 - temp2 %% 10) / 10
-obj2OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
-x9data$obj2OC27 <- obj2OC27
-
-temp <- x9data$obj3
-temp2 <- (temp - temp %% 10) / 10
-temp3 <- (temp2 - temp2 %% 10) / 10
-obj3OC27 <- temp3 + 3 * ((temp2 %% 10) - 1) + 9 * ((temp %% 10) - 1)
-x9data$obj3OC27 <- obj3OC27
-
-## Reordering objects in input data
-
-targetObject <- rep(NA, length(x9data$X))
-object2 <- rep(NA, length(x9data$X))
-object3 <- rep(NA, length(x9data$X))
-
-for (i in 1:length(x9data$X)){
-  if(targetOC27[i] == obj1OC27[i]){
-    targetObject[i] <- targetOC27[i]
-    object2[i] <- obj2OC27[i]
-    object3[i] <- obj3OC27[i]
-  } else if (targetOC27[i] == obj2OC27[i]) 
-  {targetObject[i] <- obj2OC27[i]
-  object2[i] <- obj1OC27[i]
-  object3[i] <- obj3OC27[i]
-  } else {
-    targetObject[i] <- obj3OC27[i]
-    object2[i] <- obj1OC27[i]
-    object3[i] <- obj2OC27[i]
-  }
-}  
-
-# Which utterance the subjects picked
 
 for(i in c(1:length(x9data$X))) {
   utterance[i] <- match(as.character(x9data$utterance[i]),allUtterancesNew1) ## polka-dotted!!!
   currentObjects <- c(targetObject[i],object2[i],object3[i]) 
   relevantUtterances <- determineValidUtterances(currentObjects)
   pickedUtterance[i] <- match(utterance[i], relevantUtterances)  
-  featChoice <- uttFeat[i]
+#  featChoice <- uttFeat[i]
 }
 
 ############ Set up the parameters and KL values matrix ##########
@@ -97,11 +56,12 @@ for(workerID in c(0:idMax)) {
     dataWorker[,1] <- targetObject[idICases]
     dataWorker[,2] <- object2[idICases]
     dataWorker[,3] <- object3[idICases]
-    dataWorker[,4] <- uttFeat[idICases]
+#    dataWorker[,4] <- uttFeat[idICases]
     dataWorker[,5] <- targetFeat[idICases]
     dataWorker[,6] <- pickedUtterance[idICases] 
     
     ## base model -> no change in preferences!
+    ## The base model assigns a flat distribution over all possible utterance choices
     for(i in c(1:length(idICases))) { 
       #   logLikWorkers[workerIndex,2] <- 0
       currentObjects <- dataWorker[i,1:3] 
@@ -126,7 +86,6 @@ for(workerID in c(0:idMax)) {
 ## data is a matrix with data rows. column structure: 
 ## [1:tagrget object, 2: object 2, 3: object 3,4:uttered featue, 5: target feature,6: picked utterance]
 
-logLikDefaultParam <- rep(NA, length(x9data$X))
 workerIndex <- 1
 for(workerID in c(0:idMax)) {
   idICases <- which(workerIDs == workerID)
@@ -136,11 +95,9 @@ for(workerID in c(0:idMax)) {
     dataWorker[,1] <- targetObject[idICases]
     dataWorker[,2] <- object2[idICases]
     dataWorker[,3] <- object3[idICases]
-    dataWorker[,4] <- uttFeat[idICases]
+#    dataWorker[,4] <- uttFeat[idICases]
     dataWorker[,5] <- targetFeat[idICases]
     dataWorker[,6] <- pickedUtterance[idICases]
-    #    logLikDefaultParam[workerIndex] <- SimpleRSAModelUttKLDiv_3params_iterative(dataWorker, 0,0,1) 
-    # print(dataWorker)
     
     ## 1 param RSA Utt model optimizing for kl-value factor
     
