@@ -7,6 +7,7 @@ iterative12 <- 1   #############################################################
 # 2 non-iterative
 
 #parSetting <- 2
+library("dplyr")
 
 source("CommonCode/SRSA_StratUtt.R")
 source("CommonCode/SRSA_UttChoiceOptimization_iterative.R")
@@ -76,25 +77,28 @@ paramsWorkers12 <- matrix(0,length(unique(workerIDs)), 5)
 #postListMat1Opt <- matrix(0,length(x9data$X),9)
 #postListMat2Opt <- matrix(0,length(x9data$X),9)
 posteriorUtterances <- matrix(0, length(x9data$X),9)
-pickedMostAmbiguous <- rep(NA, length(x9data$X))
+pickedMostAmbiguous_model <- rep(NA, length(x9data$X))
+pickedMostAmbiguous_baseline <- rep(NA, length(x9data$X))
 posteriorUtterancesIndependent <- matrix(0, length(x9data$X),9)
-utterancePrior <- rep(0,length(relevantUtterances))
+
+
 logLik <- rep(0,length(x9data$X))
 
 workerID <- -1
 utterance <- rep(0, length(x9data$X))
 preferences <- matrix(0, length(x9data$X), 9)
 for(i in c(1:length(x9data$X))) {
-  utterance[i] <- match(as.character(x9data$utterance[i]),allUtterancesNew1) ## polka-dotted!!!
+  utterance <- match(as.character(x9data$utterance[i]),allUtterancesNew1) ## polka-dotted!!!
   currentObjects <- c(targetObject[i],object2[i],object3[i]) 
-  relevantUtterances <- determineValidUtterances(currentObjects)
-  pickedUtterance <- match(utterance[i], relevantUtterances)  
-#  featChoice <- uttFeat[i]
+  relevantUtterances <- determineValidUtterances(currentObjects) 
+  pickedUtterance <- match(utterance, relevantUtterances)  
+  utterancePrior <- rep(0,length(relevantUtterances))
   targetFeature <- targetFeat[i]
   irrelevantIndices <- which(relevantUtterances>(3*(targetFeature-1)) & relevantUtterances<(3*targetFeature + 1))
-  validUtterances <- relevantUtterances[-irrelevantIndices]
+  validUtterances <- relevantUtterances[-irrelevantIndices] 
   utterancePriorShort <- rep (1/length(validUtterances),length(validUtterances)) 
-  utterancePrior[-irrelevantIndices] <- utterancePriorShort
+  utterancePrior[-irrelevantIndices] <- utterancePriorShort 
+
 #  constellationCode[i,] <- getConstellationCode(objectConstellation, featChoice)[[1]]
   # uc <- 0
   # for(j in c(1:6)) {
@@ -117,7 +121,7 @@ for(i in c(1:length(x9data$X))) {
     # } # uniform focussing on the feature type in question.
     
 #    if ((i-1)%%4 == 0){
-      preferencesPriorAll <- getPreferencesPrior(x9data[i,"targetFeatureNum"])
+    preferencesPriorAll <- getPreferencesPrior(targetFeature)
 #    }  else preferencesPriorAll <- preferences[i-1,]
     ## Calculating model predictions ##
     
@@ -127,21 +131,26 @@ for(i in c(1:length(x9data$X))) {
     preferences[i,] <- output[[2]][pickedUtterance,,1] 
     
     ##### See if the subjects picked the most ambiguous utterance the model predicts for each trial ####
-    mostAmbiguous <- which(posteriorUtterances[i,relevantUtterances] == max(posteriorUtterances[i,relevantUtterances]))
-    pickedMostAmbiguous[i] <- pickedUtterance %in% mostAmbiguous
+    mostAmbiguous_model <- which(posteriorUtterances[i,relevantUtterances] == 
+                                 max(posteriorUtterances[i,]))
+    pickedMostAmbiguous_model[i] <- pickedUtterance %in% mostAmbiguous_model
     
-    x9data$pickedMostAmbiguous <- pickedMostAmbiguous
+    x9data$pickedMostAmbiguous_model <- pickedMostAmbiguous_model
+    
+## Now base model predictions. The model picks the most ambiguous utterance
     
     mapObjToU <- determineObjectToUtterancesMapping(currentObjects)
+    
     ambiguous <- determineUtteranceToObjectProbabilities(relevantUtterances, currentObjects, mapObjToU, 0)
+    ambiguous[irrelevantIndices,] <- NA
    
-   ambigCount <- rep(NA, length(validUtterances))
-   for (row in c(1:length(validUtterances))){
+   ambigCount <- rep(NA, length(relevantUtterances))
+   for (row in c(1:length(relevantUtterances))){
      ambigCount[row] <- length(which(ambiguous[row,] > 0))
    }
-   mostAmbiguous <- validUtterances[which(ambigCount == max(ambigCount))]
-   pickedMostAmbiguous[i] <- pickedUtterance %in% mostAmbiguous
-   x9data$pickedMostAmbiguous <- pickedMostAmbiguous
+   mostAmbiguous_baseline <- which(ambigCount == max(ambigCount)) # error here
+   pickedMostAmbiguous_baseline[i] <- pickedUtterance %in% mostAmbiguous_baseline
+   x9data$pickedMostAmbiguous_baseline <- pickedMostAmbiguous_baseline
    
     # if(iterative12 == 1) {
     #   if(parSetting == 1) {
@@ -206,7 +215,29 @@ for(i in c(1:length(x9data$X))) {
 #   }
 # }
 
-library("dplyr")
-summary(pickedMostAmbiguous)
-ambiguity <- x9data %>% group_by(workerid) %>% tally(pickedMostAmbiguous)
+
+summary(pickedMostAmbiguous_model)
+ambiguity <- x9data %>% group_by(workerid) %>% tally(pickedMostAmbiguous_model)
 sort(ambiguity$n)
+hist(ambiguity$n)
+
+summary(pickedMostAmbiguous_baseline)
+ambiguity <- x9data %>% group_by(workerid) %>% tally(pickedMostAmbiguous_baseline)
+sort(ambiguity$n)
+hist(ambiguity$n)
+
+##### Testing the baseline model predictions. This model picks the most ambiguous utterance #####
+
+# currentObjects <- c(1,2,6)
+# targetFeature <- 1
+# mapObjToU <- determineObjectToUtterancesMapping(currentObjects)
+# relevantUtterances <- determineValidUtterances(currentObjects)
+# irrelevantIndices <- which(relevantUtterances>(3*(targetFeature-1)) & relevantUtterances<(3*targetFeature + 1))
+# validUtterances <- relevantUtterances[-irrelevantIndices]
+# ambiguous <- determineUtteranceToObjectProbabilities(relevantUtterances, currentObjects, mapObjToU, 0)
+# ambiguous[irrelevantIndices,] <- NA
+# #### 28.03: Something strange happening below
+# ambigCount <- rep(NA, length(validUtterances))
+# for (row in c(1:length(relevantUtterances))){
+#   ambigCount[row] <- length(which(ambiguous[row,] > 0))
+# }
