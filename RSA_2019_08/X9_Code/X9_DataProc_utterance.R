@@ -2,7 +2,6 @@ source("CommonCode/SRSA_StratUtt.R")
 source("CommonCode/SRSA_UttChoiceOptimization_iterative.R")
 
 x9data = read.csv(
-#  "X9_Data/ella_total_allDataCleaned.csv",
   "X9_Data/ella_coded_data.csv",
   header = TRUE,
   na.strings = c("", " ", "NA")
@@ -19,25 +18,24 @@ targetFeat <- x9data$targetFeatureNum
 targetObject <- x9data$targetObject
 object2 <- x9data$object2
 object3 <- x9data$object3
+utterance <- x9data$utteranceNum
 
 # Which utterance the subjects picked
 
-utterance <- rep(NA, length(x9data$X))
 pickedUtterance <- rep(NA, length(x9data$X))
-
-for(i in c(1:length(x9data$X))) {
-  utterance[i] <- match(as.character(x9data$utterance[i]),allUtterancesNew1) ## polka-dotted!!!
-  currentObjects <- c(targetObject[i],object2[i],object3[i]) 
-  relevantUtterances <- determineValidUtterances(currentObjects)
-  pickedUtterance[i] <- match(utterance[i], relevantUtterances)  
-#  featChoice <- uttFeat[i]
-}
+ for(i in c(1:length(x9data$X))) {
+#   utterance[i] <- match(as.character(x9data$utterance[i]),allUtterancesNew1) ## polka-dotted!!!
+   currentObjects <- c(targetObject[i],object2[i],object3[i]) 
+   relevantUtterances <- determineValidUtterances(currentObjects)
+   pickedUtterance[i] <- match(utterance[i], relevantUtterances)  
+# #  featChoice <- uttFeat[i]
+ }
 
 ############ Set up the parameters and KL values matrix ##########
 
 workerIDs <- x9data$workerid
 idMax <- max(workerIDs)
-logLikWorkers <- matrix(0,length(unique(workerIDs)), 8)
+logLikWorkers <- matrix(0,length(unique(workerIDs)), 10)
 paramsUttWorkers <- matrix(0,length(unique(workerIDs)), 11)
 
 #######################################################
@@ -100,18 +98,42 @@ for(workerID in c(0:idMax)) {
     dataWorker[,6] <- pickedUtterance[idICases]
     
     ## 1 param RSA Utt model optimizing for kl-value factor
-    
+    optRes1 <- optimize(SimpleRSAModelUttKLDivParamA_iterative, c(0,1e+10), dataWorker) 
+    optRes2 <- optimize(SimpleRSAModelUttKLDivParamA_independent, c(0,1e+10), dataWorker) 
     optRes3 <- optimize(SimpleRSAModelUttKLDivParamK_iterative, c(-10,10), dataWorker) 
     optRes4 <- optimize(SimpleRSAModelUttKLDivParamK_independent, c(-10,10), dataWorker)
+    optRes2n2iter <- optim(c(.2, .2), SimpleRSAModelUttKLDivParamAK_iterative, method="L-BFGS-B", gr=NULL, dataWorker,
+                                             lower = c(0,-10), upper = c(1e+10,10))
+    optRes2n2indep <- optim(c(.2, .2), SimpleRSAModelUttKLDivParamAK_independent, method="L-BFGS-B", gr=NULL, dataWorker,
+                       lower = c(0,-10), upper = c(1e+10,10))
+    
+#### Recording negative log likelihoods ####
+    
     logLikWorkers[workerIndex,3] <- SimpleRSAModelUttKLDiv_3params_iterative(dataWorker, 0,0,1) 
     logLikWorkers[workerIndex,4] <- SimpleRSAModelUttKLDiv_3params_independent(dataWorker, 0,0,1) 
-    logLikWorkers[workerIndex,5] <- optRes3$objective
-    logLikWorkers[workerIndex,6] <- optRes4$objective
-    logLikWorkers[workerIndex,7] <- optRes3$objective < optRes4$objective
-    paramsUttWorkers[workerIndex,4] <- optRes3$minimum
-    paramsUttWorkers[workerIndex,5] <- optRes4$minimum
-    colnames(logLikWorkers) <- c("workerid","uniform","default_param_iter", "default_param_indep" ,
-                                 "iterative", "independent", "iterative_better", "v8")
+    logLikWorkers[workerIndex,5] <- optRes1$objective
+    logLikWorkers[workerIndex,6] <- optRes2$objective
+    logLikWorkers[workerIndex,7] <- optRes3$objective
+    logLikWorkers[workerIndex,8] <- optRes4$objective
+    logLikWorkers[workerIndex,9] <- optRes2n2iter$value
+    logLikWorkers[workerIndex,10] <- optRes2n2indep$value
+#   logLikWorkers[workerIndex,9] <- optRes3$objective < optRes4$objective
+    colnames(logLikWorkers) <- c("workerid","uniform","default_param_iter", "default_param_indep",
+                                 "iter_Soft","indepSoft",
+                                 "iterLambda", "indepLambda", 
+                                 "iterSoftLambda", "indepSoftLambda"
+    )
+#### Recording parameter estimates ####
+    
+    paramsUttWorkers[workerIndex,4] <- optRes1$minimum
+    paramsUttWorkers[workerIndex,5] <- optRes2$minimum
+    paramsUttWorkers[workerIndex,6] <- optRes3$minimum
+    paramsUttWorkers[workerIndex,7] <- optRes4$minimum
+    paramsUttWorkers[workerIndex,8] <- optRes2n2iter$par[1]
+    paramsUttWorkers[workerIndex,9] <- optRes2n2iter$par[2]
+    paramsUttWorkers[workerIndex,10] <- optRes2n2indep$par[1]
+    paramsUttWorkers[workerIndex,11] <- optRes2n2indep$par[2]
+    
     print(c("Done with worker ",workerIndex," with worker ID ", workerID))
     print(c(logLikWorkers[workerIndex,], paramsUttWorkers[workerIndex,]))
     # ####
@@ -121,8 +143,8 @@ for(workerID in c(0:idMax)) {
 
 ########### Additional optimization options #################
 
-#   optRes1 <- optimize(SimpleRSAModelUttKLDivParamA, c(0,1e+10), dataWorker)
-#   optRes2 <- optimize(SimpleRSAModelUttKLDivParamB, c(0,1e+10), dataWorker)   
+#   
+#   optRes2 <- optimize(SimpleRSAModelUttKLDivParamB_iterative, c(0,1e+10), dataWorker)  
 #   logLikWorkers[workerIndex,3] <- optRes1$objective
 #   logLikWorkers[workerIndex,4] <- optRes2$objective
 #   paramsUttWorkers[workerIndex,2] <- optRes1$minimum
@@ -130,8 +152,7 @@ for(workerID in c(0:idMax)) {
 
 #    optRes2n1 <- optim(c(.2, .2), SimpleRSAModelUttKLDivParamBK, method="L-BFGS-B", gr=NULL, dataWorker,
 #                       lower = c(0,-10), upper = c(1e+10,10))
-#    optRes2n2 <- optim(c(.2, .2), SimpleRSAModelUttKLDivParamAK, method="L-BFGS-B", gr=NULL, dataWorker,
-#                       lower = c(0,-10), upper = c(1e+10,10))
+#    
 #    optRes3 <- optim(c(.2, .2, 1), SimpleRSAModelUttKLDivParamABK, method="L-BFGS-B", gr=NULL, dataWorker,
 #                     lower = c(0,0,-10), upper = c(1e+10,1e+10,10))
 
@@ -143,8 +164,6 @@ for(workerID in c(0:idMax)) {
 ## max likelihood parameter choice
 # paramsUttWorkers[workerIndex,5] <- optRes2n1$par[1]
 # paramsUttWorkers[workerIndex,6] <- optRes2n1$par[2]
-# paramsUttWorkers[workerIndex,7] <- optRes2n2$par[1]
-# paramsUttWorkers[workerIndex,8] <- optRes2n2$par[2]
 # paramsUttWorkers[workerIndex,9] <- optRes3$par[1]
 # paramsUttWorkers[workerIndex,10] <- optRes3$par[2]
 # paramsUttWorkers[workerIndex,11] <- optRes3$par[3]

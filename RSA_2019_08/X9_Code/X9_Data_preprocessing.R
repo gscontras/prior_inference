@@ -1,3 +1,5 @@
+source("CommonCode/AllUtterancesAndObjects.R")
+
 x9data = read.csv(
   "X9_Data/ella_total_allDataCleaned.csv",
   header = TRUE,
@@ -54,5 +56,8 @@ for (i in 1:length(x9data$X)){
 x9data$targetObject <- targetObject
 x9data$object2 <- object2
 x9data$object3 <- object3
+
+utterance <- match(as.character(x9data$utterance),allUtterancesNew1)
+x9data$utteranceNum <- utterance
 
 write.csv(x9data, "X9_Data/ella_coded_data.csv")
