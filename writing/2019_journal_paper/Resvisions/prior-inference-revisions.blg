@@ -13,85 +13,44 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: prior-inference.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5062 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5062 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5066 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5066 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5068 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5068 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5072 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5072 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5075 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5075 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5076 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5076 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5079 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5079 of file apacite.bst
-Name 1 in "Elman, J. L., and McRae, K." has a comma at the end for entry Elman:2019
-while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry foppa1995mutual
-while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5079 of file apacite.bst
-Too many commas in name 2 of "Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus" for entry markova1995preface
-while executing---line 5079 of file apacite.bst
-You've used 43 entries,
+You've used 24 entries,
             6951 wiz_defined-function locations,
-            1537 strings with 17574 characters,
-and the built_in function-call counts, 81765 in all, are:
-= -- 10382
-> -- 651
-< -- 3722
-+ -- 3810
-- -- 86
-* -- 5048
-:= -- 14497
-add.period$ -- 190
-call.type$ -- 43
-change.case$ -- 742
+            1430 strings with 14901 characters,
+and the built_in function-call counts, 48069 in all, are:
+= -- 6172
+> -- 389
+< -- 2172
++ -- 2265
+- -- 48
+* -- 2961
+:= -- 8472
+add.period$ -- 112
+call.type$ -- 24
+change.case$ -- 418
 chr.to.int$ -- 0
-cite$ -- 86
-duplicate$ -- 2193
-empty$ -- 3286
-format.name$ -- 1040
-if$ -- 15884
+cite$ -- 48
+duplicate$ -- 1270
+empty$ -- 1881
+format.name$ -- 610
+if$ -- 9323
 int.to.chr$ -- 0
-int.to.str$ -- 129
+int.to.str$ -- 72
 missing$ -- 0
-newline$ -- 1081
-num.names$ -- 358
-pop$ -- 1388
+newline$ -- 607
+num.names$ -- 202
+pop$ -- 847
 preamble$ -- 1
-purify$ -- 174
+purify$ -- 98
 quote$ -- 0
-skip$ -- 5657
+skip$ -- 3314
 stack$ -- 0
-substring$ -- 4252
-swap$ -- 1254
-text.length$ -- 119
+substring$ -- 2550
+swap$ -- 743
+text.length$ -- 81
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 4016
+type$ -- 2432
 warning$ -- 0
-while$ -- 364
+while$ -- 217
 width$ -- 0
-write$ -- 1311
-(There were 20 error messages)
+write$ -- 739

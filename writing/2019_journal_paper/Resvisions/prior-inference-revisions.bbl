@@ -1,86 +1,33 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
-Baldwin%
-\ \BBA {} Kosie%
+Baker%
+, Jara-Ettinger%
+, Saxe%
+\BCBL {}\ \BBA {} Tenenbaum%
 }{%
-Baldwin%
-\ \BBA {} Kosie%
-}{%
-{\protect \APACyear {to appear}}%
-}]{%
-Baldwin:2019tsi}
-\APACinsertmetastar {%
-Baldwin:2019tsi}%
-\begin{APACrefauthors}%
-Baldwin, D\BPBI A.%
-\BCBT {}\ \BBA {} Kosie, J\BPBI E.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{to appear}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {How does the mind render streaming experience as
-  events?} {How does the mind render streaming experience as events?}{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Belardinelli%
-, Lohmann%
-, Farn{\`e}%
-\BCBL {}\ \BBA {} Butz%
-}{%
-Belardinelli%
+Baker%
 \ \protect \BOthers {.}}{%
-{\protect \APACyear {2018}}%
+{\protect \APACyear {2017}}%
 }]{%
-belardinelli2018mental}
+baker2017rational}
 \APACinsertmetastar {%
-belardinelli2018mental}%
+baker2017rational}%
 \begin{APACrefauthors}%
-Belardinelli, A.%
-, Lohmann, J.%
-, Farn{\`e}, A.%
-\BCBL {}\ \BBA {} Butz, M\BPBI V.%
+Baker, C\BPBI L.%
+, Jara-Ettinger, J.%
+, Saxe, R.%
+\BCBL {}\ \BBA {} Tenenbaum, J\BPBI B.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2018}{}{}.
+\APACrefYearMonthDay{2017}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Mental space maps into the future} {Mental space maps
-  into the future}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Rational quantitative attribution of beliefs, desires
+  and percepts in human mentalizing} {Rational quantitative attribution of
+  beliefs, desires and percepts in human mentalizing}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Cognition}{176}{}{65--73}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Belardinelli%
-, Stepper%
-\BCBL {}\ \BBA {} Butz%
-}{%
-Belardinelli%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2016}}%
-}]{%
-belardinelli2016s}
-\APACinsertmetastar {%
-belardinelli2016s}%
-\begin{APACrefauthors}%
-Belardinelli, A.%
-, Stepper, M\BPBI Y.%
-\BCBL {}\ \BBA {} Butz, M\BPBI V.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2016}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {It's in the eyes: Planning precise manual actions before
-  execution} {It's in the eyes: Planning precise manual actions before
-  execution}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of vision}{16}{1}{1--18}.
+\APACjournalVolNumPages{Nature Human Behaviour}{1}{4}{1--10}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -195,166 +142,6 @@ Chomsky, N.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Christiansen%
-\ \BBA {} Chater%
-}{%
-Christiansen%
-\ \BBA {} Chater%
-}{%
-{\protect \APACyear {2016}}%
-}]{%
-Christiansen:2016}
-\APACinsertmetastar {%
-Christiansen:2016}%
-\begin{APACrefauthors}%
-Christiansen, M\BPBI H.%
-\BCBT {}\ \BBA {} Chater, N.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2016}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {The Now-or-Never bottleneck: A fundamental constraint on
-  language} {The now-or-never bottleneck: A fundamental constraint on
-  language}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Behavioral and Brain Sciences}{39}{}{1-18}.
-\newblock
-\begin{APACrefDOI} \doi{10.1017/S0140525X1500031X} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Clark%
-}{%
-Clark%
-}{%
-{\protect \APACyear {2016}}%
-}]{%
-Clark:2016}
-\APACinsertmetastar {%
-Clark:2016}%
-\begin{APACrefauthors}%
-Clark, A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2016}.
-\newblock
-\APACrefbtitle {Surfing Uncertainty: Prediction, action and the embodied mind}
-  {Surfing uncertainty: Prediction, action and the embodied mind}.
-\newblock
-\APACaddressPublisher{Oxford, UK}{Oxford University Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Cushing%
-}{%
-Cushing%
-}{%
-{\protect \APACyear {1994}}%
-}]{%
-cushing1994fatal}
-\APACinsertmetastar {%
-cushing1994fatal}%
-\begin{APACrefauthors}%
-Cushing, S.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{1994}.
-\newblock
-\APACrefbtitle {Fatal words: Communication clashes and aircraft crashes} {Fatal
-  words: Communication clashes and aircraft crashes}.
-\newblock
-\APACaddressPublisher{Chicago}{University of Chicago Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Elman%
-\ \BBA {} McRae%
-}{%
-Elman%
-\ \BBA {} McRae%
-}{%
-{\protect \APACyear {2019}}%
-}]{%
-Elman:2019}
-\APACinsertmetastar {%
-Elman:2019}%
-\begin{APACrefauthors}%
-Elman, J\BPBI L.%
-\BCBT {}\ \BBA {} McRae, K.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2019}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {A model of event knowledge} {A model of event
-  knowledge}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Psychological Review}{126}{}{252–291}.
-\newblock
-\begin{APACrefDOI} \doi{10.1037/rev0000133} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Elsner%
-\ \BBA {} Adam%
-}{%
-Elsner%
-\ \BBA {} Adam%
-}{%
-{\protect \APACyear {2019}}%
-}]{%
-Elsner:2019tsi}
-\APACinsertmetastar {%
-Elsner:2019tsi}%
-\begin{APACrefauthors}%
-Elsner, B.%
-\BCBT {}\ \BBA {} Adam, M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2019}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Infants' prediction of action-events for human and
-  non-human agents} {Infants' prediction of action-events for human and
-  non-human agents}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\newblock
-\APACrefnote{this volume}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Federmeier%
-\ \BBA {} Kutas%
-}{%
-Federmeier%
-\ \BBA {} Kutas%
-}{%
-{\protect \APACyear {2002}}%
-}]{%
-federmeier2002picture}
-\APACinsertmetastar {%
-federmeier2002picture}%
-\begin{APACrefauthors}%
-Federmeier, K\BPBI D.%
-\BCBT {}\ \BBA {} Kutas, M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2002}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Picture the difference: Electrophysiological
-  investigations of picture processing in the two cerebral hemispheres}
-  {Picture the difference: Electrophysiological investigations of picture
-  processing in the two cerebral hemispheres}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Neuropsychologia}{40}{7}{730--747}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Ferreira%
 }{%
 Ferreira%
@@ -377,32 +164,6 @@ Ferreira, V\BPBI S.%
 \newblock
 \APACjournalVolNumPages{Psychology of Learning and Motivation: Advances in
   Research and Theory}{49}{}{209-246}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Foppa%
-}{%
-Foppa%
-}{%
-{\protect \APACyear {1995}}%
-}]{%
-foppa1995mutual}
-\APACinsertmetastar {%
-foppa1995mutual}%
-\begin{APACrefauthors}%
-Foppa, K.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1995}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {On mutual understanding and agreement in dialogues} {On
-  mutual understanding and agreement in dialogues}.{\BBCQ}
-\newblock
-\BIn{} I.~Markova\ \BBA {} F\BPBI K.~Graumann Carl~F.\ (\BEDS), \APACrefbtitle
-  {Mutualities in dialogue.} {Mutualities in dialogue.}
-\newblock
-\APACaddressPublisher{Cambridge, UK}{Cambridge University Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -516,29 +277,6 @@ Friston, K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-G{\"a}rdenfors%
-}{%
-G{\"a}rdenfors%
-}{%
-{\protect \APACyear {2014}}%
-}]{%
-Gaerdenfors:2014}
-\APACinsertmetastar {%
-Gaerdenfors:2014}%
-\begin{APACrefauthors}%
-G{\"a}rdenfors, P.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2014}.
-\newblock
-\APACrefbtitle {The Geometry of Meaning: Semantics Based on Conceptual Spaces}
-  {The geometry of meaning: Semantics based on conceptual spaces}.
-\newblock
-\APACaddressPublisher{Cambridge, MA}{MIT Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Goodman%
 \ \BBA {} Frank%
 }{%
@@ -589,59 +327,6 @@ Grice, H\BPBI P.%
   (\BPG~26-40).
 \newblock
 \APACaddressPublisher{New York}{Academic Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Hayhoe%
-, Shrivastava%
-, Mruczek%
-\BCBL {}\ \BBA {} Pelz%
-}{%
-Hayhoe%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2003}}%
-}]{%
-Hayhoe:2003}
-\APACinsertmetastar {%
-Hayhoe:2003}%
-\begin{APACrefauthors}%
-Hayhoe, M\BPBI M.%
-, Shrivastava, A.%
-, Mruczek, R.%
-\BCBL {}\ \BBA {} Pelz, J\BPBI B.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2003}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Visual memory and motor planning in a natural task}
-  {Visual memory and motor planning in a natural task}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Vision}{3}{1}{49--63}.
-\newblock
-\begin{APACrefDOI} \doi{10:1167/3.1.6} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Hohwy%
-}{%
-Hohwy%
-}{%
-{\protect \APACyear {2013}}%
-}]{%
-Hohwy:2013}
-\APACinsertmetastar {%
-Hohwy:2013}%
-\begin{APACrefauthors}%
-Hohwy, J.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2013}.
-\newblock
-\APACrefbtitle {The Predictive Mind} {The predictive mind}.
-\newblock
-\APACaddressPublisher{Oxford, UK}{Oxford University Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -727,34 +412,6 @@ Kelley, H\BPBI H.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Knott%
-\ \BBA {} Takac%
-}{%
-Knott%
-\ \BBA {} Takac%
-}{%
-{\protect \APACyear {to appear}}%
-}]{%
-Knott:2019tsi}
-\APACinsertmetastar {%
-Knott:2019tsi}%
-\begin{APACrefauthors}%
-Knott, A.%
-\BCBT {}\ \BBA {} Takac, M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{to appear}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Roles for event representations in sensorimotor
-  experience, memory formation and language processing} {Roles for event
-  representations in sensorimotor experience, memory formation and language
-  processing}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Levinson%
 }{%
 Levinson%
@@ -776,29 +433,6 @@ Levinson, S\BPBI C.%
   implicature}.
 \newblock
 \APACaddressPublisher{Cambridge, MA}{{MIT} Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Levy%
-}{%
-Levy%
-}{%
-{\protect \APACyear {2008}}%
-}]{%
-levy2008expectation}
-\APACinsertmetastar {%
-levy2008expectation}%
-\begin{APACrefauthors}%
-Levy, R.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2008}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Expectation-based syntactic comprehension}
-  {Expectation-based syntactic comprehension}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Cognition}{106}{3}{1126--1177}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -825,64 +459,6 @@ Lewandowsky, S.%
   {Computational modeling in cognition: {P}rinciples and practice}.
 \newblock
 \APACaddressPublisher{Thousand Oaks}{Sage Publications}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Lohmann%
-, Belardinelli%
-\BCBL {}\ \BBA {} Butz%
-}{%
-Lohmann%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2019}}%
-}]{%
-lohmann2019hands}
-\APACinsertmetastar {%
-lohmann2019hands}%
-\begin{APACrefauthors}%
-Lohmann, J.%
-, Belardinelli, A.%
-\BCBL {}\ \BBA {} Butz, M\BPBI V.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2019}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Hands Ahead in Mind and Motion: Active Inference in
-  Peripersonal Hand Space} {Hands ahead in mind and motion: Active inference in
-  peripersonal hand space}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Vision}{3}{2}{15}.
-\newblock
-\begin{APACrefDOI} \doi{doi.org/10.3390/vision3020015} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Markova%
-\ \BBA {} Graumann%
-}{%
-Markova%
-\ \BBA {} Graumann%
-}{%
-{\protect \APACyear {1995}}%
-}]{%
-markova1995preface}
-\APACinsertmetastar {%
-markova1995preface}%
-\begin{APACrefauthors}%
-Markova, I.%
-\BCBT {}\ \BBA {} Graumann, F\BPBI K., Carl~F.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{1995}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Preface} {Preface}.{\BBCQ}
-\newblock
-\BIn{} I.~Markova\ \BBA {} F\BPBI K.~Graumann Carl~F.\ (\BEDS), \APACrefbtitle
-  {Mutualities in dialogue.} {Mutualities in dialogue.}
-\newblock
-\APACaddressPublisher{Cambridge, UK}{Cambridge University Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -932,30 +508,6 @@ Piantadosi, S\BPBI T.%
   {The communicative function of ambiguity in language}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Cognition}{122}{}{280-291}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Pinker%
-}{%
-Pinker%
-}{%
-{\protect \APACyear {2015}}%
-}]{%
-pinker2015sense}
-\APACinsertmetastar {%
-pinker2015sense}%
-\begin{APACrefauthors}%
-Pinker, S.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYear{2015}.
-\newblock
-\APACrefbtitle {The sense of style: The thinking person's guide to writing in
-  the 21st century} {The sense of style: The thinking person's guide to writing
-  in the 21st century}.
-\newblock
-\APACaddressPublisher{}{Penguin Books}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1018,33 +570,6 @@ Shafto, P.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Shin%
-\ \BBA {} DuBrow%
-}{%
-Shin%
-\ \BBA {} DuBrow%
-}{%
-{\protect \APACyear {to appear}}%
-}]{%
-DuBrow:2019tsi}
-\APACinsertmetastar {%
-DuBrow:2019tsi}%
-\begin{APACrefauthors}%
-Shin, Y\BPBI S.%
-\BCBT {}\ \BBA {} DuBrow, S.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{to appear}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Structuring memory through inference-based event
-  segmentation} {Structuring memory through inference-based event
-  segmentation}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Sikos%
 , Venhuizen%
 , Drenhaus%
@@ -1074,63 +599,6 @@ Sikos, L.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Stawarczyk%
-, Bezdek%
-\BCBL {}\ \BBA {} Zacks%
-}{%
-Stawarczyk%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2019}}%
-}]{%
-Zacks:2019tsi}
-\APACinsertmetastar {%
-Zacks:2019tsi}%
-\begin{APACrefauthors}%
-Stawarczyk, D.%
-, Bezdek, M\BPBI A.%
-\BCBL {}\ \BBA {} Zacks, J\BPBI M.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2019}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Constructing event representations: The role of the
-  midline default network core} {Constructing event representations: The role
-  of the midline default network core}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\newblock
-\begin{APACrefDOI} \doi{doi.org/10.1111/tops.12450} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-{\"U}nal%
-, Ji%
-\BCBL {}\ \BBA {} Papafragou%
-}{%
-{\"U}nal%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {to appear}}%
-}]{%
-Papafragou:2019tsi}
-\APACinsertmetastar {%
-Papafragou:2019tsi}%
-\begin{APACrefauthors}%
-{\"U}nal, E.%
-, Ji, Y.%
-\BCBL {}\ \BBA {} Papafragou, A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{to appear}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {From event representation to linguistic meaning} {From
-  event representation to linguistic meaning}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Wasow%
 }{%
 Wasow%
@@ -1154,6 +622,36 @@ Wasow, T.%
   Communication} {Ambiguity: Language and communication}\ (\BPG~29-47).
 \newblock
 \APACaddressPublisher{}{de Gruyter}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Woensdregt%
+, Kirby%
+, Cummins%
+\BCBL {}\ \BBA {} Smith%
+}{%
+Woensdregt%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+woensdregt2016modelling}
+\APACinsertmetastar {%
+woensdregt2016modelling}%
+\begin{APACrefauthors}%
+Woensdregt, M.%
+, Kirby, S.%
+, Cummins, C.%
+\BCBL {}\ \BBA {} Smith, K.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Modelling the co-development of word learning and
+  perspective-taking.} {Modelling the co-development of word learning and
+  perspective-taking.}{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {CogSci.} {Cogsci.}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
