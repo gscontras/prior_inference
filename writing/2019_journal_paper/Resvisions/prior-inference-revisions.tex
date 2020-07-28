@@ -37,7 +37,7 @@
 		\href{mailto:asya.achimova@uni-tuebingen.de}{asya.achimova@uni-tuebingen.de}
 	\and
 		Gregory Scontras\\
-		\href{mailto:gscontra@uci.edu}{gscontra@uci.edu}
+		\href{mailto:g.scontras@uci.edu}{g.scontras@uci.edu}
 	\and 
 		Christian Stegemann-Philipps\\
 		\href{mailto:christian.stegemann@uni-tuebingen.de}{christian.stegemann@uni-tuebingen.de}
@@ -142,8 +142,8 @@ Section \ref{discussion} concludes that participants were indeed able to use obs
 
 
 To see the potential epistemic benefit of ambiguous language, take the scenario in Figure \ref{FG-ref-game}.
-Suppose a speaker produces the single-word utterance ``blue'' -- meaning: choose a blue object -- creating referential ambiguity for the listener, that is, offering a choice between a blue square and a blue circle. 
-Suppose further that, upon hearing ``blue'', the listener selects the blue circle.
+Suppose a speaker produces the single-word utterance to signal one of the objects to a listener. Upon hearing ``blue,'' the listener faces referential ambiguity: the speaker could mean the blue square or the blue circle. 
+Suppose further that, upon hearing ``blue'' in this scenario, the listener selects the blue circle.
 In observing this choice, the speaker learns something about the private thoughts of the listener: what made her select the blue circle instead of the blue square? Perhaps the circle is more salient to the listener, or the listener has a preference for circles, or the listener may believe that the speaker has a preference for circles; there may even be mutual agreement that circles are to be preferred when possible. Importantly, by observing how the listener resolves the ambiguity in reference, the speaker can learn something about the private thoughts of the listener.
 
 
@@ -161,14 +161,14 @@ In observing this choice, the speaker learns something about the private thought
 
 
 However, accessing this added information requires the speaker to reason pragmatically about the pragmatic reasoning of the listener---a higher-order pragmatic reasoning.
-In order to select a referent, the listener must interpret the utterance. We follow \citeA{frankgoodman2012} in treating this interpretation process as active pragmatic, probabilistic reasoning: the listener interprets an utterance by reasoning about the process that generated it, namely the speaker, who selects an utterance by reasoning about how a listener would interpret it. \citeauthor{frankgoodman2012} model this recursive social reasoning between speakers and listeners introducing a Rational Speech Act (RSA) modeling framework.
+In order to select a referent, the listener must interpret the utterance. We follow \citeA{frankgoodman2012} in treating this interpretation process as active pragmatic, probabilistic reasoning: the listener interprets an utterance by reasoning about the process that generated it, namely the speaker, who selects an utterance by reasoning about how a listener would interpret it. \citeauthor{frankgoodman2012} model this recursive social reasoning between speakers and listeners, introducing the Rational Speech Act (RSA) modeling framework \cite{frankgoodman2012,frankejaeger2016,goodmanfrank2016}.
 
 \subsection{Original RSA Formalization} \label{rsa}
 
-RSA (cf. \citeNP{frankgoodman2012,frankejaeger2016,goodmanfrank2016}) formalizes a state space, or scenario, $S$ in the form of a particular set of objects (cf.~the example in Figure~\ref{FG-ref-game}). 
-Moreover, RSA unfolds computations over the corresponding utterance space $U$, which consists of the set of possible utterances, which in turn contains all object features that are present in a particular scenario $S$.
+\citeauthor{frankgoodman2012}'s RSA model of the reference game in Figure \ref{FG-ref-game} formalizes a state space, or scenario, $S$, as a particular set of objects (cf.~the example in Figure~\ref{FG-ref-game}). 
+The model unfolds computations over the corresponding utterance space $U$, which consists of the set of possible utterances. %, which in turn contains all object features that are present in a particular scenario $S$.
 At the base of the reasoning process, there is a hypothetical, na\"ive literal listener $L_0$, who hears an utterance $u\in U$ and attempts to infer the object $s \in S$ that $u$ is meant to reference. 
-$L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}$(s)$, which returns $true$ (i.e., 1) for those objects that contain the uttered feature and $false$ (i.e., 0), otherwise.
+$L_0$ performs this inference by conditioning on the literal semantics of $u$, \sem{$u$}$(s)$, which returns $true$ (i.e., 1) for those objects that possess the uttered feature and $false$ (i.e., 0), otherwise.
 As a result, object choice probabilities for the literal listener can be computed by: 
 \begin{equation}
 P_{L_{0}}(s\mid u) \propto \sem{$u$}(s),
@@ -176,12 +176,12 @@ P_{L_{0}}(s\mid u) \propto \sem{$u$}(s),
 essentially returning a uniform distribution over those objects in $S$ that contain the uttered feature $u$.\footnote{Note that the context $S$ is typically not made explicit, but rather treated implicitly in the specification of the model.}
 
 
-One layer up, the speaker $S_1$ observes the state $S$ and is assumed to have the intention to refer to a particular object $s \in S$.
-$S_1$ chooses an utterance $u$ on the basis of its expected utility for signaling $s$ in the scenario $S$, which is determined by the log-likelihood of this particular object choice $U_{S_1}(u;s)$:\footnote{The original model in \citeA{frankgoodman2012} also includes a term for the utterance cost, $C(u)$. We ignore the term here since we assume uniform cost over all utterances.}
+One layer up in the reasoning chain, the speaker $S_1$ observes the scenario $S$ and is assumed to have the intention to refer to a particular object $s \in S$.
+$S_1$ chooses an utterance $u$ on the basis of its expected utility for signaling $s$ in the scenario $S$ to $L_0$, $U_{S_1}(u;s)$:\footnote{The original model in \citeA{frankgoodman2012} also includes a term for the utterance cost, $C(u)$. We ignore the term here since we assume uniform cost over all utterances.}
+%which is determined by the log-likelihood of this particular object choice $U_{S_1}(u;s)$:
 \begin{equation}
 U_{S_{1}}(u;s) = \textrm{log}(P_{L_{0}}(s \mid u)).
 \end{equation}
-
 Depending on a ``greediness'' factor $\alpha$, the speaker chooses a particular utterance $u$ with a probability that is exponentially proportional to the utility estimate: 
 \begin{equation}
 P_{S_{1}} (u \mid s) \propto   \textrm{exp}(\alpha \cdot U_{S_{1}} (u;s)).
@@ -190,30 +190,30 @@ P_{S_{1}} (u \mid s) \propto   \textrm{exp}(\alpha \cdot U_{S_{1}} (u;s)).
 
 At the top layer of the vanilla RSA model, the \emph{pragmatic} listener $L_1$ infers posteriors over $s$ on the basis of some observed utterance $u$.
 However, unlike $L_0$, $L_1$ updates beliefs about the world by reasoning about the process that \emph{generated} $u$, namely the utterance choice of speaker $S_1$.
-In other words, $L_1$ reasons about which object $s$ would have been most likely led $S_1$ to utter $u$ given the scenario $S$:
+In other words, $L_1$ reasons about which object $s$ would have been most likely to lead $S_1$ to utter $u$ given the scenario $S$:
 \begin{equation}
 P_{L_{1}}(s \mid u) \propto P_{S_{1}}(u \mid s) \cdot P(s).
 \end{equation}
 
 
-\citeA{frankgoodman2012} tested the predictions of RSA against behavioral data from reference games, as in Figure~\ref{FG-ref-game}.
+\citeA{frankgoodman2012} tested the predictions of their RSA model against behavioral data from reference games as in Figure~\ref{FG-ref-game}.
 To model production behavior (that is, which utterance should be chosen to communicate a given object), the authors used the probability distributions from $S_1$.
 To model interpretation behavior (i.e., which object the speaker is trying to communicate on the basis of their utterance), the authors generated predictions from $L_1$.
-\citeauthor{frankgoodman2012} found strong correllations between model predictions and behavioral data in both cases, confirming the validity of their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015} for a fuller exploration of the modeling choices).
+\citeauthor{frankgoodman2012} found strong correllations between model predictions and behavioral data in both cases, confirming the validity of their model of pragmatic reasoning in reference games (see also \citeNP{qingfranke2015}, for a fuller exploration of the modeling choices).
 
 
-\subsection{Inferring hidden states in RSA models} \label{inferring}
+\subsection{Bayesian Theory of Mind} \label{inferring}
 
-In order to interact with the environment in a highly adaptive versatile manner, we need to anticipate how objects and agents behave in that environment \cite{Butz:2016}. Learning about goals, beliefs and preferences of other agents thus allows building predictive generative models of other agents' behavior. This process depends on the ability of humans to infer hidden states by observing behavioral choices. \citeA{shafto2012learning} developed a Bayesian model of learning that formalizes the process of inferring others' knowledge about the world based on their actions and goals. They argue that efficient learning is possible if we assume that agents' actions are driven either by physical (non-social) or communicative goals, but are crucially not random. The authors show that an observer can draw stronger inferences concerning an underlying hypothesis when the acting agent has a communicative goal. The developed model predicts that learners use knowledge of agents' goals to evaluate how knowledgeable they are, and, as a consequence, how much a learner can trust their actions to be informative about a hypothesis.
+In order to interact with the environment in a highly adaptive, versatile manner, we need to anticipate how objects and agents behave in that environment \cite{Butz:2016}. Learning about the goals, beliefs, and preferences (i.e., the priors) of other agents thus allows building predictive generative models of other agents' behavior. This process depends on the ability of humans to infer hidden states by observing behavioral choices, thereby engaging in Theory-of-Mind reasoning. \citeA{shafto2012learning} developed a Bayesian model of learning that formalizes the process of inferring others' knowledge about the world based on their actions and goals. They argue that efficient learning is possible if we assume that agents' actions are driven either by physical (non-social) or communicative goals, but are crucially not random. The authors show that an observer can draw stronger inferences concerning an underlying hypothesis when the agent has a communicative goal. Their model predicts that learners use knowledge of agents' goals to evaluate how knowledgeable the agents are, and, as a consequence, how much a learner can trust the agents' actions to be informative about a hypothesis.
 
 The process of mentalizing has been modeled within the Bayesian framework in a number of papers that look at the interpretation of rational behavior of agents. \citeA{baker2017rational} develop  a computational model of inference that relies on the observation of movement paths of agents to infer their beliefs, desires, and percepts. In their experiments, subjects observed an agent moving through a complex landscape looking for her favorite food-truck. According to the set-up, only two food-trucks (Mexican, Lebanese, or Korean) are allowed to be on campus on any given day. Subjects observing the movement of an agent between the present food-trucks interpret the agent's behavior to infer which food truck is her favorite, and whether she believes another food-truck is hidden in a location that is out of line of sight of the agent currently. Through comparisons with other models, the authors demonstrate that the inference crucially relies on joint reasoning about beliefs, desires, and percepts, since simpler models that rely only on a subset of these components are less accurate at predicting the human judgments.
 
-In a lexicon-learning paradigm, \citeA{woensdregt2016modelling} model how the Bayesian inference about the beliefs of speakers can co-develop with the process of determining the references for the lexical items. The authors treat word learning as a process of inferring the intended meaning from hearing that word and observing the context in which it was used. In a series of simulations, the models has to learn a lexicon hypothesis and a perspective hypothesis jointly. Perspective in that model is defined as salience of an object for the speaker, with salience inversely related to the distance between the speaker and the intended object. \citeA{woensdregt2016modelling} further discuss what implications the ability to mentalizing carries for reducing referential uncertainty and successful vocabulary learning.
+In a lexicon-learning paradigm, \citeA{woensdregt2016modelling} model how Bayesian inference about the beliefs of speakers can co-develop with the process of determining the likely referents for the lexical items. The authors treat word learning as a process of inferring the intended meaning from hearing a word and observing the context in which that word was used. In a series of simulations, the model learns a lexicon and a perspective jointly. Perspective in that model is defined as salience of an object for the speaker, with salience inversely related to the distance between the speaker and the intended object. \citeauthor{woensdregt2016modelling} further discuss what implications the ability to mentalize carries for reducing referential uncertainty and successful vocabulary learning.
 
 % TODO add literature suggested by reviewers
 
 %section{Pragmatic social inference RSA model}
-\section{Social RSA model} \label{socialRSA}
+\section{Our model of social inference} \label{socialRSA}
 
 Our model builds on the vanilla version of RSA, modifying the listener's state prior $P(s)$ and enhancing the reasoning process towards a social component, yielding a \emph{pragmatic social inference RSA} model (PSIRSA). %In that sense, the model belongs to the family of models known as uncertain RSA \cite{goodmanfrank2016}. 
 By changing $P(s)$ to a non-uniform distribution, we essentially model prior beliefs of which object the speaker is more likely to refer to, or---when viewed from a more self-centered perspective---which prior object feature preferences $f$ the listener may have. 
