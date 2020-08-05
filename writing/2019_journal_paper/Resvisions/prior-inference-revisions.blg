@@ -13,44 +13,68 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: prior-inference.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 24 entries,
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry degen2015wonky
+while executing---line 5079 of file apacite.bst
+Warning--No journal in yoon2018polite
+You've used 30 entries,
             6951 wiz_defined-function locations,
-            1430 strings with 14901 characters,
-and the built_in function-call counts, 48069 in all, are:
-= -- 6172
-> -- 389
-< -- 2172
-+ -- 2265
-- -- 48
-* -- 2961
-:= -- 8472
-add.period$ -- 112
-call.type$ -- 24
-change.case$ -- 418
+            1462 strings with 16299 characters,
+and the built_in function-call counts, 62950 in all, are:
+= -- 8067
+> -- 529
+< -- 2878
++ -- 3141
+- -- 60
+* -- 3886
+:= -- 11029
+add.period$ -- 138
+call.type$ -- 30
+change.case$ -- 524
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 1270
-empty$ -- 1881
-format.name$ -- 610
-if$ -- 9323
+cite$ -- 61
+duplicate$ -- 1762
+empty$ -- 2393
+format.name$ -- 875
+if$ -- 12107
 int.to.chr$ -- 0
-int.to.str$ -- 72
+int.to.str$ -- 90
 missing$ -- 0
-newline$ -- 607
-num.names$ -- 202
-pop$ -- 847
+newline$ -- 773
+num.names$ -- 252
+pop$ -- 1148
 preamble$ -- 1
-purify$ -- 98
+purify$ -- 124
 quote$ -- 0
-skip$ -- 3314
+skip$ -- 4182
 stack$ -- 0
-substring$ -- 2550
-swap$ -- 743
-text.length$ -- 81
+substring$ -- 3516
+swap$ -- 970
+text.length$ -- 95
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2432
-warning$ -- 0
-while$ -- 217
+type$ -- 3040
+warning$ -- 1
+while$ -- 311
 width$ -- 0
-write$ -- 739
+write$ -- 966
+(There were 11 error messages)
