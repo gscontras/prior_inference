@@ -146,6 +146,34 @@ Butz, M\BPBI V.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Carmon%
+}{%
+Carmon%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+carmon2013}
+\APACinsertmetastar {%
+carmon2013}%
+\begin{APACrefauthors}%
+Carmon, A\BPBI F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Is It Necessary to be Clear? An Examination of Strategic
+  Ambiguity in Family Business Mission Statements} {Is it necessary to be
+  clear? an examination of strategic ambiguity in family business mission
+  statements}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Qualitative Research Reports in
+  Communication}{14}{1}{87--96}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/17459435.2013.835346} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Chomsky%
 }{%
 Chomsky%
@@ -169,6 +197,29 @@ Chomsky, N.%
   Language} {On nature and language}\ (\BPG~92-161).
 \newblock
 \APACaddressPublisher{Cambridge}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Clark%
+}{%
+Clark%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+Clark:2016}
+\APACinsertmetastar {%
+Clark:2016}%
+\begin{APACrefauthors}%
+Clark, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2016}.
+\newblock
+\APACrefbtitle {Surfing Uncertainty: Prediction, action and the embodied mind}
+  {Surfing uncertainty: Prediction, action and the embodied mind}.
+\newblock
+\APACaddressPublisher{Oxford, UK}{Oxford University Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -196,10 +247,9 @@ Degen, J.%
   utterances are odd.} {Wonky worlds: Listeners revise world knowledge when
   utterances are odd.}{\BBCQ}
 \newblock
-\BIn{} D\BPBI R\BPBI W\BPBI A\BPBI S\BPBI Y\BPBI J\BPBI M\BPBI T\BPBI J\BPBI
-  C\BPBI D\BPBI \BPBI M\BPBI P\BPBI P.~Noelle D.~C.\ (\BED), \APACrefbtitle
-  {Proceedings of 37th Annual Meeting of the Cognitive Scince Society.}
-  {Proceedings of 37th annual meeting of the cognitive scince society.}
+\BIn{} D.~Noelle\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of 37th
+  {Annual} {Meeting} of the {Cognitive} {Scince} {Society}.} {Proceedings of
+  37th {Annual} {Meeting} of the {Cognitive} {Scince} {Society}.}
 \newblock
 \APACaddressPublisher{Austin, TX}{}.
 \PrintBackRefs{\CurrentBib}
@@ -338,6 +388,30 @@ Franke, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Frege%
+}{%
+Frege%
+}{%
+{\protect \APACyear {1892}}%
+}]{%
+frege1892sinn}
+\APACinsertmetastar {%
+frege1892sinn}%
+\begin{APACrefauthors}%
+Frege, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1892}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {{\"U}ber sinn und bedeutung} {{\"U}ber sinn und
+  bedeutung}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Zeitschrift f{\"u}r Philosophie und philosophische
+  Kritik}{100}{}{25--50}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Friston%
 \ \protect \BOthers {.}}{%
 Friston%
@@ -421,6 +495,42 @@ Grice, H\BPBI P.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Hawkins%
+, Stuhlm{\"u}ller%
+, Degen%
+\BCBL {}\ \BBA {} Goodman%
+}{%
+Hawkins%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+hawkins2015you}
+\APACinsertmetastar {%
+hawkins2015you}%
+\begin{APACrefauthors}%
+Hawkins, R\BPBI X.%
+, Stuhlm{\"u}ller, A.%
+, Degen, J.%
+\BCBL {}\ \BBA {} Goodman, N\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Why do you ask? Good questions provoke informative
+  answers.} {Why do you ask? good questions provoke informative
+  answers.}{\BBCQ}
+\newblock
+\BIn{} D\BPBI R\BPBI W\BPBI A\BPBI S\BPBI Y\BPBI J\BPBI M\BPBI T\BPBI J\BPBI
+  C\BPBI D\BPBI \BPBI M\BPBI P\BPBI P.~Noelle D.~C.\ (\BED), \APACrefbtitle
+  {Proceedings of 37th Annual Meeting of the Cognitive Scince Society}
+  {Proceedings of 37th annual meeting of the cognitive scince society}\ (\BPGS\
+  878--883).
+\newblock
+\APACaddressPublisher{Austin, TX}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Jara-Ettinger%
 , Gweon%
 , Schulz%
@@ -478,6 +588,36 @@ Jones, E\BPBI E.%
   experimental social psychology}\ (\BVOL~2, \BPGS\ 219--266).
 \newblock
 \APACaddressPublisher{}{Elsevier}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kao%
+, Bergen%
+\BCBL {}\ \BBA {} Goodman%
+}{%
+Kao%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+kao2014formalizing}
+\APACinsertmetastar {%
+kao2014formalizing}%
+\begin{APACrefauthors}%
+Kao, J.%
+, Bergen, L.%
+\BCBL {}\ \BBA {} Goodman, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Formalizing the pragmatics of metaphor understanding}
+  {Formalizing the pragmatics of metaphor understanding}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 36th {Annual} {Meeting} of the
+  {Cognitive} {Science} {Society} meeting of the Cognitive Science Society.}
+  {Proceedings of the 36th {Annual} {Meeting} of the {Cognitive} {Science}
+  {Society} meeting of the cognitive science society.}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -613,6 +753,34 @@ Lucas, C\BPBI G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Mohr%
+}{%
+Mohr%
+}{%
+{\protect \APACyear {1983}}%
+}]{%
+mohr1983implications}
+\APACinsertmetastar {%
+mohr1983implications}%
+\begin{APACrefauthors}%
+Mohr, L\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1983}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The implications of effectiveness theory for managerial
+  practice in the public sector} {The implications of effectiveness theory for
+  managerial practice in the public sector}.{\BBCQ}
+\newblock
+\BIn{} K\BPBI S.~Cameron\ \BBA {} D\BPBI A.~Whetten\ (\BEDS), \APACrefbtitle
+  {Organizational effectiveness} {Organizational effectiveness}\ (\BPGS\
+  225--239).
+\newblock
+\APACaddressPublisher{}{Elsevier}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Ossa-Richardson%
 }{%
 Ossa-Richardson%
@@ -632,6 +800,32 @@ Ossa-Richardson, A.%
 \APACrefbtitle {A history of ambiguity} {A history of ambiguity}.
 \newblock
 \APACaddressPublisher{}{Princeton University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pascale%
+\ \BBA {} Athos%
+}{%
+Pascale%
+\ \BBA {} Athos%
+}{%
+{\protect \APACyear {1981}}%
+}]{%
+pascale1981art}
+\APACinsertmetastar {%
+pascale1981art}%
+\begin{APACrefauthors}%
+Pascale, R\BPBI T.%
+\BCBT {}\ \BBA {} Athos, A\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1981}.
+\newblock
+\APACrefbtitle {The art of {Japanese} management} {The art of {Japanese}
+  management}.
+\newblock
+\APACaddressPublisher{New York}{Simon \& Schuster}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -690,6 +884,35 @@ Qing, C.%
   semantics and pragmatics}\ (\BPG~201-220).
 \newblock
 \APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sennet%
+}{%
+Sennet%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+sennet2016ambiguity}
+\APACinsertmetastar {%
+sennet2016ambiguity}%
+\begin{APACrefauthors}%
+Sennet, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Ambiguity} {Ambiguity}.{\BBCQ}
+\newblock
+\BIn{} E\BPBI N.~Zalta\ (\BED), \APACrefbtitle {The Stanford Encyclopedia of
+  Philosophy} {The stanford encyclopedia of philosophy}\ (\PrintOrdinal{Spring
+  2016}\ \BEd).
+\newblock
+\APACaddressPublisher{}{Metaphysics Research Lab, Stanford University}.
+\newblock
+\APAChowpublished
+  {\url{https://plato.stanford.edu/archives/spr2016/entries/ambiguity/}}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
