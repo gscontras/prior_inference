@@ -60,10 +60,10 @@
 We investigated whether ambiguity resolution may yield socially-relevant benefits,
 revealing parts of the privileged ground of the interpreter. 
 In particular, we asked if speakers can (i) use response observations to infer unknown preferences of a listener, and (ii) strategically choose ambiguous utterances for learning about those preferences. 
-We ran experiments in a reference game framework and modeled the data with a pragmatic social inference Rational Speech Act model.
+We ran experiments in a reference game framework and modeled the data with a Rational Speech Act model.
 Participants were able to infer listeners' preferences when analyzing their choice of objects given referential ambiguity.
-Moreover, a significant group of speakers were able to strategically choose ambiguous over unambiguous utterances in an epistemic, event-predictive, goal-directed manner, although a different group significantly preferred unambiguous utterances. 
-We conclude that ambiguity resolution indeed reveals aspects of the knowledge, preferences, and beliefs of conversation partners and some of us are able to strategically use ambiguous utterances to gain knowledge about these aspects.
+Moreover, a subset of speakers were able to strategically choose ambiguous over unambiguous utterances in an epistemic, event-predictive, goal-directed manner, although a different group significantly preferred unambiguous utterances. 
+We conclude that ambiguity resolution indeed reveals aspects of the knowledge, preferences, and beliefs of conversation partners, and that some of us are able to strategically use ambiguous utterances to gain knowledge about these aspects.
                                                                  
 
 \textbf{Keywords:} 
@@ -96,9 +96,9 @@ Ambiguity is ubiquitous during conversations: speakers rely on aspects of contex
 
 The attitude toward ambiguity has at times been quite different in other disciplines, in part because the term itself can refer to multiple phenomena. For linguistic research, a word is ambiguous if it can have two separate meanings even in the absence of context, simply as a linguistic sign. In that sense, the word ``bat" is ambiguous between a winged mammal and a sporting implement. Ambiguity in the language system has been on the radars of philosophers starting with Aristotle \cite{sennet2016ambiguity}. 
 
-In organizational communication---communication that aids production---ambiguity aligns closely with underspecification: an utterance is ambiguous when it does not provide every detail about the intended meaning, leaving room for the listener to interpret it. This freedom is important in communication between managers and their employees when managers set future goals that should stimulate rather than limit the creativity \cite{mohr1983implications}. Ambiguity allows expression of ideas that are true of the whole group of people, one one such examples are company slogans or vision statements \cite{carmon2013}. There the language needs to be vague enough to allow every member of the team to relate those general goals to oneself. Finally, ambiguous descriptions allow speakers to avoid conflict \cite{pascale1981art}: interlocutors find utterances that allow a range of interpretations and do not enforce a particular viewpoint. 
+In organizational communication---communication that aids production---ambiguity aligns closely with underspecification: an utterance is ambiguous when it does not provide every detail about the intended meaning, leaving room for the listener to interpret it. This freedom is important in communication between managers and their employees when managers set future goals that should stimulate rather than limit creativity \cite{mohr1983implications}. Ambiguity allows for the expression of ideas that are broadly true of a large group, as in company slogans or vision statements \cite{carmon2013}. There, the language needs to be vague enough to allow every member of the team to relate those general goals to him- or herself. Finally, ambiguous descriptions allow speakers to avoid conflict \cite{pascale1981art}: interlocutors find utterances that allow a range of interpretations and do not enforce a particular viewpoint. 
 
-In the case of referential ambiguity, an ambiguous utterance may apply to several possible referents in a scene. Here we use the term `referential' in the sense of \citeA{frege1892sinn} that distinguishes the reference of a word--an object/property in the world--and its meaning. For example, a pronoun can be referentially ambiguous if there are multiple potential antecedents in the context. 
+In the case of referential ambiguity, an ambiguous utterance may apply to several possible referents in a scene. Here we use the term `referential' in the sense of \citeA{frege1892sinn}, distinguishing the reference of a word---an object/property in the world---and its meaning. For example, a pronoun can be referentially ambiguous if there are multiple potential antecedents in the context. 
 % \gcs{can we give citations for these various types of ambiguity?} 
 It is this latter type of ambiguity that we focus on in the paper, although the lessons we learn are likely to apply to the broader range of ambiguity phenomena.
 
@@ -115,13 +115,13 @@ This observation stands at odds with the Gricean maxim to avoid ambiguity (\cite
 However, even \citeauthor{grice1975} recognized a case of strategic ambiguity where it could be the intention of the speaker to communicate more than one possible interpretation afforded by an ambiguous utterance. In such cases, recognition of the ambiguity serves as the communicative purpose of the utterance. \citeA{wasow2015}, on the other hand, reviews several cases where ambiguous production serves no obvious communicative purpose.
 
 
-In this work, we focus on the effects of resolving---or anticipating the resolution of---ambiguous utterances, identifying an additional benefit to ambiguous language: the \emph{extra} information we gain from observing how listeners resolve ambiguity.
-We show that language users learn about each other's private knowledge when observing how ambiguity is resolved. 
+In the current work, we focus on the effects of resolving---or anticipating the resolution of---ambiguous utterances, identifying an additional benefit to ambiguous language: the \emph{extra} information we gain from observing how listeners resolve ambiguity.
+We show that language users learn about each other's private knowledge (in Bayesian terms, their priors) when observing how ambiguity is resolved. 
 When utterances leave room for interpretation, listeners must draw on their opinions, beliefs, and preferences to fill in the gaps;
 by observing how it is that a listener fills in those gaps to resolve the ambiguity, speakers thus learn about the opinions, beliefs, and preferences of their conversation partner. 
-Over the course of two studies, we first demonstrate that people are indeed able to infer hidden beliefs of their conversation partners on the basis of observed ambiguity phenomena; second, we show that some speakers can actively create situations of uncertainty, anticipating the epistemic value when observing the consequent referent choice. 
+Over the course of two studies, we first demonstrate that people are indeed able to infer hidden beliefs of their conversation partners on the basis of observed ambiguity phenomena; second, we show that some speakers can actively create situations of uncertainty, anticipating the epistemic value when observing the resolution of ambiguity. 
 %we show how speakers update predictive models of listeners' preferences and beliefs when watching social event interactions, such as when offering a few objects to choose from and observing the object choice of the conversation partner. 
-We thus show that humans can interpret behavior of other people as driven by their motives, intentions, or personal characteristics---an idea that goes back conceptually to the attribution theory \cite{jones1965acts, kelley1967attribution, kelley1970social}.
+We thus show that humans can interpret the behavior of other people as driven by their motives, intentions, or personal characteristics---an idea that goes back conceptually to the attribution theory \cite{jones1965acts, kelley1967attribution, kelley1970social}.
 
 To explain the behavior we observe in our experiments, we advance a computational cognitive model of the involved probabilistic inference processes formulated within the Bayesian Rational Speech Act modeling framework. 
 %The main contributions of this paper are two-fold: 
@@ -132,7 +132,7 @@ We explore interpretive choices and the potential strategic, socially epistemic 
 %To formalize our hypothesis, we adapt the Rational Speech Act model framework, modeling the underlying probabilistic interpretation processes and socially epistemic action choices. 
 Interestingly, the modeling results reveal good interpretive abilities but also strong individual differences when the task is to choose (ambiguous) utterances strategically for gaining social knowledge. 
 
-In the following, we first provide a computational background on referential ambiguity resolution (Section \ref{modelingTheory}).
+In what follows, we first provide computational background on referential ambiguity resolution (Section \ref{modelingTheory}).
 In Section \ref{socialRSA}, we develop our computational models that are able to infer the preferences of an agent that led her to a particular choice of objects, as well as a model that predicts which utterances are most useful to create the possibility of learning about the preferences of the conversation partner. 
 Sections \ref{experiment1} and \ref{experiment2} give the results of the behavioral experiments, as well as an evaluation of modeling performance. 
 Section \ref{discussion} concludes that participants were indeed able to use observable behavior of others to infer their prior beliefs, and hypothesizes why the ability to intentionally create epistemic situations can be found only in part of the population.
