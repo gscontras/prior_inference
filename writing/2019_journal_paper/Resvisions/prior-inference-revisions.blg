@@ -36,45 +36,45 @@ while executing---line 5079 of file apacite.bst
 Too many commas in name 1 of "Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P." for entry hawkins2015you
 while executing---line 5079 of file apacite.bst
 Warning--No journal in yoon2018polite
-You've used 38 entries,
+You've used 39 entries,
             6951 wiz_defined-function locations,
-            1512 strings with 17879 characters,
-and the built_in function-call counts, 78337 in all, are:
-= -- 10089
-> -- 651
-< -- 3511
-+ -- 3796
-- -- 76
-* -- 4771
-:= -- 13543
-add.period$ -- 179
-call.type$ -- 38
-change.case$ -- 664
+            1519 strings with 18097 characters,
+and the built_in function-call counts, 80287 in all, are:
+= -- 10325
+> -- 670
+< -- 3606
++ -- 3893
+- -- 78
+* -- 4901
+:= -- 13895
+add.period$ -- 183
+call.type$ -- 39
+change.case$ -- 681
 chr.to.int$ -- 0
-cite$ -- 77
-duplicate$ -- 2193
-empty$ -- 3035
-format.name$ -- 1054
-if$ -- 15190
+cite$ -- 79
+duplicate$ -- 2250
+empty$ -- 3111
+format.name$ -- 1086
+if$ -- 15559
 int.to.chr$ -- 0
-int.to.str$ -- 114
+int.to.str$ -- 117
 missing$ -- 0
-newline$ -- 972
-num.names$ -- 322
-pop$ -- 1461
+newline$ -- 998
+num.names$ -- 330
+pop$ -- 1487
 preamble$ -- 1
-purify$ -- 156
+purify$ -- 160
 quote$ -- 0
-skip$ -- 5323
+skip$ -- 5448
 stack$ -- 0
-substring$ -- 4264
-swap$ -- 1216
-text.length$ -- 123
+substring$ -- 4369
+swap$ -- 1251
+text.length$ -- 125
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 3936
+type$ -- 4016
 warning$ -- 1
-while$ -- 379
+while$ -- 391
 width$ -- 0
-write$ -- 1201
+write$ -- 1236
 (There were 11 error messages)

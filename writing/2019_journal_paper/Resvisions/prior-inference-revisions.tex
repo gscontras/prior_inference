@@ -57,13 +57,14 @@
 
 \begin{abstract}
 
-We investigated whether ambiguity resolution may yield socially-relevant benefits,
-revealing parts of the privileged ground of the interpreter. 
+Recent advancements in modeling Bayesian inference uncovered important mechanisms of how humans infer the hidden mental states of others upon observation of their behavior. In this paper, we investigate whether we can extend this paradigm to communicative behavior, and explore whether ambiguity resolution provides socially-relevant information for the speaker about the mental states of the listener. Our main focus lies on computational modeling of the inference process within the Rational Speech Act framework.
+%In particular, we asked whether ambiguity resolution may yield socially-relevant benefits, revealing parts of the privileged ground of the interpreter. 
 In particular, we asked if speakers can (i) use response observations to infer unknown preferences of a listener, and (ii) strategically choose ambiguous utterances for learning about those preferences. 
-We ran experiments in a reference game framework and modeled the data with a Rational Speech Act model.
-Participants were able to infer listeners' preferences when analyzing their choice of objects given referential ambiguity.
+%We ran experiments in a reference game framework and modeled the data with a Rational Speech Act model.
+In a reference game experimental set up, we observed that
+participants were able to infer listeners' preferences when analyzing their choice of objects given referential ambiguity.
 Moreover, a subset of speakers were able to strategically choose ambiguous over unambiguous utterances in an epistemic, event-predictive, goal-directed manner, although a different group significantly preferred unambiguous utterances. 
-We conclude that ambiguity resolution indeed reveals aspects of the knowledge, preferences, and beliefs of conversation partners, and that some of us are able to strategically use ambiguous utterances to gain knowledge about these aspects.
+We conclude that ambiguity resolution indeed reveals aspects of the knowledge, preferences, and beliefs of conversation partners, and that some of us are able to strategically use ambiguous utterances to gain knowledge about these aspects. 
                                                                  
 
 \textbf{Keywords:} 
@@ -232,17 +233,17 @@ In a lexicon-learning paradigm, \citeA{woensdregt2016modelling} model how Bayesi
 Within the RSA framework, \citeA{degen2015wonky} show how inferring the hidden mental states of conversation partners can take the form of inferring priors. The authors explored how listeners infer the speaker's prior over world states when confronted with an utterance that conflicts with their own prior. If a listener hears that marbles were thrown into a pool and `some marbles sank', she infers that the likely prior over the world states (i.e., that marbles usually sink in water) is not shared by the speaker, thereby reasoning that the world must be `wonky'. In their model, listeners actively reason about a wonkiness parameter; in a wonky world, the listener switches from their informative prior to a uniform prior over the world states.
 As another instance of Theory-of-Mind reasoning within the RSA framework, \citeA{yoon2018polite} model the comprehension of polite language that features so-called `white lies' (e.g., telling someone that their terrible cookies are `okay'). In the model, listeners jointly infer the state of the world (e.g., how good the cookies are) and the goals of the speaker (i.e., how much they prioritize politeness vs. informativity).  
 %utterances describing an assessment by inferring a prior distribution over conversation goals that include not only the aim to transfer information accurately but also social goals, such as appearing nice and letting the conversation partner save face. 
-%In work on metaphorical language use \citeA{kao2014formalizing} also consider affective goals that justify non-literal interpretation of their utterances. The authors further model the comprehension of nonliteral language as a joint inference of the meaning of an utterance and an affective state of the speaker, showing an example of a Bayesian theory of mind modeling within the RSA framework.
+% Asya: I think we should mention Kao to show that we are aware of other RSA work that models the inference of mental states
+In work on metaphorical language use \citeA{kao2014formalizing} also consider affective goals that justify non-literal interpretation of their utterances. The authors further model the comprehension of nonliteral language as a joint inference of the meaning of an utterance and an affective state of the speaker, showing an example of a Bayesian theory of mind modeling within the RSA framework.
 
 
-%We further explore ambiguity use as a strategic tool that speakers may use to probe the listener to make an informative decision and reveal their preferences in a particular domain. Continuing the line of research, such as \citeA{yoon2018polite} and \citeA{kao2014formalizing}, we consider communication goals that go beyond pure information transfer. However, unlike \citeA{hawkins2015you}, the epistemic goals of the speaker concern not the state of the external world but rather the mind of the listener. This aspect of our work relates to the predictive mind perspective and the active inference paradigm \cite{Friston:2015, Clark:2016}.
+%We further explore ambiguity use as a strategic tool that speakers may use to probe the listener to make an informative decision and reveal their preferences in a particular domain. Continuing the line of research, such as \citeA{yoon2018polite} and \citeA{kao2014formalizing}, we consider communication goals that go beyond pure information transfer. 
 
-% TODO add literature suggested by reviewers
 
 %section{Pragmatic social inference RSA model}
 \section{Our model of social inference} \label{socialRSA}
 
-Our work contributes to the broad literature on Bayesian Theory of Mind and more specifically to the modeling of prior inference in communicative settings within the RSA framework. Unlike previous papers that model the listener's inference over the priors of the pragmatic speaker $S_1$, we aim to model the inference process of a higher-order pragmatic speaker upon having observed a listener's ambiguity-resolution behavior. %Our model infers an informative distribution over preferences of the listener, rather than resorting to a uniform prior in case the listener decides the world is wonky \cite{degen2015wonky}. In addition to generating model predictions, we compare the model predictions to behavioral data, continuing the tradition of the RSA framework and setting this paper in contrast to other work that relies soley \gcs{is this true? no behavioral work?} on simulations of the interaction between two artificial agents \cite{woensdregt2016modelling,blokpoel2019pragmatic}. \gcs{maybe bring this up in the conclusion?}
+Our work contributes to the broad literature on Bayesian Theory of Mind and more specifically to the modeling of prior inference in communicative settings within the RSA framework. Unlike previous papers that model the listener's inference over the priors of the pragmatic speaker $S_1$, we aim to model the inference process of a higher-order pragmatic speaker upon having observed a listener's ambiguity-resolution behavior. 
 
 Our model builds on the vanilla version of RSA, modifying the listener's state prior $P(s)$ and enhancing the reasoning process towards a social component, yielding a {pragmatic social-inference RSA} model. %In that sense, the model belongs to the family of models known as uncertain RSA \cite{goodmanfrank2016}. 
 By changing $P(s)$ to a non-uniform distribution, we model prior beliefs about which object the speaker is more likely to refer to, or---when viewed from a more self-centered perspective---which feature preferences $f$ the listener may have. 
@@ -416,7 +417,8 @@ Parameter $\beta$ models the possibility that listeners choose objects that do n
 The computation is equivalent to the softness parameter above, in this case softening the object choices of the literal listener $L_0$ towards a uniform choice over all objects present. 
 %$$ P(s_{\textrm{x}}\mid u_{\textrm{x}}) = \frac{P(s\mid u) + \beta}{\sum P(s\mid u) + 3\beta}
 %%\end{equation}
-Again, $\beta=0$ models a hard object choice---that is, full obedience to the uttered instruction $u$---while $\beta \rightarrow \infty$ models a uniform object choice---that is, full ignorance of $u$.
+Again, $\beta=0$ models a hard object choice---that is, full obedience to the uttered instruction $u$---while $\beta \rightarrow \infty$ models a uniform object choice---that is, full ignorance of $u$. The effect of this parameter being higher than the default value of $0$ is visible when the properties of objects that do not qualify as a possible referent given an utterance (for example, green objects when the speaker said 'red') affect the slider values. Consider a scene containing three objects: a red square, a red circle and a blue cloud. If a listener picks a red square following the utterance 'red' and rejects the red circle, the subject is expected to indicate that the listener likes squares and does not like circles. Since there are no red clouds in that scene, the slider for clouds cannot be adjusted to an informative value. However, if the obedience parameter $\beta$ of a subject is above $0$ the subject would lower the slider for clouds, since a cloud was not chosen (despite the fact that the green cloud did not qualify as a potential referent).
+This parameter allows the model to capture noise associated with adjusting sliders when no explicit evidence for the slider adjustment was actually present in the scene.
 %As $\beta$ increases, speakers disregard instructions and assign non-zero probabilities to objects that do not correspond to the utterance; with $\beta = 0$, speakers fully obey the instructions and only consider objects with the named property (e.g., only red objects following the utterance \textit{red}).
 
 \subsection{Results}
@@ -429,7 +431,12 @@ Again, $\beta=0$ models a hard object choice---that is, full obedience to the ut
 % We first present results for the globally-optimized versions of  PSIRSA .
 % I used the code length(levels(as.factor(uniqueCCode))) to calculate the number of conditions
 %Since not all of the stimuli allowed for inference of preferences in the same way, we introduced a new categorization of stimuli. Our base model would then predict the same preferences for the same category of stimuli. The categorization takes into account the distribution of features, the chosen object and which feature was uttered. Each category consists of 3 tuples of 2 digits. Each tuple refers to one feature, where the first tuple always refers to the uttered feature. The first digit in each tuple would then denote how many objects share the value of the picked object for the corresponding feature. In figure \ref{FG-ref-game}, if the utterance was blue and the blue square was picked, the first tuple would reference color and its first digit would be a "2". Note that this does not determine which other object shares the feature value, i.e. "blue". To compensate, the second digit of the tuple denotes which other object shares this value. This depends on the order of the objects---we stipulated that the picked object would be the first. The further order would be determined by which other object shares this specific value, i.e. the "blue circle" in figure \ref{FG-ref-game} would be the first of the "other objects" and the "green square" the second. The picked object is at position zero in this sense. Thus the first tuple for figure \ref{FG-ref-game} would be (2,1). For the other tuples, the first digits would be "2" for shape and "3" for texture. To streamline the category code we stipulated that we would order the features in descending order of their first digit, so that we would have texture's "3" next in figure \ref{FG-ref-game}. If a tuple starts with "3" or "1", the second digit would simply denote whether the other objects have different values for that feature or the same. Thus we would have (3,2) for texture, with the second digit signaling that the non-picked objects share their texture. The tuple for shape would finally be (2,2), because the value "square" is shared with the second other object (see above). Thus for figure \ref{FG-ref-game} we would end up with [(2,1),(3,2),(2,2)].
-The full and simple models with softness ($\gamma$) optimized globally provide nearly identically good fits to the data  (Figure~\ref{simple-global-and-cross-validated} \gcs{this isn't what the figure shows}). Linear regression analysis was used to test whether the model values predicted the human data. 
+The full and simple models with softness ($\gamma$) optimized globally provide nearly identically good fits to the data.
+%Figure~\ref{simple-global-and-cross-validated} \gcs{this isn't what the figure shows}). 
+% Asya: true! sorry about the mistake! I think we took out some of the figures, the refernce was wrong
+
+%TODO turn the following into a tableß
+Linear regression analysis was used to test whether the model values predicted the human data. 
 The simple model yields a value of $r^2 = 0.8607$\footnote{Here and throughout the paper we report adjusted $r^2$ values.} ($F(1,190) = 1181$)\footnote{All results were significant at the $p < 0.001$ level if not stated differently in the text.} when only softness parameter $\gamma$ is optimized ($\gamma=0.2204$ after optimization). 
 When both parameters are optimized globally, a variance estimate of $r^2 = 0.9788$ ($F(1,190) = 8823$) is reached
 ($\gamma=0.2210$ and $\beta=0.2693$ after optimization), indicating that participants indeed considered (possibly subconsciously) the option to interpret utterances non-literally. 
@@ -693,16 +700,24 @@ In the second complementary study with 54 participants (2 participants excluded 
 
 \section{Discussion} \label{discussion}
 
-%TODO add references to predictive mind perspective
+The ability to infer the intentions and goals of others upon observing their behavior develops early in ontogeny and remains a valuable source of information for building predictive models of others.
+Previous work in the RSA framework has focused on jointly inferring meaning of utterances and the state of the world based on the speaker's choice of utterances \cite{degen2015wonky, hawkins2015you} and the iterative vocabulary learning tasks that involve the inference about the priors of the speaker and listener \cite{woensdregt2016modelling, blokpoel2019pragmatic}.
 
-We have found strong support for the idea that we can indeed learn about others when observing their interpretation of ambiguous utterances. 
+ In this paper, we asked whether communicative behavior, and to be more precise, ambiguity resolution, provides interpretable data for speakers to learn more about the listeners, focusing on the social component of that inference. 
+
+We have found strong support for the idea that speakers can indeed learn about others when observing their interpretation of ambiguous utterances. This result connects our findings to the Bayesian Theory of Mind literature that describes how children and adults use observable behavior to infer the mental states of others.
 % for PSIRSA, which infers preference posteriors on the basis of ambiguous language.
 % \gcs{we might want to talk about this as ``priors'' in the introduction as well} Asya: added a new section to the Intro
 The results of Experiment~1 demonstrate that na\"ive speakers are able to reason pragmatically about \emph{why} listeners may take the actions they do in cases of referential ambiguity. 
 The success of our computational model in predicting the observed behavior offers an articulated hypothesis about \emph{how} this reasoning proceeds: when speakers are aware of the ambiguity in their utterances, observing how listeners resolve that ambiguity provides clues about the preferences listeners use when doing so.
 The results of Experiment 2 demonstrate that at least some speakers are able to capitalize on this reasoning to strategically select ambiguous utterances that are expected to improve their understanding of the preferences of their listeners.
 
- 
+We further modeled the inference process within the RSA framework which conceptualizing the utterance interpretation process as a recursive reasoning of speaker and listener about each other. Our goal here was to bring together the rich literature on Bayesian models of inferences, such as naive calculus, on the one hand, and modeling of pragmatic reasoning on another hand. Both of these approaches are based on the view of the agent/speaker as a utility driven agent, and it is the reasoning about the speaker's optimal behavior that drivers the listener's interpretation of the utterance.  We focused on modeling the speaker behavior that spans beyond efficient information transfer, and rather is aimed at generating interpretative options that could be informative as possible choices.
+
+The proposed ambiguity creation strategy certainly raises the question of ecological validity of the epistemic behavior. Intuitively, such a strategy appears to be a sub-optimal way to elicit information compared to a direct question, in the case of the proposed experiment, a question about the preferences of the listener. Yet, considerations of politeness \cite{yoon2018polite}, and generally a rhetorical strategy of indirectness, could make the costs of asking a question prohibitively high. For example, asking a stranger directly about her political views might appear impolite or even aggressive while making a vague statement about the course of an elections by stating that their results are `interesting' could act as a probe to get the opinion of the listener without forcing her to react.
+
+Evidence from a corpus of speed-dating dialogues \cite{mcfarland2013making} suggests that direct questions in situations of courtship--supposedly a setup that should promote information seeking behavior--are a sign that the interaction between the partners is not going as smooth as possible, and in order to continue the conversation the speakers have to ask a question rather than connect to the previous discussion.
+
 Currently, we are transferring the experimental setup to more naturalistic interaction scenarios. 
 Even in these cases, though, it appears that we still find a split among participants such that there are those who consistently prefer to choose unambiguous utterances. 
 Two explanations may be warranted and need to be investigated further. 
@@ -710,25 +725,37 @@ First, it may be the case that these participants think overly egocentrically, t
 Second, it may simply be the case that these participants do not have access to the required deeper reasoning process, and thus prefer to give instructions with predictable outcomes. 
 % \gcs{it might be good to speculate as to why only some of our participants selected ambiguous utterances: misunderstanding instructions, inability to follow instructions, or perhaps some other factor}
 
-Nonetheless, taken together, the results of our experiments and the success of our model in capturing these results indicate that humans are aware of the fact that by observing responses to ambiguous utterances, information about the listener's prior preferences can be inferred---that is, they are able to learn about the hidden model states of others, including preferences but probably also other aspects of beliefs. 
+Taken together, the results of our experiments and modeling indicate that humans are aware of the fact that by observing responses to ambiguous utterances, information about the listener's prior preferences can be inferred---that is, they are able to learn about the hidden model states of others, including preferences but probably also other aspects of beliefs. 
 
 
-It should also be noted that ambiguous utterances used in this way are closely related to questions, which may ask directly about considered preferences.
-Ambiguous utterances provide a ready but more subtle, indirect alternative to asking directly. 
-In normal conversations, a speaker might favor the indirect route, given considerations of politeness and possibly also in an effort to keep the conversation open. 
-With ambiguous language, the conversation partner can choose to disambiguate the ambiguous utterance or, alternatively, choose to continue in a different direction or even change topic.
+ %Our model infers an informative distribution over preferences of the listener, rather than resorting to a uniform prior in case the listener decides the world is wonky \cite{degen2015wonky}. 
+% In addition to generating model predictions, we compare the model predictions to behavioral data, continuing the tradition of the RSA framework and setting this paper in contrast to other work that relies soley \gcs{is this true? no behavioral work?} on simulations of the interaction between two artificial agents \cite{woensdregt2016modelling,blokpoel2019pragmatic}. \gcs{maybe bring this up in the conclusion?}
+ % Asya: yes, these two are simulation papers, no behavioral data
+% However, unlike \citeA{hawkins2015you}, the epistemic goals of the speaker concern not the state of the external world but rather the mind of the listener. 
+ 
+
+% Asya: Rephrased the following paragraph above
+%It should also be noted that ambiguous utterances used in this way are closely related to questions, which may ask directly about considered preferences.
+%Ambiguous utterances provide a ready but more subtle, indirect alternative to asking directly. 
+%In normal conversations, a speaker might favor the indirect route, given considerations of politeness and possibly also in an effort to keep the conversation open. 
+%With ambiguous language, the conversation partner can choose to disambiguate the ambiguous utterance or, alternatively, choose to continue in a different direction or even change topic.
 
 
-We note that the analyzed preference prior, viewed from a broader perspective, can be closely related to a part of the event-predictive mind of the listener and the speaker \cite{Butz:2016,Butz:2017}. 
+We note that the analyzed preference prior, viewed from a broader perspective, can be closely related to a part of the event-predictive mind of the listener and the speaker \cite{Butz:2016,Butz:2017}.  This paradigm emphasizes the role of predictions in determining the success of our behavior. In order to anticipate the changes in the environment, including the behavior of other human agents, the predictive mind continuously updates its models of others by incorporating novel behavioral evidence.
 When interpreting an utterance---in our case, opening up a set of referent choices---the listener's mind infers the current choices and integrates them with her preference priors, implicitly anticipating possible choice consequences.
-Moreover, the expected information gain term---computing the utterance choice of the speaker---can be equated with the computation of socially-motivated active inference \cite{Butz:2017a,Friston:2015}.
-This iference causes the model to strive for an anticipated epistemic value that quantifies the expected information gain about the preferences of the listener---that is, expecting a form of social information gain. 
+Moreover, the expected information gain term---computing the utterance choice of the speaker---can be equated with the computation of socially-motivated active inference \cite{Butz:2017a, Clark:2016, Friston:2015}.
+This inference causes the model to strive for an anticipated epistemic value that quantifies the expected information gain about the preferences of the listener---that is, expecting a form of social information gain. 
 
 
 More generally, predictive states of mind about others do not only include considerations of preferences, but may also concern all imaginable knowledge, opinions, beliefs, and current trains of thought of the listener.
 Moreover, during a conversation, the involved ``social'' priors will dynamically develop depending on the internal predictive models and the generated utterances, actions, and responses of the speaker and listener. 
 The priors dynamically depend on the privileged grounds of the conversational partners, and also on the common ground in which the conversation unfolds.
 In that sense, ambiguous utterances and resolutions thereof are one device for projecting parts of each other's privileged grounds into the common ground. 
+
+The results of the utterance choice experiment (Experiment 2) suggest that not all speakers can actively create ambiguous utterances to watch situations of ambiguity resolution. In fact, this special skill might only be present in speakers with high meta-linguistic competence, such as, for example, professional writers. They strategically use ambiguity to create an artistic effect of uncertainty about the interpretation of characters and events.
+%TODO literary reference here
+
+However, ambiguity does not need to be an explicit strategy of the speaker to make the inference process possible. Rather, ambiguity is naturally present in language as a consequence of economy consideration and indirectness strategies, providing ample interpretative freedom to the listener. In that sense, observing ambiguity resolution is a consequence not of active but rather retrospective inference that emerges once the speaker realizes that an utterance is potentially ambiguous. 
 
 
 %Moreover, there 

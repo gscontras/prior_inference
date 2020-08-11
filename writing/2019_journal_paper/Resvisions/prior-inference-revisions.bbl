@@ -753,6 +753,34 @@ Lucas, C\BPBI G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+McFarland%
+, Jurafsky%
+\BCBL {}\ \BBA {} Rawlings%
+}{%
+McFarland%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+mcfarland2013making}
+\APACinsertmetastar {%
+mcfarland2013making}%
+\begin{APACrefauthors}%
+McFarland, D\BPBI A.%
+, Jurafsky, D.%
+\BCBL {}\ \BBA {} Rawlings, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Making the connection: Social bonding in courtship
+  situations} {Making the connection: Social bonding in courtship
+  situations}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{American journal of sociology}{118}{6}{1596--1649}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Mohr%
 }{%
 Mohr%
