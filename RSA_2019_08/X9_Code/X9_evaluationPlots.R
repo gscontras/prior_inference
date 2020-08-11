@@ -170,7 +170,7 @@ evalNumCompairPlotWithFirstBlock <-
       round(modelLearningProcessWithFirstBlock$Freq / total,
             digits = roundingDigits)
     
-    
+    # } # stop loop here
     #_____________Line Plot learning trajectory all in one______________________________________________________________________________________
     
     
@@ -430,8 +430,7 @@ ambiguityUsedArranged <- as.data.frame(table(ambiguityUsed[, 2]))
       x = "Number of Trials with ambiguous utterances",
       y = "Participants using ambiguous utterances (of 100)",
       fill = "Evaluation\nNumber\n"
-    ) +
-    coord_flip()
+    )   +    coord_flip()
   
   ggsave(
     filename = "ambiguity.png",

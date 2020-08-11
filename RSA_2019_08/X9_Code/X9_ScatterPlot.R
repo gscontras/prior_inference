@@ -5,8 +5,8 @@ source("CommonCode/getConstCodeStratUtt.R")
 # simple RSA
 ############################################
 
-x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
-#x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_andOpt12_iterative.csv")
+#x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_iterative.csv")
+x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_andOpt12_iterative.csv")
 
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAindOpt_fixed00_andOpt12_nonIterative.csv")
 #x9data <- read.csv("X9_Data/x9dataAugm_SRSAglobalOpt_fixed10_Opt12_nonIterative.csv")
@@ -274,7 +274,7 @@ if(doAverageAmbiguityClasses) {
 }
 
 
-### plot after Optimization ###
+### plot with default parameters ###
 plot(rsaModel, workerData)
 abline(lm(formula = rsaModel~workerData), col="red") # regression line (y~x)
 lines(lowess(rsaModel,workerData), col="blue") # lowess line (x,y)
@@ -283,7 +283,7 @@ model <- lm(formula = rsaModel~workerData)
 summary(model)
 confint(model)
 
-### plot with default parameters ###
+### plot after Optimization ###
 
 plot(rsaModel2, workerData)
 abline(lm(formula = rsaModel2~workerData), col="red") # regression line (y~x)
