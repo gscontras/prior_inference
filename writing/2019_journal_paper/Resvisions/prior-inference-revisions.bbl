@@ -31,6 +31,63 @@ Baker, C\BPBI L.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Belardinelli%
+, Lohmann%
+, Farn{\`e}%
+\BCBL {}\ \BBA {} Butz%
+}{%
+Belardinelli%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+belardinelli2018mental}
+\APACinsertmetastar {%
+belardinelli2018mental}%
+\begin{APACrefauthors}%
+Belardinelli, A.%
+, Lohmann, J.%
+, Farn{\`e}, A.%
+\BCBL {}\ \BBA {} Butz, M\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Mental space maps into the future} {Mental space maps
+  into the future}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognition}{176}{}{65--73}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Belardinelli%
+, Stepper%
+\BCBL {}\ \BBA {} Butz%
+}{%
+Belardinelli%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+belardinelli2016s}
+\APACinsertmetastar {%
+belardinelli2016s}%
+\begin{APACrefauthors}%
+Belardinelli, A.%
+, Stepper, M\BPBI Y.%
+\BCBL {}\ \BBA {} Butz, M\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {It's in the eyes: Planning precise manual actions before
+  execution} {It's in the eyes: Planning precise manual actions before
+  execution}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of vision}{16}{1}{1--18}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Blokpoel%
 \ \protect \BOthers {.}}{%
 Blokpoel%
@@ -531,6 +588,37 @@ Hawkins, R\BPBI X.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Hayhoe%
+, Shrivastava%
+, Mruczek%
+\BCBL {}\ \BBA {} Pelz%
+}{%
+Hayhoe%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2003}}%
+}]{%
+Hayhoe:2003}
+\APACinsertmetastar {%
+Hayhoe:2003}%
+\begin{APACrefauthors}%
+Hayhoe, M\BPBI M.%
+, Shrivastava, A.%
+, Mruczek, R.%
+\BCBL {}\ \BBA {} Pelz, J\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2003}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Visual memory and motor planning in a natural task}
+  {Visual memory and motor planning in a natural task}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Vision}{3}{1}{49--63}.
+\newblock
+\begin{APACrefDOI} \doi{10:1167/3.1.6} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Jara-Ettinger%
 , Gweon%
 , Schulz%
@@ -720,6 +808,36 @@ Lewandowsky, S.%
   {Computational modeling in cognition: {P}rinciples and practice}.
 \newblock
 \APACaddressPublisher{Thousand Oaks}{Sage Publications}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Lohmann%
+, Belardinelli%
+\BCBL {}\ \BBA {} Butz%
+}{%
+Lohmann%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+lohmann2019hands}
+\APACinsertmetastar {%
+lohmann2019hands}%
+\begin{APACrefauthors}%
+Lohmann, J.%
+, Belardinelli, A.%
+\BCBL {}\ \BBA {} Butz, M\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Hands Ahead in Mind and Motion: Active Inference in
+  Peripersonal Hand Space} {Hands ahead in mind and motion: Active inference in
+  peripersonal hand space}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Vision}{3}{2}{15}.
+\newblock
+\begin{APACrefDOI} \doi{doi.org/10.3390/vision3020015} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
