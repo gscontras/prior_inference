@@ -76,6 +76,15 @@ confint(model)
 summary(model)
 confint(model)
 
+# for m27
+plotData <- subset(full, softness == "globally_opt" & obedience == 0 & 
+                     cross_validated == "no" & type == "fullRSA" & alpha == "globally_opt") 
+
+r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
+softness <- unique(as.character(plotData$softness))
+obedience <- unique(as.character(plotData$obedience))
+type <- unique(as.character(plotData$type))
+nr <- plotData$Nr[1]
 
 # for m13
 plotData <- subset(full, softness == "globally_opt" & obedience == 0 & 

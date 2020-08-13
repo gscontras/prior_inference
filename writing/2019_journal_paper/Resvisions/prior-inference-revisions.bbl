@@ -1,6 +1,40 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Bade%
+, Bauer%
+, Beck%
+, D{\"o}rge%
+\BCBL {}\ \BBA {} Zirker%
+}{%
+Bade%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+bade2015ambiguity}
+\APACinsertmetastar {%
+bade2015ambiguity}%
+\begin{APACrefauthors}%
+Bade, N.%
+, Bauer, M.%
+, Beck, S.%
+, D{\"o}rge, C.%
+\BCBL {}\ \BBA {} Zirker, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Ambiguity in Shakespeare's Sonnet 138} {Ambiguity in
+  shakespeare's sonnet 138}.{\BBCQ}
+\newblock
+\BIn{} S.~Winkler\ (\BED), \APACrefbtitle {Ambiguity: Language and
+  Communication} {Ambiguity: Language and communication}\ (\BPGS\ 89--109).
+\newblock
+\APACaddressPublisher{}{De Gruyter}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Baker%
 , Jara-Ettinger%
 , Saxe%
@@ -28,6 +62,36 @@ Baker, C\BPBI L.%
   beliefs, desires and percepts in human mentalizing}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Nature Human Behaviour}{1}{4}{1--10}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bauer%
+\ \BBA {} Zirker%
+}{%
+Bauer%
+\ \BBA {} Zirker%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+bauer2014dickens}
+\APACinsertmetastar {%
+bauer2014dickens}%
+\begin{APACrefauthors}%
+Bauer, M.%
+\BCBT {}\ \BBA {} Zirker, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Dickens and ambiguity: the case of A tale of two cities}
+  {Dickens and ambiguity: the case of a tale of two cities}.{\BBCQ}
+\newblock
+\BIn{} C.~Huguet\ \BBA {} N.~Vanfasse\ (\BEDS), \APACrefbtitle {Dickens,
+  Modernism and Modernity} {Dickens, modernism and modernity}\ (\BPGS\
+  209--229).
+\newblock
+\APACaddressPublisher{Paris}{Editions du Sagittaire}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1030,6 +1094,29 @@ Qing, C.%
   semantics and pragmatics}\ (\BPG~201-220).
 \newblock
 \APACaddressPublisher{}{Springer}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Quigley%
+}{%
+Quigley%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+quigley2015modernist}
+\APACinsertmetastar {%
+quigley2015modernist}%
+\begin{APACrefauthors}%
+Quigley, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2015}.
+\newblock
+\APACrefbtitle {Modernist Fiction and Vagueness: Philosophy, Form, and
+  Language} {Modernist fiction and vagueness: Philosophy, form, and language}.
+\newblock
+\APACaddressPublisher{}{Cambridge University Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
