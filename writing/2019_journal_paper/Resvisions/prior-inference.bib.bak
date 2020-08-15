@@ -1,7 +1,200 @@
-% Encoding: UTF-8
+%% This BibTeX bibliography file was created using BibDesk.
+%% http://bibdesk.sourceforge.net/
+
+%% Created for Asya Achimova at 2020-08-13 11:39:33 +0200 
+
+
+%% Saved with string encoding Unicode (UTF-8) 
+
+
+@comment{jabref-meta: databaseType:bibtex;}
 
 
 
+@book{quigley2015modernist,
+	Author = {Quigley, Megan},
+	Date-Added = {2020-08-13 11:39:31 +0200},
+	Date-Modified = {2020-08-13 11:39:31 +0200},
+	Publisher = {Cambridge University Press},
+	Title = {Modernist Fiction and Vagueness: Philosophy, Form, and Language},
+	Year = {2015}}
+
+@incollection{bauer2014dickens,
+	Address = {Paris},
+	Author = {Bauer, Matthias and Zirker, Angelika},
+	Booktitle = {Dickens, Modernism and Modernity},
+	Date-Added = {2020-08-13 11:32:54 +0200},
+	Date-Modified = {2020-08-13 11:34:32 +0200},
+	Editor = {Christine Huguet and Nathalie Vanfasse},
+	Pages = {209--229},
+	Publisher = {Editions du Sagittaire},
+	Title = {Dickens and ambiguity: the case of A tale of two cities},
+	Year = {2014}}
+
+@incollection{bade2015ambiguity,
+	Author = {Bade, Nadine and Bauer, Matthias and Beck, Sigrid and D{\"o}rge, Carmen and Zirker, Angelika},
+	Booktitle = {Ambiguity: Language and Communication},
+	Date-Added = {2020-08-13 11:28:56 +0200},
+	Date-Modified = {2020-08-13 11:28:56 +0200},
+	Editor = {Susanne Winkler},
+	Journal = {Ambiguity: Language and Communication},
+	Pages = {89--109},
+	Publisher = {De Gruyter},
+	Title = {Ambiguity in Shakespeare's Sonnet 138},
+	Year = {2015}}
+
+@article{mcfarland2013making,
+	Author = {McFarland, Daniel A and Jurafsky, Dan and Rawlings, Craig},
+	Date-Added = {2020-08-11 15:14:07 +0200},
+	Date-Modified = {2020-08-11 15:14:07 +0200},
+	Journal = {American journal of sociology},
+	Number = {6},
+	Pages = {1596--1649},
+	Publisher = {University of Chicago Press Chicago, IL},
+	Title = {Making the connection: Social bonding in courtship situations},
+	Volume = {118},
+	Year = {2013}}
+
+@incollection{sennet2016ambiguity,
+	Author = {Sennet, Adam},
+	Booktitle = {The Stanford Encyclopedia of Philosophy},
+	Date-Added = {2020-08-06 11:49:14 +0200},
+	Date-Modified = {2020-08-06 11:49:31 +0200},
+	Edition = {Spring 2016},
+	Editor = {Edward N. Zalta},
+	Howpublished = {\url{https://plato.stanford.edu/archives/spr2016/entries/ambiguity/}},
+	Publisher = {Metaphysics Research Lab, Stanford University},
+	Title = {Ambiguity},
+	Year = {2016}}
+
+@article{frege1892sinn,
+	Author = {Frege, Gottlob},
+	Date-Added = {2020-08-06 11:37:25 +0200},
+	Date-Modified = {2020-08-06 11:37:25 +0200},
+	Journal = {Zeitschrift f{\"u}r Philosophie und philosophische Kritik},
+	Pages = {25--50},
+	Title = {{\"U}ber sinn und bedeutung},
+	Volume = {100},
+	Year = {1892}}
+
+@article{kao2014nonliteral,
+	Author = {Kao, Justine T and Wu, Jean Y and Bergen, Leon and Goodman, Noah D},
+	Date-Added = {2020-08-06 10:55:27 +0200},
+	Date-Modified = {2020-08-06 10:55:27 +0200},
+	Journal = {Proceedings of the National Academy of Sciences},
+	Number = {33},
+	Pages = {12002--12007},
+	Publisher = {National Acad Sciences},
+	Title = {Nonliteral understanding of number words},
+	Volume = {111},
+	Year = {2014}}
+
+@inproceedings{kao2014formalizing,
+	Author = {Kao, Justine and Bergen, Leon and Goodman, Noah},
+	Booktitle = {Proceedings of the 36th {Annual} {Meeting} of the {Cognitive} {Science} {Society} meeting of the Cognitive Science Society},
+	Date-Added = {2020-08-06 10:34:18 +0200},
+	Date-Modified = {2020-08-06 10:36:42 +0200},
+	Title = {Formalizing the pragmatics of metaphor understanding},
+	Year = {2014}}
+
+@article{yoon2018polite,
+	Author = {Yoon, Erica J and Frank, Michael C and Tessler, Michael Henry and Goodman, Noah D},
+	Date-Added = {2020-08-05 20:38:34 +0200},
+	Date-Modified = {2020-08-05 20:38:34 +0200},
+	Publisher = {PsyArXiv},
+	Title = {Polite speech emerges from competing social goals},
+	Year = {2018}}
+
+@article{rubio2020speakers,
+	Author = {Rubio-Fernandez, P and Mollica, F and Jara-Ettinger, J},
+	Date-Added = {2020-08-05 20:26:55 +0200},
+	Date-Modified = {2020-08-05 20:26:55 +0200},
+	Journal = {Preprint at PsyArXiv https://psyarxiv. com/gf8qx},
+	Title = {Speakers and listeners exploit word order for communicative efficiency: A cross-linguistic investigation},
+	Year = {2020}}
+
+@inproceedings{evans2016learning,
+	Author = {Evans, Owain and Stuhlm{\"u}ller, Andreas and Goodman, Noah},
+	Booktitle = {Thirtieth AAAI Conference on Artificial Intelligence},
+	Date-Added = {2020-08-05 20:14:35 +0200},
+	Date-Modified = {2020-08-05 20:14:35 +0200},
+	Title = {Learning the preferences of ignorant, inconsistent agents},
+	Year = {2016}}
+
+@article{lucas2014child,
+	Author = {Lucas, Christopher G and Griffiths, Thomas L and Xu, Fei and Fawcett, Christine and Gopnik, Alison and Kushnir, Tamar and Markson, Lori and Hu, Jane},
+	Date-Added = {2020-08-05 19:20:57 +0200},
+	Date-Modified = {2020-08-05 19:20:57 +0200},
+	Journal = {PloS one},
+	Number = {3},
+	Pages = {e92160},
+	Publisher = {Public Library of Science},
+	Title = {The child as econometrician: A rational model of preference understanding in children},
+	Volume = {9},
+	Year = {2014}}
+
+@article{jara2016naive,
+	Author = {Jara-Ettinger, Julian and Gweon, Hyowon and Schulz, Laura E and Tenenbaum, Joshua B},
+	Date-Added = {2020-08-05 19:07:29 +0200},
+	Date-Modified = {2020-08-05 19:07:29 +0200},
+	Journal = {Trends in cognitive sciences},
+	Number = {8},
+	Pages = {589--604},
+	Publisher = {Elsevier},
+	Title = {The na{\"\i}ve utility calculus: Computational principles underlying commonsense psychology},
+	Volume = {20},
+	Year = {2016}}
+
+@unpublished{blokpoel2019pragmatic,
+	Author = {Blokpoel, Mark and Dingemanse, Mark and Woensdregt, Marieke and Kachergis, George and B{\"o}gels, Sara and Toni, Ivan and van Rooij, Iris},
+	Date-Added = {2020-08-05 18:39:59 +0200},
+	Date-Modified = {2020-08-05 18:42:38 +0200},
+	Month = {Nov},
+	Note = {10.31219/osf.io/q56xs},
+	Title = {Pragmatic communicators can overcome asymmetry by exploiting ambiguity},
+	Year = {2019}}
+
+@inproceedings{hawkins2015you,
+	Address = {Austin, TX},
+	Author = {Hawkins, Robert XD and Stuhlm{\"u}ller, Andreas and Degen, Judith and Goodman, Noah D},
+	Booktitle = {Proceedings of 37th Annual Meeting of the Cognitive Scince Society},
+	Date-Added = {2020-08-05 18:25:02 +0200},
+	Date-Modified = {2020-08-05 18:27:22 +0200},
+	Editor = {Noelle, D. C., Dale, R., Warlaumont, A. S., Yoshimi, J., Matlock, T., Jennings, C. D., & Maglio, P. P.},
+	Pages = {878--883},
+	Title = {Why do you ask? Good questions provoke informative answers.},
+	Year = {2015}}
+
+@inproceedings{degen2015wonky,
+	Address = {Austin, TX},
+	Author = {Degen, Judith and Tessler, Michael Henry and Goodman, Noah D},
+	Booktitle = {Proceedings of 37th {Annual} {Meeting} of the {Cognitive} {Scince} {Society}},
+	Date-Added = {2020-08-05 17:57:17 +0200},
+	Date-Modified = {2020-08-06 10:15:11 +0200},
+	Editor = {Noelle, D.C. and Dale, R. and Warlaumont, A.S. and Yoshimi, J. and Matlock, T. and Jennings, C.D. and Maglio, P. P.},
+	Read = {0},
+	Title = {Wonky worlds: Listeners revise world knowledge when utterances are odd.},
+	Year = {2015}}
+
+@inproceedings{woensdregt2016modelling,
+	Author = {Woensdregt, Marieke and Kirby, Simon and Cummins, Chris and Smith, Kenny},
+	Booktitle = {CogSci},
+	Date-Added = {2020-07-24 22:10:17 +0200},
+	Date-Modified = {2020-07-24 22:10:17 +0200},
+	Title = {Modelling the co-development of word learning and perspective-taking.},
+	Year = {2016}}
+
+@article{baker2017rational,
+	Author = {Baker, Chris L and Jara-Ettinger, Julian and Saxe, Rebecca and Tenenbaum, Joshua B},
+	Date-Added = {2020-07-24 21:55:17 +0200},
+	Date-Modified = {2020-07-24 21:55:17 +0200},
+	Journal = {Nature Human Behaviour},
+	Number = {4},
+	Pages = {1--10},
+	Publisher = {Nature Publishing Group},
+	Title = {Rational quantitative attribution of beliefs, desires and percepts in human mentalizing},
+	Volume = {1},
+	Year = {2017}}
 
 @article{frankejaeger2016,
 	Author = {Michael Franke and Gerhard J{\"{a}}ger},
@@ -2062,19 +2255,6 @@
 	School = {National Tsing Hua University},
 	Title = {The {M}andarin Existential Construction: A Verbal Analysis of \emph{you}},
 	Year = {2010}}
-
-@incollection{fanglin2008,
-	Address = {Hsinchu},
-	Author = {Huilin Fang and T.-H. Jonah Lin},
-	Booktitle = {UST Working Papers in Linguistics},
-	Date-Added = {2018-12-04 15:01:59 -0800},
-	Date-Modified = {2018-12-04 15:01:59 -0800},
-	Editor = {X.-X. Rex Yu and Chia-yin Hu},
-	Pages = {43-56},
-	Publisher = {National Tsing Hua University},
-	Title = {The {M}andarin \emph{you} Existential: A Verbal Analysis},
-	Volume = {4},
-	Year = {2008}}
 
 @article{farkasdeswart2010,
 	Author = {Donka F. Farkas and Henri\"ette E. de Swart},
@@ -7063,752 +7243,689 @@
 	Title = {How the Mind Comes Into Being: Introducing Cognitive Science from a Functional and Computational Perspective},
 	Year = {2017}}
 
-@Article{valley1995friends,
-  author    = {Valley, Kathleen L and Neale, Margaret A and Mannix, Elizabeth A},
-  title     = {Friends, lovers, colleagues, strangers: The effects of relationships on the process and outcome of dyadic negotiations},
-  journal   = {Research on negotiation in organizations},
-  year      = {1995},
-  volume    = {5},
-  pages     = {65--94},
-  publisher = {JAI PRESS LTD.},
-}
-
-@Article{susan1991dynamics,
-  author  = {Susan, D and Holmes, John G},
-  title   = {The dynamics of interpersonal trust: Resolving uncertainty in the face of risk},
-  journal = {Cooperation and Prosocial Behavior; Cambridge University Press: New York, NY, USA},
-  year    = {1991},
-  pages   = {190},
-}
-
-@InCollection{Susan1991,
-  author    = {Susan, D and Holmes, John G},
-  title     = {The dynamics of interpersonal trust: Resolving uncertainty in the face of risk},
-  booktitle = {Cooperation and prosocial behavior},
-  publisher = {Cambridge University Press},
-  year      = {1991},
-  editor    = {R.A. Hinde and J. Groebel},
-  pages     = {190 -- 211},
-  address   = {Cambridge, UK},
-  journal   = {Cooperation and Prosocial Behavior; Cambridge University Press: New York, NY, USA},
-}
-
-@Article{shapiro1992business,
-  author    = {Shapiro, Debra L and Sheppard, Blair H and Cheraskin, Lisa},
-  title     = {Business on a handshake},
-  journal   = {Negotiation journal},
-  year      = {1992},
-  volume    = {8},
-  number    = {4},
-  pages     = {365--377},
-  publisher = {Wiley Online Library},
-}
-
-@Article{schlenker1973effects,
-  author    = {Schlenker, Barry R and Helm, Bob and Tedeschi, James T},
-  title     = {The effects of personality and situational variables on behavioral trust.},
-  journal   = {Journal of personality and social psychology},
-  year      = {1973},
-  volume    = {25},
-  number    = {3},
-  pages     = {419},
-  publisher = {American Psychological Association},
-}
-
-@Article{rotter1971public,
-  author    = {Rotter, Julian B and Stein, Donald K},
-  title     = {Public attitudes toward the trustworthiness, competence, and altruism of twenty selected occupations},
-  journal   = {Journal of Applied Social Psychology},
-  year      = {1971},
-  volume    = {1},
-  number    = {4},
-  pages     = {334--343},
-  publisher = {Wiley Online Library},
-}
-
-@Article{rotter1971generalized,
-  author    = {Rotter, Julian B},
-  title     = {Generalized expectancies for interpersonal trust.},
-  journal   = {American psychologist},
-  year      = {1971},
-  volume    = {26},
-  number    = {5},
-  pages     = {443},
-  publisher = {American Psychological Association},
-}
-
-@Book{rommetveit1974message,
-  title     = {On message structure: A framework for the study of language and communication.},
-  publisher = {John Wiley \& Sons},
-  year      = {1974},
-  author    = {Rommetveit, Ragnar},
-  address   = {New York},
-}
-
-@Article{rempel1985trust,
-  author    = {Rempel, John K and Holmes, John G and Zanna, Mark P},
-  title     = {Trust in close relationships.},
-  journal   = {Journal of personality and social psychology},
-  year      = {1985},
-  volume    = {49},
-  number    = {1},
-  pages     = {95},
-  publisher = {American Psychological Association},
-}
-
-@Book{rapoport1965prisoner,
-  title     = {Prisoner's dilemma: A study in conflict and cooperation},
-  publisher = {University of Michigan press},
-  year      = {1965},
-  author    = {Rapoport, Anatol and Chammah, Albert M and Orwant, Carol J},
-  volume    = {165},
-}
-
-@Book{pascale1981art,
-  title     = {The art of {Japanese} management},
-  publisher = {Simon \& Schuster},
-  year      = {1981},
-  author    = {Pascale, Richard Tanner and Athos, Anthony G},
-  address   = {New York},
-  journal   = {Business Horizons},
-  pages     = {83--85},
-}
-
-@Article{murray1997leap,
-  author    = {Murray, Sandra L and Holmes, John G},
-  title     = {A leap of faith? Positive illusions in romantic relationships},
-  journal   = {Personality and social psychology Bulletin},
-  year      = {1997},
-  volume    = {23},
-  number    = {6},
-  pages     = {586--604},
-  publisher = {Sage Publications Sage CA: Thousand Oaks, CA},
-}
-
-@InCollection{mohr1983implications,
-  author    = {Mohr, Lawrence B},
-  title     = {The implications of effectiveness theory for managerial practice in the public sector},
-  booktitle = {Organizational effectiveness},
-  publisher = {Elsevier},
-  year      = {1983},
-  editor    = {Cameron, Kim S. and Whetten, David A.},
-  pages     = {225--239},
-}
-
-@InCollection{meltzoff2005imitation,
-  author  = {Meltzoff, Andrew N},
-  title   = {Imitation and other minds: The “like me” hypothesis},
-  year    = {2005},
-  volume  = {2},
-  pages   = {55--77},
-  journal = {Perspectives on imitation: From neuroscience to social science},
-}
-
-@InCollection{markova1995preface,
-  author    = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
-  title     = {Preface},
-  booktitle = {Mutualities in dialogue},
-  publisher = {Cambridge University Press},
-  year      = {1995},
-  editor    = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
-  address   = {Cambridge, UK},
-}
-
-@InCollection{Markova1995,
-  author    = {Markova, Ivan{\'a} and Graumann, Carl F. and Foppa, Klaus},
-  title     = {Preface},
-  booktitle = {Mutualities in dialogie},
-  publisher = {Cambridge University Press},
-  year      = {1995},
-  editor    = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
-  address   = {Cambridge, UK},
-}
-
-@InCollection{linell1995troubles,
-  author    = {Linell, Per},
-  title     = {Troubles with mutualities: Toward a dialogical theory of miscommunication},
-  booktitle = {Mutualities in Dialogue},
-  publisher = {Cambridge University Press},
-  year      = {1995},
-  editor    = {Markova, Ivan{\'a} and Graumann, Carl F. and Foppa, Klaus},
-  address   = {Cambridge, UK},
-}
-
-@Article{lindskold1978trust,
-  author    = {Lindskold, Svenn},
-  title     = {Trust development, the GRIT proposal, and the effects of conciliatory acts on conflict and cooperation.},
-  journal   = {Psychological Bulletin},
-  year      = {1978},
-  volume    = {85},
-  number    = {4},
-  pages     = {772},
-  publisher = {American Psychological Association},
-}
-
-@Article{lewis1985trust,
-  author    = {Lewis, J David and Weigert, Andrew},
-  title     = {Trust as a social reality},
-  journal   = {Social forces},
-  year      = {1985},
-  volume    = {63},
-  number    = {4},
-  pages     = {967--985},
-  publisher = {Oxford University Press},
-}
-
-@Article{lewicki1996developing,
-  author  = {Lewicki, Roy J and Bunker, Barbara B and others},
-  title   = {Developing and maintaining trust in work relationships},
-  journal = {Trust in organizations: Frontiers of theory and research},
-  year    = {1996},
-  volume  = {114},
-  pages   = {139},
-}
-
-@Book{lewicki1995trust,
-  title     = {Trust in relationships: A model of development and decline.},
-  publisher = {Jossey-Bass},
-  year      = {1995},
-  author    = {Lewicki, Roy J and Bunker, Barbara Benedict},
-}
-
-@Article{krueger2007neural,
-  author    = {Krueger, Frank and McCabe, Kevin and Moll, Jorge and Kriegeskorte, Nikolaus and Zahn, Roland and Strenziok, Maren and Heinecke, Armin and Grafman, Jordan},
-  title     = {Neural correlates of trust},
-  journal   = {Proceedings of the National Academy of Sciences},
-  year      = {2007},
-  volume    = {104},
-  number    = {50},
-  pages     = {20084--20089},
-  publisher = {National Acad Sciences},
-}
-
-@Article{kramer1996collective,
-  author    = {Kramer, Roderick M and Brewer, Marilynn B and Hanna, Benjamin A},
-  title     = {Collective trust and collective action},
-  journal   = {Trust in organizations: Frontiers of theory and research},
-  year      = {1996},
-  pages     = {357--389},
-  publisher = {Thousand Oaks CA: Sage Publications},
-}
-
-@Book{kramer2006organizational,
-  title     = {Organizational trust: A reader},
-  publisher = {Oxford University Press on Demand},
-  year      = {2006},
-  author    = {Kramer, Roderick Moreland},
-}
-
-@InProceedings{kennedy2013building,
-  author    = {Kennedy, William G and Krueger, Frank},
-  title     = {Building a cognitive model of social trust within ACT-R},
-  booktitle = {2013 AAAI Spring Symposium Series},
-  year      = {2013},
-}
-
-@Article{kelley1970social,
-  author    = {Kelley, Harold H and Stahelski, Anthony J},
-  title     = {Social interaction basis of cooperators' and competitors' beliefs about others.},
-  journal   = {Journal of personality and social psychology},
-  year      = {1970},
-  volume    = {16},
-  number    = {1},
-  pages     = {66 -- 91},
-  publisher = {American Psychological Association},
-}
-
-@Article{Kelley1970,
-  author    = {Kelley, Harold H and Stahelski, Anthony J},
-  title     = {Social interaction basis of cooperators' and competitors' beliefs about others.},
-  journal   = {Journal of personality and social psychology},
-  year      = {1970},
-  volume    = {16},
-  number    = {1},
-  pages     = {66},
-  publisher = {American Psychological Association},
-}
-
-@InCollection{foppa1995mutual,
-  author    = {Foppa, Klaus},
-  title     = {On mutual understanding and agreement in dialogues},
-  booktitle = {Mutualities in dialogue},
-  publisher = {Cambridge University Press},
-  year      = {1995},
-  editor    = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
-  address   = {Cambridge, UK},
-}
-
-@Article{eisenberg1984ambiguity,
-  author    = {Eisenberg, Eric M},
-  title     = {Ambiguity as strategy in organizational communication},
-  journal   = {Communication monographs},
-  year      = {1984},
-  volume    = {51},
-  number    = {3},
-  pages     = {227--242},
-  publisher = {Taylor \& Francis},
-}
-
-@Article{deutsch1958trust,
-  author    = {Deutsch, Morton},
-  title     = {Trust and suspicion},
-  journal   = {Journal of conflict resolution},
-  year      = {1958},
-  volume    = {2},
-  number    = {4},
-  pages     = {265--279},
-  publisher = {Sage Publications Sage CA: Thousand Oaks, CA},
-}
-
-@InCollection{clark1987collaborating,
-  author    = {Clark, Herbert H and Schaefer, Edward F},
-  title     = {Collaborating on contributions to conversations},
-  booktitle = {Language and cognitive processes},
-  publisher = {Taylor \& Francis},
-  year      = {1987},
-  volume    = {2},
-  number    = {1},
-  pages     = {19--41},
-}
-
-@Book{clark1996using,
-  title     = {Using language},
-  publisher = {Cambridge university press},
-  year      = {1996},
-  author    = {Clark, Herbert H},
-  address   = {Cambridge, UK},
-}
-
-@Article{carmon2013,
-  author    = {Carmon , Anna F.},
-  title     = {Is It Necessary to be Clear? An Examination of Strategic Ambiguity in Family Business Mission Statements},
-  journal   = {Qualitative Research Reports in Communication},
-  year      = {2013},
-  volume    = {14},
-  number    = {1},
-  pages     = {87--96},
-  doi       = {10.1080/17459435.2013.835346},
-  eprint    = {https://doi.org/10.1080/17459435.2013.835346},
-  publisher = {Routledge},
-}
-
-@InCollection{boonholmes1991,
-  author    = {Boon, S.D. and Holmes, John G},
-  title     = {The dynamics of interpersonal trust: Resolving uncertainty in the face of risk},
-  booktitle = {Cooperation and Prosocial Behavior},
-  publisher = {Cambridge University Press},
-  year      = {1991},
-  pages     = {190 -- 211},
-  address   = {New York, NY},
-}
-
-@Article{bhattacharya1998formal,
-  author    = {Bhattacharya, Rajeev and Devinney, Timothy M and Pillutla, Madan M},
-  title     = {A formal model of trust based on outcomes},
-  journal   = {Academy of management review},
-  year      = {1998},
-  volume    = {23},
-  number    = {3},
-  pages     = {459--472},
-  publisher = {Academy of Management Briarcliff Manor, NY 10510},
-}
-
-@Article{berg1995trust,
-  author    = {Berg, Joyce and Dickhaut, John and McCabe, Kevin},
-  title     = {Trust, reciprocity, and social history},
-  journal   = {Games and economic behavior},
-  year      = {1995},
-  volume    = {10},
-  number    = {1},
-  pages     = {122--142},
-  publisher = {Elsevier},
-}
-
-@Book{bach2001linguistic,
-  title     = {Linguistic Communication and Speech acts},
-  publisher = {MIT Press},
-  year      = {2001},
-  author    = {Bach, Kent and Harnish, Robert M.},
-  address   = {Cambridge, MA},
-}
-
-@Article{axelrod1980,
-  author  = {Robert Axelrod},
-  title   = {Effective Choice in the Prisoner's Dilemma},
-  journal = {Journal of Conflict Resolution},
-  year    = {1980},
-  volume  = {24},
-  number  = {1},
-  pages   = {3-25},
-}
-
-@Article{,
-}
-
-@TechReport{,
-}
-
-@Book{ossarichardson2019,
-  title     = {A history of ambiguity},
-  publisher = {Princeton University Press},
-  year      = {2019},
-  author    = {Ossa-Richardson, Anthony},
-}
-
-@Book{empson2004seven,
-  title     = {Seven types of ambiguity},
-  publisher = {Random House},
-  year      = {2004},
-  author    = {Empson, William},
-}
-
-@Book{pinker2015sense,
-  title     = {The sense of style: The thinking person's guide to writing in the 21st century},
-  publisher = {Penguin Books},
-  year      = {2015},
-  author    = {Pinker, Steven},
-}
-
-@Book{cushing1994fatal,
-  title     = {Fatal words: Communication clashes and aircraft crashes},
-  publisher = {University of Chicago Press},
-  year      = {1994},
-  author    = {Cushing, Steven},
-  address   = {Chicago},
-}
-
-@Misc{sikos2019,
-  author = {Sikos, Les and Venhuizen, Noortje and Drenhaus, Heiner and Crocker, Matthew},
-  title  = {Reevaluating Pragmatic Reasoning in Web-based Language Games},
-  month  = {04},
-  year   = {2019},
-  doi    = {10.13140/RG.2.2.30535.14249},
-}
-
-@Article{franke2016reasoning,
-  author    = {Franke, Michael and Degen, Judith},
-  title     = {Reasoning in reference games: Individual-vs. population-level probabilistic modeling},
-  journal   = {PloS one},
-  year      = {2016},
-  volume    = {11},
-  number    = {5},
-  pages     = {e0154854},
-  publisher = {Public Library of Science},
-}
-
-@Article{Borghi2019,
-  author   = {Anna M. Borghi and Laura Barca and Ferdinand Binkofski and Cristiano Castelfranchi and Giovanni Pezzulo and Luca Tummolini},
-  title    = {Words as social tools: Language, sociality and inner grounding in abstract concepts},
-  journal  = {Physics of Life Reviews},
-  year     = {2019},
-  volume   = {29},
-  pages    = {120 - 153},
-  issn     = {1571-0645},
-  abstract = {The paper introduces a new perspective on abstract concepts (e.g. â€œfreedomâ€) and their associate words representation, the Words As social Tools (WAT) view. Traditional theories conceptualize language as a way to index referents, a shortcut to access meaning, or a way to access meaning through words associations. WAT goes beyond these theories by identifying additional functions of words and language: words are tools helping us to perform actions and change the state of our social environment, and language is a means to improve our thought abilities, to control our behavior and plays a predictive role, helping us to form categories. Most importantly, WAT proposes that language and sociality â€“ along with interoceptive and metacognitive processes â€“ are key for the grounding of abstract concepts (ACs) that are more complex, variable, and more detached from perceptual and motor experience than concrete concepts (CCs). We highlight four tenets of WAT and discuss each of them in light of recent evidence: a. acquisition: compared to concrete concepts, the acquisition of abstract concepts relies more on social and linguistic inputs; b. brain representation: abstract concepts recruit more linguistic and social brain areas; c. mouth activation: due to the relevance of language for representing them, abstract concepts activate more the oral motor system; d. linguistic variability: abstract concepts are more affected by differences between spoken languages. We discuss evidence supporting these four tenets of WAT, and its advantages and limitations compared to other views on abstract concepts. Finally, we outline a conceptual proposal that specifies how internal models supporting the representation and processing of ACs can be grounded on interoceptive, metacognitive, social, and linguistic experience.},
-  doi      = {https://doi.org/10.1016/j.plrev.2018.12.001},
-  keywords = {Abstract concepts, Embodied and grounded cognition, Inner speech, Social cognition, Language, Metacognition},
-  url      = {http://www.sciencedirect.com/science/article/pii/S1571064518301271},
-}
-
-@Article{Friston:2015,
-  author    = {Friston, Karl and Rigoli, Francesco and Ognibene, Dimitri and Mathys, Christoph and Fitzgerald, Thomas and Pezzulo, Giovanni},
-  title     = {Active inference and epistemic value},
-  journal   = {Cognitive Neuroscience},
-  year      = {2015},
-  volume    = {6},
-  pages     = {187-214},
-  abstract  = { We offer a formal treatment of choice behaviour based on the premise that agents minimise the expected free energy of future outcomes. Crucially, the negative free energy or quality of a policy can be decomposed into extrinsic and epistemic (or intrinsic) value. Minimising expected free energy is therefore equivalent to maximising extrinsic value or expected utility (defined in terms of prior preferences or goals), while maximising information gain or intrinsic value (reducing uncertainty about the causes of valuable outcomes). The resulting scheme resolves the exploration-exploitation dilemma: epistemic value is maximised until there is no further information gain, after which exploitation is assured through maximisation of extrinsic value. This is formally consistent with the Infomax principle, generalising formulations of active vision based upon salience (Bayesian surprise) and optimal decisions based on expected utility and risk-sensitive (Kullback-Leibler) control. Furthermore, as with previous active inference formulations of discrete (Markovian) problems, ad hoc softmax parameters become the expected (Bayes-optimal) precision of beliefs about, or confidence in, policies. This article focuses on the basic theory, illustrating the ideas with simulations. A key aspect of these simulations is the similarity between precision updates and dopaminergic discharges observed in conditioning paradigms. },
-  doi       = {10.1080/17588928.2015.1020053},
-  eprint    = {http://dx.doi.org/10.1080/17588928.2015.1020053},
-  owner     = {mvbutz},
-  timestamp = {2015.02.22},
-}
-
-@InCollection{Butz:2017a,
-  author    = {Butz, Martin V.},
-  title     = {Which structures are out there? Learning predictive compositional concepts based on social sensorimotor explorations},
-  booktitle = {Philosophy and Predictive Processing},
-  publisher = {MIND Group},
-  year      = {2017},
-  editor    = {Metzinger, Thomas K. and Wiese, Wanja},
-  address   = {Frankfurt am Main},
-  abstract  = {How do we learn to think about our world in a flexible, compositional manner? What is the actual content of a particular thought? How do we become language ready? I argue that free energy-based inference processes, which determine the learning of predictive encodings, need to incorporate additional structural learning biases that reflect those structures of our world that are behaviorally relevant for us. In particular, I argue that the inference processes and thus the resulting predictive encodings should enable (i) the distinction of space from entities, with their perceptually and behaviorally relevant properties, (ii) the flexible, temporary activation of relative spatial relations between different entities, (iii) the dynamic adaptation of the involved, distinct encodings while executing, observing, or imagining particular interactions, and (iv) the development of a - probably motor-grounded - concept of forces, which predictively encodes the results of relative spatial and property manipulations dynamically over time. Furthermore, seeing that entity interactions typically have a beginning and an end, free energy-based inference should be additionally biased towards the segmentation of continuous sensorimotor interactions and sensory experiences into events and event boundaries. Thereby, events may be characterized by particular sets of active predictive encodings. Event boundaries, on the other hand, identify those situational aspects that are critical for the commencement or the termination of a particular event, such as the establishment of object contact and contact release. I argue that the development of predictive event encodings naturally lead to the development of conceptual encodings and the possibility of composing these encodings in a highly flexible, semantic manner. Behavior is generated by means of active inference. The addition of internal motivations in the form of homeostatic variables focusses our behavior - including attention and thought - on those environmental interactions that are motivationally-relevant, thus continuously striving for internal homeostasis in a goal-directed manner. As a consequence, behavior focusses cognitive development towards (believed) bodily and cognitively (including socially) relevant aspects. The capacity to integrate tools and other humans into our minds, as well as the motivation to flexibly interact with them, seem to open up the possibility of assigning roles - such as actors, instruments, and recipients - when observing, executing, or imagining particular environmental interactions. Moreover, in conjunction with predictive event encodings, this tool- and socially-oriented mental flexibilization fosters perspective taking, reasoning, and other forms of mentalizing. Finally, I discuss how these structures and mechanisms are exactly those that seem necessary to make our minds language ready.},
-  doi       = {10.15502/9783958573093},
-  issn      = {9783958573093},
-  journal   = {Philosophy and Predictive Processing},
-  keywords  = {Embodiment, Predictive encodings, Language, Social interactions, Anticipatory behavior, Homeostasis, Cooperation, Free energy principle, Event segmentation theory, Compositional concepts, Sensorimotor learning},
-  language  = {English},
-  refid     = {8},
-}
-
-@Article{Butz:2016,
-  author    = {Butz, Martin V.},
-  title     = {Towards a Unified Sub-Symbolic Computational Theory of Cognition},
-  journal   = {Frontiers in Psychology},
-  year      = {2016},
-  volume    = {7},
-  number    = {925},
-  issn      = {1664-1078},
-  abstract  = {BACKGROUND: This paper proposes how various disciplinary theories of cognition may be combined into a unifying, sub-symbolic, computational theory of cognition. The following theories are considered for integration: psychological theories, including the theory of event coding, event segmentation theory, the theory of anticipatory behavioral control, and concept development; artificial intelligence and machine learning theories, including reinforcement learning and generative artificial neural networks; and theories from theoretical and computational neuroscience, including predictive coding and free energy-based inference. In the light of such a potential unification, it is discussed how abstract cognitive, conceptualized knowledge and understanding may be learned from actively gathered sensorimotor experiences. The unification rests on the free energy-based inference principle, which essentially implies that the brain builds a predictive, generative model of its environment. Neural activity-oriented inference causes the continuous adaptation of the currently active predictive encodings. Neural structure-oriented inference causes the longer term adaptation of the developing generative model as a whole. Finally, active inference strives for maintaining internal homeostasis, causing goal-directed motor behavior. To learn abstract, hierarchical encodings, however, it is proposed that free energy-based inference needs to be enhanced with structural priors, which bias cognitive development toward the formation of particular, behaviorally suitable encoding structures. As a result, it is hypothesized how abstract concepts can develop from, and thus how they are structured by and grounded in, sensorimotor experiences. Moreover, it is sketched-out how symbol-like thought can be generated by a temporarily active set of predictive encodings, which constitute a distributed neural attractor in the form of an interactive free-energy minimum. The activated, interactive network attractor essentially characterizes the semantics of a concept or a concept composition, such as an actual or imagined situation in our environment. Temporal successions of attractors then encode unfolding semantics, which may be generated by a behavioral or mental interaction with an actual or imagined situation in our environment. Implications, further predictions, possible verification, and falsifications, as well as potential enhancements into a fully spelled-out unified theory of cognition are discussed at the end of the paper.},
-  doi       = {10.3389/fpsyg.2016.00925},
-  owner     = {mvbutz},
-  timestamp = {2016.06.22},
-}
-
-@Article{shafto2012learning,
-  author    = {Shafto, Patrick and Goodman, Noah D and Frank, Michael C},
-  title     = {Learning from others: The consequences of psychological reasoning for human learning},
-  journal   = {Perspectives on Psychological Science},
-  year      = {2012},
-  volume    = {7},
-  number    = {4},
-  pages     = {341--351},
-  publisher = {Sage Publications Sage CA: Los Angeles, CA},
-}
-
-@InCollection{jones1965acts,
-  author    = {Jones, Edward E and Davis, Keith E},
-  title     = {From acts to dispositions the attribution process in person perception},
-  booktitle = {Advances in experimental social psychology},
-  publisher = {Elsevier},
-  year      = {1965},
-  volume    = {2},
-  pages     = {219--266},
-}
-
-@Article{belardinelli2016s,
-  author    = {Belardinelli, Anna and Stepper, Madeleine Y and Butz, Martin V},
-  title     = {It's in the eyes: Planning precise manual actions before execution},
-  journal   = {Journal of vision},
-  year      = {2016},
-  volume    = {16},
-  number    = {1},
-  pages     = {1--18},
-  publisher = {The Association for Research in Vision and Ophthalmology},
-}
-
-@Article{belardinelli2018mental,
-  author    = {Belardinelli, Anna and Lohmann, Johannes and Farn{\`e}, Alessandro and Butz, Martin V},
-  title     = {Mental space maps into the future},
-  journal   = {Cognition},
-  year      = {2018},
-  volume    = {176},
-  pages     = {65--73},
-  publisher = {Elsevier},
-}
-
-@Article{lohmann2019hands,
-  author    = {Lohmann, Johannes and Belardinelli, Anna and Butz, Martin V},
-  title     = {Hands Ahead in Mind and Motion: Active Inference in Peripersonal Hand Space},
-  journal   = {Vision},
-  year      = {2019},
-  volume    = {3},
-  number    = {2},
-  pages     = {15},
-  doi       = {doi.org/10.3390/vision3020015},
-  publisher = {Multidisciplinary Digital Publishing Institute},
-}
-
-@Article{federmeier2002picture,
-  author    = {Federmeier, Kara D and Kutas, Marta},
-  title     = {Picture the difference: Electrophysiological investigations of picture processing in the two cerebral hemispheres},
-  journal   = {Neuropsychologia},
-  year      = {2002},
-  volume    = {40},
-  number    = {7},
-  pages     = {730--747},
-  publisher = {Elsevier},
-}
-
-@Article{levy2008expectation,
-  author    = {Levy, Roger},
-  title     = {Expectation-based syntactic comprehension},
-  journal   = {Cognition},
-  year      = {2008},
-  volume    = {106},
-  number    = {3},
-  pages     = {1126--1177},
-  publisher = {Elsevier},
-}
-
-@InProceedings{kelley1967attribution,
-  author       = {Kelley, Harold H},
-  title        = {Attribution theory in social psychology.},
-  booktitle    = {Nebraska symposium on motivation},
-  year         = {1967},
-  organization = {University of Nebraska Press},
-}
-
-@Article{Hayhoe:2003,
-  author               = {Hayhoe, M. M. and Shrivastava, A. and Mruczek, R. and Pelz, J. B.},
-  title                = {Visual memory and motor planning in a natural task},
-  journal              = {Journal of Vision},
-  year                 = {2003},
-  volume               = {3},
-  number               = {1},
-  pages                = {49--63},
-  issn                 = {1534-7362},
-  abstract             = {This paper investigates the temporal dependencies of natural vision by measuring eye and hand movements while subjects made a sandwich. The phenomenon of change blindness suggests these temporal dependencies might be limited. Our observations are largely consistent with this, suggesting that much natural vision can be accomplished with "just-in-time" representations. However, we also observe several aspects of performance that point to the need for some representation of the spatial structure of the scene that is built up over different fixations. Patterns of eye-hand coordination and fixation sequences suggest the need for planning and coordinating movements over a period of a few seconds. This planning must be in a coordinate frame that is independent of eye position, and thus requires a representation of the spatial structure in a scene that is built up over different fixations.},
-  address              = {Center for Visual Science, University of Rochester, Rochester, NY, USA. mary@cvs.rochester.edu},
-  bdsk-url-1           = {http://dx.doi.org/10:1167/3.1.6},
-  bdsk-url-2           = {10:1167/3.1.6},
-  citeulike-article-id = {265793},
-  citeulike-linkout-1  = {http://view.ncbi.nlm.nih.gov/pubmed/12678625},
-  citeulike-linkout-2  = {http://www.hubmed.org/display.cgi?uids=12678625},
-  date-added           = {2013-01-31 22:35:54 +0000},
-  date-modified        = {2013-02-01 10:36:48 +0000},
-  doi                  = {10:1167/3.1.6},
-  keywords             = {eye\_movements, gaze, haptic, memory, motor, perception, vision, visual\_memory},
-  owner                = {mvbutz},
-  pmid                 = {12678625},
-  posted-at            = {2005-07-26 21:13:59},
-  timestamp            = {2013.02.18},
-}
-
-@Article{Christiansen:2016,
-  author    = {Christiansen, M. H. and Chater, N.},
-  title     = {The Now-or-Never bottleneck: A fundamental constraint on language},
-  journal   = {Behavioral and Brain Sciences},
-  year      = {2016},
-  volume    = {39},
-  pages     = {1-18},
-  abstract  = {Memory is fleeting. New material rapidly obliterates previous material. How, then, can the brain deal successfully with the continual deluge of linguistic input? We argue that, to deal with this “Now-or-Never” bottleneck, the brain must compress and recode linguistic input as rapidly as possible. This observation has strong implications for the nature of language processing: (1) the language system must “eagerly” recode and compress linguistic input; (2) as the bottleneck recurs at each new representational level, the language system must build a multilevel linguistic representation; and (3) the language system must deploy all available information predictively to ensure that local linguistic ambiguities are dealt with “Right-First-Time”; once the original input is lost, there is no way for the language system to recover. This is “Chunk-and-Pass” processing. Similarly, language learning must also occur in the here and now, which implies that language acquisition is learning to process, rather than inducing, a grammar. Moreover, this perspective provides a cognitive foundation for grammaticalization and other aspects of language change. Chunk-and-Pass processing also helps explain a variety of core properties of language, including its multilevel representational structure and duality of patterning. This approach promises to create a direct relationship between psycholinguistics and linguistic theory. More generally, we outline a framework within which to integrate often disconnected inquiries into language processing, language acquisition, and language change and evolution.},
-  doi       = {10.1017/S0140525X1500031X},
-  owner     = {mvbutz},
-  timestamp = {2016.10.18},
-}
-
-@Book{Gaerdenfors:2014,
-  title     = {The Geometry of Meaning: Semantics Based on Conceptual Spaces},
-  publisher = {MIT Press},
-  year      = {2014},
-  author    = {Peter G{\"a}rdenfors},
-  address   = {Cambridge, MA},
-}
-
-@Article{Elman:2017,
-  author    = {Elman, J. L. and McRae, K.},
-  title     = {A model of event knowledge},
-  journal   = {Proceedings of the 39th Annual Conference of the Cognitive Science Society},
-  year      = {2017},
-  pages     = {337-342},
-  address   = {Austin, TX},
-  editor    = {G. Gunzelmann, A. Howes, T. Tenbrink, \& E. J. Davelaar},
-  publisher = {Cognitive Science Society},
-}
-
-@Article{Elman:2019,
-  author   = {Elman, J. L., and McRae, K.},
-  title    = {A model of event knowledge},
-  journal  = {Psychological Review},
-  year     = {2019},
-  volume   = {126},
-  pages    = {252–291},
-  abstract = {Our knowledge of events and situations in the world plays a critical role in our ability to understand what is happening around us, to predict what might happen next, and to comprehend language. What has not been so clear is the form and structure of this knowledge, how it is learned, and how it is deployed in real time. Despite many important theoretical proposals, often using different terminology such as schemas, scripts, frames, and event knowledge, developing a model that addresses these three questions (the form, learning, and use of such knowledge) has remained an elusive challenge for decades. In this article, we present a connectionist model of event knowledge that attempts to fill this gap. From sequences of activities, the model learns both the internal structure of activities as well as the temporal structure that organizes activity sequences. The model simulates a wide range of human behaviors that have been argued to involve the use of event knowledge and the temporal structure of events. Furthermore, it makes testable predictions about behaviors not yet observed. Most importantly, the model’s ability to learn event structure from experience is a novel solution to the question, “What is the form and representation of event knowledge?”},
-  doi      = {10.1037/rev0000133},
-}
-
-@Article{Fallgatter:2019tsi,
-  author  = {Helena Storchak and Ann-Christine Ehlis and Andreas J. Fallgatter},
-  title   = {Action monitoring alterations as indicators of predictive deficits in schizophrenia},
-  journal = {Topics in Cognitive Science},
-  year    = {to appear},
-}
-
-@Article{Cooper:2019tsi,
-  author  = {Richard Paul Cooper},
-  title   = {Action production and event comprehension as routine sequential behaviours},
-  journal = {Topics in Cognitive Science},
-  year    = {2019},
-  note    = {this volume},
-}
-
-@Article{Zacks:2019tsi,
-  author  = {David Stawarczyk and Matthew A. Bezdek and Jeffrey M. Zacks},
-  title   = {Constructing event representations: The role of the midline default network core},
-  journal = {Topics in Cognitive Science},
-  year    = {2019},
-  doi     = {doi.org/10.1111/tops.12450},
-}
-
-@Article{Paulin:2019tsi,
-  author  = {Michael G. Paulin and Joseph Cahill-Lane},
-  title   = {Events in early nervous system evolution},
-  journal = {Topics in Cognitive Science},
-  year    = {2019},
-  note    = {this volume},
-}
-
-@Article{Papafragou:2019tsi,
-  author  = {Ercenur {\"U}nal and Yue Ji and Anna Papafragou},
-  title   = {From event representation to linguistic meaning},
-  journal = {Topics in Cognitive Science},
-  year    = {to appear},
-}
-
-@Article{Baldwin:2019tsi,
-  author  = {Dare Ann Baldwin and Jessica E. Kosie},
-  title   = {How does the mind render streaming experience as events?},
-  journal = {Topics in Cognitive Science},
-  year    = {to appear},
-}
-
-@Article{Elsner:2019tsi,
-  author  = {Birgit Elsner and Maurits Adam},
-  title   = {Infants' prediction of action-events for human and non-human agents},
-  journal = {Topics in Cognitive Science},
-  year    = {2019},
-  note    = {this volume},
-}
-
-@Article{Bilkey:2019tsi,
-  author  = {David Bilkey and Charlotte Jensen},
-  title   = {Neural markers of event boundaries},
-  journal = {Topics in Cognitive Science},
-  year    = {2019},
-  note    = {this volume},
-}
-
-@Article{McRae:2019tsi,
-  author  = {Ken McRae and Kevin S. Brown and Jeffrey L. Elman},
-  title   = {Prediction-based learning and processing of event knowledge},
-  journal = {Topics in Cognitive Science},
-  year    = {2019},
-  note    = {this volume},
-}
-
-@Article{Knott:2019tsi,
-  author  = {Alistair Knott and Martin Takac},
-  title   = {Roles for event representations in sensorimotor experience, memory formation and language processing},
-  journal = {Topics in Cognitive Science},
-  year    = {to appear},
-}
-
-@Article{DuBrow:2019tsi,
-  author  = {Yeon Soon Shin and Sarah DuBrow},
-  title   = {Structuring memory through inference-based event segmentation},
-  journal = {Topics in Cognitive Science},
-  year    = {to appear},
-}
-
-@Book{Hohwy:2013,
-  title     = {The Predictive Mind},
-  publisher = {Oxford University Press},
-  year      = {2013},
-  author    = {Jakob Hohwy},
-  address   = {Oxford, UK},
-  owner     = {mvbutz},
-  timestamp = {2016.01.27},
-}
-
-@Book{Clark:2016,
-  title     = {Surfing Uncertainty: Prediction, action and the embodied mind},
-  publisher = {Oxford University Press},
-  year      = {2016},
-  author    = {Andy Clark},
-  address   = {Oxford, UK},
-  owner     = {mvbutz},
-  timestamp = {2016.03.01},
-}
-
-@Comment{jabref-meta: databaseType:bibtex;}
+@article{valley1995friends,
+	Author = {Valley, Kathleen L and Neale, Margaret A and Mannix, Elizabeth A},
+	Journal = {Research on negotiation in organizations},
+	Pages = {65--94},
+	Publisher = {JAI PRESS LTD.},
+	Title = {Friends, lovers, colleagues, strangers: The effects of relationships on the process and outcome of dyadic negotiations},
+	Volume = {5},
+	Year = {1995}}
+
+@article{susan1991dynamics,
+	Author = {Susan, D and Holmes, John G},
+	Journal = {Cooperation and Prosocial Behavior; Cambridge University Press: New York, NY, USA},
+	Pages = {190},
+	Title = {The dynamics of interpersonal trust: Resolving uncertainty in the face of risk},
+	Year = {1991}}
+
+@incollection{Susan1991,
+	Address = {Cambridge, UK},
+	Author = {Susan, D and Holmes, John G},
+	Booktitle = {Cooperation and prosocial behavior},
+	Editor = {R.A. Hinde and J. Groebel},
+	Journal = {Cooperation and Prosocial Behavior; Cambridge University Press: New York, NY, USA},
+	Pages = {190 -- 211},
+	Publisher = {Cambridge University Press},
+	Title = {The dynamics of interpersonal trust: Resolving uncertainty in the face of risk},
+	Year = {1991}}
+
+@article{shapiro1992business,
+	Author = {Shapiro, Debra L and Sheppard, Blair H and Cheraskin, Lisa},
+	Journal = {Negotiation journal},
+	Number = {4},
+	Pages = {365--377},
+	Publisher = {Wiley Online Library},
+	Title = {Business on a handshake},
+	Volume = {8},
+	Year = {1992}}
+
+@article{schlenker1973effects,
+	Author = {Schlenker, Barry R and Helm, Bob and Tedeschi, James T},
+	Journal = {Journal of personality and social psychology},
+	Number = {3},
+	Pages = {419},
+	Publisher = {American Psychological Association},
+	Title = {The effects of personality and situational variables on behavioral trust.},
+	Volume = {25},
+	Year = {1973}}
+
+@article{rotter1971public,
+	Author = {Rotter, Julian B and Stein, Donald K},
+	Journal = {Journal of Applied Social Psychology},
+	Number = {4},
+	Pages = {334--343},
+	Publisher = {Wiley Online Library},
+	Title = {Public attitudes toward the trustworthiness, competence, and altruism of twenty selected occupations},
+	Volume = {1},
+	Year = {1971}}
+
+@article{rotter1971generalized,
+	Author = {Rotter, Julian B},
+	Journal = {American psychologist},
+	Number = {5},
+	Pages = {443},
+	Publisher = {American Psychological Association},
+	Title = {Generalized expectancies for interpersonal trust.},
+	Volume = {26},
+	Year = {1971}}
+
+@book{rommetveit1974message,
+	Address = {New York},
+	Author = {Rommetveit, Ragnar},
+	Publisher = {John Wiley \& Sons},
+	Title = {On message structure: A framework for the study of language and communication.},
+	Year = {1974}}
+
+@article{rempel1985trust,
+	Author = {Rempel, John K and Holmes, John G and Zanna, Mark P},
+	Journal = {Journal of personality and social psychology},
+	Number = {1},
+	Pages = {95},
+	Publisher = {American Psychological Association},
+	Title = {Trust in close relationships.},
+	Volume = {49},
+	Year = {1985}}
+
+@book{rapoport1965prisoner,
+	Author = {Rapoport, Anatol and Chammah, Albert M and Orwant, Carol J},
+	Publisher = {University of Michigan press},
+	Title = {Prisoner's dilemma: A study in conflict and cooperation},
+	Volume = {165},
+	Year = {1965}}
+
+@book{pascale1981art,
+	Address = {New York},
+	Author = {Pascale, Richard Tanner and Athos, Anthony G},
+	Journal = {Business Horizons},
+	Pages = {83--85},
+	Publisher = {Simon \& Schuster},
+	Title = {The art of {Japanese} management},
+	Year = {1981}}
+
+@article{murray1997leap,
+	Author = {Murray, Sandra L and Holmes, John G},
+	Journal = {Personality and social psychology Bulletin},
+	Number = {6},
+	Pages = {586--604},
+	Publisher = {Sage Publications Sage CA: Thousand Oaks, CA},
+	Title = {A leap of faith? Positive illusions in romantic relationships},
+	Volume = {23},
+	Year = {1997}}
+
+@incollection{mohr1983implications,
+	Author = {Mohr, Lawrence B},
+	Booktitle = {Organizational effectiveness},
+	Editor = {Cameron, Kim S. and Whetten, David A.},
+	Pages = {225--239},
+	Publisher = {Elsevier},
+	Title = {The implications of effectiveness theory for managerial practice in the public sector},
+	Year = {1983}}
+
+@incollection{meltzoff2005imitation,
+	Author = {Meltzoff, Andrew N},
+	Journal = {Perspectives on imitation: From neuroscience to social science},
+	Pages = {55--77},
+	Title = {Imitation and other minds: The ``like me'' hypothesis},
+	Volume = {2},
+	Year = {2005}}
+
+@incollection{markova1995preface,
+	Address = {Cambridge, UK},
+	Author = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
+	Booktitle = {Mutualities in dialogue},
+	Editor = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
+	Publisher = {Cambridge University Press},
+	Title = {Preface},
+	Year = {1995}}
+
+@incollection{Markova1995,
+	Address = {Cambridge, UK},
+	Author = {Markova, Ivan{\'a} and Graumann, Carl F. and Foppa, Klaus},
+	Booktitle = {Mutualities in dialogie},
+	Editor = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
+	Publisher = {Cambridge University Press},
+	Title = {Preface},
+	Year = {1995}}
+
+@incollection{linell1995troubles,
+	Address = {Cambridge, UK},
+	Author = {Linell, Per},
+	Booktitle = {Mutualities in Dialogue},
+	Editor = {Markova, Ivan{\'a} and Graumann, Carl F. and Foppa, Klaus},
+	Publisher = {Cambridge University Press},
+	Title = {Troubles with mutualities: Toward a dialogical theory of miscommunication},
+	Year = {1995}}
+
+@article{lindskold1978trust,
+	Author = {Lindskold, Svenn},
+	Journal = {Psychological Bulletin},
+	Number = {4},
+	Pages = {772},
+	Publisher = {American Psychological Association},
+	Title = {Trust development, the GRIT proposal, and the effects of conciliatory acts on conflict and cooperation.},
+	Volume = {85},
+	Year = {1978}}
+
+@article{lewis1985trust,
+	Author = {Lewis, J David and Weigert, Andrew},
+	Journal = {Social forces},
+	Number = {4},
+	Pages = {967--985},
+	Publisher = {Oxford University Press},
+	Title = {Trust as a social reality},
+	Volume = {63},
+	Year = {1985}}
+
+@article{lewicki1996developing,
+	Author = {Lewicki, Roy J and Bunker, Barbara B and others},
+	Journal = {Trust in organizations: Frontiers of theory and research},
+	Pages = {139},
+	Title = {Developing and maintaining trust in work relationships},
+	Volume = {114},
+	Year = {1996}}
+
+@book{lewicki1995trust,
+	Author = {Lewicki, Roy J and Bunker, Barbara Benedict},
+	Publisher = {Jossey-Bass},
+	Title = {Trust in relationships: A model of development and decline.},
+	Year = {1995}}
+
+@article{krueger2007neural,
+	Author = {Krueger, Frank and McCabe, Kevin and Moll, Jorge and Kriegeskorte, Nikolaus and Zahn, Roland and Strenziok, Maren and Heinecke, Armin and Grafman, Jordan},
+	Journal = {Proceedings of the National Academy of Sciences},
+	Number = {50},
+	Pages = {20084--20089},
+	Publisher = {National Acad Sciences},
+	Title = {Neural correlates of trust},
+	Volume = {104},
+	Year = {2007}}
+
+@article{kramer1996collective,
+	Author = {Kramer, Roderick M and Brewer, Marilynn B and Hanna, Benjamin A},
+	Journal = {Trust in organizations: Frontiers of theory and research},
+	Pages = {357--389},
+	Publisher = {Thousand Oaks CA: Sage Publications},
+	Title = {Collective trust and collective action},
+	Year = {1996}}
+
+@book{kramer2006organizational,
+	Author = {Kramer, Roderick Moreland},
+	Publisher = {Oxford University Press on Demand},
+	Title = {Organizational trust: A reader},
+	Year = {2006}}
+
+@inproceedings{kennedy2013building,
+	Author = {Kennedy, William G and Krueger, Frank},
+	Booktitle = {2013 AAAI Spring Symposium Series},
+	Title = {Building a cognitive model of social trust within ACT-R},
+	Year = {2013}}
+
+@article{kelley1970social,
+	Author = {Kelley, Harold H and Stahelski, Anthony J},
+	Journal = {Journal of personality and social psychology},
+	Number = {1},
+	Pages = {66 -- 91},
+	Publisher = {American Psychological Association},
+	Title = {Social interaction basis of cooperators' and competitors' beliefs about others.},
+	Volume = {16},
+	Year = {1970}}
+
+@article{Kelley1970,
+	Author = {Kelley, Harold H and Stahelski, Anthony J},
+	Journal = {Journal of personality and social psychology},
+	Number = {1},
+	Pages = {66},
+	Publisher = {American Psychological Association},
+	Title = {Social interaction basis of cooperators' and competitors' beliefs about others.},
+	Volume = {16},
+	Year = {1970}}
+
+@incollection{foppa1995mutual,
+	Address = {Cambridge, UK},
+	Author = {Foppa, Klaus},
+	Booktitle = {Mutualities in dialogue},
+	Editor = {Markova, Ivan{\'a} and Graumann, Carl F., Foppa, Klaus},
+	Publisher = {Cambridge University Press},
+	Title = {On mutual understanding and agreement in dialogues},
+	Year = {1995}}
+
+@article{eisenberg1984ambiguity,
+	Author = {Eisenberg, Eric M},
+	Journal = {Communication monographs},
+	Number = {3},
+	Pages = {227--242},
+	Publisher = {Taylor \& Francis},
+	Title = {Ambiguity as strategy in organizational communication},
+	Volume = {51},
+	Year = {1984}}
+
+@article{deutsch1958trust,
+	Author = {Deutsch, Morton},
+	Journal = {Journal of conflict resolution},
+	Number = {4},
+	Pages = {265--279},
+	Publisher = {Sage Publications Sage CA: Thousand Oaks, CA},
+	Title = {Trust and suspicion},
+	Volume = {2},
+	Year = {1958}}
+
+@incollection{clark1987collaborating,
+	Author = {Clark, Herbert H and Schaefer, Edward F},
+	Booktitle = {Language and cognitive processes},
+	Number = {1},
+	Pages = {19--41},
+	Publisher = {Taylor \& Francis},
+	Title = {Collaborating on contributions to conversations},
+	Volume = {2},
+	Year = {1987}}
+
+@book{clark1996using,
+	Address = {Cambridge, UK},
+	Author = {Clark, Herbert H},
+	Publisher = {Cambridge university press},
+	Title = {Using language},
+	Year = {1996}}
+
+@article{carmon2013,
+	Author = {Carmon , Anna F.},
+	Doi = {10.1080/17459435.2013.835346},
+	Eprint = {https://doi.org/10.1080/17459435.2013.835346},
+	Journal = {Qualitative Research Reports in Communication},
+	Number = {1},
+	Pages = {87--96},
+	Publisher = {Routledge},
+	Title = {Is It Necessary to be Clear? An Examination of Strategic Ambiguity in Family Business Mission Statements},
+	Volume = {14},
+	Year = {2013},
+	Bdsk-Url-1 = {https://doi.org/10.1080/17459435.2013.835346}}
+
+@incollection{boonholmes1991,
+	Address = {New York, NY},
+	Author = {Boon, S.D. and Holmes, John G},
+	Booktitle = {Cooperation and Prosocial Behavior},
+	Pages = {190 -- 211},
+	Publisher = {Cambridge University Press},
+	Title = {The dynamics of interpersonal trust: Resolving uncertainty in the face of risk},
+	Year = {1991}}
+
+@article{bhattacharya1998formal,
+	Author = {Bhattacharya, Rajeev and Devinney, Timothy M and Pillutla, Madan M},
+	Journal = {Academy of management review},
+	Number = {3},
+	Pages = {459--472},
+	Publisher = {Academy of Management Briarcliff Manor, NY 10510},
+	Title = {A formal model of trust based on outcomes},
+	Volume = {23},
+	Year = {1998}}
+
+@article{berg1995trust,
+	Author = {Berg, Joyce and Dickhaut, John and McCabe, Kevin},
+	Journal = {Games and economic behavior},
+	Number = {1},
+	Pages = {122--142},
+	Publisher = {Elsevier},
+	Title = {Trust, reciprocity, and social history},
+	Volume = {10},
+	Year = {1995}}
+
+@book{bach2001linguistic,
+	Address = {Cambridge, MA},
+	Author = {Bach, Kent and Harnish, Robert M.},
+	Publisher = {MIT Press},
+	Title = {Linguistic Communication and Speech acts},
+	Year = {2001}}
+
+@article{axelrod1980,
+	Author = {Robert Axelrod},
+	Journal = {Journal of Conflict Resolution},
+	Number = {1},
+	Pages = {3-25},
+	Title = {Effective Choice in the Prisoner's Dilemma},
+	Volume = {24},
+	Year = {1980}}
+
+@book{ossarichardson2019,
+	Author = {Ossa-Richardson, Anthony},
+	Publisher = {Princeton University Press},
+	Title = {A history of ambiguity},
+	Year = {2019}}
+
+@book{empson2004seven,
+	Author = {Empson, William},
+	Publisher = {Random House},
+	Title = {Seven types of ambiguity},
+	Year = {2004}}
+
+@book{pinker2015sense,
+	Author = {Pinker, Steven},
+	Publisher = {Penguin Books},
+	Title = {The sense of style: The thinking person's guide to writing in the 21st century},
+	Year = {2015}}
+
+@book{cushing1994fatal,
+	Address = {Chicago},
+	Author = {Cushing, Steven},
+	Publisher = {University of Chicago Press},
+	Title = {Fatal words: Communication clashes and aircraft crashes},
+	Year = {1994}}
+
+@misc{sikos2019,
+	Author = {Sikos, Les and Venhuizen, Noortje and Drenhaus, Heiner and Crocker, Matthew},
+	Doi = {10.13140/RG.2.2.30535.14249},
+	Month = {04},
+	Title = {Reevaluating Pragmatic Reasoning in Web-based Language Games},
+	Year = {2019},
+	Bdsk-Url-1 = {https://doi.org/10.13140/RG.2.2.30535.14249}}
+
+@article{franke2016reasoning,
+	Author = {Franke, Michael and Degen, Judith},
+	Journal = {PloS one},
+	Number = {5},
+	Pages = {e0154854},
+	Publisher = {Public Library of Science},
+	Title = {Reasoning in reference games: Individual-vs. population-level probabilistic modeling},
+	Volume = {11},
+	Year = {2016}}
+
+@article{Borghi2019,
+	Abstract = {The paper introduces a new perspective on abstract concepts (e.g. {\^a}€{\oe}freedom{\^a}€) and their associate words representation, the Words As social Tools (WAT) view. Traditional theories conceptualize language as a way to index referents, a shortcut to access meaning, or a way to access meaning through words associations. WAT goes beyond these theories by identifying additional functions of words and language: words are tools helping us to perform actions and change the state of our social environment, and language is a means to improve our thought abilities, to control our behavior and plays a predictive role, helping us to form categories. Most importantly, WAT proposes that language and sociality {\^a}€`` along with interoceptive and metacognitive processes {\^a}€`` are key for the grounding of abstract concepts (ACs) that are more complex, variable, and more detached from perceptual and motor experience than concrete concepts (CCs). We highlight four tenets of WAT and discuss each of them in light of recent evidence: a. acquisition: compared to concrete concepts, the acquisition of abstract concepts relies more on social and linguistic inputs; b. brain representation: abstract concepts recruit more linguistic and social brain areas; c. mouth activation: due to the relevance of language for representing them, abstract concepts activate more the oral motor system; d. linguistic variability: abstract concepts are more affected by differences between spoken languages. We discuss evidence supporting these four tenets of WAT, and its advantages and limitations compared to other views on abstract concepts. Finally, we outline a conceptual proposal that specifies how internal models supporting the representation and processing of ACs can be grounded on interoceptive, metacognitive, social, and linguistic experience.},
+	Author = {Anna M. Borghi and Laura Barca and Ferdinand Binkofski and Cristiano Castelfranchi and Giovanni Pezzulo and Luca Tummolini},
+	Doi = {https://doi.org/10.1016/j.plrev.2018.12.001},
+	Issn = {1571-0645},
+	Journal = {Physics of Life Reviews},
+	Keywords = {Abstract concepts, Embodied and grounded cognition, Inner speech, Social cognition, Language, Metacognition},
+	Pages = {120 - 153},
+	Title = {Words as social tools: Language, sociality and inner grounding in abstract concepts},
+	Url = {http://www.sciencedirect.com/science/article/pii/S1571064518301271},
+	Volume = {29},
+	Year = {2019},
+	Bdsk-Url-1 = {http://www.sciencedirect.com/science/article/pii/S1571064518301271},
+	Bdsk-Url-2 = {https://doi.org/10.1016/j.plrev.2018.12.001}}
+
+@article{Friston:2015,
+	Abstract = { We offer a formal treatment of choice behaviour based on the premise that agents minimise the expected free energy of future outcomes. Crucially, the negative free energy or quality of a policy can be decomposed into extrinsic and epistemic (or intrinsic) value. Minimising expected free energy is therefore equivalent to maximising extrinsic value or expected utility (defined in terms of prior preferences or goals), while maximising information gain or intrinsic value (reducing uncertainty about the causes of valuable outcomes). The resulting scheme resolves the exploration-exploitation dilemma: epistemic value is maximised until there is no further information gain, after which exploitation is assured through maximisation of extrinsic value. This is formally consistent with the Infomax principle, generalising formulations of active vision based upon salience (Bayesian surprise) and optimal decisions based on expected utility and risk-sensitive (Kullback-Leibler) control. Furthermore, as with previous active inference formulations of discrete (Markovian) problems, ad hoc softmax parameters become the expected (Bayes-optimal) precision of beliefs about, or confidence in, policies. This article focuses on the basic theory, illustrating the ideas with simulations. A key aspect of these simulations is the similarity between precision updates and dopaminergic discharges observed in conditioning paradigms. },
+	Author = {Friston, Karl and Rigoli, Francesco and Ognibene, Dimitri and Mathys, Christoph and Fitzgerald, Thomas and Pezzulo, Giovanni},
+	Doi = {10.1080/17588928.2015.1020053},
+	Eprint = {http://dx.doi.org/10.1080/17588928.2015.1020053},
+	Journal = {Cognitive Neuroscience},
+	Owner = {mvbutz},
+	Pages = {187-214},
+	Timestamp = {2015.02.22},
+	Title = {Active inference and epistemic value},
+	Volume = {6},
+	Year = {2015},
+	Bdsk-Url-1 = {https://doi.org/10.1080/17588928.2015.1020053}}
+
+@incollection{Butz:2017a,
+	Abstract = {How do we learn to think about our world in a flexible, compositional manner? What is the actual content of a particular thought? How do we become language ready? I argue that free energy-based inference processes, which determine the learning of predictive encodings, need to incorporate additional structural learning biases that reflect those structures of our world that are behaviorally relevant for us. In particular, I argue that the inference processes and thus the resulting predictive encodings should enable (i) the distinction of space from entities, with their perceptually and behaviorally relevant properties, (ii) the flexible, temporary activation of relative spatial relations between different entities, (iii) the dynamic adaptation of the involved, distinct encodings while executing, observing, or imagining particular interactions, and (iv) the development of a - probably motor-grounded - concept of forces, which predictively encodes the results of relative spatial and property manipulations dynamically over time. Furthermore, seeing that entity interactions typically have a beginning and an end, free energy-based inference should be additionally biased towards the segmentation of continuous sensorimotor interactions and sensory experiences into events and event boundaries. Thereby, events may be characterized by particular sets of active predictive encodings. Event boundaries, on the other hand, identify those situational aspects that are critical for the commencement or the termination of a particular event, such as the establishment of object contact and contact release. I argue that the development of predictive event encodings naturally lead to the development of conceptual encodings and the possibility of composing these encodings in a highly flexible, semantic manner. Behavior is generated by means of active inference. The addition of internal motivations in the form of homeostatic variables focusses our behavior - including attention and thought - on those environmental interactions that are motivationally-relevant, thus continuously striving for internal homeostasis in a goal-directed manner. As a consequence, behavior focusses cognitive development towards (believed) bodily and cognitively (including socially) relevant aspects. The capacity to integrate tools and other humans into our minds, as well as the motivation to flexibly interact with them, seem to open up the possibility of assigning roles - such as actors, instruments, and recipients - when observing, executing, or imagining particular environmental interactions. Moreover, in conjunction with predictive event encodings, this tool- and socially-oriented mental flexibilization fosters perspective taking, reasoning, and other forms of mentalizing. Finally, I discuss how these structures and mechanisms are exactly those that seem necessary to make our minds language ready.},
+	Address = {Frankfurt am Main},
+	Author = {Butz, Martin V.},
+	Booktitle = {Philosophy and Predictive Processing},
+	Doi = {10.15502/9783958573093},
+	Editor = {Metzinger, Thomas K. and Wiese, Wanja},
+	Issn = {9783958573093},
+	Journal = {Philosophy and Predictive Processing},
+	Keywords = {Embodiment, Predictive encodings, Language, Social interactions, Anticipatory behavior, Homeostasis, Cooperation, Free energy principle, Event segmentation theory, Compositional concepts, Sensorimotor learning},
+	Language = {English},
+	Publisher = {MIND Group},
+	Refid = {8},
+	Title = {Which structures are out there? Learning predictive compositional concepts based on social sensorimotor explorations},
+	Year = {2017},
+	Bdsk-Url-1 = {https://doi.org/10.15502/9783958573093}}
+
+@article{Butz:2016,
+	Abstract = {BACKGROUND: This paper proposes how various disciplinary theories of cognition may be combined into a unifying, sub-symbolic, computational theory of cognition. The following theories are considered for integration: psychological theories, including the theory of event coding, event segmentation theory, the theory of anticipatory behavioral control, and concept development; artificial intelligence and machine learning theories, including reinforcement learning and generative artificial neural networks; and theories from theoretical and computational neuroscience, including predictive coding and free energy-based inference. In the light of such a potential unification, it is discussed how abstract cognitive, conceptualized knowledge and understanding may be learned from actively gathered sensorimotor experiences. The unification rests on the free energy-based inference principle, which essentially implies that the brain builds a predictive, generative model of its environment. Neural activity-oriented inference causes the continuous adaptation of the currently active predictive encodings. Neural structure-oriented inference causes the longer term adaptation of the developing generative model as a whole. Finally, active inference strives for maintaining internal homeostasis, causing goal-directed motor behavior. To learn abstract, hierarchical encodings, however, it is proposed that free energy-based inference needs to be enhanced with structural priors, which bias cognitive development toward the formation of particular, behaviorally suitable encoding structures. As a result, it is hypothesized how abstract concepts can develop from, and thus how they are structured by and grounded in, sensorimotor experiences. Moreover, it is sketched-out how symbol-like thought can be generated by a temporarily active set of predictive encodings, which constitute a distributed neural attractor in the form of an interactive free-energy minimum. The activated, interactive network attractor essentially characterizes the semantics of a concept or a concept composition, such as an actual or imagined situation in our environment. Temporal successions of attractors then encode unfolding semantics, which may be generated by a behavioral or mental interaction with an actual or imagined situation in our environment. Implications, further predictions, possible verification, and falsifications, as well as potential enhancements into a fully spelled-out unified theory of cognition are discussed at the end of the paper.},
+	Author = {Butz, Martin V.},
+	Doi = {10.3389/fpsyg.2016.00925},
+	Issn = {1664-1078},
+	Journal = {Frontiers in Psychology},
+	Number = {925},
+	Owner = {mvbutz},
+	Timestamp = {2016.06.22},
+	Title = {Towards a Unified Sub-Symbolic Computational Theory of Cognition},
+	Volume = {7},
+	Year = {2016},
+	Bdsk-Url-1 = {https://doi.org/10.3389/fpsyg.2016.00925}}
+
+@article{shafto2012learning,
+	Author = {Shafto, Patrick and Goodman, Noah D and Frank, Michael C},
+	Journal = {Perspectives on Psychological Science},
+	Number = {4},
+	Pages = {341--351},
+	Publisher = {Sage Publications Sage CA: Los Angeles, CA},
+	Title = {Learning from others: The consequences of psychological reasoning for human learning},
+	Volume = {7},
+	Year = {2012}}
+
+@incollection{jones1965acts,
+	Author = {Jones, Edward E and Davis, Keith E},
+	Booktitle = {Advances in experimental social psychology},
+	Pages = {219--266},
+	Publisher = {Elsevier},
+	Title = {From acts to dispositions the attribution process in person perception},
+	Volume = {2},
+	Year = {1965}}
+
+@article{belardinelli2016s,
+	Author = {Belardinelli, Anna and Stepper, Madeleine Y and Butz, Martin V},
+	Journal = {Journal of vision},
+	Number = {1},
+	Pages = {1--18},
+	Publisher = {The Association for Research in Vision and Ophthalmology},
+	Title = {It's in the eyes: Planning precise manual actions before execution},
+	Volume = {16},
+	Year = {2016}}
+
+@article{belardinelli2018mental,
+	Author = {Belardinelli, Anna and Lohmann, Johannes and Farn{\`e}, Alessandro and Butz, Martin V},
+	Journal = {Cognition},
+	Pages = {65--73},
+	Publisher = {Elsevier},
+	Title = {Mental space maps into the future},
+	Volume = {176},
+	Year = {2018}}
+
+@article{lohmann2019hands,
+	Author = {Lohmann, Johannes and Belardinelli, Anna and Butz, Martin V},
+	Doi = {doi.org/10.3390/vision3020015},
+	Journal = {Vision},
+	Number = {2},
+	Pages = {15},
+	Publisher = {Multidisciplinary Digital Publishing Institute},
+	Title = {Hands Ahead in Mind and Motion: Active Inference in Peripersonal Hand Space},
+	Volume = {3},
+	Year = {2019},
+	Bdsk-Url-1 = {https://doi.org/10.3390/vision3020015}}
+
+@article{federmeier2002picture,
+	Author = {Federmeier, Kara D and Kutas, Marta},
+	Journal = {Neuropsychologia},
+	Number = {7},
+	Pages = {730--747},
+	Publisher = {Elsevier},
+	Title = {Picture the difference: Electrophysiological investigations of picture processing in the two cerebral hemispheres},
+	Volume = {40},
+	Year = {2002}}
+
+@article{levy2008expectation,
+	Author = {Levy, Roger},
+	Journal = {Cognition},
+	Number = {3},
+	Pages = {1126--1177},
+	Publisher = {Elsevier},
+	Title = {Expectation-based syntactic comprehension},
+	Volume = {106},
+	Year = {2008}}
+
+@inproceedings{kelley1967attribution,
+	Author = {Kelley, Harold H},
+	Booktitle = {Nebraska symposium on motivation},
+	Organization = {University of Nebraska Press},
+	Title = {Attribution theory in social psychology.},
+	Year = {1967}}
+
+@article{Hayhoe:2003,
+	Abstract = {This paper investigates the temporal dependencies of natural vision by measuring eye and hand movements while subjects made a sandwich. The phenomenon of change blindness suggests these temporal dependencies might be limited. Our observations are largely consistent with this, suggesting that much natural vision can be accomplished with "just-in-time" representations. However, we also observe several aspects of performance that point to the need for some representation of the spatial structure of the scene that is built up over different fixations. Patterns of eye-hand coordination and fixation sequences suggest the need for planning and coordinating movements over a period of a few seconds. This planning must be in a coordinate frame that is independent of eye position, and thus requires a representation of the spatial structure in a scene that is built up over different fixations.},
+	Address = {Center for Visual Science, University of Rochester, Rochester, NY, USA. mary@cvs.rochester.edu},
+	Author = {Hayhoe, M. M. and Shrivastava, A. and Mruczek, R. and Pelz, J. B.},
+	Citeulike-Article-Id = {265793},
+	Citeulike-Linkout-1 = {http://view.ncbi.nlm.nih.gov/pubmed/12678625},
+	Citeulike-Linkout-2 = {http://www.hubmed.org/display.cgi?uids=12678625},
+	Date-Added = {2013-01-31 22:35:54 +0000},
+	Date-Modified = {2013-02-01 10:36:48 +0000},
+	Doi = {10:1167/3.1.6},
+	Issn = {1534-7362},
+	Journal = {Journal of Vision},
+	Keywords = {eye\_movements, gaze, haptic, memory, motor, perception, vision, visual\_memory},
+	Number = {1},
+	Owner = {mvbutz},
+	Pages = {49--63},
+	Pmid = {12678625},
+	Posted-At = {2005-07-26 21:13:59},
+	Timestamp = {2013.02.18},
+	Title = {Visual memory and motor planning in a natural task},
+	Volume = {3},
+	Year = {2003},
+	Bdsk-Url-1 = {http://dx.doi.org/10:1167/3.1.6},
+	Bdsk-Url-2 = {10:1167/3.1.6}}
+
+@article{Christiansen:2016,
+	Abstract = {Memory is fleeting. New material rapidly obliterates previous material. How, then, can the brain deal successfully with the continual deluge of linguistic input? We argue that, to deal with this ``Now-or-Never'' bottleneck, the brain must compress and recode linguistic input as rapidly as possible. This observation has strong implications for the nature of language processing: (1) the language system must ``eagerly'' recode and compress linguistic input; (2) as the bottleneck recurs at each new representational level, the language system must build a multilevel linguistic representation; and (3) the language system must deploy all available information predictively to ensure that local linguistic ambiguities are dealt with ``Right-First-Time''; once the original input is lost, there is no way for the language system to recover. This is ``Chunk-and-Pass'' processing. Similarly, language learning must also occur in the here and now, which implies that language acquisition is learning to process, rather than inducing, a grammar. Moreover, this perspective provides a cognitive foundation for grammaticalization and other aspects of language change. Chunk-and-Pass processing also helps explain a variety of core properties of language, including its multilevel representational structure and duality of patterning. This approach promises to create a direct relationship between psycholinguistics and linguistic theory. More generally, we outline a framework within which to integrate often disconnected inquiries into language processing, language acquisition, and language change and evolution.},
+	Author = {Christiansen, M. H. and Chater, N.},
+	Doi = {10.1017/S0140525X1500031X},
+	Journal = {Behavioral and Brain Sciences},
+	Owner = {mvbutz},
+	Pages = {1-18},
+	Timestamp = {2016.10.18},
+	Title = {The Now-or-Never bottleneck: A fundamental constraint on language},
+	Volume = {39},
+	Year = {2016},
+	Bdsk-Url-1 = {https://doi.org/10.1017/S0140525X1500031X}}
+
+@book{Gaerdenfors:2014,
+	Address = {Cambridge, MA},
+	Author = {Peter G{\"a}rdenfors},
+	Publisher = {MIT Press},
+	Title = {The Geometry of Meaning: Semantics Based on Conceptual Spaces},
+	Year = {2014}}
+
+@article{Elman:2017,
+	Address = {Austin, TX},
+	Author = {Elman, J. L. and McRae, K.},
+	Editor = {G. Gunzelmann, A. Howes, T. Tenbrink, \& E. J. Davelaar},
+	Journal = {Proceedings of the 39th Annual Conference of the Cognitive Science Society},
+	Pages = {337-342},
+	Publisher = {Cognitive Science Society},
+	Title = {A model of event knowledge},
+	Year = {2017}}
+
+@article{Elman:2019,
+	Abstract = {Our knowledge of events and situations in the world plays a critical role in our ability to understand what is happening around us, to predict what might happen next, and to comprehend language. What has not been so clear is the form and structure of this knowledge, how it is learned, and how it is deployed in real time. Despite many important theoretical proposals, often using different terminology such as schemas, scripts, frames, and event knowledge, developing a model that addresses these three questions (the form, learning, and use of such knowledge) has remained an elusive challenge for decades. In this article, we present a connectionist model of event knowledge that attempts to fill this gap. From sequences of activities, the model learns both the internal structure of activities as well as the temporal structure that organizes activity sequences. The model simulates a wide range of human behaviors that have been argued to involve the use of event knowledge and the temporal structure of events. Furthermore, it makes testable predictions about behaviors not yet observed. Most importantly, the model's ability to learn event structure from experience is a novel solution to the question, ``What is the form and representation of event knowledge?''},
+	Author = {Elman, J. L., and McRae, K.},
+	Doi = {10.1037/rev0000133},
+	Journal = {Psychological Review},
+	Pages = {252--291},
+	Title = {A model of event knowledge},
+	Volume = {126},
+	Year = {2019},
+	Bdsk-Url-1 = {https://doi.org/10.1037/rev0000133}}
+
+@article{Fallgatter:2019tsi,
+	Author = {Helena Storchak and Ann-Christine Ehlis and Andreas J. Fallgatter},
+	Journal = {Topics in Cognitive Science},
+	Title = {Action monitoring alterations as indicators of predictive deficits in schizophrenia},
+	Year = {to appear}}
+
+@article{Cooper:2019tsi,
+	Author = {Richard Paul Cooper},
+	Journal = {Topics in Cognitive Science},
+	Note = {this volume},
+	Title = {Action production and event comprehension as routine sequential behaviours},
+	Year = {2019}}
+
+@article{Zacks:2019tsi,
+	Author = {David Stawarczyk and Matthew A. Bezdek and Jeffrey M. Zacks},
+	Doi = {doi.org/10.1111/tops.12450},
+	Journal = {Topics in Cognitive Science},
+	Title = {Constructing event representations: The role of the midline default network core},
+	Year = {2019},
+	Bdsk-Url-1 = {https://doi.org/10.1111/tops.12450}}
+
+@article{Paulin:2019tsi,
+	Author = {Michael G. Paulin and Joseph Cahill-Lane},
+	Journal = {Topics in Cognitive Science},
+	Note = {this volume},
+	Title = {Events in early nervous system evolution},
+	Year = {2019}}
+
+@article{Papafragou:2019tsi,
+	Author = {Ercenur {\"U}nal and Yue Ji and Anna Papafragou},
+	Journal = {Topics in Cognitive Science},
+	Title = {From event representation to linguistic meaning},
+	Year = {to appear}}
+
+@article{Baldwin:2019tsi,
+	Author = {Dare Ann Baldwin and Jessica E. Kosie},
+	Journal = {Topics in Cognitive Science},
+	Title = {How does the mind render streaming experience as events?},
+	Year = {to appear}}
+
+@article{Elsner:2019tsi,
+	Author = {Birgit Elsner and Maurits Adam},
+	Journal = {Topics in Cognitive Science},
+	Note = {this volume},
+	Title = {Infants' prediction of action-events for human and non-human agents},
+	Year = {2019}}
+
+@article{Bilkey:2019tsi,
+	Author = {David Bilkey and Charlotte Jensen},
+	Journal = {Topics in Cognitive Science},
+	Note = {this volume},
+	Title = {Neural markers of event boundaries},
+	Year = {2019}}
+
+@article{McRae:2019tsi,
+	Author = {Ken McRae and Kevin S. Brown and Jeffrey L. Elman},
+	Journal = {Topics in Cognitive Science},
+	Note = {this volume},
+	Title = {Prediction-based learning and processing of event knowledge},
+	Year = {2019}}
+
+@article{Knott:2019tsi,
+	Author = {Alistair Knott and Martin Takac},
+	Journal = {Topics in Cognitive Science},
+	Title = {Roles for event representations in sensorimotor experience, memory formation and language processing},
+	Year = {to appear}}
+
+@article{DuBrow:2019tsi,
+	Author = {Yeon Soon Shin and Sarah DuBrow},
+	Journal = {Topics in Cognitive Science},
+	Title = {Structuring memory through inference-based event segmentation},
+	Year = {to appear}}
+
+@book{Hohwy:2013,
+	Address = {Oxford, UK},
+	Author = {Jakob Hohwy},
+	Owner = {mvbutz},
+	Publisher = {Oxford University Press},
+	Timestamp = {2016.01.27},
+	Title = {The Predictive Mind},
+	Year = {2013}}
+
+@book{Clark:2016,
+	Address = {Oxford, UK},
+	Author = {Andy Clark},
+	Owner = {mvbutz},
+	Publisher = {Oxford University Press},
+	Timestamp = {2016.03.01},
+	Title = {Surfing Uncertainty: Prediction, action and the embodied mind},
+	Year = {2016}}
+
+@inproceedings{frank2009informative,
+	Author = {Frank, Michael and Goodman, Noah and Lai, Peter and Tenenbaum, Joshua},
+	Booktitle = {Proceedings of the annual meeting of the cognitive science society},
+	Number = {31},
+	Title = {Informative communication in word production and word learning},
+	Volume = {31},
+	Year = {2009}}

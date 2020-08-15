@@ -65,6 +65,38 @@ Baker, C\BPBI L.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Baker%
+, Saxe%
+\BCBL {}\ \BBA {} Tenenbaum%
+}{%
+Baker%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+Baker:2011}
+\APACinsertmetastar {%
+Baker:2011}%
+\begin{APACrefauthors}%
+Baker, C\BPBI L.%
+, Saxe, R\BPBI R.%
+\BCBL {}\ \BBA {} Tenenbaum, J\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Bayesian Theory of Mind: Modeling Joint Belief-Desire
+  Attribution} {Bayesian theory of mind: Modeling joint belief-desire
+  attribution}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 33rd Annual Meeting of the Cognitive
+  Science Society} {Proceedings of the 33rd annual meeting of the cognitive
+  science society}\ (\BPGS\ 2469--2474).
+\newblock
+\APACaddressPublisher{}{Cognitive Science Society}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Bauer%
 \ \BBA {} Zirker%
 }{%
@@ -149,36 +181,6 @@ Belardinelli, A.%
   execution}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of vision}{16}{1}{1--18}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Blokpoel%
-\ \protect \BOthers {.}}{%
-Blokpoel%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2019}}%
-}]{%
-blokpoel2019pragmatic}
-\APACinsertmetastar {%
-blokpoel2019pragmatic}%
-\begin{APACrefauthors}%
-Blokpoel, M.%
-, Dingemanse, M.%
-, Woensdregt, M.%
-, Kachergis, G.%
-, B{\"o}gels, S.%
-, Toni, I.%
-\BCBL {}\ \BBA {} van Rooij, I.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2019}{Nov}{}.
-\newblock
-\APACrefbtitle {Pragmatic communicators can overcome asymmetry by exploiting
-  ambiguity.} {Pragmatic communicators can overcome asymmetry by exploiting
-  ambiguity.}
-\newblock
-\APACrefnote{10.31219/osf.io/q56xs}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -613,42 +615,6 @@ Grice, H\BPBI P.%
   (\BPG~26-40).
 \newblock
 \APACaddressPublisher{New York}{Academic Press}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Hawkins%
-, Stuhlm{\"u}ller%
-, Degen%
-\BCBL {}\ \BBA {} Goodman%
-}{%
-Hawkins%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2015}}%
-}]{%
-hawkins2015you}
-\APACinsertmetastar {%
-hawkins2015you}%
-\begin{APACrefauthors}%
-Hawkins, R\BPBI X.%
-, Stuhlm{\"u}ller, A.%
-, Degen, J.%
-\BCBL {}\ \BBA {} Goodman, N\BPBI D.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2015}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Why do you ask? Good questions provoke informative
-  answers.} {Why do you ask? good questions provoke informative
-  answers.}{\BBCQ}
-\newblock
-\BIn{} D\BPBI R\BPBI W\BPBI A\BPBI S\BPBI Y\BPBI J\BPBI M\BPBI T\BPBI J\BPBI
-  C\BPBI D\BPBI \BPBI M\BPBI P\BPBI P.~Noelle D.~C.\ (\BED), \APACrefbtitle
-  {Proceedings of 37th Annual Meeting of the Cognitive Scince Society}
-  {Proceedings of 37th annual meeting of the cognitive scince society}\ (\BPGS\
-  878--883).
-\newblock
-\APACaddressPublisher{Austin, TX}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
