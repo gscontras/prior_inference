@@ -55,7 +55,7 @@ model <- melt(sample,
                     measure.vars = c("MPost2_1","MPost2_2","MPost2_3","MPost2_4","MPost2_5","MPost2_6","MPost2_7","MPost2_8","MPost2_9"),
                     variable.name = "sliderNumber",value.name = "sliderValue")
 
-globalOpt <- melt(global,
+globalOpt <- melt(sample_global,
                   id.vars = c("CCode","obj1","obj2","obj3","obj1OC27","obj2OC27","obj3OC27"),
                   measure.vars = c("MPost2_1","MPost2_2","MPost2_3","MPost2_4","MPost2_5","MPost2_6","MPost2_7","MPost2_8","MPost2_9"),
                   variable.name = "sliderNumber",value.name = "sliderValue")
@@ -88,7 +88,7 @@ ggplot(allStats, aes(x=sliderNumber, y=sliderValue, fill = type)) +
   geom_bar(position=position_dodge(.9), colour="black", stat="identity") +
 #  coord_flip()+
   geom_errorbar(position=position_dodge(.9), width=.25, aes(ymin=sliderValue-ci, ymax=sliderValue+ci)) +
-  scale_fill_manual(values = c("white","ivory3","ivory4"), labels = c("Data","Opt. model","Non-opt. model"), name = "") +
+  scale_fill_manual(values = c("white","ivory2","ivory3","ivory4"), labels = c("Data","Globally opt.", "Indiv. opt", "Non-opt."), name = "") +
   theme_bw(base_size = 18)+
 #  labs(title="Example of class 22b2b")+
   ylab("Slider value (normalized)")+
@@ -102,4 +102,4 @@ ggplot(allStats, aes(x=sliderNumber, y=sliderValue, fill = type)) +
  ##        axis.title.y=element_text(size = 16),
 #         legend.text=element_text(size = 14))
   #ggsave("utterancePlot.pdf")
-ggsave("december_barplot_x3.pdf",width=5,height=4.5, units = "in")
+ggsave("barplot_x3_withGlobal.pdf",width=6.5,height=4.5, units = "in")
