@@ -15,11 +15,28 @@ qchisq(.95, df=1) # to display cut-off point
 g2
 abs(g2) > qchisq(.95, df=1) 
 
+# Global optimization. Simple model. 3 factors
+
 totalDiff <- 444.0236 - 437.178 
 g2 <- totalDiff*2 # G^2 value
 qchisq(.95, df=3) # to display cut-off point
 abs(g2) > qchisq(.995, df=3) 
 
+# AIC
+
+uniform <- 2*444.0234
+softness <- 2*437.734969805529 + 2
+obedience <- 2 * 437.533827791963 + 2
+lambda <- 2* 438.502038974456 + 2
+twoParam1 <- 2* 437.520680667863 + 4
+twoParam2 <- 2* 437.211683472852 + 4
+threeParam <- 2*437.178176260295 + 6
+
+globalResults <- matrix(0,2,7)
+colnames(globalResults) <- c("uniform", "softness", "obedience", "lambda", "twoParam1", "twoParam2", "three-Param")
+globalResults[1,] <- c(uniform, softness, obedience, lambda, twoParam1, twoParam2, threeParam)
+globalResults[2,] <- c(uniform-uniform, uniform-softness, uniform-obedience, uniform-lambda, uniform-twoParam1, 
+                       uniform-twoParam2, uniform-threeParam)
 
 # Does optimizing for preference softness and klFactor improve fit compared to just klFactor? No
 # Summing up all differences
@@ -53,7 +70,19 @@ g2 > qchisq(.95, df=82)
 
 totalDiff <- sum(x3_simple_kl$klFactor - x3_simple_kl$uniform) 
 g2 <- totalDiff*2
-abs(g2) > qchisq(.99, df=82)
+abs(g2) > qchisq(.995, df=82)
+
+# AIC 
+uniformInd <- sum(x3_simple_kl$uniform)*2 # 888.0472
+lambdaInd <- (sum(x3_simple_kl$klFactor))*2 + (2*82) # 
+softnessInd <- (sum(x3_simple_kl$preference))*2 + (2*82)
+obedienceInd <- (sum(x3_simple_kl$obedience))*2 + (2*82)
+
+indResults <- matrix(0,2,4)
+colnames(indResults) <- c("uniform", "softness", "obedience", "lambda")
+indResults[1,] <- c(uniform, softnessInd, obedienceInd, lambdaInd)
+indResults[2,] <- c(uniform-uniform, uniform-softnessInd, uniform-obedienceInd, uniform-lambdaInd)
+
 
 ######################### X4 Model comparison. Full RSA. Global optimization ####################################################
 ###################################### Likelihood ratio test ####################################################################
