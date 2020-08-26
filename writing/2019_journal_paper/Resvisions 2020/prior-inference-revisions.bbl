@@ -25,8 +25,8 @@ Bade, N.%
 \newblock
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Ambiguity in Shakespeare's Sonnet 138} {Ambiguity in
-  shakespeare's sonnet 138}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Ambiguity in {Shakespeare's} Sonnet 138} {Ambiguity in
+  {Shakespeare's} sonnet 138}.{\BBCQ}
 \newblock
 \BIn{} S.~Winkler\ (\BED), \APACrefbtitle {Ambiguity: Language and
   Communication} {Ambiguity: Language and communication}\ (\BPGS\ 89--109).
@@ -89,11 +89,12 @@ Baker, C\BPBI L.%
   Attribution} {Bayesian theory of mind: Modeling joint belief-desire
   attribution}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Proceedings of the 33rd Annual Meeting of the Cognitive
-  Science Society} {Proceedings of the 33rd annual meeting of the cognitive
-  science society}\ (\BPGS\ 2469--2474).
+\BIn{} L.~Carlson, C.~Hoelscher\BCBL {}\ \BBA {} T\BPBI F.~Shipley\ (\BEDS),
+  \APACrefbtitle {Proceedings of the 33rd {Annual} {Meeting} of the {Cognitive}
+  {Science} {Society}} {Proceedings of the 33rd {Annual} {Meeting} of the
+  {Cognitive} {Science} {Society}}\ (\BPGS\ 2469--2474).
 \newblock
-\APACaddressPublisher{}{Cognitive Science Society}.
+\APACaddressPublisher{Austin, TX}{Cognitive Science Society}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -253,10 +254,10 @@ Butz, M\BPBI V.%
 \newblock
 \APACrefYearMonthDay{2017}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Which structures are out there? Learning predictive
+{\BBOQ}\APACrefatitle {Which structures are out there? {Learning} predictive
   compositional concepts based on social sensorimotor explorations} {Which
-  structures are out there? learning predictive compositional concepts based on
-  social sensorimotor explorations}.{\BBCQ}
+  structures are out there? {Learning} predictive compositional concepts based
+  on social sensorimotor explorations}.{\BBCQ}
 \newblock
 \BIn{} T\BPBI K.~Metzinger\ \BBA {} W.~Wiese\ (\BEDS), \APACrefbtitle
   {Philosophy and Predictive Processing.} {Philosophy and predictive
@@ -312,10 +313,10 @@ Carmon, A\BPBI F.%
 \newblock
 \APACrefYearMonthDay{2013}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Is It Necessary to be Clear? An Examination of Strategic
-  Ambiguity in Family Business Mission Statements} {Is it necessary to be
-  clear? an examination of strategic ambiguity in family business mission
-  statements}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Is It Necessary to be Clear? {An} Examination of
+  Strategic Ambiguity in Family Business Mission Statements} {Is it necessary
+  to be clear? {An} examination of strategic ambiguity in family business
+  mission statements}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Qualitative Research Reports in
   Communication}{14}{1}{87--96}.
@@ -428,8 +429,11 @@ Evans, O.%
 {\BBOQ}\APACrefatitle {Learning the preferences of ignorant, inconsistent
   agents} {Learning the preferences of ignorant, inconsistent agents}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Thirtieth AAAI Conference on Artificial Intelligence.}
-  {Thirtieth aaai conference on artificial intelligence.}
+\BIn{} V.~Rus\ \BBA {} Z.~Markov\ (\BEDS), \APACrefbtitle {Proceedings of the
+  thirtieth {AAAI} Conference on Artificial Intelligence.} {Proceedings of the
+  thirtieth {AAAI} conference on artificial intelligence.}
+\newblock
+\APACaddressPublisher{Palo Alto, California}{AAAI Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -507,7 +511,7 @@ Franke, M.%
   population-level probabilistic modeling} {Reasoning in reference games:
   Individual-vs. population-level probabilistic modeling}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{PloS one}{11}{5}{e0154854}.
+\APACjournalVolNumPages{PloS One}{11}{5}{e0154854}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -702,7 +706,7 @@ Jara-Ettinger, J.%
   principles underlying commonsense psychology} {The na{\"\i}ve utility
   calculus: Computational principles underlying commonsense psychology}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Trends in cognitive sciences}{20}{8}{589--604}.
+\APACjournalVolNumPages{Trends in Cognitive Sciences}{20}{8}{589--604}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -759,10 +763,12 @@ Kao, J.%
 {\BBOQ}\APACrefatitle {Formalizing the pragmatics of metaphor understanding}
   {Formalizing the pragmatics of metaphor understanding}.{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Proceedings of the 36th {Annual} {Meeting} of the
-  {Cognitive} {Science} {Society} meeting of the Cognitive Science Society.}
-  {Proceedings of the 36th {Annual} {Meeting} of the {Cognitive} {Science}
-  {Society} meeting of the cognitive science society.}
+\BIn{} P.~Bello, M.~Guarini, M.~McShane\BCBL {}\ \BBA {} B.~Scassellati\
+  (\BEDS), \APACrefbtitle {Proceedings of the 36th {Annual} {Meeting} of the
+  {Cognitive} {Science} {Society}.} {Proceedings of the 36th {Annual} {Meeting}
+  of the {Cognitive} {Science} {Society}.}
+\newblock
+\APACaddressPublisher{Austin, TX}{Cognitive Science Society}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -785,8 +791,8 @@ Kelley, H\BPBI H.%
 {\BBOQ}\APACrefatitle {Attribution theory in social psychology.} {Attribution
   theory in social psychology.}{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {Nebraska symposium on motivation.} {Nebraska symposium
-  on motivation.}
+\BIn{} \APACrefbtitle {Nebraska {S}ymposium on {M}otivation} {Nebraska
+  {S}ymposium on {M}otivation}\ (\BVOL~15, \BPGS\ 192---238).
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -813,8 +819,8 @@ Kelley, H\BPBI H.%
   competitors' beliefs about others.} {Social interaction basis of cooperators'
   and competitors' beliefs about others.}{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of personality and social psychology}{16}{1}{66
-  -- 91}.
+\APACjournalVolNumPages{Journal of Personality and Social
+  Psychology}{16}{1}{66--91}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -924,7 +930,7 @@ Lucas, C\BPBI G.%
   preference understanding in children} {The child as econometrician: A
   rational model of preference understanding in children}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{PloS one}{9}{3}{e92160}.
+\APACjournalVolNumPages{PloS One}{9}{3}{e92160}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -952,7 +958,7 @@ McFarland, D\BPBI A.%
   situations} {Making the connection: Social bonding in courtship
   situations}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{American journal of sociology}{118}{6}{1596--1649}.
+\APACjournalVolNumPages{American Journal of Sociology}{118}{6}{1596--1649}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1131,9 +1137,9 @@ Sennet, A.%
 \newblock
 {\BBOQ}\APACrefatitle {Ambiguity} {Ambiguity}.{\BBCQ}
 \newblock
-\BIn{} E\BPBI N.~Zalta\ (\BED), \APACrefbtitle {The Stanford Encyclopedia of
-  Philosophy} {The stanford encyclopedia of philosophy}\ (\PrintOrdinal{Spring
-  2016}\ \BEd).
+\BIn{} E\BPBI N.~Zalta\ (\BED), \APACrefbtitle {The {S}tanford {E}ncyclopedia
+  of {P}hilosophy} {The {S}tanford {E}ncyclopedia of {P}hilosophy}\
+  (\PrintOrdinal{Spring 2016}\ \BEd).
 \newblock
 \APACaddressPublisher{}{Metaphysics Research Lab, Stanford University}.
 \newblock
@@ -1251,7 +1257,12 @@ Woensdregt, M.%
   perspective-taking.} {Modelling the co-development of word learning and
   perspective-taking.}{\BBCQ}
 \newblock
-\BIn{} \APACrefbtitle {CogSci.} {Cogsci.}
+\BIn{} A.~Papafragou, D.~Grodner, D.~Mirman\BCBL {}\ \BBA {} J.~Trueswell\
+  (\BEDS), \APACrefbtitle {Proceedings of 38th {Annual} {Meeting} of the
+  {Cognitive} {Scince} {Society}} {Proceedings of 38th {Annual} {Meeting} of
+  the {Cognitive} {Scince} {Society}}\ (\BPGS\ 1241--1246).
+\newblock
+\APACaddressPublisher{Austin, TX}{Cognitive Science Society}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1275,12 +1286,16 @@ Yoon, E\BPBI J.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2018}{}{}.
+\APACrefYearMonthDay{2018}{Dec}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Polite speech emerges from competing social goals}
-  {Polite speech emerges from competing social goals}.{\BBCQ}
+\APACrefbtitle {Polite speech emerges from competing social goals.} {Polite
+  speech emerges from competing social goals.}
 \newblock
-
+\APACaddressPublisher{}{PsyArXiv}.
+\newblock
+\begin{APACrefURL} \url{psyarxiv.com/67ne8} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.31234/osf.io/67ne8} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
