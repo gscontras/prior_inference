@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.2)  29 AUG 2020 17:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.2)  29 AUG 2020 18:11
 entering extended mode
 **./prior-inference-revisions.tex
 (prior-inference-revisions.tex
@@ -1105,62 +1105,62 @@ Package pdftex.def Info: images/barplot_x3_withGlobal.pdf  used on input line 7
  [20 <./images/x3_m24.pdf> <./images/x3_m11.pdf> <./images/barplot_x3_withGloba
 l.pdf>] [21] [22] [23]
 (prior-inference-revisions.bbl [24] [25] [26]) [27]
-<appendix/311.png, id=558, 142.3719pt x 142.3719pt>
+<appendix/311.png, id=552, 142.3719pt x 142.3719pt>
 File: appendix/311.png Graphic file (type png)
 <use appendix/311.png>
 Package pdftex.def Info: appendix/311.png  used on input line 966.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/211.png, id=559, 142.3719pt x 142.3719pt>
+<appendix/211.png, id=553, 142.3719pt x 142.3719pt>
 File: appendix/211.png Graphic file (type png)
 <use appendix/211.png>
 Package pdftex.def Info: appendix/211.png  used on input line 967.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/313.png, id=560, 142.3719pt x 142.3719pt>
+<appendix/313.png, id=554, 142.3719pt x 142.3719pt>
 File: appendix/313.png Graphic file (type png)
 <use appendix/313.png>
 Package pdftex.def Info: appendix/313.png  used on input line 968.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/212.png, id=561, 142.3719pt x 142.3719pt>
+<appendix/212.png, id=555, 142.3719pt x 142.3719pt>
 File: appendix/212.png Graphic file (type png)
 <use appendix/212.png>
 Package pdftex.def Info: appendix/212.png  used on input line 976.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/213.png, id=562, 142.3719pt x 142.3719pt>
+<appendix/213.png, id=556, 142.3719pt x 142.3719pt>
 File: appendix/213.png Graphic file (type png)
 <use appendix/213.png>
 Package pdftex.def Info: appendix/213.png  used on input line 977.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/222.png, id=563, 142.3719pt x 142.3719pt>
+<appendix/222.png, id=557, 142.3719pt x 142.3719pt>
 File: appendix/222.png Graphic file (type png)
 <use appendix/222.png>
 Package pdftex.def Info: appendix/222.png  used on input line 978.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/112.png, id=564, 142.3719pt x 142.3719pt>
+<appendix/112.png, id=558, 142.3719pt x 142.3719pt>
 File: appendix/112.png Graphic file (type png)
 <use appendix/112.png>
 Package pdftex.def Info: appendix/112.png  used on input line 988.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/131.png, id=565, 142.3719pt x 142.3719pt>
+<appendix/131.png, id=559, 142.3719pt x 142.3719pt>
 File: appendix/131.png Graphic file (type png)
 <use appendix/131.png>
 Package pdftex.def Info: appendix/131.png  used on input line 989.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/111.png, id=566, 142.3719pt x 142.3719pt>
+<appendix/111.png, id=560, 142.3719pt x 142.3719pt>
 File: appendix/111.png Graphic file (type png)
 <use appendix/111.png>
 Package pdftex.def Info: appendix/111.png  used on input line 990.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/133.png, id=567, 142.3719pt x 142.3719pt>
+<appendix/133.png, id=561, 142.3719pt x 142.3719pt>
 File: appendix/133.png Graphic file (type png)
 <use appendix/133.png>
 Package pdftex.def Info: appendix/133.png  used on input line 1007.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/122.png, id=568, 142.3719pt x 142.3719pt>
+<appendix/122.png, id=562, 142.3719pt x 142.3719pt>
 File: appendix/122.png Graphic file (type png)
 <use appendix/122.png>
 Package pdftex.def Info: appendix/122.png  used on input line 1008.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/232.png, id=569, 142.3719pt x 142.3719pt>
+<appendix/232.png, id=563, 142.3719pt x 142.3719pt>
 File: appendix/232.png Graphic file (type png)
 <use appendix/232.png>
 Package pdftex.def Info: appendix/232.png  used on input line 1009.
@@ -1186,7 +1186,7 @@ File: appendix/212.png Graphic file (type png)
 <use appendix/212.png>
 Package pdftex.def Info: appendix/212.png  used on input line 1032.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/221.png, id=570, 142.3719pt x 142.3719pt>
+<appendix/221.png, id=564, 142.3719pt x 142.3719pt>
 File: appendix/221.png Graphic file (type png)
 <use appendix/221.png>
 Package pdftex.def Info: appendix/221.png  used on input line 1033.
@@ -1207,12 +1207,12 @@ File: appendix/221.png Graphic file (type png)
 <use appendix/221.png>
 Package pdftex.def Info: appendix/221.png  used on input line 1052.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/231.png, id=571, 142.3719pt x 142.3719pt>
+<appendix/231.png, id=565, 142.3719pt x 142.3719pt>
 File: appendix/231.png Graphic file (type png)
 <use appendix/231.png>
 Package pdftex.def Info: appendix/231.png  used on input line 1053.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/123.png, id=572, 142.3719pt x 142.3719pt>
+<appendix/123.png, id=566, 142.3719pt x 142.3719pt>
 File: appendix/123.png Graphic file (type png)
 <use appendix/123.png>
 Package pdftex.def Info: appendix/123.png  used on input line 1064.
@@ -1297,12 +1297,12 @@ File: appendix/232.png Graphic file (type png)
 <use appendix/232.png>
 Package pdftex.def Info: appendix/232.png  used on input line 1151.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/223.png, id=598, 142.3719pt x 142.3719pt>
+<appendix/223.png, id=592, 142.3719pt x 142.3719pt>
 File: appendix/223.png Graphic file (type png)
 <use appendix/223.png>
 Package pdftex.def Info: appendix/223.png  used on input line 1158.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/322.png, id=599, 142.3719pt x 142.3719pt>
+<appendix/322.png, id=593, 142.3719pt x 142.3719pt>
 File: appendix/322.png Graphic file (type png)
 <use appendix/322.png>
 Package pdftex.def Info: appendix/322.png  used on input line 1159.
@@ -1335,7 +1335,7 @@ File: appendix/222.png Graphic file (type png)
 <use appendix/222.png>
 Package pdftex.def Info: appendix/222.png  used on input line 1184.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/233.png, id=600, 142.3719pt x 142.3719pt>
+<appendix/233.png, id=594, 142.3719pt x 142.3719pt>
 File: appendix/233.png Graphic file (type png)
 <use appendix/233.png>
 Package pdftex.def Info: appendix/233.png  used on input line 1191.
@@ -1344,12 +1344,12 @@ File: appendix/122.png Graphic file (type png)
 <use appendix/122.png>
 Package pdftex.def Info: appendix/122.png  used on input line 1192.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/312.png, id=601, 142.3719pt x 142.3719pt>
+<appendix/312.png, id=595, 142.3719pt x 142.3719pt>
 File: appendix/312.png Graphic file (type png)
 <use appendix/312.png>
 Package pdftex.def Info: appendix/312.png  used on input line 1193.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/331.png, id=602, 142.3719pt x 142.3719pt>
+<appendix/331.png, id=596, 142.3719pt x 142.3719pt>
 File: appendix/331.png Graphic file (type png)
 <use appendix/331.png>
 Package pdftex.def Info: appendix/331.png  used on input line 1200.
@@ -1358,7 +1358,7 @@ File: appendix/212.png Graphic file (type png)
 <use appendix/212.png>
 Package pdftex.def Info: appendix/212.png  used on input line 1201.
 (pdftex.def)             Requested size: 21.33955pt x 21.33748pt.
-<appendix/113.png, id=603, 142.3719pt x 142.3719pt>
+<appendix/113.png, id=597, 142.3719pt x 142.3719pt>
 File: appendix/113.png Graphic file (type png)
 <use appendix/113.png>
 Package pdftex.def Info: appendix/113.png  used on input line 1202.
@@ -1378,25 +1378,24 @@ ed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1213.
  ) 
 Here is how much of TeX's memory you used:
- 19439 strings out of 480968
- 365265 string characters out of 2909002
- 615669 words of memory out of 3000000
- 34684 multiletter control sequences out of 15000+200000
- 586054 words of font info for 125 fonts, out of 3000000 for 9000
+ 19436 strings out of 480968
+ 365234 string characters out of 2909002
+ 614669 words of memory out of 3000000
+ 34683 multiletter control sequences out of 15000+200000
+ 585531 words of font info for 123 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,13n,60p,2167b,916s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/
-ucrr8a.pfb><C:/Users/Martin Butz/AppData/Roaming/MiKTeX/2.9/fonts/type1/urw/sym
-bol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/
-Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on prior-inference-revisions.pdf (29 pages, 1592869 bytes).
+ic/amsfonts/cm/cmsy10.pfb><C:/Users/Martin Butz/AppData/Roaming/MiKTeX/2.9/font
+s/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/
+utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on prior-inference-revisions.pdf (29 pages, 1578511 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
+ 664 PDF objects out of 1000 (max. 8388607)
  132 named destinations out of 1000 (max. 500000)
  309 words of extra memory for PDF output out of 10000 (max. 10000000)
 

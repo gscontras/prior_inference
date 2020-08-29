@@ -17,42 +17,42 @@ Database file #1: prior-inference.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 You've used 52 entries,
             6951 wiz_defined-function locations,
-            1619 strings with 20685 characters,
-and the built_in function-call counts, 106057 in all, are:
-= -- 13468
-> -- 918
-< -- 4758
-+ -- 5048
+            1617 strings with 20520 characters,
+and the built_in function-call counts, 106172 in all, are:
+= -- 13492
+> -- 923
+< -- 4761
++ -- 5056
 - -- 104
-* -- 6587
-:= -- 18364
-add.period$ -- 241
+* -- 6589
+:= -- 18385
+add.period$ -- 240
 call.type$ -- 52
 change.case$ -- 891
 chr.to.int$ -- 0
 cite$ -- 104
-duplicate$ -- 3043
-empty$ -- 4194
+duplicate$ -- 3045
+empty$ -- 4185
 format.name$ -- 1483
-if$ -- 20550
+if$ -- 20577
 int.to.chr$ -- 0
 int.to.str$ -- 156
 missing$ -- 0
-newline$ -- 1358
+newline$ -- 1354
 num.names$ -- 444
-pop$ -- 1830
+pop$ -- 1825
 preamble$ -- 1
 purify$ -- 211
 quote$ -- 0
-skip$ -- 7215
+skip$ -- 7225
 stack$ -- 0
-substring$ -- 5681
-swap$ -- 1762
-text.length$ -- 176
+substring$ -- 5701
+swap$ -- 1771
+text.length$ -- 182
 text.prefix$ -- 0
 top$ -- 1
 type$ -- 5184
 warning$ -- 0
-while$ -- 543
+while$ -- 544
 width$ -- 0
-write$ -- 1690
+write$ -- 1686

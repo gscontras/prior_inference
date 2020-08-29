@@ -316,6 +316,8 @@ Butz, M\BPBI V.%
   thought}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
+\newblock
+\APACrefnote{in press}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -445,14 +447,14 @@ Degen, J.%
 \APACrefYearMonthDay{2015}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Wonky worlds: Listeners revise world knowledge when
-  utterances are odd.} {Wonky worlds: Listeners revise world knowledge when
-  utterances are odd.}{\BBCQ}
+  utterances are odd} {Wonky worlds: Listeners revise world knowledge when
+  utterances are odd}.{\BBCQ}
 \newblock
-\BIn{} D.~Noelle\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of 37th
-  {Annual} {Meeting} of the {Cognitive} {Scince} {Society}.} {Proceedings of
-  37th {Annual} {Meeting} of the {Cognitive} {Scince} {Society}.}
+\BIn{} D\BPBI C.~Noelle\ \BOthers {.}\ (\BEDS), \APACrefbtitle {Proceedings of
+  the 37th Annual Meeting of the Cognitive Science Society} {Proceedings of the
+  37th annual meeting of the cognitive science society}\ (\BPGS\ 548--553).
 \newblock
-\APACaddressPublisher{Austin, TX}{}.
+\APACaddressPublisher{Austin, TX}{Cognitive Science Society}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -979,12 +981,7 @@ Liu, S.%
 \newblock
 \APACjournalVolNumPages{Cognition}{160}{}{35 - 42}.
 \newblock
-\begin{APACrefURL}
-  \url{http://www.sciencedirect.com/science/article/pii/S001002771630302X}
-  \end{APACrefURL}
-\newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.cognition.2016.12.007}
-  \end{APACrefDOI}
+\begin{APACrefDOI} \doi{10.1016/j.cognition.2016.12.007} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1282,9 +1279,6 @@ Sennet, A.%
   (\PrintOrdinal{Spring 2016}\ \BEd).
 \newblock
 \APACaddressPublisher{}{Metaphysics Research Lab, Stanford University}.
-\newblock
-\APAChowpublished
-  {\url{https://plato.stanford.edu/archives/spr2016/entries/ambiguity/}}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -1432,8 +1426,6 @@ Yoon, E\BPBI J.%
   speech emerges from competing social goals.}
 \newblock
 \APACaddressPublisher{}{PsyArXiv}.
-\newblock
-\begin{APACrefURL} \url{psyarxiv.com/67ne8} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.31234/osf.io/67ne8} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
