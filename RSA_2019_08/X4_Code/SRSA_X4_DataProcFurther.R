@@ -86,7 +86,7 @@ llWorkers12 <- llWorkers12[,c(2:ncol(llWorkers12))]
 paramsWorkers12 <- paramsWorkers12[,c(2:ncol(paramsWorkers12))]
 
 ############################################################################################
-procType <- 3    ###########################################################################
+procType <- 4    ###########################################################################
 ############################################################################################
 
 ### 
@@ -132,6 +132,10 @@ for(i in c(1:length(x4pilotData$X))) {
                                                                   abs(params12[1]), abs(params12[2]))
     postListMat2Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
                                                                   .2, .2)
+  }else if(procType == 4) {
+  postListMat1Opt[i,] <- determineSpeakerPostListPrefsSimpleRSA(objectConstellation, featChoice, 
+                                                                100, 100)
+  postListMat2Opt[i,] <- rep((1/3),9)
   }
 }
 
@@ -159,5 +163,7 @@ write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAindOpt_fixed00_and_fixed.20.csv"
 }else if(procType == 2) {
   write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAindOpt_PrefStrengthOpt_obed0_and_obed.2.csv")
 }else if(procType == 3) {
-  write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAindOpt_PrefandObedOpt_and_fixed.2.2.csv")
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAindOpt_PrefandObedOpt_and_fixed.2.2_test.csv")
+}else if(procType == 4) {
+  write.csv(x4pilotData, "X4_Data/x4pDataAugm_SRSAindOpt_PrefandObed100_and_uniform.csv")
 }

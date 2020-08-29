@@ -19,13 +19,9 @@ x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed001_and_fixed0
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_prefAndKappa_and_prefObedAndKappa.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed00-1_and_uniform.csv")
 
-#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOptPosKappa_kappaOnly_and_obedAndKappa.csv")
-#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOptPosKappa_prefAndKappa_and_prefObedAndKappa.csv")
-
-
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefOnly_and_obedOnly.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_kappaOnly_and_obedAndKappa.csv")
-#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefAndKappa_and_prefObedAndKappa.csv")
+x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefAndKappa_and_prefObedAndKappa.csv")
 
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_posKappa_kappaOnly_and_obedAndKappa.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_posKappa_prefAndKappa_and_prefObedAndKappa.csv")
@@ -104,6 +100,7 @@ modelDataOrdered[,5] <- x3pilotData$obj1OC27
 modelDataOrdered[,6] <- x3pilotData$obj2OC27
 modelDataOrdered[,7] <- x3pilotData$obj3OC27
 #write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted.csv")
+write.csv(modelDataOrdered, "x3pilotDataModelOptimizedSorted_global.csv")
 ################################################################################
 
 
