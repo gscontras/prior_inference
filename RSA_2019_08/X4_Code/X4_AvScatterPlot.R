@@ -7,11 +7,11 @@ source("CommonCode/getConstCodeStratUtt.R")
 
 # simple RSA with individual optimization
 #x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_fixed00_and_fixed.20.csv")
-x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefStrengthOpt_obed0_and_obed.2.csv")
+#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefStrengthOpt_obed0_and_obed.2.csv")
 #x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAindOpt_PrefandObedOpt_and_fixed.2.2.csv")
 
 # simple RSA with individual crossvalidation (leave-one-out) 
-#x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAcrossVal_Opt1_and_Opt2.csv")
+x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAcrossVal_Opt1_and_Opt2.csv")
 #x4pilotData <- read.csv("X4_Data/x4pDataAugm_SRSAcrossVal_Opt1obed.1_and_fixed.1.1.csv")
 
 # simple RSA global optimization

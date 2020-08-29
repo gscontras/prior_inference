@@ -71,30 +71,26 @@ Baker%
 }{%
 Baker%
 \ \protect \BOthers {.}}{%
-{\protect \APACyear {2011}}%
+{\protect \APACyear {2009}}%
 }]{%
-Baker:2011}
+Baker:2009}
 \APACinsertmetastar {%
-Baker:2011}%
+Baker:2009}%
 \begin{APACrefauthors}%
 Baker, C\BPBI L.%
-, Saxe, R\BPBI R.%
+, Saxe, R.%
 \BCBL {}\ \BBA {} Tenenbaum, J\BPBI B.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2011}{}{}.
+\APACrefYearMonthDay{2009}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Bayesian Theory of Mind: Modeling Joint Belief-Desire
-  Attribution} {Bayesian theory of mind: Modeling joint belief-desire
-  attribution}.{\BBCQ}
+{\BBOQ}\APACrefatitle {Action understanding as inverse planning} {Action
+  understanding as inverse planning}.{\BBCQ}
 \newblock
-\BIn{} L.~Carlson, C.~Hoelscher\BCBL {}\ \BBA {} T\BPBI F.~Shipley\ (\BEDS),
-  \APACrefbtitle {Proceedings of the 33rd {Annual} {Meeting} of the {Cognitive}
-  {Science} {Society}} {Proceedings of the 33rd {Annual} {Meeting} of the
-  {Cognitive} {Science} {Society}}\ (\BPGS\ 2469--2474).
+\APACjournalVolNumPages{Cognition}{113}{3}{329--349}.
 \newblock
-\APACaddressPublisher{Austin, TX}{Cognitive Science Society}.
+\begin{APACrefDOI} \doi{10.1016/j.cognition.2009.07.005} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -216,6 +212,30 @@ Butz%
 }{%
 Butz%
 }{%
+{\protect \APACyear {2008}}%
+}]{%
+Butz:2008h}
+\APACinsertmetastar {%
+Butz:2008h}%
+\begin{APACrefauthors}%
+Butz, M\BPBI V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {How and Why the Brain Lays the Foundations for a
+  Conscious Self} {How and why the brain lays the foundations for a conscious
+  self}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Constructivist Foundations}{4}{1}{1-42}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Butz%
+}{%
+Butz%
+}{%
 {\protect \APACyear {2016}}%
 }]{%
 Butz:2016}
@@ -266,6 +286,36 @@ Butz, M\BPBI V.%
 \APACaddressPublisher{Frankfurt am Main}{MIND Group}.
 \newblock
 \begin{APACrefDOI} \doi{10.15502/9783958573093} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Butz%
+, Achimova%
+, Bilkey%
+\BCBL {}\ \BBA {} Knott%
+}{%
+Butz%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+Butz:2020tsi}
+\APACinsertmetastar {%
+Butz:2020tsi}%
+\begin{APACrefauthors}%
+Butz, M\BPBI V.%
+, Achimova, A.%
+, Bilkey, D.%
+\BCBL {}\ \BBA {} Knott, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Event-Predictive Cognition: {A} Root for Conceptual
+  Human Thought} {Event-predictive cognition: {A} root for conceptual human
+  thought}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Topics in Cognitive Science}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -874,6 +924,70 @@ Lewandowsky, S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Lieder%
+\ \BBA {} Griffiths%
+}{%
+Lieder%
+\ \BBA {} Griffiths%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+Lieder:2020}
+\APACinsertmetastar {%
+Lieder:2020}%
+\begin{APACrefauthors}%
+Lieder, F.%
+\BCBT {}\ \BBA {} Griffiths, T\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Resource-rational analysis: Understanding human
+  cognition as the optimal use of limited computational resources}
+  {Resource-rational analysis: Understanding human cognition as the optimal use
+  of limited computational resources}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Behavioral and Brain Sciences}{43}{}{e1}.
+\newblock
+\begin{APACrefDOI} \doi{10.1017/S0140525X1900061X} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Liu%
+\ \BBA {} Spelke%
+}{%
+Liu%
+\ \BBA {} Spelke%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+Liu:2017}
+\APACinsertmetastar {%
+Liu:2017}%
+\begin{APACrefauthors}%
+Liu, S.%
+\BCBT {}\ \BBA {} Spelke, E\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Six-month-old infants expect agents to minimize the cost
+  of their actions} {Six-month-old infants expect agents to minimize the cost
+  of their actions}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Cognition}{160}{}{35 - 42}.
+\newblock
+\begin{APACrefURL}
+  \url{http://www.sciencedirect.com/science/article/pii/S001002771630302X}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.cognition.2016.12.007}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Lohmann%
 , Belardinelli%
 \BCBL {}\ \BBA {} Butz%
@@ -1119,6 +1233,32 @@ Quigley, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Russell%
+}{%
+Russell%
+}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+Russell:2020}
+\APACinsertmetastar {%
+Russell:2020}%
+\begin{APACrefauthors}%
+Russell, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Purpose Put Into the Machine} {The purpose put into
+  the machine}.{\BBCQ}
+\newblock
+\BIn{} J.~Brockman\ (\BED), \APACrefbtitle {Possible minds: 25 ways of looking
+  at AI} {Possible minds: 25 ways of looking at ai}\ (\BPG~20-32).
+\newblock
+\APACaddressPublisher{New York}{Penguin Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Sennet%
 }{%
 Sennet%
@@ -1296,6 +1436,39 @@ Yoon, E\BPBI J.%
 \begin{APACrefURL} \url{psyarxiv.com/67ne8} \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.31234/osf.io/67ne8} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Zacks%
+, Speer%
+, Swallow%
+, Braver%
+\BCBL {}\ \BBA {} Reynolds%
+}{%
+Zacks%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+Zacks:2007}
+\APACinsertmetastar {%
+Zacks:2007}%
+\begin{APACrefauthors}%
+Zacks, J\BPBI M.%
+, Speer, N\BPBI K.%
+, Swallow, K\BPBI M.%
+, Braver, T\BPBI S.%
+\BCBL {}\ \BBA {} Reynolds, J\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Event perception: A mind-brain perspective} {Event
+  perception: A mind-brain perspective}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Psychological Bulletin}{133}{2}{273--293}.
+\newblock
+\begin{APACrefDOI} \doi{10.1037/0033-2909.133.2.273} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

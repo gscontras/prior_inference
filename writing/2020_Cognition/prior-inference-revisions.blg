@@ -1,56 +1,58 @@
-This is BibTeX, Version 0.99d (TeX Live 2017)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: prior-inference-revisions.aux
+Reallocating 'name_of_file' (item size: 1) to 8 items.
 The style file: apacite.bst
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: prior-inference.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 46 entries,
+You've used 52 entries,
             6951 wiz_defined-function locations,
-            1572 strings with 19612 characters,
-and the built_in function-call counts, 95046 in all, are:
-= -- 12135
-> -- 821
-< -- 4233
-+ -- 4505
-- -- 92
-* -- 5863
-:= -- 16385
-add.period$ -- 217
-call.type$ -- 46
-change.case$ -- 802
+            1619 strings with 20685 characters,
+and the built_in function-call counts, 106057 in all, are:
+= -- 13468
+> -- 918
+< -- 4758
++ -- 5048
+- -- 104
+* -- 6587
+:= -- 18364
+add.period$ -- 241
+call.type$ -- 52
+change.case$ -- 891
 chr.to.int$ -- 0
-cite$ -- 92
-duplicate$ -- 2732
-empty$ -- 3745
-format.name$ -- 1322
-if$ -- 18453
+cite$ -- 104
+duplicate$ -- 3043
+empty$ -- 4194
+format.name$ -- 1483
+if$ -- 20550
 int.to.chr$ -- 0
-int.to.str$ -- 138
+int.to.str$ -- 156
 missing$ -- 0
-newline$ -- 1196
-num.names$ -- 396
-pop$ -- 1718
+newline$ -- 1358
+num.names$ -- 444
+pop$ -- 1830
 preamble$ -- 1
-purify$ -- 188
+purify$ -- 211
 quote$ -- 0
-skip$ -- 6434
+skip$ -- 7215
 stack$ -- 0
-substring$ -- 5097
-swap$ -- 1580
-text.length$ -- 167
+substring$ -- 5681
+swap$ -- 1762
+text.length$ -- 176
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 4704
+type$ -- 5184
 warning$ -- 0
-while$ -- 495
+while$ -- 543
 width$ -- 0
-write$ -- 1488
+write$ -- 1690
