@@ -54,11 +54,11 @@ for(i in c(1:nrow(x3pilotData)) ) {
 }
 
 ## reloading optimization values
-paramsUttWorkers <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_indOpt_2019_10_11.csv"))
+paramsUttWorkers <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_globalOpt_2019_12_20.csv"))
 paramsUttWorkers <- paramsUttWorkers[ , 2:ncol(paramsUttWorkers)]
-
+#print(paramsUttWorkers)
 #####################
-procType <- 3
+procType <- 1
 #####################
 
 #####################################################################################################
@@ -70,12 +70,12 @@ postListMat1 <- matrix(0,length(x3pilotData$X),9)
 postListMat2 <- matrix(0,length(x3pilotData$X),9)
 klDivValues <- matrix(NA,length(x3pilotData$X),3)
 workerID <- -1
-paramsA <- paramsUttWorkers[1,c(2)]
-paramsB <- paramsUttWorkers[1,c(3)]
-paramsD <- paramsUttWorkers[1,c(4)]
-paramsBD <- paramsUttWorkers[1,c(5:6)]
-paramsAD <- paramsUttWorkers[1,c(7:8)]
-paramsABD <- paramsUttWorkers[1,c(9:11)]
+paramsA <- paramsUttWorkers[c(2)]
+paramsB <- paramsUttWorkers[c(3)]
+paramsD <- paramsUttWorkers[c(4)]
+paramsBD <- paramsUttWorkers[c(5:6)]
+paramsAD <- paramsUttWorkers[c(7:8)]
+paramsABD <- paramsUttWorkers[c(9:11)]
 
 for(i in c(1:length(x3pilotData$X))) {
   objectConstellation <- c(obj1OC27[i],obj2OC27[i],obj3OC27[i])

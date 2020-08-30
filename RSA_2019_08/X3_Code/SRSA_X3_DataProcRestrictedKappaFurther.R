@@ -58,7 +58,7 @@ paramsUttWorkers <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_indOpt_posKap
 paramsUttWorkers <- paramsUttWorkers[ , 2:ncol(paramsUttWorkers)]
 
 #####################
-procType <- 1
+procType <- 2
 #####################
 
 #####################################################################################################

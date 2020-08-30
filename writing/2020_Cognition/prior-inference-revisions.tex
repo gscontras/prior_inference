@@ -59,7 +59,7 @@
 Bayesian accounts of social cognition successfully model the human ability to infer goals and intentions of others on the basis of their behavior.
 In this paper, we extend this paradigm to the analysis of ambiguity resolution during brief communicative exchanges. 
 %Accordingly, we provide a Bayesian model a computational account of ambiguity resolution and its observation as inference processes. 
-In particular, we model how observed ambiguity resolutions allow speakers to infer aspects of the inner states of
+In particular, we model how observed ambiguity resolution allows speakers to infer aspects of the inner states of
 % socially-relevant information about  %% TODO - I like inner states better - what do you say? 
 their conversation partners, such as their knowledge, beliefs, intentions, or preferences.
 %Our main focus lies on the added information conversation partners may gain by observing each other resolve ambiguity. 
@@ -70,7 +70,7 @@ Moreover, we model how speakers may choose ambiguous utterances over unambiguous
 In a reference game experimental setup, we observed that participants were able to infer listeners' preferences when analyzing their choice of objects given referential ambiguity.
 Moreover, a subset of speakers was able to strategically choose ambiguous over unambiguous utterances in an epistemic manner, although a different group preferred unambiguous utterances. 
 Both types of inference are well-approximated by a modified Rational Speech Act model, which focuses on inferring or expecting to infer listeners' preference priors.
-We conclude that observations of ambiguity resolutions can reveal socially-relevant information about conversation partners, where the involved inference processes are well-approximated by Bayesian inference. 
+We conclude that observations of ambiguity resolution can reveal socially-relevant information about conversation partners, where the involved inference processes are well-approximated by Bayesian inference. 
                                                                  
 
 \textbf{Keywords:} 
@@ -694,7 +694,7 @@ A value of $\lambda=0$ effectively ignores information gain and a resulting tend
 
 We compare the performance of our simple model with the performance of a uniform baseline model, which merely chooses one of the available utterances at random. 
 Seeing that in particular ambiguity cases with particular constellations $S$ up to nine utterances are possible, the baseline model yields different model predictions for the available utterances in the respective ambiguity classes. 
-As a result, the baseline model is much better in capturing variance in the data than one would expect without this insight ($r^2 = 0.75$; Table \ref{utterance_optimization}). The non-optimized simple model, surprisingly, captures very little variance in the human data ($r^2=0.06$); for  the non-optimized model we set the parameters to hard preference and full obedience ($\gamma=0$, $\beta=0$) and the information gain factor $\lambda$ to $1$, thus preferring to choose those utterances that are expected to yield high information gain. Figure~\ref{base-nonopt-x3} compares the performance of this non-optimized simple RSA model with the baseline model that relies on a simple heuristic of distributing the probability mass equally among all utterances that are available in a scene.
+As a result, the baseline model is much better in capturing variance in the data than one would expect without this insight ($r^2 = 0.7467$; Table \ref{utterance_optimization}). The non-optimized simple model, surprisingly, captures very little variance in the human data ($r^2=0.0595$); for  the non-optimized model we set the parameters to hard preference and full obedience ($\gamma=0$, $\beta=0$) and the information gain factor $\lambda$ to $1$, thus preferring to choose those utterances that are expected to yield high information gain. Figure~\ref{base-nonopt-x3} compares the performance of this non-optimized simple RSA model with the baseline model that relies on a simple heuristic of distributing the probability mass equally among all utterances that are available in a scene.
 %($r^2=0.7466$, $F(1,82) = 245.6$, $p<0.001$).
 
 	\begin{table}[htb]
@@ -704,10 +704,11 @@ As a result, the baseline model is much better in capturing variance in the data
 		Model & $r^2$ & $df$ & $F$ & Soft. $\gamma$ & Obed. $\beta$ & Inf. gain $\lambda$ \\
 		\hline
 		
-		Baseline & 0.7466 & 1,82 & 245.6 && & \\
-		Non-optimized & 0.0595 & 1,82 & 6.253 &&& \\
-		
-		Softness \& Obedience \& Inf. gain & 0.7991 & 1,82 & 331.2 & 0.0006 & 0.2758 & 0.3663 \\
+		Baseline & 0.7467 & 1,82 & 245.6 && & \\
+		Non-optimized & 0.0595 & 1,82 & 6.253 &&& \\		
+		Softness optimized & 0.8134 & 1,82 & 362.9 & 0.2778 && \\
+		Obedience opt. & 0.8048 & 1,82 & 343.1 & & 0.1421 & \\
+		KL-value factor opt. & 0.8013 & 1,82 & 335.8 & & & 0.0069 \\
 		\hline
 	\end{tabular}
 	\caption{Experiment 2. Optimization summary (global).}
@@ -723,7 +724,7 @@ As a result, the baseline model is much better in capturing variance in the data
 	\centering
 	\includegraphics[width=2in]{images/x3_m20.pdf}
 	\includegraphics[width=2in]{images/x3_m7.pdf}
-	\caption{Average human data from Experiment 2 plotted against the predictions of the uniform baseline model (left; $r^2=0.75$) and the simple model (right; $r^2=0.06$). 
+	\caption{Average human data from Experiment 2 plotted against the predictions of the uniform baseline model (left; $r^2=0.7467$) and the simple model (right; $r^2=0.0595$). 
 %		Left panel: \emph{uniform model} ($r^{2}=0.7466$);
 %		right panel: \emph{non-optimized simple model} ($r^2=0.0595$).
 	}
@@ -734,16 +735,27 @@ As a result, the baseline model is much better in capturing variance in the data
 
 To examine the reasons for this failure of the non-optimized simple model, we first performed additional global parameter optimization runs. Based on the AIC scores\footnote{\citeA{burnham2002model} suggest that AIC can be used for non-nested model comparison.}, all the globally-optimized models outperform the uniform model (AIC = 888.048): softness (AIC = 877.47), obedience (AIC = 877.07), KL-value factor (AIC = 879.004).
 Models that take combinations of several free parameters into account did not yield additional improvements.
-Thus, when optimizing all of the simple RSA model parameters, there is good evidence that the model accounts for more variance than the uniform base model \cite{Lewandowsky:2011}.
+The AIC values indicate that there is good evidence that the simple RSA model accounts for more variance than the uniform base model \cite{Lewandowsky:2011}.
 %($r^2=0.7991$, $F(1,82) = 331.2$, $p<0.001$; optimized model parameters: $\gamma=0.0006$, $\beta=0.2758$, $\lambda=0.3663$).
 %A nested-model-comparison test with three free parameters yields a 
-Figure~\ref{global-individual-x3} (left) shows the correlation plot ($r^2=0.7991$, $F(1,82) = 331.2$, $p<0.001$). %% ($r^2=0.80$; $G^2 = 13.6912,  p<0.01$).
-The plot reveals that qualitatively, even a model with three-way global optimization is quite similar to the uniform model.
-Moreover, the analysis of the obtained parameter values (Table~\ref{utterance_optimization}) suggests that the parameter of primary interest $\lambda$ has a rather small value of $0.3663$, indicating only moderate attention to information gain on the part of participants. This result could either reflect the a shared reasoning strategy by all participants, or it could come as a consequence of averaging over a heterogeneous group, suggesting an analysis of between-subject differences.
-
+Because we focus on optimizing $\lambda$ individually below, we show the obtained correlation plot for global $\lambda$ optimization in Figure~\ref{global-individual-x3}. 
+% ($\lambda=0.0069$; $r^2=0.8013$, $F(1,82) = 335.8$, $p<0.001$). 
+%% ($r^2=0.80$; $G^2 = 13.6912,  p<0.01$).
+The correlation plots for optimizing either of the two other parameters look qualitatively similar.
+Table~\ref{utterance_optimization} shows the corresponding optimized parameter values and correlation statistics.
+%  yielded comparable values (softness optimized to $\gamma=0.2778$: $r^2=0.8134$, $F(1,82) = 362.9$, $p<0.001$; obedience optimized to $\beta=0.1421$: $r^2=0.8048$, $F(1,82) = 343.1$, $p<0.001$)
+The results show that the optimized simple models act quite similar to the uniform model.
+% Moreover, the analysis of the obtained parameter values (Table~\ref{utterance_optimization}) suggests that the parameter of primary interest $\lambda$ has a rather small value of $0.3663$, indicating only moderate attention to information gain on the part of participants. 
+Surprisingly, the KL-value factor yields a very small value of $0.0069$, indicating low attention to information gain on the part of participants.
+%When optimizing for softness or obedience, the non-zero values tend to blend the utterance choices in a somewhat similar manner (cf. Figure~\ref{barplot_x3}).
+%Thus, optimizing either one of the three parameters pushes towards a uniform utterance choice tendency. 
+%This result speaks against a shared reasoning strategy by all participants. 
+% This result suggests that  or it could come as a consequence of averaging over a heterogeneous group, suggesting an analysis of between-subject differences.
+This result essentially suggests that the participants were hardly able to engage in the targeted reasoning process.
+However, the result may also be due to averaging over heterogeneous groups of participants. 
 %The estimated parameter values ($\gamma=0.0006$, $\beta=0.2758$, $\lambda=0.3663$) indicate that the preference strength is rather high, obedience is not as strong, while the information gain intention is present but moderate.
 %(Table \ref{utterance_optimization}). 
-%We now turn to individual parameter optimization, suspecting that their may be fundamental differences between the individual participants. 
+Thus, we now turn to individual parameter optimization, suspecting that their may be fundamental differences between the individual participants. 
 
 
 
@@ -789,13 +801,15 @@ However, Figure~\ref{barplot_x3} shows that human behavior deviates quite strong
 Once we optimize $\lambda$, we are able to capture human behavior in the task.
 %For example, \textit{green} picks out two objects: a striped green circle and a solid green cloud; after saying ``green'', the speaker could learn whether the listener prefers striped things over solid things, or circles over clouds.
 
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=2.5in]{images/barplot_x3_withGlobal.pdf}
 	\caption{Model predictions and human data for the ambiguity class depicted in Figure~\ref{exp2-trial}.
-	 %one of the classes of stimuli \emph{Experiment 2: Picking utterances}. 
-	 The optimized version of the model is optimized for the KL-factor $\lambda$ \gcs{are both global and individual optimized only for lambda?}. Error bars represent 95\% confidence intervals.}\label{barplot_x3}
+		%one of the classes of stimuli \emph{Experiment 2: Picking utterances}. 
+		The optimized version of the model is optimized for the KL-factor $\lambda$ \gcs{are both global and individual optimized only for lambda? }. Error bars represent 95\% confidence intervals.}\label{barplot_x3}
 \end{figure}
+
 
 % Note: I did check it - there are indeed 14. 5+5+6+7+6+6+7+3+4+5+6+7+8+9
 %After matching the respective actual feature values with the utterance choice relevant within the respectively-binned conditions, we again computed averages over utterance preference values for the respectively-binned trials across participants and across respective model predictions \gcs{this is awfully hard to follow}. Asya: decided to remove this part, reordering can just as well stay behind the scenes.
@@ -815,7 +829,7 @@ for $28$ participants, the KL divergence values of the $\lambda$-optimized simpl
 %The first one is a ``lazy worker'' group of $18$ participants whose fitted $\lambda$ values were close to zero (i.e.,  $-.02 < \lambda<.02$), indicating that they were randomly selecting utterances.
 The second group of $33$ participants yielded more negative values (i.e., $-7.11<\lambda<-0.014$, $\bar{\lambda}=-0.823$), indicating that a significant number of participants preferred to systematically choose unambiguous utterances (uniform model AIC=460; $\lambda$-individually optimized model AIC=346). 
 %% ($G^2=180,17$, $\textrm{df}=33$, $p<0.001$). 
-The third group of $21$ participants yielded positive values (i.e., $0.0187<\lambda<0.537$, $\bar{\lambda}=-0.124$ \gcs{should this be negative?}), indicating that these participants indeed preferred the more ambiguous utterances in a strategic manner (Uniform model AIC=344; $\lambda$-individually optimized model AIC=284)
+The third group of $21$ participants yielded positive values (i.e., $0.0187<\lambda<0.537$, $\bar{\lambda}=0.124$), indicating that these participants indeed preferred the more ambiguous utterances in a strategic manner (Uniform model AIC=344; $\lambda$-individually optimized model AIC=284)
 % ($G^2=102.16$, $\textrm{df}=21$, $p<0.001$).
 
 
@@ -851,7 +865,7 @@ Yet others showed a significant preference for unambiguous utterances.
 %By modeling the inference process within the RSA framework, we conceptualize the utterance interpretation process as the recursive reasoning of speakers and listeners about each other. We thereby bring together the rich literature on Bayesian models of inferences (e.g., naive utility calculus) on the one hand and the modeling of pragmatic reasoning on the other. Both of these approaches are based on the view of the agent/speaker as a utility-driven agent, and it is the reasoning about the speaker's optimal behavior that drivers the listener's interpretation of the utterance.  We focused on modeling the speaker behavior that spans beyond efficient information transfer, and rather is aimed at generating interpretative options that could be informative as possible choices.
 
 The results of our utterance-choice experiment (Experiment 2) suggest that not all speakers managed to strategically select ambiguous utterances to yield situations of ambiguity resolution.
-In the case of the participants who significantly preferred unambiguous utterances, at least three explanations may be warranted. 
+In the case of the participants who systematically preferred unambiguous utterances, at least three explanations may be warranted. 
 First, it may be the case that these participants think overly egocentrically, thus having the intention to signal their own preferences rather than to give options to the listener.
 Second, the participants may in fact be following the strategic utterance-selection process we hypothesize, but they choose unambiguous utterances because they anticipate the possibility that the listener will disobey their instructions and choose the preferred object even if it does not strictly match the utterance; such behavior would be extremely informative about preferences. 
 For example, if the listener has a strong preference for red objects, she might pick a red square following the utterance ``circle" if none of the circles are red; the speaker who observes this behavior would rightly conclude that the listener has a preference for red objects strong enough to lead her to disobey the instructions.

@@ -119,9 +119,9 @@ for(workerID in c(0:idMax)) {
 #    paramsUttWorkers[workerIndex,3] <- optRes2$minimum
     paramsUttWorkers[workerIndex,4] <- optRes3$minimum
     ####
-    optRes2n1 <- optim(c(.2, .2), SimpleRSAModelUttKLDivParamBK, method="L-BFGS-B", gr=NULL, dataWorker,
+    optRes2n1 <- optim(c(.2, 1), SimpleRSAModelUttKLDivParamBK, method="L-BFGS-B", gr=NULL, dataWorker,
                        lower = c(0,0), upper = c(1e+10,10))
-    optRes2n2 <- optim(c(.2, .2), SimpleRSAModelUttKLDivParamAK, method="L-BFGS-B", gr=NULL, dataWorker,
+    optRes2n2 <- optim(c(.2, 1), SimpleRSAModelUttKLDivParamAK, method="L-BFGS-B", gr=NULL, dataWorker,
                        lower = c(0,0), upper = c(1e+10,10))
     optRes3 <- optim(c(.2, .2, 1), SimpleRSAModelUttKLDivParamABK, method="L-BFGS-B", gr=NULL, dataWorker,
                      lower = c(0,0,0), upper = c(1e+10,1e+10,10))
