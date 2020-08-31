@@ -69,8 +69,8 @@ Moreover, we model how speakers may choose ambiguous utterances over unambiguous
 %We ran experiments in a reference game framework and modeled the data with a Rational Speech Act model.
 In a reference game experimental setup, we observed that participants were able to infer listeners' preferences when analyzing their choice of objects given referential ambiguity.
 Moreover, a subset of speakers was able to strategically choose ambiguous over unambiguous utterances in an epistemic manner, although a different group preferred unambiguous utterances. 
-Both types of inference are well-approximated by a modified Rational Speech Act model, which focuses on inferring or expecting to infer listeners' preference priors.
-We conclude that observations of ambiguity resolution can reveal socially-relevant information about conversation partners, where the involved inference processes are well-approximated by Bayesian inference. 
+Both types of inference are well approximated by a modified Rational Speech Act model, which focuses on inferring or expecting to infer listeners' preference priors.
+We conclude that observations of ambiguity resolution can reveal socially-relevant information about conversation partners, and the underlying inference processes can be modeled as a form of Bayesian reasoning. 
                                                                  
 
 \textbf{Keywords:} 
@@ -781,10 +781,10 @@ Figure~\ref{global-individual-x3} (right) shows the resulting correlation plot f
  
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=2in]{images/x3_m24.pdf}
+	\includegraphics[width=2in]{images/x3_m21.pdf}
 	\includegraphics[width=2in]{images/x3_m11.pdf}
-	\caption{Average human data from Experiment 2 plotted against the predictions of the optimized simple models.
-		Left panel: \emph{globally-optimized three-parameter model} ($r^{2}=0.7466$);
+	\caption{Average human data from Experiment 2 plotted against the predictions of the $\lambda$-optimized simple models.
+		Left panel: \emph{globally-optimized  model} ($r^{2}=0.8013$);
 		right panel: \emph{individually-$\lambda$-optimized model} ($r^{2}=0.9059$). }
 	\label{global-individual-x3}
 \end{figure}
@@ -798,7 +798,7 @@ only the ambiguous utterances \textit{cloud}, \textit{striped}, and \textit{gree
 (i.e., the utterances that point to more than one object in the scene)
 promise information gain about the listener's preferences when assuming full obedience to the utterance.
 However, Figure~\ref{barplot_x3} shows that human behavior deviates quite strongly from the non-optimized, ambiguity-selecting baseline.
-Once we optimize $\lambda$, we are able to capture human behavior in the task.
+Once we optimize $\lambda$ at the individual level, we are able to capture human behavior in the task.
 %For example, \textit{green} picks out two objects: a striped green circle and a solid green cloud; after saying ``green'', the speaker could learn whether the listener prefers striped things over solid things, or circles over clouds.
 
 
@@ -807,7 +807,7 @@ Once we optimize $\lambda$, we are able to capture human behavior in the task.
 	\includegraphics[width=2.5in]{images/barplot_x3_withGlobal.pdf}
 	\caption{Model predictions and human data for the ambiguity class depicted in Figure~\ref{exp2-trial}.
 		%one of the classes of stimuli \emph{Experiment 2: Picking utterances}. 
-		The optimized version of the model is optimized for the KL-factor $\lambda$ \gcs{are both global and individual optimized only for lambda? }. Error bars represent 95\% confidence intervals.}\label{barplot_x3}
+		The optimized versions of the model are optimized for the KL-factor $\lambda$. Error bars represent 95\% confidence intervals.}\label{barplot_x3}
 \end{figure}
 
 
@@ -827,9 +827,9 @@ When examining the individually-optimized model values in further detail, we not
 The first one may be termed a ``lazy worker'' or ``unpredictable behavior'' group:
 for $28$ participants, the KL divergence values of the $\lambda$-optimized simple RSA model failed to reach the performance of the baseline model, essentially failing to identify any model-corresponding regularity in the data that goes beyond random utterance choice behavior.
 %The first one is a ``lazy worker'' group of $18$ participants whose fitted $\lambda$ values were close to zero (i.e.,  $-.02 < \lambda<.02$), indicating that they were randomly selecting utterances.
-The second group of $33$ participants yielded more negative values (i.e., $-7.11<\lambda<-0.014$, $\bar{\lambda}=-0.823$), indicating that a significant number of participants preferred to systematically choose unambiguous utterances (uniform model AIC=460; $\lambda$-individually optimized model AIC=346). 
+The second group of $33$ participants yielded more negative values (i.e., $-7.11<\lambda<-0.014$, $\bar{\lambda}=-0.823$), indicating that a significant number of participants preferred to systematically choose unambiguous utterances (uniform model AIC=460; $\lambda$-individually optimized model AIC = 346). 
 %% ($G^2=180,17$, $\textrm{df}=33$, $p<0.001$). 
-The third group of $21$ participants yielded positive values (i.e., $0.0187<\lambda<0.537$, $\bar{\lambda}=0.124$), indicating that these participants indeed preferred the more ambiguous utterances in a strategic manner (Uniform model AIC=344; $\lambda$-individually optimized model AIC=284)
+The third group of $21$ participants yielded positive values (i.e., $0.0187<\lambda<0.537$, $\bar{\lambda}=0.124$), indicating that these participants indeed preferred the more ambiguous utterances in a strategic manner (Uniform model AIC = 344; $\lambda$-individually optimized model AIC = 284)
 % ($G^2=102.16$, $\textrm{df}=21$, $p<0.001$).
 
 

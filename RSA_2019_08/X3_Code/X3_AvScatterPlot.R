@@ -21,7 +21,7 @@ source("CommonCode/getConstCodeStratUtt.R")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAindOpt_fixed001_and_Lambda.csv")
 
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefOnly_and_obedOnly.csv")
-x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_kappaOnly_and_obedAndKappa.csv")
+#x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_kappaOnly_and_obedAndKappa.csv")
 #x3pilotData <- read.csv("X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefAndKappa_and_prefObedAndKappa.csv")
 
 

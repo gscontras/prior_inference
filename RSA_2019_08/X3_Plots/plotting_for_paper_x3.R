@@ -7,7 +7,7 @@ library("ggplot2")
 
 setwd("~/Documents/GitHub/prior_inference/RSA_2019_08/X3_Plots")
 
-full <- read.csv("for_scatterplots_x3_updated.csv")
+full <- read.csv("X3_Plots/for_scatterplots_x3_updated.csv")
 head(full)
 
 ## See what models we have ##
@@ -252,7 +252,7 @@ ggsave(figure, filename = paste("x3_m", nr,".pdf", sep=""),width = 7, height = 7
 
 ######## Global optimization plot ############
 
-plotData <- subset(full, Nr == 24)
+plotData <- subset(full, Nr == 21)
 
 r2 <- round((summary(lm(plotData$model~plotData$workerData))$r.squared), digits = 4)
 softness <- unique(as.character(plotData$softness))
