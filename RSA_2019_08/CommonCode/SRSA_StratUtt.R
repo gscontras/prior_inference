@@ -376,4 +376,31 @@ simpleBestInfGainUtteranceWithPrefPriorAll(preferencesPriorAll, relevantUtteranc
 # #                              relevantUtterances, currentObjects, mapUttToObjProbs,
 # #                              objectPreferenceSoftPriors, alpha), 3)
 #
-#
+# ### August 31, 2020 ## Test 3
+
+# notObeyInst <- 0
+# softPrefValue <- 0
+# currentObjects <- c(23,4,19)
+# klValueFactor <- 0.006
+# relevantUtterances <- determineValidUtterances(currentObjects)
+# mapObjToUtt <- determineObjectToUtterancesMapping(currentObjects)
+# mapUttToObjProbs <- determineUtteranceToObjectProbabilities(relevantUtterances,
+#                                                             currentObjects,
+#                                                             mapObjToUtt, notObeyInst)
+# objectPreferenceSoftPriors <- getObjectPreferencePriors(relevantUtterances, currentObjects,
+#                                                         softPrefValue, mapUttToObjProbs)
+# #pragmaticSpeaker <- function(utterance, obj, preferencesPrior,
+# #                             relevantUtterances, currentObjects, mapUttToObjProbs,
+# #                             objectPreferenceSoftPriors) {
+# simplePragmaticSpeaker(4, 1, c(0, 0, 0, 0, 0, 1), relevantUtterances, currentObjects,
+#                  mapUttToObjProbs, objectPreferenceSoftPriors) # sanity check - definite prior, no inf. gain possible
+# round(simplePragmaticSpeaker(4, 1, c(.2, .2, .2, .2, .2, 0), relevantUtterances, currentObjects,
+#                       mapUttToObjProbs, objectPreferenceSoftPriors),2) # NON compliant listener...
+# 
+# round(simpleBestInfGainUtterance(c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6), relevantUtterances, currentObjects,
+#                            mapUttToObjProbs, objectPreferenceSoftPriors),2) 
+#  # Globally optimized value
+# 
+# round(simpleBestInfGainUtterance(c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6), relevantUtterances, currentObjects,
+#                                  mapUttToObjProbs, objectPreferenceSoftPriors, 0.006),2) 
+# round(getSimpleBestInfGainUttPreferences(currentObjects, 0, 0, 0.006),2)

@@ -58,7 +58,7 @@ paramsUttWorkers <- as.matrix(read.csv("X3_Data/x3Params_simpleRSA_globalOpt_201
 paramsUttWorkers <- paramsUttWorkers[ , 2:ncol(paramsUttWorkers)]
 #print(paramsUttWorkers)
 #####################
-procType <- 1
+procType <- 2
 #####################
 
 #####################################################################################################
@@ -92,7 +92,7 @@ for(i in c(1:length(x3pilotData$X))) {
   }else if(procType == 3) {
     postListMat1[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsAD[1], 0, paramsAD[2])
     postListMat2[i,validUtterances] <- getSimpleBestInfGainUttPreferences(objectConstellation, paramsABD[1], paramsABD[2], paramsABD[3])
-  }
+ }
 }
 
 ###########
@@ -115,7 +115,7 @@ if(procType == 1) {
   write.csv(x3pilotData, "X3_Data/x3pDataAugm_simpleRSAglobalOpt_kappaOnly_and_obedAndKappa.csv")
 }else if(procType == 3) {
   write.csv(x3pilotData, "X3_Data/x3pDataAugm_simpleRSAglobalOpt_prefAndKappa_and_prefObedAndKappa.csv")
-}
+} 
 
 
 
