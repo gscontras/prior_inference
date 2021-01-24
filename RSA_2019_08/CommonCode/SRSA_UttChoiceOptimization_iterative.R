@@ -1,6 +1,7 @@
 ##########################################
 source("CommonCode/AllUtterancesAndObjects.R")
 source("CommonCode/getConstCodeStratUtt.R")
+source("CommonCode/SRSA_StratUtt.R")
 
 
 ## determines the best information gain utterances based on the valid utterances determined from the currentObjects
@@ -200,9 +201,9 @@ SimpleRSAModelUttKLDivParamABK_independent <- function(params, data) {
 #Testing optimization function
 currentObjects <- c(1,2,6)
 #currentObjects <- c(26,20,23)
-notObeyInst <- 1000
-klValueFactor <- 1
-softPrefValue <- 1000
+notObeyInst <- 0
+klValueFactor <- 0.005 # Doesn't work with higher values than 48
+softPrefValue <- 0
 targetFeature <- 2
 trial <- 1
 utt <- 5
